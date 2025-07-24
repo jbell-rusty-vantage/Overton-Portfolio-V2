@@ -1,6 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "books.google.com",
+        port: "",
+        pathname: "/books/content/**",
+      },
+      {
+        protocol: "http",
+        hostname: "books.google.com",
+        port: "",
+        pathname: "/books/content/**",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

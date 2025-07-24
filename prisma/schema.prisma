@@ -65,4 +65,37 @@ model contacts {
   message String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}  
+
+
+model githubprojects { 
+  id String @id @default(cuid())
+  name String
+  description String  
+  technologies String[] @default([]) 
+  features String[] @default([])  
+  extendedDescription String?  
+  tags String[] @default([])
+  url String @unique  
+  liveUrl String?  
+  images String[] @default([])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+
 } 
+
+
+model shopifyprojects { 
+  id String @id @default(cuid())
+  name String
+  description String
+  liveUrl String? 
+  technologies String[] @default([])
+  features String[] @default([])
+  extendedDescription String?
+  tags String[] @default([])
+  images String[] @default([])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

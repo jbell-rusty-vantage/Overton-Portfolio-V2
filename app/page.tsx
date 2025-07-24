@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import ContactForm from "@/components/contact-form";
-import ProjectCard from "@/components/project-card";
+import ProjectsSection from "@/components/projects-section";
 import TechStack from "@/components/tech-stack";
+import AboutCard from "@/components/about-card";
+import BooksSection from "@/components/books-section";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Page() {
@@ -14,9 +16,11 @@ export default function Page() {
         <div className="container flex h-14 items-center">
           <div className="mr-4 hidden md:flex">
             <Link className="mr-6 flex items-center space-x-2" href="/">
-              <span className="hidden font-bold sm:inline-block">John.dev</span>
+              <span className="hidden font-bold sm:inline-block">
+                Overton.Dev
+              </span>
             </Link>
-            <nav className="flex items-center space-x-6 text-sm font-medium">
+            <nav className="flex items-center space-x-6 text-sm font-medium text-foreground">
               <Link
                 href="#about"
                 className="transition-colors hover:text-foreground/80"
@@ -30,6 +34,12 @@ export default function Page() {
                 Projects
               </Link>
               <Link
+                href="#books"
+                className="transition-colors hover:text-foreground/80"
+              >
+                Books
+              </Link>
+              <Link
                 href="#contact"
                 className="transition-colors hover:text-foreground/80"
               >
@@ -37,85 +47,54 @@ export default function Page() {
               </Link>
             </nav>
           </div>
-          <Button variant="outline" className="ml-auto">
-            Resume
-          </Button>
+          <Link href="/current_resume.pdf" target="_blank">
+            <Button variant="outline" className="ml-auto">
+              Resume
+            </Button>
+          </Link>
         </div>
       </header>
 
       <main className="container px-4 md:px-6">
-        <section id="about" className="py-12 md:py-24 lg:py-32">
+        <section id="about" className="text-primary py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  Full Stack Developer
+            <div className="flex flex-col items-center justify-center space-y-8 text-center">
+              <div className="space-y-4">
+                <h1 className="text-3xl text-primary font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                  John Overton Bell
                 </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Building digital experiences with modern technologies. Focused
-                  on creating elegant solutions to complex problems.
-                </p>
+                <div className="space-x-4">
+                  <Link href="https://github.com/Overton77" target="_blank">
+                    <Button variant="outline" size="icon">
+                      <Github className="h-4 w-4" />
+                      <span className="sr-only">GitHub</span>
+                    </Button>
+                  </Link>
+                  <Link
+                    href="https://www.linkedin.com/in/john-overton-90863b373/"
+                    target="_blank"
+                  >
+                    <Button variant="outline" size="icon">
+                      <Linkedin className="h-4 w-4" />
+                      <span className="sr-only">LinkedIn</span>
+                    </Button>
+                  </Link>
+                  <Link href="mailto:hello@example.com">
+                    <Button variant="outline" size="icon">
+                      <Mail className="h-4 w-4" />
+                      <span className="sr-only">Email</span>
+                    </Button>
+                  </Link>
+                </div>
               </div>
-              <div className="space-x-4">
-                <Link href="https://github.com" target="_blank">
-                  <Button variant="outline" size="icon">
-                    <Github className="h-4 w-4" />
-                    <span className="sr-only">GitHub</span>
-                  </Button>
-                </Link>
-                <Link href="https://linkedin.com" target="_blank">
-                  <Button variant="outline" size="icon">
-                    <Linkedin className="h-4 w-4" />
-                    <span className="sr-only">LinkedIn</span>
-                  </Button>
-                </Link>
-                <Link href="https://twitter.com" target="_blank">
-                  <Button variant="outline" size="icon">
-                    <Twitter className="h-4 w-4" />
-                    <span className="sr-only">Twitter</span>
-                  </Button>
-                </Link>
-                <Link href="mailto:hello@example.com">
-                  <Button variant="outline" size="icon">
-                    <Mail className="h-4 w-4" />
-                    <span className="sr-only">Email</span>
-                  </Button>
-                </Link>
-              </div>
+              <AboutCard />
             </div>
           </div>
         </section>
 
-        <section id="projects" className="py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
-              Projects
-            </h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <ProjectCard
-                title="E-commerce Platform"
-                description="A full-stack e-commerce platform built with Next.js, Prisma, and Stripe integration."
-                image="/placeholder.svg?height=400&width=600"
-                link="https://github.com"
-                tags={["Next.js", "Prisma", "Stripe"]}
-              />
-              <ProjectCard
-                title="Task Management App"
-                description="A real-time task management application with team collaboration features."
-                image="/placeholder.svg?height=400&width=600"
-                link="https://github.com"
-                tags={["React", "Node.js", "Socket.io"]}
-              />
-              <ProjectCard
-                title="AI Chat Interface"
-                description="An AI-powered chat interface with natural language processing capabilities."
-                image="/placeholder.svg?height=400&width=600"
-                link="https://github.com"
-                tags={["OpenAI", "Next.js", "TailwindCSS"]}
-              />
-            </div>
-          </div>
-        </section>
+        <ProjectsSection />
+
+        <BooksSection />
 
         <section className="py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">

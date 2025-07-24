@@ -24,3 +24,25 @@ export async function submitContactForm(formData: FormData) {
     message: "Thanks for your message! I'll get back to you soon.",
   };
 }
+
+export async function getBooks() {
+  try {
+    const books = await prisma.books.findMany({
+      include: {
+        authors: {
+          select: {
+            name: true,
+          },
+        },
+      },
+      orderBy: {
+        createdAt: "desc",
+      },
+    });
+
+    return books;
+  } catch (error) {
+    console.error("Error fetching books:", error);
+    return [];
+  }
+}
