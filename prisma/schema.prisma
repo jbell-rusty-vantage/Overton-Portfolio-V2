@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model authors {
+  id        String   @id
+  name      String   @unique
+  bio       String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  books     books[]
+}
+
+model books {
+  id            String     @id
+  title         String
+  authorId      String
+  description   String?
+  publishedDate String?
+  pageCount     Int?
+  thumbnail     String?
+  googleBooksId String?    @unique
+  isbn10        String?
+  isbn13        String?
+  categories    String[]
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime
+  authors       authors    @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  my_notes      my_notes[]
+  reviews       reviews[]
+}
+
+model my_notes {
+  id        String   @id
+  title     String
+  content   String
+  bookId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  books     books    @relation(fields: [bookId], references: [id], onDelete: Cascade)
+}
+
+model reviews {
+  id           String   @id
+  reviewerName String
+  rating       Int      @db.SmallInt
+  comment      String?
+  bookId       String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime
+  books        books    @relation(fields: [bookId], references: [id], onDelete: Cascade)
+}
+
+
+model contacts {  
+  id String @id @default(cuid())
+  name String
+  email String
+  message String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+} 
