@@ -43,7 +43,7 @@ export default function Page() {
                 href="#contact"
                 className="transition-colors hover:text-foreground/80"
               >
-                Contact
+                Contact Me
               </Link>
             </nav>
           </div>
