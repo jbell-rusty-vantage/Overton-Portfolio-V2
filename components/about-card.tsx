@@ -26,20 +26,6 @@ export default function AboutCard() {
     },
   ];
 
-  const texts = [
-    "Confused",
-    "Curious",
-    "Learning",
-    "Proficient",
-    "Imposter",
-    "Syndome",
-    "Developer",
-    "Engineer",
-    "Master",
-    "AI Agent",
-    "Orchestrator",
-  ];
-
   return (
     <div className="flex flex-col gap-6 w-full">
       {/* Name and HyperText */}
@@ -72,7 +58,6 @@ export default function AboutCard() {
           );
         })}
       </div>
-      {/* Morphing Text */}
     </div>
   );
 }
