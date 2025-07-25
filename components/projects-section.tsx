@@ -3,6 +3,7 @@ import ProjectsGrid from "./projects-grid";
 
 export default async function ProjectsSection() {
   // Fetch all projects from the database
+
   const projects = await prisma.githubprojects.findMany({
     orderBy: {
       createdAt: "desc",
