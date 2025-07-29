@@ -116,14 +116,22 @@ model upcomingProjects {
 
 
 
-model blogposts { 
-  id String @id @default(cuid())
-  title String 
-  slug String @unique
-  content String
-  tags String[] @default([])
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-}
 
+
+model BlogPost { 
+  id           String   @id @default(cuid())
+  slug         String   @unique
+  title        String 
+  description String 
+  summary      String
+  tags         String[]
+  publishedAt  DateTime
+  updatedAt    DateTime @updatedAt
+  coverImage   String?  // URL or path to image
+  mdxPath      String?   // path to the MDX file if local
+  readingTime  Int?      // optionally precomputed
+  isPublished  Boolean  @default(false)
+ 
+
+}
 

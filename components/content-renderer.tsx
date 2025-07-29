@@ -14,6 +14,7 @@ interface ContentRendererProps {
 }
 
 export function ContentRenderer({ selectedItem }: ContentRendererProps) {
+  console.log(selectedItem, "SELECTED ITEM");
   const renderContent = () => {
     switch (selectedItem) {
       case "about":

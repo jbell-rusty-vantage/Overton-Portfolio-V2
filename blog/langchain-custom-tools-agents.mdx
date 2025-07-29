@@ -1,0 +1,522 @@
+# Building Custom Tools and Agents with LangChain: A Deep Dive
+
+LangChain has revolutionized how we build AI applications by providing a standardized framework for orchestrating large language models. While the built-in tools are powerful, the real magic happens when you create custom tools and agents tailored to your specific use cases.
+
+In this comprehensive guide, we'll explore how to build sophisticated custom tools and autonomous agents that can interact with external APIs, databases, and complex business logic.
+
+## Understanding LangChain's Tool Architecture
+
+At its core, a LangChain tool is a function that an AI agent can call to perform specific tasks. Think of tools as the "hands" of your AI agent—they allow it to interact with the world beyond text generation.
+
+### The Anatomy of a Tool
+
+```python
+from langchain.tools import BaseTool
+from pydantic import BaseModel, Field
+from typing import Optional, Type
+
+class WeatherInput(BaseModel):
+    """Input for weather tool."""
+    location: str = Field(description="The city or location to get weather for")
+    units: Optional[str] = Field(default="celsius", description="Temperature units")
+
+class WeatherTool(BaseTool):
+    name = "get_weather"
+    description = "Get current weather information for a specific location"
+    args_schema: Type[BaseModel] = WeatherInput
+
+    def _run(self, location: str, units: str = "celsius") -> str:
+        """Execute the tool."""
+        # Your weather API logic here
+        weather_data = self.fetch_weather(location, units)
+        return f"The weather in {location} is {weather_data['temperature']}°{units.upper()}"
+
+    def fetch_weather(self, location: str, units: str) -> dict:
+        """Fetch weather data from external API."""
+        # Implementation details
+        pass
+```
+
+## Building Practical Custom Tools
+
+Let's create several real-world tools that demonstrate different integration patterns.
+
+### 1. Database Query Tool
+
+```python
+import sqlite3
+from langchain.tools import BaseTool
+from pydantic import BaseModel, Field
+
+class DatabaseQueryInput(BaseModel):
+    query: str = Field(description="SQL query to execute")
+    database_name: str = Field(description="Name of the database to query")
+
+class DatabaseQueryTool(BaseTool):
+    name = "database_query"
+    description = """
+    Execute SQL queries on specified databases.
+    Use this to retrieve information from company databases.
+    Only SELECT queries are allowed for security.
+    """
+    args_schema = DatabaseQueryInput
+
+    def _run(self, query: str, database_name: str) -> str:
+        # Security check - only allow SELECT statements
+        if not query.strip().upper().startswith('SELECT'):
+            return "Error: Only SELECT queries are allowed"
+
+        try:
+            conn = sqlite3.connect(f"{database_name}.db")
+            cursor = conn.cursor()
+            cursor.execute(query)
+            results = cursor.fetchall()
+
+            # Format results for LLM consumption
+            if results:
+                headers = [description[0] for description in cursor.description]
+                formatted_results = []
+                for row in results:
+                    formatted_results.append(dict(zip(headers, row)))
+                return f"Query results: {formatted_results}"
+            else:
+                return "No results found"
+        except Exception as e:
+            return f"Database error: {str(e)}"
+        finally:
+            conn.close()
+```
+
+### 2. Email Automation Tool
+
+```python
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+class EmailInput(BaseModel):
+    recipient: str = Field(description="Email address of the recipient")
+    subject: str = Field(description="Email subject line")
+    body: str = Field(description="Email body content")
+    priority: Optional[str] = Field(default="normal", description="Email priority: low, normal, high")
+
+class EmailTool(BaseTool):
+    name = "send_email"
+    description = "Send emails to specified recipients with custom content"
+    args_schema = EmailInput
+
+    def __init__(self, smtp_server: str, smtp_port: int, username: str, password: str):
+        super().__init__()
+        self.smtp_server = smtp_server
+        self.smtp_port = smtp_port
+        self.username = username
+        self.password = password
+
+    def _run(self, recipient: str, subject: str, body: str, priority: str = "normal") -> str:
+        try:
+            msg = MIMEMultipart()
+            msg['From'] = self.username
+            msg['To'] = recipient
+            msg['Subject'] = subject
+
+            # Set priority
+            if priority.lower() == "high":
+                msg['X-Priority'] = '1'
+            elif priority.lower() == "low":
+                msg['X-Priority'] = '5'
+
+            msg.attach(MIMEText(body, 'plain'))
+
+            server = smtplib.SMTP(self.smtp_server, self.smtp_port)
+            server.starttls()
+            server.login(self.username, self.password)
+            server.send_message(msg)
+            server.quit()
+
+            return f"Email sent successfully to {recipient}"
+        except Exception as e:
+            return f"Failed to send email: {str(e)}"
+```
+
+### 3. API Integration Tool
+
+```python
+import requests
+from typing import Dict, Any
+
+class APICallInput(BaseModel):
+    endpoint: str = Field(description="API endpoint URL")
+    method: str = Field(default="GET", description="HTTP method (GET, POST, PUT, DELETE)")
+    headers: Optional[Dict[str, str]] = Field(default=None, description="HTTP headers")
+    data: Optional[Dict[str, Any]] = Field(default=None, description="Request payload")
+
+class APICallTool(BaseTool):
+    name = "api_call"
+    description = "Make HTTP requests to external APIs"
+    args_schema = APICallInput
+
+    def __init__(self, allowed_domains: list = None):
+        super().__init__()
+        self.allowed_domains = allowed_domains or []
+
+    def _run(self, endpoint: str, method: str = "GET", headers: Dict = None, data: Dict = None) -> str:
+        # Security check for allowed domains
+        if self.allowed_domains:
+            domain = endpoint.split('/')[2]
+            if domain not in self.allowed_domains:
+                return f"Error: Domain {domain} not in allowed list"
+
+        try:
+            response = requests.request(
+                method=method.upper(),
+                url=endpoint,
+                headers=headers or {},
+                json=data if method.upper() in ['POST', 'PUT'] else None,
+                timeout=30
+            )
+
+            if response.status_code == 200:
+                return f"API call successful: {response.json()}"
+            else:
+                return f"API call failed with status {response.status_code}: {response.text}"
+        except Exception as e:
+            return f"API call error: {str(e)}"
+```
+
+## Creating Intelligent Agents
+
+Now let's build agents that can use these tools intelligently.
+
+### Basic Agent Setup
+
+```python
+from langchain.agents import create_openai_functions_agent, AgentExecutor
+from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_openai import ChatOpenAI
+
+# Initialize the LLM
+llm = ChatOpenAI(model="gpt-4-turbo-preview", temperature=0)
+
+# Create tools list
+tools = [
+    WeatherTool(),
+    DatabaseQueryTool(),
+    EmailTool(
+        smtp_server="smtp.gmail.com",
+        smtp_port=587,
+        username="your-email@gmail.com",
+        password="your-app-password"
+    ),
+    APICallTool(allowed_domains=["api.github.com", "jsonplaceholder.typicode.com"])
+]
+
+# Create agent prompt
+prompt = ChatPromptTemplate.from_messages([
+    ("system", """You are a helpful assistant with access to various tools.
+    Use tools when necessary to help the user accomplish their tasks.
+    Always explain what you're doing and why you're using specific tools.
+    Be proactive in suggesting tool usage when it would be helpful."""),
+    ("user", "{input}"),
+    MessagesPlaceholder(variable_name="agent_scratchpad"),
+])
+
+# Create and configure agent
+agent = create_openai_functions_agent(llm, tools, prompt)
+agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
+```
+
+### Advanced Agent with Memory
+
+```python
+from langchain.memory import ConversationBufferWindowMemory
+from langchain.schema import BaseMessage
+
+class SmartBusinessAgent:
+    def __init__(self, tools: list, llm, memory_window: int = 10):
+        self.tools = tools
+        self.llm = llm
+        self.memory = ConversationBufferWindowMemory(
+            k=memory_window,
+            return_messages=True,
+            memory_key="chat_history"
+        )
+
+        # Enhanced prompt with context awareness
+        self.prompt = ChatPromptTemplate.from_messages([
+            ("system", """You are an intelligent business assistant with access to company tools.
+
+            Your capabilities include:
+            - Querying company databases for information
+            - Sending emails to team members
+            - Making API calls to external services
+            - Retrieving weather and other external data
+
+            Guidelines:
+            1. Always confirm destructive actions with the user
+            2. Be specific about what data you're accessing
+            3. Suggest proactive actions based on context
+            4. Remember conversation history to provide continuity
+
+            Use your tools efficiently and explain your reasoning."""),
+            MessagesPlaceholder(variable_name="chat_history"),
+            ("user", "{input}"),
+            MessagesPlaceholder(variable_name="agent_scratchpad"),
+        ])
+
+        self.agent = create_openai_functions_agent(self.llm, self.tools, self.prompt)
+        self.agent_executor = AgentExecutor(
+            agent=self.agent,
+            tools=self.tools,
+            memory=self.memory,
+            verbose=True,
+            max_iterations=5,
+            handle_parsing_errors=True
+        )
+
+    def chat(self, message: str) -> str:
+        """Main chat interface."""
+        try:
+            response = self.agent_executor.invoke({"input": message})
+            return response["output"]
+        except Exception as e:
+            return f"I encountered an error: {str(e)}. Could you please rephrase your request?"
+
+    def get_conversation_summary(self) -> str:
+        """Get a summary of the conversation."""
+        messages = self.memory.chat_memory.messages
+        if not messages:
+            return "No conversation history yet."
+
+        # Use LLM to summarize conversation
+        summary_prompt = f"Summarize this conversation: {messages}"
+        response = self.llm.predict(summary_prompt)
+        return response
+```
+
+## Advanced Tool Patterns
+
+### 1. Async Tools for Better Performance
+
+```python
+import asyncio
+import aiohttp
+from langchain.tools import BaseTool
+
+class AsyncAPITool(BaseTool):
+    name = "async_api_call"
+    description = "Make asynchronous API calls for better performance"
+
+    async def _arun(self, endpoint: str) -> str:
+        """Async implementation."""
+        async with aiohttp.ClientSession() as session:
+            async with session.get(endpoint) as response:
+                data = await response.json()
+                return f"Async API result: {data}"
+
+    def _run(self, endpoint: str) -> str:
+        """Sync wrapper for async functionality."""
+        loop = asyncio.get_event_loop()
+        return loop.run_until_complete(self._arun(endpoint))
+```
+
+### 2. Stateful Tools with Context
+
+```python
+class StatefulCalculatorTool(BaseTool):
+    name = "calculator"
+    description = "Perform calculations and remember previous results"
+
+    def __init__(self):
+        super().__init__()
+        self.memory = {}
+        self.last_result = None
+
+    def _run(self, expression: str) -> str:
+        try:
+            # Allow access to previous results
+            if "last_result" in expression:
+                expression = expression.replace("last_result", str(self.last_result or 0))
+
+            # Evaluate expression safely
+            result = eval(expression, {"__builtins__": {}}, self.memory)
+            self.last_result = result
+
+            return f"Result: {result}"
+        except Exception as e:
+            return f"Calculation error: {str(e)}"
+```
+
+### 3. Conditional Tool Execution
+
+```python
+class ConditionalEmailTool(BaseTool):
+    name = "conditional_email"
+    description = "Send emails based on specific conditions"
+
+    def _run(self, recipient: str, subject: str, body: str, condition: str) -> str:
+        # Check condition before sending
+        if condition.lower() == "urgent":
+            # Add urgent prefix and high priority
+            subject = f"[URGENT] {subject}"
+            priority = "high"
+        elif condition.lower() == "scheduled":
+            # Schedule for later (simplified example)
+            return f"Email scheduled for later delivery to {recipient}"
+        else:
+            priority = "normal"
+
+        # Use the regular email tool
+        email_tool = EmailTool(
+            smtp_server="smtp.gmail.com",
+            smtp_port=587,
+            username="your-email@gmail.com",
+            password="your-app-password"
+        )
+
+        return email_tool._run(recipient, subject, body, priority)
+```
+
+## Best Practices and Security
+
+### 1. Input Validation and Sanitization
+
+```python
+import re
+from typing import Union
+
+class SecureToolBase(BaseTool):
+    """Base class for secure tools with input validation."""
+
+    def validate_email(self, email: str) -> bool:
+        pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+        return re.match(pattern, email) is not None
+
+    def sanitize_sql(self, query: str) -> str:
+        """Basic SQL injection prevention."""
+        dangerous_keywords = ['DROP', 'DELETE', 'UPDATE', 'INSERT', 'ALTER', 'CREATE']
+        query_upper = query.upper()
+
+        for keyword in dangerous_keywords:
+            if keyword in query_upper:
+                raise ValueError(f"Dangerous SQL keyword detected: {keyword}")
+
+        return query
+
+    def validate_url(self, url: str, allowed_domains: list = None) -> bool:
+        """Validate URL and check against allowed domains."""
+        if not url.startswith(('http://', 'https://')):
+            return False
+
+        if allowed_domains:
+            domain = url.split('/')[2]
+            return domain in allowed_domains
+
+        return True
+```
+
+### 2. Error Handling and Logging
+
+```python
+import logging
+from functools import wraps
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+def log_tool_usage(func):
+    """Decorator to log tool usage."""
+    @wraps(func)
+    def wrapper(self, *args, **kwargs):
+        logger.info(f"Tool {self.name} called with args: {args}, kwargs: {kwargs}")
+        try:
+            result = func(self, *args, **kwargs)
+            logger.info(f"Tool {self.name} completed successfully")
+            return result
+        except Exception as e:
+            logger.error(f"Tool {self.name} failed with error: {str(e)}")
+            raise
+    return wrapper
+
+class LoggedTool(BaseTool):
+    @log_tool_usage
+    def _run(self, *args, **kwargs):
+        # Tool implementation
+        pass
+```
+
+## Real-World Use Case: Customer Service Agent
+
+Let's put it all together in a practical customer service agent:
+
+```python
+class CustomerServiceAgent:
+    def __init__(self):
+        # Initialize tools
+        self.tools = [
+            DatabaseQueryTool(),  # Access customer database
+            EmailTool(),          # Send follow-up emails
+            APICallTool(),        # Check order status via API
+            TicketCreationTool(), # Create support tickets
+        ]
+
+        # Initialize LLM with specific instructions
+        self.llm = ChatOpenAI(model="gpt-4-turbo-preview", temperature=0.3)
+
+        # Customer service specific prompt
+        prompt = ChatPromptTemplate.from_messages([
+            ("system", """You are a customer service representative with access to company systems.
+
+            Your tools allow you to:
+            - Look up customer information and order history
+            - Check real-time order status
+            - Send follow-up emails
+            - Create support tickets for complex issues
+
+            Guidelines:
+            1. Always verify customer identity before accessing their data
+            2. Be empathetic and professional
+            3. Escalate complex technical issues by creating tickets
+            4. Follow up with customers via email when appropriate
+            5. Protect customer privacy - never share sensitive information"""),
+            ("user", "{input}"),
+            MessagesPlaceholder(variable_name="agent_scratchpad"),
+        ])
+
+        self.agent = create_openai_functions_agent(self.llm, self.tools, prompt)
+        self.agent_executor = AgentExecutor(
+            agent=self.agent,
+            tools=self.tools,
+            verbose=True,
+            max_iterations=3
+        )
+
+    def handle_customer_query(self, customer_query: str, customer_id: str = None) -> str:
+        """Process customer service requests."""
+        context = f"Customer ID: {customer_id}\nQuery: {customer_query}" if customer_id else customer_query
+        return self.agent_executor.invoke({"input": context})["output"]
+
+# Usage example
+cs_agent = CustomerServiceAgent()
+response = cs_agent.handle_customer_query(
+    "I haven't received my order yet, order number #12345",
+    customer_id="CUST001"
+)
+print(response)
+```
+
+## Conclusion
+
+Building custom tools and agents with LangChain opens up endless possibilities for AI automation. The key principles to remember:
+
+1. **Design tools with clear, specific purposes**
+2. **Implement proper security and validation**
+3. **Use meaningful descriptions for better agent reasoning**
+4. **Handle errors gracefully with informative messages**
+5. **Log tool usage for debugging and monitoring**
+
+As you build more sophisticated agents, consider the broader architecture—how tools interact, how to manage state across conversations, and how to scale your system for production use.
+
+The future of AI applications lies not just in powerful language models, but in their ability to interact with and manipulate the real world through well-designed tools and agents. Start building, experiment with different patterns, and create AI systems that truly augment human capabilities.
+
+_Ready to build your own AI workforce? The tools and patterns in this guide provide the foundation for creating intelligent agents that can handle complex, real-world tasks autonomously._
