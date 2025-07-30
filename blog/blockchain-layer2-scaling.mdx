@@ -1,3 +1,5 @@
+import { CodeWindow } from "../components/CodeWindow";
+
 # Blockchain Layer 2 Scaling: Polygon, Arbitrum, and Optimism Guide
 
 The blockchain trilemma has long been a fundamental challenge in the cryptocurrency space: how do you achieve decentralization, security, and scalability simultaneously? Ethereum, while pioneering smart contract functionality, has faced significant scalability issues with high gas fees and slow transaction times during peak usage.
@@ -23,6 +25,7 @@ Polygon (formerly Matic) has evolved into a comprehensive multi-chain scaling pl
 
 The most popular Polygon solution is its Proof-of-Stake sidechain, which offers:
 
+<CodeWindow title="polygon-setup.js">
 ```javascript
 // Deploying to Polygon is as simple as changing your RPC endpoint
 const provider = new ethers.JsonRpcProvider("https://polygon-rpc.com");
@@ -31,12 +34,15 @@ const provider = new ethers.JsonRpcProvider("https://polygon-rpc.com");
 const gasPrice = await provider.getGasPrice();
 console.log(`Polygon gas price: ${ethers.formatUnits(gasPrice, "gwei")} gwei`);
 // Typical result: 30-100 gwei vs 20,000+ gwei on Ethereum
-```
+
+````
+</CodeWindow>
 
 ### Polygon zkEVM
 
 Polygon's zero-knowledge Ethereum Virtual Machine brings the benefits of zk-proofs:
 
+<CodeWindow title="Counter.sol">
 ```solidity
 // Smart contracts work identically on Polygon zkEVM
 contract Counter {
@@ -48,12 +54,15 @@ contract Counter {
         // and settled on Ethereum for ultimate security
     }
 }
-```
+````
+
+</CodeWindow>
 
 ### Development on Polygon
 
 Setting up a Polygon development environment:
 
+<CodeWindow title="hardhat.config.js">
 ```javascript
 // hardhat.config.js
 module.exports = {
@@ -70,6 +79,7 @@ module.exports = {
   },
 };
 ```
+</CodeWindow>
 
 ## Arbitrum: Optimistic Rollup Excellence
 
@@ -89,6 +99,7 @@ graph TD
 
 ### Deploying on Arbitrum
 
+<CodeWindow title="arbitrum-deploy.js">
 ```javascript
 // The beauty of Arbitrum: your existing Ethereum code works unchanged
 const contract = await ethers.deployContract("MyContract", [], {
@@ -98,10 +109,13 @@ const contract = await ethers.deployContract("MyContract", [], {
 });
 
 console.log(`Deployed to Arbitrum at: ${contract.target}`);
-```
+
+````
+</CodeWindow>
 
 ### Arbitrum vs Ethereum Cost Comparison
 
+<CodeWindow title="cost-comparison.js">
 ```javascript
 // Cost comparison function
 async function compareCosts() {
@@ -120,7 +134,9 @@ async function compareCosts() {
     )}%`
   );
 }
-```
+````
+
+</CodeWindow>
 
 ## Optimism: The EVM Equivalent Pioneer
 
@@ -128,21 +144,25 @@ Optimism pioneered the optimistic rollup approach and maintains the closest comp
 
 ### Optimism's Unique Features
 
+<CodeWindow title="optimism-gas-oracle.js">
 ```javascript
 // Optimism includes built-in fee estimation
 const OptimismGasOracle = "0x420000000000000000000000000000000000000F";
 
 // Get L1 data fee (unique to Optimism)
 const l1DataFee = await provider.call({
-  to: OptimismGasOracle,
-  data: "0xf8206140" + transaction.data.slice(2).padStart(64, "0"),
+to: OptimismGasOracle,
+data: "0xf8206140" + transaction.data.slice(2).padStart(64, "0"),
 });
 
 console.log(`L1 Data Fee: ${ethers.formatEther(l1DataFee)} ETH`);
-```
+
+````
+</CodeWindow>
 
 ### Cross-Chain Communication
 
+<CodeWindow title="CrossChainGreeter.sol">
 ```solidity
 // Optimism's cross-domain messenger
 import { ICrossDomainMessenger } from "@eth-optimism/contracts/libraries/bridge/ICrossDomainMessenger.sol";
@@ -159,6 +179,7 @@ contract CrossChainGreeter {
     }
 }
 ```
+</CodeWindow>
 
 ## Performance Comparison
 
@@ -173,6 +194,7 @@ contract CrossChainGreeter {
 
 ### 1. Gas Optimization Strategies
 
+<CodeWindow title="L2Optimized.sol">
 ```solidity
 // Optimize for L2 characteristics
 contract L2Optimized {
@@ -192,9 +214,11 @@ contract L2Optimized {
     }
 }
 ```
+</CodeWindow>
 
 ### 2. Cross-Chain State Management
 
+<CodeWindow title="MultiChainState.js">
 ```javascript
 // Multi-chain state synchronization
 class MultiChainState {
@@ -224,9 +248,11 @@ class MultiChainState {
   }
 }
 ```
+</CodeWindow>
 
 ### 3. Error Handling and Fallbacks
 
+<CodeWindow title="fallback-handler.js">
 ```javascript
 // Robust multi-chain transaction handling
 async function executeWithFallback(primaryChain, fallbackChain, transaction) {
@@ -241,6 +267,7 @@ async function executeWithFallback(primaryChain, fallbackChain, transaction) {
   }
 }
 ```
+</CodeWindow>
 
 ## Future Outlook: The Multi-Chain Reality
 
@@ -252,6 +279,7 @@ The blockchain ecosystem is evolving toward a multi-chain future where different
 
 ### Interoperability Solutions
 
+<CodeWindow title="bridge-integration.js">
 ```javascript
 // Cross-chain bridge integration example
 const bridge = new LayerZeroBridge();
@@ -264,6 +292,7 @@ await bridge.transfer({
   recipient: userAddress,
 });
 ```
+</CodeWindow>
 
 ## Conclusion
 
@@ -278,3 +307,4 @@ The future belongs to a multi-chain ecosystem where applications seamlessly oper
 As we move forward, the focus shifts from "which L2 will win" to "how can we build applications that leverage the strengths of multiple chains." The tools and patterns we've explored in this guide provide the foundation for building truly scalable, cost-effective blockchain applications.
 
 _Ready to start building on Layer 2? The infrastructure is mature, the tools are available, and the ecosystem is thriving. The only question is: which scaling solution will power your next breakthrough application?_
+````

@@ -4,6 +4,12 @@ import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, User } from "lucide-react";
+import {
+  AnimatedBlogPage,
+  AnimatedHeader,
+  AnimatedContent,
+  AnimatedBackButton,
+} from "@/components/AnimatedBlogPage";
 
 type BlogPostPageProps = {
   params: Promise<{ slug: string }>;
@@ -82,74 +88,83 @@ export default async function BlogPostPage({
   const mdxPath = mdx || blogPost.mdxPath || "";
 
   return (
-    <article className="max-w-4xl mx-auto px-6 py-8">
-      {/* Blog Header */}
-      <header className="mb-8 space-y-4">
-        {/* Title */}
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-          {blogPost.title}
-        </h1>
+    <AnimatedBlogPage>
+      <article className="max-w-4xl mx-auto px-6 py-8">
+        {/* Back Button */}
+        <AnimatedBackButton />
 
-        {/* Meta Information */}
-        <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
-          <div className="flex items-center gap-1">
-            <Calendar className="w-4 h-4" />
-            <time dateTime={blogPost.publishedAt.toISOString()}>
-              {blogPost.publishedAt.toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </time>
+        {/* Blog Header */}
+        <AnimatedHeader>
+          {/* Title */}
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            {blogPost.title}
+          </h1>
+
+          {/* Meta Information */}
+          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+            <div className="flex items-center gap-1">
+              <Calendar className="w-4 h-4" />
+              <time dateTime={blogPost.publishedAt.toISOString()}>
+                {blogPost.publishedAt.toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </time>
+            </div>
+
+            <div className="flex items-center gap-1">
+              <Clock className="w-4 h-4" />
+              <span>{blogPost.readingTime} min read</span>
+            </div>
           </div>
 
-          <div className="flex items-center gap-1">
-            <Clock className="w-4 h-4" />
-            <span>{blogPost.readingTime} min read</span>
+          {/* Description */}
+          <p className="text-xl text-gray-700 leading-relaxed">
+            {blogPost.description}
+          </p>
+
+          {/* Tags */}
+          <div className="flex flex-wrap gap-2">
+            {blogPost.tags.map((tag) => (
+              <Badge key={tag} variant="secondary" className="text-xs">
+                {tag}
+              </Badge>
+            ))}
           </div>
-        </div>
 
-        {/* Description */}
-        <p className="text-xl text-gray-700 leading-relaxed">
-          {blogPost.description}
-        </p>
+          {/* Cover Image */}
+          {blogPost.coverImage && (
+            <div className="w-full h-64 md:h-80 bg-gray-200 rounded-lg overflow-hidden">
+              <img
+                src={blogPost.coverImage}
+                alt={blogPost.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          )}
+        </AnimatedHeader>
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2">
-          {blogPost.tags.map((tag) => (
-            <Badge key={tag} variant="secondary" className="text-xs">
-              {tag}
-            </Badge>
-          ))}
-        </div>
+        {/* Divider */}
+        <div className="border-t border-gray-200 mb-8"></div>
 
-        {/* Cover Image */}
-        {blogPost.coverImage && (
-          <div className="w-full h-64 md:h-80 bg-gray-200 rounded-lg overflow-hidden">
-            <img
-              src={blogPost.coverImage}
-              alt={blogPost.title}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        )}
-      </header>
+        {/* MDX Content */}
+        <AnimatedContent>
+          <Suspense fallback={<MDXLoading />}>
+            <DynamicMDXContent mdxPath={mdxPath} />
+          </Suspense>
+        </AnimatedContent>
 
-      {/* Divider */}
-      <div className="border-t border-gray-200 mb-8"></div>
-
-      {/* MDX Content */}
-      <Suspense fallback={<MDXLoading />}>
-        <DynamicMDXContent mdxPath={mdxPath} />
-      </Suspense>
-
-      {/* Footer */}
-      <footer className="mt-12 pt-8 border-t border-gray-200">
-        <div className="bg-gray-50 rounded-lg p-6">
-          <h3 className="font-semibold text-gray-900 mb-2">Summary</h3>
-          <p className="text-gray-700">{blogPost.summary}</p>
-        </div>
-      </footer>
-    </article>
+        {/* Footer */}
+        <AnimatedContent>
+          <footer className="mt-12 pt-8 border-t border-gray-200">
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h3 className="font-semibold text-gray-900 mb-2">Summary</h3>
+              <p className="text-gray-700">{blogPost.summary}</p>
+            </div>
+          </footer>
+        </AnimatedContent>
+      </article>
+    </AnimatedBlogPage>
   );
 }

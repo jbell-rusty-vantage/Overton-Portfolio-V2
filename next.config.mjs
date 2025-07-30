@@ -1,4 +1,6 @@
 import createMDX from "@next/mdx";
+import remarkGfm from "remark-gfm";
+import rehypePrism from "@mapbox/rehype-prism";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -20,6 +22,18 @@ const nextConfig = {
         port: "",
         pathname: "/books/content/**",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };
@@ -27,8 +41,8 @@ const nextConfig = {
 const withMDX = createMDX({
   // Add markdown plugins here, as desired
   options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypePrism],
   },
 });
 

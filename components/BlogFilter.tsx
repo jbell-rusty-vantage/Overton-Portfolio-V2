@@ -18,26 +18,28 @@ export function BlogFilter() {
     searchParams.get("publishedAt") || ""
   );
 
-  // Common blog tags - you can expand this list or fetch from your database
+  // Common blog tags - updated to match blockchain content
   const availableTags = [
+    "blockchain",
+    "ethereum",
+    "layer2",
+    "polygon",
+    "arbitrum",
+    "optimism",
     "javascript",
     "typescript",
     "react",
     "nextjs",
-    "nodejs",
     "web-development",
     "programming",
     "tutorial",
     "guide",
-    "tips",
+    "defi",
+    "smart-contracts",
   ];
 
   const updateFilters = () => {
     const params = new URLSearchParams(searchParams);
-
-    // Clear search query when applying filters (they are mutually exclusive)
-    params.delete("query");
-    params.delete("offset"); // Reset pagination
 
     // Update tags
     if (selectedTags.length > 0) {
@@ -72,7 +74,6 @@ export function BlogFilter() {
     params.delete("tags");
     params.delete("readingTime");
     params.delete("publishedAt");
-    params.delete("offset");
 
     replace(`${pathname}?${params.toString()}`);
   };
