@@ -1,5 +1,4 @@
 "use client";
-import Head from "next/head";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { formatDate } from "../lib/formatDate";
