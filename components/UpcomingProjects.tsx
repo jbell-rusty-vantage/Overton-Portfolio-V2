@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Paragraph } from "./Paragraph";
 import { motion } from "motion/react";
-import MoonBeamImage from "../public/images/sidefolio-moonbeam-2.png";
+import MoonBeamImage from "../public/images/recovery-photo.png";
 
 type UpcomingProject = {
   id: string;
