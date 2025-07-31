@@ -5,7 +5,6 @@ import { Paragraph } from "@/components/Paragraph";
 
 import { UpcomingProjects } from "@/components/UpcomingProjects";
 import { TechStack } from "@/components/TechStack";
-import Image from "next/image";
 
 export default function Home() {
   return (
