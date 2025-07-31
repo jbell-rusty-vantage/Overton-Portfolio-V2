@@ -3,7 +3,7 @@ import prisma from "@/prisma/globalPrisma";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, User } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 import {
   AnimatedBlogPage,
   AnimatedHeader,
