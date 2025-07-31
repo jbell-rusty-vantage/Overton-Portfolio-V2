@@ -1,23 +1,14 @@
-import {
-  IconBrandLinkedin,
-  IconBrandTwitter,
-  IconBrandYoutube,
-} from "@tabler/icons-react";
+import { IconBrandLinkedin, IconBrandUpwork } from "@tabler/icons-react";
 
 export const socials = [
   {
-    href: "https://twitter.com/mannupaaji",
-    label: "Twitter",
-    icon: IconBrandTwitter,
-  },
-  {
-    href: "https://linkedin.com/in/manuarora28",
+    href: "https://www.linkedin.com/in/john-overton-90863b373/",
     label: "LinkedIn",
     icon: IconBrandLinkedin,
   },
   {
-    href: "https://youtube.com/maninthere",
-    label: "YouTube",
-    icon: IconBrandYoutube,
+    href: "https://www.upwork.com/freelancers/~01a3225ab98e07ba11",
+    label: "Upwork",
+    icon: IconBrandUpwork,
   },
 ];

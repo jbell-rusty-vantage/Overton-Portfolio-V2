@@ -105,7 +105,8 @@ model upcomingProjects {
   id String @id @default(cuid())
   name String
   description String 
-  extendedDescription String? 
+  extendedDescription String?  
+  githubUrl       String?
   technologies String[] @default([])
   features String[] @default([])
   tags String[] @default([])

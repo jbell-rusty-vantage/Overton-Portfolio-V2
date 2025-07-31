@@ -102,7 +102,7 @@ export async function BlogList({ searchParams }: BlogListProps) {
       <Paragraph className="mb-10">
         {isSearchMode
           ? `Searching for "${query}"...`
-          : "Discover insights, tutorials, and stories about technology and development."}
+          : "Read tutorials on AI, Full Stack Development and More. Journey with me into technology and life."}
       </Paragraph>
 
       <div className="mb-10">
