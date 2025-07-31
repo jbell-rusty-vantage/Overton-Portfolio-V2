@@ -2,7 +2,7 @@
 import { Paragraph } from "@/components/Paragraph";
 import Image from "next/image";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function About() {
   const images = [

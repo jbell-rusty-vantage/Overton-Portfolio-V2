@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useState, useTransition } from "react";
 import React from "react";
 import { Spinner } from "@/components/ui/skeleton";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export function BlogSearch({
   placeholder,
