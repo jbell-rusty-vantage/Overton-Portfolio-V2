@@ -1,6 +1,6 @@
 # John Doe - Developer Portfolio
 
-Welcome to my digital space where I share my journey as a developer, writer, and lifelong learner. This portfolio showcases my projects, thoughts, and the tools I use to build the future of web development.
+Welcome to my digital space where I share my journey as a developer, writer, and lifelong learner. This portfolio showcases my projects, thoughts, and the tools I use to build the future of web development. Join me on an Adventure of a Life Time.
 
 ## 🚀 Current Features
 
