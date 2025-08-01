@@ -12,9 +12,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "John Doe - Developer",
+  title: "John Overton Bell - Software Engineer",
   description:
-    "John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
+    "John Overton Bell is a Software engineer, Aspring AI Engineer, DevOps Enginner in Training and a curious soul. ",
   icons: {
     icon: "/medal.svg",
   },
