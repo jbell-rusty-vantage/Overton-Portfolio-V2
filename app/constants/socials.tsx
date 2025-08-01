@@ -2,7 +2,7 @@ import { IconBrandLinkedin, IconBrandUpwork } from "@tabler/icons-react";
 
 export const socials = [
   {
-    href: "https://www.linkedin.com/in/john-overton-90863b373/",
+    href: "https://www.linkedin.com/in/overton-bell",
     label: "LinkedIn",
     icon: IconBrandLinkedin,
   },
