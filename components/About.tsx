@@ -42,59 +42,64 @@ export default function About() {
 
       <div className="max-w-4xl">
         <Paragraph className=" mt-4">
-          My name is John Overton Bell, and I'm a mostly self-taught software
-          engineer based in West Palm Beach, Florida. With a deep commitment to
-          mastering full-stack development, I thrive at the intersection of
-          digital marketing, data analysis, internal tool creation, and agile
-          deployment methodologies. My passion lies not only in building
-          comprehensive web solutions but also in understanding and streamlining
-          the DevOps processes that bring these solutions to life.
-        </Paragraph>
-        <Paragraph className=" mt-4">
-          Alongside full-stack development, my journey is deeply intertwined
-          with the fascinating world of artificial intelligence. I'm
-          particularly captivated by advanced AI application techniques such as
-          Retrieval-Augmented Generation (RAG), fine-tuning models, prompt
-          engineering, tool calling, quantization, agent orchestration
-          workflows, and the innovative Model Context Protocol (MCP).
+          I'm John Overton Bell, a full-stack software engineer based in West
+          Palm Beach, Florida. As a largely self-taught developer, I've
+          cultivated expertise at the intersection of modern web development, AI
+          integration, and DevOps practices. My approach combines technical
+          proficiency with strategic thinking to deliver comprehensive solutions
+          that solve real-world problems.
         </Paragraph>
 
         <Paragraph className=" mt-4">
-          Currently, I am preparing to become an AWS Certified Solutions
-          Architect Associate, which complements my ongoing projects. Among
-          these exciting initiatives are an AI-powered BioHacking portal that
-          leverages intelligent agents and a comprehensive rehab searching and
-          admissions application with integrated AI assistant support.
+          My technical focus spans full-stack development and cutting-edge AI
+          applications. I specialize in advanced techniques including
+          Retrieval-Augmented Generation (RAG), model fine-tuning, prompt
+          engineering, tool calling, and agent orchestration workflows.
+          Currently, I'm pursuing AWS Solutions Architect Associate
+          certification to strengthen my cloud infrastructure capabilities.
         </Paragraph>
+
         <Paragraph className=" mt-4">
-          I love BioHacking, and my favorite podcast is the "Human Upgrade" by
-          Dave Asprey. I also have a "Favorite Books" section in my portfolio
-          that I encourage visitors to check out. Beyond coding and development,
-          I have a great passion for soccer. When I'm not at my computer, you'll
-          likely find me on the pitch or watching my favorite player, Lionel
-          Messi, dazzle on the field.
+          You can explore my active projects in the Projects section, which
+          showcases both completed applications and upcoming initiatives.
+          Notable current developments include an AI-powered BioHacking portal
+          leveraging intelligent agents and a comprehensive rehab search and
+          admissions platform with integrated AI assistant support.
         </Paragraph>
+
         <Paragraph className=" mt-4">
-          I've recently started a blog on my portfolio website, where I'll share
-          insights, guides, and tutorials aimed at helping fellow developers
-          navigate complex topics and enhance their technical skills. I implore
-          all new developers, whether in a formal program or on a self-teaching
-          journey, to actively build useful applications—be an engineer. Aim for
-          that flow state where challenge perfectly meets skill, constantly
-          challenge yourself to apply the concepts and languages you learn.
-          Remember, tutorial hell is real—keep creating!
+          Beyond development, I'm passionate about knowledge sharing and
+          continuous learning. My Blog features technical insights, development
+          tutorials, and industry perspectives designed to help fellow
+          developers navigate complex challenges. Additionally, the Books
+          section highlights my favorite reads that have shaped my approach to
+          technology and personal development—I particularly recommend checking
+          out the recommendations from thought leaders like Dave Asprey.
         </Paragraph>
+
         <Paragraph className=" mt-4">
-          Join me on this journey of bytes and narratives, logic and creativity,
-          code and prose. Together, we can explore the boundless possibilities
-          of technology and storytelling, all while reveling in the sheer beauty
-          of thoughtful design.
+          When I'm not coding, you'll find me pursuing biohacking optimization
+          techniques or on the soccer field. I believe in maintaining the same
+          precision and dedication in physical pursuits as I do in software
+          development—whether that's following Lionel Messi's latest
+          performances or optimizing my own health metrics.
         </Paragraph>
+
         <Paragraph className=" mt-4">
-          I'm so glad you've come to join me. Be on the look out for new
-          features. Coming soon are an "Invest With Me" AI-assistant integrated
-          dashboard, A Biohacking product and treatment feature as well as
-          Notifications of my Prototypes (Applications I am building)
+          I encourage aspiring developers to embrace the builder mindset: move
+          beyond tutorials and create meaningful applications that challenge
+          your skills. The intersection of theory and practice is where real
+          growth happens, and I'm here to support that journey through shared
+          knowledge and innovative solutions.
+        </Paragraph>
+
+        <Paragraph className=" mt-4">
+          Stay tuned for exciting portfolio enhancements and new project
+          launches. I'm actively developing an AI-integrated investment
+          dashboard, expanding biohacking product features, and will be rolling
+          out notifications for new prototype applications. The portfolio
+          continues to evolve as a living showcase of emerging technologies and
+          practical solutions.
         </Paragraph>
       </div>
     </div>

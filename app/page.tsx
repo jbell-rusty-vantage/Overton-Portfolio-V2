@@ -14,21 +14,20 @@ export default function Home() {
         Hello there! I&apos;m John Overton
       </Heading>
       <Paragraph className="max-w-xl mt-4">
-        I&apos;m a Full Stack Developer and AI and Dev Ops Engineer in training.
-        I love
-        <Highlight>engineering solutions</Highlight> and I hope to create web,
-        mobile and desktop apps that change people' lives
-        <Highlight>And The World</Highlight>
+        I&apos;m a Full Stack Developer specializing in AI and DevOps
+        engineering. I&apos;m passionate about
+        <Highlight>engineering innovative solutions</Highlight> that solve
+        real-world problems and building applications that
+        <Highlight>make a meaningful impact</Highlight>.
       </Paragraph>
       <Paragraph className="max-w-xl mt-4">
-        I'm currently a software bootcamp student and a self-taught Software
-        Engineer.
+        Currently advancing my expertise through intensive software development
+        training while leveraging my self-taught foundation.
         <Highlight>
-          I have more than 1 year of experience building application
+          With over a year of hands-on experience building applications
         </Highlight>
-        I am rapidly improving my skills. I am developing prototypes ,
-        practicing my development skills and charging forward in the Agentic Age
-        of AI.
+        , I focus on creating prototypes, refining my technical skills, and
+        staying at the forefront of AI-driven development.
       </Paragraph>
       <Heading
         as="h2"
