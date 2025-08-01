@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container } from "./Container";
 
 interface Book {
@@ -15,12 +15,26 @@ interface Book {
   };
 }
 
-interface FavoriteBooksProps {
-  books: Book[];
-}
-
-export const FavoriteBooks = ({ books }: FavoriteBooksProps) => {
+export const FavoriteBooks = () => {
+  const [books, setBooks] = useState<Book[]>([]);
+  const [loading, setLoading] = useState(true);
   const [selectedBook, setSelectedBook] = useState<Book | null>(null);
+
+  useEffect(() => {
+    const fetchBooks = async () => {
+      try {
+        const response = await fetch("/api/books");
+        const data = await response.json();
+        setBooks(data);
+      } catch (error) {
+        console.error("Error fetching books:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBooks();
+  }, []);
 
   const handleBookClick = (book: Book) => {
     setSelectedBook(book);
@@ -29,6 +43,16 @@ export const FavoriteBooks = ({ books }: FavoriteBooksProps) => {
   const handleBackToBooks = () => {
     setSelectedBook(null);
   };
+
+  if (loading) {
+    return (
+      <Container>
+        <div className="flex justify-center items-center py-20">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
+        </div>
+      </Container>
+    );
+  }
 
   return (
     <Container>

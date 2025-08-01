@@ -24,7 +24,7 @@ export default function Home() {
         I'm currently a software bootcamp student and a self-taught Software
         Engineer.
         <Highlight>
-          I have about 1 year of experience building application
+          I have more than 1 year of experience building application
         </Highlight>
         I am rapidly improving my skills. I am developing prototypes ,
         practicing my development skills and charging forward in the Agentic Age
