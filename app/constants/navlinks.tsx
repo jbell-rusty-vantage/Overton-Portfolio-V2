@@ -5,6 +5,7 @@ import {
   IconMail,
   IconMessage2,
   IconBook,
+  IconSoccerField,
 } from "@tabler/icons-react";
 
 export const navlinks = [
@@ -37,5 +38,10 @@ export const navlinks = [
     href: "/contact",
     label: "Contact",
     icon: IconMail,
+  },
+  {
+    href: "https://drive.google.com/file/d/1RhwBQ_UkXREc6gBf_NqzvDAMGgTZ9Tnq/view?usp=sharing",
+    label: "Soccer Highlights",
+    icon: IconSoccerField,
   },
 ];

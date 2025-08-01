@@ -11,7 +11,7 @@ import { Badge } from "./Badge";
 import { AnimatePresence, motion } from "framer-motion";
 import { IconLayoutSidebarRightCollapse } from "@tabler/icons-react";
 import { isMobile } from "@/lib/utils";
-import { ThemeToggle } from "./theme-toggle";
+import { IconOctahedron } from "@tabler/icons-react";
 
 export const Sidebar = () => {
   const [open, setOpen] = useState(isMobile() ? false : true);
@@ -105,7 +105,7 @@ export const Navigation = ({
 const SidebarHeader = () => {
   return (
     <div className="flex space-x-2">
-      <ThemeToggle />
+      <IconOctahedron className="text-secondary" />
       <div className="flex text-sm flex-col">
         <p className="font-bold text-primary">John Overton Bell</p>
         <p className="font-light text-secondary">Software Engineer</p>
