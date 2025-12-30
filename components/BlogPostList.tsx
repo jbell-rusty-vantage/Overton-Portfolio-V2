@@ -19,13 +19,14 @@ type BlogListProps = {
 async function BlogContent({ searchParams }: BlogListProps) {
   const params = await searchParams;
   const query = params?.query || "";
-  const isSearchMode = Boolean(query && query.trim() !== "");
+  const trimmedQuery = query.trim();
+  const isSearchMode = trimmedQuery.length > 0;
   const isDoneSearching = params?.isDoneSearching === "true";
 
   async function fetchBlogPosts() {
     if (isSearchMode) {
       const results = await prisma.blogPost.returnPineconeResults(
-        query.trim(),
+        trimmedQuery,
         5
       );
       return results;
@@ -44,7 +45,7 @@ async function BlogContent({ searchParams }: BlogListProps) {
   // ✅ Once search results are fetched, redirect to mark "done"
   if (isSearchMode && !isDoneSearching) {
     const qs = new URLSearchParams();
-    qs.set("query", query.trim());
+    qs.set("query", trimmedQuery);
     qs.set("isDoneSearching", "true");
 
     redirect(`?${qs.toString()}`);
@@ -90,7 +91,9 @@ async function BlogContent({ searchParams }: BlogListProps) {
 export async function BlogList({ searchParams }: BlogListProps) {
   const params = await searchParams;
   const query = params?.query || "";
-  const isSearchMode = Boolean(query && query.trim() !== "");
+
+  const trimmedQuery = query.trim();
+  const isSearchMode = trimmedQuery.length > 0;
   const isDoneSearching = params?.isDoneSearching === "true";
 
   return (
