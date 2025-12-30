@@ -19,7 +19,7 @@ type BlogListProps = {
 async function BlogContent({ searchParams }: BlogListProps) {
   const params = await searchParams;
   const query = params?.query || "";
-  const isSearchMode = query && query.trim() !== "";
+  const isSearchMode = Boolean(query && query.trim() !== "");
   const isDoneSearching = params?.isDoneSearching === "true";
 
   async function fetchBlogPosts() {
