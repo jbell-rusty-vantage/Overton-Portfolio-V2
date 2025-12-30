@@ -90,7 +90,7 @@ async function BlogContent({ searchParams }: BlogListProps) {
 export async function BlogList({ searchParams }: BlogListProps) {
   const params = await searchParams;
   const query = params?.query || "";
-  const isSearchMode = query && query.trim() !== "";
+  const isSearchMode = Boolean(query && query.trim() !== "");
   const isDoneSearching = params?.isDoneSearching === "true";
 
   return (
