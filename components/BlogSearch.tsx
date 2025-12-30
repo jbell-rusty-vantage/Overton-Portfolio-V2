@@ -9,13 +9,15 @@ import { motion } from "motion/react";
 
 type BlogSearchProps = {
   placeholder: string;
-  showAllButton?: boolean;
+  showAllButton?: boolean | "" | undefined;
 };
 
 export function BlogSearch({
   placeholder,
   showAllButton = false,
 }: BlogSearchProps) {
+  // Normalize showAllButton to boolean
+  const shouldShowAllButton = Boolean(showAllButton);
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const { replace } = useRouter();
@@ -157,7 +159,7 @@ export function BlogSearch({
           </motion.div>
         )}
 
-        {showAllButton && (
+        {shouldShowAllButton && (
           <motion.div
             initial={{ opacity: 0, x: 10 }}
             animate={{ opacity: 1, x: 0 }}

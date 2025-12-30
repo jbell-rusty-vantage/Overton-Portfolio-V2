@@ -114,7 +114,7 @@ export async function BlogList({ searchParams }: BlogListProps) {
       <div className="mb-10">
         <BlogSearch
           placeholder="Search posts (keywords or concepts)"
-          showAllButton={Boolean(isSearchMode)}
+          showAllButton={isSearchMode}
         />
       </div>
 
