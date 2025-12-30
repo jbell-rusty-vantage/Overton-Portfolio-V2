@@ -6,10 +6,12 @@ import { Heading } from "./Heading";
 import { Paragraph } from "./Paragraph";
 import { Suspense } from "react";
 import { BlogListSkeleton } from "./ui/skeleton";
+import { redirect } from "next/navigation";
 
 type BlogListProps = {
   searchParams?: Promise<{
     query?: string;
+    isDoneSearching?: string; // ✅ keep as string because URL params
   }>;
 };
 
@@ -17,28 +19,21 @@ type BlogListProps = {
 async function BlogContent({ searchParams }: BlogListProps) {
   const params = await searchParams;
   const query = params?.query || "";
+  const isSearchMode = query && query.trim() !== "";
+  const isDoneSearching = params?.isDoneSearching === "true";
 
   async function fetchBlogPosts() {
-    // If there's a search query, use vector search
-    if (query && query.trim() !== "") {
-      console.log("QUERY IN PRISMA FUNCTION", query);
+    if (isSearchMode) {
       const results = await prisma.blogPost.returnPineconeResults(
         query.trim(),
-        5 // Increased limit for better search results
+        5
       );
-
       return results;
     }
 
-    // Otherwise, fetch all published posts
-    console.log("FETCHING ALL BLOGS");
     const blogPosts = await prisma.blogPost.findMany({
-      where: {
-        isPublished: true, // Only return published posts
-      },
-      orderBy: {
-        publishedAt: "desc", // Most recent first
-      },
+      where: { isPublished: true },
+      orderBy: { publishedAt: "desc" },
     });
 
     return blogPosts;
@@ -46,9 +41,15 @@ async function BlogContent({ searchParams }: BlogListProps) {
 
   const blogs = await fetchBlogPosts();
 
-  console.log("FETCHED BLOGS:", blogs.length);
+  // ✅ Once search results are fetched, redirect to mark "done"
+  if (isSearchMode && !isDoneSearching) {
+    const qs = new URLSearchParams();
+    qs.set("query", query.trim());
+    qs.set("isDoneSearching", "true");
 
-  // Transform prisma data to match Blog type
+    redirect(`?${qs.toString()}`);
+  }
+
   const transformedBlogs: Blog[] = blogs.map((blog) => ({
     title: blog?.title || "",
     description: blog?.description || "",
@@ -58,12 +59,10 @@ async function BlogContent({ searchParams }: BlogListProps) {
     date: blog?.publishedAt?.toISOString() || "",
     slug: blog?.slug || "",
     image: blog?.coverImage || undefined,
-    mdxPath: (blog as any)?.mdxPath || "", // Fix for mdxPath property
+    mdxPath: (blog as any)?.mdxPath || "",
     tags: blog?.tags || [],
     id: blog?.id || "",
   }));
-
-  const isSearchMode = query && query.trim() !== "";
 
   return (
     <>
@@ -92,6 +91,7 @@ export async function BlogList({ searchParams }: BlogListProps) {
   const params = await searchParams;
   const query = params?.query || "";
   const isSearchMode = query && query.trim() !== "";
+  const isDoneSearching = params?.isDoneSearching === "true";
 
   return (
     <>
@@ -99,16 +99,19 @@ export async function BlogList({ searchParams }: BlogListProps) {
       <Heading className="font-black mb-2">
         {isSearchMode ? "Search Results" : "Latest Blog Posts"}
       </Heading>
+
       <Paragraph className="mb-10">
         {isSearchMode
-          ? `Searching for "${query}"...`
+          ? isDoneSearching
+            ? `Showing results for "${query}".`
+            : `Searching for "${query}"...`
           : "Read tutorials on AI, Full Stack Development and More. Journey with me into technology and life."}
       </Paragraph>
 
       <div className="mb-10">
         <BlogSearch
-          placeholder="Search articles using AI..."
-          showAllButton={isSearchMode ? true : false}
+          placeholder="Search posts (keywords or concepts)"
+          showAllButton={isSearchMode}
         />
       </div>
 

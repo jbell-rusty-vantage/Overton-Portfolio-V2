@@ -34,16 +34,15 @@ export function BlogSearch({
       const params = new URLSearchParams(searchParams);
 
       if (term.trim().length > 0) {
-        // Set the search query
         params.set("query", term.trim());
+        params.set("isDoneSearching", "false"); // ✅ reset when starting a new search
       } else {
-        // If search is empty, remove the query
         params.delete("query");
+        params.delete("isDoneSearching");
       }
 
       replace(`${pathname}?${params.toString()}`);
 
-      // Reset loading state after transition
       setTimeout(() => {
         setIsSearching(false);
       }, 500);
@@ -57,6 +56,7 @@ export function BlogSearch({
     startTransition(() => {
       const params = new URLSearchParams(searchParams);
       params.delete("query");
+      params.delete("isDoneSearching");
       replace(`${pathname}?${params.toString()}`);
 
       setTimeout(() => {
@@ -72,6 +72,7 @@ export function BlogSearch({
     startTransition(() => {
       const params = new URLSearchParams(searchParams);
       params.delete("query");
+      params.delete("isDoneSearching");
       replace(`${pathname}?${params.toString()}`);
 
       setTimeout(() => {
@@ -98,7 +99,7 @@ export function BlogSearch({
             placeholder={placeholder}
             value={term}
             onChange={(e) => setTerm(e.target.value)}
-            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
+            className="flex-1 px-3 py-2 border border-gray-300 rounded-md text-black focus:outline-none bg-transparent focus:ring-2 focus:ring-blue-500 transition-all duration-200"
             whileFocus={{ scale: 1.02 }}
             disabled={isSearching || isPending}
           />
@@ -116,6 +117,7 @@ export function BlogSearch({
               "Search"
             )}
           </Button>
+
           {term && (
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -140,7 +142,6 @@ export function BlogSearch({
         </div>
       </form>
 
-      {/* Show search status and Show All button */}
       <div className="flex items-center justify-between">
         {searchParams.get("query") && (
           <motion.div

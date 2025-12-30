@@ -18,18 +18,48 @@ const blogPosts = [
   },
 ];
 
-async function seedBlogPosts() {
+async function seedBlogPostsWithDeleteMany() {
   console.log("🌱 Starting blog posts seeding...");
 
   try {
     // Clear existing blog posts
     await prisma.blogPost.deleteMany({});
+
     console.log("🗑️  Cleared existing blog posts");
 
     // Insert new blog posts
     for (const post of blogPosts) {
-      await prisma.blogPost.create({
-        data: post,
+      await prisma.blogPost.upsert({
+        where: { slug: post.slug },
+        update: post,
+        create: post,
+      });
+      console.log(`✅ Created blog post: ${post.title}`);
+    }
+
+    console.log("🎉 Blog posts seeding completed successfully!");
+    console.log(`📊 Total blog posts created: ${blogPosts.length}`);
+  } catch (error) {
+    console.error("❌ Error seeding blog posts:", error);
+    throw error;
+  } finally {
+    await prisma.$disconnect();
+  }
+}
+
+async function seedBlogPostsWithUpsert() {
+  console.log("🌱 Starting blog posts seeding...");
+  try {
+    // Clear existing blog posts
+
+    console.log("🗑️  Cleared existing blog posts");
+
+    // Insert new blog posts
+    for (const post of blogPosts) {
+      await prisma.blogPost.upsert({
+        where: { slug: post.slug },
+        update: post,
+        create: post,
       });
       console.log(`✅ Created blog post: ${post.title}`);
     }
@@ -45,7 +75,7 @@ async function seedBlogPosts() {
 }
 
 // Run the seeding function
-seedBlogPosts()
+seedBlogPostsWithDeleteMany()
   .then(() => {
     console.log("🚀 Database seeding completed!");
     process.exit(0);

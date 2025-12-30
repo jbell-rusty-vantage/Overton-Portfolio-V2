@@ -1,22 +1,23 @@
-import { PrismaClient, Prisma } from "@/app/generated/prisma";
+import { PrismaClient } from "@/app/generated/prisma";
 import dotenv from "dotenv";
-
 import { Pinecone } from "@pinecone-database/pinecone";
 
 dotenv.config();
 
-if (!process.env.PINECONE_API_KEY) throw Error("Pinecone not set!");
+if (!process.env.PINECONE_API_KEY) throw new Error("Pinecone not set!");
 
 const indexName = "blogposts";
+const model = "llama-text-embed-v2";
 
 export const pc = new Pinecone({
   apiKey: process.env.PINECONE_API_KEY!,
 });
 
-export const model = "llama-text-embed-v2";
-
 export const index = pc.index(indexName);
 
+/**
+ * ---- Pinecone Search ----
+ */
 export async function blogPostVecSearch(query: string, topK: number) {
   const searchWithText = await index.searchRecords({
     query: {
@@ -25,12 +26,12 @@ export async function blogPostVecSearch(query: string, topK: number) {
     },
   });
 
-  const results = searchWithText.result.hits;
-
-  return results;
+  return searchWithText.result.hits ?? [];
 }
 
-// Type for blog post data used in sync operations
+/**
+ * ---- Types ----
+ */
 type BlogPostForSync = {
   id: string;
   summary: string;
@@ -41,101 +42,94 @@ type BlogPostForSync = {
   tags: string[];
 };
 
-// Helper function to validate and transform blog post for sync
 function validateBlogPostForSync(blogPost: any): BlogPostForSync | null {
   if (!blogPost?.id || !blogPost?.summary) {
-    console.warn("Blog post missing required fields for sync:", blogPost);
+    // summary is required for embedding
     return null;
   }
 
   return {
     id: blogPost.id,
     summary: blogPost.summary,
-    description: blogPost.description || "",
-    slug: blogPost.slug || "",
-    title: blogPost.title || "",
-    readingTime: blogPost.readingTime || null,
-    tags: blogPost.tags || [],
+    description: blogPost.description ?? "",
+    slug: blogPost.slug ?? "",
+    title: blogPost.title ?? "",
+    readingTime: blogPost.readingTime ?? null,
+    tags: blogPost.tags ?? [],
   };
 }
 
-// Helper function to sync a single blog post with Pinecone
+/**
+ * ---- Pinecone Sync Helpers ----
+ */
 async function syncBlogPostToPinecone(blogPost: BlogPostForSync) {
-  try {
-    console.log(`Syncing blog post ${blogPost.id} to Pinecone...`);
+  const textToEmbed = [
+    blogPost.title,
+    blogPost.tags.join(", "),
+    blogPost.summary,
+    blogPost.description,
+  ]
+    .filter(Boolean)
+    .join("\n\n");
+  const embedding = await pc.inference.embed(model, [textToEmbed], {
+    inputType: "passage",
+    truncate: "END",
+  });
 
-    // Generate embedding for the blog post summary
-    const embedding = await pc.inference.embed(model, [blogPost.summary], {
-      inputType: "passage",
-      truncate: "END",
-    });
-
-    // Check if embedding has values property (dense embedding)
-    if (embedding.data[0] && "values" in embedding.data[0]) {
-      const record = {
-        id: blogPost.id,
-        values: embedding.data[0].values,
-        metadata: {
-          description: blogPost.description,
-          slug: blogPost.slug,
-          title: blogPost.title,
-          readingTime: blogPost.readingTime || 0,
-          tags: blogPost.tags,
-        },
-      };
-
-      // Upsert the record (creates new or updates existing)
-      await index.upsert([record]);
-      console.log(`Successfully synced blog post ${blogPost.id} to Pinecone`);
-    } else {
-      throw new Error(
-        `Failed to generate embedding for blog post ${blogPost.id}`
-      );
-    }
-  } catch (error) {
-    console.error(`Error syncing blog post ${blogPost.id} to Pinecone:`, error);
-    // Re-throw the error to ensure the calling operation knows about the failure
-    throw error;
+  const vec = embedding.data?.[0];
+  if (!vec || !("values" in vec)) {
+    throw new Error(`Failed embedding for blog post ${blogPost.id}`);
   }
+
+  const record = {
+    id: blogPost.id,
+    values: vec.values,
+    metadata: {
+      description: blogPost.description,
+      slug: blogPost.slug,
+      title: blogPost.title,
+      readingTime: blogPost.readingTime ?? 0,
+      tags: blogPost.tags,
+    },
+  };
+
+  await index.upsert([record]);
 }
 
-// Helper function to delete a blog post from Pinecone
 async function deleteBlogPostFromPinecone(blogPostId: string) {
-  try {
-    console.log(`Deleting blog post ${blogPostId} from Pinecone...`);
-    await index.deleteOne(blogPostId);
-    console.log(`Successfully deleted blog post ${blogPostId} from Pinecone`);
-  } catch (error) {
-    console.error(
-      `Error deleting blog post ${blogPostId} from Pinecone:`,
-      error
-    );
-    // Re-throw the error to ensure the calling operation knows about the failure
-    throw error;
-  }
+  await index.deleteOne(blogPostId);
 }
 
-const prisma = new PrismaClient().$extends({
+/**
+ * ---- Prisma Client Setup ----
+ * IMPORTANT: Use basePrisma inside middleware/extends to avoid recursion.
+ */
+const basePrisma = new PrismaClient();
+
+const prisma = basePrisma.$extends({
   name: "blogpostvector",
   model: {
     blogPost: {
+      /**
+       * Vector search + DB hydrate
+       */
       async returnPineconeResults(query: string, topK: number) {
-        const results = await blogPostVecSearch(query, topK);
+        const hits = await blogPostVecSearch(query, topK);
 
-        // Deduplicate results by ID - keep only the first occurrence (highest score)
-        const uniqueResults = new Map<string, (typeof results)[0]>();
-        for (const result of results) {
-          if (!uniqueResults.has(result._id)) {
-            uniqueResults.set(result._id, result);
+        // Deduplicate by ID, keep best score (highest)
+        const bestById = new Map<string, (typeof hits)[0]>();
+        for (const hit of hits) {
+          const existing = bestById.get(hit._id);
+          if (!existing || hit._score > existing._score) {
+            bestById.set(hit._id, hit);
           }
         }
 
-        // Extract unique IDs from deduplicated results
-        const blogPostIds = Array.from(uniqueResults.keys());
+        const ids = Array.from(bestById.keys());
 
-        // Find blog posts by their IDs - only fetch what we need
-        const blogPosts = await prisma.blogPost.findMany({
-          where: { id: { in: blogPostIds } },
+        // Fetch posts from DB
+        const posts = await basePrisma.blogPost.findMany({
+          where: { id: { in: ids } },
           select: {
             id: true,
             title: true,
@@ -150,179 +144,146 @@ const prisma = new PrismaClient().$extends({
           },
         });
 
-        // Return deduplicated results with scores and blog post data
-        return Array.from(uniqueResults.values())
-          .map((result) => {
-            const blogPost = blogPosts.find((post) => post.id === result._id);
+        const postsById = new Map(posts.map((p) => [p.id, p]));
+
+        // Preserve ranking order by Pinecone score
+        const ranked = Array.from(bestById.values())
+          .sort((a, b) => b._score - a._score)
+          .map((hit) => {
+            const post = postsById.get(hit._id);
+            if (!post) return null;
             return {
-              ...blogPost,
-              score: result._score,
+              ...post,
+              score: hit._score,
             };
           })
-          .filter((result) => result.id); // Filter out any results where blog post wasn't found
+          .filter(Boolean);
+
+        return ranked;
       },
     },
   },
+
   query: {
     blogPost: {
-      // Intercept create operations
-      async create({ model, operation, args, query }) {
+      async create({ args, query }) {
         const result = await query(args);
 
-        // Sync to Pinecone after successful creation
-        if (result) {
+        const validated = validateBlogPostForSync(result);
+        if (validated) {
           try {
-            const validatedPost = validateBlogPostForSync(result);
-            if (validatedPost) {
-              await syncBlogPostToPinecone(validatedPost);
-            }
-          } catch (error) {
-            console.error("Failed to sync to Pinecone after create:", error);
-            // Optionally, you could rollback the Prisma operation here
-            // throw error;
+            await syncBlogPostToPinecone(validated);
+          } catch (err) {
+            console.error("Pinecone sync failed after create:", err);
           }
         }
 
         return result;
       },
 
-      // Intercept update operations
-      async update({ model, operation, args, query }) {
+      async update({ args, query }) {
         const result = await query(args);
 
-        // Sync to Pinecone after successful update
-        if (result) {
+        const validated = validateBlogPostForSync(result);
+        if (validated) {
           try {
-            const validatedPost = validateBlogPostForSync(result);
-            if (validatedPost) {
-              await syncBlogPostToPinecone(validatedPost);
-            }
-          } catch (error) {
-            console.error("Failed to sync to Pinecone after update:", error);
-            // Optionally, you could rollback the Prisma operation here
-            // throw error;
+            await syncBlogPostToPinecone(validated);
+          } catch (err) {
+            console.error("Pinecone sync failed after update:", err);
           }
         }
 
         return result;
       },
 
-      // Intercept upsert operations
-      async upsert({ model, operation, args, query }) {
+      async upsert({ args, query }) {
         const result = await query(args);
 
-        // Sync to Pinecone after successful upsert
-        if (result) {
+        const validated = validateBlogPostForSync(result);
+        if (validated) {
           try {
-            const validatedPost = validateBlogPostForSync(result);
-            if (validatedPost) {
-              await syncBlogPostToPinecone(validatedPost);
-            }
-          } catch (error) {
-            console.error("Failed to sync to Pinecone after upsert:", error);
-            // Optionally, you could rollback the Prisma operation here
-            // throw error;
+            await syncBlogPostToPinecone(validated);
+          } catch (err) {
+            console.error("Pinecone sync failed after upsert:", err);
           }
         }
 
         return result;
       },
 
-      // Intercept updateMany operations
-      async updateMany({ model, operation, args, query }) {
-        // Get the blog posts that will be updated BEFORE the update
-        const postsToUpdate = await prisma.blogPost.findMany({
-          where: args.where,
-          select: {
-            id: true,
-            summary: true,
-            description: true,
-            slug: true,
-            title: true,
-            readingTime: true,
-            tags: true,
-          },
-        });
-
+      /**
+       * updateMany: safest is fetch after update, because args.data may contain operations
+       */
+      async updateMany({ args, query }) {
         const result = await query(args);
 
-        // Sync all updated posts to Pinecone
-        if (result.count > 0 && postsToUpdate.length > 0) {
-          // Apply the updates to our local copy for syncing
-          const updatedPosts = postsToUpdate
-            .map((post) => {
-              const updatedPost = {
-                ...post,
-                ...args.data, // Apply the update data
-              };
-              return validateBlogPostForSync(updatedPost);
-            })
-            .filter(Boolean) as BlogPostForSync[];
-
-          for (const post of updatedPosts) {
-            try {
-              await syncBlogPostToPinecone(post);
-            } catch (error) {
-              console.error(
-                `Failed to sync post ${post.id} to Pinecone after updateMany:`,
-                error
-              );
-              // Continue with other posts even if one fails
-            }
-          }
-        }
-
-        return result;
-      },
-
-      // Intercept delete operations
-      async delete({ model, operation, args, query }) {
-        // Get the blog post ID before deletion
-        const blogPostToDelete = await prisma.blogPost.findUnique({
-          where: args.where,
-          select: { id: true },
-        });
-
-        const result = await query(args);
-
-        // Delete from Pinecone after successful deletion
-        if (result && blogPostToDelete) {
-          try {
-            await deleteBlogPostFromPinecone(blogPostToDelete.id);
-          } catch (error) {
-            console.error(
-              "Failed to delete from Pinecone after delete:",
-              error
-            );
-            // Optionally, you could rollback the Prisma operation here
-            // throw error;
-          }
-        }
-
-        return result;
-      },
-
-      // Intercept deleteMany operations
-      async deleteMany({ model, operation, args, query }) {
-        // Get the blog post IDs before deletion
-        const blogPostsToDelete = await prisma.blogPost.findMany({
-          where: args.where,
-          select: { id: true },
-        });
-
-        const result = await query(args);
-
-        // Delete from Pinecone after successful deletion
         if (result.count > 0) {
-          for (const post of blogPostsToDelete) {
+          try {
+            const updated = await basePrisma.blogPost.findMany({
+              where: args.where,
+              select: {
+                id: true,
+                summary: true,
+                description: true,
+                slug: true,
+                title: true,
+                readingTime: true,
+                tags: true,
+              },
+            });
+
+            for (const post of updated) {
+              const validated = validateBlogPostForSync(post);
+              if (!validated) continue;
+              try {
+                await syncBlogPostToPinecone(validated);
+              } catch (err) {
+                console.error(`Pinecone sync failed for ${post.id}:`, err);
+              }
+            }
+          } catch (err) {
+            console.error("Pinecone sync failed after updateMany:", err);
+          }
+        }
+
+        return result;
+      },
+
+      async delete({ args, query }) {
+        // Fetch ID first
+        const toDelete = await basePrisma.blogPost.findUnique({
+          where: args.where,
+          select: { id: true },
+        });
+
+        const result = await query(args);
+
+        if (toDelete) {
+          try {
+            await deleteBlogPostFromPinecone(toDelete.id);
+          } catch (err) {
+            console.error("Pinecone delete failed after delete:", err);
+          }
+        }
+
+        return result;
+      },
+
+      async deleteMany({ args, query }) {
+        // Fetch IDs first
+        const toDelete = await basePrisma.blogPost.findMany({
+          where: args.where,
+          select: { id: true },
+        });
+
+        const result = await query(args);
+
+        if (result.count > 0 && toDelete.length > 0) {
+          for (const post of toDelete) {
             try {
               await deleteBlogPostFromPinecone(post.id);
-            } catch (error) {
-              console.error(
-                `Failed to delete post ${post.id} from Pinecone after deleteMany:`,
-                error
-              );
-              // Continue with other posts even if one fails
+            } catch (err) {
+              console.error(`Pinecone delete failed for ${post.id}:`, err);
             }
           }
         }
