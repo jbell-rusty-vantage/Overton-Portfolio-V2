@@ -90,7 +90,7 @@ async function BlogContent({ searchParams }: BlogListProps) {
 
 export async function BlogList({ searchParams }: BlogListProps) {
   const params = await searchParams;
-  const query = params?.query || "";
+  const query: string = params?.query || "";
 
   const trimmedQuery = query.trim();
   const isSearchMode: boolean = trimmedQuery.length > 0;
@@ -114,7 +114,7 @@ export async function BlogList({ searchParams }: BlogListProps) {
       <div className="mb-10">
         <BlogSearch
           placeholder="Search posts (keywords or concepts)"
-          showAllButton={isSearchMode}
+          showAllButton={Boolean(isSearchMode)}
         />
       </div>
 

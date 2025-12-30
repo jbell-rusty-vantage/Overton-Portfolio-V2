@@ -7,13 +7,15 @@ import React from "react";
 import { Spinner } from "@/components/ui/skeleton";
 import { motion } from "motion/react";
 
+type BlogSearchProps = {
+  placeholder: string;
+  showAllButton?: boolean;
+};
+
 export function BlogSearch({
   placeholder,
   showAllButton = false,
-}: {
-  placeholder: string;
-  showAllButton?: boolean;
-}) {
+}: BlogSearchProps) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const { replace } = useRouter();
