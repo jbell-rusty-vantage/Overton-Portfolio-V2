@@ -122,8 +122,16 @@ const prisma = new PrismaClient().$extends({
       async returnPineconeResults(query: string, topK: number) {
         const results = await blogPostVecSearch(query, topK);
 
-        // Extract IDs from Pinecone results
-        const blogPostIds = results.map((result) => result._id);
+        // Deduplicate results by ID - keep only the first occurrence (highest score)
+        const uniqueResults = new Map<string, (typeof results)[0]>();
+        for (const result of results) {
+          if (!uniqueResults.has(result._id)) {
+            uniqueResults.set(result._id, result);
+          }
+        }
+
+        // Extract unique IDs from deduplicated results
+        const blogPostIds = Array.from(uniqueResults.keys());
 
         // Find blog posts by their IDs - only fetch what we need
         const blogPosts = await prisma.blogPost.findMany({
@@ -142,14 +150,16 @@ const prisma = new PrismaClient().$extends({
           },
         });
 
-        // Return results with scores and blog post data
-        return results.map((result) => {
-          const blogPost = blogPosts.find((post) => post.id === result._id);
-          return {
-            ...blogPost,
-            score: result._score,
-          };
-        });
+        // Return deduplicated results with scores and blog post data
+        return Array.from(uniqueResults.values())
+          .map((result) => {
+            const blogPost = blogPosts.find((post) => post.id === result._id);
+            return {
+              ...blogPost,
+              score: result._score,
+            };
+          })
+          .filter((result) => result.id); // Filter out any results where blog post wasn't found
       },
     },
   },

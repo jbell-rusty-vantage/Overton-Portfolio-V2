@@ -112,11 +112,11 @@ export const Products = () => {
                     {project.description}
                   </Paragraph>
                 </div>
-                <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0">
+                <div className="flex flex-wrap gap-2 md:mb-1 mt-2 md:mt-0">
                   {project.technologies?.map((tech: string) => (
                     <span
                       key={tech}
-                      className="text-xs md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-secondary"
+                      className="text-xs md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-secondary text-center inline-flex items-center justify-center"
                     >
                       {tech}
                     </span>

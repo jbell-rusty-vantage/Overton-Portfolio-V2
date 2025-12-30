@@ -29,8 +29,11 @@ export const SingleProduct = ({ project }: { project: GitHubProject }) => {
     "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop",
   ];
 
+  // Use project images if available, otherwise use placeholders
   const projectImages =
-    project.images.length > 0 ? project.images : placeholderImages.slice(0, 3);
+    project.images && project.images.length > 0
+      ? project.images
+      : placeholderImages.slice(0, 3);
   const [activeImage, setActiveImage] = useState<string>(projectImages[0]);
 
   return (
@@ -79,11 +82,11 @@ export const SingleProduct = ({ project }: { project: GitHubProject }) => {
 
       <div className="flex lg:flex-row justify-between items-center flex-col mt-20">
         <Heading className="font-black mb-2 pb-1">{project.name}</Heading>
-        <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0">
+        <div className="flex flex-wrap space-x-2 md:mb-1 mt-2 md:mt-0">
           {project.technologies?.map((tech: string) => (
             <span
               key={tech}
-              className="text-xs md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-secondary"
+              className="text-xs md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-secondary text-center inline-flex items-center justify-center"
             >
               {tech}
             </span>

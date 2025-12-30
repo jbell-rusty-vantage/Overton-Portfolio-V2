@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Paragraph } from "./Paragraph";
 import { motion } from "motion/react";
-import MoonBeamImage from "../public/images/recovery-photo.png";
 
 type UpcomingProject = {
   id: string;
@@ -76,19 +75,23 @@ export const UpcomingProjects = () => {
             transition={{ duration: 0.2, delay: idx * 0.1 }}
           >
             <div className="group flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 hover:bg-gray-50 rounded-2xl transition duration-200 pt-4">
-              <div className="relative">
+              <div className="relative flex-shrink-0">
                 {project.images && project.images.length > 0 ? (
                   <Image
-                    src={MoonBeamImage}
+                    src={project.images[0]}
                     alt={`${project.name} thumbnail`}
-                    height="200"
-                    width="200"
-                    className="rounded-md object-cover"
+                    height="300"
+                    width="300"
+                    className="rounded-md object-cover w-[300px] h-[300px]"
                   />
                 ) : (
-                  <div className="w-[200px] h-[200px] bg-gradient-to-br from-gray-200 to-gray-300 rounded-md flex items-center justify-center">
-                    <span className="text-gray-500 text-sm">No Image</span>
-                  </div>
+                  <Image
+                    src="/projects/human_upgrade_api/human_upgrade_api_3.png"
+                    alt={`${project.name} thumbnail`}
+                    height="300"
+                    width="300"
+                    className="rounded-md object-cover w-[300px] h-[300px]"
+                  />
                 )}
               </div>
 
@@ -131,22 +134,22 @@ export const UpcomingProjects = () => {
 
                   {/* Features */}
                   {project.features && project.features.length > 0 && (
-                    <div className="mt-4">
+                    <div className="mt-4 w-full">
                       <h5 className="text-xs font-semibold text-gray-700 mb-2">
                         Key Features:
                       </h5>
-                      <div className="flex flex-wrap gap-1">
-                        {project.features.slice(0, 6).map((feature: string) => (
+                      <div className="flex flex-wrap gap-2 w-full">
+                        {project.features.slice(0, 5).map((feature: string) => (
                           <span
                             key={feature}
-                            className="text-xs bg-blue-50 px-2 py-1 rounded-sm text-blue-700 border border-blue-200"
+                            className="text-xs bg-blue-50 px-2 py-1 rounded-sm text-blue-700 border border-blue-200 break-words"
                           >
                             {feature}
                           </span>
                         ))}
-                        {project.features.length > 6 && (
+                        {project.features.length > 5 && (
                           <span className="text-xs text-gray-500">
-                            +{project.features.length - 6} more
+                            +{project.features.length - 5} more
                           </span>
                         )}
                       </div>
@@ -155,11 +158,11 @@ export const UpcomingProjects = () => {
                 </div>
 
                 {/* Technologies */}
-                <div className="flex space-x-2 md:mb-1 mt-4 md:mt-0">
+                <div className="flex flex-wrap gap-2 md:mb-1 mt-4 md:mt-0">
                   {project.technologies?.map((tech: string) => (
                     <span
                       key={tech}
-                      className="text-xs md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-secondary"
+                      className="text-xs md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-secondary text-center inline-flex items-center justify-center"
                     >
                       {tech}
                     </span>
@@ -168,7 +171,7 @@ export const UpcomingProjects = () => {
 
                 {/* Tags */}
                 {project.tags && project.tags.length > 0 && (
-                  <div className="flex space-x-2 mt-2">
+                  <div className="flex flex-wrap gap-2 mt-2">
                     {project.tags.map((tag: string) => (
                       <span
                         key={tag}
