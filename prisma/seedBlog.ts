@@ -75,7 +75,17 @@ async function seedBlogPostsWithUpsert() {
 }
 
 // Run the seeding function
-seedBlogPostsWithDeleteMany()
+// seedBlogPostsWithDeleteMany()
+//   .then(() => {
+//     console.log("🚀 Database seeding completed!");
+//     process.exit(0);
+//   })
+//   .catch((error) => {
+//     console.error("💥 Seeding failed:", error);
+//     process.exit(1);
+//   });
+
+seedBlogPostsWithUpsert()
   .then(() => {
     console.log("🚀 Database seeding completed!");
     process.exit(0);
