@@ -199,9 +199,7 @@ async function main() {
         "ingestion",
         "llm",
       ],
-      images: [
-        "/projects/humanupgradeknowledgebase/humanupgrade_kb_one.png",
-      ],
+      images: ["/projects/humanupgradeknowledgebase/humanupgrade_kb_one.png"],
     },
   });
 
@@ -240,9 +238,7 @@ async function main() {
         "health",
         "ingestion",
       ],
-      images: [
-        "/projects/humanupgrade_data_ops/humanupgrade_data_ops_one.png",
-      ],
+      images: ["/projects/humanupgrade_data_ops/humanupgrade_data_ops_one.png"],
     },
   });
 
@@ -438,6 +434,7 @@ async function main() {
         "Searchable Next.js application for exploring AI Engineer World's Fair people, organizations, sessions, and videos.",
       extendedDescription:
         "A live exploration app built on top of an enriched AI Engineer World's Fair knowledge dataset. The frontend uses Next.js with Supabase as the storage layer and allows users to search across entities including people, videos, organizations, and sessions. Authenticated users can save entities to their profile and take notes, making the system both a discovery layer and a lightweight personal research workspace.",
+      liveUrl: "https://ai-engineer-worldsfair-webapp.vercel.app/",
       url: "https://github.com/Overton77/ai-engineer-worldsfair-webapp",
       technologies: [
         "Next.js",
