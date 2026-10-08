@@ -1,3 +1,71 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* "The Library" palette: ink, parchment and brass. */
+:root {
+  --background: #f6f1e7;
+  --foreground: #1d1a16;
+  --panel: #fffaf0;
+  --muted: #6b6257;
+  --line: #e2d8c6;
+  --accent: #9a6b1f;
+  --accent-ink: #ffffff;
+  --danger: #b4232c;
+  --ok: #2f7a4a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121110;
+    --foreground: #ece5d8;
+    --panel: #1b1916;
+    --muted: #a39887;
+    --line: #2e2a24;
+    --accent: #d4a24c;
+    --accent-ink: #1b1305;
+    --danger: #f0717a;
+    --ok: #6fcf97;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-panel: var(--panel);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-danger: var(--danger);
+  --color-ok: var(--ok);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Form primitives used across /admin */
+@layer components {
+  .input {
+    @apply w-full rounded-md border border-line bg-background px-3 py-2 text-sm outline-none focus:border-accent;
+  }
+  .label {
+    @apply mb-1 block text-xs font-medium uppercase tracking-wide text-muted;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-accent px-3 py-2 text-sm font-medium text-accent-ink hover:opacity-90 disabled:opacity-50;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-line px-3 py-2 text-sm hover:border-accent;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-danger/40 px-3 py-2 text-sm text-danger hover:bg-danger/10;
+  }
+  .card {
+    @apply rounded-xl border border-line bg-panel p-5;
+  }
+}

@@ -1,48 +1,19 @@
-import { Sidebar } from "@/components/Sidebar";
-import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { twMerge } from "tailwind-merge";
-import { Footer } from "@/components/Footer";
-import { ThemeProvider } from "./providers/theme-provider";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "John Overton Bell - Software Engineer",
-  description:
-    "John Overton Bell is a Software engineer, Aspring AI Engineer, DevOps Enginner in Training and a curious soul. ",
-  icons: {
-    icon: "/medal.svg",
+  title: {
+    default: "John Overton — The Library",
+    template: "%s · The Library",
   },
+  description:
+    "John Overton's portfolio, reimagined as a 3D library: projects, evolution, writing and favorites, guided by an AI librarian.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en">
-      <body
-        className={twMerge(
-          inter.className,
-          "flex antialiased h-screen overflow-hidden bg-gray-100"
-        )}
-      >
-        <Sidebar />
-        <div className="lg:pl-2 lg:pt-2 bg-gray-100 flex-1 overflow-y-auto">
-          <div className="flex-1 bg-white min-h-screen lg:rounded-tl-xl border border-transparent lg:border-neutral-200 overflow-y-auto">
-            <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-              {children}
-            </ThemeProvider>
-            <Footer />
-          </div>
-        </div>
-      </body>
+    <html lang="en" className="h-full antialiased">
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }
