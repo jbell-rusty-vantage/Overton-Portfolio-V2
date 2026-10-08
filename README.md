@@ -1,112 +1,41 @@
-# John Doe - Developer Portfolio
+# The Library — John Overton's portfolio
 
-Welcome to my digital space where I share my journey as a developer, writer, and lifelong learner. This portfolio showcases my projects, thoughts, and the tools I use to build the future of web development. Join me on an Adventure of a Life Time.
+A portfolio rebuilt as a **3D library**: projects are books on shelves, an **AI librarian** guides visitors, an
+**Evolution Hall** tells the story from first code to production-grade agent systems, and a computer station shows
+live projects and realtime GitHub activity.
 
-## 🚀 Current Features
+**Status:** foundation phase. The data model (Neon + Prisma 7), the build-time migration pipeline and the private
+admin console are live. The public site shows a placeholder until the 3D world ships. See [`HANDOFF.md`](HANDOFF.md).
 
-### 📝 **Blog & Knowledge Sharing**
+## Stack
 
-- **Technical Tutorials**: Step-by-step guides for modern web development
-- **AI & LLM Content**: Deep dives into LangChain, LangGraph, and AI orchestration
-- **Framework Comparisons**: Next.js, Remix, and modern React patterns
-- **Blockchain & Web3**: Smart contracts, DeFi, and Layer 2 scaling solutions
-- **Cloud & DevOps**: AWS, Azure, and serverless deployment strategies
+Next.js 16.4 (App Router, Cache Components) · React 19.3 · Tailwind v4 · Prisma 7 + Neon Postgres · Vercel Blob ·
+Vercel. Next up: React Three Fiber + Blender, Vercel eve agents, realtime.
 
-### 💼 **Project Showcase**
-
-- **Full-Stack Applications**: React, Next.js, and modern web technologies
-- **AI-Powered Tools**: LLM integrations and intelligent applications
-- **Blockchain Projects**: Smart contracts and DeFi protocols
-- **Open Source Contributions**: Community-driven development
-
-### 📚 **Learning Resources**
-
-- **Book Recommendations**: Curated reading list for developers
-- **Tech Stack Insights**: Tools and technologies I use daily
-- **Career Development**: Resources for software engineering growth
-
-### 🤝 **Connect & Collaborate**
-
-- **Contact Form**: Get in touch for opportunities and collaborations
-- **Social Links**: Connect across various platforms
-- **GitHub Integration**: View my latest code and contributions
-
-## 🔮 Coming Soon
-
-### 💰 **Invest With Me Platform**
-
-A revolutionary investment dashboard with AI assistance that allows users to:
-
-- **AI-Powered Analysis**: Get intelligent insights on financial instruments
-- **Portfolio Mirroring**: Choose to invest in the same instruments as me
-- **Real-time Tracking**: Monitor performance with advanced analytics
-- **Risk Management**: AI-driven risk assessment and recommendations
-- **Community Features**: Share strategies and learn from other investors
-
-### 🧠 **AI Learning Assistant**
-
-Interactive AI-powered learning experiences for my blog content:
-
-- **Personalized Learning Paths**: AI-curated content based on your skill level
-- **Interactive Q&A**: Ask questions about any topic in my blog posts
-- **Code Explanations**: Get detailed breakdowns of code examples
-- **Practice Exercises**: Reinforce learning with hands-on challenges
-- **Progress Tracking**: Monitor your learning journey
-
-### 💻 **Interactive Coding Challenges**
-
-A comprehensive platform to help developers prepare for interviews and master software engineering:
-
-- **Interview Preparation**: Practice common coding problems
-- **Real-time Collaboration**: Code together with other developers
-- **AI Code Review**: Get instant feedback on your solutions
-- **Performance Analysis**: Understand time and space complexity
-- **Learning Paths**: Structured challenges for different skill levels
-- **Community Challenges**: Compete and learn from peers
-
-## 🛠️ Tech Stack
-
-- **Frontend**: Next.js 14, React, TypeScript, Tailwind CSS
-- **Backend**: Node.js, Prisma, PostgreSQL
-- **Deployment**: Vercel, AWS, Docker
-- **AI/ML**: OpenAI GPT-4, Anthropic Claude, LangChain
-- **Blockchain**: Solidity, Ethereum, Layer 2 solutions
-- **Tools**: shadcn/ui, 21st.dev components, MDX
-
-## 🚀 Getting Started
+## Quick start
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/portfolio.git
-
-# Install dependencies
-npm install
-
-# Run the development server
-npm run dev
+npm install                 # also runs prisma generate
+cp .env.example .env.local  # set DATABASE_URL (local Postgres or a Neon dev branch)
+npm run db:deploy           # apply migrations + reference seeds
+npm run dev                 # http://localhost:3000, admin at /admin
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
+| Script | What it does |
+| --- | --- |
+| `npm run dev` | Next dev server (Turbopack) |
+| `npm run build` | `prisma generate` → `db-deploy` (migrations) → `next build` |
+| `npm run typecheck` / `npm run lint` | TypeScript / ESLint |
+| `npm run db:deploy` | Apply migrations to `DATABASE_URL` (direct host, one-time legacy wipe) |
+| `npm run db:migrate:dev` | Create a new migration from schema changes (needs a dev DB) |
+| `npm run db:studio` | Prisma Studio |
 
-## 📖 Blog Highlights
+## Documentation
 
-- **"Deploy Your Portfolio with Next.js and Vercel"** - Complete guide for bootcamp students
-- **"LangChain, LangGraph, and LangSmith"** - LLM orchestration mastery
-- **"Advanced LLM Engineering Patterns"** - Production-ready AI applications
-- **"Blockchain Layer 2 Scaling"** - Polygon, Arbitrum, and Optimism guide
-
-## 🤝 Let's Connect
-
-- **Email**: [your-email@example.com](mailto:your-email@example.com)
-- **LinkedIn**: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
-- **GitHub**: [github.com/yourusername](https://github.com/yourusername)
-- **Twitter**: [@yourhandle](https://twitter.com/yourhandle)
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-_Building the future, one line of code at a time._ 🚀
-# Updated Thu, Jul 31, 2025  7:34:34 PM
+- [`HANDOFF.md`](HANDOFF.md) — what exists, what's next, open questions
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — stack, layout, auth, mutations, uploads, deployment
+- [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md) — tables, concepts (signals → moments → timelines), views, SQL helpers
+- [`docs/ADMIN.md`](docs/ADMIN.md) — the admin console, section by section
+- [`docs/OPERATIONS.md`](docs/OPERATIONS.md) — env vars, migrations, Neon SQL cookbook, troubleshooting
+- [`docs/LIBRARY_3D.md`](docs/LIBRARY_3D.md) — the 3D library plan (Three.js / Blender) and open questions
+- [`AGENTS.md`](AGENTS.md) — rules for AI coding agents working in this repo

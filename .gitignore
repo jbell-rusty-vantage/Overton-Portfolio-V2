@@ -39,20 +39,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-/app/generated/prisma
-
-
-component_refs/ 
-
-resume_stuff/  
-
-sidefolio-portfolio-template  
-
-
-blog_posts.md   
-
-
-
-.cursor/ 
-
+/lib/generated
+!.env.example

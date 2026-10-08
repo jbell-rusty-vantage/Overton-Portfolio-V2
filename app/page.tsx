@@ -1,48 +1,31 @@
-import { Container } from "@/components/Container";
-import { Heading } from "@/components/Heading";
-import { Highlight } from "@/components/Highlight";
-import { Paragraph } from "@/components/Paragraph";
+import Link from "next/link";
 
-import { UpcomingProjects } from "@/components/UpcomingProjects";
-import { TechStack } from "@/components/TechStack";
-
+// Temporary public landing page while the 3D library is built.
+// The 3D world (React Three Fiber + Blender GLB) replaces this — see docs/LIBRARY_3D.md.
 export default function Home() {
   return (
-    <Container>
-      <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-        <span className="text-4xl">💻</span>
-        <Heading className="font-black">
-          Hello there! I&apos;m John Overton
-        </Heading>
-
-        <Paragraph className="max-w-xl mt-4">
-          I&apos;m a full-stack engineer building modern, data-aware systems—
-          cloud-native pipelines, reliable APIs, AI agents, and user-facing web
-          apps. I&apos;m especially interested in LLM-assisted products that
-          connect ingestion and automation to real workflows, transforming
-          unstructured data into structured knowledge and actionable insights.
-        </Paragraph>
-
-        <Paragraph className="max-w-xl mt-4">
-          With a background in analytics and digital marketing, I design
-          software that&apos;s <Highlight>measurable</Highlight>,{" "}
-          <Highlight>improvable</Highlight>, and{" "}
-          <Highlight>built to ship</Highlight>.
-        </Paragraph>
+    <main className="relative flex flex-1 flex-col items-center justify-center overflow-hidden px-6 py-24">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(90deg, currentColor 0 2px, transparent 2px 46px), repeating-linear-gradient(0deg, currentColor 0 2px, transparent 2px 120px)",
+        }}
+      />
+      <p className="mb-6 font-mono text-xs uppercase tracking-[0.3em] text-muted">Under construction</p>
+      <h1 className="max-w-3xl text-center font-serif text-5xl leading-tight sm:text-7xl">The Library</h1>
+      <p className="mt-6 max-w-xl text-center text-lg text-muted">
+        John Overton&apos;s portfolio is being rebuilt as a 3D library. Projects become books, an AI librarian
+        guides you through the shelves, and the evolution from first code to production-grade agent systems gets its
+        own hall.
+      </p>
+      <div className="mt-10 flex flex-wrap items-center justify-center gap-3 text-sm">
+        <a className="btn-ghost" href="https://github.com/Overton77">GitHub</a>
+        <Link className="btn-ghost" href="/admin">
+          Librarian&apos;s office
+        </Link>
       </div>
-
-      <div className="flex flex-col items-center mt-20">
-        <Heading
-          as="h2"
-          className="font-black text-2xl md:text-lg lg:text-lg mb-4 text-center"
-        >
-          What I&apos;ve been working on
-        </Heading>
-
-        <UpcomingProjects />
-      </div>
-
-      <TechStack />
-    </Container>
+    </main>
   );
 }
