@@ -1,5 +1,6 @@
 "use server";
 
+import { blocksFrom } from "@/lib/library/policy";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { db, Prisma, type ActivationState, type DisplayState, type ProjectStatus } from "@/lib/db";
@@ -129,8 +130,9 @@ export async function saveBodyBlocks(_prev: BodyBlocksState, fd: FormData): Prom
   if (!Array.isArray(parsed)) {
     return { ok: false, error: "Body blocks must be a JSON array, e.g. [{\"component\":\"Prose\",\"props\":{…}}]", savedAt: null };
   }
-  const bad = parsed.findIndex((b) => typeof b !== "object" || b === null || Array.isArray(b));
-  if (bad !== -1) return { ok: false, error: `Block #${bad + 1} must be an object`, savedAt: null };
+  if (raw.length > 64000 || parsed.length > 64 || blocksFrom(parsed).length !== parsed.length) {
+    return { ok:false, error:"Use a supported Library block with valid text and safe media or link URLs.", savedAt:null };
+  }
   const row = await db.project.update({ where: { id }, data: { bodyBlocks: parsed as Prisma.InputJsonArray } });
   await snapshot("project", id, row, admin.email, "body blocks updated");
   await audit(admin.email, "update_body", "project", id, { blocks: parsed.length });

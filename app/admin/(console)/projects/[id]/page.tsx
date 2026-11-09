@@ -1,3 +1,4 @@
+import { officePage } from "@/components/admin/office-page";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -15,7 +16,7 @@ export const metadata: Metadata = { title: "Edit project" };
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const first = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v) ?? "";
 
-export default async function ProjectEditPage({ params, searchParams }: PageProps<"/admin/projects/[id]">) {
+async function ProjectEditPage({ params, searchParams }: PageProps<"/admin/projects/[id]">) {
   await requireAdmin();
   const { id } = await params;
   const sp = await searchParams;
@@ -60,6 +61,7 @@ export default async function ProjectEditPage({ params, searchParams }: PageProp
 
   return (
     <>
+      <Link className="btn-ghost mb-3" href="/admin/library">Library presentation &amp; shelf placement</Link>
       <PageHeader
         title={project.title}
         description={`/${project.slug} · updated ${fmtDateTime(project.updatedAt)}${project.publishedAt ? ` · first published ${fmtDate(project.publishedAt)}` : ""}`}
@@ -316,3 +318,5 @@ export default async function ProjectEditPage({ params, searchParams }: PageProp
     </>
   );
 }
+
+export default officePage(ProjectEditPage);

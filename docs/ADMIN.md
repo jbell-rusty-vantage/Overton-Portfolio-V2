@@ -5,6 +5,7 @@ content changes are versioned (`revisions`), and timeline-worthy changes emit si
 
 ## Signing in
 
+- **Local office:** run `npm run admin:local` and open [the dashboard](http://127.0.0.1:3078/admin). No sign-in is needed there. Saves use the configured PostgreSQL database. The local actor is recorded as `local-office`; account management remains session-only. Use the [iteration guide](ITERATING_ON_THE_LIBRARY.md) to get from a draft to a published book.
 - `/admin/login` → email + password. The bootstrap account (`must_change_password = true`) is forced to
   `/admin/account` until a new password (12+ characters) is set.
 - Sessions: 14 days, stored in `admin_sessions`. "Sign out everywhere" on the Account page deletes them all.
@@ -14,6 +15,7 @@ content changes are versioned (`revisions`), and timeline-worthy changes emit si
 | Section | Route | What you can do |
 | --- | --- | --- |
 | Dashboard | `/admin` | Counts per area, latest signals, audit trail |
+| Library | `/admin/library` | Books, cover artwork, authored pages, shelf titles and placement, room cameras, screen sources and versioned scene activation. Preview drafts at `/admin/library/preview`. |
 | GitHub repos | `/admin/repos` | Add GitHub accounts (personal / client / org) · **Sync repos** from the GitHub API (new repos arrive `inactive` + `hidden`) · per repo: activation, display, redaction policy, public alias, notes · quick "Track + show" / "Hide" · assign to projects with a role · filter by account/state, search |
 | Live sites | `/admin/sites` | Add deployed sites, link to a project, display/activation, sort order · **Run health check** (status, latency, detects whether the site may be iframed) |
 | Projects | `/admin/projects`, `/admin/projects/[id]` | Create/edit projects (status, stage, client, dates, tags, featured rank, display/activation) · link repos (role, primary) and live sites · links · cover image from Media · `body_blocks` JSON (component blocks) · clients with public aliases · first publish emits `system.project_published` |
@@ -56,8 +58,6 @@ cover: ./cover.png                   # local file (upload it alongside) or a URL
 ## Not built yet (next admin work)
 
 - Approval queue UI for agent proposals (`approval_requests`, `v_pending_approvals`).
-- Library placement editor (zones → shelves → slots; SQL helper `portfolio_place_on_shelf` exists).
-- Books & pages editor (`books`, `book_pages`), computer screen config (`computer_screens`).
 - Skills editor + skill levels on moments; stages editor (reflection, date ranges).
 - Agent conversation viewer (`agent_sessions`/`agent_messages`).
 - GitHub/Vercel webhook receivers → `webhook_deliveries` → `activity_events`.

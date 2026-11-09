@@ -1,3 +1,4 @@
+import { officePage } from "@/components/admin/office-page";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { db, type Prisma, type SignalSource, type SignalVisibility } from "@/lib/db";
@@ -14,7 +15,7 @@ const PAGE_SIZE = 50;
 
 const one = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v) || undefined;
 
-export default async function EventsPage({ searchParams }: PageProps<"/admin/events">) {
+async function EventsPage({ searchParams }: PageProps<"/admin/events">) {
   await requireAdmin();
   const sp = await searchParams;
   const filters = {
@@ -259,3 +260,5 @@ export default async function EventsPage({ searchParams }: PageProps<"/admin/eve
     </>
   );
 }
+
+export default officePage(EventsPage);

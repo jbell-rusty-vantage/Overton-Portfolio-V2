@@ -1,3 +1,4 @@
+import { officePage } from "@/components/admin/office-page";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { db } from "@/lib/db";
@@ -9,7 +10,7 @@ import { ProjectFields } from "./project-fields";
 
 export const metadata: Metadata = { title: "Projects" };
 
-export default async function ProjectsPage() {
+async function ProjectsPage() {
   await requireAdmin();
   const [projects, stages, clients] = await Promise.all([
     db.project.findMany({
@@ -109,3 +110,5 @@ export default async function ProjectsPage() {
     </>
   );
 }
+
+export default officePage(ProjectsPage);

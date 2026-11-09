@@ -1,8 +1,10 @@
 # Data model — "The Library" (schema v1)
 
-Source of truth: [`prisma/schema.prisma`](../prisma/schema.prisma). Every model and most columns carry `///`
+Source of truth: [`prisma/schema.prisma`](../prisma/schema.prisma). Every model and selected non-obvious columns carry `///`
 doc comments that are also written into Postgres as `COMMENT ON` statements, so the schema explains itself in the
 Neon console (and to agents using the Neon MCP `describe_table_schema` tool).
+
+For the full table/column dictionary, see [SCHEMA_REFERENCE.md](SCHEMA_REFERENCE.md). For the current migration audit and execution checklist, see [MIGRATION_STATUS.md](MIGRATION_STATUS.md).
 
 ## Three core ideas
 

@@ -1,5 +1,7 @@
 # Operations runbook
 
+For everyday editing of the configured database, use [the local office](ITERATING_ON_THE_LIBRARY.md#start-the-right-server). It does not need a migration, seed or hosted deployment. The production-mode verification command is `npm run build:local`.
+
 ## Environments & infrastructure
 
 | Thing | Where |

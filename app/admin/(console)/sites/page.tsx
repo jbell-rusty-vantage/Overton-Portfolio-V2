@@ -1,3 +1,4 @@
+import { officePage } from "@/components/admin/office-page";
 import type { Metadata } from "next";
 import { db } from "@/lib/db";
 import { requireAdmin } from "@/lib/auth/session";
@@ -7,7 +8,7 @@ import { checkSite, createSite, deleteSite, updateSite } from "./actions";
 
 export const metadata: Metadata = { title: "Live sites" };
 
-export default async function SitesPage() {
+async function SitesPage() {
   await requireAdmin();
   const [sites, projects] = await Promise.all([
     db.deployment.findMany({
@@ -104,3 +105,5 @@ export default async function SitesPage() {
     </>
   );
 }
+
+export default officePage(SitesPage);

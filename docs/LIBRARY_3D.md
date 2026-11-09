@@ -1,7 +1,6 @@
-# The 3D Library — plan for the next phase
+# The 3D Library
 
-Not built yet. The data model already supports it. This document holds the agreed concept and the open questions
-for the 3D interviews.
+The local hall, guided cameras, selectable volumes and HTML reader are implemented. For changes, start with [the iteration guide](ITERATING_ON_THE_LIBRARY.md), [the running preview](LOCAL_PREVIEW.md) or [the editable asset workflow](../assets/library/README.md). The original concept and interview questions below are historical design context, including proposed features that are not implemented.
 
 ## Concept
 

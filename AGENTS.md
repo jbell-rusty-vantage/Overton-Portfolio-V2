@@ -12,6 +12,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 Start with `HANDOFF.md` (current state + next steps), then `docs/`:
 `ARCHITECTURE.md` · `DATA_MODEL.md` · `ADMIN.md` · `OPERATIONS.md` · `LIBRARY_3D.md`.
+For scene enhancements, ChatGPT artwork, shelf titles or seeding, use [the iteration guide](docs/ITERATING_ON_THE_LIBRARY.md) before changing a manifest or migration. The real local content office is `npm run admin:local` (port 3078); the sample desk is browser-only.
 
 ### Ground rules
 
@@ -24,7 +25,7 @@ Start with `HANDOFF.md` (current state + next steps), then `docs/`:
   `lib/generated/prisma` (git-ignored; `npm install`/`prisma generate` creates it).
 - **Auth**: every admin page, Server Action and admin Route Handler must call `requireAdmin()`/`getAdmin()` from
   `lib/auth/session.ts`. `proxy.ts` is only an optimistic redirect.
-- **Cache Components is on**: cookie/DB reads must be inside `<Suspense>` (the admin console layout provides one).
+- **Cache Components is on**: cookie/DB reads must be inside `<Suspense>`. Wrap admin page exports with `officePage` from `components/admin/office-page.tsx`; new pages need their own boundary even when the layout is already mounted.
 - **Admin writes**: `audit()` every write, `snapshot()` content changes (revisions), `emitSignal()` for timeline-worthy
   events. Signals are append-only (only visibility/expiry change).
 - **Visibility**: respect `display` (hidden/unlisted/published/featured) and `activation` everywhere public data is read.

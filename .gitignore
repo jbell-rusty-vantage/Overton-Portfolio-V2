@@ -15,6 +15,7 @@
 
 # next.js
 /.next/
+/.next-office/
 /out/
 
 # production
@@ -41,3 +42,7 @@ yarn-error.log*
 next-env.d.ts
 /lib/generated
 !.env.example
+
+/.local-library/
+/test-results/
+/playwright-report/

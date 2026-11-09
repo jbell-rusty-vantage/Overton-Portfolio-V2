@@ -1,0 +1,230 @@
+{
+  "zones": [
+    {
+      "slug": "entrance",
+      "title": "Entrance hall",
+      "node": "zone_entrance",
+      "eye": [
+        -5.5,
+        3.35,
+        10.7
+      ],
+      "target": [
+        0,
+        2.55,
+        -5
+      ]
+    },
+    {
+      "slug": "stacks",
+      "title": "Project stacks",
+      "node": "zone_stacks",
+      "eye": [
+        0,
+        2.3,
+        -3.7
+      ],
+      "target": [
+        0,
+        2.3,
+        -10
+      ]
+    },
+    {
+      "slug": "evolution-hall",
+      "title": "Evolution hall",
+      "node": "zone_evolution",
+      "eye": [
+        -4.5,
+        2.1,
+        0.5
+      ],
+      "target": [
+        -10,
+        2,
+        0
+      ]
+    },
+    {
+      "slug": "periodicals",
+      "title": "Periodicals",
+      "node": "zone_periodicals",
+      "eye": [
+        -5.3,
+        2,
+        6.6
+      ],
+      "target": [
+        -10,
+        1.8,
+        6.6
+      ]
+    },
+    {
+      "slug": "favorites-wing",
+      "title": "Favorites wing",
+      "node": "zone_favorites",
+      "eye": [
+        4.5,
+        2,
+        -3
+      ],
+      "target": [
+        10,
+        2,
+        -3
+      ]
+    },
+    {
+      "slug": "reading-room",
+      "title": "Reading room",
+      "node": "zone_reading_room",
+      "eye": [
+        -4.6,
+        2.3,
+        -4.8
+      ],
+      "target": [
+        -9.8,
+        1.8,
+        -7.9
+      ]
+    },
+    {
+      "slug": "computer-station",
+      "title": "Computer station",
+      "node": "zone_computer",
+      "eye": [
+        4.4,
+        1.9,
+        5.7
+      ],
+      "target": [
+        8.7,
+        1.45,
+        5.4
+      ]
+    }
+  ],
+  "shelves": [
+    {
+      "slug": "stacks-ai-agents",
+      "title": "Agent systems",
+      "node": "shelf_stacks_ai",
+      "zone": "stacks",
+      "x": -7.3,
+      "z": -10,
+      "yaw": 0
+    },
+    {
+      "slug": "stacks-data-knowledge",
+      "title": "Data & knowledge",
+      "node": "shelf_stacks_data",
+      "zone": "stacks",
+      "x": -2.45,
+      "z": -10,
+      "yaw": 0
+    },
+    {
+      "slug": "stacks-web-apps",
+      "title": "Web applications",
+      "node": "shelf_stacks_web",
+      "zone": "stacks",
+      "x": 2.45,
+      "z": -10,
+      "yaw": 0
+    },
+    {
+      "slug": "stacks-client-work",
+      "title": "Client work",
+      "node": "shelf_stacks_client",
+      "zone": "stacks",
+      "x": 7.3,
+      "z": -10,
+      "yaw": 0
+    },
+    {
+      "slug": "evolution-timeline",
+      "title": "Evolution timeline",
+      "node": "shelf_evolution",
+      "zone": "evolution-hall",
+      "x": -10,
+      "z": 0,
+      "yaw": 90
+    },
+    {
+      "slug": "periodicals-blog",
+      "title": "Journal",
+      "node": "shelf_periodicals",
+      "zone": "periodicals",
+      "x": -10,
+      "z": 6,
+      "yaw": 90
+    },
+    {
+      "slug": "favorites-books",
+      "title": "Books",
+      "node": "shelf_fav_books",
+      "zone": "favorites-wing",
+      "x": 10,
+      "z": -7.6,
+      "yaw": -90
+    },
+    {
+      "slug": "favorites-tools",
+      "title": "Tools",
+      "node": "shelf_fav_tools",
+      "zone": "favorites-wing",
+      "x": 10,
+      "z": -3,
+      "yaw": -90
+    },
+    {
+      "slug": "favorites-longevity",
+      "title": "Longevity",
+      "node": "shelf_fav_longevity",
+      "zone": "favorites-wing",
+      "x": 10,
+      "z": 1.6,
+      "yaw": -90
+    },
+    {
+      "slug": "reading-room-courses",
+      "title": "Courses",
+      "node": "shelf_reading_courses",
+      "zone": "reading-room",
+      "x": -10,
+      "z": -8.2,
+      "yaw": 90
+    },
+    {
+      "slug": "reading-room-articles",
+      "title": "Articles & reports",
+      "node": "shelf_reading_articles",
+      "zone": "reading-room",
+      "x": -10,
+      "z": -4.1,
+      "yaw": 90
+    }
+  ],
+  "screens": [
+    {
+      "slot": "main",
+      "node": "screen_main",
+      "pos": [
+        8.5,
+        1.55,
+        6.1
+      ]
+    },
+    {
+      "slot": "side",
+      "node": "screen_side",
+      "pos": [
+        8.5,
+        1.55,
+        4.7
+      ]
+    }
+  ]
+}

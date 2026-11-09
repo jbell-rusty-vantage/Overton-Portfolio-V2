@@ -1,3 +1,4 @@
+import { officePage } from "@/components/admin/office-page";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { db } from "@/lib/db";
@@ -12,7 +13,7 @@ export const metadata: Metadata = { title: "Moments" };
 
 const IMPORTANCE = ["1", "2", "3", "4", "5"] as const;
 
-export default async function MomentsPage() {
+async function MomentsPage() {
   await requireAdmin();
   const [nodes, stages, projects, timelines] = await Promise.all([
     db.timelineNode.findMany({
@@ -165,3 +166,5 @@ export default async function MomentsPage() {
     </>
   );
 }
+
+export default officePage(MomentsPage);

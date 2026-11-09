@@ -1,14 +1,15 @@
 import "server-only";
 import { createHash, randomBytes } from "node:crypto";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 import { SESSION_COOKIE, SESSION_TTL_DAYS } from "./constants";
+import { isLocalOffice } from "./local-office";
 
 // Data Access Layer for admin auth. Sessions are DB-backed: the cookie holds a
 // random token; admin_sessions stores only its SHA-256. No signing secret needed.
 
-export type Admin = { id: string; email: string; name: string; mustChangePassword: boolean };
+export type Admin = { id: string | null; email: string; name: string; mustChangePassword: boolean };
 
 const sha256 = (v: string) => createHash("sha256").update(v).digest("hex");
 
@@ -39,6 +40,10 @@ export async function destroySession() {
 
 /** Returns the signed-in admin or null. Never cached across requests. */
 export async function getAdmin(): Promise<Admin | null> {
+  if (isLocalOffice(await headers())) {
+    // No session or impersonated database user. Content writes retain a distinct audit actor.
+    return { id: null, email: "local-office", name: "Librarian", mustChangePassword: false };
+  }
   const token = (await cookies()).get(SESSION_COOKIE)?.value;
   if (!token) return null;
   const session = await db.adminSession.findUnique({
@@ -48,6 +53,12 @@ export async function getAdmin(): Promise<Admin | null> {
   if (!session || session.expiresAt < new Date()) return null;
   const { user } = session;
   return { id: user.id, email: user.email, name: user.name, mustChangePassword: user.mustChangePassword };
+}
+
+export async function requireAccountAdmin(allowPasswordChange = false) {
+  const admin = await requireAdmin({ allowPasswordChange });
+  if (admin.id === null) redirect("/admin/account");
+  return { ...admin, id: admin.id };
 }
 
 /**

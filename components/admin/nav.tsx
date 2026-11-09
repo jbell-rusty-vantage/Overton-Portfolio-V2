@@ -8,6 +8,7 @@ const items = [
   { href: "/admin/repos", label: "GitHub repos" },
   { href: "/admin/sites", label: "Live sites" },
   { href: "/admin/projects", label: "Projects" },
+  { href: "/admin/library", label: "Library" },
   { href: "/admin/media", label: "Media & artifacts" },
   { href: "/admin/posts", label: "Blog posts" },
   { href: "/admin/events", label: "Events & signals" },

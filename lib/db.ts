@@ -16,10 +16,13 @@ function createClient() {
   return new PrismaClient({ adapter });
 }
 
-export const db = globalForPrisma.prisma ?? createClient();
-
-if (process.env.NODE_ENV !== "production") {
-  globalForPrisma.prisma = db;
-}
+// Admin modules may be imported by a fixture-only build without database credentials.
+export const db = new Proxy({} as PrismaClient, {
+  get(_target, key) {
+    const client = globalForPrisma.prisma ??= createClient();
+    const value = Reflect.get(client, key, client);
+    return typeof value === "function" ? value.bind(client) : value;
+  },
+});
 
 export * from "@/lib/generated/prisma/client";

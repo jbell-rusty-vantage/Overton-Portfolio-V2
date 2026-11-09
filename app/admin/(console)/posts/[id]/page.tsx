@@ -1,3 +1,4 @@
+import { officePage } from "@/components/admin/office-page";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -11,7 +12,7 @@ export const metadata: Metadata = { title: "Edit post" };
 
 const first = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v) || undefined;
 
-export default async function EditPostPage({ params, searchParams }: PageProps<"/admin/posts/[id]">) {
+async function EditPostPage({ params, searchParams }: PageProps<"/admin/posts/[id]">) {
   await requireAdmin();
   const { id } = await params;
   const sp = await searchParams;
@@ -121,3 +122,5 @@ export default async function EditPostPage({ params, searchParams }: PageProps<"
     </>
   );
 }
+
+export default officePage(EditPostPage);

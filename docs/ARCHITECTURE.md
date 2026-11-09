@@ -10,25 +10,31 @@
 | ORM | Prisma 7.10 — `prisma-client` generator → `lib/generated/prisma` (git-ignored, generated on install/build), `@prisma/adapter-pg` driver adapter, config in `prisma.config.ts` |
 | Media | Vercel Blob (public store, OIDC auth; presigned client uploads for large files) |
 | Hosting | Vercel (Git integration: `main` → production) |
-| Planned | React Three Fiber + drei (3D library), Vercel eve agents + AI SDK, realtime channel, pgvector |
+| World | React Three Fiber + Three.js, Blender hall, Meshopt GLBs, HTML catalog and reader |
+| Planned | Conversational librarian, realtime channel, pgvector |
 
 ## Repository layout
 
 ```
 app/
-  page.tsx                    public placeholder (replaced by the 3D library)
+  page.tsx                    public entrance; reads projected collection
+  catalog/                    scriptless catalog and reader
   admin/
     login/                    sign-in (useActionState + Server Action)
     actions.ts                logout
     (console)/                authenticated console (route group → /admin/*)
-      layout.tsx              static chrome + <Suspense> around pages
+      layout.tsx              static chrome + streamed navigation and local access note
       page.tsx                dashboard
-      repos/ sites/ projects/ media/ posts/ events/ favorites/ account/
+      repos/ sites/ projects/ library/ media/ posts/ events/ favorites/ account/
         page.tsx              Server Component: requireAdmin() → Prisma queries → forms
         actions.ts            "use server" mutations: requireAdmin() → write → audit/snapshot → revalidatePath
   api/admin/                  Route Handlers (Blob presigned uploads, MDX download)
 components/admin/             UI kit (PageHeader, Field, Select, Badge, SubmitButton, nav)
+components/library/           3D scene, shelf signs, book jackets, accessible reader and controls
+assets/library/               Blender source, generators and semantic manifest
+public/library/               optimized hall, covers, posters and registered bundled artwork
 lib/
+  library/                    public database projection, sample data, reader policy and scene contract
   db.ts                       Prisma client singleton (+ re-exports generated types/enums)
   auth/                       password (scrypt), session (DAL: getAdmin/requireAdmin), constants
   admin/                      form parsing, audit/revisions/signals helpers
@@ -53,8 +59,9 @@ docs/                         this documentation
 3. The bootstrap account has `must_change_password = true`; `requireAdmin()` redirects to `/admin/account` until it
    is changed.
 
-With Cache Components, reading cookies or the DB must happen inside `<Suspense>`. The console layout wraps pages in a
-boundary, so the chrome is prerendered (◐ Partial Prerender in the build output) and page bodies stream.
+The explicitly launched **local office** is a development-only exception. The launcher binds the server to IPv4 loopback; both the proxy and the data layer check the exact host/port and request headers via `lib/auth/local-office.ts`. Its identity has no account ID and cannot change passwords, profile or sessions. Production ignores this mode. See [iteration guide](ITERATING_ON_THE_LIBRARY.md) for the two servers and their different visibility policies.
+
+With Cache Components, reading request headers, cookies or the DB must happen inside `<Suspense>`. Each console page uses [officePage](../components/admin/office-page.tsx) so its placeholder is available on sibling navigations as well as the initial load. The static chrome is prerendered while page data streams.
 
 ## Mutations
 

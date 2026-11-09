@@ -3,11 +3,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AdminNav, AdminNavFallback } from "@/components/admin/nav";
 import { logout } from "../actions";
+import { headers } from "next/headers";
+import { isLocalOffice } from "@/lib/auth/local-office";
 
 export const metadata: Metadata = { title: { default: "Admin", template: "%s · Admin" }, robots: { index: false } };
 
-// Static chrome renders in the shell; each page reads the session (requireAdmin)
-// and the database behind this Suspense boundary (Cache Components).
+async function OfficeAccess() {
+  if (isLocalOffice(await headers())) return (
+    <p className="mt-5 text-xs text-muted">Local office · No login<br />Edits save to PostgreSQL.</p>
+  );
+  return <form action={logout} className="mt-6"><button className="text-xs text-muted hover:text-foreground">Sign out</button></form>;
+}
+
+// Each page wraps its account checks and queries in its own officePage boundary.
 export default function ConsoleLayout({ children }: LayoutProps<"/admin">) {
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-6 px-4 py-6 md:flex-row md:px-8">
@@ -19,14 +27,10 @@ export default function ConsoleLayout({ children }: LayoutProps<"/admin">) {
         <Suspense fallback={<AdminNavFallback />}>
           <AdminNav />
         </Suspense>
-        <form action={logout} className="mt-6 hidden md:block">
-          <button className="text-xs text-muted hover:text-foreground">Sign out</button>
-        </form>
+        <Suspense><OfficeAccess /></Suspense>
       </aside>
       <main className="min-w-0 flex-1">
-        <Suspense fallback={<div className="animate-pulse text-sm text-muted">Opening the ledger…</div>}>
-          {children}
-        </Suspense>
+        {children}
       </main>
     </div>
   );

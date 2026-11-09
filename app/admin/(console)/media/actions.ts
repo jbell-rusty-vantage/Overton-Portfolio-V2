@@ -8,8 +8,28 @@ import { audit, emitSignal, snapshot } from "@/lib/admin/audit";
 import { int, list, oneOf, reqStr, str } from "@/lib/admin/form";
 import { deleteBlobQuietly, isBlobUrl } from "@/lib/blob";
 import { EMBED_PROVIDERS, MEDIA_KINDS, MEDIA_PURPOSES } from "@/lib/media";
+import { listBundledArtwork } from "@/lib/admin/artwork";
+import { artworkPrefix } from "@/lib/library/artwork";
 
 const PATH = "/admin/media";
+
+export async function registerArtwork(fd: FormData) {
+  const admin = await requireAdmin();
+  const name = reqStr(fd, "filename");
+  if (!(await listBundledArtwork()).includes(name)) throw Error("Choose an existing bundled image.");
+  const url = artworkPrefix + name;
+  const title = reqStr(fd, "title").slice(0, 300);
+  await db.$transaction(async (tx) => {
+    await tx.$queryRaw`select pg_advisory_xact_lock(hashtext(${url}))::text`;
+    if (await tx.mediaAsset.findFirst({ where: { url, deletedAt: null } })) return;
+    const row = await tx.mediaAsset.create({ data: { kind: "image", provider: "external",
+      url, title, alt: str(fd, "alt")?.slice(0, 1000), purpose: "book-texture" } });
+    await snapshot("media", row.id, row, admin.email, "Registered bundled artwork", tx);
+    await audit(admin.email, "media.artwork.register", "media", row.id, { url }, tx);
+  });
+  revalidatePath(PATH);
+  revalidatePath("/admin/library");
+}
 
 const uploadedSchema = z.object({
   url: z.url(),

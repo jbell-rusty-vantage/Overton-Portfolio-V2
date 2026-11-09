@@ -1,3 +1,4 @@
+import { officePage } from "@/components/admin/office-page";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { db, type MediaKind, type Prisma } from "@/lib/db";
@@ -6,7 +7,8 @@ import { Badge, Empty, Field, PageHeader, Select, fmtBytes, fmtDate } from "@/co
 import { SubmitButton } from "@/components/admin/submit-button";
 import { EMBED_PROVIDERS, MEDIA_KINDS, MEDIA_PURPOSES } from "@/lib/media";
 import { MediaUploader } from "./uploader";
-import { attachMediaToProject, deleteMedia, detachMediaLink, registerEmbed, updateMedia } from "./actions";
+import { attachMediaToProject, deleteMedia, detachMediaLink, registerArtwork, registerEmbed, updateMedia } from "./actions";
+import { listBundledArtwork } from "@/lib/admin/artwork";
 
 export const metadata: Metadata = { title: "Media & artifacts" };
 
@@ -21,7 +23,7 @@ const KIND_ICON: Record<string, string> = {
   other: "FILE",
 };
 
-export default async function MediaPage({ searchParams }: PageProps<"/admin/media">) {
+async function MediaPage({ searchParams }: PageProps<"/admin/media">) {
   await requireAdmin();
   const sp = await searchParams;
   const kind = first(sp.kind);
@@ -45,6 +47,7 @@ export default async function MediaPage({ searchParams }: PageProps<"/admin/medi
   ]);
   const projectTitle = new Map(projects.map((p) => [p.id, p.title]));
   const filtered = Boolean(kind || purpose || q);
+  const bundled = await listBundledArtwork();
 
   return (
     <>
@@ -53,6 +56,16 @@ export default async function MediaPage({ searchParams }: PageProps<"/admin/medi
         description="Screenshots, demo videos, diagrams, textures and 3D scene assets. Files go straight from the browser to Vercel Blob; embeds (YouTube, Loom, live sites) are registered by URL."
       />
 
+      <section className="card mb-6">
+        <h2 className="mb-2 font-serif text-lg">Bundled artwork</h2>
+        <p className="text-sm text-muted">Place a finished image in <code>public/library/artwork/</code>, then refresh this page. Use a lowercase filename with no spaces. Registering it makes it available as a cover without a Blob upload.</p>
+        {bundled.length > 0 && <form action={registerArtwork} className="mt-3 grid gap-3">
+          <Field label="Artwork file"><Select name="filename" options={bundled} /></Field>
+          <Field label="Artwork title"><input className="input" name="title" required maxLength={300} /></Field>
+          <Field label="Alt text"><input className="input" name="alt" maxLength={1000} /></Field>
+          <SubmitButton>Register artwork</SubmitButton>
+        </form>}
+      </section>
       <section className="card mb-6">
         <h2 className="mb-4 font-serif text-lg">Upload files</h2>
         <MediaUploader />
@@ -186,3 +199,5 @@ export default async function MediaPage({ searchParams }: PageProps<"/admin/medi
     </>
   );
 }
+
+export default officePage(MediaPage);

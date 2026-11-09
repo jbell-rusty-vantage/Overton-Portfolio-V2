@@ -2,14 +2,14 @@
 
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
-import { requireAdmin } from "@/lib/auth/session";
+import { requireAccountAdmin } from "@/lib/auth/session";
 import { hashPassword, verifyPassword } from "@/lib/auth/password";
 import { audit } from "@/lib/admin/audit";
 
 export type PasswordState = { error?: string; ok?: boolean };
 
 export async function changePassword(_prev: PasswordState, fd: FormData): Promise<PasswordState> {
-  const admin = await requireAdmin({ allowPasswordChange: true });
+  const admin = await requireAccountAdmin(true);
   const current = String(fd.get("current") ?? "");
   const next = String(fd.get("next") ?? "");
   const confirm = String(fd.get("confirm") ?? "");
@@ -26,7 +26,7 @@ export async function changePassword(_prev: PasswordState, fd: FormData): Promis
 }
 
 export async function updateProfile(fd: FormData) {
-  const admin = await requireAdmin();
+  const admin = await requireAccountAdmin();
   const name = String(fd.get("name") ?? "").trim();
   const email = String(fd.get("email") ?? "").trim().toLowerCase();
   if (!name || !email) return;
@@ -36,7 +36,7 @@ export async function updateProfile(fd: FormData) {
 }
 
 export async function signOutEverywhere() {
-  const admin = await requireAdmin({ allowPasswordChange: true });
+  const admin = await requireAccountAdmin(true);
   await db.adminSession.deleteMany({ where: { userId: admin.id } });
   redirect("/admin/login");
 }

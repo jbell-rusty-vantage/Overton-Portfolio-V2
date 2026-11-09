@@ -1,0 +1,91 @@
+{
+  "source": "Original geometry, textures and cover illustrations generated in this repository",
+  "units": "meters, glTF Y-up",
+  "created": "2026-11-07",
+  "attribution": "Original project artwork generated for John Overton’s Library with Blender and the bundled illustration script.",
+  "thirdPartyArt": [],
+  "editableSource": "assets/library/The Library.blend",
+  "generators": [
+    "assets/library/build.py",
+    "assets/library/illustrate.py",
+    "scripts/pack-library.mjs"
+  ],
+  "assets": [
+    {
+      "file": "public/library/hall.glb",
+      "bytes": 1996124,
+      "boundsMeters": {
+        "min": [
+          -11,
+          -0.1402698453537028,
+          -11
+        ],
+        "max": [
+          11,
+          8.029968384737119,
+          11.340999603271484
+        ]
+      },
+      "triangles": 95194,
+      "materials": 29,
+      "textures": 4,
+      "sha256": "f8ec50c33547d6cd62292a084fe39212af5b4c3facefa14cd8311c55b36f049f",
+      "validatorErrors": 0,
+      "validatorWarnings": 0,
+      "anchors": 20
+    },
+    {
+      "file": "public/library/hall-low.glb",
+      "bytes": 1491316,
+      "boundsMeters": {
+        "min": [
+          -11,
+          -0.1402698453537028,
+          -11
+        ],
+        "max": [
+          11,
+          8.029968384737119,
+          11.340999603271484
+        ]
+      },
+      "triangles": 66637,
+      "materials": 29,
+      "textures": 4,
+      "sha256": "1f902bb79649add6d474c99e155cadac8b78ae56106259f61365b67459f09bde",
+      "validatorErrors": 0,
+      "validatorWarnings": 0,
+      "anchors": 20
+    },
+    {
+      "file": "public/library/entrance.webp",
+      "bytes": 154242,
+      "sha256": "4a4804175523f34c186eaa8a49ea01dbf512f14c9498cdf4e1cd38d7b3a4c06d"
+    },
+    {
+      "file": "public/library/entrance-portrait.webp",
+      "bytes": 62396,
+      "sha256": "4ddcff525700f56b72fd462bc24e8a51e63aac0649685e79fe42453a1c68040d"
+    },
+    {
+      "file": "public/library/plate-0.webp",
+      "bytes": 61668,
+      "sha256": "88187539478c89213011ea56800642d838968df8cdb630d58c0a1fd9d74ea7dd"
+    },
+    {
+      "file": "public/library/plate-1.webp",
+      "bytes": 54254,
+      "sha256": "f297a484ee71c105a5dd2a1132bf761d409cd7c42200f5b1ba54a40f56c4840b"
+    },
+    {
+      "file": "public/library/plate-2.webp",
+      "bytes": 65540,
+      "sha256": "4c3fb42b18c755b49dd01ecf0f33ebbe950573ff2b391f7681b17c51ccdc38bf"
+    },
+    {
+      "file": "public/library/plate-3.webp",
+      "bytes": 62336,
+      "sha256": "6999b0cecd19665fe658fa617db61084a27fc82a1f6ad29d5c583cbad0cdc4e4"
+    }
+  ]
+}

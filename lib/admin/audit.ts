@@ -8,8 +8,9 @@ export async function audit(
   entityType: EntityType | null,
   entityId: string | null,
   detail: Record<string, unknown> = {},
+  client: Prisma.TransactionClient = db,
 ) {
-  await db.auditLog.create({
+  await client.auditLog.create({
     data: { actor, action, entityType, entityId, detail: detail as Prisma.InputJsonValue },
   });
 }
@@ -21,13 +22,14 @@ export async function snapshot(
   row: unknown,
   author = "john",
   message?: string,
+  client: Prisma.TransactionClient = db,
 ) {
-  const last = await db.revision.findFirst({
+  const last = await client.revision.findFirst({
     where: { entityType, entityId },
     orderBy: { version: "desc" },
     select: { version: true },
   });
-  await db.revision.create({
+  await client.revision.create({
     data: {
       entityType,
       entityId,
@@ -57,7 +59,7 @@ export async function emitSignal(input: {
   occurredAt?: Date;
   expiresAt?: Date | null;
   sceneEffect?: string | null;
-}) {
+}, client: Prisma.TransactionClient = db) {
   const data = {
     typeCode: input.typeCode,
     source: input.source,
@@ -76,6 +78,6 @@ export async function emitSignal(input: {
     expiresAt: input.expiresAt ?? null,
     sceneEffect: input.sceneEffect ?? null,
   };
-  if (!input.dedupeKey) return db.activityEvent.create({ data });
-  return db.activityEvent.upsert({ where: { dedupeKey: input.dedupeKey }, update: {}, create: data });
+  if (!input.dedupeKey) return client.activityEvent.create({ data });
+  return client.activityEvent.upsert({ where: { dedupeKey: input.dedupeKey }, update: {}, create: data });
 }

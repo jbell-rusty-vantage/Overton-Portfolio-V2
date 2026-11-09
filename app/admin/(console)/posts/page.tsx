@@ -1,3 +1,4 @@
+import { officePage } from "@/components/admin/office-page";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { db } from "@/lib/db";
@@ -9,7 +10,7 @@ import { changePostDisplay } from "./actions";
 
 export const metadata: Metadata = { title: "Blog posts" };
 
-export default async function PostsPage() {
+async function PostsPage() {
   await requireAdmin();
   const posts = await db.post.findMany({
     where: { deletedAt: null },
@@ -104,3 +105,5 @@ export default async function PostsPage() {
     </>
   );
 }
+
+export default officePage(PostsPage);

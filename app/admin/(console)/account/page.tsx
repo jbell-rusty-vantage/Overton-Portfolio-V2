@@ -1,3 +1,4 @@
+import { officePage } from "@/components/admin/office-page";
 import type { Metadata } from "next";
 import { requireAdmin } from "@/lib/auth/session";
 import { PageHeader } from "@/components/admin/ui";
@@ -7,8 +8,9 @@ import { signOutEverywhere, updateProfile } from "./actions";
 
 export const metadata: Metadata = { title: "Account" };
 
-export default async function AccountPage({ searchParams }: PageProps<"/admin/account">) {
+async function AccountPage({ searchParams }: PageProps<"/admin/account">) {
   const admin = await requireAdmin({ allowPasswordChange: true });
+  if (admin.id === null) return <PageHeader title="Local office" description="This dashboard opens on this computer without a login. Account and password settings are available on the signed-in dashboard." />;
   const sp = await searchParams;
   return (
     <>
@@ -50,3 +52,5 @@ export default async function AccountPage({ searchParams }: PageProps<"/admin/ac
     </>
   );
 }
+
+export default officePage(AccountPage);

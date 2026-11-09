@@ -1,0 +1,36 @@
+[
+  {
+    "projectId": "de910cab-f3a6-461a-a110-aaa581e59d23",
+    "bookId": "716013b1-0734-4175-9f5b-b15c94e41869",
+    "slug": "agentic-mission-control",
+    "title": "Mission Control",
+    "shelf": "stacks-ai-agents",
+    "githubId": "1448425052",
+    "repo": "jbell-rusty-vantage/agentic-mission-control",
+    "revision": "882b77da06c5b844145ace0f4fec032097dfe80c",
+    "tags": [
+      "Python",
+      "Temporal",
+      "PostgreSQL"
+    ],
+    "summary": "A control plane for running and steering multi-agent missions. A mission describes its goal, workflow, available agents and expected outputs.",
+    "architecture": "Temporal coordinates scheduling and recovery. PostgreSQL records mission state. Provider adapters connect agent runtimes to a shared contract, with Deep Agents as the primary implementation."
+  },
+  {
+    "projectId": "cd0cc512-e3b4-4531-a93a-854e83b5d343",
+    "bookId": "4dc8cb72-8972-484e-a208-d8080a174e79",
+    "slug": "agent-knowledge-services",
+    "title": "Knowledge Services",
+    "shelf": "stacks-data-knowledge",
+    "githubId": "1448706688",
+    "repo": "jbell-rusty-vantage/agent-knowledge-services",
+    "revision": "0abcecf4da4d5ea55762d669842c6aa3bc4a1775",
+    "tags": [
+      "TypeScript",
+      "MCP",
+      "PostgreSQL"
+    ],
+    "summary": "A shared foundation for preparing, retrieving and verifying knowledge. Its services connect source material to evidence that agents can retrieve.",
+    "architecture": "A TypeScript monorepo separates preparation, retrieval, evaluation and verification packages. HTTP, MCP and CLI entry points expose contracts for callers, while durable workers handle background work."
+  }
+]

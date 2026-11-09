@@ -1,3 +1,4 @@
+import { officePage } from "@/components/admin/office-page";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { db, type Favorite } from "@/lib/db";
@@ -87,7 +88,7 @@ function FavoriteFields({ fav, fields }: { fav?: Favorite; fields: AttrField[] }
   );
 }
 
-export default async function FavoritesPage({ searchParams }: PageProps<"/admin/favorites">) {
+async function FavoritesPage({ searchParams }: PageProps<"/admin/favorites">) {
   await requireAdmin();
   const sp = await searchParams;
   const requested = Array.isArray(sp.category) ? sp.category[0] : sp.category;
@@ -205,3 +206,5 @@ export default async function FavoritesPage({ searchParams }: PageProps<"/admin/
     </>
   );
 }
+
+export default officePage(FavoritesPage);

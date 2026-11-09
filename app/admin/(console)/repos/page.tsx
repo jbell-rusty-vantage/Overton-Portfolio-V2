@@ -1,3 +1,4 @@
+import { officePage } from "@/components/admin/office-page";
 import type { Metadata } from "next";
 import Form from "next/form";
 import Link from "next/link";
@@ -12,7 +13,7 @@ export const metadata: Metadata = { title: "GitHub repos" };
 
 const first = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v) ?? "";
 
-export default async function ReposPage({ searchParams }: PageProps<"/admin/repos">) {
+async function ReposPage({ searchParams }: PageProps<"/admin/repos">) {
   await requireAdmin();
   const sp = await searchParams;
   const accountFilter = first(sp.account);
@@ -286,3 +287,5 @@ export default async function ReposPage({ searchParams }: PageProps<"/admin/repo
     </>
   );
 }
+
+export default officePage(ReposPage);

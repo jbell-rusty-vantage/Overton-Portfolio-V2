@@ -1,3 +1,4 @@
+import { officePage } from "@/components/admin/office-page";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { db } from "@/lib/db";
@@ -6,7 +7,7 @@ import { Badge, PageHeader, Stat, fmtDateTime } from "@/components/admin/ui";
 
 export const metadata: Metadata = { title: "Dashboard" };
 
-export default async function Dashboard({ searchParams }: PageProps<"/admin">) {
+async function Dashboard({ searchParams }: PageProps<"/admin">) {
   const admin = await requireAdmin();
   const sp = await searchParams;
   const [repos, trackedRepos, shownRepos, sites, projects, media, posts, favorites, signals, recent, audits] =
@@ -30,6 +31,17 @@ export default async function Dashboard({ searchParams }: PageProps<"/admin">) {
       {sp.welcome ? (
         <div className="mb-6 rounded-lg border border-ok/50 bg-ok/10 p-4 text-sm">Password updated. The office is yours.</div>
       ) : null}
+      <section className="card mb-6">
+        <h2 className="font-serif text-xl">Edit the portfolio</h2>
+        <p className="my-2 text-sm text-muted">Create a project, add its book and pages, then choose a shelf. Review drafts before publishing.</p>
+        <div className="flex flex-wrap gap-4 text-sm underline">
+          <Link href="/admin/projects">Manage projects</Link>
+          <Link href="/admin/library">Edit books & shelves</Link>
+          <Link href="/admin/media">Manage artwork</Link>
+          <Link href="/admin/library/preview">Preview drafts</Link>
+          <Link href="/">Open portfolio</Link>
+        </div>
+      </section>
       <div className="mb-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
         <Link href="/admin/repos"><Stat label="GitHub repos" value={repos} hint={`${trackedRepos} tracked · ${shownRepos} shown`} /></Link>
         <Link href="/admin/sites"><Stat label="Live sites" value={sites} /></Link>
@@ -80,3 +92,5 @@ export default async function Dashboard({ searchParams }: PageProps<"/admin">) {
     </>
   );
 }
+
+export default officePage(Dashboard);
