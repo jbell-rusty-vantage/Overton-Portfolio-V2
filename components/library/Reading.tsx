@@ -74,6 +74,14 @@ export function LeafBody({
   return (
     <div className="leaf-body">
       {page.blocks.map((b, i) => {
+        if (b.kind === "heading") return <h3 key={i}>{b.text}</h3>;
+        if (b.kind === "metric")
+          return (
+            <div key={i} className="leaf-metric">
+              <strong>{b.text}</strong>
+              <span>{b.label}</span>
+            </div>
+          );
         if (b.kind === "code")
           return (
             <pre key={i}>
@@ -111,6 +119,21 @@ export function LeafBody({
                 width={720}
                 height={480}
                 alt={b.text}
+              />
+              <figcaption>{b.text}</figcaption>
+            </figure>
+          );
+        if (b.kind === "video" && b.url)
+          return (
+            <figure key={i} className="leaf-video">
+              <video
+                src={b.url}
+                poster={b.poster}
+                controls
+                muted
+                playsInline
+                preload={b.poster ? "none" : "metadata"}
+                aria-label={b.text}
               />
               <figcaption>{b.text}</figcaption>
             </figure>

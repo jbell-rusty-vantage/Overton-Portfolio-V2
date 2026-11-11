@@ -55,6 +55,24 @@ test("rich blocks return only supported browser-safe fields", () => {
       component: "Image",
       props: { text: "image", url: "https://private.example/secret" },
     },
+    {
+      component: "Video",
+      props: { text: "video", url: "https://private.example/clip.mp4" },
+    },
+    {
+      component: "Video",
+      props: {
+        text: "walkthrough",
+        url: "https://abc.public.blob.vercel-storage.com/clip.mp4",
+        poster: "/library/artwork/clip-poster.webp",
+      },
+    },
+    {
+      component: "Prose",
+      props: { text: "PRIVATE_SENTINEL", poster: "/library/artwork/x.webp" },
+    },
+    { component: "Video", props: { text: "bundled", url: "/library/recordings/site-tour.mp4" } },
+    { component: "Video", props: { text: "escape", url: "/library/recordings/../secret.mp4" } },
     { component: "Code", props: { text: "<script>example</script>" } },
     { component: "Prose", props: { text: "long".repeat(6000) } },
     {
@@ -63,6 +81,13 @@ test("rich blocks return only supported browser-safe fields", () => {
     },
   ];
   assert.deepEqual(blocksFrom(blocks), [
+    {
+      kind: "video",
+      text: "walkthrough",
+      url: "https://abc.public.blob.vercel-storage.com/clip.mp4",
+      poster: "/library/artwork/clip-poster.webp",
+    },
+    { kind: "video", text: "bundled", url: "/library/recordings/site-tour.mp4" },
     { kind: "code", text: "<script>example</script>" },
     { kind: "link", text: "source", url: "https://example.com/" },
   ]);

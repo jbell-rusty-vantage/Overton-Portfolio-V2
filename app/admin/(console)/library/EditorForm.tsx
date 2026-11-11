@@ -123,11 +123,13 @@ export function BlockFields({ initial }: { initial: string }) {
             >
               {[
                 "Prose",
+                "Heading",
                 "Architecture",
                 "Timeline",
                 "Metric",
                 "Code",
                 "Image",
+                "Video",
                 "Link",
               ].map((k) => (
                 <option key={k}>{k}</option>
@@ -145,13 +147,13 @@ export function BlockFields({ initial }: { initial: string }) {
               maxLength={16000}
             />
           </label>
-          {["Link", "Image"].includes(component) && (
+          {["Link", "Image", "Video"].includes(component) && (
             <label>
-              <span className="label">{component === "Image" ? "Image URL or bundled artwork path" : "HTTPS URL"}</span>
+              <span className="label">{component === "Image" ? "Image URL or bundled artwork path" : component === "Video" ? "Blob video URL or bundled recording path" : "HTTPS URL"}</span>
               <input
                 className="input"
                 name="url"
-                type={component === "Image" ? "text" : "url"}
+                type={component === "Link" ? "url" : "text"}
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
               />

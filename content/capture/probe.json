@@ -1,0 +1,10 @@
+{
+  "shots": [
+    { "slug": "gowipe", "name": "probe-home", "url": "https://gowipe.co/", "scale": 1 },
+    { "slug": "daryl-davis", "name": "probe-home", "url": "https://daryldavis.myshopify.com/", "scale": 1 },
+    { "slug": "vantage-movers", "name": "probe-home", "url": "https://vantagehomemovers.com/", "scale": 1 },
+    { "slug": "overtech-digital-services", "name": "probe-home", "url": "https://overtech-digital-services.vercel.app/", "scale": 1 },
+    { "slug": "ai-engineer-worldsfair-showcase", "name": "probe-home", "url": "https://ai-engineer-worldsfair-showcase.vercel.app/", "scale": 1 },
+    { "slug": "the-library", "name": "probe-home", "url": "https://overton-portfolio-v2.vercel.app/", "scale": 1, "waitMs": 5000 }
+  ]
+}

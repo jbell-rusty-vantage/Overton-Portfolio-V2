@@ -1,0 +1,50 @@
+.perf {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  color: var(--foreground);
+}
+.perf a { color: var(--accent); }
+.perf-crumb { font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem; }
+.perf h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; margin: 0 0 0.4rem; }
+.perf-meta { color: var(--muted); margin: 0 0 1rem; }
+.perf-summary { max-width: 70ch; margin: 0 0 1.5rem; }
+.perf-stats { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0 0 2rem; padding: 0; list-style: none; }
+.perf-stats li { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 0.6rem 1rem; }
+.perf-stats b { display: block; font-size: 1.4rem; }
+.perf-stats span { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+.perf-player { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 1.25rem; align-items: start; }
+@media (max-width: 860px) { .perf-player { grid-template-columns: 1fr; } }
+.perf-stage video { width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 12px; display: block; }
+.perf-now { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.1rem; margin-top: 0.9rem; }
+.perf-now h2 { margin: 0 0 0.4rem; font-size: 1.2rem; }
+.perf-now p { margin: 0.4rem 0 0; }
+.perf-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.perf-tag { display: inline-block; font-size: 0.75rem; font-weight: 600; padding: 0.1rem 0.55rem; border-radius: 999px; background: var(--line); color: var(--foreground); }
+.perf-goal { background: #d4a24c; color: #1b1305; }
+.perf-shot { background: #b4232c; color: #fff; }
+.perf-dribble { background: #c2562b; color: #fff; }
+.perf-pass { background: #2f7a4a; color: #fff; }
+.perf-defense { background: #3b5ea8; color: #fff; }
+
+.perf-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+.perf-list button {
+  width: 100%; display: grid; grid-template-columns: 112px 1fr; gap: 0.7rem; align-items: center;
+  padding: 0.45rem; text-align: left; font: inherit; color: inherit; cursor: pointer;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+}
+.perf-list button:hover { border-color: var(--accent); }
+.perf-list button.active { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.perf-list img { width: 112px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; display: block; }
+.perf-list b { display: block; font-size: 0.95rem; margin-bottom: 0.25rem; }
+
+.perf-games { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+.perf-card { display: block; text-decoration: none; color: inherit; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.perf .perf-card { color: inherit; }
+.perf-card:hover { border-color: var(--accent); }
+.perf-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+.perf-card div { padding: 0.8rem 1rem 1rem; }
+.perf-card h2 { margin: 0 0 0.25rem; font-size: 1.15rem; }
+.perf-card p { margin: 0.2rem 0 0; color: var(--muted); font-size: 0.9rem; }

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { bundledArtwork } from "./artwork";
+import { bundledArtwork, bundledRecording } from "./artwork";
 export type Visibility = {
   display: string;
   deletedAt?: Date | null;
@@ -39,6 +39,7 @@ export function publicMedia(value: unknown) {
     : undefined;
 }
 export const publicImage = (value: unknown) => bundledArtwork(value) ?? publicMedia(value);
+export const publicVideo = (value: unknown) => bundledRecording(value) ?? publicMedia(value);
 const contentBlock = z
   .object({
     component: z.enum([
@@ -49,6 +50,8 @@ const contentBlock = z
       "Code",
       "Link",
       "Image",
+      "Video",
+      "Heading",
     ]),
     props: z
       .object({
@@ -57,6 +60,7 @@ const contentBlock = z
         label: z.string().max(200).optional(),
         alt: z.string().max(1000).optional(),
         url: z.string().max(2048).optional(),
+        poster: z.string().max(2048).optional(),
       })
       .strict(),
   })
@@ -67,9 +71,11 @@ export function blocksFrom(value: unknown) {
     (
       raw,
     ): {
-      kind: "text" | "code" | "link" | "image";
+      kind: "text" | "heading" | "metric" | "code" | "link" | "image" | "video";
       text: string;
+      label?: string;
       url?: string;
+      poster?: string;
     }[] => {
       const parsed = contentBlock.safeParse(raw);
       if (!parsed.success) return [];
@@ -77,9 +83,23 @@ export function blocksFrom(value: unknown) {
       const text = b.props.text ?? b.props.code ?? b.props.label ?? b.props.alt;
       if (typeof text !== "string" || !text.trim() || text.length > 16000)
         return [];
+      if (b.component !== "Video" && b.props.poster !== undefined) return [];
+      if (b.component === "Heading")
+        return text.length <= 160 ? [{ kind: "heading", text }] : [];
+      // A measurement with both a name and a value renders as a figure; otherwise it reads as prose.
+      if (b.component === "Metric" && b.props.label && b.props.text)
+        return [{ kind: "metric", text: b.props.text, label: b.props.label }];
       if (["Prose", "Architecture", "Metric", "Timeline"].includes(b.component))
         return [{ kind: "text", text }];
       if (b.component === "Code") return [{ kind: "code", text }];
+      if (b.component === "Video") {
+        // Recordings are bundled files or public Blob objects; the poster follows image rules.
+        const video = publicVideo(b.props.url);
+        const poster = publicImage(b.props.poster);
+        return video
+          ? [{ kind: "video", text, url: video, ...(poster ? { poster } : {}) }]
+          : [];
+      }
       const url =
         b.component === "Image"
           ? publicImage(b.props.url)
@@ -94,6 +114,7 @@ export const templateNames: Record<string, string> = {
   cover: "Title page",
   overview: "Overview",
   architecture: "Architecture",
+  notes: "Engineering notes",
   timeline: "Timeline",
   gallery: "Gallery",
   code: "Code",

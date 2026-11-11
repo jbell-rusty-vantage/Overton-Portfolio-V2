@@ -141,6 +141,8 @@ async function pageForm(tx: Tx, fd: FormData, actor: string) {
     "Metric",
     "Link",
     "Image",
+    "Video",
+    "Heading",
   ]);
   const raw = field(fd, "blocks");
   let blocks: Prisma.InputJsonValue;
@@ -158,7 +160,7 @@ async function pageForm(tx: Tx, fd: FormData, actor: string) {
         component,
         props: {
           text: body,
-          ...(["Link", "Image"].includes(component)
+          ...(["Link", "Image", "Video"].includes(component)
             ? { url: field(fd, "url") }
             : {}),
         },

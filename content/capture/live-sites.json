@@ -1,0 +1,298 @@
+{
+ "shots": [
+  {
+   "slug": "gowipe",
+   "name": "home",
+   "url": "https://gowipe.co/",
+   "dismiss": [
+    "No thanks"
+   ],
+   "waitMs": 3500
+  },
+  {
+   "slug": "gowipe",
+   "name": "home-full",
+   "url": "https://gowipe.co/",
+   "dismiss": [
+    "No thanks"
+   ],
+   "waitMs": 3500,
+   "fullPage": true,
+   "scale": 1
+  },
+  {
+   "slug": "gowipe",
+   "name": "collection",
+   "url": "https://gowipe.co/collections/gowipes",
+   "dismiss": [
+    "No thanks"
+   ],
+   "waitMs": 3500
+  },
+  {
+   "slug": "gowipe",
+   "name": "product",
+   "url": "https://gowipe.co/products/facialcleansingwipes",
+   "dismiss": [
+    "No thanks"
+   ],
+   "waitMs": 3500
+  },
+  {
+   "slug": "gowipe",
+   "name": "science",
+   "url": "https://gowipe.co/pages/science",
+   "dismiss": [
+    "No thanks"
+   ],
+   "waitMs": 3500
+  },
+  {
+   "slug": "gowipe",
+   "name": "story",
+   "url": "https://gowipe.co/pages/ourstory",
+   "dismiss": [
+    "No thanks"
+   ],
+   "waitMs": 3500
+  },
+  {
+   "slug": "gowipe",
+   "name": "mobile-home",
+   "url": "https://gowipe.co/",
+   "size": "mobile",
+   "dismiss": [
+    "No thanks"
+   ],
+   "waitMs": 3500
+  },
+  {
+   "slug": "gowipe",
+   "name": "mobile-product",
+   "url": "https://gowipe.co/products/facialcleansingwipes",
+   "size": "mobile",
+   "dismiss": [
+    "No thanks"
+   ],
+   "waitMs": 3500
+  },
+  {
+   "slug": "gowipe",
+   "name": "walkthrough",
+   "url": "https://gowipe.co/",
+   "dismiss": [
+    "No thanks"
+   ],
+   "waitMs": 3500,
+   "video": {
+    "seconds": 16,
+    "maxScroll": 5200
+   }
+  },
+  {
+   "slug": "daryl-davis",
+   "name": "home",
+   "url": "https://daryldavis.myshopify.com/",
+   "waitMs": 3500
+  },
+  {
+   "slug": "daryl-davis",
+   "name": "home-full",
+   "url": "https://daryldavis.myshopify.com/",
+   "waitMs": 3500,
+   "fullPage": true,
+   "scale": 1
+  },
+  {
+   "slug": "daryl-davis",
+   "name": "book",
+   "url": "https://daryldavis.myshopify.com/products/klan-destine-relationships-book",
+   "waitMs": 3000
+  },
+  {
+   "slug": "daryl-davis",
+   "name": "booking",
+   "url": "https://daryldavis.myshopify.com/pages/book-me",
+   "waitMs": 3000
+  },
+  {
+   "slug": "daryl-davis",
+   "name": "booking-music",
+   "url": "https://daryldavis.myshopify.com/pages/book-me-today",
+   "waitMs": 3000
+  },
+  {
+   "slug": "daryl-davis",
+   "name": "bio",
+   "url": "https://daryldavis.myshopify.com/pages/daryls-bio",
+   "waitMs": 3000
+  },
+  {
+   "slug": "daryl-davis",
+   "name": "shop",
+   "url": "https://daryldavis.myshopify.com/collections/all",
+   "waitMs": 3000
+  },
+  {
+   "slug": "daryl-davis",
+   "name": "mobile-home",
+   "url": "https://daryldavis.myshopify.com/",
+   "size": "mobile",
+   "waitMs": 3500
+  },
+  {
+   "slug": "daryl-davis",
+   "name": "walkthrough",
+   "url": "https://daryldavis.myshopify.com/",
+   "waitMs": 3500,
+   "video": {
+    "seconds": 16,
+    "maxScroll": 5600
+   }
+  },
+  {
+   "slug": "vantage-movers",
+   "name": "home",
+   "url": "https://vantagehomemovers.com/",
+   "waitMs": 2500
+  },
+  {
+   "slug": "vantage-movers",
+   "name": "home-full",
+   "url": "https://vantagehomemovers.com/",
+   "waitMs": 2500,
+   "fullPage": true,
+   "scale": 1
+  },
+  {
+   "slug": "vantage-movers",
+   "name": "services",
+   "url": "https://vantagehomemovers.com/#service-long-distance-feature",
+   "waitMs": 3000
+  },
+  {
+   "slug": "vantage-movers",
+   "name": "coverage-map",
+   "url": "https://vantagehomemovers.com/#map",
+   "waitMs": 3500
+  },
+  {
+   "slug": "vantage-movers",
+   "name": "about",
+   "url": "https://vantagehomemovers.com/#about",
+   "waitMs": 3000
+  },
+  {
+   "slug": "vantage-movers",
+   "name": "faq",
+   "url": "https://vantagehomemovers.com/#faq",
+   "waitMs": 3000
+  },
+  {
+   "slug": "vantage-movers",
+   "name": "landing",
+   "url": "https://vantage-movers-clients.vercel.app/",
+   "waitMs": 2500
+  },
+  {
+   "slug": "vantage-movers",
+   "name": "landing-full",
+   "url": "https://vantage-movers-clients.vercel.app/",
+   "waitMs": 2500,
+   "fullPage": true,
+   "scale": 1
+  },
+  {
+   "slug": "vantage-movers",
+   "name": "mobile-home",
+   "url": "https://vantagehomemovers.com/",
+   "size": "mobile",
+   "waitMs": 2500
+  },
+  {
+   "slug": "vantage-movers",
+   "name": "walkthrough",
+   "url": "https://vantagehomemovers.com/",
+   "waitMs": 2500,
+   "video": {
+    "seconds": 16,
+    "maxScroll": 5600
+   }
+  },
+  {
+   "slug": "ai-engineer-worldsfair-showcase",
+   "name": "home",
+   "url": "https://ai-engineer-worldsfair-showcase-dusky.vercel.app/",
+   "waitMs": 2500
+  },
+  {
+   "slug": "ai-engineer-worldsfair-showcase",
+   "name": "home-full",
+   "url": "https://ai-engineer-worldsfair-showcase-dusky.vercel.app/",
+   "waitMs": 2500,
+   "fullPage": true,
+   "scale": 1
+  },
+  {
+   "slug": "ai-engineer-worldsfair-showcase",
+   "name": "category",
+   "url": "https://ai-engineer-worldsfair-showcase-dusky.vercel.app/c/agent_architecture_harnesses",
+   "waitMs": 2500
+  },
+  {
+   "slug": "ai-engineer-worldsfair-showcase",
+   "name": "category-2",
+   "url": "https://ai-engineer-worldsfair-showcase-dusky.vercel.app/c/context_engineering_memory",
+   "waitMs": 2500
+  },
+  {
+   "slug": "ai-engineer-worldsfair-showcase",
+   "name": "talk-brief",
+   "url": "https://ai-engineer-worldsfair-showcase-dusky.vercel.app/t/o-zkvb0iFDQ",
+   "waitMs": 2500
+  },
+  {
+   "slug": "ai-engineer-worldsfair-showcase",
+   "name": "talk-brief-full",
+   "url": "https://ai-engineer-worldsfair-showcase-dusky.vercel.app/t/o-zkvb0iFDQ",
+   "waitMs": 2500,
+   "fullPage": true,
+   "scale": 1
+  },
+  {
+   "slug": "ai-engineer-worldsfair-showcase",
+   "name": "talks",
+   "url": "https://ai-engineer-worldsfair-showcase-dusky.vercel.app/talks",
+   "waitMs": 2500
+  },
+  {
+   "slug": "ai-engineer-worldsfair-showcase",
+   "name": "developers",
+   "url": "https://ai-engineer-worldsfair-showcase-dusky.vercel.app/developers",
+   "waitMs": 2500
+  },
+  {
+   "slug": "ai-engineer-worldsfair-showcase",
+   "name": "about",
+   "url": "https://ai-engineer-worldsfair-showcase-dusky.vercel.app/about",
+   "waitMs": 2500
+  },
+  {
+   "slug": "ai-engineer-worldsfair-showcase",
+   "name": "mobile-home",
+   "url": "https://ai-engineer-worldsfair-showcase-dusky.vercel.app/",
+   "size": "mobile",
+   "waitMs": 2500
+  },
+  {
+   "slug": "ai-engineer-worldsfair-showcase",
+   "name": "walkthrough",
+   "url": "https://ai-engineer-worldsfair-showcase-dusky.vercel.app/",
+   "waitMs": 2500,
+   "video": {
+    "seconds": 16,
+    "maxScroll": 5600
+   }
+  }
+ ]
+}

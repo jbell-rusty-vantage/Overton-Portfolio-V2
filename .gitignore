@@ -46,3 +46,26 @@ next-env.d.ts
 /.local-library/
 /test-results/
 /playwright-report/
+
+# Game film: raw exports dropped in public/ and local analysis work files (too large for git).
+# The compressed clips the site serves live in public/performances/ and are committed.
+/public/*.mp4
+/game_720p.mp4
+/analysis.html
+/clips/
+/thumbs/
+
+# Private research notes, capture originals and unpublished video masters (never ship)
+/content/projects/
+/content/media-src/
+/content/media-out/
+
+# Game film: raw exports and full-match working copies are too large for git.
+# The site serves the compressed clips under /public/performances/ (committed).
+/public/*.mp4
+/public/*.mov
+/public/*.MOV
+/game_720p.mp4
+/clips/
+/thumbs/
+/analysis.html

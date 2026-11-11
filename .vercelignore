@@ -1,0 +1,26 @@
+# Files the Vercel CLI must not upload when deploying from this folder.
+# Secrets: production reads its env vars from Vercel project settings.
+.env
+.env.*
+!.env.example
+
+# Local build output and tooling
+/.next
+/.next-office
+/node_modules
+/test-results
+/playwright-report
+/.local-library
+*.tsbuildinfo
+
+# Private notes and video masters (see .gitignore)
+/content/projects
+/content/media-src
+/content/media-out
+
+# Raw game film and local analysis work files; the site serves public/performances/
+/public/*.mp4
+/game_720p.mp4
+/analysis.html
+/clips
+/thumbs

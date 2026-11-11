@@ -6,9 +6,13 @@ export type Shelf = (typeof shelves)[number];
 export type VolumeKind =
   "Project" | "Journal" | "Favorite" | "Evolution" | "Book";
 export type Block = {
-  kind: "text" | "code" | "link" | "image";
+  kind: "text" | "heading" | "metric" | "code" | "link" | "image" | "video";
+  /** Name of a measurement; its value is in text. */
+  label?: string;
   text: string;
   url?: string;
+  /** Still frame shown before a video plays. */
+  poster?: string;
 };
 export type Leaf = { key: string; title: string; blocks: Block[] };
 export type Volume = {

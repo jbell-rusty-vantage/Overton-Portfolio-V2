@@ -1,6 +1,6 @@
 import { getCollection } from "@/lib/library/catalog";
 import { collectionShelves, matchesCatalog, type Block } from "@/lib/library/model";
-import { publicImage } from "@/lib/library/policy";
+import { publicImage, publicVideo } from "@/lib/library/policy";
 
 const escape = (s: string) =>
   s.replace(
@@ -35,6 +35,17 @@ function content(b: Block) {
       escape(b.text) +
       '"></figure>'
     );
+  if (b.kind === "video" && publicVideo(b.url))
+    return (
+      '<p><a href="' +
+      escape(b.url!) +
+      '" rel="noreferrer">Watch: ' +
+      escape(b.text) +
+      "</a></p>"
+    );
+  if (b.kind === "heading") return "<h3>" + escape(b.text) + "</h3>";
+  if (b.kind === "metric")
+    return "<p><strong>" + escape(b.text) + "</strong> " + escape(b.label ?? "") + "</p>";
   if (b.kind === "code")
     return "<pre><code>" + escape(b.text) + "</code></pre>";
   return "<p>" + escape(b.text) + "</p>";

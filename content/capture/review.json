@@ -1,0 +1,56 @@
+{
+ "shots": [
+  {
+   "slug": "_review",
+   "name": "entrance",
+   "url": "http://127.0.0.1:3078/admin/library/preview",
+   "waitMs": 6000,
+   "scale": 1
+  },
+  {
+   "slug": "_review",
+   "name": "catalog",
+   "url": "http://127.0.0.1:3078/admin/library/preview?catalog=1",
+   "waitMs": 5000,
+   "scale": 1,
+   "fullPage": true
+  },
+  {
+   "slug": "_review",
+   "name": "read-vantage",
+   "url": "http://127.0.0.1:3078/admin/library/preview?read=vantage-movers",
+   "waitMs": 5000,
+   "scale": 1,
+   "fullPage": true
+  },
+  {
+   "slug": "_review",
+   "name": "read-mission-control",
+   "url": "http://127.0.0.1:3078/admin/library/preview?read=agentic-mission-control",
+   "waitMs": 5000,
+   "scale": 1,
+   "fullPage": true
+  },
+  {
+   "slug": "_review",
+   "name": "world-stacks",
+   "url": "http://127.0.0.1:3078/admin/library/preview?view=world&zone=stacks",
+   "waitMs": 12000,
+   "scale": 1
+  },
+  {
+   "slug": "_review",
+   "name": "world-ai",
+   "url": "http://127.0.0.1:3078/admin/library/preview?view=world&zone=stacks&shelf=stacks-ai-agents",
+   "waitMs": 12000,
+   "scale": 1
+  },
+  {
+   "slug": "_review",
+   "name": "world-book",
+   "url": "http://127.0.0.1:3078/admin/library/preview?view=world&zone=stacks&shelf=stacks-client-work&book=vantage-movers&kind=Project",
+   "waitMs": 14000,
+   "scale": 1
+  }
+ ]
+}

@@ -1,0 +1,4170 @@
+{
+ "schemaVersion": 1,
+ "clients": [
+  {
+   "slug": "vantage-movers",
+   "name": "Vantage Movers",
+   "showName": true
+  },
+  {
+   "slug": "gowipe",
+   "name": "GoWipe",
+   "showName": true
+  },
+  {
+   "slug": "daryl-davis",
+   "name": "Daryl Davis",
+   "showName": true
+  }
+ ],
+ "github": {
+  "jbell-rusty-vantage/agentic-mission-control": {
+   "archived": false,
+   "created_at": "2026-11-06T15:26:51Z",
+   "default_branch": "main",
+   "description": "A cross provider multi-workflow supportive agent mission repo ",
+   "fork": false,
+   "forks_count": 0,
+   "full_name": "jbell-rusty-vantage/agentic-mission-control",
+   "homepage": null,
+   "html_url": "https://github.com/jbell-rusty-vantage/agentic-mission-control",
+   "id": 1448425052,
+   "language": "Python",
+   "name": "agentic-mission-control",
+   "private": false,
+   "pushed_at": "2026-11-08T00:54:22Z",
+   "stargazers_count": 0,
+   "topics": []
+  },
+  "jbell-rusty-vantage/ai-engineer-services": {
+   "archived": false,
+   "created_at": "2026-11-07T23:03:04Z",
+   "default_branch": "main",
+   "description": "Product, knowledge, user , content and assistant services for the agent engineer educational platform services. ",
+   "fork": false,
+   "forks_count": 0,
+   "full_name": "jbell-rusty-vantage/ai-engineer-services",
+   "homepage": null,
+   "html_url": "https://github.com/jbell-rusty-vantage/ai-engineer-services",
+   "id": 1449806641,
+   "language": "TypeScript",
+   "name": "ai-engineer-services",
+   "private": false,
+   "pushed_at": "2026-11-07T23:53:17Z",
+   "stargazers_count": 0,
+   "topics": []
+  },
+  "jbell-rusty-vantage/agent-engineer-db-contract": {
+   "archived": false,
+   "created_at": "2026-11-06T20:12:54Z",
+   "default_branch": "main",
+   "description": "The database contract and agent schema workspace materializer for the ai engineer app and services",
+   "fork": false,
+   "forks_count": 0,
+   "full_name": "jbell-rusty-vantage/agent-engineer-db-contract",
+   "homepage": null,
+   "html_url": "https://github.com/jbell-rusty-vantage/agent-engineer-db-contract",
+   "id": 1448703800,
+   "language": "PLpgSQL",
+   "name": "agent-engineer-db-contract",
+   "private": false,
+   "pushed_at": "2026-11-08T00:55:12Z",
+   "stargazers_count": 0,
+   "topics": []
+  },
+  "jbell-rusty-vantage/ai-engineer-cloud-agent-knowledge-repo": {
+   "archived": false,
+   "created_at": "2026-11-07T23:08:35Z",
+   "default_branch": "main",
+   "description": "A knowledge work repo for utilizing cursor cloud agents and their harness for underlying application research and knowledge work. ",
+   "fork": false,
+   "forks_count": 0,
+   "full_name": "jbell-rusty-vantage/ai-engineer-cloud-agent-knowledge-repo",
+   "homepage": null,
+   "html_url": "https://github.com/jbell-rusty-vantage/ai-engineer-cloud-agent-knowledge-repo",
+   "id": 1449809607,
+   "language": "TypeScript",
+   "name": "ai-engineer-cloud-agent-knowledge-repo",
+   "private": false,
+   "pushed_at": "2026-11-07T23:58:52Z",
+   "stargazers_count": 0,
+   "topics": []
+  },
+  "jbell-rusty-vantage/agent-knowledge-services": {
+   "archived": false,
+   "created_at": "2026-11-06T20:16:18Z",
+   "default_branch": "main",
+   "description": "research, ingestion , content , evidence and domain interaction knowledge services built primarily for agents. ",
+   "fork": false,
+   "forks_count": 0,
+   "full_name": "jbell-rusty-vantage/agent-knowledge-services",
+   "homepage": null,
+   "html_url": "https://github.com/jbell-rusty-vantage/agent-knowledge-services",
+   "id": 1448706688,
+   "language": "TypeScript",
+   "name": "agent-knowledge-services",
+   "private": false,
+   "pushed_at": "2026-11-08T01:02:49Z",
+   "stargazers_count": 0,
+   "topics": []
+  },
+  "jbell-rusty-vantage/ai-engineer-worldsfair-showcase": {
+   "archived": false,
+   "created_at": "2026-11-09T23:04:50Z",
+   "default_branch": "main",
+   "description": "A showcase for research conducted by GLM 5.2 inside of the vercel eve agent harness.",
+   "fork": false,
+   "forks_count": 0,
+   "full_name": "jbell-rusty-vantage/ai-engineer-worldsfair-showcase",
+   "homepage": "https://ai-engineer-worldsfair-showcase.vercel.app",
+   "html_url": "https://github.com/jbell-rusty-vantage/ai-engineer-worldsfair-showcase",
+   "id": 1451975649,
+   "language": "TypeScript",
+   "name": "ai-engineer-worldsfair-showcase",
+   "private": false,
+   "pushed_at": "2026-11-09T23:51:58Z",
+   "stargazers_count": 0,
+   "topics": []
+  },
+  "jbell-rusty-vantage/biotech-knowledge-services": {
+   "archived": false,
+   "created_at": "2026-11-07T23:01:27Z",
+   "default_branch": "main",
+   "description": "knowledge services repo for the biotech services applications. ",
+   "fork": false,
+   "forks_count": 0,
+   "full_name": "jbell-rusty-vantage/biotech-knowledge-services",
+   "homepage": null,
+   "html_url": "https://github.com/jbell-rusty-vantage/biotech-knowledge-services",
+   "id": 1449805851,
+   "language": "TypeScript",
+   "name": "biotech-knowledge-services",
+   "private": false,
+   "pushed_at": "2026-11-08T00:59:46Z",
+   "stargazers_count": 0,
+   "topics": []
+  },
+  "jbell-rusty-vantage/biotech-postgres-db-contract": {
+   "archived": false,
+   "created_at": "2026-11-07T23:05:59Z",
+   "default_branch": "main",
+   "description": "Biotech services postgres database contract repo. ",
+   "fork": false,
+   "forks_count": 0,
+   "full_name": "jbell-rusty-vantage/biotech-postgres-db-contract",
+   "homepage": null,
+   "html_url": "https://github.com/jbell-rusty-vantage/biotech-postgres-db-contract",
+   "id": 1449808155,
+   "language": "Python",
+   "name": "biotech-postgres-db-contract",
+   "private": false,
+   "pushed_at": "2026-11-07T23:52:15Z",
+   "stargazers_count": 0,
+   "topics": []
+  },
+  "jbell-rusty-vantage/vantage-movers-server": {
+   "archived": false,
+   "created_at": "2026-05-20T15:35:59Z",
+   "default_branch": "main",
+   "description": "The server for vantage movers leads, booked leads, cancelled leads, crm posting and analytics",
+   "fork": false,
+   "forks_count": 0,
+   "full_name": "jbell-rusty-vantage/vantage-movers-server",
+   "homepage": "https://vantage-movers-main-server.vercel.app",
+   "html_url": "https://github.com/jbell-rusty-vantage/vantage-movers-server",
+   "id": 1244781480,
+   "language": "TypeScript",
+   "name": "vantage-movers-server",
+   "private": false,
+   "pushed_at": "2026-11-05T15:41:16Z",
+   "stargazers_count": 0,
+   "topics": []
+  },
+  "jbell-rusty-vantage/vantage-movers-mcp": {
+   "archived": false,
+   "created_at": "2026-08-28T16:48:20Z",
+   "default_branch": "main",
+   "description": "An MCP  Server for the Vantage Movers operations backend services. Utilized in app and through ai coding assistant configurations.",
+   "fork": false,
+   "forks_count": 0,
+   "full_name": "jbell-rusty-vantage/vantage-movers-mcp",
+   "homepage": null,
+   "html_url": "https://github.com/jbell-rusty-vantage/vantage-movers-mcp",
+   "id": 1349834548,
+   "language": "TypeScript",
+   "name": "vantage-movers-mcp",
+   "private": false,
+   "pushed_at": "2026-10-05T23:41:19Z",
+   "stargazers_count": 0,
+   "topics": []
+  },
+  "jbell-rusty-vantage/Overton-Portfolio-V2": {
+   "archived": false,
+   "created_at": "2026-11-09T00:31:53Z",
+   "default_branch": "main",
+   "description": "Version 2 of my portfolio. A consideral upgrade over the previous. Created to showcase and to direct users to my creations.",
+   "fork": false,
+   "forks_count": 0,
+   "full_name": "jbell-rusty-vantage/Overton-Portfolio-V2",
+   "homepage": "https://overton-portfolio-v2.vercel.app",
+   "html_url": "https://github.com/jbell-rusty-vantage/Overton-Portfolio-V2",
+   "id": 1450783861,
+   "language": "TypeScript",
+   "name": "Overton-Portfolio-V2",
+   "private": false,
+   "pushed_at": "2026-11-09T00:53:26Z",
+   "stargazers_count": 0,
+   "topics": []
+  },
+  "jbell-rusty-vantage/vantage-admin": {
+   "archived": false,
+   "created_at": "2026-06-01T14:47:35Z",
+   "default_branch": "main",
+   "description": "Owner admin dashboard for Vantage Movers",
+   "fork": false,
+   "forks_count": 0,
+   "full_name": "jbell-rusty-vantage/vantage-admin",
+   "homepage": "https://vantage-admin-rho.vercel.app",
+   "html_url": "https://github.com/jbell-rusty-vantage/vantage-admin",
+   "id": 1256192979,
+   "language": "TypeScript",
+   "name": "vantage-admin",
+   "private": false,
+   "pushed_at": "2026-11-03T21:07:23Z",
+   "stargazers_count": 0,
+   "topics": []
+  },
+  "jbell-rusty-vantage/vantage-movers-clients": {
+   "archived": false,
+   "created_at": "2026-06-05T19:34:45Z",
+   "default_branch": "main",
+   "description": "The lead source company specific landing web pages for Vantage Movers LLC",
+   "fork": false,
+   "forks_count": 0,
+   "full_name": "jbell-rusty-vantage/vantage-movers-clients",
+   "homepage": "https://vantage-movers-clients.vercel.app",
+   "html_url": "https://github.com/jbell-rusty-vantage/vantage-movers-clients",
+   "id": 1260708349,
+   "language": "HTML",
+   "name": "vantage-movers-clients",
+   "private": false,
+   "pushed_at": "2026-10-30T21:08:38Z",
+   "stargazers_count": 0,
+   "topics": []
+  },
+  "jbell-rusty-vantage/vantage-operations-server": {
+   "archived": false,
+   "created_at": "2026-10-26T01:23:10Z",
+   "default_branch": "main",
+   "description": "A server built for vantage movers dedicated to operations and moving price calculations that are actionable in the browser extension",
+   "fork": false,
+   "forks_count": 0,
+   "full_name": "jbell-rusty-vantage/vantage-operations-server",
+   "homepage": null,
+   "html_url": "https://github.com/jbell-rusty-vantage/vantage-operations-server",
+   "id": 1433775389,
+   "language": "TypeScript",
+   "name": "vantage-operations-server",
+   "private": false,
+   "pushed_at": "2026-11-03T17:47:05Z",
+   "stargazers_count": 0,
+   "topics": []
+  }
+ },
+ "books": [
+  {
+   "slug": "agentic-mission-control",
+   "title": "Mission Control",
+   "tagline": "A Temporal macro-scheduler and cross-provider agent cognition system",
+   "summary": "Mission Control is a Temporal macro-scheduler and cross-provider agent cognition system. A mission control agent spawns long-running workflows that complete coding and knowledge work, whichever agent framework does the work. It has come a long way and is still in development.",
+   "status": "active",
+   "startedOn": "2026-07-01",
+   "shelf": "stacks-ai-agents",
+   "position": 1,
+   "publishAs": "featured",
+   "featuredRank": 1,
+   "tags": [
+    "In development",
+    "Temporal",
+    "Python",
+    "PostgreSQL",
+    "Multi-agent",
+    "MCP"
+   ],
+   "skills": [
+    "Python",
+    "Temporal",
+    "PostgreSQL",
+    "FastAPI",
+    "LangGraph",
+    "Deep Agents",
+    "Claude Agent SDK",
+    "MCP",
+    "Next.js",
+    "TypeScript"
+   ],
+   "repos": [
+    {
+     "fullName": "jbell-rusty-vantage/agentic-mission-control",
+     "role": "agent",
+     "primary": true
+    }
+   ],
+   "deployments": [],
+   "blurb": "This volume is Mission Control, the system John is building to run teams of AI agents as long-running missions on Temporal, whichever agent framework does the work. Open it to see how a mission is scheduled, steered and judged.",
+   "cover": "/library/artwork/agentic-mission-control-cover.webp",
+   "media": [
+    {
+     "url": "/library/artwork/agentic-mission-control-cover.webp",
+     "kind": "image",
+     "role": "cover",
+     "title": "Mission Control — cover",
+     "alt": "Cover of the volume “Mission Control”.",
+     "width": 960,
+     "height": 1200,
+     "bytes": 39504
+    },
+    {
+     "url": "/library/artwork/agentic-mission-control-episode.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 69306,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Mission Control — episode",
+     "alt": "A recorded research mission: one finding shown beside the company page and the paper it cites."
+    },
+    {
+     "url": "/library/artwork/agentic-mission-control-architecture.webp",
+     "width": 1600,
+     "height": 606,
+     "bytes": 56548,
+     "kind": "image",
+     "role": "diagram",
+     "title": "Mission Control — architecture",
+     "alt": "How a mission moves from a manifest to a judged result."
+    },
+    {
+     "url": "/library/artwork/agentic-mission-control-reel-poster.webp",
+     "width": 1280,
+     "height": 720,
+     "bytes": 40704,
+     "kind": "image",
+     "role": "inline",
+     "title": "Mission Control — recording still",
+     "alt": "Walkthrough of the recorded research mission: a finding, its sources, the run timeline and the accepted report."
+    },
+    {
+     "url": "/library/recordings/agentic-mission-control-reel.mp4",
+     "kind": "video",
+     "role": "demo",
+     "title": "Mission Control — recording",
+     "alt": "Walkthrough of the recorded research mission: a finding, its sources, the run timeline and the accepted report.",
+     "width": 1280,
+     "height": 720,
+     "durationS": 18.88,
+     "bytes": 1084932,
+     "mimeType": "video/mp4",
+     "poster": "/library/artwork/agentic-mission-control-reel-poster.webp"
+    },
+    {
+     "url": "/library/artwork/agentic-mission-control-case-study.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 58204,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Mission Control — case-study",
+     "alt": "The published case study introduces the recorded mission."
+    },
+    {
+     "url": "/library/artwork/agentic-mission-control-timeline.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 54488,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Mission Control — timeline",
+     "alt": "The run timeline steps through the events of the recorded mission."
+    },
+    {
+     "url": "/library/artwork/agentic-mission-control-report.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 85640,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Mission Control — report",
+     "alt": "The accepted report, with each statement linked to its source."
+    },
+    {
+     "url": "/library/artwork/agentic-mission-control-harness.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 84918,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Mission Control — harness",
+     "alt": "Inside the harness: one goal, two agents and one owner decision."
+    }
+   ],
+   "pages": [
+    {
+     "template": "overview",
+     "position": 1,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "A recorded research mission: one finding shown beside the company page and the paper it cites.",
+        "url": "/library/artwork/agentic-mission-control-episode.webp"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Status",
+        "text": "In development"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "My role",
+        "text": "Designer and engineer"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Mission Control is a Temporal macro-scheduler and cross-provider agent cognition system. A mission control agent spawns long-running workflows that complete coding and knowledge work. It has progressed a lot and is still in development."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "The problem"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Every agent framework ships its own loop, its own session store and its own controls. None of them answers what an operator needs to know about a long, multi-agent job: what was admitted, what state the agent was in at a given step, whether the run can be steered or forked from there, what it promised to deliver, and who judged the result. Moving the same workflow to another provider usually means rewriting the orchestration."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "What I built"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "A control service in which a mission is data. A mission describes a goal, a workflow shape, the agents involved, their capabilities and the outputs they owe. Temporal schedules the work and recovers it after a failure; PostgreSQL holds the authoritative state. Each agent runtime plugs in as a provider lane behind one contract, so the same mission shape can run on LangChain Deep Agents, the Claude Agent SDK, Codex or Cursor."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Mission control agents understand workflows and the provider-specific cognition inside them: agent skills, MCP servers, plugins, hooks, context transfers, output obligations, and capabilities particular to a provider, such as the to-do list middleware in Deep Agents."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Mission Control works together with Knowledge Services. Between them they are the interfaces and guidance for turning research into real service data and features."
+       }
+      }
+     ]
+    },
+    {
+     "template": "architecture",
+     "position": 2,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "How a mission moves from a manifest to a judged result.",
+        "url": "/library/artwork/agentic-mission-control-architecture.webp"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The service is layered so that the rules for interpreting a mission know nothing about databases, Temporal or any provider SDK. Adapters implement those dependencies, and tests enforce the boundary. Temporal is the only scheduler. PostgreSQL holds mission state under a versioned schema that the runtime checks before it starts."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "Main parts"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Mission manifest. A written description of the mission that is compiled, validated and stored as an immutable revision.\nWorkflows. Two workflow systems run on Temporal: a staged graph and a goal loop that iterates until a verifier is satisfied.\nProvider lanes. One contract in front of several agent runtimes. Deep Agents is the reference lane and the one proven in live runs.\nStep-level control. Each step is recorded, so a run can be read as of any step, forked from it, given a new instruction or interrupted.\nOutput contracts. Outputs are named promises. An independent verifier judges them, and a person can be asked to approve.\nOperator surfaces. An HTTP API, a command-line tool, MCP servers and a live event stream."
+       }
+      }
+     ]
+    },
+    {
+     "template": "notes",
+     "position": 3,
+     "blocks": [
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Execution, fulfilment and approval are recorded as three separate facts. A run can finish without having delivered what it promised, and the system says so."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "An agent that assesses an output is never the agent that produced it. Verification runs in its own session, and can use a different model."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Nine lane profiles are declared. Deep Agents is live-proven; the Claude Agent SDK and Codex lanes have each run a staged mission; the others are implemented against test fixtures. Each lane states which controls it supports natively, emulates or does not support."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "A recorded end-to-end run is public: a research mission that produced a report and ten source-linked findings from five captured sources, checked by an independent verifier and approved by me."
+       }
+      }
+     ]
+    },
+    {
+     "template": "gallery",
+     "position": 4,
+     "blocks": [
+      {
+       "component": "Video",
+       "props": {
+        "text": "Walkthrough of the recorded research mission: a finding, its sources, the run timeline and the accepted report.",
+        "url": "/library/recordings/agentic-mission-control-reel.mp4",
+        "poster": "/library/artwork/agentic-mission-control-reel-poster.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "The published case study introduces the recorded mission.",
+        "url": "/library/artwork/agentic-mission-control-case-study.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "The run timeline steps through the events of the recorded mission.",
+        "url": "/library/artwork/agentic-mission-control-timeline.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "The accepted report, with each statement linked to its source.",
+        "url": "/library/artwork/agentic-mission-control-report.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "Inside the harness: one goal, two agents and one owner decision.",
+        "url": "/library/artwork/agentic-mission-control-harness.webp"
+       }
+      }
+     ]
+    },
+    {
+     "template": "metrics",
+     "position": 5,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Provider lane profiles",
+        "text": "9"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Workflow systems",
+        "text": "2"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Agent skill bundles",
+        "text": "17"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Architecture decision records",
+        "text": "69"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Python source modules",
+        "text": "1,063"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Findings in the recorded run",
+        "text": "10"
+       }
+      }
+     ]
+    },
+    {
+     "template": "links",
+     "position": 6,
+     "blocks": [
+      {
+       "component": "Link",
+       "props": {
+        "text": "Source repository",
+        "url": "https://github.com/jbell-rusty-vantage/agentic-mission-control"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "ai-engineer-platform",
+   "title": "AI Engineer Platform",
+   "tagline": "An educational platform for AI engineering, usable from the web and from coding agents",
+   "summary": "AI Engineer is an educational platform under development. It uses deep research to support course experiences that can be taken on the web and inside coding agent harnesses, with an industry and technical knowledge component. The backend services will be released as MCP servers, an API, an agent skill with a CLI, and the web app. It is partially complete.",
+   "status": "active",
+   "startedOn": "2026-08-14",
+   "shelf": "stacks-ai-agents",
+   "position": 2,
+   "publishAs": "published",
+   "tags": [
+    "In development",
+    "PostgreSQL",
+    "Supabase",
+    "TypeScript",
+    "MCP",
+    "Education"
+   ],
+   "skills": [
+    "TypeScript",
+    "PostgreSQL",
+    "Supabase",
+    "Fastify",
+    "MCP",
+    "Zod",
+    "Next.js",
+    "Cursor Cloud Agents",
+    "GitHub Actions"
+   ],
+   "repos": [
+    {
+     "fullName": "jbell-rusty-vantage/ai-engineer-services",
+     "role": "api",
+     "primary": true
+    },
+    {
+     "fullName": "jbell-rusty-vantage/agent-engineer-db-contract",
+     "role": "data"
+    },
+    {
+     "fullName": "jbell-rusty-vantage/ai-engineer-cloud-agent-knowledge-repo",
+     "role": "agent"
+    }
+   ],
+   "deployments": [],
+   "blurb": "This is the AI Engineer platform, an educational product John is building so that courses can be taken on the web or from inside a coding agent. It is partially complete; the volume shows the database contract and services underneath it.",
+   "cover": "/library/artwork/ai-engineer-platform-cover.webp",
+   "media": [
+    {
+     "url": "/library/artwork/ai-engineer-platform-cover.webp",
+     "kind": "image",
+     "role": "cover",
+     "title": "AI Engineer Platform — cover",
+     "alt": "Cover of the volume “AI Engineer Platform”.",
+     "width": 960,
+     "height": 1200,
+     "bytes": 44696
+    },
+    {
+     "url": "/library/artwork/ai-engineer-platform-architecture.webp",
+     "width": 1600,
+     "height": 588,
+     "bytes": 54376,
+     "kind": "image",
+     "role": "diagram",
+     "title": "AI Engineer Platform — architecture",
+     "alt": "One set of product operations behind every client."
+    },
+    {
+     "url": "/library/artwork/ai-engineer-platform-course-world.webp",
+     "width": 1600,
+     "height": 900,
+     "bytes": 110396,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "AI Engineer Platform — course-world",
+     "alt": "An early prototype of a course map rendered as a 3D world."
+    }
+   ],
+   "pages": [
+    {
+     "template": "overview",
+     "position": 1,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Status",
+        "text": "In development, partially complete"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "My role",
+        "text": "Owner and architect"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "AI Engineer is an educational platform that uses deep research to support next-generation course experiences. Courses can be taken on the web and inside coding agent harnesses, and there is an industry and technical knowledge component to it. The backend services will be released as MCP servers, an API, an agent skill with a CLI, and the web app."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "The problem"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "People learning AI engineering do the real work inside coding agents such as Claude Code, Codex and Cursor. Learning platforms live in the browser and cannot see or serve that work. I want a lesson, a note, a project submission and a research report to be the same objects whether they are reached from a web page, an MCP tool or a terminal."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "What is built so far"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The rules live in the database. A PostgreSQL contract owns permissions, audit, sealed revisions and one command and read interface. A TypeScript product service sits on top of it and exposes the same operations over HTTP, MCP and a CLI. A third repository is the workspace that cloud coding agents open to do sourced research for the knowledge base; a deterministic executor applies only what has been approved."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The service and database layers have been exercised together in a lab environment. Nothing is deployed for learners yet, and the web app is a shell."
+       }
+      }
+     ]
+    },
+    {
+     "template": "architecture",
+     "position": 2,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "One set of product operations behind every client.",
+        "url": "/library/artwork/ai-engineer-platform-architecture.webp"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Because permissions and audit are enforced below every client, an agent calling an MCP tool is held to the same rules as a person using the web app. An agent can propose; decisions reserved for a person, such as reviews and acceptance, are refused to it."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "Main parts"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Database contract. Ordered migrations, row-level security and a single command and read interface, installed by a guarded installer.\nProduct service. One operation catalog shared by the HTTP API, the MCP server and the CLI.\nSchema workspace. Pages generated from the live database that tell an agent where an answer lives in a few reads.\nCloud agent repository. The environment and roles research agents work in, one leased video at a time."
+       }
+      }
+     ]
+    },
+    {
+     "template": "notes",
+     "position": 3,
+     "blocks": [
+      {
+       "component": "Prose",
+       "props": {
+        "text": "One operation catalog drives every surface: 69 operations reachable through HTTP, MCP and the CLI through a single interface."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Uploads are handled on the server: store, read back, hash, then complete. Clients never hold storage credentials."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "I tested whether the generated schema workspace actually helps agents with a three-arm experiment, and changed the workspace when the result showed one of its rules was getting in the way."
+       }
+      }
+     ]
+    },
+    {
+     "template": "gallery",
+     "position": 4,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "An early prototype of a course map rendered as a 3D world.",
+        "url": "/library/artwork/ai-engineer-platform-course-world.webp"
+       }
+      }
+     ]
+    },
+    {
+     "template": "metrics",
+     "position": 5,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Product operations",
+        "text": "69"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "MCP tools",
+        "text": "13"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Database schemas",
+        "text": "27"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Tables and views",
+        "text": "333"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Migrations",
+        "text": "193"
+       }
+      }
+     ]
+    },
+    {
+     "template": "links",
+     "position": 6,
+     "blocks": [
+      {
+       "component": "Link",
+       "props": {
+        "text": "Product service repository",
+        "url": "https://github.com/jbell-rusty-vantage/ai-engineer-services"
+       }
+      },
+      {
+       "component": "Link",
+       "props": {
+        "text": "Database contract repository",
+        "url": "https://github.com/jbell-rusty-vantage/agent-engineer-db-contract"
+       }
+      },
+      {
+       "component": "Link",
+       "props": {
+        "text": "Cloud agent knowledge repository",
+        "url": "https://github.com/jbell-rusty-vantage/ai-engineer-cloud-agent-knowledge-repo"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "polymarket-mcp-server",
+   "title": "Polymarket MCP Server",
+   "tagline": "Market data and gated order tools for agents, over the Model Context Protocol",
+   "summary": "A TypeScript MCP server that wraps Polymarket's market, data and order-book APIs as tools an agent can call. An agent can search markets, read order books and positions, and preview orders. Live orders are possible only when environment gates and an approval step allow it. Built in May 2026 and paused.",
+   "status": "paused",
+   "startedOn": "2026-05-04",
+   "endedOn": "2026-05-07",
+   "shelf": "stacks-ai-agents",
+   "position": 3,
+   "publishAs": "published",
+   "tags": [
+    "Earlier work",
+    "TypeScript",
+    "MCP",
+    "Express",
+    "Trading research"
+   ],
+   "skills": [
+    "TypeScript",
+    "MCP",
+    "Express",
+    "Zod",
+    "WebSockets",
+    "Vitest"
+   ],
+   "repos": [],
+   "deployments": [],
+   "blurb": "This shorter volume is an MCP server John wrote to let an agent read prediction markets and, behind several gates, place orders. It is here as an example of making a risky API safe for a model.",
+   "cover": "/library/artwork/polymarket-mcp-server-cover.webp",
+   "media": [
+    {
+     "url": "/library/artwork/polymarket-mcp-server-cover.webp",
+     "kind": "image",
+     "role": "cover",
+     "title": "Polymarket MCP Server — cover",
+     "alt": "Cover of the volume “Polymarket MCP Server”.",
+     "width": 960,
+     "height": 1200,
+     "bytes": 31802
+    },
+    {
+     "url": "/library/artwork/polymarket-mcp-server-architecture.webp",
+     "width": 1600,
+     "height": 606,
+     "bytes": 49740,
+     "kind": "image",
+     "role": "diagram",
+     "title": "Polymarket MCP Server — architecture",
+     "alt": "Reads are open to the agent. Orders pass through gates."
+    }
+   ],
+   "pages": [
+    {
+     "template": "overview",
+     "position": 1,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Status",
+        "text": "Paused"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "My role",
+        "text": "Sole author"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "A TypeScript workspace that exposes Polymarket's APIs to agents as Model Context Protocol tools served over Streamable HTTP. I built it for my own trading research and as an exercise in making a financial API safe for a model to use."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "The problem"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Polymarket spreads its functionality across several APIs, each with its own authentication and response shapes. A model cannot use them safely as they are: responses are inconsistent, rate limits differ, and an order tool with no guard lets a model move real funds on a misread prompt."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "What I built"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "A layered workspace in which each concern is its own package: validated configuration, shared input and output schemas, an API client with rate limiting, timeouts and normalized errors, and an MCP app on top. Every tool returns the same envelope, so the model handles one error shape."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Live execution is deliberately hard to reach. An order tool builds a validated preview, checks the execution mode and live flags, which are all off by default, then asks for approval and validates again before posting."
+       }
+      }
+     ]
+    },
+    {
+     "template": "architecture",
+     "position": 2,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "Reads are open to the agent. Orders pass through gates.",
+        "url": "/library/artwork/polymarket-mcp-server-architecture.webp"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Requests enter through one MCP endpoint. Each tool validates its input against a shared schema and calls the client library, which queues the call behind a rate limiter for that group of endpoints."
+       }
+      }
+     ]
+    },
+    {
+     "template": "notes",
+     "position": 3,
+     "blocks": [
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Order submission and cancellation are blocked unless the execution mode and the specific live flag are both switched on."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Approval uses MCP elicitation with a typed schema. For clients that do not support elicitation there are separate tools that keep the server-side validation and the environment gates."
+       }
+      }
+     ]
+    },
+    {
+     "template": "metrics",
+     "position": 4,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "MCP tools",
+        "text": "64"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Workspace packages",
+        "text": "6"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Test cases",
+        "text": "53"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "TypeScript lines",
+        "text": "9,467"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "biotech-research-ingestion",
+   "title": "Biotech Research Ingestion",
+   "tagline": "The first-generation research backend: approved plans run as staged Temporal missions",
+   "summary": "The first generation of my biotech research work. A coordinator agent turns a conversation into a research plan and pauses for a person's approval. The approved plan runs as a Temporal workflow of staged research agents, and results can be written into a Neo4j knowledge graph. It was later superseded by Mission Control and the knowledge services.",
+   "status": "archived",
+   "endedOn": "2026-04-03",
+   "shelf": "stacks-ai-agents",
+   "position": 4,
+   "publishAs": "published",
+   "tags": [
+    "Earlier work",
+    "Python",
+    "FastAPI",
+    "Temporal",
+    "LangGraph",
+    "Neo4j"
+   ],
+   "skills": [
+    "Python",
+    "FastAPI",
+    "Temporal",
+    "LangChain",
+    "LangGraph",
+    "MongoDB",
+    "Neo4j",
+    "Socket.IO",
+    "Next.js",
+    "AWS S3"
+   ],
+   "repos": [],
+   "deployments": [],
+   "blurb": "This is the first research backend John built, where a person approves a plan before agents spend anything on it. Mission Control grew out of this.",
+   "cover": "/library/artwork/biotech-research-ingestion-cover.webp",
+   "media": [
+    {
+     "url": "/library/artwork/biotech-research-ingestion-cover.webp",
+     "kind": "image",
+     "role": "cover",
+     "title": "Biotech Research Ingestion — cover",
+     "alt": "Cover of the volume “Biotech Research Ingestion”.",
+     "width": 960,
+     "height": 1200,
+     "bytes": 29984
+    },
+    {
+     "url": "/library/artwork/biotech-research-ingestion-architecture.webp",
+     "width": 1600,
+     "height": 498,
+     "bytes": 47586,
+     "kind": "image",
+     "role": "diagram",
+     "title": "Biotech Research Ingestion — architecture",
+     "alt": "A plan is approved by a person, then run as a staged workflow."
+    }
+   ],
+   "pages": [
+    {
+     "template": "overview",
+     "position": 1,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Status",
+        "text": "Archived, superseded"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "My role",
+        "text": "Sole author"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "A Python backend and a Next.js dashboard for deep research on biotech companies. It is the predecessor of Mission Control: the ideas that survived are the approval gate, staged missions and structured results."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "The problem"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Deep research on a company takes many long, expensive agent runs. As a single agent loop it cannot be restarted, cannot run independent lines of inquiry in parallel, gives the user no say before money is spent, and leaves its results as chat text."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "What I built"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "I separated planning from execution. In chat, a coordinator agent proposes a structured plan and is paused before the plan takes effect. Nothing else happens until the user approves, edits or rejects it. Approval starts a mission."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "A mission is a Temporal workflow. Stages declare what they depend on; the workflow runs independent stages in parallel and passes finished reports to the stages that need them. Reports are stored, and an optional step extracts entities and relationships into a Neo4j graph."
+       }
+      }
+     ]
+    },
+    {
+     "template": "architecture",
+     "position": 2,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "A plan is approved by a person, then run as a staged workflow.",
+        "url": "/library/artwork/biotech-research-ingestion-architecture.webp"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The API and realtime layer is FastAPI with Socket.IO. Conversations are checkpointed so they survive a restart. Research agents use search, browser automation, document parsing, SEC filings and clinical trial records as separate tools."
+       }
+      }
+     ]
+    },
+    {
+     "template": "notes",
+     "position": 3,
+     "blocks": [
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The approval gate is an interrupt inside the agent run. The coordinator is paused before the plan tool executes and resumed by the same interrupt after approval."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Graph writes are driven by a schema registry and merged on stable identifiers, so repeating a run does not duplicate entities."
+       }
+      }
+     ]
+    },
+    {
+     "template": "metrics",
+     "position": 4,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Python lines",
+        "text": "28,135"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "API route handlers",
+        "text": "25"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Workflow and activity definitions",
+        "text": "14"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Dashboard pages",
+        "text": "12"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "agent-knowledge-services",
+   "title": "Knowledge Services",
+   "tagline": "Evidence capture, verification, ingestion and retrieval that agents call by contract",
+   "summary": "Knowledge Services is the layer research agents call to capture sources, check claims against what was actually captured, and add only supported knowledge to a store. Together with Mission Control it forms the interfaces and guidance for turning research into real service data and features. In development.",
+   "status": "active",
+   "startedOn": "2026-09-01",
+   "shelf": "stacks-data-knowledge",
+   "position": 1,
+   "publishAs": "published",
+   "featuredRank": 3,
+   "tags": [
+    "In development",
+    "TypeScript",
+    "PostgreSQL",
+    "MCP",
+    "Retrieval",
+    "Verification"
+   ],
+   "skills": [
+    "TypeScript",
+    "PostgreSQL",
+    "pgvector",
+    "Fastify",
+    "MCP",
+    "Zod",
+    "OpenAPI",
+    "Docker",
+    "GitHub Actions"
+   ],
+   "repos": [
+    {
+     "fullName": "jbell-rusty-vantage/agent-knowledge-services",
+     "role": "api",
+     "primary": true
+    }
+   ],
+   "deployments": [],
+   "blurb": "Knowledge Services is the layer that lets research agents add to a knowledge base without being trusted blindly: every claim is checked against the captured source first. It works hand in hand with Mission Control.",
+   "cover": "/library/artwork/agent-knowledge-services-cover.webp",
+   "media": [
+    {
+     "url": "/library/artwork/agent-knowledge-services-cover.webp",
+     "kind": "image",
+     "role": "cover",
+     "title": "Knowledge Services — cover",
+     "alt": "Cover of the volume “Knowledge Services”.",
+     "width": 960,
+     "height": 1200,
+     "bytes": 39896
+    },
+    {
+     "url": "/library/artwork/agent-knowledge-services-architecture.webp",
+     "width": 1600,
+     "height": 627,
+     "bytes": 54010,
+     "kind": "image",
+     "role": "diagram",
+     "title": "Knowledge Services — architecture",
+     "alt": "From a captured source to an evidence packet."
+    }
+   ],
+   "pages": [
+    {
+     "template": "overview",
+     "position": 1,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Status",
+        "text": "In development"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "My role",
+        "text": "Designer and engineer"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Knowledge Services is a set of services that research and mission agents call to capture sources, verify claims, ingest what is supported and retrieve published knowledge with its evidence. Mission Control and Knowledge Services work together as interfaces and guidance for turning research into real service data and features."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "The problem"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Research agents are good at finding sources and hard to trust with a knowledge base. Left alone they write directly to tables, treat a model's verdict as truth, cite text that is not in the source and retry unchanged inputs after a failure. I wanted an agent to be able to do the whole research-to-knowledge loop without holding database credentials, and for every admitted fact to trace back to captured bytes."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "What I built"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Agents write intents: capture this page, this exact quote supports this claim, ingest these records. The service captures the source, locates the quote in the captured bytes and runs verification in a fixed order, with mechanical checks before any model judgment. A later stage can add restrictions but cannot reverse an earlier failure."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Ingestion is plan, apply and receipt. Replaying the same request returns the recorded receipt instead of writing twice. Retrieval answers from published versions only and returns evidence packets whose citations can be replayed."
+       }
+      }
+     ]
+    },
+    {
+     "template": "architecture",
+     "position": 2,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "From a captured source to an evidence packet.",
+        "url": "/library/artwork/agent-knowledge-services-architecture.webp"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "One application layer sits behind four ways of calling it: an HTTP API, MCP, a command-line tool and agent-to-agent tasks. A catalog lists every operation and which callers may use it, and a test fails if a transport exposes something the catalog does not admit."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "Main parts"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Capture. Stores immutable bytes with their lineage.\nVerification. An ordered, sealed run: integrity, mechanical checks, semantic support, then policy.\nIngestion. Plans without writing, applies once, and records a receipt.\nVerification ledger. A versioned PostgreSQL component with its own roles and row-level security.\nRetrieval. Search over published versions, returning evidence that can be checked again."
+       }
+      }
+     ]
+    },
+    {
+     "template": "notes",
+     "position": 3,
+     "blocks": [
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Agents never hold database credentials or write SQL. Everything they change goes through an intent that the service checks."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "A sandbox distribution lets an agent run the capture and verification steps remotely while the store, the judging credentials and the receipts stay on the host."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The same platform serves two domains, AI Engineer and Biotech, through explicit bindings. The second domain did not require forking the verification code."
+       }
+      }
+     ]
+    },
+    {
+     "template": "metrics",
+     "position": 4,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "API operations",
+        "text": "90"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Workspace packages",
+        "text": "26"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Ways to call it",
+        "text": "4"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Verification tables",
+        "text": "31"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Reviewed evaluation cases",
+        "text": "96"
+       }
+      }
+     ]
+    },
+    {
+     "template": "links",
+     "position": 5,
+     "blocks": [
+      {
+       "component": "Link",
+       "props": {
+        "text": "Source repository",
+        "url": "https://github.com/jbell-rusty-vantage/agent-knowledge-services"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "ai-engineer-worldsfair-showcase",
+   "title": "AI Engineer Research Library",
+   "tagline": "1,007 conference talks researched by an agent pipeline and published as a site and API",
+   "summary": "A public library of research briefs for 1,007 talks from the AI Engineer YouTube channel, including the World's Fair. Each brief has a summary, a taxonomy, the organizations and technologies researched on the web, and sources. The briefs were produced by a research pipeline I built on Vercel's Eve agent framework, with GLM 5.2 as the model for most of them.",
+   "status": "shipped",
+   "startedOn": "2026-08-01",
+   "endedOn": "2026-11-09",
+   "shelf": "stacks-data-knowledge",
+   "position": 2,
+   "publishAs": "featured",
+   "featuredRank": 2,
+   "tags": [
+    "Live",
+    "Next.js",
+    "Agent pipeline",
+    "Vercel",
+    "Open dataset",
+    "Research"
+   ],
+   "skills": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Vercel",
+    "Vercel AI Gateway",
+    "Supabase",
+    "Node.js"
+   ],
+   "repos": [
+    {
+     "fullName": "jbell-rusty-vantage/ai-engineer-worldsfair-showcase",
+     "role": "frontend",
+     "primary": true
+    }
+   ],
+   "deployments": [
+    {
+     "slug": "ai-engineer-research-library",
+     "title": "AI Engineer Research Library",
+     "url": "https://ai-engineer-worldsfair-showcase-dusky.vercel.app",
+     "primary": true
+    }
+   ],
+   "blurb": "This one is live. It is a library of research briefs for a thousand AI Engineer conference talks, written by an agent pipeline John built and published as a site and an open API.",
+   "cover": "/library/artwork/ai-engineer-worldsfair-showcase-cover.webp",
+   "media": [
+    {
+     "url": "/library/artwork/ai-engineer-worldsfair-showcase-cover.webp",
+     "kind": "image",
+     "role": "cover",
+     "title": "AI Engineer Research Library — cover",
+     "alt": "Cover of the volume “AI Engineer Research Library”.",
+     "width": 960,
+     "height": 1200,
+     "bytes": 39884
+    },
+    {
+     "url": "/library/artwork/ai-engineer-worldsfair-showcase-home.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 76568,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "AI Engineer Research Library — home",
+     "alt": "The library's home page: 1,007 talks in 17 engineering categories."
+    },
+    {
+     "url": "/library/artwork/ai-engineer-worldsfair-showcase-architecture.webp",
+     "width": 1600,
+     "height": 587,
+     "bytes": 48582,
+     "kind": "image",
+     "role": "diagram",
+     "title": "AI Engineer Research Library — architecture",
+     "alt": "Nine pipeline stages turn a transcript into a published brief."
+    },
+    {
+     "url": "/library/artwork/ai-engineer-worldsfair-showcase-walkthrough-poster.webp",
+     "width": 1280,
+     "height": 800,
+     "bytes": 53604,
+     "kind": "image",
+     "role": "inline",
+     "title": "AI Engineer Research Library — recording still",
+     "alt": "A scroll through the library's home page and categories."
+    },
+    {
+     "url": "/library/recordings/ai-engineer-worldsfair-showcase-walkthrough.mp4",
+     "kind": "video",
+     "role": "demo",
+     "title": "AI Engineer Research Library — recording",
+     "alt": "A scroll through the library's home page and categories.",
+     "width": 1280,
+     "height": 800,
+     "durationS": 17.6,
+     "bytes": 1788662,
+     "mimeType": "video/mp4",
+     "poster": "/library/artwork/ai-engineer-worldsfair-showcase-walkthrough-poster.webp"
+    },
+    {
+     "url": "/library/artwork/ai-engineer-worldsfair-showcase-category.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 60798,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "AI Engineer Research Library — category",
+     "alt": "A category page lists its talks with difficulty and date."
+    },
+    {
+     "url": "/library/artwork/ai-engineer-worldsfair-showcase-brief.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 60002,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "AI Engineer Research Library — brief",
+     "alt": "A talk's research brief: summary, organizations, technologies and sources."
+    },
+    {
+     "url": "/library/artwork/ai-engineer-worldsfair-showcase-talks.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 69510,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "AI Engineer Research Library — talks",
+     "alt": "All 1,007 talks, searchable by title, company or technology."
+    },
+    {
+     "url": "/library/artwork/ai-engineer-worldsfair-showcase-developers.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 70844,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "AI Engineer Research Library — developers",
+     "alt": "The API and bulk downloads page."
+    }
+   ],
+   "pages": [
+    {
+     "template": "overview",
+     "position": 1,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "The library's home page: 1,007 talks in 17 engineering categories.",
+        "url": "/library/artwork/ai-engineer-worldsfair-showcase-home.webp"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Status",
+        "text": "Live"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "My role",
+        "text": "Sole builder"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "A public, static library of machine-generated research briefs for 1,007 talks from the AI Engineer YouTube channel. It is the first visible output of the research work behind my AI Engineer platform."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "The problem"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The channel has about a thousand talks and no way to browse them by engineering topic, by the companies and tools discussed, or by what a learner should take from them. I had already run a research pipeline over the transcripts; the results needed a durable public form."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "What I built"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The pipeline reads each transcript, researches the organizations and technologies it mentions on the web, verifies the sources and writes a brief. I built it on Vercel's Eve agent framework; GLM 5.2 produced 928 of the 1,007 briefs."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "For the site I converted the pipeline's output into one brief per talk, re-classified every talk into 17 categories, and matched 179 talks to sessions in the official World's Fair 2026 program. The site is a statically generated Next.js app with no database at runtime. The same data is available as a read-only JSON API and bulk downloads, so people and agents can use it without scraping."
+       }
+      }
+     ]
+    },
+    {
+     "template": "architecture",
+     "position": 2,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "Nine pipeline stages turn a transcript into a published brief.",
+        "url": "/library/artwork/ai-engineer-worldsfair-showcase-architecture.webp"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Model work and writes are kept apart. Only three of the nine pipeline stages call a model; the rest are deterministic, and each stage records an immutable artifact."
+       }
+      }
+     ]
+    },
+    {
+     "template": "notes",
+     "position": 3,
+     "blocks": [
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The site labels its own limits: the briefs are machine-generated and unreviewed, transcripts are not republished, every brief links back to the original video, and the project is not affiliated with the conference."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The first category labels put most talks in one category, so I re-classified all of them against a fixed taxonomy and kept the raw answers in the repository."
+       }
+      }
+     ]
+    },
+    {
+     "template": "gallery",
+     "position": 4,
+     "blocks": [
+      {
+       "component": "Video",
+       "props": {
+        "text": "A scroll through the library's home page and categories.",
+        "url": "/library/recordings/ai-engineer-worldsfair-showcase-walkthrough.mp4",
+        "poster": "/library/artwork/ai-engineer-worldsfair-showcase-walkthrough-poster.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "A category page lists its talks with difficulty and date.",
+        "url": "/library/artwork/ai-engineer-worldsfair-showcase-category.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "A talk's research brief: summary, organizations, technologies and sources.",
+        "url": "/library/artwork/ai-engineer-worldsfair-showcase-brief.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "All 1,007 talks, searchable by title, company or technology.",
+        "url": "/library/artwork/ai-engineer-worldsfair-showcase-talks.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "The API and bulk downloads page.",
+        "url": "/library/artwork/ai-engineer-worldsfair-showcase-developers.webp"
+       }
+      }
+     ]
+    },
+    {
+     "template": "metrics",
+     "position": 5,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Talk briefs",
+        "text": "1,007"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Engineering categories",
+        "text": "17"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Matched to World's Fair 2026",
+        "text": "179"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Organizations researched",
+        "text": "593"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Source links",
+        "text": "10,638"
+       }
+      }
+     ]
+    },
+    {
+     "template": "links",
+     "position": 6,
+     "blocks": [
+      {
+       "component": "Link",
+       "props": {
+        "text": "Visit the library",
+        "url": "https://ai-engineer-worldsfair-showcase-dusky.vercel.app"
+       }
+      },
+      {
+       "component": "Link",
+       "props": {
+        "text": "API and downloads",
+        "url": "https://ai-engineer-worldsfair-showcase-dusky.vercel.app/developers"
+       }
+      },
+      {
+       "component": "Link",
+       "props": {
+        "text": "Source repository",
+        "url": "https://github.com/jbell-rusty-vantage/ai-engineer-worldsfair-showcase"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "biotech-knowledge-platform",
+   "title": "Biotech Knowledge Platform",
+   "tagline": "A biotech knowledge graph that agents read and write through validated intents",
+   "summary": "Biotech will become a knowledge service platform that excels in different biotech domains, starting with supplements, compounds and case studies, then diagnostics. Reports, recommendations, protocols and biomarker guidance will be among the first major features. It is the earliest-stage of my current projects; what exists today is the knowledge graph foundation.",
+   "status": "active",
+   "startedOn": "2026-10-07",
+   "shelf": "stacks-data-knowledge",
+   "position": 3,
+   "publishAs": "published",
+   "tags": [
+    "Early stage",
+    "Neo4j",
+    "GraphQL",
+    "TypeScript",
+    "Knowledge graph"
+   ],
+   "skills": [
+    "Neo4j",
+    "GraphQL",
+    "TypeScript",
+    "PostgreSQL",
+    "Apollo Server",
+    "MCP",
+    "Zod",
+    "Python"
+   ],
+   "repos": [
+    {
+     "fullName": "jbell-rusty-vantage/biotech-knowledge-services",
+     "role": "data",
+     "primary": true
+    },
+    {
+     "fullName": "jbell-rusty-vantage/biotech-postgres-db-contract",
+     "role": "data"
+    }
+   ],
+   "deployments": [],
+   "blurb": "This is the earliest of John's current projects: the foundation of a biotech knowledge platform, beginning with supplements and compounds. What is built so far is the knowledge graph and the safe way agents write to it.",
+   "cover": "/library/artwork/biotech-knowledge-platform-cover.webp",
+   "media": [
+    {
+     "url": "/library/artwork/biotech-knowledge-platform-cover.webp",
+     "kind": "image",
+     "role": "cover",
+     "title": "Biotech Knowledge Platform — cover",
+     "alt": "Cover of the volume “Biotech Knowledge Platform”.",
+     "width": 960,
+     "height": 1200,
+     "bytes": 37680
+    },
+    {
+     "url": "/library/artwork/biotech-knowledge-platform-architecture.webp",
+     "width": 1600,
+     "height": 607,
+     "bytes": 54886,
+     "kind": "image",
+     "role": "diagram",
+     "title": "Biotech Knowledge Platform — architecture",
+     "alt": "Agents discover the schema, then read and write through validated intents."
+    }
+   ],
+   "pages": [
+    {
+     "template": "overview",
+     "position": 1,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Status",
+        "text": "Early stage"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "My role",
+        "text": "Designer and engineer"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Biotech will become a biotech knowledge service platform that excels in different biotech domains. It starts with supplements, compounds and case studies, and then diagnostics. Reports, recommendations, protocols and biomarker guidance will be some of the first major features. Of my current projects this is the least developed, and its direction is still being settled."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "The problem"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "A biotech knowledge graph is only useful if every stated fact carries its evidence, the period it was valid for and the run that produced it. Letting agents write graph queries directly gives no validation, duplicates on retry and no receipts. The schema is also too large for an agent to hold in context."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "What exists today"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The foundation: a versioned graph schema, a generated workspace that lets an agent explore that schema a little at a time, and an executor through which agents read and write using validated intents. Client applications read through a GraphQL API limited to reviewed operations."
+       }
+      }
+     ]
+    },
+    {
+     "template": "architecture",
+     "position": 2,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "Agents discover the schema, then read and write through validated intents.",
+        "url": "/library/artwork/biotech-knowledge-platform-architecture.webp"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "A write is an intent that the executor plans against the schema and the live graph, then applies in a single transaction and answers with a receipt. The same intent against the same graph produces the same plan, and nothing is deleted; a fact is closed, not removed."
+       }
+      }
+     ]
+    },
+    {
+     "template": "notes",
+     "position": 3,
+     "blocks": [
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The schema is a pinned release. Everything generated from it can be rebuilt, and the build fails if a regenerated file differs from the one checked in."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "On a full-scale synthetic graph of 360,800 nodes, the GraphQL API held a mixed-load 95th percentile of 230 ms with 20 concurrent clients and no errors. That was measured on a laptop with a local database."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "So far the graph has been exercised with synthetic data and test fixtures."
+       }
+      }
+     ]
+    },
+    {
+     "template": "metrics",
+     "position": 4,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Node types",
+        "text": "69"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Relationship types",
+        "text": "106"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Schema cards for agents",
+        "text": "1,035"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Executor MCP tools",
+        "text": "19"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Benchmark p95, mixed load",
+        "text": "230 ms"
+       }
+      }
+     ]
+    },
+    {
+     "template": "links",
+     "position": 5,
+     "blocks": [
+      {
+       "component": "Link",
+       "props": {
+        "text": "Source repository",
+        "url": "https://github.com/jbell-rusty-vantage/biotech-knowledge-services"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "vantage-lead-analytics",
+   "title": "Vantage Lead Analytics",
+   "bookTitle": "Lead Analytics",
+   "tagline": "Lead cost, source and sales reporting computed from one system of record",
+   "summary": "The data and reporting side of the Vantage Movers platform. It attributes every form and call lead to a paid source, prices it from a dated cost schedule, follows it to a booking or cancellation, and answers the owner's questions about spend, conversion and sales credit.",
+   "status": "shipped",
+   "startedOn": "2026-05-11",
+   "shelf": "stacks-data-knowledge",
+   "position": 4,
+   "publishAs": "published",
+   "client": "vantage-movers",
+   "tags": [
+    "Live",
+    "MongoDB",
+    "TypeScript",
+    "Analytics",
+    "Google Sheets API",
+    "MCP"
+   ],
+   "skills": [
+    "MongoDB",
+    "TypeScript",
+    "Node.js",
+    "Express",
+    "Vercel",
+    "Google Sheets API",
+    "MCP",
+    "Next.js",
+    "Google Cloud Run"
+   ],
+   "repos": [
+    {
+     "fullName": "jbell-rusty-vantage/vantage-movers-server",
+     "role": "api",
+     "primary": true
+    },
+    {
+     "fullName": "jbell-rusty-vantage/vantage-movers-mcp",
+     "role": "agent"
+    }
+   ],
+   "deployments": [],
+   "blurb": "This volume covers the numbers behind Vantage Movers: what each lead cost, where it came from and which ones became booked moves. It is a good one to open if you care about data work.",
+   "cover": "/library/artwork/vantage-lead-analytics-cover.webp",
+   "media": [
+    {
+     "url": "/library/artwork/vantage-lead-analytics-cover.webp",
+     "kind": "image",
+     "role": "cover",
+     "title": "Vantage Lead Analytics — cover",
+     "alt": "Cover of the volume “Lead Analytics”.",
+     "width": 960,
+     "height": 1200,
+     "bytes": 25160
+    },
+    {
+     "url": "/library/artwork/vantage-lead-analytics-team.webp",
+     "width": 1186,
+     "height": 742,
+     "bytes": 55314,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Vantage Lead Analytics — team",
+     "alt": "The owner's team view of daily outreach against goals. All names and numbers shown are demo data."
+    },
+    {
+     "url": "/library/artwork/vantage-lead-analytics-architecture.webp",
+     "width": 1600,
+     "height": 587,
+     "bytes": 53300,
+     "kind": "image",
+     "role": "diagram",
+     "title": "Vantage Lead Analytics — architecture",
+     "alt": "Every lead is attributed, priced and followed to an outcome."
+    },
+    {
+     "url": "/library/artwork/vantage-lead-analytics-performance.webp",
+     "width": 964,
+     "height": 749,
+     "bytes": 38856,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Vantage Lead Analytics — performance",
+     "alt": "Rep performance by week, with daily call goals. Demo data."
+    },
+    {
+     "url": "/library/artwork/vantage-lead-analytics-rep.webp",
+     "width": 1186,
+     "height": 742,
+     "bytes": 59128,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Vantage Lead Analytics — rep",
+     "alt": "A sales rep's own queue for the day. Demo data."
+    },
+    {
+     "url": "/library/artwork/vantage-lead-analytics-numbers.webp",
+     "width": 1186,
+     "height": 742,
+     "bytes": 58068,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Vantage Lead Analytics — numbers",
+     "alt": "Every number that called or was called, and who is waiting on a call back. Demo data."
+    }
+   ],
+   "pages": [
+    {
+     "template": "overview",
+     "position": 1,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "The owner's team view of daily outreach against goals. All names and numbers shown are demo data.",
+        "url": "/library/artwork/vantage-lead-analytics-team.webp"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Status",
+        "text": "Delivered and live"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "My role",
+        "text": "Data model, pipelines and reporting"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The reporting side of the platform I built for Vantage Movers. It turns leads, calls, bookings and cancellations into numbers the owner can act on and can defend to a lead partner."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "The problem"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The owner pays partners per lead and per qualified call, so every number matters twice: once for the partner's invoice and once for judging sources and sales reps. The figures lived in spreadsheets that were edited by hand and disagreed with the sales CRM. A lead's cost went stale when a rate changed, and a deposit split between two reps was counted in full for each."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "What I built"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Every fact lives in one database, and the spreadsheets became a projection of it. A lead's cost comes from a schedule of dated rates and is read at the time of the report, so correcting a rate corrects every report. Duplicates and overlapping leads are classified and reported, not deleted. Bookings store how credit was split at the time of sale."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Results reach the owner three ways: an insights dashboard, Google Sheets that update from a queue, and saved reports that are previewed and confirmed before anything is written. The same reads are available to an assistant through an MCP server."
+       }
+      }
+     ]
+    },
+    {
+     "template": "architecture",
+     "position": 2,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "Every lead is attributed, priced and followed to an outcome.",
+        "url": "/library/artwork/vantage-lead-analytics-architecture.webp"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Writes to Google never hold up a request. Each change is appended to an outbox, and a queue consumer with a scheduled drain carries it to the spreadsheet."
+       }
+      }
+     ]
+    },
+    {
+     "template": "notes",
+     "position": 3,
+     "blocks": [
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Three reporting defects were removed by design: period ends that dropped the last day because of time zones, full deposit credit given to each rep on a split booking, and stale cost totals."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The database tools exposed to the assistant are read-only by construction, and large results are trimmed by whole records with a note about what was left out."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The screenshots here use invented names and phone numbers. No customer data appears in this portfolio."
+       }
+      }
+     ]
+    },
+    {
+     "template": "gallery",
+     "position": 4,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "Rep performance by week, with daily call goals. Demo data.",
+        "url": "/library/artwork/vantage-lead-analytics-performance.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "A sales rep's own queue for the day. Demo data.",
+        "url": "/library/artwork/vantage-lead-analytics-rep.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "Every number that called or was called, and who is waiting on a call back. Demo data.",
+        "url": "/library/artwork/vantage-lead-analytics-numbers.webp"
+       }
+      }
+     ]
+    },
+    {
+     "template": "metrics",
+     "position": 5,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Named analytics reports",
+        "text": "16"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Scheduled jobs",
+        "text": "30"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Queue consumers",
+        "text": "7"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Backups",
+        "text": "Nightly"
+       }
+      }
+     ]
+    },
+    {
+     "template": "links",
+     "position": 6,
+     "blocks": [
+      {
+       "component": "Link",
+       "props": {
+        "text": "Server repository",
+        "url": "https://github.com/jbell-rusty-vantage/vantage-movers-server"
+       }
+      },
+      {
+       "component": "Link",
+       "props": {
+        "text": "MCP server repository",
+        "url": "https://github.com/jbell-rusty-vantage/vantage-movers-mcp"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "human-upgrade-ingestion-pipeline",
+   "title": "Podcast Ingestion Pipeline",
+   "tagline": "A podcast archive scraped into structured records, running on AWS Fargate",
+   "summary": "A two-stage Python pipeline that discovers every episode of a long-running health podcast, then parses each episode page into structured MongoDB documents and S3 transcript files. It runs as a container on ECS Fargate with its AWS resources defined in CDK. It was the first data source for what became my biotech work.",
+   "status": "archived",
+   "startedOn": "2025-12-14",
+   "endedOn": "2026-03-11",
+   "shelf": "stacks-data-knowledge",
+   "position": 5,
+   "publishAs": "published",
+   "tags": [
+    "Earlier work",
+    "Python",
+    "AWS",
+    "Playwright",
+    "MongoDB",
+    "Data pipeline"
+   ],
+   "skills": [
+    "Python",
+    "Playwright",
+    "MongoDB",
+    "AWS ECS Fargate",
+    "AWS Lambda",
+    "AWS CDK",
+    "AWS S3",
+    "Docker",
+    "GitHub Actions"
+   ],
+   "repos": [],
+   "deployments": [],
+   "blurb": "An earlier data engineering piece: a pipeline that collected a whole podcast archive into clean records on AWS. It was the first data source for John's biotech work.",
+   "cover": "/library/artwork/human-upgrade-ingestion-pipeline-cover.webp",
+   "media": [
+    {
+     "url": "/library/artwork/human-upgrade-ingestion-pipeline-cover.webp",
+     "kind": "image",
+     "role": "cover",
+     "title": "Podcast Ingestion Pipeline — cover",
+     "alt": "Cover of the volume “Podcast Ingestion Pipeline”.",
+     "width": 960,
+     "height": 1200,
+     "bytes": 30280
+    },
+    {
+     "url": "/library/artwork/human-upgrade-ingestion-pipeline-architecture.webp",
+     "width": 1600,
+     "height": 567,
+     "bytes": 52144,
+     "kind": "image",
+     "role": "diagram",
+     "title": "Podcast Ingestion Pipeline — architecture",
+     "alt": "Two stages: discover every episode, then enrich each one."
+    }
+   ],
+   "pages": [
+    {
+     "template": "overview",
+     "position": 1,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Status",
+        "text": "Archived"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "My role",
+        "text": "Sole author"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "An ingestion pipeline and its infrastructure, built to turn a podcast's full back catalogue into structured data for entity extraction and research agents."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "The problem"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The archive page is rendered with JavaScript behind a button that has to be pressed repeatedly, so a plain crawl cannot list the episodes. The episode pages themselves are plain HTML, but there are hundreds of them, so they need polite, restartable, concurrent fetching and not a browser."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "What I built"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Two stages with different tools. Discovery drives a headless browser, collects the episode addresses and records each in a registry with a deterministic identifier. Enrichment fetches each page under a per-host rate limit, parses it in worker processes and stores a structured document; transcripts go to S3."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Both stages can be run again safely. One container image serves both, and a Lambda function chooses the stage when it starts the task. The cluster, queues, buckets and functions are defined as code."
+       }
+      }
+     ]
+    },
+    {
+     "template": "architecture",
+     "position": 2,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "Two stages: discover every episode, then enrich each one.",
+        "url": "/library/artwork/human-upgrade-ingestion-pipeline-architecture.webp"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "A browser is used only where the page requires it. Everything else is asynchronous HTTP with back-off that honours the server's retry hints."
+       }
+      }
+     ]
+    },
+    {
+     "template": "notes",
+     "position": 3,
+     "blocks": [
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Re-running discovery only updates when an episode was last seen. Enrichment skips episodes that are already complete."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Parsing is CPU-bound, so it runs in a process pool while network concurrency is bounded separately."
+       }
+      }
+     ]
+    },
+    {
+     "template": "metrics",
+     "position": 4,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Episodes processed",
+        "text": "945"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Transcripts stored",
+        "text": "884"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Pipeline stages",
+        "text": "2"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "the-library",
+   "title": "The Library",
+   "tagline": "A portfolio you walk through: a 3D library whose shelves are filled from Postgres",
+   "summary": "The Library is this portfolio. It is a 3D hall with rooms and shelves; a visitor takes a project off a shelf and reads it as a book. The same content is available in a text catalog that works without JavaScript or WebGL. Everything on the shelves comes from a PostgreSQL data model edited through an admin office.",
+   "status": "active",
+   "startedOn": "2026-10-08",
+   "shelf": "stacks-web-apps",
+   "position": 1,
+   "publishAs": "featured",
+   "featuredRank": 4,
+   "tags": [
+    "Live",
+    "Next.js",
+    "Three.js",
+    "PostgreSQL",
+    "Prisma",
+    "Blender"
+   ],
+   "skills": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Three.js",
+    "React Three Fiber",
+    "PostgreSQL",
+    "Prisma",
+    "Blender",
+    "Playwright",
+    "Vercel",
+    "Tailwind CSS"
+   ],
+   "repos": [
+    {
+     "fullName": "jbell-rusty-vantage/Overton-Portfolio-V2",
+     "role": "frontend",
+     "primary": true
+    }
+   ],
+   "deployments": [
+    {
+     "slug": "the-library",
+     "title": "The Library",
+     "url": "https://overton-portfolio-v2.vercel.app",
+     "primary": true
+    }
+   ],
+   "blurb": "This volume is about the room you are standing in. It explains how the hall was built in Blender and how the shelves are filled from a database.",
+   "cover": "/library/artwork/the-library-cover.webp",
+   "media": [
+    {
+     "url": "/library/artwork/the-library-cover.webp",
+     "kind": "image",
+     "role": "cover",
+     "title": "The Library — cover",
+     "alt": "Cover of the volume “The Library”.",
+     "width": 960,
+     "height": 1200,
+     "bytes": 26026
+    },
+    {
+     "url": "/library/artwork/the-library-architecture.webp",
+     "width": 1600,
+     "height": 588,
+     "bytes": 45412,
+     "kind": "image",
+     "role": "diagram",
+     "title": "The Library — architecture",
+     "alt": "The room is built in Blender; what sits on the shelves comes from Postgres."
+    }
+   ],
+   "pages": [
+    {
+     "template": "overview",
+     "position": 1,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Status",
+        "text": "Live and growing"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "My role",
+        "text": "Concept, design and engineering"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "You are standing in it. The Library is my portfolio, built as a hall you can walk through, with a catalog beside it for anyone who would rather read a list."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "The problem"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "A page of cards does not show how I think about systems. A 3D showpiece, on the other hand, usually fails the people who matter most: someone on a phone, someone using a screen reader, a search crawler, or anyone whose browser has no WebGL. I also wanted to add and reorder projects, and keep drafts private, without redeploying or re-exporting a scene."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "What I built"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "I separated the room from the collection. Blender owns the hall and a list of named anchors for rooms, shelves and screens. PostgreSQL owns the projects, books, pages and where each one sits. The app loads the hall, finds the anchors and fills them from the database, so a shelf can change without rebuilding the room."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Every volume also has an ordinary reading page and appears in a text catalog. That catalog is what a visitor gets if 3D is unavailable, and the scene is not downloaded at all until someone chooses to enter."
+       }
+      }
+     ]
+    },
+    {
+     "template": "architecture",
+     "position": 2,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "The room is built in Blender; what sits on the shelves comes from Postgres.",
+        "url": "/library/artwork/the-library-architecture.webp"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "What a visitor may see is decided on the server from publication state and client redaction rules. Content is edited in an admin office, and every change is recorded with a revision."
+       }
+      }
+     ]
+    },
+    {
+     "template": "notes",
+     "position": 3,
+     "blocks": [
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The hall ships in two levels of detail, and the smaller one is served to small screens."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The collection can be read in full without JavaScript. Browser tests cover a missing WebGL context, a lost context and a corrupt scene file."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The catalog and reader pass automated accessibility checks, and every room and shelf can be reached from the keyboard."
+       }
+      }
+     ]
+    },
+    {
+     "template": "metrics",
+     "position": 4,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Data model tables",
+        "text": "52"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Rooms",
+        "text": "7"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Shelves",
+        "text": "11"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Hall download, compressed",
+        "text": "0.8 MB"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Browser test journeys",
+        "text": "11"
+       }
+      }
+     ]
+    },
+    {
+     "template": "links",
+     "position": 5,
+     "blocks": [
+      {
+       "component": "Link",
+       "props": {
+        "text": "Text catalog",
+        "url": "https://overton-portfolio-v2.vercel.app/catalog"
+       }
+      },
+      {
+       "component": "Link",
+       "props": {
+        "text": "Source repository",
+        "url": "https://github.com/jbell-rusty-vantage/Overton-Portfolio-V2"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "overtech-digital-services",
+   "title": "Overtech Digital Services",
+   "tagline": "My studio site: inspectable work, a tool library, intake and booking",
+   "summary": "Overtech is my digital services studio site. A prospect can read a finished case, inspect the tools behind a service, send an inquiry and book a call; I review inquiries in an owner dashboard. It also hosts a reader for a recorded AI research mission whose findings and citations can be inspected.",
+   "status": "active",
+   "startedOn": "2026-11-09",
+   "shelf": "stacks-web-apps",
+   "position": 2,
+   "publishAs": "published",
+   "tags": [
+    "Launching",
+    "Node.js",
+    "PostgreSQL",
+    "Neon",
+    "Cal.com",
+    "Vercel"
+   ],
+   "skills": [
+    "Node.js",
+    "JavaScript",
+    "PostgreSQL",
+    "Neon",
+    "Drizzle ORM",
+    "Vercel",
+    "Cal.com",
+    "Resend",
+    "OAuth"
+   ],
+   "repos": [],
+   "deployments": [
+    {
+     "slug": "overtech-digital-services",
+     "title": "Overtech Digital Services",
+     "url": "https://overtech-digital-services.vercel.app",
+     "primary": true
+    }
+   ],
+   "blurb": "Overtech is John's own studio site, where a visitor can inspect finished work and book a call. The volume explains how the inquiry and booking path is kept honest.",
+   "cover": "/library/artwork/overtech-digital-services-cover.webp",
+   "media": [
+    {
+     "url": "/library/artwork/overtech-digital-services-cover.webp",
+     "kind": "image",
+     "role": "cover",
+     "title": "Overtech Digital Services — cover",
+     "alt": "Cover of the volume “Overtech Digital Services”.",
+     "width": 960,
+     "height": 1200,
+     "bytes": 27386
+    },
+    {
+     "url": "/library/artwork/overtech-digital-services-home.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 72562,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Overtech Digital Services — home",
+     "alt": "The studio's home page lets a visitor follow one piece of work through its screens."
+    },
+    {
+     "url": "/library/artwork/overtech-digital-services-architecture.webp",
+     "width": 1600,
+     "height": 518,
+     "bytes": 49374,
+     "kind": "image",
+     "role": "diagram",
+     "title": "Overtech Digital Services — architecture",
+     "alt": "A visitor's inquiry becomes a booked call the owner can act on."
+    },
+    {
+     "url": "/library/artwork/overtech-digital-services-walkthrough-poster.webp",
+     "width": 1280,
+     "height": 800,
+     "bytes": 49294,
+     "kind": "image",
+     "role": "inline",
+     "title": "Overtech Digital Services — recording still",
+     "alt": "A scroll through the studio's home page."
+    },
+    {
+     "url": "/library/recordings/overtech-digital-services-walkthrough.mp4",
+     "kind": "video",
+     "role": "demo",
+     "title": "Overtech Digital Services — recording",
+     "alt": "A scroll through the studio's home page.",
+     "width": 1280,
+     "height": 800,
+     "durationS": 17.6,
+     "bytes": 1763695,
+     "mimeType": "video/mp4",
+     "poster": "/library/artwork/overtech-digital-services-walkthrough-poster.webp"
+    },
+    {
+     "url": "/library/artwork/overtech-digital-services-tools.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 54948,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Overtech Digital Services — tools",
+     "alt": "The tool library shows the tools behind a website, a research brief or an automation."
+    },
+    {
+     "url": "/library/artwork/overtech-digital-services-services.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 102252,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Overtech Digital Services — services",
+     "alt": "Services are described by the outcome a client wants."
+    },
+    {
+     "url": "/library/artwork/overtech-digital-services-service-ai.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 62168,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Overtech Digital Services — service-ai",
+     "alt": "A service page walks through the interface a client would get."
+    },
+    {
+     "url": "/library/artwork/overtech-digital-services-work.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 72384,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Overtech Digital Services — work",
+     "alt": "Finished work, each with its own case study."
+    },
+    {
+     "url": "/library/artwork/overtech-digital-services-start.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 24394,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Overtech Digital Services — start",
+     "alt": "The inquiry form that begins a project."
+    }
+   ],
+   "pages": [
+    {
+     "template": "overview",
+     "position": 1,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "The studio's home page lets a visitor follow one piece of work through its screens.",
+        "url": "/library/artwork/overtech-digital-services-home.webp"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Status",
+        "text": "Launching"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "My role",
+        "text": "Owner and engineer"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Overtech is the site for my digital services studio. Instead of asking a visitor to trust a list of offerings, it lets them inspect real work and then ask for something similar."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "The problem"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "A services site usually shows claims. I wanted prospects to see evidence: a research run they can check claim by claim, the specific tools behind each service, and a short path from there to an inquiry and a booked call. That means private material, such as drafts and leads, has to live beside public pages without leaking."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "What I built"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "A small Node server that renders its pages directly and reads a Neon PostgreSQL database. Public pages cover services, work, a searchable tool library and intake. An inquiry leads to a booking link, and a booking counts as confirmed only when a signed message from the scheduling service arrives for that inquiry."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "What is public is enforced in the database. The hosted site connects with a restricted login that can read only released material. Drafts are visible only in a review mode on my own machine."
+       }
+      }
+     ]
+    },
+    {
+     "template": "architecture",
+     "position": 2,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "A visitor's inquiry becomes a booked call the owner can act on.",
+        "url": "/library/artwork/overtech-digital-services-architecture.webp"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The server has no web framework and six runtime dependencies. Each release is an allowlisted bundle, so nothing reaches the host unless it was named."
+       }
+      }
+     ]
+    },
+    {
+     "template": "notes",
+     "position": 3,
+     "blocks": [
+      {
+       "component": "Prose",
+       "props": {
+        "text": "A real appointment was booked and cancelled in production, and both states were read back, before the booking path was considered done."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The research reader imports a recorded mission from Mission Control only after checking its file hashes, citations and review record."
+       }
+      }
+     ]
+    },
+    {
+     "template": "gallery",
+     "position": 4,
+     "blocks": [
+      {
+       "component": "Video",
+       "props": {
+        "text": "A scroll through the studio's home page.",
+        "url": "/library/recordings/overtech-digital-services-walkthrough.mp4",
+        "poster": "/library/artwork/overtech-digital-services-walkthrough-poster.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "The tool library shows the tools behind a website, a research brief or an automation.",
+        "url": "/library/artwork/overtech-digital-services-tools.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "Services are described by the outcome a client wants.",
+        "url": "/library/artwork/overtech-digital-services-services.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "A service page walks through the interface a client would get.",
+        "url": "/library/artwork/overtech-digital-services-service-ai.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "Finished work, each with its own case study.",
+        "url": "/library/artwork/overtech-digital-services-work.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "The inquiry form that begins a project.",
+        "url": "/library/artwork/overtech-digital-services-start.webp"
+       }
+      }
+     ]
+    },
+    {
+     "template": "metrics",
+     "position": 5,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Tools in the library",
+        "text": "35"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Database tables",
+        "text": "57"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Read-only views for the site",
+        "text": "31"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Runtime dependencies",
+        "text": "6"
+       }
+      }
+     ]
+    },
+    {
+     "template": "links",
+     "position": 6,
+     "blocks": [
+      {
+       "component": "Link",
+       "props": {
+        "text": "Visit Overtech",
+        "url": "https://overtech-digital-services.vercel.app"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "vantage-movers",
+   "title": "Vantage Movers",
+   "tagline": "Lead capture, CRM integration, booking records and owner tooling for a moving company",
+   "summary": "The software platform I built as lead developer for Vantage Movers, a long-distance moving company. Quote forms and qualified phone calls become leads in one system of record, are sent to the sales CRM, and are followed through to a booking or cancellation. The owner works from an admin dashboard, sales staff from a browser extension, and assistants through an MCP server.",
+   "status": "shipped",
+   "startedOn": "2026-03-01",
+   "shelf": "stacks-client-work",
+   "position": 1,
+   "publishAs": "featured",
+   "featuredRank": 0,
+   "client": "vantage-movers",
+   "tags": [
+    "Live",
+    "Next.js",
+    "Express",
+    "MongoDB",
+    "MCP",
+    "Browser extension"
+   ],
+   "skills": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Vercel",
+    "MCP",
+    "Tailwind CSS",
+    "Playwright",
+    "Browser extensions"
+   ],
+   "repos": [
+    {
+     "fullName": "jbell-rusty-vantage/vantage-movers-server",
+     "role": "api",
+     "primary": true
+    },
+    {
+     "fullName": "jbell-rusty-vantage/vantage-admin",
+     "role": "frontend"
+    },
+    {
+     "fullName": "jbell-rusty-vantage/vantage-movers-clients",
+     "role": "frontend"
+    },
+    {
+     "fullName": "jbell-rusty-vantage/vantage-operations-server",
+     "role": "api"
+    },
+    {
+     "fullName": "jbell-rusty-vantage/vantage-movers-mcp",
+     "role": "agent"
+    }
+   ],
+   "deployments": [
+    {
+     "slug": "vantage-home-movers",
+     "title": "Vantage Movers",
+     "url": "https://www.vantagehomemovers.com",
+     "primary": true
+    }
+   ],
+   "blurb": "Vantage Movers is John's current client and his largest delivered system: the websites, the backend and the tools a moving company runs on. It is live at vantagehomemovers.com.",
+   "cover": "/library/artwork/vantage-movers-cover.webp",
+   "media": [
+    {
+     "url": "/library/artwork/vantage-movers-cover.webp",
+     "kind": "image",
+     "role": "cover",
+     "title": "Vantage Movers — cover",
+     "alt": "Cover of the volume “Vantage Movers”.",
+     "width": 960,
+     "height": 1200,
+     "bytes": 34268
+    },
+    {
+     "url": "/library/artwork/vantage-movers-home.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 117130,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Vantage Movers — home",
+     "alt": "The main site puts the quote request beside the introduction."
+    },
+    {
+     "url": "/library/artwork/vantage-movers-architecture.webp",
+     "width": 1600,
+     "height": 606,
+     "bytes": 53304,
+     "kind": "image",
+     "role": "diagram",
+     "title": "Vantage Movers — architecture",
+     "alt": "From a quote request to a booked move, in one system of record."
+    },
+    {
+     "url": "/library/artwork/vantage-movers-walkthrough-poster.webp",
+     "width": 1280,
+     "height": 800,
+     "bytes": 83258,
+     "kind": "image",
+     "role": "inline",
+     "title": "Vantage Movers — recording still",
+     "alt": "A scroll through the Vantage Movers main site."
+    },
+    {
+     "url": "/library/recordings/vantage-movers-walkthrough.mp4",
+     "kind": "video",
+     "role": "demo",
+     "title": "Vantage Movers — recording",
+     "alt": "A scroll through the Vantage Movers main site.",
+     "width": 1280,
+     "height": 800,
+     "durationS": 17.6,
+     "bytes": 2140143,
+     "mimeType": "video/mp4",
+     "poster": "/library/artwork/vantage-movers-walkthrough-poster.webp"
+    },
+    {
+     "url": "/library/artwork/vantage-movers-landing.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 105436,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Vantage Movers — landing",
+     "alt": "A partner landing page leads with the estimate request."
+    },
+    {
+     "url": "/library/artwork/vantage-movers-services.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 116856,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Vantage Movers — services",
+     "alt": "Long-distance moving services on the main site."
+    },
+    {
+     "url": "/library/artwork/vantage-movers-coverage.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 78788,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Vantage Movers — coverage",
+     "alt": "Service coverage across the United States."
+    },
+    {
+     "url": "/library/artwork/vantage-movers-desk.webp",
+     "width": 1186,
+     "height": 742,
+     "bytes": 78078,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Vantage Movers — desk",
+     "alt": "The owner's outreach desk with a lead open. Demo data."
+    },
+    {
+     "url": "/library/artwork/vantage-movers-activity.webp",
+     "width": 1186,
+     "height": 742,
+     "bytes": 50122,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Vantage Movers — activity",
+     "alt": "Contact history for active leads. Demo data."
+    }
+   ],
+   "pages": [
+    {
+     "template": "overview",
+     "position": 1,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "The main site puts the quote request beside the introduction.",
+        "url": "/library/artwork/vantage-movers-home.webp"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Status",
+        "text": "Delivered and live"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "My role",
+        "text": "Lead developer"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "I am the lead developer for Vantage Movers, a long-distance moving company in Florida. Since March 2026 I have designed and built the company's public sites, its operations backend and its internal tools."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "The problem"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The company pays several partners for each lead and also takes calls on campaign numbers. Leads arrived through web forms and spreadsheets and were typed again into the sales CRM. The owner could not reliably say what a lead cost, which source or sales rep produced a booked move, or which partner charges were duplicates, because no single record was authoritative."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "What I built"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "One database is the system of record, with one API in front of it. Quote forms on the landing pages and qualified inbound calls become leads with their source and cost attached. New leads are sent to the sales CRM. Duplicates are kept and flagged so that a partner's invoice can be checked. Bookings and cancellations are records in their own right, with sales credit split between reps."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Around that core are the tools people use every day: an admin dashboard for the owner and managers, a browser extension that works inside the CRM and shows a server-calculated price, a separate pricing service, and an MCP server that lets an assistant answer questions from the same data."
+       }
+      }
+     ]
+    },
+    {
+     "template": "architecture",
+     "position": 2,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "From a quote request to a booked move, in one system of record.",
+        "url": "/library/artwork/vantage-movers-architecture.webp"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Anything that touches an outside system runs asynchronously. Spreadsheet updates, text messages and CRM automation are queued when a record is saved and carried out by queue consumers, with scheduled sweeps as a safety net."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "Main parts"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Public sites. A main site and partner landing pages, each with a quote form.\nMain server. Leads, bookings, cancellations, messaging and reporting.\nCRM integration. Posting leads and recording what comes back as evidence.\nAdmin dashboard. Leads, bookings, setup, insights and a sales outreach desk with role-based access.\nPricing service. Transportation pricing with versioned rate tables.\nBrowser extension. Reads the open job in the CRM and applies a price.\nMCP server. Read access for an assistant."
+       }
+      }
+     ]
+    },
+    {
+     "template": "notes",
+     "position": 3,
+     "blocks": [
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Information coming back from the CRM is treated as evidence, not as a command. It can enrich a lead or open a case for review, but an official booking or refund amount changes only when the owner confirms it."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The pricing calculator never uses floating point. Amounts are whole-number arithmetic, rounded once, and a published rate table is never edited in place."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The admin dashboard has a demo mode with invented data and a browser test suite that runs against it, so interface work and screenshots never touch customer records. The admin screens in this volume come from that mode."
+       }
+      }
+     ]
+    },
+    {
+     "template": "gallery",
+     "position": 4,
+     "blocks": [
+      {
+       "component": "Video",
+       "props": {
+        "text": "A scroll through the Vantage Movers main site.",
+        "url": "/library/recordings/vantage-movers-walkthrough.mp4",
+        "poster": "/library/artwork/vantage-movers-walkthrough-poster.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "A partner landing page leads with the estimate request.",
+        "url": "/library/artwork/vantage-movers-landing.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "Long-distance moving services on the main site.",
+        "url": "/library/artwork/vantage-movers-services.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "Service coverage across the United States.",
+        "url": "/library/artwork/vantage-movers-coverage.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "The owner's outreach desk with a lead open. Demo data.",
+        "url": "/library/artwork/vantage-movers-desk.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "Contact history for active leads. Demo data.",
+        "url": "/library/artwork/vantage-movers-activity.webp"
+       }
+      }
+     ]
+    },
+    {
+     "template": "metrics",
+     "position": 5,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Production codebases",
+        "text": "6"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Admin dashboard routes",
+        "text": "51"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Scheduled jobs",
+        "text": "30"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Queue consumers",
+        "text": "7"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "MCP tools",
+        "text": "18"
+       }
+      }
+     ]
+    },
+    {
+     "template": "links",
+     "position": 6,
+     "blocks": [
+      {
+       "component": "Link",
+       "props": {
+        "text": "Visit vantagehomemovers.com",
+        "url": "https://www.vantagehomemovers.com"
+       }
+      },
+      {
+       "component": "Link",
+       "props": {
+        "text": "Server repository",
+        "url": "https://github.com/jbell-rusty-vantage/vantage-movers-server"
+       }
+      },
+      {
+       "component": "Link",
+       "props": {
+        "text": "Admin dashboard repository",
+        "url": "https://github.com/jbell-rusty-vantage/vantage-admin"
+       }
+      },
+      {
+       "component": "Link",
+       "props": {
+        "text": "Landing pages repository",
+        "url": "https://github.com/jbell-rusty-vantage/vantage-movers-clients"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "gowipe",
+   "title": "GoWipe",
+   "tagline": "A Shopify storefront for a wipes brand, with conversion tracking for ads and analytics",
+   "summary": "GoWipe sells bamboo wipes made for specific uses. I have been the company's web developer since January 2021: I build and maintain the Shopify storefront at gowipe.co and the event tracking that feeds analytics and advertising.",
+   "status": "shipped",
+   "startedOn": "2021-01-01",
+   "shelf": "stacks-client-work",
+   "position": 2,
+   "publishAs": "published",
+   "client": "gowipe",
+   "tags": [
+    "Live",
+    "Shopify",
+    "Liquid",
+    "E-commerce",
+    "Google Analytics",
+    "Conversion tracking"
+   ],
+   "skills": [
+    "Shopify",
+    "Liquid",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Google Analytics",
+    "Google Ads",
+    "SEO"
+   ],
+   "repos": [],
+   "deployments": [
+    {
+     "slug": "gowipe",
+     "title": "GoWipe",
+     "url": "https://gowipe.co",
+     "primary": true
+    }
+   ],
+   "blurb": "GoWipe is a live online shop John has looked after since 2021, including the tracking that tells the company which adverts lead to sales.",
+   "cover": "/library/artwork/gowipe-cover.webp",
+   "media": [
+    {
+     "url": "/library/artwork/gowipe-cover.webp",
+     "kind": "image",
+     "role": "cover",
+     "title": "GoWipe — cover",
+     "alt": "Cover of the volume “GoWipe”.",
+     "width": 960,
+     "height": 1200,
+     "bytes": 30416
+    },
+    {
+     "url": "/library/artwork/gowipe-home.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 61530,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "GoWipe — home",
+     "alt": "The GoWipe home page."
+    },
+    {
+     "url": "/library/artwork/gowipe-architecture.webp",
+     "width": 1600,
+     "height": 498,
+     "bytes": 38220,
+     "kind": "image",
+     "role": "diagram",
+     "title": "GoWipe — architecture",
+     "alt": "Shopping events flow from the storefront to analytics and ads."
+    },
+    {
+     "url": "/library/artwork/gowipe-walkthrough-poster.webp",
+     "width": 1280,
+     "height": 800,
+     "bytes": 44366,
+     "kind": "image",
+     "role": "inline",
+     "title": "GoWipe — recording still",
+     "alt": "A scroll through the GoWipe home page."
+    },
+    {
+     "url": "/library/recordings/gowipe-walkthrough.mp4",
+     "kind": "video",
+     "role": "demo",
+     "title": "GoWipe — recording",
+     "alt": "A scroll through the GoWipe home page.",
+     "width": 1280,
+     "height": 800,
+     "durationS": 17.233008,
+     "bytes": 2226989,
+     "mimeType": "video/mp4",
+     "poster": "/library/artwork/gowipe-walkthrough-poster.webp"
+    },
+    {
+     "url": "/library/artwork/gowipe-collection.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 72186,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "GoWipe — collection",
+     "alt": "The range, colour-coded by use."
+    },
+    {
+     "url": "/library/artwork/gowipe-product.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 71272,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "GoWipe — product",
+     "alt": "A product page with pack sizes and subscribe and save."
+    },
+    {
+     "url": "/library/artwork/gowipe-science.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 63810,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "GoWipe — science",
+     "alt": "The science page explains the fibre."
+    },
+    {
+     "url": "/library/artwork/gowipe-story.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 93322,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "GoWipe — story",
+     "alt": "The founders' story."
+    }
+   ],
+   "pages": [
+    {
+     "template": "overview",
+     "position": 1,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "The GoWipe home page.",
+        "url": "/library/artwork/gowipe-home.webp"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Status",
+        "text": "Delivered and live"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "My role",
+        "text": "Web developer since 2021"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "GoWipe sells bamboo wipes for specific uses: face, baby, pet, travel, food-safe and more. I have been the company's web developer since January 2021."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "The problem"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "GoWipe sells one idea in several variants, and each variant answers a different need. A shopper has to tell a facial wipe from a pet wipe within seconds, usually on a phone. The business also advertises, so every step from viewing a product to buying it has to be reported consistently, or the spend cannot be judged."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "What I built"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "I run the storefront on Shopify, starting from a commercial theme and customizing it with section code. The home page introduces the range by use, with social video, a comparison and reviews. Product pages offer one-time and subscription purchases, a sticky add-to-cart, and the ingredient story."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "For measurement, the storefront reports the full shopping funnel to Google Analytics and Google Ads, from viewing a product through to purchase, with each event mapped to a conversion."
+       }
+      }
+     ]
+    },
+    {
+     "template": "architecture",
+     "position": 2,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "Shopping events flow from the storefront to analytics and ads.",
+        "url": "/library/artwork/gowipe-architecture.webp"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The storefront is published in English and Spanish, and the catalog is organized by use so that each collection answers one need."
+       }
+      }
+     ]
+    },
+    {
+     "template": "notes",
+     "position": 3,
+     "blocks": [
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Eleven kinds of shopping event are mapped to analytics and advertising conversions."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "I also handle on-page search optimization and support the team's content work."
+       }
+      }
+     ]
+    },
+    {
+     "template": "gallery",
+     "position": 4,
+     "blocks": [
+      {
+       "component": "Video",
+       "props": {
+        "text": "A scroll through the GoWipe home page.",
+        "url": "/library/recordings/gowipe-walkthrough.mp4",
+        "poster": "/library/artwork/gowipe-walkthrough-poster.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "The range, colour-coded by use.",
+        "url": "/library/artwork/gowipe-collection.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "A product page with pack sizes and subscribe and save.",
+        "url": "/library/artwork/gowipe-product.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "The science page explains the fibre.",
+        "url": "/library/artwork/gowipe-science.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "The founders' story.",
+        "url": "/library/artwork/gowipe-story.webp"
+       }
+      }
+     ]
+    },
+    {
+     "template": "metrics",
+     "position": 5,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "In the role since",
+        "text": "2021"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Shopping events tracked",
+        "text": "11"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Storefront languages",
+        "text": "2"
+       }
+      }
+     ]
+    },
+    {
+     "template": "links",
+     "position": 6,
+     "blocks": [
+      {
+       "component": "Link",
+       "props": {
+        "text": "Visit gowipe.co",
+        "url": "https://gowipe.co"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "daryl-davis",
+   "title": "Daryl Davis",
+   "tagline": "A media-rich site for a speaker and author: book sales, press and booking inquiries",
+   "summary": "A public site for musician, author and lecturer Daryl Davis. It presents his talks, press coverage and podcast appearances, sells his book through Shopify checkout, and routes speaking, podcast, media and music inquiries through booking forms.",
+   "status": "shipped",
+   "startedOn": "2024-09-19",
+   "shelf": "stacks-client-work",
+   "position": 3,
+   "publishAs": "published",
+   "client": "daryl-davis",
+   "tags": [
+    "Live",
+    "Shopify",
+    "Liquid",
+    "Media site",
+    "Booking"
+   ],
+   "skills": [
+    "Shopify",
+    "Liquid",
+    "HTML",
+    "CSS"
+   ],
+   "repos": [],
+   "deployments": [
+    {
+     "slug": "daryl-davis",
+     "title": "Daryl Davis",
+     "url": "https://klanwetalk.com",
+     "primary": true
+    }
+   ],
+   "blurb": "A site for the speaker and author Daryl Davis. One path leads to his book, the other to booking him to speak or play.",
+   "cover": "/library/artwork/daryl-davis-cover.webp",
+   "media": [
+    {
+     "url": "/library/artwork/daryl-davis-cover.webp",
+     "kind": "image",
+     "role": "cover",
+     "title": "Daryl Davis — cover",
+     "alt": "Cover of the volume “Daryl Davis”.",
+     "width": 960,
+     "height": 1200,
+     "bytes": 28102
+    },
+    {
+     "url": "/library/artwork/daryl-davis-home.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 66146,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Daryl Davis — home",
+     "alt": "The home page opens on Daryl speaking on stage."
+    },
+    {
+     "url": "/library/artwork/daryl-davis-architecture.webp",
+     "width": 1600,
+     "height": 567,
+     "bytes": 36346,
+     "kind": "image",
+     "role": "diagram",
+     "title": "Daryl Davis — architecture",
+     "alt": "Two visitors, two paths: buy the book, or book the speaker."
+    },
+    {
+     "url": "/library/artwork/daryl-davis-homepage-original-poster.webp",
+     "width": 1280,
+     "height": 720,
+     "bytes": 32334,
+     "kind": "image",
+     "role": "inline",
+     "title": "Daryl Davis — recording still",
+     "alt": "A recording of the home page in motion."
+    },
+    {
+     "url": "/library/recordings/daryl-davis-homepage-original.mp4",
+     "kind": "video",
+     "role": "demo",
+     "title": "Daryl Davis — recording",
+     "alt": "A recording of the home page in motion.",
+     "width": 1280,
+     "height": 720,
+     "durationS": 18.911,
+     "bytes": 2141276,
+     "mimeType": "video/mp4",
+     "poster": "/library/artwork/daryl-davis-homepage-original-poster.webp"
+    },
+    {
+     "url": "/library/artwork/daryl-davis-book.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 136358,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Daryl Davis — book",
+     "alt": "The book's product page."
+    },
+    {
+     "url": "/library/artwork/daryl-davis-booking.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 35342,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Daryl Davis — booking",
+     "alt": "The speaking inquiry form."
+    },
+    {
+     "url": "/library/artwork/daryl-davis-bio.webp",
+     "width": 1600,
+     "height": 1000,
+     "bytes": 150504,
+     "kind": "image",
+     "role": "screenshot",
+     "title": "Daryl Davis — bio",
+     "alt": "Daryl's biography."
+    }
+   ],
+   "pages": [
+    {
+     "template": "overview",
+     "position": 1,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "The home page opens on Daryl speaking on stage.",
+        "url": "/library/artwork/daryl-davis-home.webp"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Status",
+        "text": "Delivered and live"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "My role",
+        "text": "Website developer"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "A site for Daryl Davis, a musician, author and lecturer known for his work on race relations. I composed the pages and built the paths for buying his book and for asking to book him."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "The problem"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "People arrive for different reasons. Someone who has just heard him speak wants the book. A podcast producer or event organizer wants to judge his work quickly and then ask for a date. A site built around one call to action serves one of them and loses the others."
+       }
+      },
+      {
+       "component": "Heading",
+       "props": {
+        "text": "What I built"
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The site runs on Shopify so the book can be sold with an ordinary product page and checkout. The home page is a long editorial sequence: stage video, the featured book, a podcast feature, documentary and press coverage, and audience responses."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Booking has two dedicated pages. The speaking form asks what kind of request it is, including podcasts and media interviews. Music bookings have their own form."
+       }
+      }
+     ]
+    },
+    {
+     "template": "architecture",
+     "position": 2,
+     "blocks": [
+      {
+       "component": "Image",
+       "props": {
+        "text": "Two visitors, two paths: buy the book, or book the speaker.",
+        "url": "/library/artwork/daryl-davis-architecture.webp"
+       }
+      }
+     ]
+    },
+    {
+     "template": "notes",
+     "position": 3,
+     "blocks": [
+      {
+       "component": "Prose",
+       "props": {
+        "text": "Podcast and talk media open in place, so a visitor is not sent away from the site."
+       }
+      },
+      {
+       "component": "Prose",
+       "props": {
+        "text": "The site carries no third-party tracking scripts."
+       }
+      }
+     ]
+    },
+    {
+     "template": "gallery",
+     "position": 4,
+     "blocks": [
+      {
+       "component": "Video",
+       "props": {
+        "text": "A recording of the home page in motion.",
+        "url": "/library/recordings/daryl-davis-homepage-original.mp4",
+        "poster": "/library/artwork/daryl-davis-homepage-original-poster.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "The book's product page.",
+        "url": "/library/artwork/daryl-davis-book.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "The speaking inquiry form.",
+        "url": "/library/artwork/daryl-davis-booking.webp"
+       }
+      },
+      {
+       "component": "Image",
+       "props": {
+        "text": "Daryl's biography.",
+        "url": "/library/artwork/daryl-davis-bio.webp"
+       }
+      }
+     ]
+    },
+    {
+     "template": "metrics",
+     "position": 5,
+     "blocks": [
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Home page sections",
+        "text": "24"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Booking forms",
+        "text": "2"
+       }
+      },
+      {
+       "component": "Metric",
+       "props": {
+        "label": "Kinds of inquiry",
+        "text": "4"
+       }
+      }
+     ]
+    },
+    {
+     "template": "links",
+     "position": 6,
+     "blocks": [
+      {
+       "component": "Link",
+       "props": {
+        "text": "Visit the site",
+        "url": "https://klanwetalk.com"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

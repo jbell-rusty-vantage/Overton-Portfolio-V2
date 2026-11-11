@@ -1,0 +1,1142 @@
+{
+ "covers": [
+  {
+   "slug": "agentic-mission-control",
+   "title": "Mission Control",
+   "subtitle": "Durable multi-agent missions on Temporal",
+   "kicker": "AI & Agent Systems",
+   "emblem": "orbits",
+   "cloth": "green"
+  },
+  {
+   "slug": "ai-engineer-platform",
+   "title": "AI Engineer Platform",
+   "subtitle": "A learning platform built to be used by agents",
+   "kicker": "AI & Agent Systems",
+   "emblem": "compass",
+   "cloth": "navy"
+  },
+  {
+   "slug": "polymarket-mcp-server",
+   "title": "Polymarket MCP Server",
+   "subtitle": "Market data and gated order tools for agents",
+   "kicker": "AI & Agent Systems",
+   "emblem": "candles",
+   "cloth": "slate"
+  },
+  {
+   "slug": "biotech-research-ingestion",
+   "title": "Biotech Research Ingestion",
+   "subtitle": "Approved plans run as staged research missions",
+   "kicker": "AI & Agent Systems",
+   "emblem": "dag",
+   "cloth": "oxblood"
+  },
+  {
+   "slug": "agent-knowledge-services",
+   "title": "Knowledge Services",
+   "subtitle": "Evidence capture, verification and retrieval for agents",
+   "kicker": "Data & Knowledge",
+   "emblem": "lattice",
+   "cloth": "oxblood"
+  },
+  {
+   "slug": "ai-engineer-worldsfair-showcase",
+   "title": "AI Engineer Research Library",
+   "subtitle": "1,007 conference talks, researched by a pipeline",
+   "kicker": "Data & Knowledge",
+   "emblem": "wheel",
+   "cloth": "plum"
+  },
+  {
+   "slug": "biotech-knowledge-platform",
+   "title": "Biotech Knowledge Platform",
+   "subtitle": "A knowledge graph agents write through intents",
+   "kicker": "Data & Knowledge",
+   "emblem": "helix",
+   "cloth": "teal"
+  },
+  {
+   "slug": "vantage-lead-analytics",
+   "title": "Lead Analytics",
+   "subtitle": "Cost, source and sales reporting for a moving company",
+   "kicker": "Data & Knowledge",
+   "emblem": "funnel",
+   "cloth": "ochre"
+  },
+  {
+   "slug": "human-upgrade-ingestion-pipeline",
+   "title": "Podcast Ingestion Pipeline",
+   "subtitle": "An archive scraped into structured records on AWS",
+   "kicker": "Data & Knowledge",
+   "emblem": "broadcast",
+   "cloth": "moss"
+  },
+  {
+   "slug": "the-library",
+   "title": "The Library",
+   "subtitle": "A portfolio you can walk through",
+   "kicker": "Web Applications",
+   "emblem": "arch",
+   "cloth": "green"
+  },
+  {
+   "slug": "overtech-digital-services",
+   "title": "Overtech Digital Services",
+   "subtitle": "A studio site with an owner’s desk behind it",
+   "kicker": "Web Applications",
+   "emblem": "dividers",
+   "cloth": "oxblood"
+  },
+  {
+   "slug": "vantage-movers",
+   "title": "Vantage Movers",
+   "subtitle": "Lead capture, CRM and owner tooling for a moving company",
+   "kicker": "Client Work",
+   "emblem": "route",
+   "cloth": "navy"
+  },
+  {
+   "slug": "gowipe",
+   "title": "GoWipe",
+   "subtitle": "A Shopify storefront and its conversion tracking",
+   "kicker": "Client Work",
+   "emblem": "droplet",
+   "cloth": "teal"
+  },
+  {
+   "slug": "daryl-davis",
+   "title": "Daryl Davis",
+   "subtitle": "A speaker and author’s site for books and bookings",
+   "kicker": "Client Work",
+   "emblem": "microphone",
+   "cloth": "plum"
+  }
+ ],
+ "diagrams": [
+  {
+   "slug": "agentic-mission-control",
+   "title": "Mission Control",
+   "caption": "A mission is data. Temporal schedules it; PostgreSQL remembers it.",
+   "footer": "Python 3.12 · Temporal · PostgreSQL 17 · FastAPI · MCP",
+   "columns": [
+    {
+     "label": "Author",
+     "nodes": [
+      {
+       "name": "Mission manifest",
+       "note": "YAML: goal, program tree, outputs, budgets"
+      },
+      {
+       "name": "Operator surfaces",
+       "note": "HTTP API, missionctl CLI, two MCP servers"
+      }
+     ]
+    },
+    {
+     "label": "Admit",
+     "nodes": [
+      {
+       "name": "Compiler and admission",
+       "note": "Resolves lanes, models and capabilities; stores an immutable, digested revision"
+      },
+      {
+       "name": "Transactional outbox",
+       "note": "The only way work reaches the scheduler"
+      }
+     ]
+    },
+    {
+     "label": "Schedule",
+     "nodes": [
+      {
+       "name": "Temporal workflows",
+       "note": "Stage Graph and Goal Loop; replay-tested",
+       "accent": true
+      },
+      {
+       "name": "Pure interpreters",
+       "note": "Propose transitions; reducers settle them"
+      }
+     ]
+    },
+    {
+     "label": "Execute",
+     "nodes": [
+      {
+       "name": "Provider lanes",
+       "note": "Deep Agents, Claude Agent SDK, Codex, Cursor behind one contract"
+      },
+      {
+       "name": "Cognition points",
+       "note": "State as of any step; fork, inject, interrupt"
+      }
+     ]
+    },
+    {
+     "label": "Judge",
+     "nodes": [
+      {
+       "name": "Output contracts",
+       "note": "Named promises, digest-pinned revisions"
+      },
+      {
+       "name": "Independent verifier",
+       "note": "Never judges its own output"
+      },
+      {
+       "name": "Human review",
+       "note": "Approval bound to the exact packet"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "ai-engineer-platform",
+   "title": "AI Engineer Platform",
+   "caption": "One set of product operations, reachable from a web app, a CLI and an agent.",
+   "footer": "PostgreSQL / Supabase · TypeScript · Fastify · MCP",
+   "columns": [
+    {
+     "label": "Clients",
+     "nodes": [
+      {
+       "name": "Web app shell",
+       "note": "Next.js"
+      },
+      {
+       "name": "aieng CLI",
+       "note": "Typed client"
+      },
+      {
+       "name": "Coding agents",
+       "note": "MCP tools and an agent skill"
+      }
+     ]
+    },
+    {
+     "label": "Service",
+     "nodes": [
+      {
+       "name": "Operation catalog",
+       "note": "69 operations validated with Zod"
+      },
+      {
+       "name": "HTTP API and MCP server",
+       "note": "The same application layer behind both",
+       "accent": true
+      }
+     ]
+    },
+    {
+     "label": "Database contract",
+     "nodes": [
+      {
+       "name": "Command and read functions",
+       "note": "Permissions and audit enforced in SQL"
+      },
+      {
+       "name": "Sealed revisions and events",
+       "note": "Every change is recorded"
+      },
+      {
+       "name": "Guarded installer",
+       "note": "Plan, apply and verify against a named target"
+      }
+     ]
+    },
+    {
+     "label": "Knowledge supply",
+     "nodes": [
+      {
+       "name": "Cloud agent repository",
+       "note": "Agents lease one video and research it"
+      },
+      {
+       "name": "Deterministic executor",
+       "note": "Applies only approved intents"
+      },
+      {
+       "name": "Schema workspace",
+       "note": "Regenerated for agents after each change"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "polymarket-mcp-server",
+   "title": "Polymarket MCP Server",
+   "caption": "Reads are open to the agent. Orders pass through gates.",
+   "footer": "TypeScript · pnpm workspace · Express 5 · MCP Streamable HTTP",
+   "columns": [
+    {
+     "label": "Agent",
+     "nodes": [
+      {
+       "name": "MCP client",
+       "note": "Cursor or any MCP-capable agent"
+      }
+     ]
+    },
+    {
+     "label": "Server",
+     "nodes": [
+      {
+       "name": "MCP app",
+       "note": "64 tools over Streamable HTTP",
+       "accent": true
+      },
+      {
+       "name": "Shared schemas",
+       "note": "Zod input and output contracts"
+      }
+     ]
+    },
+    {
+     "label": "Client library",
+     "nodes": [
+      {
+       "name": "Rate limiter",
+       "note": "A slot per endpoint group"
+      },
+      {
+       "name": "API surfaces",
+       "note": "Gamma, Data and CLOB"
+      },
+      {
+       "name": "Realtime managers",
+       "note": "WebSocket market and user feeds"
+      }
+     ]
+    },
+    {
+     "label": "Order path",
+     "nodes": [
+      {
+       "name": "Validate and preview",
+       "note": "Intent checked before anything is signed"
+      },
+      {
+       "name": "Execution gates",
+       "note": "Mode and live flags from the environment"
+      },
+      {
+       "name": "Approval step",
+       "note": "Required before a live order"
+      }
+     ]
+    },
+    {
+     "label": "Polymarket",
+     "nodes": [
+      {
+       "name": "Markets and order books"
+      },
+      {
+       "name": "Positions and trades"
+      },
+      {
+       "name": "Order placement"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "biotech-research-ingestion",
+   "title": "Biotech Research Ingestion",
+   "caption": "A plan is approved by a person, then run as a staged workflow.",
+   "footer": "Python · FastAPI · Temporal · LangGraph · MongoDB · Neo4j",
+   "columns": [
+    {
+     "label": "Conversation",
+     "nodes": [
+      {
+       "name": "Next.js dashboard",
+       "note": "Chat over Socket.IO"
+      },
+      {
+       "name": "Coordinator agent",
+       "note": "Drafts a research plan"
+      }
+     ]
+    },
+    {
+     "label": "Approval",
+     "nodes": [
+      {
+       "name": "Human-in-the-loop gate",
+       "note": "The run pauses until the plan is approved, edited or rejected",
+       "accent": true
+      }
+     ]
+    },
+    {
+     "label": "Mission",
+     "nodes": [
+      {
+       "name": "Temporal workflow",
+       "note": "Stages grouped into dependency levels"
+      },
+      {
+       "name": "Parallel activities",
+       "note": "Retries and heartbeats per stage"
+      }
+     ]
+    },
+    {
+     "label": "Research",
+     "nodes": [
+      {
+       "name": "Stage agents",
+       "note": "Tools, subagents and memory"
+      },
+      {
+       "name": "Reports",
+       "note": "Passed forward to dependent stages"
+      }
+     ]
+    },
+    {
+     "label": "Store",
+     "nodes": [
+      {
+       "name": "S3 and MongoDB",
+       "note": "Reports and run records"
+      },
+      {
+       "name": "Neo4j graph",
+       "note": "Entities and relationships merged with provenance"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "agent-knowledge-services",
+   "title": "Knowledge Services",
+   "caption": "Agents submit intents. The service checks, applies and returns receipts.",
+   "footer": "TypeScript monorepo · Fastify · MCP · PostgreSQL 17 · pgvector",
+   "columns": [
+    {
+     "label": "Callers",
+     "nodes": [
+      {
+       "name": "Research agents",
+       "note": "Claude Code, Cursor, Codex, Mission Control workers"
+      },
+      {
+       "name": "Transports",
+       "note": "HTTP, MCP, CLI and A2A over one application layer"
+      }
+     ]
+    },
+    {
+     "label": "Capture",
+     "nodes": [
+      {
+       "name": "Source capture",
+       "note": "Immutable bytes with lineage"
+      },
+      {
+       "name": "Selectors",
+       "note": "Exact quotes located in the captured bytes"
+      }
+     ]
+    },
+    {
+     "label": "Verify",
+     "nodes": [
+      {
+       "name": "Ordered verification",
+       "note": "Integrity, mechanical checks, semantic judgment, policy",
+       "accent": true
+      },
+      {
+       "name": "Sealed run",
+       "note": "The result cannot be edited afterwards"
+      }
+     ]
+    },
+    {
+     "label": "Ingest",
+     "nodes": [
+      {
+       "name": "Plan",
+       "note": "Writes nothing"
+      },
+      {
+       "name": "Apply once",
+       "note": "An identical replay returns the recorded receipt"
+      },
+      {
+       "name": "Verification ledger",
+       "note": "Operations, receipts and outbox in Postgres"
+      }
+     ]
+    },
+    {
+     "label": "Retrieve",
+     "nodes": [
+      {
+       "name": "Prepare and publish",
+       "note": "Convert, chunk, embed, evaluate"
+      },
+      {
+       "name": "Evidence packets",
+       "note": "Search results with replayable citations"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "ai-engineer-worldsfair-showcase",
+   "title": "AI Engineer Research Library",
+   "caption": "Nine pipeline stages turn a transcript into a published brief.",
+   "footer": "Vercel Eve · AI Gateway · Supabase · Next.js 16",
+   "columns": [
+    {
+     "label": "Intake",
+     "nodes": [
+      {
+       "name": "Channel catalog sync",
+       "note": "Videos and metadata"
+      },
+      {
+       "name": "Transcript ingest",
+       "note": "Stored in Supabase"
+      }
+     ]
+    },
+    {
+     "label": "Research",
+     "nodes": [
+      {
+       "name": "Transcript analysis",
+       "note": "Sectioned and reduced by the model"
+      },
+      {
+       "name": "Web research",
+       "note": "Organizations and technologies, sources verified",
+       "accent": true
+      },
+      {
+       "name": "Receipts",
+       "note": "An immutable artifact per stage"
+      }
+     ]
+    },
+    {
+     "label": "Shape",
+     "nodes": [
+      {
+       "name": "Packet converter",
+       "note": "One trimmed brief per talk"
+      },
+      {
+       "name": "Category classifier",
+       "note": "17 engineering categories"
+      },
+      {
+       "name": "Program matcher",
+       "note": "179 World’s Fair 2026 sessions tagged"
+      }
+     ]
+    },
+    {
+     "label": "Publish",
+     "nodes": [
+      {
+       "name": "Static site",
+       "note": "Category, talk and search pages"
+      },
+      {
+       "name": "JSON API",
+       "note": "Read-only, no key"
+      },
+      {
+       "name": "Bulk exports",
+       "note": "NDJSON and CSV"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "biotech-knowledge-platform",
+   "title": "Biotech Knowledge Platform",
+   "caption": "Agents discover the schema, then read and write through validated intents.",
+   "footer": "Neo4j 5 · TypeScript · GraphQL · PostgreSQL · MCP",
+   "columns": [
+    {
+     "label": "Schema",
+     "nodes": [
+      {
+       "name": "Pinned release",
+       "note": "69 node types, 106 relationship types; every byte checked"
+      },
+      {
+       "name": "Schema workspace",
+       "note": "1,035 generated cards for progressive disclosure"
+      }
+     ]
+    },
+    {
+     "label": "Discover",
+     "nodes": [
+      {
+       "name": "bks-schema CLI",
+       "note": "search, get, neighbors, path, slice"
+      },
+      {
+       "name": "Query catalog",
+       "note": "157 templates linked to 454 questions"
+      }
+     ]
+    },
+    {
+     "label": "Read and write",
+     "nodes": [
+      {
+       "name": "Read intents",
+       "note": "Compiled to fixed Cypher shapes"
+      },
+      {
+       "name": "Plan / apply / receipt",
+       "note": "One Neo4j transaction per admitted intent",
+       "accent": true
+      },
+      {
+       "name": "Executor",
+       "note": "HTTP and MCP, 19 tools"
+      }
+     ]
+    },
+    {
+     "label": "Consume",
+     "nodes": [
+      {
+       "name": "GraphQL API",
+       "note": "Persisted, reviewed operations only"
+      },
+      {
+       "name": "Product BFF",
+       "note": "Session check and typed client"
+      }
+     ]
+    },
+    {
+     "label": "Operate",
+     "nodes": [
+      {
+       "name": "Root installer",
+       "note": "Postgres components and graph release"
+      },
+      {
+       "name": "Evaluation tasks",
+       "note": "134 frozen tasks for agents"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "vantage-lead-analytics",
+   "title": "Lead Analytics",
+   "caption": "Every lead is attributed, priced and followed to an outcome.",
+   "footer": "MongoDB · TypeScript · Vercel Queues and Cron · Google Sheets API",
+   "columns": [
+    {
+     "label": "Intake",
+     "nodes": [
+      {
+       "name": "Form and call leads",
+       "note": "Each resolved to a paid source and feed"
+      },
+      {
+       "name": "Duplicate and overlap checks",
+       "note": "Kept and tagged, never dropped"
+      }
+     ]
+    },
+    {
+     "label": "Price",
+     "nodes": [
+      {
+       "name": "Cost schedule",
+       "note": "Effective-dated cost per lead by feed",
+       "accent": true
+      },
+      {
+       "name": "Evidence",
+       "note": "CRM observations and call-log records linked to the lead"
+      }
+     ]
+    },
+    {
+     "label": "Outcome",
+     "nodes": [
+      {
+       "name": "Bookings",
+       "note": "Deposits and agent allocations"
+      },
+      {
+       "name": "Cancellations",
+       "note": "A snapshot of what was lost"
+      }
+     ]
+    },
+    {
+     "label": "Project",
+     "nodes": [
+      {
+       "name": "Sheets outbox",
+       "note": "Write-behind queue with a five-minute drain"
+      },
+      {
+       "name": "Report deliveries",
+       "note": "Checksum-bound runs"
+      },
+      {
+       "name": "Nightly backup",
+       "note": "Cloud Run job to Cloud Storage"
+      }
+     ]
+    },
+    {
+     "label": "Answer",
+     "nodes": [
+      {
+       "name": "Insights dashboard",
+       "note": "Spend, conversion and sales credit"
+      },
+      {
+       "name": "16 named reports",
+       "note": "Aggregated on request"
+      },
+      {
+       "name": "MCP tools",
+       "note": "The same reads for an assistant"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "human-upgrade-ingestion-pipeline",
+   "title": "Podcast Ingestion Pipeline",
+   "caption": "Two stages: discover every episode, then enrich each one.",
+   "footer": "Python · Playwright · aiohttp · MongoDB · S3 · ECS Fargate · AWS CDK",
+   "columns": [
+    {
+     "label": "Trigger",
+     "nodes": [
+      {
+       "name": "Lambda orchestrator",
+       "note": "Manual invoke or a daily schedule"
+      },
+      {
+       "name": "ECS RunTask",
+       "note": "Operation chosen by environment"
+      }
+     ]
+    },
+    {
+     "label": "Discover",
+     "nodes": [
+      {
+       "name": "Headless Chromium",
+       "note": "Expands the archive and collects episode URLs"
+      },
+      {
+       "name": "Episode registry",
+       "note": "Deterministic IDs and a scrape state machine",
+       "accent": true
+      }
+     ]
+    },
+    {
+     "label": "Signal",
+     "nodes": [
+      {
+       "name": "EventBridge bus",
+       "note": "One event per discovered episode"
+      },
+      {
+       "name": "SQS queue",
+       "note": "With a dead-letter queue"
+      }
+     ]
+    },
+    {
+     "label": "Enrich",
+     "nodes": [
+      {
+       "name": "Rate-limited fetch",
+       "note": "aiohttp with a per-host limiter"
+      },
+      {
+       "name": "Parsing workers",
+       "note": "HTML parsed in a process pool"
+      }
+     ]
+    },
+    {
+     "label": "Store",
+     "nodes": [
+      {
+       "name": "MongoDB documents",
+       "note": "Structured episode records"
+      },
+      {
+       "name": "S3 transcripts",
+       "note": "One file per episode"
+      },
+      {
+       "name": "CloudWatch logs",
+       "note": "Structured throughout"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "the-library",
+   "title": "The Library",
+   "caption": "The room is built in Blender; what sits on the shelves comes from Postgres.",
+   "footer": "Next.js 16 · React Three Fiber · Prisma 7 · PostgreSQL · Blender",
+   "columns": [
+    {
+     "label": "Build the room",
+     "nodes": [
+      {
+       "name": "Blender scene script",
+       "note": "Generates the hall and its named anchors"
+      },
+      {
+       "name": "Asset packer",
+       "note": "Meshopt compression, glTF validation, anchor check"
+      }
+     ]
+    },
+    {
+     "label": "Curate",
+     "nodes": [
+      {
+       "name": "Admin office",
+       "note": "Projects, books, pages and shelf positions"
+      },
+      {
+       "name": "Audit and revisions",
+       "note": "Every write is recorded"
+      }
+     ]
+    },
+    {
+     "label": "Project",
+     "nodes": [
+      {
+       "name": "Visibility policy",
+       "note": "Display state, publication date, client redaction",
+       "accent": true
+      },
+      {
+       "name": "Block allowlist",
+       "note": "Only supported, browser-safe content leaves the server"
+      }
+     ]
+    },
+    {
+     "label": "Visit",
+     "nodes": [
+      {
+       "name": "3D hall",
+       "note": "Two detail tiers chosen for the device"
+      },
+      {
+       "name": "Reader",
+       "note": "Opens a volume from its binding"
+      },
+      {
+       "name": "Text catalog",
+       "note": "Works without JavaScript or WebGL"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "overtech-digital-services",
+   "title": "Overtech Digital Services",
+   "caption": "A visitor’s inquiry becomes a booked call the owner can act on.",
+   "footer": "Node.js (no framework) · Neon Postgres · Drizzle · Cal.com · Resend",
+   "columns": [
+    {
+     "label": "Visitor",
+     "nodes": [
+      {
+       "name": "Cases and tool library",
+       "note": "Read through restricted database views"
+      },
+      {
+       "name": "Inquiry form",
+       "note": "Validated and throttled"
+      }
+     ]
+    },
+    {
+     "label": "Booking",
+     "nodes": [
+      {
+       "name": "Cal.com link",
+       "note": "Carries the lead ID"
+      },
+      {
+       "name": "Signed webhook",
+       "note": "HMAC verified, replays de-duplicated",
+       "accent": true
+      }
+     ]
+    },
+    {
+     "label": "Follow-up",
+     "nodes": [
+      {
+       "name": "Mail queue",
+       "note": "Idempotent sends; failures stay queued"
+      },
+      {
+       "name": "Owner dashboard",
+       "note": "Google sign-in checked against an allowlist"
+      }
+     ]
+    },
+    {
+     "label": "Research reader",
+     "nodes": [
+      {
+       "name": "Episode import",
+       "note": "A validated archive from Mission Control"
+      },
+      {
+       "name": "Published episode",
+       "note": "Findings, citations and review history"
+      }
+     ]
+    },
+    {
+     "label": "Release",
+     "nodes": [
+      {
+       "name": "Allowlisted build",
+       "note": "Only named files ship"
+      },
+      {
+       "name": "Restricted role",
+       "note": "The site reads through 31 views"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "vantage-movers",
+   "title": "Vantage Movers",
+   "caption": "From a quote request to a booked move, in one system of record.",
+   "footer": "Next.js 16 · Express 5 · MongoDB Atlas · Vercel Queues · MCP",
+   "columns": [
+    {
+     "label": "Capture",
+     "nodes": [
+      {
+       "name": "Landing pages and main site",
+       "note": "Quote forms for each lead partner"
+      },
+      {
+       "name": "Inbound calls",
+       "note": "Qualified from the phone system’s call log"
+      }
+     ]
+    },
+    {
+     "label": "Record",
+     "nodes": [
+      {
+       "name": "Main server",
+       "note": "System of record for leads, bookings and cancellations",
+       "accent": true
+      },
+      {
+       "name": "Duplicate detection",
+       "note": "Runs at intake"
+      }
+     ]
+    },
+    {
+     "label": "Sell",
+     "nodes": [
+      {
+       "name": "CRM posting",
+       "note": "Each new lead is sent to the sales CRM"
+      },
+      {
+       "name": "Browser extension",
+       "note": "Reads the open job and applies a price"
+      },
+      {
+       "name": "Pricing service",
+       "note": "Fixed-point transportation pricing"
+      }
+     ]
+    },
+    {
+     "label": "Close",
+     "nodes": [
+      {
+       "name": "Lifecycle evidence",
+       "note": "CRM and call observations"
+      },
+      {
+       "name": "Owner confirmation",
+       "note": "Creates a booking or a cancellation"
+      }
+     ]
+    },
+    {
+     "label": "Run the business",
+     "nodes": [
+      {
+       "name": "Admin dashboard",
+       "note": "51 routes for the owner and managers"
+      },
+      {
+       "name": "Sheets projections",
+       "note": "Queue-fed"
+      },
+      {
+       "name": "MCP server",
+       "note": "Agent access to the same data"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "gowipe",
+   "title": "GoWipe",
+   "caption": "Shopping events flow from the storefront to analytics and ads.",
+   "footer": "Shopify Online Store 2.0 · Liquid · Google tag · Judge.me",
+   "columns": [
+    {
+     "label": "Storefront",
+     "nodes": [
+      {
+       "name": "Home page",
+       "note": "21 sections: range, social video, reviews"
+      },
+      {
+       "name": "Product page",
+       "note": "Variants, subscribe and save"
+      }
+     ]
+    },
+    {
+     "label": "Shopper actions",
+     "nodes": [
+      {
+       "name": "Customer events",
+       "note": "View item, add to cart, begin checkout, purchase",
+       "accent": true
+      }
+     ]
+    },
+    {
+     "label": "Tracking",
+     "nodes": [
+      {
+       "name": "Web pixels",
+       "note": "Events run in Shopify’s sandbox"
+      },
+      {
+       "name": "Google tag",
+       "note": "Each event mapped to GA4 and an Ads conversion"
+      }
+     ]
+    },
+    {
+     "label": "Close the loop",
+     "nodes": [
+      {
+       "name": "Shopify checkout",
+       "note": "The purchase event completes attribution"
+      },
+      {
+       "name": "Reviews",
+       "note": "Collected after purchase and shown on the site"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "daryl-davis",
+   "title": "Daryl Davis",
+   "caption": "Two visitors, two paths: buy the book, or book the speaker.",
+   "footer": "Shopify Online Store 2.0 · Liquid · Shop Pay",
+   "columns": [
+    {
+     "label": "Arrive",
+     "nodes": [
+      {
+       "name": "Home page",
+       "note": "Stage video, press and audience responses"
+      }
+     ]
+    },
+    {
+     "label": "Reader path",
+     "nodes": [
+      {
+       "name": "Book feature",
+       "note": "Cover and purchase action together"
+      },
+      {
+       "name": "Product page",
+       "note": "Signed and unsigned editions"
+      },
+      {
+       "name": "Checkout",
+       "note": "Shopify, with Shop Pay"
+      }
+     ]
+    },
+    {
+     "label": "Producer path",
+     "nodes": [
+      {
+       "name": "Media features",
+       "note": "Talks and podcast appearances in a lightbox"
+      },
+      {
+       "name": "Booking forms",
+       "note": "Speaking and music inquiries by type",
+       "accent": true
+      }
+     ]
+    },
+    {
+     "label": "Follow-up",
+     "nodes": [
+      {
+       "name": "Inquiry routing",
+       "note": "Requests reach Daryl’s team"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

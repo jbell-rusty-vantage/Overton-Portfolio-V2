@@ -1,0 +1,6 @@
+{ "shots": [
+ { "slug": "agentic-mission-control", "name": "episode-reader", "url": "file:///C:/Users/Pinda/Digital-Services-Business/research-episode-preview.html", "waitMs": 1500 },
+ { "slug": "agentic-mission-control", "name": "episode-reader-full", "url": "file:///C:/Users/Pinda/Digital-Services-Business/research-episode-preview.html", "waitMs": 1500, "fullPage": true, "scale": 1 },
+ { "slug": "overtech-digital-services", "name": "site-design", "url": "file:///C:/Users/Pinda/Digital-Services-Business/Overtech%20Site%20%26%20Dashboard.html", "waitMs": 4000 },
+ { "slug": "overtech-digital-services", "name": "site-design-full", "url": "file:///C:/Users/Pinda/Digital-Services-Business/Overtech%20Site%20%26%20Dashboard.html", "waitMs": 4000, "fullPage": true, "scale": 1 }
+] }

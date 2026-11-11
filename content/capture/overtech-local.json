@@ -1,0 +1,146 @@
+{
+ "shots": [
+  {
+   "slug": "overtech-digital-services",
+   "name": "home",
+   "url": "http://127.0.0.1:3055/",
+   "waitMs": 2500
+  },
+  {
+   "slug": "overtech-digital-services",
+   "name": "home-full",
+   "url": "http://127.0.0.1:3055/",
+   "waitMs": 2500,
+   "fullPage": true,
+   "scale": 1
+  },
+  {
+   "slug": "overtech-digital-services",
+   "name": "tools",
+   "url": "http://127.0.0.1:3055/tools",
+   "waitMs": 2500
+  },
+  {
+   "slug": "overtech-digital-services",
+   "name": "tools-full",
+   "url": "http://127.0.0.1:3055/tools",
+   "waitMs": 2500,
+   "fullPage": true,
+   "scale": 1
+  },
+  {
+   "slug": "overtech-digital-services",
+   "name": "services",
+   "url": "http://127.0.0.1:3055/services",
+   "waitMs": 2500
+  },
+  {
+   "slug": "overtech-digital-services",
+   "name": "service-ai",
+   "url": "http://127.0.0.1:3055/services/ai",
+   "waitMs": 2500
+  },
+  {
+   "slug": "overtech-digital-services",
+   "name": "work",
+   "url": "http://127.0.0.1:3055/work",
+   "waitMs": 2500
+  },
+  {
+   "slug": "overtech-digital-services",
+   "name": "case-mission-control",
+   "url": "http://127.0.0.1:3055/work/mission-control",
+   "waitMs": 2500
+  },
+  {
+   "slug": "overtech-digital-services",
+   "name": "start",
+   "url": "http://127.0.0.1:3055/start",
+   "waitMs": 2500
+  },
+  {
+   "slug": "overtech-digital-services",
+   "name": "about",
+   "url": "http://127.0.0.1:3055/about",
+   "waitMs": 2500
+  },
+  {
+   "slug": "overtech-digital-services",
+   "name": "mobile-home",
+   "url": "http://127.0.0.1:3055/",
+   "size": "mobile",
+   "waitMs": 2500
+  },
+  {
+   "slug": "overtech-digital-services",
+   "name": "walkthrough",
+   "url": "http://127.0.0.1:3055/",
+   "waitMs": 2500,
+   "video": {
+    "seconds": 16,
+    "maxScroll": 6000
+   }
+  },
+  {
+   "slug": "agentic-mission-control",
+   "name": "episode-live",
+   "url": "http://127.0.0.1:3055/work/mission-control/episodes/c49fa4620f4a208db05d18b566d6cf678c8bf1060bb393738bd3f19c4707585f",
+   "waitMs": 3000
+  },
+  {
+   "slug": "agentic-mission-control",
+   "name": "episode-live-full",
+   "url": "http://127.0.0.1:3055/work/mission-control/episodes/c49fa4620f4a208db05d18b566d6cf678c8bf1060bb393738bd3f19c4707585f",
+   "waitMs": 3000,
+   "fullPage": true,
+   "scale": 1
+  },
+  {
+   "slug": "agentic-mission-control",
+   "name": "case-study",
+   "url": "http://127.0.0.1:3055/work/mission-control",
+   "waitMs": 2500
+  },
+  {
+   "slug": "agentic-mission-control",
+   "name": "case-study-full",
+   "url": "http://127.0.0.1:3055/work/mission-control",
+   "waitMs": 2500,
+   "fullPage": true,
+   "scale": 1
+  },
+  {
+   "slug": "agentic-mission-control",
+   "name": "episode-timeline",
+   "url": "file:///C:/Users/Pinda/Digital-Services-Business/research-episode-preview.html",
+   "waitMs": 1200,
+   "steps": [
+    {
+     "clickText": "Run timeline"
+    }
+   ]
+  },
+  {
+   "slug": "agentic-mission-control",
+   "name": "episode-report",
+   "url": "file:///C:/Users/Pinda/Digital-Services-Business/research-episode-preview.html",
+   "waitMs": 1200,
+   "steps": [
+    {
+     "clickText": "Accepted report"
+    }
+   ]
+  },
+  {
+   "slug": "agentic-mission-control",
+   "name": "episode-harness",
+   "url": "file:///C:/Users/Pinda/Digital-Services-Business/research-episode-preview.html",
+   "waitMs": 1200,
+   "steps": [
+    {
+     "clickText": "Inside the harness"
+    }
+   ]
+  }
+ ]
+}
