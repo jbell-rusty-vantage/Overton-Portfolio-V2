@@ -16,7 +16,8 @@ export type MarkName =
   | "globe"
   | "monitor"
   | "menu"
-  | "reset";
+  | "reset"
+  | "ball";
 const paths: Record<MarkName, React.ReactNode> = {
   book: (
     <>
@@ -25,6 +26,12 @@ const paths: Record<MarkName, React.ReactNode> = {
     </>
   ),
   arrow: <path d="M4 12h15m-6-6 6 6-6 6" />,
+  ball: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="m12 8 3.8 2.8-1.5 4.4H9.7l-1.5-4.4zM12 8V3.5M15.8 10.8l4.3-1.4M14.3 15.2l2.6 3.7M9.7 15.2l-2.6 3.7M8.2 10.8 3.9 9.4" />
+    </>
+  ),
   external: <path d="M6 18 18 6M7 6h11v11" />,
   compass: (
     <>

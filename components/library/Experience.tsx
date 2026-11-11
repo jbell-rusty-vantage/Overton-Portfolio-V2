@@ -399,6 +399,10 @@ export default function Experience({
             <Mark name="catalog" size={15} />
             Catalog
           </Link>
+          <Link prefetch={false} href="/performances">
+            <Mark name="ball" size={15} />
+            Soccer
+          </Link>
           <button onClick={() => setPanel("guide")}>
             <Mark name="help" size={15} />
             Guide

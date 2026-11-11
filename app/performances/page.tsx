@@ -17,7 +17,7 @@ export default function Page() {
         </Link>{" "}
         / Game performances
       </p>
-      <h1>Game performances</h1>
+      <h1>Soccer: game performances</h1>
       <p className="perf-summary">Match film, cut into individual plays: goals, shots, dribbles and the work off the ball.</p>
       <ul className="perf-games">
         {games.map((game) => (
