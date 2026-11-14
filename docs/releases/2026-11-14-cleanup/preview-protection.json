@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-14T05:19:24.081Z",
+  "sso": {
+    "deploymentType": "all_except_custom_domains"
+  },
+  "tokenPresent": false,
+  "anonymousStatus": 302,
+  "revokedTokenStatus": 302
+}

@@ -1,6 +1,10 @@
 # One-world cleanup — November 14, 2026
 
-**Qualified release candidate; production deployment is the next step.**
+**Deployed and verified on main, November 14, 2026.**
+
+[Live portfolio](https://overton-portfolio-v2.vercel.app) · [Travellers Rest](https://overton-portfolio-v2.vercel.app/library). Production source: `3bbe593aeb7ffd7494f6d31824e02bb7918b1b00`; deployment `dpl_CmGsgnCkjMSsWQBw9cjn1NRpALCg`. [Platform receipt](deployment.json) confirms main and the production alias. Later receipt/handoff changes are documentation only.
+
+[Production HTTP checks](production-http.json) passed, followed by 12 live portfolio/report browser scenarios; the local-preview-only scenario is intentionally skipped in public mode. Both hall GLBs return 404. The production build applied no new migration. [Temporary preview bypass revocation](preview-protection.json) is verified: the token is absent and anonymous/revoked-token requests receive 302 protection redirects.
 
 Preview: https://overton-portfolio-v2-jw8pvojj2-overtons-projects.vercel.app (`dpl_9nbGGbsM3xSVdjKNWyRKbWS1Y9cn`, runtime commit `e25fc3d`). Subsequent commits change documentation and audit input validation only.
 
@@ -43,3 +47,5 @@ Physical phones, VR/headsets and native 3D performance on software renderers rem
 [Coverage](book-coverage.json) and [summary](book-summary.txt): all six books, desktop and emulated phone, 146 captured views / 191 page surfaces. Zero blanks, overflow, clipped text, cropped or unloaded pictures, folio collisions, or covered controls. Two video surfaces are informational flags. Forty-four raster-image surfaces have no calibrated embedded-text measurement; structural geometry checks do not certify their tiny text. [Desktop sample](book-desktop.png) and [phone sample](book-phone.png) were visually inspected. Full per-page captures remain in ignored local evidence.
 
 [Hosted HTTP and authenticated preview](preview-http.json) passed all public routes, six report identities, hidden-record exclusion, old URL translation, removed hall 404s, office authentication, draft labels, immutable cache headers, video byte ranges and PDF delivery. The surface audit requires the private review engine probe; public routes deliberately do not expose that probe. An initial public-route audit failed that internal assertion; rerunning through authenticated preview passed without changing rendering.
+
+Main integration CI also passed at production commit `3bbe593`: [run 43560929077](https://github.com/jbell-rusty-vantage/Overton-Portfolio-V2/actions/runs/43560929077), with [step receipt](ci.json). Final documentation build/check and all 15 documentation tests passed after the deployed-status handoff update.

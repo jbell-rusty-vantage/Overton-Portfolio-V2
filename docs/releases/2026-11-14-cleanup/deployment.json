@@ -1,0 +1,18 @@
+{
+  "id": "dpl_CmGsgnCkjMSsWQBw9cjn1NRpALCg",
+  "url": "overton-portfolio-v2-gq5kmwjjx-overtons-projects.vercel.app",
+  "target": "production",
+  "readyState": "READY",
+  "createdAt": 1794633546022,
+  "ready": 1794633653448,
+  "gitCommit": "3bbe593aeb7ffd7494f6d31824e02bb7918b1b00",
+  "gitBranch": "main",
+  "aliases": [
+    "overton-portfolio-v2.vercel.app",
+    "overton-portfolio-v2-overtons-projects.vercel.app"
+  ],
+  "projectId": "prj_VIqs9sg7nSQAVliEFhSuzpt3L4qv",
+  "productionAlias": "https://overton-portfolio-v2.vercel.app",
+  "runtimeSourceCommit": "3bbe593aeb7ffd7494f6d31824e02bb7918b1b00",
+  "rollback": "https://overton-portfolio-v2-q58a2z9ba-overtons-projects.vercel.app"
+}

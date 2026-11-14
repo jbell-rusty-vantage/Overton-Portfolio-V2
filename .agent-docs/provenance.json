@@ -26,7 +26,7 @@
   "sourceState": "Filesystem snapshot; may include uncommitted changes. No deployment or commit claim.",
   "inputs": {
     ".agent-docs/config.json": "17d1943be8ce707c100d37732c8a8c7ed8a54811313feb7644a3e347154f3905",
-    "HANDOFF.md": "8c0b8aa7f11e5353e68c4fde1892ad9d3ad7ab3501678b05737aab13007b3e41",
+    "HANDOFF.md": "12ba55127ce664a72e9f3b5255a195fdcf51dd51b9c6508d4c024662dec0c330",
     "docs/operations/release.md": "493b7712873a00e39365f7dedbec81154b14d1d06959d369a51ea7569e06ca13",
     "knowledge/admin-and-drafts.md": "10f5d22cdd0b6a04d8c380742564804a99020ccca11d7e9be44ba8e18d47d2a4",
     "knowledge/asset-pipeline.md": "943af744c0a1c7852e6eefd1f94172ab5fc91a99716bc8a67db74d8a16b0da93",

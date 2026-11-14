@@ -2,7 +2,7 @@
 
 **Execution scope correction:** The owner clarified that only the old pre-Travellers-Rest library is to be removed. Preserve all Travellers Rest code and assets, including older prototype tools. Renderer consolidation and removing React Three Fiber are superseded by that instruction.
 
-**Status: implementation in progress; release proof tracked in HANDOFF.md. Original plan: Inspected November 13, 2026, America/New_York.**
+**Status: completed and deployed on main, November 14, 2026.** [Execution evidence](../../releases/2026-11-14-cleanup/README.md). The sections below retain the original November 13 planning observations; statements about work not yet performed describe that historical planning pass.
 
 The owner now wants the old seven-room hall completely removed, with John Overton's Travellers Rest as the only world. The immediate deliverable is exploration and this complete plan. Application changes, deletion, migration and deployment have not been performed in this planning pass.
 
@@ -66,7 +66,7 @@ Add explicit coverage for query-plus-hash precedence, browser Back/Forward, relo
 5. Remove hall-specific admin controls/actions: uploaded hall versions, hall camera editor and retired computer-screen editor. Retain shared authoring, collection placement and Travellers Rest scene validation. Reject retired commands at the server boundary as well as removing buttons. Preserve underlying owner records; do not drop tables or edit applied migrations.
 6. Stop querying `library-hall`, hall cameras and old computer-screen feeds in ordinary portfolio reads once inbound consumers are gone. Audit whether any activity projection is still needed before removing its query. Keep request-local reuse and immediate publication/withdrawal behavior.
 7. Remove the two hall GLBs from current delivery and retire their pack/build entrypoints. They total **3,487,440 bytes**; this is package storage removed, not an equivalent improvement to homepage transfer. Retain source masters and exact recovery history outside deployment. Shared covers/posters under `public/library` remain.
-8. Finish renderer consolidation: the older Travellers Rest `Walk.tsx` and dev `HouseModel.tsx` also use R3F. Route the retained “Walk in 3D” affordance to the current native world; retain still/survey/plain-page fallback and useful current world-lab tools. Retire the obsolete standalone prototype harness after checking its remaining asset-review uses. Only then remove `@react-three/fiber` and update the lockfile.
+8. **Superseded by the owner’s execution clarification:** preserve Travellers Rest `Walk.tsx`, `HouseModel.tsx`, the prototype harness and `@react-three/fiber`. Only the pre-Travellers-Rest hall is retired.
 
 No schema deletion is needed. Old scene/screen records may remain inactive historical records; retaining data is not retaining executable hall code. Do not simply hide all old zones: current catalog eligibility is tied to those rows. Do not delete old Blob objects without an exact exclusive-reference inventory; removing public UI is not media withdrawal. The current build must stop serving its bundled hall files, but existing rollback deployments and downloaded immutable bytes are historical copies.
 
@@ -255,7 +255,7 @@ Each step is a scoped, reviewable change. Runtime and documentation evolve toget
 | --- | --- | --- |
 | 1. Preserve and freeze | Record checkout/owner changes; retain private release baselines; capture representative current screenshots/URLs and retrieval baseline; review the explicit removal inventory against the owner's stated scope | Reproducible baseline, exact file/asset lists, no broad clean/reset. |
 | 2. Decouple and translate | Extract catalog/sample UI and taxonomy; add compatibility resolver; update readers/admin previews | Public/private URL matrix passes; six published studies and hidden records unchanged; stable leaf/section/book IDs. |
-| 3. Remove hall and redundant renderers | Delete exclusive runtime/styles/assets/tests; retire hall admin commands and redundant prototype paths; remove R3F after zero consumers | No live route/admin/sample can launch the hall; no hall fetch/chunk; bundled hall URLs absent; shared artwork and plain reading retained. |
+| 3. Remove the old hall | Delete exclusive hall runtime/styles/assets/tests and retire hall admin commands. Preserve all Travellers Rest prototype paths and R3F per the owner clarification | No live route/admin/sample can launch the hall; no hall fetch/chunk; bundled hall URLs absent; shared artwork and plain reading retained. |
 | 4. Refactor active boundaries | Collection query/projection, transactional admin use cases, world orchestration/engine loading, storage helpers and styles; fix inventory output ownership | Focused behavior tests and before/after measurements per seam; no book/design drift. |
 | 5. Author and migrate knowledge | Write concepts and decisions, rewrite current runbooks/entrypoints, archive history with link compatibility | All 49 original documents accounted for; no stale current guidance; every module has a source/test route. |
 | 6. Install searchable navigation | Vendor pinned tool, register modules/docs, generate compact guides/index/map, add Overton fixtures and CI | Isolated checkout build/check/search; deterministic second build; retrieval and private-path checks pass. |
