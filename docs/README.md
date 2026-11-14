@@ -6,4 +6,4 @@ Use `npm run docs:search -- --query "return to book"` or `npm run docs:context -
 
 Implemented means source exists; tested means recorded checks passed; deployed requires a platform receipt. Proposed future work is never a current instruction.
 
-Next-session build brief: [Travellers Rest historical exhibit](plans/travellers-rest-historical-exhibit.md), with period print references, artifact preparation, runtime controls, and local acceptance checks.
+Separate historical-exhibit research remains in local owner notes; it is not part of this cleanup release.
