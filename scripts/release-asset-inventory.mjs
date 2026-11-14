@@ -43,6 +43,7 @@ const groups = Map.groupBy(files, f => f.sha256);
 const duplicates = [...groups.values()].filter(g => g.length > 1).map(g => g.map(f => ({ url: f.url, bundled: f.bundled })));
 const inventory = { generatedAt: new Date().toISOString(), bundledBytes: files.filter(f => f.bundled).reduce((n, f) => n + f.bytes, 0), excludedMasterBytes: files.filter(f => !f.bundled).reduce((n, f) => n + f.bytes, 0), files, blob: estate, duplicates };
 await mkdir("docs/releases/2026-11-13", { recursive: true });
+await mkdir(".local-library/release", { recursive: true });
 await writeFile("docs/releases/2026-11-13/assets.json", JSON.stringify(inventory, null, 2) + "\n");
 const hashes = { sha256: createHash("sha256").update(JSON.stringify(inventory, null, 2) + "\n").digest("hex"), bundledBytes: inventory.bundledBytes, excludedMasterBytes: inventory.excludedMasterBytes, bundledFiles: files.filter(f => f.bundled).length, blobObjects: estate.length, duplicates };
 await writeFile(".local-library/release/asset-summary.json", JSON.stringify(hashes, null, 2));
