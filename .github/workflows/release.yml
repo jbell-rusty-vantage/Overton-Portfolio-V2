@@ -27,6 +27,8 @@ jobs:
       - run: npm ci
       - run: npx next typegen
       - run: npm run release:check
+      - run: npm run docs:check
+      - run: npm run docs:test
       - run: npx playwright install --with-deps chrome
       - run: npm run test:admin
       - name: Record browser graphics profile
@@ -47,8 +49,7 @@ jobs:
       # qualification (npm run test:browser); the hosted runner renders in software.
       - name: Portable browser checks
         run: >-
-          npm run test:browser -- tests/browser/library.spec.ts
-          --grep 'HTML catalog and reader|sample edits move|server detail and catalog|WebGL unavailable on first entry|host and arbitrary preview flags'
+          npm run test:browser -- tests/browser/library.spec.ts tests/browser/compatibility.spec.ts
           --reporter=line --max-failures=1
       - uses: actions/upload-artifact@v4
         if: always()

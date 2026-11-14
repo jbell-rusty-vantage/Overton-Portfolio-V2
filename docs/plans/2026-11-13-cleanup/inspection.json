@@ -1,0 +1,361 @@
+{
+  "status": "exploration-only",
+  "ownerDate": "2026-11-13",
+  "timezone": "America/New_York",
+  "observedAt": "2026-11-14T04:32:21.594Z",
+  "baselineCommit": "a2f1daa5782b0bf147a9b4f69e55ea5055d5a0c3",
+  "branch": "codex/portfolio-production-release",
+  "applicationModified": false,
+  "productionChanged": false,
+  "databaseAccessed": false,
+  "method": [
+    "Tracked-file inventory",
+    "Targeted source and test inspection",
+    "TypeScript AST static imports and literal dynamic imports; no claim of complete runtime reachability",
+    "Current and historical documentation comparison",
+    "Official OKF specification retrieval",
+    "Existing local OKF search command exercised; not yet installed here"
+  ],
+  "counts": {
+    "trackedMarkdown": 49,
+    "markdownBytes": 760461,
+    "flatDocs": 35,
+    "preexistingUntrackedFiles": 281,
+    "prismaModels": 53,
+    "hallBundledBytes": 3487440
+  },
+  "oldHallInbound": [
+    {
+      "file": "components/library/World.tsx",
+      "importedBy": [
+        "components/library/Experience.tsx"
+      ]
+    },
+    {
+      "file": "components/library/Experience.tsx",
+      "importedBy": [
+        "app/admin/preview/library/page.tsx",
+        "app/library/page.tsx",
+        "components/library/Routes.tsx",
+        "components/library/SampleDesk.tsx"
+      ]
+    },
+    {
+      "file": "components/library/BookJacket.tsx",
+      "importedBy": [
+        "components/library/World.tsx"
+      ]
+    },
+    {
+      "file": "components/library/ShelfPlaque.tsx",
+      "importedBy": [
+        "components/library/World.tsx"
+      ]
+    },
+    {
+      "file": "components/estate/Walk.tsx",
+      "importedBy": [
+        "components/estate/Rooms.tsx"
+      ]
+    },
+    {
+      "file": "lib/library/scene-contract.ts",
+      "importedBy": [
+        "app/admin/(console)/library/actions.ts",
+        "tests/estate.test.ts",
+        "tests/library.test.ts"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "file": "app/page.tsx",
+      "sha256": "aee012fb6c5c77c525ae2f067411a5104834587dcce4240a8e9039cd886788f5",
+      "bytes": 1203,
+      "lines": 19
+    },
+    {
+      "file": "app/library/page.tsx",
+      "sha256": "c0bb82f62d04a703b5f8e87a21be7220404ca918c604f36a1790b7213a3c654b",
+      "bytes": 1898,
+      "lines": 52
+    },
+    {
+      "file": "app/catalog/route.ts",
+      "sha256": "ccd6e6e7d0ccf858f561bdd3ef29b038ecfd6ed95e7c4dec4a6203db2595d3aa",
+      "bytes": 5046,
+      "lines": 135
+    },
+    {
+      "file": "app/layout.tsx",
+      "sha256": "995ce714904c58b378bfc03fb6d76c85e305c7f7f414c5bd128cca31679b0e7d",
+      "bytes": 1039,
+      "lines": 34
+    },
+    {
+      "file": "app/admin/preview/library/page.tsx",
+      "sha256": "3de9e10c9425a4970882b88cd2c94772a9a024d00a805096edfa12c17ae13f21",
+      "bytes": 1579,
+      "lines": 44
+    },
+    {
+      "file": "app/admin/preview/layout.tsx",
+      "sha256": "3332f12ab9b7e3677adfeacda1ed9c248cba51869d0026559401d6db44f2bc48",
+      "bytes": 431,
+      "lines": 6
+    },
+    {
+      "file": "app/admin/(console)/library/actions.ts",
+      "sha256": "ff72c607c0182f71345f1ccb5c853bf56812e1c04613f0ccb31f4e449e2ddbe1",
+      "bytes": 21621,
+      "lines": 698
+    },
+    {
+      "file": "app/admin/(console)/library/page.tsx",
+      "sha256": "036c55dc1682503f5a0300cdcf4cd3b9bdcfaf7ff08bd0700aeeeae1f6b271da",
+      "bytes": 24135,
+      "lines": 663
+    },
+    {
+      "file": "components/library/Experience.tsx",
+      "sha256": "de40562f39f500c42bba3aef31cdb335c9d913bb46f52a1fc919f6bef97ad331",
+      "bytes": 31225,
+      "lines": 929
+    },
+    {
+      "file": "components/library/World.tsx",
+      "sha256": "52d8f11073eaa813abfa5212b220b91b1998fdcab6f236d06cc0d38f594baa6c",
+      "bytes": 17640,
+      "lines": 599
+    },
+    {
+      "file": "components/library/BookJacket.tsx",
+      "sha256": "1c1836dcaced8663d2cad38084102fbcbe5b763fc50befd346dddd670fbd39db",
+      "bytes": 1566,
+      "lines": 37
+    },
+    {
+      "file": "components/library/ShelfPlaque.tsx",
+      "sha256": "009a7aaab4f7db871def953fcd5b831ef3002efcb10667d976a4b2a5f098e456",
+      "bytes": 1353,
+      "lines": 37
+    },
+    {
+      "file": "components/library/Routes.tsx",
+      "sha256": "7cf2503421aaf519c8af9229e363de9b0062bb75ef954c7a586dc258cd587021",
+      "bytes": 1672,
+      "lines": 60
+    },
+    {
+      "file": "components/library/SampleDesk.tsx",
+      "sha256": "69e217226b22b21df201c2de0ab7bed939976e37c4b43fe571b00d761e7a2952",
+      "bytes": 6921,
+      "lines": 248
+    },
+    {
+      "file": "components/library/Reading.tsx",
+      "sha256": "220118d1f80dbd0580284f07750f51b21012dd26aa3c607b93f0a66fed3fbece",
+      "bytes": 5617,
+      "lines": 202
+    },
+    {
+      "file": "components/library/ProjectReport.tsx",
+      "sha256": "e4a8245c2f596f506f8b78514a3c40818cbb68745fff24c19d8cd91ffb1cd8be",
+      "bytes": 11666,
+      "lines": 163
+    },
+    {
+      "file": "components/estate/Estate.tsx",
+      "sha256": "ba95fce91072f683f918952e69c4a0ae606cb3b16790df6021730e01aea894be",
+      "bytes": 20364,
+      "lines": 523
+    },
+    {
+      "file": "components/estate/Rooms.tsx",
+      "sha256": "dd4f4f9f401cbf1f9e4782d249c712af0585332dd1d6ce6f6d7f9e7ef8079b40",
+      "bytes": 9763,
+      "lines": 317
+    },
+    {
+      "file": "components/estate/Walk.tsx",
+      "sha256": "77a439307b6835dd0a97e7ae083d0139803685d587f4ec73d99c3b37c8cc727e",
+      "bytes": 13396,
+      "lines": 448
+    },
+    {
+      "file": "components/estate/Entrance.tsx",
+      "sha256": "f6bc6f681b0eeb3bd8cc44adea72eb59f0494c5f6e8fc91086c1b7a5aedcc50a",
+      "bytes": 9594,
+      "lines": 258
+    },
+    {
+      "file": "components/estate/EntranceLive.tsx",
+      "sha256": "411707c7644fb833a32549e2057759fbeabc3227c8c508b46025aa9394b9b642",
+      "bytes": 2283,
+      "lines": 36
+    },
+    {
+      "file": "components/estate/world/World.tsx",
+      "sha256": "d338b9deb6ab4b3ead7057ef7bb0f04353366a21809e550367a68e1fad4294b1",
+      "bytes": 44053,
+      "lines": 942
+    },
+    {
+      "file": "components/estate/world/engine/engine.ts",
+      "sha256": "46c3b8877b213dedad01755edb90a58a459fd667de8515bec0fc9372717473bb",
+      "bytes": 68594,
+      "lines": 1446
+    },
+    {
+      "file": "components/estate/world/engine/controller.ts",
+      "sha256": "6686d3f17282f15644718617e3ed2bc0d5e242ad683251b659625296abef1d63",
+      "bytes": 44025,
+      "lines": 1083
+    },
+    {
+      "file": "components/estate/world/Reader.tsx",
+      "sha256": "3c995222b7854b25a6252554a0f9612b1298257f21b7338c9831a26fd2a2a44a",
+      "bytes": 23706,
+      "lines": 602
+    },
+    {
+      "file": "lib/library/model.ts",
+      "sha256": "2e1edddcf014d2e23661875d6d1340aed9653986c8fd07aa01bb5c1943c01bef",
+      "bytes": 4110,
+      "lines": 118
+    },
+    {
+      "file": "lib/library/catalog.ts",
+      "sha256": "3ac12c146b57d8e97a2e8914c4d1d1ee34c2a82a6d6fddfe4f8560c4d2942e15",
+      "bytes": 18900,
+      "lines": 626
+    },
+    {
+      "file": "lib/library/paths.ts",
+      "sha256": "fa7d7040a038169121351a933a5e6d188576f3e37700d9165b7c318d8b9f054c",
+      "bytes": 546,
+      "lines": 8
+    },
+    {
+      "file": "lib/library/scene-contract.ts",
+      "sha256": "eebdb3aee2fee628ceef8f8528712959ca0edbff6e7234f2a7220a38a8b748b3",
+      "bytes": 3201,
+      "lines": 81
+    },
+    {
+      "file": "lib/estate/world.ts",
+      "sha256": "c9f3c2ca459343e662fc76fc5246aaa3cf2921bcad97846bf2c425a37f0efd65",
+      "bytes": 8566,
+      "lines": 259
+    },
+    {
+      "file": "lib/estate/catalog.ts",
+      "sha256": "46223789a981178ce68dc8c0687670becb372638c4dcdf1934db5065ee3d1c8c",
+      "bytes": 8059,
+      "lines": 230
+    },
+    {
+      "file": "scripts/release-asset-inventory.mjs",
+      "sha256": "f4cb37c68f4df2fe1dd96a0cf2e56b299d9421cabd06303a5e9fff04576ea6e0",
+      "bytes": 4178,
+      "lines": 51
+    },
+    {
+      "file": "scripts/seed-library.mjs",
+      "sha256": "4ef7853627fc6ce86faf032aa6ca3613ac612a6584c84ffd31be418dd84ca055",
+      "bytes": 5722,
+      "lines": 161
+    },
+    {
+      "file": "scripts/pack-library.mjs",
+      "sha256": "c198777dd40ab97beb8b139fc460feb71dadfbd658ed2f7f691f18b526e0bee1",
+      "bytes": 4619,
+      "lines": 155
+    },
+    {
+      "file": "scripts/gen-schema-reference.mjs",
+      "sha256": "fd5f2e0bdabb3337293007d70ddc32be0d90d32addae2a2f9072643fb6c40630",
+      "bytes": 4277,
+      "lines": 81
+    },
+    {
+      "file": "tests/release-paths.test.ts",
+      "sha256": "e7f407571ef30abe9a51193b33586c416825af8043dfd8cb35b2e14da55bd12e",
+      "bytes": 1851,
+      "lines": 29
+    },
+    {
+      "file": "tests/browser/library.spec.ts",
+      "sha256": "b0d00aa93f3f44e34fd66ddf112a1dec2fa43039d017fb01fa5c6b25e88580b4",
+      "bytes": 12210,
+      "lines": 295
+    },
+    {
+      "file": "tests/library.test.ts",
+      "sha256": "4eff0d0e6ac9ae05f04207f19ee955f3165957319ef0e4725e90debe87da34a7",
+      "bytes": 6374,
+      "lines": 175
+    },
+    {
+      "file": "prisma/schema.prisma",
+      "sha256": "503281b26990f7327ae369f67a51f7ae2ba4fa8f3db3c91b8d0e6626378c48be",
+      "bytes": 49371,
+      "lines": 1228
+    },
+    {
+      "file": "package.json",
+      "sha256": "c369b882de3dd87381a282de6d7a409d4f31b2eaf8973cef52aca19a107d2a2a",
+      "bytes": 3667,
+      "lines": 85
+    },
+    {
+      "file": ".github/workflows/release.yml",
+      "sha256": "faf9964f83ccb6a6baa34f57eccd7aefed82bb7707796b0f15559765cbef7003",
+      "bytes": 2249,
+      "lines": 60
+    },
+    {
+      "file": ".vercelignore",
+      "sha256": "b2cfd6b84d802aa1a268402ba479a04a583440c384b97185b19d8593add63436",
+      "bytes": 1034,
+      "lines": 48
+    }
+  ],
+  "okf": {
+    "version": "0.2",
+    "specification": "https://github.com/GoogleCloudPlatform/open-knowledge-format/blob/main/SPEC.md",
+    "generatorVersion": "1.2.0",
+    "canonicalSource": "C:/Users/Pinda/Proyectos/BellLabs/aiengineer/ai-engineer-meta/tools/agent-docs",
+    "canonicalGitPin": null,
+    "canonicalGitState": "Tool directory untracked in an unborn local repository; use explicit file-hash provenance, not a fabricated upstream commit.",
+    "tooling": [
+      {
+        "file": "cli.mjs",
+        "sha256": "cbf3db2d709eac40839bfded4a3129a4a30d9ff3fde739da4f5f46b9d4b8c583"
+      },
+      {
+        "file": "semantic-maps.mjs",
+        "sha256": "f5a073b4b82968f65af11c2ad4c5332f971792185c033f28f412cbfd0ee55dd2"
+      },
+      {
+        "file": "knowledge.mjs",
+        "sha256": "8f44606ec6dabdb99c234baf546a176651fe2ca541205c41a6fc724daabec3b1"
+      }
+    ],
+    "searchProof": {
+      "repo": "C:/Users/Pinda/Proyectos/BellLabs/platform/knowledge-services",
+      "commit": "b548468d741a385d3cbd0150d0cb88f960876b9a",
+      "command": "node .agent-docs/cli.mjs search --repo . --query \"withdraw publication\" --limit 3 --format json",
+      "exitCode": 0,
+      "firstResult": "knowledge/evaluation-and-publication-gates.md"
+    },
+    "consumerDifference": "Canonical semantic-maps cap is 128 KiB; Knowledge Services has a 160 KiB local cap. CLI and knowledge modules match after newline normalization.",
+    "successor": "platform/agentic-sdlc declares tools slice S1 not yet present; no installed CLI assumed."
+  },
+  "limitations": [
+    "No new end-to-end, build or production performance run in this planning pass.",
+    "Retirement candidates require final reference and packaged-output checks before deletion.",
+    "Search fixtures and targets in the plan are proposed, not measured Overton search results.",
+    "Physical-device VR and mobile behavior are not qualified by source inspection."
+  ]
+}

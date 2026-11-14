@@ -1,116 +1,20 @@
-# Pathway A · project showcases, in the books and everywhere else
+# Pathway Showcases
 
-**Integrated qualification, November 13:** the coordinator qualified all 52 browser scenarios (51 in the final broad run plus a corrected gesture-timing rerun), including all fourteen authorized reports at desktop/phone width, section links, focus/Escape, same marked-page return through history/reload, neighbor reports and plain-view destination preservation. The all-page staged-art audit remains 232 views/307 pages with no measured defects or runtime errors; raster text measurements are not complete OCR. Evidence: `.local-library/final-browser.log`, `.local-library/showcase-review/qualified-staged/`, and [the integration record](SESSION_INTEGRATION.md). Artwork remains staged, with no owner-database imports or publication. Source-image gaps, physical-device checks and owner editorial review remain as documented below.
+Historical compatibility pointer. The pre-cleanup text is superseded; it is not current operational guidance.
 
-**Worker contract:** GPT-6 Astra, High reasoning. Own this complete pathway and its focused verification. Do not spawn agents, delegate, or create chats; follow the main brief's depth-one, three-worker-total cap. Report completion or a concrete blocker to the coordinator.
+[Current explanation](../knowledge/system-overview.md) · [Preserved original](archive/pre-cleanup/docs/PATHWAY_SHOWCASES.md) · [Documentation index](README.md)
 
-**This is pathway A of three.** The main agent's brief is [NEXT_SESSION.md](NEXT_SESSION.md); the others are [the 3D world](TRAVELLERS_REST_NEXT.md) and [the conversational portrait](PATHWAY_PORTRAIT.md). This brief is a complete task for one agent: carry it through and report once at the end. The main brief controls concurrency and shared-file ownership. **November 12 integration override:** prepare the report route and `World.tsx` changes for the main agent to apply after B finishes; do not make those shared-file edits concurrently, notwithstanding older instructions below. Supply stable report section IDs that C's navigation adapter can resolve.
-
-**Owner's direction, November 12, 2026.** "I need to be able to go from book to an expanded full screen walk through of my projects. They need to operate like high-quality web reports." He has been concentrating on the theme, the 3D world and the information structure, and will later write much better project reports that bring everything together. **For now the showcases only have to be decent, and their job is to prove that everything works.** He does not like the generic covers on the project books and wants completely new posters.
-
-**Outcome.** From any project book a visitor opens, in one action, a full-screen report of that project that reads like a high-quality web report; closing it puts them back at the same page of the same book. The same report is the project's page in the plain view. Every project has a poster that says what it is, pages that are clean, and pictures that are whole. When the owner's better reports arrive, they drop into this machinery without code.
-
-## What to build, in order
-
-### 1. The full-screen report
-
-- **One report, shown in two places.** The project's report is one projection of its content and one component. It appears full screen over the world when opened from a book, and as the page at `/projects/<slug>` (and the book page at `/books/<slug>`) in the plain view. Today each book ends with a "Full reading page" link that leaves the world; replace that with opening in place.
-- **Opening and closing.** A clear action on the open book (beside **Return to the shelf**, and on the title page) opens the report, growing from the book. The address carries it (add a place such as `#report/<slug>/<section>` to `parseRoute` and `formatRoute` in `lib/estate/world.ts`, with a route test), so Back, reload and a shared link all work. Escape, Back and a visible close control return to the same book at the same page. A link straight to a report arrives with the book already in the hand behind it.
-- **Reads like a web report.** A header with the poster, title, status, role, dates and links; a sticky table of sections that tracks the scroll; a comfortable measure; real headings; figures that enlarge; films with captions and a transcript link when one exists; measurements as a designed group; code that scrolls sideways instead of wrapping to nothing; next and previous project at the foot. It is DOM, selectable and linkable, keyboard and screen-reader usable, and good at phone width. Reduced motion opens it without the growth.
-- **The world rests underneath.** While the report covers the canvas the engine should not draw. `World.tsx` is pathway B's file: make this one small change there (pause on open, resume on close), re-reading the file just before you edit, and name it in your report.
-- **Richer content, only as far as the report needs.** Books and reports are projected from the same blocks (`lib/library/policy.ts`: text, heading, metric, code, link, image, video). If a good report needs more (a pull-quote, two pictures side by side, a step sequence, a callout, an embedded live demo), add the block end to end: office editor, validation, projection, report, and a sensible rendering on a book page. Schema changes follow `AGENTS.md`: `prisma/schema.prisma` with `///` comments, a new migration, never an edited one.
-- **Visibility.** The report obeys the same `display` and `activation` rules as the book and the project, and client work honours `redaction_policy`, `public_alias` and `show_name`. A hidden project's report address behaves as its book address does today.
-
-### 2. Posters
-
-Follow [the poster brief](PROJECT_POSTERS.md). The 3D book already shows the whole poster as its front board. Because everything is a hidden draft and each poster is a new file beside the old one, you do not need to stop for approval: choose the strongest candidate for each project, register it, and hand the owner one contact sheet at the end with the chosen poster and the alternates for each project so he can swap any of them.
-
-### 3. Book pages
-
-The owner reviewed the pages on November 12 and they are not yet good enough. What he saw, with GoWipe as the example (`#book/gowipe`), and what has been found since:
-
-- **Writing that just stops.** A page carries a few lines and then empty paper, or a section breaks so its last lines sit alone on the next page. The rules are in `paginate.ts` (a section under 45 percent of a page is kept whole; a new section will not start on a page that is more than 60 percent full). Balance each spread: pull short tails back, let a short section share a page, and where the text itself is too thin, treat it as content (section 4).
-- **Half-shown content inside pictures.** This is in the source images, not the layout: the page shows each picture whole at its own shape, but the captures are viewport grabs that end mid-headline or mid-row (`gowipe-home.webp`, `gowipe-collection.webp`). Replacing them is content work (section 4).
-- **Things that read as a smudge.** Fixed in this session: words on a turning leaf were printed in their screen colour and the room's light washed them to grey; they are now printed darker (`ink` in `sheets.ts`). Still open: diagrams whose labels are too small to read at page size (content, section 4), and the diagonal band of light across the left page while a leaf turns. Check all three moments yourself on several volumes: at rest, while a leaf turns, and while the book flies.
-- **Film previews.** Fixed in this session: a film waits as a clean preview with one play mark, and the browser's controls appear only when it is started. Still open: choosing a good preview frame for each film (content, section 4).
-- **Pictures slightly wider than the text.** Deliberate: a picture is centred and reaches about 7 px into each margin (`plateWidth` in `paginate.ts`). The audit flags it; change it only if the owner dislikes it.
-
-Judge by eye, starting with GoWipe: capture every page of all fourteen volumes on desktop and phone (`.local-library/books/audit.mjs` and `contact.mjs` make contact sheets), read each sheet, and fix until none of the above remains. Extend the audit to measure trailing empty space per page, a picture cropped away from its natural edge, and the smallest rendered text inside a picture, then move it into `scripts/` so it runs before every release. Put the contact sheets in the final report; the owner judges the pages from them.
-
-Working now and to be kept: click or tap turns the page; the outer margin drags a leaf; the head or foot margin carries the book back to its slot. Also wanted: paginate when the visitor arrives at the cabinet so a book opens at once; an author flag for a picture that deserves its own page; pinch-zoom on a phone.
-
-### 4. Content to replace
-
-The table at the end of [the poster brief](PROJECT_POSTERS.md) lists it: captures that end mid-content, film preview frames, diagrams too small to read, and thin text. Replace pictures and diagrams outright (new files, registered through the office). **Do not rewrite the owner's words about his work.** Where text is thin or repeats itself, leave it and give him a list of proposed edits per project in your report; he is going to write the real reports himself.
-
-### 5. Everywhere else a project appears
-
-The static cabinet cards, the projects index, the reading pages and the older hall should show the same poster, title and summary as the book and the report, from the same projection. Add a share image per project drawn from its poster if time allows.
-
-### 6. So the owner's reports drop in later
-
-Write `docs/PROJECT_REPORTS.md`: how a report is authored in the office, what each block is for and how it looks in the report and on a book page, the picture and film specifications, and a checklist for a new project. Keep one project (Mission Control) as the worked example.
-
-## Ownership
-
-**You own:** `components/estate/world/Reader.tsx`, `paginate.ts`, `sheets.ts`, `bookPrint.ts`, `book.css`, `Inspector.tsx`; `components/estate/Cabinet.tsx` and `HouseBook.tsx`; `components/library/**`; `lib/library/**`; `app/projects/**`, `app/books/**`; `public/library/artwork/**`; `assets/library/posters/**` (create it for prompts, masters and rejected drafts, which never go under `public/`); project, book and media records through the office; `tests/browser/books.spec.ts` and new report journeys; the page audit in `.local-library/books/` (move it into `scripts/`).
-
-**You may make one small, named change each in:** `lib/estate/world.ts` (the report place in the route model) and `components/estate/world/World.tsx` (mount the report, rest the engine).
-
-**You do not touch:** `components/estate/world/engine/**`, navigation, grounds, `assets/travellers-rest/**`, the pack, kit and voice scripts, or the house program. Those are pathway B's. The book as a 3D object (cover board, spine, flight, leaf turn) is B's; you give it an image address and print instructions and it does the rest.
-
-**Do not:** commit, push, deploy, release anything, or restart the office server on port 3078 (you need it running: `http://127.0.0.1:3078/admin`, and the preview at `/admin/library/preview`). Content changes go through the office so they are audited and kept as revisions.
-
-## Done means
-
-- Every one of the fourteen books opens its report full screen and returns to the same page, on desktop and at phone width, by pointer, touch and keyboard; Back, reload and a shared link agree.
-- New browser journeys cover that, and the existing ones still pass: `npm run typecheck; npm run lint; npm test; npm run test:browser`.
-- Contact sheets of every page of every volume, desktop and phone, with none of the faults listed in section 3, and the extended audit passing.
-- A contact sheet of posters: chosen and alternates.
-- `docs/PROJECT_REPORTS.md` written.
-- One report at the end: what is implemented, what is tested, what is not done, where the evidence is, the proposed text edits, and what the owner must decide.
-
-## Read first
-
-[HANDOFF.md](../HANDOFF.md) · [PROJECT_POSTERS.md](PROJECT_POSTERS.md) · [ITERATING_ON_THE_LIBRARY.md](ITERATING_ON_THE_LIBRARY.md) · [ADMIN.md](ADMIN.md) · [DATA_MODEL.md](DATA_MODEL.md) · [the reader](../components/estate/world/Reader.tsx) · [the projection](../lib/library/policy.ts) · [the plain reading page](../components/library/Reading.tsx). The environment notes in [NEXT_SESSION.md](NEXT_SESSION.md) apply.
-
-## Pathway A delivery · November 12–13, 2026
-
-The report component, Reader seam, authoring extensions, staged artwork edition and focused verification are delivered for coordinator integration. This is not a claim that the full visitor journey is qualified. The coordinator owns route/World/audio mounting, final authorized-preview mapping and the final all-volume audit. No office database writes, imports, server restarts, commits or publication were performed by A.
-
-Implemented: one editorial `ProjectReport` for plain reading and native full-screen modal; stable Leaf.key sections; selectable blocks, metadata, sticky section navigation, whole figures and detailed zoom, films/captions/transcripts, metrics/code, authorized neighbors. `Reader` exposes `onReport(section)` and `suspended`, preserving its mounted page state. Cabinet’s older modal also uses the unified report. Pagination relaxes early section breaks, fixes deferred-heading order, balances short closing tails, supports `ownPage`, and exports a cabinet warm-up/cache helper. Existing engine/turn/paint contracts were retained.
-
-Fourteen differentiated chosen posters and fourteen alternates are in [the card contact sheet](../assets/library/posters/contact-card.jpg); [the board sheet](../assets/library/posters/contact-board.jpg) shows larger previews. The final manifest contains fourteen diagram overviews, twenty-one complete screenshot sections/details, and six real film frames. The Daryl poster uses supplied imagery only. See [artwork provenance and remaining sources](../assets/library/posters/README.md), [authoring instructions, Mission Control example, per-project writing proposals and exact integration contract](PROJECT_REPORTS.md). Owner prose was not rewritten.
-
-Focused checks passed: TypeScript (`npx tsc --noEmit --incremental false`), targeted ESLint for A’s code/scripts/tests, four report policy/helper tests, and three browser checks. Browser checks cover all fourteen inline reports at 1366 and 390 px, complete section enumeration and image loading/contain fit, section-link reload, nested figure focus containment/Escape/restore, and report prose/links in the server response. These were run before the staged artwork mapping. `tests/reports.config.ts` reuses the running office without starting a server. The fourth browser journey is intentionally left for coordinator integration: world report open/close, marked-page return, history and reload.
-
-Initial all-book evidence is at `.local-library/showcase-review/pages/`: `report-desktop.json`, `report-phone.json`, `summary.txt`, eleven desktop contact sheets and twelve phone contact sheets. It contains 209 views / 274 pages, zero blank pages, layout overflow, folio collision, unloaded media, clipped DOM text or covered toolbar. It found three sparse closing leaves: Overtech desktop f11 (14% filled), Knowledge Services phone f10 (18%), Vantage Movers phone f15 (5%). Tail balancing was added afterward. **This run predates both tail balancing and the staged artwork mapping; it is diagnostic evidence, not the final passing audit.** The coordinator will regenerate all pages after integration rather than repeat obsolete-art captures. Report structure screenshots are in `.local-library/showcase-review/reports/` and also show the old art.
-
-Remaining qualification: final artwork in every projection; all fourteen overlay return journeys and route/history links; final tail-balance audit; physical touch/pinch and assistive speech; at-rest/turn/flight print quality against B’s final renderer. The old office’s no-JavaScript streaming fallback remains a documented host limitation. Source gaps are the currently unavailable Daryl booking store, offline Overtech AI-service source and Vantage dashboard originals without reproducible capture routes. Their imperfect originals are retained and explicitly unqualified; all achievable replacements were staged. No share-card metadata edition was added (optional).
-
-Changed A paths: `components/library/{ProjectReport.tsx,report.css,Reading.tsx,Routes.tsx}`; `components/estate/Cabinet.tsx`; `components/estate/world/{Reader.tsx,paginate.ts,sheets.ts,book.css}`; `lib/library/{model.ts,policy.ts,catalog.ts,report.ts,showcase-draft.ts}`; `tests/{reports.test.ts,reports.config.ts,browser/reports.spec.ts}`; `scripts/{audit-book-pages.mjs,contact-book-pages.mjs,capture-project-reports.mjs,capture-showcase-sections.mjs,showcase-inventory.mjs,prepare-showcase-artwork.py,prepare-showcase-films.py}`; new `public/library/artwork/*-v2.webp`; `assets/library/posters/**`; `docs/{PROJECT_REPORTS.md,PATHWAY_SHOWCASES.md}`. Other preexisting/shared changes are not A’s work.
-
-### Final staged-art page qualification · November 13
-
-This supersedes the preliminary page evidence above. After the coordinator integrated the authorized draft mapping and report routes, A captured **all fourteen books in both viewports**: 75 desktop spreads and 157 phone pages, **232 views / 307 pages**. The final run exited successfully with zero blank/sparse leaves, vertical or horizontal overflow, folio collision, CSS picture cropping, letterboxing, unloaded images, clipped DOM text, covered Next controls or known raster lettering below 12 px. Coverage records fourteen expected and fourteen completed books in each viewport, no failed books and no browser errors.
-
-Review [all final contact sheets](../.local-library/showcase-review/qualified-staged/index.html), [the measured summary](../.local-library/showcase-review/qualified-staged/summary.txt), and [coverage/error evidence](../.local-library/showcase-review/qualified-staged/coverage.json). The folder includes `report-desktop.json`, `report-phone.json`, every individual page capture, thirteen desktop contact sheets and fourteen phone contact sheets. A visually reviewed all twenty-seven sheets. All fourteen new posters and diagram overviews are present. Known diagram lettering measures at least **16.81 px desktop / 13.26 px phone**. The twelve video entries in the summary are media inventory annotations, not failures.
-
-Corrections from this final pass: short source leaves now share the preceding measurement grid’s final row, preserving each value once and in order; dedicated `ownPage` figures cannot absorb trailing content during balancing. Reader exposes `data-volume` so the audit waits for the correct book. The audit now waits for settled page geometry, rejects repeated markers, records complete book coverage/browser errors, and exits nonzero on measurable faults. It no longer hides the custodian: the coordinator fixed automatic card suppression while holding content. Earlier `final-staged/` captures were interrupted by development hot reload and are diagnostic only; **`qualified-staged/` is the final evidence**.
-
-Cabinet warm-up cleanup now cancels future books immediately but retains its measurement host until the current image/font wait and measurements finish, using `try/finally`. A focused browser regression delayed a source image, selected GoWipe during that wait, verified the host remained connected until completion and was then removed, and verified the selected book opened with real page dimensions and no browser errors. That test passed. Focused ESLint passed after these corrections; TypeScript passed after the pagination changes, before the small cleanup refinement. The coordinator owns the complete final type/build/browser checks.
-
-The numerical raster-size audit has 100 unknown occurrences across 50 non-diagram image addresses (including posters and screenshots); it does **not** assert every screenshot’s smallest glyph is readable at book scale. Enlarging is available. The specific unrepaired source boundaries remain Daryl’s booking capture (store currently unavailable), Overtech’s AI-service viewport capture (documented local source offline), and retained Vantage demo dashboards without reproducible capture routes. See the artwork README for exact files. No fabricated replacements, prose edits or database writes were made. Phone emulation and at-rest DOM pages do not qualify physical pinch behavior or printed pages during flight/turn; those remain coordinator/B verification.
-
-The final pass changed only `Reader.tsx`, `paginate.ts`, `scripts/audit-book-pages.mjs`, `scripts/contact-book-pages.mjs`, `tests/browser/reports.spec.ts`, and this documentation/authoring evidence. All browser processes were closed and the shared GPU window released to the coordinator after the passing warm-up regression and contact-sheet generation.
-# Browser-suite isolation and final corrections — 2026-11-13
-
-The default browser server now uses `scripts/test-browser-server.mjs`: disposable in-memory PGlite, checked-in migrations, exact starter IDs with current authored pages, hidden/inactive estate fixture records, and hard overrides of both database URLs. `playwright.config.ts` refuses server reuse. Root supplied `.next-browser` isolation. The existing owner office3078 was not restarted or written. Explicit all-fourteen report/visitor tests still read that office; the legacy suite uses disposable3077.
-
-One complete 52-test run recorded 43 passes and nine failures (`.local-library/browser-suite-first-pass.log`). Corrections retained meaningful assertions: current report entry/return and fallback behavior, unambiguous chapter/house-book selectors, actual pagination totals, no fixture skip, and no custodian-hiding stylesheet. A genuine public/sample report navigation regression was fixed by using `sceneHref` outside the authenticated continuous office. The sample report's TOC numbers were darkened after axe measured 4.04/4.4:1 contrast; the report audit now includes the actual report container.
-
-Focused reruns closed every first-pass failure: seven of nine passed in `.local-library/browser-suite-recheck.log`; the prose-parity correction passed in `.local-library/browser-suite-final-recheck.log`; final axe and phone Plan checks both passed in `.local-library/browser-suite-final-focused.log` (2/2, 24.6s). Root corrected the tour/exit overlap and the reduced-motion draw probe. Final targeted ESLint passed (`.local-library/browser-lint-final.log`). This is cumulative qualification, not a claim of a single green 52-test run on the final tree; root owns that final run after production qualification.
-
-Final phone screenshots: `.local-library/evidence/navigation/phone-controls.png` and `phone-plan-open.png`. Both were visually inspected. The Plan and exit controls no longer cover each other or the map; the last screenshot shows a minor left-edge clip on the compact tour label, handed to root for the final mobile styling pass. No browser or disposable3077 server remained after verification; office3078 continued running.
-
-This correction pass changed `scripts/test-browser-server.mjs`, `playwright.config.ts`, `tests/browser/{books,estate,library,navigation}.spec.ts`, `components/library/ProjectReport.tsx`, `components/library/report.css`, `docs/PROJECT_REPORTS.md`, and this brief. Root owns the separate `next.config.ts`, `world.css`, and `visitor.spec.ts` corrections.
+<a id="pathway-a--project-showcases-in-the-books-and-everywhere-else"></a>
+<a id="what-to-build-in-order"></a>
+<a id="1-the-full-screen-report"></a>
+<a id="2-posters"></a>
+<a id="3-book-pages"></a>
+<a id="4-content-to-replace"></a>
+<a id="5-everywhere-else-a-project-appears"></a>
+<a id="6-so-the-owners-reports-drop-in-later"></a>
+<a id="ownership"></a>
+<a id="done-means"></a>
+<a id="read-first"></a>
+<a id="pathway-a-delivery--november-1213-2026"></a>
+<a id="final-staged-art-page-qualification--november-13"></a>
+<a id="browser-suite-isolation-and-final-corrections--2026-11-13"></a>

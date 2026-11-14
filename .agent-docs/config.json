@@ -1,0 +1,302 @@
+{
+  "version": 1,
+  "id": "overton-portfolio",
+  "purpose": "John Overton Bell\u2019s 2D portfolio, shared readers and the single Travellers Rest world.",
+  "lifecycle": "Cleanup implementation; see HANDOFF.md for exact release qualification.",
+  "budgetBytes": 8192,
+  "rules": [
+    "Start with HANDOFF.md; report implemented, tested and deployed behavior separately.",
+    "Authorize every admin entry; use officePage/Suspense for request and database reads.",
+    "Import Prisma through lib/db; never edit applied migrations or reset owner data.",
+    "Audit writes and snapshot content within the same transaction; respect display, scheduling and client redaction.",
+    "Preserve book/leaf identities, bookmark keys and resource disposal. Keep live voice disabled.",
+    "Use the guarded npm docs commands; private paths and authoring masters are excluded."
+  ],
+  "commands": [
+    "npm run typecheck",
+    "npm run lint",
+    "npm test",
+    "npm run test:safety",
+    "npm run build",
+    "npm run docs:check"
+  ],
+  "docs": [
+    {
+      "path": "HANDOFF.md",
+      "task": "Current outcome and qualification state"
+    },
+    {
+      "path": "docs/operations/release.md",
+      "task": "Release and recovery runbook",
+      "modules": [
+        "release-operations"
+      ]
+    },
+    {
+      "path": "knowledge/system-overview.md",
+      "task": "Application boundaries",
+      "status": "reference",
+      "modules": [
+        "public-routes"
+      ]
+    },
+    {
+      "path": "knowledge/route-compatibility.md",
+      "task": "Legacy URLs and current destinations",
+      "status": "reference",
+      "modules": [
+        "public-routes"
+      ]
+    },
+    {
+      "path": "knowledge/security-and-privacy.md",
+      "task": "Authorization and public projections",
+      "status": "reference",
+      "modules": [
+        "identity-office"
+      ]
+    },
+    {
+      "path": "knowledge/collection-publication.md",
+      "task": "Collection identity and publication",
+      "status": "reference",
+      "modules": [
+        "collection"
+      ]
+    },
+    {
+      "path": "knowledge/report-authoring.md",
+      "task": "Reports and shared reading surfaces",
+      "status": "reference",
+      "modules": [
+        "portfolio-reports"
+      ]
+    },
+    {
+      "path": "knowledge/admin-and-drafts.md",
+      "task": "Authenticated authoring and drafts",
+      "status": "reference",
+      "modules": [
+        "authoring"
+      ]
+    },
+    {
+      "path": "knowledge/content-promotion.md",
+      "task": "Drift-checked content promotion",
+      "status": "reference",
+      "modules": [
+        "release-operations"
+      ]
+    },
+    {
+      "path": "knowledge/database-contract.md",
+      "task": "Database migrations and schema contract",
+      "status": "reference",
+      "modules": [
+        "database"
+      ]
+    },
+    {
+      "path": "knowledge/integrations-and-environments.md",
+      "task": "Database and deployment environments",
+      "status": "reference",
+      "modules": [
+        "database"
+      ]
+    },
+    {
+      "path": "knowledge/local-development.md",
+      "task": "Local office, samples and development",
+      "status": "reference",
+      "modules": [
+        "identity-office"
+      ]
+    },
+    {
+      "path": "knowledge/estate-program.md",
+      "task": "Travellers Rest content program",
+      "status": "reference",
+      "modules": [
+        "estate-program"
+      ]
+    },
+    {
+      "path": "knowledge/world-runtime.md",
+      "task": "Renderer sessions and resource lifecycle",
+      "status": "reference",
+      "modules": [
+        "estate-engine"
+      ]
+    },
+    {
+      "path": "knowledge/navigation-and-bookmarks.md",
+      "task": "Visit history and saved reading places",
+      "status": "reference",
+      "modules": [
+        "estate-session"
+      ]
+    },
+    {
+      "path": "knowledge/book-rendering.md",
+      "task": "Native paper and HTML page measurements",
+      "status": "reference",
+      "modules": [
+        "native-books"
+      ]
+    },
+    {
+      "path": "knowledge/folio-and-media.md",
+      "task": "Viewing folio and soccer collection",
+      "status": "reference",
+      "modules": [
+        "exhibits-media"
+      ]
+    },
+    {
+      "path": "knowledge/historical-evidence.md",
+      "task": "Archive evidence, attribution and rights",
+      "status": "reference",
+      "modules": [
+        "estate-program"
+      ]
+    },
+    {
+      "path": "knowledge/asset-pipeline.md",
+      "task": "Immutable media and delivery inventory",
+      "status": "reference",
+      "modules": [
+        "asset-authoring"
+      ]
+    },
+    {
+      "path": "knowledge/authoring-tools.md",
+      "task": "Artwork and scene authoring tools",
+      "status": "reference",
+      "modules": [
+        "asset-authoring"
+      ]
+    },
+    {
+      "path": "knowledge/portrait-text.md",
+      "task": "Grounded portrait text and spending",
+      "status": "reference",
+      "modules": [
+        "portrait"
+      ]
+    },
+    {
+      "path": "knowledge/portrait-voice.md",
+      "task": "Voice policy and authored narration",
+      "status": "reference",
+      "modules": [
+        "portrait"
+      ]
+    },
+    {
+      "path": "knowledge/testing-and-performance.md",
+      "task": "Qualification and performance evidence",
+      "status": "reference",
+      "modules": [
+        "release-operations"
+      ]
+    },
+    {
+      "path": "knowledge/release-and-recovery.md",
+      "task": "Deployment, rollback and withdrawal",
+      "status": "reference",
+      "modules": [
+        "release-operations"
+      ]
+    },
+    {
+      "path": "knowledge/documentation-system.md",
+      "task": "Searchable OKF documentation",
+      "status": "reference",
+      "modules": [
+        "documentation"
+      ]
+    },
+    {
+      "path": "knowledge/future-worlds.md",
+      "task": "Future worlds and immersive VR",
+      "status": "reference",
+      "modules": [
+        "estate-engine"
+      ]
+    }
+  ],
+  "watch": [
+    "package.json"
+  ],
+  "decisions": [],
+  "codeMap": ".agent-docs/modules.json",
+  "knowledge": {
+    "root": "knowledge",
+    "routes": [
+      {
+        "task": "Routes and privacy",
+        "concepts": [
+          "system-overview",
+          "route-compatibility",
+          "security-and-privacy"
+        ]
+      },
+      {
+        "task": "Author and publish",
+        "concepts": [
+          "collection-publication",
+          "report-authoring",
+          "admin-and-drafts",
+          "content-promotion"
+        ]
+      },
+      {
+        "task": "Database and local work",
+        "concepts": [
+          "database-contract",
+          "integrations-and-environments",
+          "local-development"
+        ]
+      },
+      {
+        "task": "World and books",
+        "concepts": [
+          "estate-program",
+          "world-runtime",
+          "navigation-and-bookmarks",
+          "book-rendering",
+          "folio-and-media"
+        ]
+      },
+      {
+        "task": "Sources and assets",
+        "concepts": [
+          "historical-evidence",
+          "asset-pipeline",
+          "authoring-tools"
+        ]
+      },
+      {
+        "task": "Portrait",
+        "concepts": [
+          "portrait-text",
+          "portrait-voice"
+        ]
+      },
+      {
+        "task": "Qualification and recovery",
+        "concepts": [
+          "testing-and-performance",
+          "release-and-recovery"
+        ]
+      },
+      {
+        "task": "Knowledge and future scope",
+        "concepts": [
+          "documentation-system",
+          "future-worlds"
+        ]
+      }
+    ]
+  }
+}

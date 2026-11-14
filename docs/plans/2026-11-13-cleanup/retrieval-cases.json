@@ -1,0 +1,248 @@
+{
+  "status": "proposed-fixtures-not-executed",
+  "labels": "agent-authored; no independent human adjudication",
+  "baselineCommit": "a2f1daa5782b0bf147a9b4f69e55ea5055d5a0c3",
+  "cases": [
+    {
+      "id": "old-hall",
+      "partition": "development",
+      "query": "Why does view=world open the old hall and how do we replace that link?",
+      "expectedConcepts": [
+        "route-compatibility"
+      ],
+      "safetyCritical": true,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "room-mapping",
+      "partition": "development",
+      "query": "Where do periodicals and favorites-wing links go after removing the hall?",
+      "expectedConcepts": [
+        "route-compatibility"
+      ],
+      "safetyCritical": false,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "marked-page",
+      "partition": "development",
+      "query": "Return from a case study to the exact leaf and page of its book",
+      "expectedConcepts": [
+        "navigation-and-bookmarks"
+      ],
+      "safetyCritical": true,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "renderer-owner",
+      "partition": "development",
+      "query": "Who creates and disposes the scene renderer on exit?",
+      "expectedConcepts": [
+        "world-runtime"
+      ],
+      "safetyCritical": true,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "hidden-content",
+      "partition": "development",
+      "query": "Hide a study from guessed URLs sitemap and portrait citations",
+      "expectedConcepts": [
+        "collection-publication",
+        "security-and-privacy"
+      ],
+      "safetyCritical": true,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "database-target",
+      "partition": "development",
+      "query": "How do I verify the preview database is not production before migrations?",
+      "expectedConcepts": [
+        "integrations-and-environments",
+        "database-contract"
+      ],
+      "safetyCritical": true,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "owner-drift",
+      "partition": "development",
+      "query": "Promote reviewed writing without overwriting the owner edits",
+      "expectedConcepts": [
+        "content-promotion"
+      ],
+      "safetyCritical": true,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "immutable-image",
+      "partition": "development",
+      "query": "Replace an image with new bytes while preserving immutable delivery URLs",
+      "expectedConcepts": [
+        "asset-pipeline"
+      ],
+      "safetyCritical": true,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "portrait-budget",
+      "partition": "development",
+      "query": "Where are the per turn daily and monthly portrait limits enforced?",
+      "expectedConcepts": [
+        "portrait-text"
+      ],
+      "safetyCritical": true,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "voice-disabled",
+      "partition": "development",
+      "query": "Why is live voice disabled while narration still works?",
+      "expectedConcepts": [
+        "portrait-voice"
+      ],
+      "safetyCritical": true,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "code-rollback",
+      "partition": "development",
+      "query": "Which deployment is live and how do I roll the code back?",
+      "expectedConcepts": [
+        "release-and-recovery"
+      ],
+      "safetyCritical": true,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "gpu-ci",
+      "partition": "development",
+      "query": "Which checks need the workstation GPU instead of the GitHub runner?",
+      "expectedConcepts": [
+        "testing-and-performance"
+      ],
+      "safetyCritical": true,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "source-freshness",
+      "partition": "development",
+      "query": "How do I detect stale evidence after a cited source file changes?",
+      "expectedConcepts": [
+        "documentation-system"
+      ],
+      "safetyCritical": false,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "local-office",
+      "partition": "development",
+      "query": "Does the no login local office bypass authentication on Vercel?",
+      "expectedConcepts": [
+        "local-development",
+        "security-and-privacy"
+      ],
+      "safetyCritical": true,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "asset-rebuild",
+      "partition": "development",
+      "query": "What tools rebuild the Blender kit and media derivatives?",
+      "expectedConcepts": [
+        "authoring-tools",
+        "asset-pipeline"
+      ],
+      "safetyCritical": false,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "unknown-a",
+      "partition": "development",
+      "query": "Tell me the lunar elevator synchronization protocol",
+      "expectedConcepts": [],
+      "safetyCritical": false,
+      "expectedBehavior": "No answer; do not infer a feature from an unrelated match."
+    },
+    {
+      "id": "portfolio-hash",
+      "partition": "held-out",
+      "query": "Does a selected work bookmark get redirected into the world?",
+      "expectedConcepts": [
+        "route-compatibility"
+      ],
+      "safetyCritical": true,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "asset-withdrawal",
+      "partition": "held-out",
+      "query": "Does unpublishing a book revoke an already public video URL?",
+      "expectedConcepts": [
+        "release-and-recovery",
+        "asset-pipeline"
+      ],
+      "safetyCritical": true,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "legacy-db",
+      "partition": "held-out",
+      "query": "Can the normal build wipe a nonempty database without migration history?",
+      "expectedConcepts": [
+        "database-contract"
+      ],
+      "safetyCritical": true,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "book-geometry",
+      "partition": "held-out",
+      "query": "Where do paper geometry and printed HTML page measurements meet?",
+      "expectedConcepts": [
+        "book-rendering"
+      ],
+      "safetyCritical": false,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "history-attribution",
+      "partition": "held-out",
+      "query": "Which archive records support the letter exhibit and its reuse rights?",
+      "expectedConcepts": [
+        "historical-evidence"
+      ],
+      "safetyCritical": false,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "vr-state",
+      "partition": "held-out",
+      "query": "Can this world run in an immersive VR headset today?",
+      "expectedConcepts": [
+        "future-worlds"
+      ],
+      "safetyCritical": false,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "new-concept",
+      "partition": "held-out",
+      "query": "How do I add an OKF explanation and make agents find it?",
+      "expectedConcepts": [
+        "documentation-system"
+      ],
+      "safetyCritical": false,
+      "expectedBehavior": "Owning concept within top three; read source/runbook before acting."
+    },
+    {
+      "id": "unknown-b",
+      "partition": "held-out",
+      "query": "Where is chlorophyll submarine telemetry configured?",
+      "expectedConcepts": [],
+      "safetyCritical": false,
+      "expectedBehavior": "No answer; do not infer a feature from an unrelated match."
+    }
+  ]
+}

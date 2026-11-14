@@ -1,0 +1,83 @@
+{
+  "source": "AI Engineer agent-docs v1.2 local canonical snapshot; no upstream commit asserted",
+  "sourceDirectory": "C:\\Users\\Pinda\\Proyectos\\aiengineer\\ai-engineer-meta\\tools\\agent-docs",
+  "files": [
+    {
+      "path": "cli.mjs",
+      "sha256": "cbf3db2d709eac40839bfded4a3129a4a30d9ff3fde739da4f5f46b9d4b8c583"
+    },
+    {
+      "path": "semantic-maps.mjs",
+      "sha256": "f5a073b4b82968f65af11c2ad4c5332f971792185c033f28f412cbfd0ee55dd2"
+    },
+    {
+      "path": "knowledge.mjs",
+      "sha256": "8f44606ec6dabdb99c234baf546a176651fe2ca541205c41a6fc724daabec3b1"
+    },
+    {
+      "path": "retrieval.test.mjs",
+      "sha256": "f5fcaf53b155347b74576dc2ba5d69a715f0d8ac4dbb6d3331b80cffd234542c"
+    },
+    {
+      "path": "retrieval-benchmark.mjs",
+      "sha256": "8c630616516524edaa9bf674aa493822dc926fa7694edd9cf29d281979d00119"
+    },
+    {
+      "path": "cli.test.mjs",
+      "sha256": "6bbc23299b2cc144cdce22a7b64639643e6e881f398c1cf2699c1b2256796585"
+    },
+    {
+      "path": "vendor/js-yaml.LICENSE",
+      "sha256": "a07bc24468b9654ce76a547d47a2db282d07733b715db4c73a98bd63961f9550"
+    },
+    {
+      "path": "vendor/js-yaml.mjs",
+      "sha256": "efbc45850bf15f0c8ee3434983f512be656002d7507dc292c7ade4449b5d57fa"
+    },
+    {
+      "path": "vendor/README.md",
+      "sha256": "4bff77e407a696223ad2cd527da364a7c5b78150995fbfa6ca17994900d401f6"
+    },
+    {
+      "path": "fixtures/ks-context-v1/baseline-knowledge.mjs",
+      "sha256": "3f179cc3a001964dfc8ae162db0b61cc11a1f57a88943ce46b6811f4bd7e6667"
+    },
+    {
+      "path": "fixtures/ks-context-v1/manifest.json",
+      "sha256": "20c927cdaaecc00687d8730eefa6d90db11c504fe14bd2dc7be89b1fe6980f13"
+    },
+    {
+      "path": "fixtures/ks-context-v1/queries.json",
+      "sha256": "ebe63a7c9b4cd97422c0945a380c3add95427327fb0103a803617e40a6bf787b"
+    },
+    {
+      "path": "fixtures/ks-context-v1/README.md",
+      "sha256": "0548295caa35ac9a69f9b7c207ff6a849618e3ede2a80530c4e0e488ffa0929d"
+    },
+    {
+      "path": "fixtures/ks-context-v1/knowledge/durable-execution-and-recovery.md",
+      "sha256": "84a5482ae30e912e9eaec20bd971a1b98b93651b2d89e261e9a6cecbf34a8753"
+    },
+    {
+      "path": "fixtures/ks-context-v1/knowledge/preparation-and-publication.md",
+      "sha256": "29075107864d61f1c2077610c5fdc388d32820861ef0f27dc030c7605f1c619a"
+    },
+    {
+      "path": "fixtures/ks-context-v1/knowledge/retrieval-and-evidence.md",
+      "sha256": "4657aba790004ec9b30b1b2f15843cb95baeeea34dc2bfb30a558258da16b928"
+    },
+    {
+      "path": "fixtures/ks-context-v1/knowledge/schema-read-and-ingestion.md",
+      "sha256": "de6e1bc311eac4caea54fd9f8d85b3057b02f0906b29954a5531edae05edf4c8"
+    },
+    {
+      "path": "fixtures/ks-context-v1/knowledge/service-boundaries.md",
+      "sha256": "20f28f08dba1ea498a6eb30815e002c099af439eb62858aa1cce8b735caa34e3"
+    },
+    {
+      "path": "fixtures/ks-context-v1/knowledge/verification-and-admission.md",
+      "sha256": "b85bbaf53a22a75a89d4b9833f326b83319c3a589a89789f16a3487a662f56e9"
+    }
+  ],
+  "codeMapCapBytes": 131072
+}

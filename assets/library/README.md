@@ -1,3 +1,5 @@
+> Historical hall authoring guide, retired by the one-world cleanup. Commands below are provenance, not supported current release instructions. Shared posters remain current; see [current authoring](../../knowledge/authoring-tools.md).
+
 # The Library scene
 
 The editable source is `The Library.blend`. It contains the original hall, cabinets, rose window, gallery rail, pendants, circulation desk, armillary sphere, reading furniture, periodicals, evolution panels, botanicals, signage and computer station. The source retains named architectural parts and four packed timber textures. The WebGL variants batch permanent geometry by material. Interactive books and hit targets are placed at runtime.

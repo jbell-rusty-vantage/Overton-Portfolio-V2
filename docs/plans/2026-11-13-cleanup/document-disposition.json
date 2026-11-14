@@ -1,0 +1,743 @@
+{
+  "status": "executed; current qualification is in HANDOFF.md",
+  "baselineCommit": "a2f1daa5782b0bf147a9b4f69e55ea5055d5a0c3",
+  "trackedMarkdownCount": 49,
+  "allOriginalDocumentsClassified": true,
+  "documents": [
+    {
+      "source": "AGENTS.md",
+      "bytes": 2807,
+      "sha256": "0bd403bca6c441fca86ad5f494cb0d3b690e58fc425c10d69418383c59299b52",
+      "action": "compress-and-generate-navigation",
+      "target": "AGENTS.md",
+      "notes": "Preserve exact Next framework block; durable rules and short task routes only.",
+      "preservedOriginal": "AGENTS.md",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "CLAUDE.md",
+      "bytes": 12,
+      "sha256": "d631d88045f74623d568adfb4783b72e3d1b732330d749bc6c72e6648d4581d3",
+      "action": "retain-adapter",
+      "target": "CLAUDE.md",
+      "notes": "Keep @AGENTS.md; no parallel instruction copy.",
+      "preservedOriginal": "CLAUDE.md",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "HANDOFF.md",
+      "bytes": 29613,
+      "sha256": "ef2d9b74cf10e57e1339bfb67b2af7e830b5673cf061b4b8ad2bd855480087fa",
+      "action": "replace-with-current-state-and-archive-history",
+      "target": "HANDOFF.md",
+      "archive": "docs/archive/pre-cleanup/HANDOFF.md",
+      "notes": "Current state <=4 KiB; preserve original narrative and link history.",
+      "preservedOriginal": "docs/archive/pre-cleanup/HANDOFF.md",
+      "preservedSha256": "5e02902546ed6e043e633a65040808b6d90345106d128b2099f2d5963ea4078d",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "README.md",
+      "bytes": 3224,
+      "sha256": "1d02d8c0dbcb0f03d30e9a64f13c4294fad9f24432f6491480cff566573ebf7a",
+      "action": "rewrite-current-entrypoint",
+      "target": "README.md",
+      "notes": "2D portfolio and Travellers Rest, actual safe commands; remove old hall/wipe instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/README.md",
+      "preservedSha256": "7833f0591495227d30fb24e9ff219bb89c92e06ef290bb10fa50a4f3656f04cb",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "assets/library/README.md",
+      "bytes": 3635,
+      "sha256": "104db9fb0e91328a4d74fa3414ec137d91a349cecd973927dc524f3ef78506f0",
+      "action": "retain-and-label-retired-hall-provenance",
+      "target": "assets/library/README.md",
+      "concepts": [
+        "knowledge/asset-pipeline.md",
+        "knowledge/authoring-tools.md"
+      ],
+      "notes": "Keep asset-relative provenance and source links intact; audit current statements. Source masters are not deletion candidates.",
+      "preservedOriginal": "assets/library/README.md",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "assets/library/posters/README.md",
+      "bytes": 5043,
+      "sha256": "02a23f04e3c72c813a224777c13092b3068a4e48990a50120e95becfd59f16ba",
+      "action": "retain-asset-source-and-credit",
+      "target": "assets/library/posters/README.md",
+      "concepts": [
+        "knowledge/asset-pipeline.md",
+        "knowledge/authoring-tools.md"
+      ],
+      "notes": "Keep asset-relative provenance and source links intact; audit current statements. Source masters are not deletion candidates.",
+      "preservedOriginal": "assets/library/posters/README.md",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "assets/travellers-rest/archive/README.md",
+      "bytes": 10629,
+      "sha256": "94d224900ccc645af206c59ef1f965ca6ecf1d6d8bcde3db14cc41c363f3a95f",
+      "action": "retain-asset-source-and-credit",
+      "target": "assets/travellers-rest/archive/README.md",
+      "concepts": [
+        "knowledge/historical-evidence.md",
+        "knowledge/authoring-tools.md"
+      ],
+      "notes": "Keep asset-relative provenance and source links intact; audit current statements. Source masters are not deletion candidates.",
+      "preservedOriginal": "assets/travellers-rest/archive/README.md",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "assets/travellers-rest/archive/history-research/README.md",
+      "bytes": 7609,
+      "sha256": "e0a03ec1d29f7f83c260b1a3da87f7495f0c95e091f8ebae08a90da39144db77",
+      "action": "retain-asset-source-and-credit",
+      "target": "assets/travellers-rest/archive/history-research/README.md",
+      "concepts": [
+        "knowledge/historical-evidence.md",
+        "knowledge/authoring-tools.md"
+      ],
+      "notes": "Keep asset-relative provenance and source links intact; audit current statements. Source masters are not deletion candidates.",
+      "preservedOriginal": "assets/travellers-rest/archive/history-research/README.md",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "assets/travellers-rest/grounds/README.md",
+      "bytes": 7832,
+      "sha256": "b55924a2649a64cd7bec24e3666318f596fa7fe1fe206c301df6679ee14ed973",
+      "action": "retain-asset-source-and-credit",
+      "target": "assets/travellers-rest/grounds/README.md",
+      "concepts": [
+        "knowledge/historical-evidence.md",
+        "knowledge/authoring-tools.md"
+      ],
+      "notes": "Keep asset-relative provenance and source links intact; audit current statements. Source masters are not deletion candidates.",
+      "preservedOriginal": "assets/travellers-rest/grounds/README.md",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "assets/travellers-rest/kit/README.md",
+      "bytes": 15188,
+      "sha256": "70f3f224f567b508a8ab6bbcb1f36880c6c962b18817b1fd384a180f2ec52d84",
+      "action": "retain-asset-source-and-credit",
+      "target": "assets/travellers-rest/kit/README.md",
+      "concepts": [
+        "knowledge/historical-evidence.md",
+        "knowledge/authoring-tools.md"
+      ],
+      "notes": "Keep asset-relative provenance and source links intact; audit current statements. Source masters are not deletion candidates.",
+      "preservedOriginal": "assets/travellers-rest/kit/README.md",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "assets/travellers-rest/survey/correspondence.md",
+      "bytes": 26798,
+      "sha256": "8066ee6c29837ebdb5741cc8039913f60c8cc3f05a93900ac1b6b142444e5c86",
+      "action": "retain-asset-source-and-credit",
+      "target": "assets/travellers-rest/survey/correspondence.md",
+      "concepts": [
+        "knowledge/historical-evidence.md",
+        "knowledge/authoring-tools.md"
+      ],
+      "notes": "Keep asset-relative provenance and source links intact; audit current statements. Source masters are not deletion candidates.",
+      "preservedOriginal": "assets/travellers-rest/survey/correspondence.md",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/ADMIN.md",
+      "bytes": 5786,
+      "sha256": "21ecaed3da966d27107a90c682cb3f521dc44015139597845e2bfc2201f4d091",
+      "action": "consolidate-current-guidance-and-archive-original",
+      "targets": [
+        "knowledge/admin-and-drafts.md",
+        "docs/operations/admin.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/ADMIN.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Recheck source and tests before carrying statements into current concepts/runbooks.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/ADMIN.md",
+      "preservedSha256": "246ef7c935bb40f6232ce0ce87752f024fb194937e4ee608e1dd4d187de2a159",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/ARCHITECTURE.md",
+      "bytes": 6402,
+      "sha256": "0ed496b5f58959445ddc9aacbbbcaee457a1ccb82bfa5339fe4db298d23bd1e2",
+      "action": "consolidate-current-guidance-and-archive-original",
+      "targets": [
+        "knowledge/system-overview.md",
+        "knowledge/integrations-and-environments.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/ARCHITECTURE.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Recheck source and tests before carrying statements into current concepts/runbooks.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/ARCHITECTURE.md",
+      "preservedSha256": "69535a8db75ba41f7fa4d737b673be388a77dc2e5524071d77174b52a53c96ff",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/ARCHIVE_VERIFICATION.md",
+      "bytes": 1684,
+      "sha256": "dc59df333d43b3d67217ecc47dfea5745e22891a5c295a00dcdd58d7448b33a0",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/historical-evidence.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/ARCHIVE_VERIFICATION.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/ARCHIVE_VERIFICATION.md",
+      "preservedSha256": "dc59df333d43b3d67217ecc47dfea5745e22891a5c295a00dcdd58d7448b33a0",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/BOOKS_AND_VIEWING_FOLIO.md",
+      "bytes": 7836,
+      "sha256": "de2780a12264fcde0aa6faf614a2d74f2cc9daa13d502b0607614a1fcc4980fd",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/book-rendering.md",
+        "knowledge/folio-and-media.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/BOOKS_AND_VIEWING_FOLIO.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/BOOKS_AND_VIEWING_FOLIO.md",
+      "preservedSha256": "de2780a12264fcde0aa6faf614a2d74f2cc9daa13d502b0607614a1fcc4980fd",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/DATA_MODEL.md",
+      "bytes": 8292,
+      "sha256": "c49d89f5f928774ea65554cdb2d6bc859b550e0252393af039b8312701c62c75",
+      "action": "consolidate-current-guidance-and-archive-original",
+      "targets": [
+        "knowledge/database-contract.md",
+        "knowledge/collection-publication.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/DATA_MODEL.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Recheck source and tests before carrying statements into current concepts/runbooks.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/DATA_MODEL.md",
+      "preservedSha256": "84587aa703013a00ee0ffbc6c07e563a5dec71ed42f60543e6bed2ae09f8860e",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/DEPLOYMENT_EXECUTION_BRIEF.md",
+      "bytes": 27133,
+      "sha256": "411a689cd2e2261480412b294f935dfd395f8fbd311d812353a568720354cfff",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/release-and-recovery.md",
+        "knowledge/route-compatibility.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/DEPLOYMENT_EXECUTION_BRIEF.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/DEPLOYMENT_EXECUTION_BRIEF.md",
+      "preservedSha256": "411a689cd2e2261480412b294f935dfd395f8fbd311d812353a568720354cfff",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/FINAL_ORGANIZATION_AND_DEPLOYMENT.md",
+      "bytes": 9178,
+      "sha256": "66a194906880359a46f0b5d3dfbad2b506ac24a5ae0c3e2f567f031efcced8b3",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/content-promotion.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/FINAL_ORGANIZATION_AND_DEPLOYMENT.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/FINAL_ORGANIZATION_AND_DEPLOYMENT.md",
+      "preservedSha256": "66a194906880359a46f0b5d3dfbad2b506ac24a5ae0c3e2f567f031efcced8b3",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/ITERATING_ON_THE_LIBRARY.md",
+      "bytes": 14023,
+      "sha256": "f2976bb6d98321db15fdd6826f8f0fe6ee5e95885146bbd395b3a5d94e401319",
+      "action": "consolidate-current-guidance-and-archive-original",
+      "targets": [
+        "knowledge/authoring-tools.md",
+        "knowledge/asset-pipeline.md",
+        "knowledge/local-development.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/ITERATING_ON_THE_LIBRARY.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Recheck source and tests before carrying statements into current concepts/runbooks.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/ITERATING_ON_THE_LIBRARY.md",
+      "preservedSha256": "f2976bb6d98321db15fdd6826f8f0fe6ee5e95885146bbd395b3a5d94e401319",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/LIBRARY_3D.md",
+      "bytes": 4843,
+      "sha256": "3aa91d5aedaa9c25a56423ce51fd2f0d494ca8381aa48dd74fcb66d40bef9914",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/system-overview.md",
+        "knowledge/world-runtime.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/LIBRARY_3D.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/LIBRARY_3D.md",
+      "preservedSha256": "4d2e69b8d52a9b992249836f863bf26088f325a81402d56e24661370ceac5ac2",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/LIBRARY_IMPLEMENTATION_PLAN.md",
+      "bytes": 99811,
+      "sha256": "d4cd576290eba10b1ecd1d4500c6f3a70039edfa8f4d39952959e665bcb995fc",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/system-overview.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/LIBRARY_IMPLEMENTATION_PLAN.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/LIBRARY_IMPLEMENTATION_PLAN.md",
+      "preservedSha256": "f73c1b84ddf451b65f754a5b4d5529fc88ccfffc9eb44f3cc16f309de2f08974",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/LIBRARY_INTAKE.md",
+      "bytes": 2855,
+      "sha256": "a316167e89f000e4e72b7f6b6308f16b65409ba9542d9f3cb7a66d1f809d6a2f",
+      "action": "consolidate-current-guidance-and-archive-original",
+      "targets": [
+        "knowledge/report-authoring.md",
+        "knowledge/admin-and-drafts.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/LIBRARY_INTAKE.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Recheck source and tests before carrying statements into current concepts/runbooks.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/LIBRARY_INTAKE.md",
+      "preservedSha256": "8715f20784a45bbc9984157a3aa947fca332ae0db8d745b146bc232f805596da",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/LOCAL_PREVIEW.md",
+      "bytes": 9407,
+      "sha256": "eabc7f9322c52d1aa20b6618bc2fafc113b1234de073a3578ec2f66e884a075d",
+      "action": "consolidate-current-guidance-and-archive-original",
+      "targets": [
+        "knowledge/local-development.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/LOCAL_PREVIEW.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Recheck source and tests before carrying statements into current concepts/runbooks.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/LOCAL_PREVIEW.md",
+      "preservedSha256": "9ac370236427ef148c7a2014b801f31ce3f8c1ec05b0ceada0940987bb5e21ef",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/MIGRATION_STATUS.md",
+      "bytes": 6940,
+      "sha256": "7426f828ee05d2e7d07cd481baf5d688ef12c0af4458978fb9d542ff27727087",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/database-contract.md",
+        "knowledge/release-and-recovery.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/MIGRATION_STATUS.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/MIGRATION_STATUS.md",
+      "preservedSha256": "7426f828ee05d2e7d07cd481baf5d688ef12c0af4458978fb9d542ff27727087",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/NEXT_SESSION.md",
+      "bytes": 18524,
+      "sha256": "cab4e6e6d3ac6c3365242a47756bdc499d94bc6029cb29467387145e219a1145",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/system-overview.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/NEXT_SESSION.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/NEXT_SESSION.md",
+      "preservedSha256": "40b5d02eafc6da2dc060ed80801dbd7eedd5248e74dfa2f0367d715302c75325",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/OCTAGON_BRIEF.md",
+      "bytes": 16716,
+      "sha256": "ab17d53cf47c725dd9763af4f1c62b3bd501ee850f3672fc77194f51357df3b2",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/future-worlds.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/OCTAGON_BRIEF.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/OCTAGON_BRIEF.md",
+      "preservedSha256": "ab17d53cf47c725dd9763af4f1c62b3bd501ee850f3672fc77194f51357df3b2",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/OPERATIONS.md",
+      "bytes": 7032,
+      "sha256": "4962f1343c69b956c3fbe825dbac0250816952e14008c7641ff3b37170216a05",
+      "action": "consolidate-current-guidance-and-archive-original",
+      "targets": [
+        "knowledge/release-and-recovery.md",
+        "knowledge/integrations-and-environments.md",
+        "docs/operations/release-and-recovery.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/OPERATIONS.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Recheck source and tests before carrying statements into current concepts/runbooks.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/OPERATIONS.md",
+      "preservedSha256": "14298f2350890c5701597ede8c452cfba33a21c610bc1e754e4cf70032a0cc08",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/OVERTON_HISTORY.md",
+      "bytes": 15395,
+      "sha256": "82c57b0d0ccd7b0d14a976ba3461b4bb0399fb0f069e0a237c5f0f284d70825e",
+      "action": "consolidate-current-guidance-and-archive-original",
+      "targets": [
+        "knowledge/historical-evidence.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/OVERTON_HISTORY.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Recheck source and tests before carrying statements into current concepts/runbooks.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/OVERTON_HISTORY.md",
+      "preservedSha256": "82c57b0d0ccd7b0d14a976ba3461b4bb0399fb0f069e0a237c5f0f284d70825e",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/PATHWAY_PORTRAIT.md",
+      "bytes": 24454,
+      "sha256": "7c2f6e40cbfd5194aff84dd2075651ca9d75958765bdc6d397e66e51d98e765c",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/portrait-text.md",
+        "knowledge/portrait-voice.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/PATHWAY_PORTRAIT.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/PATHWAY_PORTRAIT.md",
+      "preservedSha256": "7c2f6e40cbfd5194aff84dd2075651ca9d75958765bdc6d397e66e51d98e765c",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/PATHWAY_SHOWCASES.md",
+      "bytes": 23340,
+      "sha256": "5f87c54c3f43352f984eaf12572766ca2a5d766e50d924a8aa94763b7fd62db9",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/report-authoring.md",
+        "knowledge/content-promotion.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/PATHWAY_SHOWCASES.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/PATHWAY_SHOWCASES.md",
+      "preservedSha256": "5f87c54c3f43352f984eaf12572766ca2a5d766e50d924a8aa94763b7fd62db9",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/PORTRAIT_IMPLEMENTATION.md",
+      "bytes": 14653,
+      "sha256": "6bfbfaf54a5f3887eaf012316b1970a7c6ea63987cbb0a3553a8b0603663a6dd",
+      "action": "consolidate-current-guidance-and-archive-original",
+      "targets": [
+        "knowledge/portrait-text.md",
+        "knowledge/security-and-privacy.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/PORTRAIT_IMPLEMENTATION.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Recheck source and tests before carrying statements into current concepts/runbooks.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/PORTRAIT_IMPLEMENTATION.md",
+      "preservedSha256": "6bfbfaf54a5f3887eaf012316b1970a7c6ea63987cbb0a3553a8b0603663a6dd",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/PORTRAIT_LIVE_NEXT.md",
+      "bytes": 15754,
+      "sha256": "bd164d2502a2e0d32fcb6bc581c16989a4023f57607f78ab497508e0a510473a",
+      "action": "consolidate-current-guidance-and-archive-original",
+      "targets": [
+        "knowledge/portrait-text.md",
+        "knowledge/portrait-voice.md",
+        "docs/operations/portrait.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/PORTRAIT_LIVE_NEXT.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Recheck source and tests before carrying statements into current concepts/runbooks.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/PORTRAIT_LIVE_NEXT.md",
+      "preservedSha256": "193c5e5216f5c4f151a8c8226e0827f5eb1ecd6832c3cf1b7bc990df97cdb9fb",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/PORTRAIT_RESEARCH_AND_VOICE.md",
+      "bytes": 18260,
+      "sha256": "004843bd173ca87ce12eee9c509c4a8a0e46bbe9e1f1f4adb430ded0112450a3",
+      "action": "consolidate-current-guidance-and-archive-original",
+      "targets": [
+        "knowledge/historical-evidence.md",
+        "knowledge/portrait-voice.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/PORTRAIT_RESEARCH_AND_VOICE.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Recheck source and tests before carrying statements into current concepts/runbooks.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/PORTRAIT_RESEARCH_AND_VOICE.md",
+      "preservedSha256": "004843bd173ca87ce12eee9c509c4a8a0e46bbe9e1f1f4adb430ded0112450a3",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/PROJECT_POSTERS.md",
+      "bytes": 7756,
+      "sha256": "3247ea195311f02d2a19f066b853d8206446c43e37a9e4bc80f4bae15f577d0c",
+      "action": "consolidate-current-guidance-and-archive-original",
+      "targets": [
+        "knowledge/asset-pipeline.md",
+        "knowledge/report-authoring.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/PROJECT_POSTERS.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Recheck source and tests before carrying statements into current concepts/runbooks.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/PROJECT_POSTERS.md",
+      "preservedSha256": "3247ea195311f02d2a19f066b853d8206446c43e37a9e4bc80f4bae15f577d0c",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/PROJECT_REPORTS.md",
+      "bytes": 15304,
+      "sha256": "5a7d2769c5f7a7716c8c5fec32e6cf8847cecb177cb0005d23dd98de49940dd4",
+      "action": "consolidate-current-guidance-and-archive-original",
+      "targets": [
+        "knowledge/report-authoring.md",
+        "docs/operations/authoring.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/PROJECT_REPORTS.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Recheck source and tests before carrying statements into current concepts/runbooks.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/PROJECT_REPORTS.md",
+      "preservedSha256": "5a7d2769c5f7a7716c8c5fec32e6cf8847cecb177cb0005d23dd98de49940dd4",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/SCHEMA_REFERENCE.md",
+      "bytes": 53317,
+      "sha256": "72705307b2a6c2c7d972a99519d60890d7ff105593d40044b7e1ffc988f0f7ac",
+      "action": "regenerate-reference-and-retain-pointer",
+      "targets": [
+        "docs/reference/schema.md",
+        "knowledge/database-contract.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/SCHEMA_REFERENCE.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Recheck source and tests before carrying statements into current concepts/runbooks.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/SCHEMA_REFERENCE.md",
+      "preservedSha256": "72705307b2a6c2c7d972a99519d60890d7ff105593d40044b7e1ffc988f0f7ac",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/SESSION_INTEGRATION.md",
+      "bytes": 19075,
+      "sha256": "4d7071a7ac85a469ac5c9b131d835357085cefe867ab0cc80d73f3bedb418d39",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/testing-and-performance.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/SESSION_INTEGRATION.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/SESSION_INTEGRATION.md",
+      "preservedSha256": "4d7071a7ac85a469ac5c9b131d835357085cefe867ab0cc80d73f3bedb418d39",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/SHOWCASES_AND_2D_DELIVERY.md",
+      "bytes": 13754,
+      "sha256": "6c6f6d0986af2eb9af0de9980dcc1700b2500db306158e10cd33c9bf21db680a",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/content-promotion.md",
+        "knowledge/testing-and-performance.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/SHOWCASES_AND_2D_DELIVERY.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/SHOWCASES_AND_2D_DELIVERY.md",
+      "preservedSha256": "6c6f6d0986af2eb9af0de9980dcc1700b2500db306158e10cd33c9bf21db680a",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/SHOWCASES_AND_2D_NEXT.md",
+      "bytes": 11212,
+      "sha256": "7e4788fdc498eb22ea80fe2ab66f843a5550128dd7f9a85c74d4393f695b606b",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/content-promotion.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/SHOWCASES_AND_2D_NEXT.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/SHOWCASES_AND_2D_NEXT.md",
+      "preservedSha256": "7e4788fdc498eb22ea80fe2ab66f843a5550128dd7f9a85c74d4393f695b606b",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/TRAVELLERS_REST.md",
+      "bytes": 16365,
+      "sha256": "59c1c8fe7166e9d3dbc84eeaf72594a9d4e1a66d2c5417ab48e227f6b41ec35d",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/historical-evidence.md",
+        "knowledge/estate-program.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/TRAVELLERS_REST.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/TRAVELLERS_REST.md",
+      "preservedSha256": "59c1c8fe7166e9d3dbc84eeaf72594a9d4e1a66d2c5417ab48e227f6b41ec35d",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/TRAVELLERS_REST_CONTINUOUS.md",
+      "bytes": 20983,
+      "sha256": "b9438102997b513bdb750cb482274ee1735f8068575fecd8f9b7d413a8b3e785",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/estate-program.md",
+        "knowledge/navigation-and-bookmarks.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/TRAVELLERS_REST_CONTINUOUS.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/TRAVELLERS_REST_CONTINUOUS.md",
+      "preservedSha256": "b9438102997b513bdb750cb482274ee1735f8068575fecd8f9b7d413a8b3e785",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/TRAVELLERS_REST_DELIVERY.md",
+      "bytes": 11665,
+      "sha256": "f6e8d4350d1f92611c851be62dd224822d57644f9e577cf0470fdcd781802a6c",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/estate-program.md",
+        "knowledge/testing-and-performance.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/TRAVELLERS_REST_DELIVERY.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/TRAVELLERS_REST_DELIVERY.md",
+      "preservedSha256": "f6e8d4350d1f92611c851be62dd224822d57644f9e577cf0470fdcd781802a6c",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/TRAVELLERS_REST_IMMERSIVE.md",
+      "bytes": 19210,
+      "sha256": "714d8d7e52a82269739efdd4c33e51c0f5a5048cb0cd6e2bca7b6ec186505f65",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/world-runtime.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/TRAVELLERS_REST_IMMERSIVE.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/TRAVELLERS_REST_IMMERSIVE.md",
+      "preservedSha256": "714d8d7e52a82269739efdd4c33e51c0f5a5048cb0cd6e2bca7b6ec186505f65",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/TRAVELLERS_REST_NEXT.md",
+      "bytes": 29511,
+      "sha256": "71bb75967323c3f4ea70abf0042e4bce2cb10c555cd09046ec3c62e0c0b225b1",
+      "action": "archive-and-extract-valid-facts",
+      "targets": [
+        "knowledge/world-runtime.md",
+        "knowledge/authoring-tools.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/TRAVELLERS_REST_NEXT.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Historical assertions are dated evidence, not current instructions.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/TRAVELLERS_REST_NEXT.md",
+      "preservedSha256": "d13ecb6e37747ded8d9280ce0e5ab54cd9d0615ca5f1f6a5997c68b4f46f6540",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/TRAVELLERS_REST_SURVEY.md",
+      "bytes": 22021,
+      "sha256": "54bd4b928c4c4b0fab680c8c038cbcc8f5ff78f5173b36e282cbb2250a0b3aa4",
+      "action": "consolidate-current-guidance-and-archive-original",
+      "targets": [
+        "knowledge/historical-evidence.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/TRAVELLERS_REST_SURVEY.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Recheck source and tests before carrying statements into current concepts/runbooks.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/TRAVELLERS_REST_SURVEY.md",
+      "preservedSha256": "54bd4b928c4c4b0fab680c8c038cbcc8f5ff78f5173b36e282cbb2250a0b3aa4",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/WORLD_ENGINE.md",
+      "bytes": 14035,
+      "sha256": "3210db99a051df1fc0591a71ed0cafbf73af75079b0fa8e342163a630ceb4a8c",
+      "action": "consolidate-current-guidance-and-archive-original",
+      "targets": [
+        "knowledge/world-runtime.md",
+        "knowledge/book-rendering.md",
+        "knowledge/navigation-and-bookmarks.md"
+      ],
+      "archive": "docs/archive/pre-cleanup/WORLD_ENGINE.md",
+      "compatibility": "Keep a short status-labelled pointer at the old path when established inbound links require it; migrate live links and anchors first.",
+      "notes": "Recheck source and tests before carrying statements into current concepts/runbooks.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/WORLD_ENGINE.md",
+      "preservedSha256": "c2f195f227ef8b1d4754f927e0f11ed377d977e0c0b99ea2a0382c89f1d174c7",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/library-world-concepts/README.md",
+      "bytes": 12861,
+      "sha256": "decac66740f16a7f6d62acb15a0535222a53fff5bdbf0a6d5734593a412239cf",
+      "action": "retain-and-label-historical-concepts",
+      "target": "docs/library-world-concepts/README.md",
+      "concepts": [
+        "knowledge/future-worlds.md"
+      ],
+      "notes": "Keep image-relative paths; do not treat rejected/unbuilt worlds as current requirements.",
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/library-world-concepts/README.md",
+      "preservedSha256": "decac66740f16a7f6d62acb15a0535222a53fff5bdbf0a6d5734593a412239cf",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/releases/2026-11-13/README.md",
+      "bytes": 14440,
+      "sha256": "e65dde7ee651eb496c02c84623ed4e9e60bc53c2fa04c63446d045e2ede98f67",
+      "action": "retain-immutable-release-evidence",
+      "target": "docs/releases/2026-11-13/README.md",
+      "concepts": [
+        "knowledge/release-and-recovery.md"
+      ],
+      "notes": "Do not rewrite historical measured or deployment state to imply the later cleanup was already deployed.",
+      "preservedOriginal": "docs/releases/2026-11-13/README.md",
+      "executionStatus": "accounted-for"
+    },
+    {
+      "source": "docs/travellers-rest-review/artwork.md",
+      "bytes": 8244,
+      "sha256": "7e30589490c455c99d08a610956f0cd66f66b3d98c76347072db519ddbd92773",
+      "action": "retain-evidence-and-credits",
+      "target": "docs/travellers-rest-review/artwork.md",
+      "concepts": [
+        "knowledge/historical-evidence.md",
+        "knowledge/asset-pipeline.md"
+      ],
+      "preservedOriginal": "docs/archive/pre-cleanup/docs/travellers-rest-review/artwork.md",
+      "preservedSha256": "7e30589490c455c99d08a610956f0cd66f66b3d98c76347072db519ddbd92773",
+      "executionStatus": "accounted-for"
+    }
+  ]
+}
