@@ -111,6 +111,10 @@ for (const mode of modes) {
   page.on("pageerror", (e) => errors.push(e.message.slice(0, 200)));
   await page.goto(base + "#cabinet", { waitUntil: "domcontentloaded" });
   await page.waitForSelector("canvas[data-scene=ready]", { timeout: 120000 });
+  if (!await page.evaluate(() => !!window.estateEngine)) {
+    await browser.close();
+    throw Error("Book surface audit requires authenticated review mode with its engine probe; use /admin/preview/library and RELEASE_STORAGE_STATE.");
+  }
   await page.addStyleTag({ content: ".tw-reach,.tw-tip{display:none!important}" });
   const greeting = page.getByRole("button", { name: "Close the custodian", exact: true });
   if (await greeting.isVisible()) await greeting.click();
