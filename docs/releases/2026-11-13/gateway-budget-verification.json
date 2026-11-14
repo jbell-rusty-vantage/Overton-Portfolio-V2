@@ -1,0 +1,39 @@
+{
+  "at": "2026-11-14T02:10:41.854Z",
+  "project": [
+    {
+      "quotaEntityId": "prj_VIqs9sg7nSQAVliEFhSuzpt3L4qv",
+      "scopeType": "project",
+      "scopeId": "prj_VIqs9sg7nSQAVliEFhSuzpt3L4qv",
+      "limitAmount": 5,
+      "currentSpend": 0.00197875,
+      "currentByokSpend": 0,
+      "includeByokInQuota": true,
+      "refreshPeriod": "monthly",
+      "active": true,
+      "archived": false,
+      "createdAt": 1794619211906,
+      "updatedAt": 1794619392965
+    }
+  ],
+  "key": [
+    {
+      "quotaEntityId": "api_key_id_9a1fDMB8ZbsSIIwLLdFcDZ1RqNv0lZp4PyMzMPnoHaanT3PO",
+      "scopeType": "api-key",
+      "scopeId": "9a1fDMB8ZbsSIIwLLdFcDZ1RqNv0lZp4PyMzMPnoHaanT3PO",
+      "limitAmount": 1,
+      "currentSpend": 0.00197875,
+      "currentByokSpend": 0,
+      "includeByokInQuota": true,
+      "refreshPeriod": "daily",
+      "active": true,
+      "archived": false,
+      "alertThresholds": [
+        75,
+        100
+      ],
+      "createdAt": 1794619353302,
+      "updatedAt": 1794622055512
+    }
+  ]
+}

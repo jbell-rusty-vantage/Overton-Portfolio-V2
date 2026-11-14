@@ -1,0 +1,37 @@
+{
+  "at": "2026-11-14T02:11:09.931Z",
+  "events": [
+    {
+      "type": "pointerdown",
+      "duration": 80,
+      "interactionId": 7020
+    },
+    {
+      "type": "pointerup",
+      "duration": 80,
+      "interactionId": 7020
+    },
+    {
+      "type": "click",
+      "duration": 80,
+      "interactionId": 7020
+    },
+    {
+      "type": "pointerdown",
+      "duration": 80,
+      "interactionId": 7027
+    },
+    {
+      "type": "pointerup",
+      "duration": 80,
+      "interactionId": 7027
+    },
+    {
+      "type": "click",
+      "duration": 80,
+      "interactionId": 7027
+    }
+  ],
+  "maxObservedDurationMs": 80,
+  "scope": "Event Timing for a page-turn and report-open interaction; durations below 16 ms are not emitted. This is not field INP."
+}

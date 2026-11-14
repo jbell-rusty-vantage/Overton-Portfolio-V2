@@ -1,0 +1,65 @@
+{
+  "at": "2026-11-14T02:09:31.077Z",
+  "base": "https://overton-portfolio-v2.vercel.app",
+  "checks": [
+    {
+      "path": "/",
+      "rsc": false,
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "hiddenManuscriptTitlesAbsent": true,
+      "reviewedSupportingNarrationUrlPresent": false
+    },
+    {
+      "path": "/",
+      "rsc": true,
+      "status": 200,
+      "type": "text/x-component",
+      "hiddenManuscriptTitlesAbsent": true,
+      "reviewedSupportingNarrationUrlPresent": false
+    },
+    {
+      "path": "/library",
+      "rsc": false,
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "hiddenManuscriptTitlesAbsent": true,
+      "reviewedSupportingNarrationUrlPresent": true
+    },
+    {
+      "path": "/library",
+      "rsc": true,
+      "status": 200,
+      "type": "text/x-component",
+      "hiddenManuscriptTitlesAbsent": true,
+      "reviewedSupportingNarrationUrlPresent": true
+    },
+    {
+      "path": "/projects/gowipe",
+      "rsc": false,
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "hiddenManuscriptTitlesAbsent": true,
+      "reviewedSupportingNarrationUrlPresent": false
+    },
+    {
+      "path": "/projects/gowipe",
+      "rsc": true,
+      "status": 200,
+      "type": "text/x-component",
+      "hiddenManuscriptTitlesAbsent": true,
+      "reviewedSupportingNarrationUrlPresent": false
+    },
+    {
+      "path": "/admin/media",
+      "status": 307,
+      "anonymousDenied": true
+    },
+    {
+      "path": "/api/admin/blob",
+      "status": 401,
+      "anonymousDenied": true
+    }
+  ],
+  "scope": "Hidden manuscripts and authenticated office reads/signing. Reviewed public estate narration assets are independently public; hiding a book does not revoke media."
+}

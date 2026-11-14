@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-14T02:03:13.683Z",
+  "pathname": "release-verification/5181393084d15dd027f1bc7d8e06108c09b0ddef704db1a1727d18210bc8e01f/withdrawal.txt",
+  "sha256": "5181393084d15dd027f1bc7d8e06108c09b0ddef704db1a1727d18210bc8e01f",
+  "readback": "passed",
+  "deleted": true,
+  "metadataAbsent": true,
+  "directStatus": 404
+}

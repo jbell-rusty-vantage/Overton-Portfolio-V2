@@ -19,6 +19,10 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
+      - name: Install media inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ffmpeg
       - run: npm ci
       - run: npx next typegen
       - run: npm run release:check

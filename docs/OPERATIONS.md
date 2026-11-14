@@ -113,3 +113,8 @@ SELECT * FROM v_pending_approvals;
 | `P3009 failed migrations` | `npx prisma migrate resolve --rolled-back <name>` (or `--applied`) against the direct URL, then redeploy. |
 | Blob upload: "No blob credentials found" | Locally: `vercel env pull` (OIDC token) or set `BLOB_READ_WRITE_TOKEN`. On Vercel: make sure the Blob store is connected to the project. |
 | Admin redirect loop | Clear the `lib_admin_session` cookie; check `admin_sessions` rows exist/not expired. |
+
+
+## November 13 production release
+
+The active site is https://overton-portfolio-v2.vercel.app/; Travellers Rest is `/library` and management is `/admin`. See [the verified release record](releases/2026-11-13/README.md) for the exact deployment, separate Preview/Production database fingerprints, signed portrait configuration, content/asset receipts and rollback commands. Preserve the ignored private baselines before any later release. Code rollback, content withdrawal/restoration and public asset deletion are separate operations; all three have recorded rehearsals. Live voice remains disabled pending a verified hard spending/session termination bound.

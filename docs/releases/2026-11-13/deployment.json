@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-14T02:07:09.965Z",
+  "id": "dpl_3VDUeWwEv9eQkQgrPdhGM7x3jwRp",
+  "url": "overton-portfolio-v2-4nkv0kl3h-overtons-projects.vercel.app",
+  "target": "production",
+  "state": "READY",
+  "commit": "34af904f6242a2e9ad388651dcb38e1160a84f9e",
+  "branch": "codex/portfolio-production-release",
+  "aliases": [],
+  "nodeVersion": "24.x",
+  "databaseFingerprint": "5aac9ac8d136475635c9bb75",
+  "preview": {
+    "id": "dpl_9baqDcasMDGYRLUCYPhDo4KMLWdE",
+    "databaseFingerprint": "76580fb682a2e53c2877c3d5"
+  },
+  "rollback": "dpl_B5TBxkcUFsr4v4RUNrypPyBkUZCa",
+  "verifiedProductionAlias": "overton-portfolio-v2.vercel.app",
+  "aliasVerifiedBy": "GET /v4/aliases/overton-portfolio-v2.vercel.app deployment.id matched"
+}

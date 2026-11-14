@@ -1,10 +1,12 @@
-# Release execution — November 13, 2026
+# Production release — November 13, 2026
 
-The active outcome is production deployment of the reviewed first edition. The URL split, safe builds, immutable uploads, responsive delivery, renderer ownership and audited promotion are implemented. Local/isolated browser, office and book checks pass; the hosted isolated preview has exercised publication, withdrawal and the portrait. Production estate records are being staged inactive. Final release/alias receipts will be recorded in [the release report](docs/releases/2026-11-13/README.md).
+The first edition is deployed and its hosted visitor checks pass. [Portfolio](https://overton-portfolio-v2.vercel.app/) · [Travellers Rest](https://overton-portfolio-v2.vercel.app/library) · [Private dashboard](https://overton-portfolio-v2.vercel.app/admin).
 
-The owner's bootstrap password change is verified. Live text keeps the approved $0.05/turn, $1/day and $5/month limits; live voice remains disabled because the gateway budget cannot hard-stop a browser-owned socket. Authored narration works. Preserve `.local-library/release` private rollback baselines and the preexisting-work archive. Do not run a broad seed or push `main`.
+Deployed source `34af904f6242a2e9ad388651dcb38e1160a84f9e`, deployment `dpl_3VDUeWwEv9eQkQgrPdhGM7x3jwRp`. Exactly six studies and the reviewed edition-two estate are published through audited, drift-checked operations. [Release report, measurements, receipts and tested rollback/withdrawal](docs/releases/2026-11-13/README.md). Production and Preview use isolated databases. The owner's password change is complete; temporary verification access is revoked.
 
-The historical handoff below records how the candidate was developed; its previous “not deployed,” route and migration statements are superseded by the release report as each hosted receipt is completed.
+Plain `/library` opens Travellers Rest. Old `?view=world` links deliberately preserve the old hall. Live text stays within $0.05/turn, $1/day and $5/month; authored narration works. Live voice is disabled until a provider/server hard termination bound is verified. Phone measurements are emulation; the ten-cycle JavaScript heap trend has not fully plateaued, although GPU counts are stable and exit cleanup passes.
+
+Preserve `.local-library/release` private baselines, promotion plan and preexisting-work archive for rollback. No broad seed, content reset or push to `main`. The historical records below are superseded by this release report. The evidence/CI follow-up installs the runner's missing FFmpeg dependency; it changes no deployed application code.
 
 ---
 

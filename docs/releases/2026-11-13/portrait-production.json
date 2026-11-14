@@ -1,0 +1,29 @@
+{
+  "base": "https://overton-portfolio-v2.vercel.app",
+  "at": "2026-11-14T02:07:18.676Z",
+  "passed": true,
+  "capability": {
+    "live": true,
+    "model": "openai/gpt-6-luna",
+    "webSearch": true,
+    "voice": null,
+    "label": "Live replies · openai/gpt-6-luna via Vercel AI Gateway · checked against cited sources"
+  },
+  "turns": [
+    {
+      "mode": "live",
+      "citations": 2,
+      "latencyMs": 2605.5905999999995
+    },
+    {
+      "mode": "fallback",
+      "citations": 0,
+      "latencyMs": 178.3831
+    },
+    {
+      "mode": "live",
+      "citations": 0,
+      "latencyMs": 3862.2265
+    }
+  ]
+}

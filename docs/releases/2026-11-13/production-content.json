@@ -1,0 +1,393 @@
+{
+  "fingerprint": "5aac9ac8d136475635c9bb75",
+  "planHash": "61c749754705de0c9dee103c52e8c312fd7c83b936814311f97c68ea496104c1",
+  "stateHash": "0e8c1b698631d4a1d26ee136c1148e3378540f6ca3196fb5ade0e7fae38d703b",
+  "slugs": [
+    "vantage-movers",
+    "gowipe",
+    "overtech-digital-services",
+    "agentic-mission-control",
+    "agent-knowledge-services",
+    "ai-engineer-platform"
+  ],
+  "command": "--publish",
+  "operations": [
+    {
+      "command": "--promote",
+      "at": "2026-11-14T02:03:37.472Z",
+      "afterHash": "cd0fdcff898585bcfb7d56180e0dba42be82ea7b019f0e3b84b862e84effae06"
+    },
+    {
+      "command": "--publish",
+      "at": "2026-11-14T02:05:56.447Z",
+      "afterHash": "0e8c1b698631d4a1d26ee136c1148e3378540f6ca3196fb5ade0e7fae38d703b"
+    }
+  ],
+  "revisions": [
+    {
+      "entity_type": "project",
+      "entity_id": "135df7e8-9a87-4b77-8aac-1dca9dc817d0",
+      "version": 3
+    },
+    {
+      "entity_type": "project",
+      "entity_id": "3bfecd6c-77ae-4cb9-83eb-5095724ee415",
+      "version": 3
+    },
+    {
+      "entity_type": "project",
+      "entity_id": "3d4f76d4-e339-42d2-8c7a-602ef57b2b5a",
+      "version": 3
+    },
+    {
+      "entity_type": "project",
+      "entity_id": "cd0cc512-e3b4-4531-a93a-854e83b5d343",
+      "version": 4
+    },
+    {
+      "entity_type": "project",
+      "entity_id": "de910cab-f3a6-461a-a110-aaa581e59d23",
+      "version": 4
+    },
+    {
+      "entity_type": "project",
+      "entity_id": "e970c086-f80a-4dcd-9269-9ef6ccc7ec50",
+      "version": 3
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "145b025c-d684-4341-ae63-08b755c8c8d3",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "260c19ee-7f0c-466f-94c5-92e223380dc1",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "35c8f328-0b9c-4409-931b-ff72a7b773c6",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "38e8cd2c-f1fe-421a-8061-a2eb82f3ae7d",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "53eae523-8ad8-4942-825a-a68729c93b51",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "6bf28d63-b02d-461a-91ae-a6e6f696d215",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "7f95f6b7-751d-4af2-95e7-50f7fbe2f8c5",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "85712207-bce9-4677-bb54-4914ec7f9877",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "8939b3e4-e534-4e15-b521-6893912b7c7f",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "9395a1e9-17ed-452c-b8c6-60b0a0b861fb",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "98a5e868-4697-4946-933f-6ff5856211d9",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "98cdf8f7-097d-4db3-88ac-184a4c8dd56e",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "a8207510-601b-496f-a637-d932bfc0cd1d",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "bc4efbd9-6cba-4ec1-84d3-1b656bb3e8c5",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "d81faa22-3d15-4ee9-9a56-41612b7a486a",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "d93ae964-b2e1-429e-bf68-d7c408e41886",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "e34847f0-8573-406d-adfd-9439c2c74685",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "e6cae69c-247a-4d0b-bc53-c0ca9eb41852",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "f119cc54-a9cb-46ae-a876-36ca14cd58b8",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "f1acdea9-3bcb-40b2-a184-2a1b31e4746d",
+      "version": 1
+    },
+    {
+      "entity_type": "media",
+      "entity_id": "f58ace8e-5ed9-4f44-8152-4a227b73a365",
+      "version": 1
+    },
+    {
+      "entity_type": "book",
+      "entity_id": "4dc8cb72-8972-484e-a208-d8080a174e79",
+      "version": 4
+    },
+    {
+      "entity_type": "book",
+      "entity_id": "716013b1-0734-4175-9f5b-b15c94e41869",
+      "version": 4
+    },
+    {
+      "entity_type": "book",
+      "entity_id": "8466de94-a59b-4441-9326-56273fd83a1c",
+      "version": 3
+    },
+    {
+      "entity_type": "book",
+      "entity_id": "89681255-f473-4b16-8d6c-956b224a4efc",
+      "version": 3
+    },
+    {
+      "entity_type": "book",
+      "entity_id": "b5a3d400-cb9e-4f53-a4b8-d49f7fa3edd4",
+      "version": 3
+    },
+    {
+      "entity_type": "book",
+      "entity_id": "be5d9681-5a88-5918-806f-072385638ac2",
+      "version": 3
+    },
+    {
+      "entity_type": "book",
+      "entity_id": "ff6eef1c-47b9-4f78-a97f-84a4ce86a367",
+      "version": 3
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "0b5ae387-593a-496f-8926-d08089f6bc7f",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "18a7177f-516c-45a5-82a4-010b3eaebe45",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "1fc2bf99-bb69-48ed-aafc-193bc7370809",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "2168f02b-7efe-4523-81bb-e0f637b776e2",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "242b387a-d901-4fa3-83cf-7e09146dd1a7",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "25d7cf88-6419-416f-83d7-95837e5cec0f",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "35748f80-d510-45c6-8026-bd8218adf5c6",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "4332a52e-4a48-410b-9f3c-97bea84abeb7",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "4e7902da-72a0-4fd4-bc98-4e8137e61a13",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "511c5b35-9322-43c4-9a2d-63a3211eee7f",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "5c15335f-2b31-4d7b-adcf-8a3b3a0f1ba6",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "6985b867-5426-46c2-b178-de34273cee24",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "6a79d8ff-be4f-445e-b134-ebdae9ea732e",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "749e841b-1f1e-4be0-9d6f-ab978e120229",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "7bcf8b7e-85d0-4a91-ad47-d2d4ef34e79e",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "7d4ab632-6e1f-46fc-9476-8a2a9e89e76b",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "7db48c05-2f20-4eb1-8036-e00e24608d26",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "93c889db-6d91-4d32-a589-1f2caa00173d",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "94013275-56d0-41f3-9d66-832eb6ca1e87",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "941ba682-0e53-4fe5-914f-d4ad753a2cfd",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "9b0b8ae6-53cc-425a-a66b-b5f7204274a6",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "9baec948-bdc2-45b9-b907-d936cf22f1cb",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "9c47f750-1070-479d-be7e-3dd92080b076",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "9d558030-2a06-4991-96a6-dc3133a24d42",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "9ee153b9-39d0-423a-ac7e-d5693c4ec80c",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "a2655928-0b48-4bf7-a5b8-9b157370af20",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "ad8d2fd4-41e2-4cca-ac99-624c1670a863",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "b2fc731a-36e1-4a8e-8bf3-e21bd2a205ca",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "c9013e7f-b37c-4fa8-a47b-40f6c61bc52f",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "caa058cc-a01c-4fb8-b18a-d6fe7a36f1ae",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "cbd94f76-4341-4ea7-a19e-43784b32d30e",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "d931c31e-9609-4b70-96b5-246e68e28f4e",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "da13a782-3be6-4863-bf31-0988c0e539df",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "df7c3017-caee-4ede-9e4c-feb24cae8af9",
+      "version": 1
+    },
+    {
+      "entity_type": "book_page",
+      "entity_id": "eb31c16e-8f40-4f9d-b444-35883b6509c9",
+      "version": 1
+    },
+    {
+      "entity_type": "library_zone",
+      "entity_id": "1a3c6932-d090-540a-8618-1b307ea4317a",
+      "version": 2
+    },
+    {
+      "entity_type": "library_zone",
+      "entity_id": "830310b9-a35f-51fb-893c-4d51d92d5b59",
+      "version": 2
+    },
+    {
+      "entity_type": "library_zone",
+      "entity_id": "9f50a530-7fba-5f9b-8e9d-165b03b3d3b7",
+      "version": 2
+    },
+    {
+      "entity_type": "library_zone",
+      "entity_id": "f1397a49-5cc4-5800-8e71-339e573f93f4",
+      "version": 2
+    }
+  ]
+}

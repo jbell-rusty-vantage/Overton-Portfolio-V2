@@ -1,0 +1,60 @@
+{
+  "base": "https://overton-portfolio-v2.vercel.app",
+  "profile": "Workstation Chrome; no network/CPU throttling; desktop 1366x860 and emulated 390x844",
+  "browser": "157.0.8103.52",
+  "routes": [
+    {
+      "width": 1366,
+      "warmth": "cold",
+      "wireBytes": 315996,
+      "lcpMs": 412,
+      "cls": 0,
+      "compressedScriptBodyBytes": 143755,
+      "compressedImageBodyBytes": 143352,
+      "glbRequests": 0,
+      "webglDraws": 0,
+      "longTasks": [
+        55
+      ]
+    },
+    {
+      "width": 1366,
+      "warmth": "warm",
+      "wireBytes": 9839,
+      "lcpMs": 408,
+      "cls": 0,
+      "compressedScriptBodyBytes": 143755,
+      "compressedImageBodyBytes": 143352,
+      "glbRequests": 0,
+      "webglDraws": 0,
+      "longTasks": []
+    },
+    {
+      "width": 390,
+      "warmth": "cold",
+      "wireBytes": 203856,
+      "lcpMs": 672,
+      "cls": 0,
+      "compressedScriptBodyBytes": 143755,
+      "compressedImageBodyBytes": 31468,
+      "glbRequests": 0,
+      "webglDraws": 0,
+      "longTasks": [
+        51
+      ]
+    },
+    {
+      "width": 390,
+      "warmth": "warm",
+      "wireBytes": 9925,
+      "lcpMs": 396,
+      "cls": 0,
+      "compressedScriptBodyBytes": 143755,
+      "compressedImageBodyBytes": 31468,
+      "glbRequests": 0,
+      "webglDraws": 0,
+      "longTasks": []
+    }
+  ],
+  "caveat": "Body byte counts include cached representation sizes; wireBytes records actual network transfer. Workstation lab, no network or CPU throttle, not field p75."
+}

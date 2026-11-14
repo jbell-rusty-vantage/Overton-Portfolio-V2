@@ -1,0 +1,99 @@
+{
+  "at": "2026-11-14T02:11:44.896Z",
+  "fingerprint": "5aac9ac8d136475635c9bb75",
+  "migrations": [
+    {
+      "migration_name": "20261008000000_init"
+    },
+    {
+      "migration_name": "20261008000050_comments_views_functions"
+    },
+    {
+      "migration_name": "20261008000100_seed_reference_data"
+    },
+    {
+      "migration_name": "20261113010000_portrait_ledger"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "agent-knowledge-services",
+      "display": "published"
+    },
+    {
+      "slug": "agentic-mission-control",
+      "display": "published"
+    },
+    {
+      "slug": "ai-engineer-platform",
+      "display": "published"
+    },
+    {
+      "slug": "ai-engineer-worldsfair-showcase",
+      "display": "hidden"
+    },
+    {
+      "slug": "biotech-knowledge-platform",
+      "display": "hidden"
+    },
+    {
+      "slug": "biotech-research-ingestion",
+      "display": "hidden"
+    },
+    {
+      "slug": "daryl-davis",
+      "display": "hidden"
+    },
+    {
+      "slug": "gowipe",
+      "display": "published"
+    },
+    {
+      "slug": "human-upgrade-ingestion-pipeline",
+      "display": "hidden"
+    },
+    {
+      "slug": "overtech-digital-services",
+      "display": "published"
+    },
+    {
+      "slug": "polymarket-mcp-server",
+      "display": "hidden"
+    },
+    {
+      "slug": "the-library",
+      "display": "hidden"
+    },
+    {
+      "slug": "vantage-lead-analytics",
+      "display": "hidden"
+    },
+    {
+      "slug": "vantage-movers",
+      "display": "published"
+    }
+  ],
+  "activeScenes": [
+    {
+      "slug": "travellers-rest-house",
+      "version": 1,
+      "is_active": false
+    },
+    {
+      "slug": "travellers-rest-house",
+      "version": 2,
+      "is_active": true
+    },
+    {
+      "slug": "travellers-rest-house-low",
+      "version": 1,
+      "is_active": false
+    },
+    {
+      "slug": "travellers-rest-house-low",
+      "version": 2,
+      "is_active": true
+    }
+  ],
+  "bootstrapComplete": true
+}

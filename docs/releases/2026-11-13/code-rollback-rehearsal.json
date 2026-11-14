@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-14T02:05:07.042Z",
+  "alias": "overton-rollback-proof-1794621890508.vercel.app",
+  "steps": [
+    {
+      "phase": "old",
+      "deployment": "dpl_B5TBxkcUFsr4v4RUNrypPyBkUZCa",
+      "httpStatus": 200,
+      "portfolioTitle": false
+    },
+    {
+      "phase": "candidate",
+      "deployment": "dpl_9baqDcasMDGYRLUCYPhDo4KMLWdE",
+      "httpStatus": 200,
+      "portfolioTitle": true
+    },
+    {
+      "phase": "rollback",
+      "deployment": "dpl_B5TBxkcUFsr4v4RUNrypPyBkUZCa",
+      "httpStatus": 200,
+      "portfolioTitle": false
+    }
+  ],
+  "removed": true,
+  "productionAliasChanged": false
+}
