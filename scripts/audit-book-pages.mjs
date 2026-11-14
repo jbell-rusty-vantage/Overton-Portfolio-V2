@@ -101,6 +101,7 @@ for (const mode of modes) {
   const mine = {};
   const phone = mode === "phone";
   const context = await browser.newContext({
+    ...(process.env.RELEASE_STORAGE_STATE ? { storageState: process.env.RELEASE_STORAGE_STATE } : {}),
     viewport: phone ? { width: 390, height: 844 } : { width: 1366, height: 860 },
     deviceScaleFactor: phone ? 2 : 1, hasTouch: phone, isMobile: phone,
     reducedMotion: process.env.BOOK_AUDIT_MOTION === "animate" ? "no-preference" : "reduce",

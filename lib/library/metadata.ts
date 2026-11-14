@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { getCollection } from "./catalog";
 import { detailHref } from "./paths";
-import { type Volume, type VolumeKind } from "./types";
+import { type VolumeKind } from "./types";
 
 async function canonical(path: string) {
   if (process.env.LIBRARY_PUBLIC_ORIGIN) {
@@ -35,15 +35,5 @@ export async function volumeMetadata(
     description: volume.summary,
     alternates: { canonical: await canonical(detailHref(volume)) },
     robots: { index: data.source === "database" && !!volume.indexable },
-  };
-}
-export async function entranceMetadata(
-  world: boolean,
-  book: Volume | undefined,
-  source: string,
-): Promise<Metadata> {
-  return {
-    alternates: { canonical: await canonical(book ? detailHref(book) : "/") },
-    robots: { index: !world && source === "database" },
   };
 }

@@ -52,7 +52,7 @@
     "knowledge/system-overview.md": "249a63671485e2f32337b5bad4ad0bcedcb2b86dbd08fd18d2be2fc761203ff0",
     "knowledge/testing-and-performance.md": "d8a9b77269578122549ca1af3d0b301528962281c44d7b8aa4f57f4b2523db95",
     "knowledge/world-runtime.md": "1a41aa156e94b777e55c443a10a2637849825ceb545b7ee42be02ee8d37dc340",
-    "package.json": "2cfc86b382d9e72cda2e05c7e98ff7a2f03ae05e5cc20cdc2fc09fedd73ba983"
+    "package.json": "1f9e708d6e7aa9389d4321cafac285cf9176580f76f4f579ea8f90a2ce4a666d"
   },
   "knowledge": {
     "inputs": {
@@ -104,7 +104,7 @@
       "scripts/profile-release.mjs": "397854ba5fbdafba0cfa535c9af95c6b6365a0c158e26970f499d6bd427b2feb",
       "scripts/release-content.mjs": "42f58198ea80793985c1b78db428714f52956236c645596af7c2a079fcd80e2a",
       "scripts/test-library-admin.mjs": "20db20fd1ef1ae032a2c17c994e403f9f693ebdf50d834f2029d4fd9e96d32ee",
-      "scripts/verify-release-http.mjs": "d95c0e9f780e576d62b34c29e626e692653e623d8acc77bb552300986d7b9105",
+      "scripts/verify-release-http.mjs": "7572e84cc8a7bea956af72f9f6c56f183f7d18c6fa74cfef929496b3c140e390",
       "tests/browser/books.spec.ts": "2cc37fbe7e52b204383926d012ddca03a59db2498b25b6bdd97835a60b576543",
       "tests/browser/folio.spec.ts": "f0910d3601129ba8978f6d4f44c265a6c38103f203266161ae0dae60aaa4e1c9",
       "tests/browser/navigation.spec.ts": "56726f0350116b74edc928c968b6e9cce9b58b234331e3ca7b9556242850f940",
@@ -147,7 +147,7 @@
       "scripts/profile-release.mjs": "397854ba5fbdafba0cfa535c9af95c6b6365a0c158e26970f499d6bd427b2feb",
       "scripts/release-content.mjs": "42f58198ea80793985c1b78db428714f52956236c645596af7c2a079fcd80e2a",
       "scripts/test-library-admin.mjs": "20db20fd1ef1ae032a2c17c994e403f9f693ebdf50d834f2029d4fd9e96d32ee",
-      "scripts/verify-release-http.mjs": "d95c0e9f780e576d62b34c29e626e692653e623d8acc77bb552300986d7b9105",
+      "scripts/verify-release-http.mjs": "7572e84cc8a7bea956af72f9f6c56f183f7d18c6fa74cfef929496b3c140e390",
       "tests/browser/books.spec.ts": "2cc37fbe7e52b204383926d012ddca03a59db2498b25b6bdd97835a60b576543",
       "tests/browser/compatibility.spec.ts": "c1185e5dc906fa50ca0b287c4d1b080be279e3f5ccef0129c44c3fa315b9638e",
       "tests/browser/folio.spec.ts": "f0910d3601129ba8978f6d4f44c265a6c38103f203266161ae0dae60aaa4e1c9",

@@ -40,6 +40,8 @@ try {
   for (const asset of ["/library/hall.glb", "/library/hall-low.glb"]) expect((await context.request.get(asset)).status()).toBe(404);
   await page.goto("/");
   await expect(page.locator(".pf-project")).toHaveCount(6);
+  await expect(page.locator("#portfolio-title")).toBeVisible();
+  await page.evaluate(() => document.fonts.ready);
   await page.screenshot({ path: `.local-library/release/${label}-portfolio.png`, fullPage: true });
   const inventory = JSON.parse(await readFile("content/library/entrance-delivery.json", "utf8"));
   const candidate = JSON.stringify(inventory).match(/\/media\/[a-f0-9]{64}\/[^" ]+/)?.[0];
