@@ -7,6 +7,9 @@ import { randomBytes, randomUUID, scryptSync } from "node:crypto";
 import { copyFile, readFile, readdir, mkdir, unlink } from "node:fs/promises";
 import { spawn } from "node:child_process";
 import { once } from "node:events";
+import { pathToFileURL } from "node:url";
+import { resolve } from "node:path";
+import { instrumentEstateBrowser } from "./test-estate-media.mjs";
 import { createRequire } from "node:module";
 import { setTimeout as delay } from "node:timers/promises";
 
@@ -20,6 +23,7 @@ const socket = new PGLiteSocketServer({
 let app, browser, page;
 const port = Number(process.env.LIBRARY_TEST_PORT || 3088);
 const office = process.argv.includes("--office");
+const estateProof = process.argv.includes("--estate") || process.argv.includes("--profile-estate");
 const base = "http://127.0.0.1:" + port;
 const logs = [];
 const artFile = "proof-" + randomUUID() + ".webp";
@@ -60,6 +64,7 @@ try {
   app = spawn(
     process.execPath,
     [
+      ...(estateProof ? ["--import", pathToFileURL(resolve("scripts/test-estate-media.mjs")).href] : []),
       createRequire(import.meta.url).resolve("next/dist/bin/next"),
       office ? "dev" : "start",
       "--hostname",
@@ -75,6 +80,11 @@ try {
         LIBRARY_OFFICE_HOST: "127.0.0.1:" + port,
         LIBRARY_OFFICE_TEST: "1",
         DB_DEPLOY_SKIP: "1",
+        ESTATE_TEST_MEDIA: estateProof ? "1" : "",
+        PORTRAIT_SESSION_SECRET: randomBytes(32).toString("hex"),
+        PORTRAIT_PAID_ENABLED: "0",
+        PORTRAIT_API_KEY: "",
+        PORTRAIT_KILL_SWITCH: "0",
         DATABASE_URL: url,
         DATABASE_URL_UNPOOLED: url,
         LIBRARY_CONTENT_SOURCE: "database",
@@ -103,6 +113,7 @@ try {
     channel: "chrome",
     args: ["--enable-unsafe-swiftshader"],
   });
+  if (estateProof) instrumentEstateBrowser(browser);
   const adminContext = await browser.newContext({
     baseURL: base,
     viewport: { width: 1366, height: 860 },
@@ -336,6 +347,12 @@ try {
     "PASS:", office ? "local office" : "authenticated office", "create, place, author, rename, preview, publish, hide, stale edit and atomic records in isolated PGlite",
     proof,
   );
+  if (!office && (process.argv.includes("--estate") || process.argv.includes("--profile-estate"))) {
+    const { qualifyEstate } = await import("./qualify-estate.mjs");
+    await qualifyEstate({ db, page, browser, base, profile: process.argv.includes("--profile-estate") });
+    const { qualifyVisitorAccess } = await import("./qualify-visitor-access.mjs");
+    await qualifyVisitorAccess({ db, page, browser, base });
+  }
 } catch (e) {
   console.error("Isolated integration failure", e.message);
   if (page && page.url().includes("/admin/library"))

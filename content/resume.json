@@ -1,0 +1,70 @@
+{
+  "name": "John Overton Bell",
+  "title": "AI Systems & Full-Stack Software Engineer",
+  "location": "Coral Springs, FL",
+  "email": "johnoverton743@gmail.com",
+  "profiles": [
+    { "label": "GitHub · jbell-rusty-vantage", "url": "https://github.com/jbell-rusty-vantage" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/john-bell-1b6887271/" },
+    { "label": "Portfolio", "url": "https://overton-portfolio-v2.vercel.app/" }
+  ],
+  "summary": "I build cross-platform software, including web apps, progressive web apps (PWAs), and mobile apps, along with the servers, background workers, and agent systems behind them. My AI work focuses on rigorous software development practices, durable workflows, and research that evaluates claims against source evidence.",
+  "skills": [
+    { "label": "Agent engineering", "detail": "Context engineering, workflow engineering, dynamic agent skills, multi-agent orchestration, LangGraph / Deep Agents, Model Context Protocol (MCP), retrieval-augmented generation (RAG)." },
+    { "label": "Research & verification", "detail": "Source capture and provenance, claim-level evidence checks, evaluation and retrieval testing, and governed knowledge ingestion." },
+    { "label": "Cloud & infrastructure", "detail": "AWS (ECS, Lambda, Bedrock, CDK), Google Cloud, Vercel, Docker, and infrastructure as code." },
+    { "label": "Application development", "detail": "React and Next.js for web and PWAs, React Native for mobile, and Shopify / Liquid. TypeScript, JavaScript, Python, and SQL." },
+    { "label": "Servers & workers", "detail": "Node.js, FastAPI, Temporal, REST, GraphQL, PostgreSQL, MongoDB, and pgvector." },
+    { "label": "Software delivery (SDLC)", "detail": "Architecture decisions, versioned contracts, automated tests (pytest, Playwright), integration environments, and release gates." }
+  ],
+  "clientWork": [
+    {
+      "name": "GoWipe Co",
+      "links": [{ "label": "gowipe.co", "url": "https://gowipe.co/" }],
+      "detail": "Built the Shopify storefront, customized its theme, and connected conversion events to Google Tag Manager, Analytics, and Ads."
+    },
+    {
+      "name": "Vantage Movers",
+      "links": [
+        { "label": "Main site", "url": "https://vantagehomemovers.com/" },
+        { "label": "Landing page", "url": "https://vantagemoves.com/" }
+      ],
+      "detail": "Built quote flows and CRM integrations that track web and phone leads through booking or cancellation."
+    }
+  ],
+  "aiWork": [
+    {
+      "name": "Overtech Digital Services",
+      "links": [
+        { "label": "Launch page", "url": "https://overtech-digital-services.vercel.app/" },
+        { "label": "Research agent", "url": "https://overtech-research-agent.vercel.app/" }
+      ],
+      "detail": "Built a studio site with intake and booking, plus an agent that captures source evidence and a reader for reviewing its cited findings."
+    },
+    {
+      "name": "Agentic Mission Control",
+      "links": [{ "label": "GitHub", "url": "https://github.com/jbell-rusty-vantage/agentic-mission-control" }],
+      "detail": "Built a Temporal and PostgreSQL control plane for multi-agent workflows. Integrated Deep Agents behind a provider-neutral contract with recovery, inspectable sessions, and independent review."
+    },
+    {
+      "name": "AI Engineer Platform",
+      "links": [
+        { "label": "Agent Knowledge Services", "url": "https://github.com/jbell-rusty-vantage/agent-knowledge-services" },
+        { "label": "AI Engineer Services", "url": "https://github.com/jbell-rusty-vantage/ai-engineer-services" }
+      ],
+      "detail": "Built shared capture, claim verification, and retrieval services, plus HTTP API, MCP, and CLI tools for student agents, educational content, and research reporting. Investor-facing tools are planned."
+    }
+  ],
+  "aiStatus": "The GitHub projects are in active development. See their repositories for test and deployment status.",
+  "experience": [
+    { "role": "Lead Developer", "company": "Vantage Movers", "dates": "2026 - Present", "detail": "Lead development across public websites, integrations, and internal operations tools." },
+    { "role": "Outsourced Developer", "company": "AccuTitle / AccuAir", "dates": "2025 - 2026", "detail": "Helped modernize the web front end for real estate settlement software during a short client engagement." },
+    { "role": "Web Developer", "company": "GoWipe Co", "dates": "2021 - early 2025", "detail": "Maintained the Shopify storefront and supported SEO, analytics, and marketing automation." },
+    { "role": "CRM Specialist / Data Analyst", "company": "Tip Top Capital", "dates": "2018 - 2020 (about 19 months)", "detail": "Validated 1,500+ Salesforce contacts during rollout and built outreach workflows with human review." },
+    { "role": "Customer Service Representative / Data Analyst", "company": "Landtech Data Corporation", "dates": "2016 - 2018 (2.5 years)", "detail": "Built Excel macros that saved about five hours per week on recurring reports." }
+  ],
+  "education": [
+    { "name": "TripleTen Software Engineering Bootcamp", "detail": "Certificate of Completion · Dec 2025" },
+    { "name": "Google Data Analytics Professional Certificate", "detail": "Coursera · Mar 2024" }
+  ]
+}

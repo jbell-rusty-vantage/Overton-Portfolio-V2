@@ -1,0 +1,1225 @@
+{
+  "retrieved": "2026-11-12",
+  "rights": {
+    "statement": "The Library of Congress's digital scans of the papers of Andrew Jackson are in the public domain. Credit Line: Library of Congress, Manuscript Division, Andrew Jackson Papers. (Rights statement as given on each LoC item record.)",
+    "source": "https://www.loc.gov/collections/andrew-jackson-papers/about-this-collection/rights-and-access/"
+  },
+  "letters": [
+    {
+      "id": "maj012882",
+      "title": "John Overton to Andrew Jackson",
+      "author": "John Overton",
+      "recipient": "Andrew Jackson",
+      "date": "1832-11-05",
+      "dateLabel": "November 5, 1832",
+      "place": "Travellers Rest",
+      "item": "https://www.loc.gov/item/maj012882/",
+      "resource": "https://www.loc.gov/resource/maj.01082_0068_0071/",
+      "credit": "Library of Congress, Manuscript Division, Andrew Jackson Papers. Series 1, General Correspondence and Related Items, 1775-1885; MSS 27532, Vol. 82.",
+      "catalogNote": "The LoC item record gives the extent as \"3 pages\"; the digitized resource (maj.01082_0068_0071) holds four image files, 0068-0071, and all four are held here. Looking at the images: 0068 is the first page of the letter (folio stamp 16281); 0069 is the second and last page, with the signature; 0070 is a second microfilm frame of the same opening, showing the blank facing side of the second leaf (folio stamp 16282) with the right-hand edge of page 2 at the left margin; 0071 is the outer side of the second leaf, carrying a four-line filing endorsement and a cropped trace of the address panel. So the letter text occupies two pages; \"3 pages\" most plausibly counts the three inscribed sides (two of text plus the endorsement), and the fourth image adds no writing. That reading of the count is an inference, not an LoC statement. The existing held file originals/overton-letter.jpg is byte-identical to 0068.jpg (same SHA-256).",
+      "summary": "Modern commentary: Writing from Travellers Rest, Overton encloses a copy of \"Mr Poinsetts speech\" (identified by the edition as Joel R. Poinsett's Charleston speech of October 5, 1832, against nullification) and tells Jackson that no man but he can calm Southern feeling over the tariff. He expects Jackson's re-election to allay the heat he blames on Calhoun, and an armed vessel guarding the federal revenue to do what that does not. He adds that the cotton crop is poor, 21,000 picked from 80 acres with rain falling, and closes with a prayer for Jackson's health.",
+      "edition": {
+        "citation": "Daniel Feller, Thomas Coens, and Laura-Eve Moss, eds., The Papers of Andrew Jackson, Volume X, 1832 (Knoxville: University of Tennessee Press, 2016), p. 553, \"From John Overton\" (source line: ALS, DLC (41)).",
+        "url": "https://trace.tennessee.edu/handle/20.500.14382/48172",
+        "note": "Used as the base text (open-access PDF, DOI 10.7290/utp5209), then read against the manuscript images line by line. The edition's wording was confirmed throughout except one word in the closing (see page 2). Line breaks, the dashes Overton wrote where the edition prints full stops, the colon in the signature and the foot-of-page addressee line follow the manuscript; capitalization of ambiguous letterforms follows the edition. The LoC item and resource JSON carry no transcription. The letter is not printed in John Spencer Bassett, ed., Correspondence of Andrew Jackson, vol. 4, 1829-1832 (Carnegie Institution, 1929): its Internet Archive full text was searched for the opening words and key phrases without result. Founders Online/Rotunda and HathiTrust were not searched."
+      },
+      "pages": [
+        {
+          "n": 1,
+          "locImage": "0068",
+          "original": "assets/travellers-rest/archive/originals/letters/maj012882/0068.jpg",
+          "originalUrl": "https://tile.loc.gov/storage-services/master/mss/maj/01082/0000/0068.jpg",
+          "sha256": "a16ba9b67a20cf58f0159f1615f7d391c78e303195c47aef5ffa9f7755349f09",
+          "bytes": 416148,
+          "width": 2270,
+          "height": 2768,
+          "src": "/travellers-rest/archive/letters/maj012882/p01.webp",
+          "small": "/travellers-rest/archive/letters/maj012882/p01-small.webp",
+          "srcWidth": 1968,
+          "srcHeight": 2400,
+          "kind": "letter",
+          "label": "Page 1 · recto of first leaf (folio 16281)",
+          "alt": "First page of the letter in Overton's bold, slanting hand, headed Travellers Rest 5th Nov 1832, with ink from the reverse showing through and the folio stamp 16281 at lower left.",
+          "confidence": "high",
+          "check": "Every line read from 1700-px-wide strips of the master image and compared word for word with Papers of Andrew Jackson X:553. No disagreement in wording. \"but yourself\" (line 12) is an interlineation above the line with a caret, printed here in place. Y positions are estimates taken from the strips; the lines slope upward to the right.",
+          "transcript": [
+            {
+              "y0": 0.055,
+              "y1": 0.099,
+              "text": "Travellers Rest 5th Nov 1832"
+            },
+            {
+              "y0": 0.094,
+              "y1": 0.138,
+              "text": "My Dear Genl"
+            },
+            {
+              "y0": 0.14,
+              "y1": 0.184,
+              "text": "Amidst the immense"
+            },
+            {
+              "y0": 0.178,
+              "y1": 0.222,
+              "text": "pressure of your concerns, Mr"
+            },
+            {
+              "y0": 0.223,
+              "y1": 0.267,
+              "text": "Poinsetts speech may not have"
+            },
+            {
+              "y0": 0.261,
+              "y1": 0.305,
+              "text": "attracted your notice – If"
+            },
+            {
+              "y0": 0.307,
+              "y1": 0.351,
+              "text": "it has, throw aside the enclosed,"
+            },
+            {
+              "y0": 0.35,
+              "y1": 0.394,
+              "text": "which contains it – But if it"
+            },
+            {
+              "y0": 0.392,
+              "y1": 0.436,
+              "text": "has not, it may deserve a"
+            },
+            {
+              "y0": 0.437,
+              "y1": 0.481,
+              "text": "passing notice, as a faithful"
+            },
+            {
+              "y0": 0.476,
+              "y1": 0.52,
+              "text": "delineation of truth and experi"
+            },
+            {
+              "y0": 0.527,
+              "y1": 0.571,
+              "text": "=ence. No man living but yourself can"
+            },
+            {
+              "y0": 0.556,
+              "y1": 0.6,
+              "text": "bring to a calm the perturbed"
+            },
+            {
+              "y0": 0.596,
+              "y1": 0.64,
+              "text": "spirits of the Southerners, respecting"
+            },
+            {
+              "y0": 0.644,
+              "y1": 0.688,
+              "text": "this unfortunate Tariff. Your"
+            },
+            {
+              "y0": 0.693,
+              "y1": 0.737,
+              "text": "reelection will greatly tend to allay"
+            },
+            {
+              "y0": 0.734,
+              "y1": 0.778,
+              "text": "the heat, which Calhoun has"
+            },
+            {
+              "y0": 0.778,
+              "y1": 0.822,
+              "text": "contrived to produce ; and what"
+            },
+            {
+              "y0": 0.82,
+              "y1": 0.864,
+              "text": "that does not do, will be"
+            },
+            {
+              "y0": 0.864,
+              "y1": 0.908,
+              "text": "effected after a while, by an"
+            },
+            {
+              "y0": 0.902,
+              "y1": 0.946,
+              "text": "armed Vessel to take care"
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "locImage": "0069",
+          "original": "assets/travellers-rest/archive/originals/letters/maj012882/0069.jpg",
+          "originalUrl": "https://tile.loc.gov/storage-services/master/mss/maj/01082/0000/0069.jpg",
+          "sha256": "4459e9a92ef87eb8eb2b2ea4ba022da007317d3ab5909f2784f25fee6c5a365e",
+          "bytes": 508367,
+          "width": 2565,
+          "height": 2761,
+          "src": "/travellers-rest/archive/letters/maj012882/p02.webp",
+          "small": "/travellers-rest/archive/letters/maj012882/p02-small.webp",
+          "srcWidth": 2230,
+          "srcHeight": 2400,
+          "kind": "letter",
+          "label": "Page 2 · verso of first leaf, with signature",
+          "alt": "Second page of the letter, ending with the signature Jno: Overton and the addressee line Genl A Jackson; the blank facing leaf and a mounting strip are visible at the right.",
+          "confidence": "high",
+          "check": "Every line read from zoomed strips of the master image and compared word for word with Papers of Andrew Jackson X:553. One disagreement: in the closing the edition prints \"in the prayer of yrs.\"; on the manuscript the word looks like \"is\" (compare \"is now raining\" above), so it is marked [is?]. The addressee line at the foot is on the manuscript but is not printed by the edition; the signature has a colon (Jno:) where the edition prints Jno.",
+          "transcript": [
+            {
+              "y0": 0.076,
+              "y1": 0.116,
+              "text": "of the Revenue of the genl. Govt.–"
+            },
+            {
+              "y0": 0.11,
+              "y1": 0.15,
+              "text": "Attribute these remarks to an"
+            },
+            {
+              "y0": 0.149,
+              "y1": 0.189,
+              "text": "anxiety for the happiness and"
+            },
+            {
+              "y0": 0.183,
+              "y1": 0.223,
+              "text": "Union of our beloved Country"
+            },
+            {
+              "y0": 0.224,
+              "y1": 0.264,
+              "text": "which never can be endangered"
+            },
+            {
+              "y0": 0.265,
+              "y1": 0.305,
+              "text": "but by the unconcilliating"
+            },
+            {
+              "y0": 0.312,
+              "y1": 0.352,
+              "text": "exercise of congressional power"
+            },
+            {
+              "y0": 0.349,
+              "y1": 0.389,
+              "text": "in relation to the Tariff"
+            },
+            {
+              "y0": 0.391,
+              "y1": 0.431,
+              "text": "The prospect of our Cotton"
+            },
+            {
+              "y0": 0.443,
+              "y1": 0.483,
+              "text": "Crop is not much better. From"
+            },
+            {
+              "y0": 0.473,
+              "y1": 0.513,
+              "text": "80 acres I have only been"
+            },
+            {
+              "y0": 0.507,
+              "y1": 0.547,
+              "text": "able to pick out 21.000 – It"
+            },
+            {
+              "y0": 0.544,
+              "y1": 0.584,
+              "text": "is now raining, and if it continues"
+            },
+            {
+              "y0": 0.576,
+              "y1": 0.616,
+              "text": "long, as seems probable, I shall"
+            },
+            {
+              "y0": 0.614,
+              "y1": 0.654,
+              "text": "not be able to get as much"
+            },
+            {
+              "y0": 0.655,
+              "y1": 0.695,
+              "text": "more, which is the highest"
+            },
+            {
+              "y0": 0.69,
+              "y1": 0.73,
+              "text": "calculation – It is our duty and"
+            },
+            {
+              "y0": 0.722,
+              "y1": 0.762,
+              "text": "the part of wisdom to submit"
+            },
+            {
+              "y0": 0.756,
+              "y1": 0.796,
+              "text": "to that which we cannot control"
+            },
+            {
+              "y0": 0.786,
+              "y1": 0.826,
+              "text": "We are all in usual health"
+            },
+            {
+              "y0": 0.822,
+              "y1": 0.854,
+              "text": "May God grant you health"
+            },
+            {
+              "y0": 0.853,
+              "y1": 0.883,
+              "text": "to preside over our destinies"
+            },
+            {
+              "y0": 0.879,
+              "y1": 0.905,
+              "text": "[is?] the prayer of yrs. as usual"
+            },
+            {
+              "y0": 0.898,
+              "y1": 0.926,
+              "text": "Genl A Jackson          Jno: Overton"
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "locImage": "0070",
+          "original": "assets/travellers-rest/archive/originals/letters/maj012882/0070.jpg",
+          "originalUrl": "https://tile.loc.gov/storage-services/master/mss/maj/01082/0000/0070.jpg",
+          "sha256": "5986a685b221c1cafa3b91fbbf5852a1321a2be1fa283d793e9e22faf10571aa",
+          "bytes": 197202,
+          "width": 2197,
+          "height": 2756,
+          "src": "/travellers-rest/archive/letters/maj012882/p03.webp",
+          "small": "/travellers-rest/archive/letters/maj012882/p03-small.webp",
+          "srcWidth": 1913,
+          "srcHeight": 2400,
+          "kind": "blank",
+          "label": "Second leaf · blank inner side (folio 16282)",
+          "alt": "Blank inner side of the letter's second leaf with fold lines, the folio stamp 16282 and faint show-through of the endorsement on its reverse; the ends of the lines of page 2 are cut off at the left edge.",
+          "confidence": "none",
+          "check": "Viewed at full size and with contrast raised: no writing on this side beyond show-through and the edge of page 2, which is transcribed under page 2.",
+          "transcript": []
+        },
+        {
+          "n": 4,
+          "locImage": "0071",
+          "original": "assets/travellers-rest/archive/originals/letters/maj012882/0071.jpg",
+          "originalUrl": "https://tile.loc.gov/storage-services/master/mss/maj/01082/0000/0071.jpg",
+          "sha256": "562e5ff8435895b994fe275307df08321c1db091bee0b07d8c7ac8624de9ed4f",
+          "bytes": 216342,
+          "width": 2325,
+          "height": 2771,
+          "src": "/travellers-rest/archive/letters/maj012882/p04.webp",
+          "small": "/travellers-rest/archive/letters/maj012882/p04-small.webp",
+          "srcWidth": 2014,
+          "srcHeight": 2400,
+          "kind": "docket",
+          "label": "Second leaf · outer side with filing endorsement",
+          "alt": "Outer side of the folded second leaf with a four-line filing endorsement at upper right in a smaller, different hand, and a pen flourish from the address panel cut off at the right edge.",
+          "confidence": "medium",
+          "check": "Read directly from a zoomed crop; the edition does not print or mention this endorsement, so there is nothing to check it against. The hand is not Overton's and is not identified here. The last word of line 3 is uncertain. The address itself is outside the frame or under the mount; only a flourish is visible.",
+          "transcript": [
+            {
+              "y0": 0.075,
+              "y1": 0.108,
+              "text": "Nullification"
+            },
+            {
+              "y0": 0.11,
+              "y1": 0.145,
+              "text": "Speech of Mr. Poinsett –"
+            },
+            {
+              "y0": 0.147,
+              "y1": 0.18,
+              "text": "scene in Mexico – [Lafayette?]"
+            },
+            {
+              "y0": 0.18,
+              "y1": 0.212,
+              "text": "upon the Union"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maj012284",
+      "title": "John Overton to Andrew Jackson",
+      "author": "John Overton",
+      "recipient": "Andrew Jackson",
+      "date": "1831-06-02",
+      "dateLabel": "June 2, 1831",
+      "place": "Washington, D.C.",
+      "item": "https://www.loc.gov/item/maj012284/",
+      "resource": "https://www.loc.gov/resource/maj.01078_0001_0004/",
+      "credit": "Library of Congress, Manuscript Division, Andrew Jackson Papers. Series 1, General Correspondence and Related Items, 1775-1885; MSS 27532, Vol. 78.",
+      "catalogNote": "LoC record confirmed from its JSON: title \"John Overton to Andrew Jackson, June 2, 1831\", Overton as author, Jackson as correspondent, extent \"3 pages\", four image files 0001-0004. The images show a signed statement rather than a dated letter: 0001 is page 1 (folio stamp 15173); 0002 is page 2, three lines, the signature and the addressee line; 0003 is the blank inner side of the second leaf (folio stamp 15174) with show-through; 0004 is the outer panel with the address and Jackson's filing endorsement. As with the 1832 letter, three inscribed sides and four images. Overton wrote no date or place: the date comes from Jackson's endorsement (\"2nd. of June 1831\"), repeated in a later pencil note at the top of page 1, and the edition brackets it as [Jun 2]. The place is an inference: A. J. Donelson's certified copy (LoC maj024467) is headed \"Statement of Judge Overton's made at Washington 2d of June 1831\", and Bassett prints the heading as \"[Washington ?]\".",
+      "summary": "Modern commentary: A signed statement Overton gave Jackson about the Seminole War of 1818. He recalls that when he wrote a pamphlet defending the campaign, Jackson showed him his confidential letter to President Monroe and a letter from John Rhea conveying the President's approval, that Jackson later said he had destroyed Rhea's letter at Rhea's request, and that Overton had warned him the War Department's \"carte Blanche\" order might be used against him. Jackson endorsed it to be carefully preserved.",
+      "edition": {
+        "citation": "Daniel Feller, Laura-Eve Moss, Thomas Coens, and Erik B. Alexander, eds., The Papers of Andrew Jackson, Volume IX, 1831 (Knoxville: University of Tennessee Press, 2013), p. 282, \"From John Overton\" (source line: ADS, DLC (39)).",
+        "url": "https://trace.tennessee.edu/handle/20.500.14382/48173",
+        "note": "Used as the base text (open-access PDF, DOI 10.7290/utp9109) and read against the manuscript images line by line; the wording agrees throughout. The edition also prints Jackson's endorsement and the address, both used to check the outer panel. Line breaks and the foot-of-page addressee line follow the manuscript. The statement is also printed, with abbreviations expanded, in John Spencer Bassett, ed., Correspondence of Andrew Jackson, vol. 4 (Carnegie Institution, 1929), pp. 287-288, headed \"[Washington ?], June 2, 1831\"; its wording agrees."
+      },
+      "pages": [
+        {
+          "n": 1,
+          "locImage": "0001",
+          "original": "assets/travellers-rest/archive/originals/letters/maj012284/0001.jpg",
+          "originalUrl": "https://tile.loc.gov/storage-services/master/mss/maj/01078/0000/0001.jpg",
+          "sha256": "f63cd8f7b96fbecfa01e971602782f598ce5a758b47a7b123e47d7620dc6f114",
+          "bytes": 797017,
+          "width": 2930,
+          "height": 3461,
+          "src": "/travellers-rest/archive/letters/maj012284/p01.webp",
+          "small": "/travellers-rest/archive/letters/maj012284/p01-small.webp",
+          "srcWidth": 2032,
+          "srcHeight": 2400,
+          "kind": "letter",
+          "label": "Page 1 · recto of first leaf (folio 15173)",
+          "alt": "First page of Overton's statement, twenty-eight closely written lines in a heavy slanting hand, with a faint later pencil date at upper right and the folio stamp 15173 at lower left.",
+          "confidence": "high",
+          "check": "Every line read from zoomed strips of the master image and compared word for word with Papers of Andrew Jackson IX:282; no disagreement. \"here, as in the Courts\" (last line) is an interlineation over a caret and an ink blot, printed here in place. The pencil date at the top is a later annotation, not Overton's.",
+          "transcript": [
+            {
+              "y0": 0.03,
+              "y1": 0.06,
+              "text": "[later pencil annotation] June 2 1831"
+            },
+            {
+              "y0": 0.066,
+              "y1": 0.1,
+              "text": "I recollect when writing the pamphlet"
+            },
+            {
+              "y0": 0.102,
+              "y1": 0.136,
+              "text": "defence of the Executive and his command="
+            },
+            {
+              "y0": 0.131,
+              "y1": 0.165,
+              "text": "=ing General, in relation to the Seminole"
+            },
+            {
+              "y0": 0.155,
+              "y1": 0.189,
+              "text": "War, in 1818 – that upon requesting from"
+            },
+            {
+              "y0": 0.179,
+              "y1": 0.213,
+              "text": "you, minute information, on every point"
+            },
+            {
+              "y0": 0.208,
+              "y1": 0.242,
+              "text": "connected with the campaign, that you"
+            },
+            {
+              "y0": 0.241,
+              "y1": 0.275,
+              "text": "furnished me with your orders &c,"
+            },
+            {
+              "y0": 0.272,
+              "y1": 0.306,
+              "text": "and placed before me your confidential"
+            },
+            {
+              "y0": 0.303,
+              "y1": 0.337,
+              "text": "letter to Mr Monroe, being a copy of the one"
+            },
+            {
+              "y0": 0.326,
+              "y1": 0.36,
+              "text": "transmitted to him, as you stated – with"
+            },
+            {
+              "y0": 0.352,
+              "y1": 0.386,
+              "text": "Mr John Rheas letter in his own hand"
+            },
+            {
+              "y0": 0.383,
+              "y1": 0.417,
+              "text": "writing, which, in substance conveyed the"
+            },
+            {
+              "y0": 0.416,
+              "y1": 0.45,
+              "text": "idea, that he had conversed with the Presi="
+            },
+            {
+              "y0": 0.447,
+              "y1": 0.481,
+              "text": "dent, who shewed him your confidential"
+            },
+            {
+              "y0": 0.479,
+              "y1": 0.513,
+              "text": "letter ; that he approved of your suggestions"
+            },
+            {
+              "y0": 0.52,
+              "y1": 0.554,
+              "text": "&c"
+            },
+            {
+              "y0": 0.549,
+              "y1": 0.583,
+              "text": "I further told you afterwards, that in"
+            },
+            {
+              "y0": 0.58,
+              "y1": 0.614,
+              "text": "my opinion that you had done wrong"
+            },
+            {
+              "y0": 0.611,
+              "y1": 0.645,
+              "text": "in destroying Mr Rheas letter, which you"
+            },
+            {
+              "y0": 0.64,
+              "y1": 0.674,
+              "text": "told me you had done, at his request"
+            },
+            {
+              "y0": 0.669,
+              "y1": 0.703,
+              "text": "And, when at the Hermitage, and before"
+            },
+            {
+              "y0": 0.704,
+              "y1": 0.738,
+              "text": "entering on the Campaign, you showed"
+            },
+            {
+              "y0": 0.735,
+              "y1": 0.769,
+              "text": "me what I considered a carte Blanche"
+            },
+            {
+              "y0": 0.771,
+              "y1": 0.805,
+              "text": "of an order, dated I think in Decr."
+            },
+            {
+              "y0": 0.802,
+              "y1": 0.836,
+              "text": "1817, from the secretary of War,"
+            },
+            {
+              "y0": 0.838,
+              "y1": 0.872,
+              "text": "respecting the mode of conducting that"
+            },
+            {
+              "y0": 0.877,
+              "y1": 0.911,
+              "text": "War, I cautioned you to be on your"
+            },
+            {
+              "y0": 0.908,
+              "y1": 0.956,
+              "text": "guard, for that cabinets here, as in the Courts of Europe"
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "locImage": "0002",
+          "original": "assets/travellers-rest/archive/originals/letters/maj012284/0002.jpg",
+          "originalUrl": "https://tile.loc.gov/storage-services/master/mss/maj/01078/0000/0002.jpg",
+          "sha256": "acffcdeb2e7aff45eb4f3193a4dbba5b06f00978e8e3c68033d81e70374a225d",
+          "bytes": 349445,
+          "width": 2729,
+          "height": 3390,
+          "src": "/travellers-rest/archive/letters/maj012284/p02.webp",
+          "small": "/travellers-rest/archive/letters/maj012284/p02-small.webp",
+          "srcWidth": 1932,
+          "srcHeight": 2400,
+          "kind": "letter",
+          "label": "Page 2 · verso of first leaf, with signature",
+          "alt": "Second page: three lines completing the statement, then the addressee line Genl A. Jackson, Prest of the U. States, a brace, and the signature Jno: Overton; the rest is blank with show-through from page 1.",
+          "confidence": "high",
+          "check": "Read from a zoomed crop and compared with Papers of Andrew Jackson IX:282; wording agrees. The addressee line beside the signature is on the manuscript but not printed by the edition.",
+          "transcript": [
+            {
+              "y0": 0.07,
+              "y1": 0.1,
+              "text": "might sometimes design to use it as"
+            },
+            {
+              "y0": 0.098,
+              "y1": 0.124,
+              "text": "a means of putting down the"
+            },
+            {
+              "y0": 0.122,
+              "y1": 0.152,
+              "text": "reputation of an officer"
+            },
+            {
+              "y0": 0.185,
+              "y1": 0.232,
+              "text": "Genl A. Jackson          Jno: Overton"
+            },
+            {
+              "y0": 0.232,
+              "y1": 0.268,
+              "text": "Prest of the U. States"
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "locImage": "0003",
+          "original": "assets/travellers-rest/archive/originals/letters/maj012284/0003.jpg",
+          "originalUrl": "https://tile.loc.gov/storage-services/master/mss/maj/01078/0000/0003.jpg",
+          "sha256": "959342694b4860b7115bf16c4d163b5ae2050514e189f66a02d0b0cd403f48c2",
+          "bytes": 211312,
+          "width": 2948,
+          "height": 3446,
+          "src": "/travellers-rest/archive/letters/maj012284/p03.webp",
+          "small": "/travellers-rest/archive/letters/maj012284/p03-small.webp",
+          "srcWidth": 2053,
+          "srcHeight": 2400,
+          "kind": "blank",
+          "label": "Second leaf · blank inner side (folio 15174)",
+          "alt": "Blank inner side of the second leaf with the folio stamp 15174 and faint show-through of the address and endorsement on its reverse; a sliver of page 2 shows at the left edge.",
+          "confidence": "none",
+          "check": "Viewed at full size: no writing on this side beyond show-through.",
+          "transcript": []
+        },
+        {
+          "n": 4,
+          "locImage": "0004",
+          "original": "assets/travellers-rest/archive/originals/letters/maj012284/0004.jpg",
+          "originalUrl": "https://tile.loc.gov/storage-services/master/mss/maj/01078/0000/0004.jpg",
+          "sha256": "3a9da4feb3f581113df3f2ce96fb3ad2f253412fac2a1fdc6d3b8f4fcc1fe2ad",
+          "bytes": 301443,
+          "width": 2613,
+          "height": 3381,
+          "src": "/travellers-rest/archive/letters/maj012284/p04.webp",
+          "small": "/travellers-rest/archive/letters/maj012284/p04-small.webp",
+          "srcWidth": 1855,
+          "srcHeight": 2400,
+          "kind": "address",
+          "label": "Second leaf · address panel with Jackson's endorsement",
+          "alt": "Outer panel of the folded sheet: the address written lengthwise in Overton's hand, crossed by a seven-line endorsement in a different hand signed A. J.",
+          "confidence": "medium",
+          "check": "Read from a zoomed crop and compared with the endorsement and address as printed in Papers of Andrew Jackson IX:282, which attributes the endorsement to Jackson. The endorsement agrees. The address runs sideways up the panel and is partly overwritten by the endorsement; the word \"United\" is given from the edition and could not be confirmed on the image.",
+          "transcript": [
+            {
+              "y0": 0.27,
+              "y1": 0.31,
+              "text": "[endorsement, across the panel] The Honble John"
+            },
+            {
+              "y0": 0.305,
+              "y1": 0.345,
+              "text": "Overtons statement"
+            },
+            {
+              "y0": 0.34,
+              "y1": 0.38,
+              "text": "Seminole war copy"
+            },
+            {
+              "y0": 0.372,
+              "y1": 0.412,
+              "text": "in letter Book – 2nd."
+            },
+            {
+              "y0": 0.405,
+              "y1": 0.44,
+              "text": "of June 1831 to be"
+            },
+            {
+              "y0": 0.432,
+              "y1": 0.468,
+              "text": "carefuly preserved"
+            },
+            {
+              "y0": 0.455,
+              "y1": 0.485,
+              "text": "A. J."
+            },
+            {
+              "y0": 0.34,
+              "y1": 0.79,
+              "text": "[address, written lengthwise] Genl. A. Jackson / Prest of [United?] States / Present"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maj011135",
+      "title": "John Overton to Andrew Jackson",
+      "author": "John Overton",
+      "recipient": "Andrew Jackson",
+      "date": "1827-08-25",
+      "dateLabel": "August 25, 1827",
+      "place": "Sparta, Tennessee",
+      "item": "https://www.loc.gov/item/maj011135/",
+      "resource": "https://www.loc.gov/resource/maj.01068_0334_0337/",
+      "credit": "Library of Congress, Manuscript Division, Andrew Jackson Papers. Series 1, General Correspondence and Related Items, 1775-1885; MSS 27532, Vol. 68.",
+      "catalogNote": "LoC record confirmed from its JSON: title \"John Overton to Andrew Jackson, August 25, 1827\", Overton as author, Jackson as correspondent, extent \"4 pages\", four image files 0334-0337; here the count and the images agree. 0334 is page 1; 0335 is page 2; 0336 is page 3, six lines, the close and signature; 0337 is the address panel. The images confirm the signature (Jno: Overton), the addressee (Genl A Jackson at the foot of page 3; \"Genl Andrew Jackson, Hermitage near Nashville\" on the address panel) and the dateline \"Sparta Augt 25th 1827\". One thing is unresolved: the manuscript postmark on the address panel reads \"Sparta T / Augt 23rd\" on my reading, two days before the date LoC and the Papers of Andrew Jackson calendar give; the day numeral in the dateline is cramped and could be read 23 or 25. The LoC date is kept.",
+      "summary": "Modern commentary: Writing from Sparta, Overton tells Jackson that Judge Isacks has given him a note about \"Clays bargain and management\" of the presidential election of January 1825, with a copy for Jackson that he will bring home rather than post. He and Isacks think it improper to publish it for now, and he says that no one doubts Jackson's statement; the close, which names Buchanan and Markley, calls it an important paper in \"perfect confirmation of what has been stated\". Only the opening and the close are transcribed here; the calendar of the Papers of Andrew Jackson identifies the judge as Jacob C. Isacks.",
+      "edition": {
+        "citation": "Harold D. Moser and J. Clint Clifft, eds., The Papers of Andrew Jackson, Volume VI, 1825-1828 (Knoxville: University of Tennessee Press, 2002), Calendar, p. 592 (calendar entry only: \"From John Overton. ALS, DLC (34). Reports obtaining statement from Jacob C. Isacks, confirming AJ's account of James Buchanan's role in the 1825 election, and discusses the likelihood of Buchanan's making a statement.\").",
+        "url": "https://trace.tennessee.edu/handle/20.500.14382/48165",
+        "note": "No published full text was found: the edition lists this letter in its calendar with a one-sentence summary and does not print it. The summary was used only to confirm author, repository and subject. The transcription was made directly from the images."
+      },
+      "pages": [
+        {
+          "n": 1,
+          "locImage": "0334",
+          "original": "assets/travellers-rest/archive/originals/letters/maj011135/0334.jpg",
+          "originalUrl": "https://tile.loc.gov/storage-services/master/mss/maj/01068/0300/0334.jpg",
+          "sha256": "aa19bb8e5a42247af035788a503abaed9d9170155f79a2c89091b5c9767dc727",
+          "bytes": 1064507,
+          "width": 2846,
+          "height": 4521,
+          "src": "/travellers-rest/archive/letters/maj011135/p01.webp",
+          "small": "/travellers-rest/archive/letters/maj011135/p01-small.webp",
+          "srcWidth": 1511,
+          "srcHeight": 2400,
+          "kind": "letter",
+          "label": "Page 1 · opening of the letter",
+          "alt": "First page of a long letter headed Sparta Augt 25th 1827 and beginning Dear Sir, about thirty lines in Overton's slanting hand with heavy show-through.",
+          "confidence": "medium",
+          "check": "Transcribed directly from zoomed strips of the master image; there is no published text to check against, only the edition's calendar summary, which agrees on the subject. Only the first twenty lines (to \"doubt your statement.\") are transcribed; the lower third of the page, from \"Previous to your letter to Beverly\", is not. Bracketed words are uncertain.",
+          "transcript": [
+            {
+              "y0": 0.027,
+              "y1": 0.059,
+              "text": "Sparta Augt [25th?] 1827"
+            },
+            {
+              "y0": 0.08,
+              "y1": 0.112,
+              "text": "Dear Sir"
+            },
+            {
+              "y0": 0.103,
+              "y1": 0.135,
+              "text": "Judge Isacks has addressed to"
+            },
+            {
+              "y0": 0.134,
+              "y1": 0.166,
+              "text": "me a note in answer to mine respecting"
+            },
+            {
+              "y0": 0.16,
+              "y1": 0.192,
+              "text": "Clays bargain and management of"
+            },
+            {
+              "y0": 0.186,
+              "y1": 0.218,
+              "text": "the presidential election in January 1825"
+            },
+            {
+              "y0": 0.215,
+              "y1": 0.247,
+              "text": "He has also handed me a Copy for you,"
+            },
+            {
+              "y0": 0.246,
+              "y1": 0.278,
+              "text": "which had been requested. To forward the"
+            },
+            {
+              "y0": 0.28,
+              "y1": 0.312,
+              "text": "Copy by mail at this time, would occasion"
+            },
+            {
+              "y0": 0.311,
+              "y1": 0.343,
+              "text": "expense, and answer no useful purpose."
+            },
+            {
+              "y0": 0.339,
+              "y1": 0.371,
+              "text": "I have therefore concluded to bring it"
+            },
+            {
+              "y0": 0.371,
+              "y1": 0.403,
+              "text": "with me, and deliver it to you on"
+            },
+            {
+              "y0": 0.4,
+              "y1": 0.432,
+              "text": "my return. It has been concluded by Judge"
+            },
+            {
+              "y0": 0.431,
+              "y1": 0.463,
+              "text": "Isacks and myself, that it would be [improper?]"
+            },
+            {
+              "y0": 0.457,
+              "y1": 0.489,
+              "text": "to publish his communication at this time –"
+            },
+            {
+              "y0": 0.486,
+              "y1": 0.518,
+              "text": "in the present state of things, and of the public"
+            },
+            {
+              "y0": 0.512,
+              "y1": 0.544,
+              "text": "mind in the U.S, in relation to this bargain"
+            },
+            {
+              "y0": 0.54,
+              "y1": 0.572,
+              "text": "and management. The people of the U.S"
+            },
+            {
+              "y0": 0.562,
+              "y1": 0.594,
+              "text": "are with you ; no one, not even the coali="
+            },
+            {
+              "y0": 0.586,
+              "y1": 0.618,
+              "text": "=tion editors, doubt your statement."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "locImage": "0335",
+          "original": "assets/travellers-rest/archive/originals/letters/maj011135/0335.jpg",
+          "originalUrl": "https://tile.loc.gov/storage-services/master/mss/maj/01068/0300/0335.jpg",
+          "sha256": "652411451de6008ab62af5b11984319143935e591748aa158d5cb383b4ad9696",
+          "bytes": 1079841,
+          "width": 3140,
+          "height": 4504,
+          "src": "/travellers-rest/archive/letters/maj011135/p02.webp",
+          "small": "/travellers-rest/archive/letters/maj011135/p02-small.webp",
+          "srcWidth": 1673,
+          "srcHeight": 2400,
+          "kind": "letter",
+          "label": "Page 2 · continuation",
+          "alt": "Second page, about thirty densely written lines with several cancellations and interlineations; the edge of page 3 and binding holes show at the right.",
+          "confidence": "none",
+          "check": "Not transcribed. The page was viewed only in overview; it is dense, with cancelled and interlined passages, and no published text exists to check a reading against.",
+          "transcript": []
+        },
+        {
+          "n": 3,
+          "locImage": "0336",
+          "original": "assets/travellers-rest/archive/originals/letters/maj011135/0336.jpg",
+          "originalUrl": "https://tile.loc.gov/storage-services/master/mss/maj/01068/0300/0336.jpg",
+          "sha256": "6e5ba3150aa40b5c50d3695c6867bafcf4cc413c26ae0e0333607f488798736a",
+          "bytes": 584001,
+          "width": 2900,
+          "height": 4520,
+          "src": "/travellers-rest/archive/letters/maj011135/p03.webp",
+          "small": "/travellers-rest/archive/letters/maj011135/p03-small.webp",
+          "srcWidth": 1540,
+          "srcHeight": 2400,
+          "kind": "letter",
+          "label": "Page 3 · close and signature",
+          "alt": "Third page: six lines finishing the letter, the close Respy as usual, the signature Jno: Overton and the addressee line Genl A Jackson; the rest is blank, with a wafer-seal stain.",
+          "confidence": "medium",
+          "check": "Transcribed directly from a zoomed crop; no published text to check against. The page begins mid-sentence, continuing from the untranscribed page 2. Proper names are spelled as Overton wrote them.",
+          "transcript": [
+            {
+              "y0": 0.045,
+              "y1": 0.08,
+              "text": "Mr Buchannon, who told Judge Isacks"
+            },
+            {
+              "y0": 0.083,
+              "y1": 0.118,
+              "text": "that Mr Markley had just been"
+            },
+            {
+              "y0": 0.117,
+              "y1": 0.15,
+              "text": "talking to him (Buchannon) about"
+            },
+            {
+              "y0": 0.147,
+              "y1": 0.18,
+              "text": "it – This is an important paper"
+            },
+            {
+              "y0": 0.18,
+              "y1": 0.214,
+              "text": "and goes in perfect confirmation"
+            },
+            {
+              "y0": 0.211,
+              "y1": 0.244,
+              "text": "of what has been stated"
+            },
+            {
+              "y0": 0.262,
+              "y1": 0.302,
+              "text": "Respy as usual"
+            },
+            {
+              "y0": 0.305,
+              "y1": 0.36,
+              "text": "Jno: Overton"
+            },
+            {
+              "y0": 0.375,
+              "y1": 0.415,
+              "text": "Genl A Jackson"
+            }
+          ]
+        },
+        {
+          "n": 4,
+          "locImage": "0337",
+          "original": "assets/travellers-rest/archive/originals/letters/maj011135/0337.jpg",
+          "originalUrl": "https://tile.loc.gov/storage-services/master/mss/maj/01068/0300/0337.jpg",
+          "sha256": "a646db5a87566175f907cd2bc48fff283e55b6306ac01b37f3d1b75da1651643",
+          "bytes": 327213,
+          "width": 3357,
+          "height": 2822,
+          "src": "/travellers-rest/archive/letters/maj011135/p04.webp",
+          "small": "/travellers-rest/archive/letters/maj011135/p04-small.webp",
+          "srcWidth": 2400,
+          "srcHeight": 2018,
+          "kind": "address",
+          "label": "Address panel · postmark and docket",
+          "alt": "Address panel of the folded letter: a manuscript postmark at upper left, the postage rate at upper right, the address to Genl Andrew Jackson at the Hermitage near Nashville, and a three-line docket written sideways at lower right.",
+          "confidence": "medium",
+          "check": "Read directly from zoomed crops; nothing published to check against. The postmark day and the middle initial in the docket are uncertain. The docket is in a different hand from the letter and is not identified here.",
+          "transcript": [
+            {
+              "y0": 0.24,
+              "y1": 0.32,
+              "text": "[manuscript postmark] Sparta T / Augt [23rd?]"
+            },
+            {
+              "y0": 0.24,
+              "y1": 0.29,
+              "text": "[postage, upper right] 12½"
+            },
+            {
+              "y0": 0.385,
+              "y1": 0.455,
+              "text": "Genl Andrew Jackson"
+            },
+            {
+              "y0": 0.49,
+              "y1": 0.545,
+              "text": "Hermitage"
+            },
+            {
+              "y0": 0.54,
+              "y1": 0.57,
+              "text": "near"
+            },
+            {
+              "y0": 0.565,
+              "y1": 0.615,
+              "text": "Nashville"
+            },
+            {
+              "y0": 0.64,
+              "y1": 0.96,
+              "text": "[docket, written sideways] J. [W.?] Overton 1827 / Clays bargain of / 1825."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maj001399",
+      "title": "John Overton to Andrew Jackson",
+      "author": "John Overton",
+      "recipient": "Andrew Jackson",
+      "date": "1812-01-19",
+      "dateLabel": "January 19, 1812",
+      "place": "Travellers Rest",
+      "item": "https://www.loc.gov/item/maj001399/",
+      "resource": "https://www.loc.gov/resource/maj.01009_0179_0181/",
+      "credit": "Library of Congress, Manuscript Division, Andrew Jackson Papers. Series 1, General Correspondence and Related Items, 1775-1885; MSS 27532, Vol. 9.",
+      "catalogNote": "LoC record confirmed from its JSON: title \"John Overton to Andrew Jackson, January 19, 1812\", Overton as author, Jackson as correspondent, extent \"3 pages\", three image files 0179-0181; count and images agree. 0179 is page 1 (folio stamp 813), dated Travellers Rest 19th January 1812; 0180 is page 2 (folio stamp 814) with the signature, the addressee line and a signed receipt dated 22 January 1812, photographed with the unfolded blank half of the sheet at the right; 0181 is the outer panel with the address and a docket.",
+      "summary": "Modern commentary: A short letter about money. Overton has to meet a $1,000 draft at the bank and, having no cash in hand, asks Jackson for a bank credit of $429.40, the balance Jackson still holds out of $1,350 after paying out $920.60. A receipt signed by Overton at the foot, dated 22 January 1812, records that he received the sum in a check on the Nashville bank.",
+      "edition": {
+        "citation": "Harold D. Moser and Sharon Macpherson, eds., The Papers of Andrew Jackson, Volume II, 1804-1813 (Knoxville: University of Tennessee Press, 1984), Calendar, p. 564 (calendar entry only: \"Jan 19 From John Overton. ALS, DLC. Requests a loan of money.\").",
+        "url": "https://trace.tennessee.edu/handle/20.500.14382/48171",
+        "note": "No published full text was found: the edition lists this letter in its calendar with a four-word summary and does not print it. The entry was used only to confirm author, date and repository. The transcription was made directly from the images."
+      },
+      "pages": [
+        {
+          "n": 1,
+          "locImage": "0179",
+          "original": "assets/travellers-rest/archive/originals/letters/maj001399/0179.jpg",
+          "originalUrl": "https://tile.loc.gov/storage-services/master/mss/maj/01009/0100/0179.jpg",
+          "sha256": "deeda071b5f67f3a9e8993c9e6806a1f9ac6d44152e6db1d6d26e4c4d354bf40",
+          "bytes": 423217,
+          "width": 2272,
+          "height": 2557,
+          "src": "/travellers-rest/archive/letters/maj001399/p01.webp",
+          "small": "/travellers-rest/archive/letters/maj001399/p01-small.webp",
+          "srcWidth": 2132,
+          "srcHeight": 2400,
+          "kind": "letter",
+          "label": "Page 1 · recto (folio 813)",
+          "alt": "First page of a short letter in a large, open hand, headed Travellers Rest 19th January 1812 and addressed Dear Genl, with the sum $429.40 on the last line.",
+          "confidence": "medium",
+          "check": "Transcribed directly from zoomed strips of the master image; the whole page is transcribed. No published text exists to check it against, so the reading rests on the images alone. The hand is large and clear; the forename in line 4 and the abbreviation after \"29th\" are marked uncertain.",
+          "transcript": [
+            {
+              "y0": 0.088,
+              "y1": 0.142,
+              "text": "Travellers Rest"
+            },
+            {
+              "y0": 0.136,
+              "y1": 0.19,
+              "text": "19th January 1812"
+            },
+            {
+              "y0": 0.183,
+              "y1": 0.237,
+              "text": "Dear Genl"
+            },
+            {
+              "y0": 0.221,
+              "y1": 0.275,
+              "text": "Mr. [Etheldred?] Williams"
+            },
+            {
+              "y0": 0.283,
+              "y1": 0.337,
+              "text": "has drawn on me for $1000"
+            },
+            {
+              "y0": 0.337,
+              "y1": 0.391,
+              "text": "which I am to pay at Bank"
+            },
+            {
+              "y0": 0.396,
+              "y1": 0.45,
+              "text": "on. Thursday week 29th [instant?]"
+            },
+            {
+              "y0": 0.463,
+              "y1": 0.517,
+              "text": "I have not money in"
+            },
+            {
+              "y0": 0.518,
+              "y1": 0.572,
+              "text": "hand, and must therefore"
+            },
+            {
+              "y0": 0.573,
+              "y1": 0.627,
+              "text": "request that you will"
+            },
+            {
+              "y0": 0.63,
+              "y1": 0.684,
+              "text": "furnish me with a credit"
+            },
+            {
+              "y0": 0.698,
+              "y1": 0.752,
+              "text": "in bank to the amount"
+            },
+            {
+              "y0": 0.756,
+              "y1": 0.81,
+              "text": "of the balance of his in"
+            },
+            {
+              "y0": 0.813,
+              "y1": 0.867,
+              "text": "your hands. to wit"
+            },
+            {
+              "y0": 0.881,
+              "y1": 0.945,
+              "text": "$429.40 : The whole amt"
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "locImage": "0180",
+          "original": "assets/travellers-rest/archive/originals/letters/maj001399/0180.jpg",
+          "originalUrl": "https://tile.loc.gov/storage-services/master/mss/maj/01009/0100/0180.jpg",
+          "sha256": "1e2b9ed2e00849d235e84cc69772361b0f22a0f67f69ad071d029a28864cc5ba",
+          "bytes": 515623,
+          "width": 3162,
+          "height": 2552,
+          "src": "/travellers-rest/archive/letters/maj001399/p02.webp",
+          "small": "/travellers-rest/archive/letters/maj001399/p02-small.webp",
+          "srcWidth": 2400,
+          "srcHeight": 1937,
+          "kind": "letter",
+          "label": "Page 2 · close, signature and receipt (folio 814)",
+          "alt": "Second page on the left half of the unfolded sheet: the end of the letter, the signature Jno: Overton, the addressee line and a three-line signed receipt; the right half is blank except for two struck-out words.",
+          "confidence": "medium",
+          "check": "Transcribed directly from zoomed strips of the master image; the whole page is transcribed. No published text to check against. The sums are internally consistent ($1350 less $920.60 leaves $429.40), which supports the figures. Two words are marked uncertain.",
+          "transcript": [
+            {
+              "y0": 0.052,
+              "y1": 0.106,
+              "text": "agreeably to your [Memo?] in"
+            },
+            {
+              "y0": 0.097,
+              "y1": 0.151,
+              "text": "my hands which you recd"
+            },
+            {
+              "y0": 0.153,
+              "y1": 0.207,
+              "text": "was $1350. You paid to"
+            },
+            {
+              "y0": 0.232,
+              "y1": 0.286,
+              "text": "[Shelby?] or Carrick $920.60"
+            },
+            {
+              "y0": 0.29,
+              "y1": 0.344,
+              "text": "leaving the above balance"
+            },
+            {
+              "y0": 0.365,
+              "y1": 0.419,
+              "text": "So soon as an oppor"
+            },
+            {
+              "y0": 0.428,
+              "y1": 0.482,
+              "text": "=tunity occurs I hope to have"
+            },
+            {
+              "y0": 0.511,
+              "y1": 0.565,
+              "text": "the pleasure of seeing you"
+            },
+            {
+              "y0": 0.57,
+              "y1": 0.624,
+              "text": "I am yr friend"
+            },
+            {
+              "y0": 0.652,
+              "y1": 0.722,
+              "text": "Jno: Overton"
+            },
+            {
+              "y0": 0.718,
+              "y1": 0.772,
+              "text": "Genl Andrew"
+            },
+            {
+              "y0": 0.776,
+              "y1": 0.83,
+              "text": "Jackson"
+            },
+            {
+              "y0": 0.842,
+              "y1": 0.882,
+              "text": "Recd this 22d Jany 1812 the above"
+            },
+            {
+              "y0": 0.881,
+              "y1": 0.921,
+              "text": "$429.40 in a Check on the Nashville"
+            },
+            {
+              "y0": 0.922,
+              "y1": 0.97,
+              "text": "bank          Jno: Overton"
+            },
+            {
+              "y0": 0.215,
+              "y1": 0.265,
+              "text": "[right half of sheet, struck through] Recd this"
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "locImage": "0181",
+          "original": "assets/travellers-rest/archive/originals/letters/maj001399/0181.jpg",
+          "originalUrl": "https://tile.loc.gov/storage-services/master/mss/maj/01009/0100/0181.jpg",
+          "sha256": "a29c793b79a3beb918e72c7405a53c9a3a6b200a2144b8ce85ee81eb585cabc6",
+          "bytes": 279040,
+          "width": 1778,
+          "height": 2581,
+          "src": "/travellers-rest/archive/letters/maj001399/p03.webp",
+          "small": "/travellers-rest/archive/letters/maj001399/p03-small.webp",
+          "srcWidth": 1653,
+          "srcHeight": 2400,
+          "kind": "address",
+          "label": "Outer panel · address and docket",
+          "alt": "Outer panel of the folded letter: Genl Andrew Jackson written lengthwise on the left and a five-line docket in a different hand on the right, with fold lines and a seal tear.",
+          "confidence": "medium",
+          "check": "Read directly from a zoomed crop; nothing published to check against. The docket is in a different hand from the letter and is not identified here.",
+          "transcript": [
+            {
+              "y0": 0.19,
+              "y1": 0.79,
+              "text": "[address, written lengthwise] Genl Andrew Jackson"
+            },
+            {
+              "y0": 0.205,
+              "y1": 0.255,
+              "text": "[docket] John Overtons"
+            },
+            {
+              "y0": 0.262,
+              "y1": 0.305,
+              "text": "Letter and recpt"
+            },
+            {
+              "y0": 0.305,
+              "y1": 0.345,
+              "text": "in full for money"
+            },
+            {
+              "y0": 0.34,
+              "y1": 0.38,
+              "text": "Borrowed, January"
+            },
+            {
+              "y0": 0.372,
+              "y1": 0.405,
+              "text": "22d. 1812"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

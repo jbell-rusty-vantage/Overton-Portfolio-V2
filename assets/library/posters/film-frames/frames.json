@@ -1,0 +1,128 @@
+[
+  {
+    "film": "agentic-mission-control-reel.mp4",
+    "frames": [
+      {
+        "file": "agentic-mission-control-reel-1.webp",
+        "seconds": 2.27
+      },
+      {
+        "file": "agentic-mission-control-reel-2.webp",
+        "seconds": 6.42
+      },
+      {
+        "file": "agentic-mission-control-reel-3.webp",
+        "seconds": 10.76
+      },
+      {
+        "file": "agentic-mission-control-reel-4.webp",
+        "seconds": 14.73
+      }
+    ]
+  },
+  {
+    "film": "ai-engineer-worldsfair-showcase-walkthrough.mp4",
+    "frames": [
+      {
+        "file": "ai-engineer-worldsfair-showcase-walkthrough-1.webp",
+        "seconds": 2.11
+      },
+      {
+        "file": "ai-engineer-worldsfair-showcase-walkthrough-2.webp",
+        "seconds": 5.98
+      },
+      {
+        "file": "ai-engineer-worldsfair-showcase-walkthrough-3.webp",
+        "seconds": 10.03
+      },
+      {
+        "file": "ai-engineer-worldsfair-showcase-walkthrough-4.webp",
+        "seconds": 13.73
+      }
+    ]
+  },
+  {
+    "film": "daryl-davis-homepage-original.mp4",
+    "frames": [
+      {
+        "file": "daryl-davis-homepage-original-1.webp",
+        "seconds": 2.27
+      },
+      {
+        "file": "daryl-davis-homepage-original-2.webp",
+        "seconds": 6.43
+      },
+      {
+        "file": "daryl-davis-homepage-original-3.webp",
+        "seconds": 10.78
+      },
+      {
+        "file": "daryl-davis-homepage-original-4.webp",
+        "seconds": 14.75
+      }
+    ]
+  },
+  {
+    "film": "gowipe-walkthrough.mp4",
+    "frames": [
+      {
+        "file": "gowipe-walkthrough-1.webp",
+        "seconds": 2.07
+      },
+      {
+        "file": "gowipe-walkthrough-2.webp",
+        "seconds": 5.86
+      },
+      {
+        "file": "gowipe-walkthrough-3.webp",
+        "seconds": 9.82
+      },
+      {
+        "file": "gowipe-walkthrough-4.webp",
+        "seconds": 13.44
+      }
+    ]
+  },
+  {
+    "film": "overtech-digital-services-walkthrough.mp4",
+    "frames": [
+      {
+        "file": "overtech-digital-services-walkthrough-1.webp",
+        "seconds": 2.11
+      },
+      {
+        "file": "overtech-digital-services-walkthrough-2.webp",
+        "seconds": 5.98
+      },
+      {
+        "file": "overtech-digital-services-walkthrough-3.webp",
+        "seconds": 10.03
+      },
+      {
+        "file": "overtech-digital-services-walkthrough-4.webp",
+        "seconds": 13.73
+      }
+    ]
+  },
+  {
+    "film": "vantage-movers-walkthrough.mp4",
+    "frames": [
+      {
+        "file": "vantage-movers-walkthrough-1.webp",
+        "seconds": 2.11
+      },
+      {
+        "file": "vantage-movers-walkthrough-2.webp",
+        "seconds": 5.98
+      },
+      {
+        "file": "vantage-movers-walkthrough-3.webp",
+        "seconds": 10.03
+      },
+      {
+        "file": "vantage-movers-walkthrough-4.webp",
+        "seconds": 13.73
+      }
+    ]
+  }
+]

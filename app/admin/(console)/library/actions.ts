@@ -11,7 +11,8 @@ import {
   httpsUrl,
   templateNames,
 } from "@/lib/library/policy";
-import { validateHall } from "@/lib/library/scene-contract";
+import { validateHall, validateEstate } from "@/lib/library/scene-contract";
+import { layoutSchema, roomAnchors } from "@/lib/estate/program";
 import { shelves, zones } from "@/lib/library/model";
 
 class InputError extends Error {}
@@ -284,7 +285,7 @@ async function placeForm(tx: Tx, fd: FormData, actor: string) {
       include: { zone: true },
     });
     if (
-      !shelves.some(
+      ![...shelves,{slug:"travellers-rest-writing-table",node:"desk.writing",zone:"travellers-rest-library"}].some(
         (a) =>
           a.slug === s.slug &&
           a.node === s.sceneNodeName &&
@@ -442,35 +443,7 @@ async function sceneForm(tx: Tx, fd: FormData, actor: string) {
     const url = publicMedia(media.url);
     if (!url || media.deletedAt || media.kind !== "model3d")
       issue("Choose a Library GLB.");
-    const response = await fetch(url!, {
-      cache: "no-store",
-      redirect: "error",
-      signal: AbortSignal.timeout(10000),
-    });
-    if (
-      !response.ok ||
-      Number(response.headers.get("content-length") ?? 0) > 8388608
-    )
-      issue("The GLB could not be validated.");
-    const reader = response.body?.getReader();
-    if (!reader) return issue("Empty scene response.");
-    let size = 0;
-    const chunks: Uint8Array[] = [];
-    while (true) {
-      const chunk = await reader.read();
-      if (chunk.done) break;
-      size += chunk.value.length;
-      if (size > 8388608) {
-        await reader.cancel();
-        issue("GLB exceeds eight MiB.");
-      }
-      chunks.push(chunk.value);
-    }
-    try {
-      validateHall(Buffer.concat(chunks));
-    } catch {
-      return issue("The scene does not satisfy the Library GLB contract.");
-    }
+    await verifyModel(url!,validateHall);
     if (!asset) {
       const last = await tx.sceneAsset.aggregate({
         where: { slug },
@@ -496,16 +469,191 @@ async function sceneForm(tx: Tx, fd: FormData, actor: string) {
       where: { id: asset.id },
       data: { isActive: true },
     });
+  await audit(actor,"library.scene.activate",null,asset?.id??null,{previous,version:asset?.version??"builtin"},tx);
+}
+async function verifyModel(url: string, validate: (bytes: Uint8Array) => void) {
+  const response = await fetch(url, {
+    cache: "no-store",
+    redirect: "error",
+    signal: AbortSignal.timeout(10000),
+  });
+  if (
+    !response.ok ||
+    Number(response.headers.get("content-length") ?? 0) > 8388608
+  )
+    issue("The GLB could not be validated.");
+  const reader = response.body?.getReader();
+  if (!reader) return issue("Empty scene response.");
+  let size = 0;
+  const chunks: Uint8Array[] = [];
+  while (true) {
+    const chunk = await reader.read();
+    if (chunk.done) break;
+    size += chunk.value.length;
+    if (size > 8388608) {
+      await reader.cancel();
+      issue("GLB exceeds eight MiB.");
+    }
+    chunks.push(chunk.value);
+  }
+  try {
+    validate(Buffer.concat(chunks));
+  } catch {
+    return issue("The scene does not satisfy the Library GLB contract.");
+  }
+}
+async function estateForm(tx: Tx, fd: FormData, actor: string) {
+  const layout = await tx.uiLayout.findUniqueOrThrow({
+    where: { slug: "travellers-rest-visit" },
+  });
+  version(fd, layout.updatedAt.toISOString());
+  const parsed = layoutSchema.parse(layout.blocks);
+  const p = parsed[0].props;
+  const publish =
+    valueOf(field(fd, "release"), ["draft", "publish"] as const) === "publish";
+  function schedule(key: string) {
+    const v = field(fd, key);
+    if (!v) return null;
+    const time = Date.parse(v + "Z");
+    if (!Number.isFinite(time)) return issue("Enter a UTC date and time.");
+    return new Date(time).toISOString();
+  }
+  p.featuredFrom = schedule("start");
+  p.featuredUntil = schedule("end");
+  if (p.featuredFrom && p.featuredUntil && p.featuredFrom >= p.featuredUntil)
+    issue("The end must follow the start.");
+  const editions = await tx.sceneAsset.findMany({
+    where: { slug: { in: Object.values(p.scenes) }, version: p.edition },
+    include: { media: true },
+  });
+  if (publish) {
+    if (editions.length !== 2) issue("Both house scene tiers are required.");
+    const conflicting = await tx.sceneAsset.count({
+      where: {
+        slug: { in: Object.values(p.scenes) },
+        version: { not: p.edition },
+        isActive: true,
+      },
+    });
+    if (conflicting)
+      issue(
+        "Another edition is active. Select the matching house program before releasing this visit.",
+      );
+    await Promise.all(
+      editions.map((s) => {
+        const url = publicMedia(s.media.url);
+        if (!url || s.media.deletedAt || s.media.kind !== "model3d")
+          return issue("A house scene is unavailable.");
+        return verifyModel(url, (bytes) => validateEstate(bytes, p.edition));
+      }),
+    );
+  }
+  const display = publish ? "published" : "hidden";
+  const book = await tx.book.findUniqueOrThrow({
+    where: { slug: p.companion },
+  });
+  if (book.entityId || book.entityType)
+    issue("The house book must be a standalone companion.");
+  const rooms = await tx.libraryZone.findMany({
+    where: { slug: { in: roomAnchors.map((r) => r.slug) } },
+  });
+  if (
+    publish &&
+    !roomAnchors.every((anchor) =>
+      rooms.some(
+        (r) => r.slug === anchor.slug && r.sceneNodeName === anchor.node,
+      ),
+    )
+  )
+    issue("The house room inventory or scene anchors are incomplete.");
+  for (const s of editions) {
+    if (s.isActive === publish) continue;
+    await tx.sceneAsset.update({
+      where: { id: s.id },
+      data: { isActive: publish },
+    });
+    await audit(
+      actor,
+      "estate.scene.visibility",
+      null,
+      s.id,
+      { active: publish },
+      tx,
+    );
+  }
+  for (const r of rooms) {
+    if (r.display === display) continue;
+    const row = await tx.libraryZone.update({
+      where: { id: r.id },
+      data: { display },
+    });
+    await snapshot(
+      "library_zone",
+      r.id,
+      row,
+      actor,
+      "House visit visibility",
+      tx,
+    );
+    await audit(
+      actor,
+      "estate.room.visibility",
+      "library_zone",
+      r.id,
+      { display },
+      tx,
+    );
+  }
+  if (book.display !== display) {
+    const row = await tx.book.update({
+      where: { id: book.id },
+      data: { display },
+    });
+    await snapshot(
+      "book",
+      book.id,
+      row,
+      actor,
+      "House companion visibility",
+      tx,
+    );
+    await audit(
+      actor,
+      "estate.book.visibility",
+      "book",
+      book.id,
+      { display },
+      tx,
+    );
+    await emitSignal(
+      {
+        typeCode: "admin.status",
+        source: "admin",
+        title: publish
+          ? "Travellers Rest visit released"
+          : "Travellers Rest visit withdrawn",
+        visibility: "private",
+        actor,
+      },
+      tx,
+    );
+  }
+  const row = await tx.uiLayout.update({
+    where: { id: layout.id },
+    data: { blocks: parsed },
+  });
+  await snapshot("ui_layout", row.id, row, actor, "House program settings", tx);
   await audit(
     actor,
-    "library.scene.activate",
-    null,
-    asset?.id ?? null,
-    { previous, version: asset?.version ?? "builtin" },
+    "estate.program.save",
+    "ui_layout",
+    row.id,
+    { display },
     tx,
   );
 }
 const commands = {
+  estate: estateForm,
   book: bookForm,
   page: pageForm,
   place: placeForm,

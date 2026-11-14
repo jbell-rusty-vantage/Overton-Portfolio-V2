@@ -1,0 +1,20 @@
+{
+  "base": "https://overton-portfolio-v2-idhg7hxdn-overtons-projects.vercel.app",
+  "label": "provider-failure",
+  "at": "2026-11-14T01:50:50.027Z",
+  "turns": [
+    {
+      "latencyMs": 1312.7945000000002,
+      "mode": "fallback",
+      "citationCount": 1
+    }
+  ],
+  "capability": {
+    "live": true,
+    "model": "openai/gpt-6-luna",
+    "webSearch": true,
+    "voice": null,
+    "label": "Live replies \u00b7 openai/gpt-6-luna via Vercel AI Gateway \u00b7 checked against cited sources"
+  },
+  "passed": true
+}

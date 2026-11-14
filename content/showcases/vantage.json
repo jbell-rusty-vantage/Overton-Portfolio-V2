@@ -1,0 +1,193 @@
+[
+  {
+    "slug": "vantage-movers",
+    "summary": "From the public quote request to the business record: source-attributed leads, CRM handoff, and explicit booking and cancellation workflows for a moving company.",
+    "status": "Live client systems · bounded local verification",
+    "pages": [
+      {
+        "key": "overview",
+        "title": "Problem and role",
+        "blocks": [
+          {
+            "component": "Heading",
+            "props": {
+              "text": "One move, several systems"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "A moving company receives inquiries from its website, referral partners and phone campaigns. The same customer can then appear in a sales CRM, an owner's dashboard and a reporting sheet. Without a clear record of identity and origin, a booking can be credited to the wrong source or a duplicate charged as a new lead."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "As Vantage Movers' lead developer since March 2026, I have built its public websites, operations backend and internal tools. My responsibility spans the visitor's quote request and the server rules that connect it to sales and reporting. The work includes a Next.js owner dashboard, an Express API, MongoDB records, CRM integration and a separate transportation-pricing service."
+            }
+          }
+        ]
+      },
+      {
+        "key": "architecture",
+        "title": "Workflow decisions",
+        "blocks": [
+          {
+            "component": "Image",
+            "props": {
+              "url": "/library/artwork/vantage-movers-architecture-v3.webp",
+              "text": "Public intake enters the main server; booking and cancellation remain explicit business records. Pricing has its own service boundary.",
+              "ownPage": true
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The public apps use a server-only API client. MongoDB owns the business record; outside-system observations are evidence to reconcile. Source attribution is resolved at ingress, and duplicate leads remain available for accounting while their CRM posting is suppressed. A booking and cancellation are separate records, with their own identity and rules."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "Transportation pricing lives in a separate service with versioned rate tables. That separation does not move ownership of existing Leads, Bookings or Cancellations. The pricing service and management interface were deployed, but the inspected release record starts with rates disabled; it does not prove an enabled customer calculation."
+            }
+          }
+        ]
+      },
+      {
+        "key": "gallery",
+        "title": "Walkthrough: quote to record",
+        "blocks": [
+          {
+            "component": "Heading",
+            "props": {
+              "text": "1. Describe the move"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "On the live main site, enter pickup and destination ZIP codes, a date and move size. This November 13, 2026 observation used an invented move: 33426 to 10001, November 30, two bedrooms. The form resolves the locations before continuing."
+            }
+          },
+          {
+            "component": "Image",
+            "props": {
+              "url": "/library/artwork/vantage-main-02-v3.webp",
+              "text": "Step 1 — real main-site form with synthetic moving details. No personal information or quote submission.",
+              "ownPage": true
+            }
+          },
+          {
+            "component": "Heading",
+            "props": {
+              "text": "2. Reach the contact step"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "Continue reveals name, email, phone and SMS-consent controls. The observation stops here, before entering contact information or requesting a quote. The landing page uses a shorter first step: location first, then move details and contact information together."
+            }
+          },
+          {
+            "component": "Image",
+            "props": {
+              "url": "/library/artwork/vantage-main-03-v3.webp",
+              "text": "Step 2 — the main site reaches contact information. Fields remain blank; the final request was not sent.",
+              "ownPage": true
+            }
+          },
+          {
+            "component": "Image",
+            "props": {
+              "url": "/library/artwork/vantage-landing-02-v3.webp",
+              "text": "Alternative entry — the live landing page groups move details and contact fields after the ZIP step. Blank contact fields; no submission.",
+              "ownPage": true
+            }
+          }
+        ]
+      },
+      {
+        "key": "notes",
+        "title": "After the quote",
+        "blocks": [
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The following trace uses separate synthetic offline tests, not one continuous CRM transaction. The main-site route fixes attribution to the main site, preserves its supplied LID and forwards explicit consent. A failed capture returns a failure status. Partner routes retain their allowlisted source and return an estimate with leadCaptured:false when capture fails."
+            }
+          },
+          {
+            "component": "Heading",
+            "props": {
+              "text": "3. Preserve identity at the CRM boundary"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The tested Granot payload puts the tracking reference in leadno and the LID in notes. A later job number does not replace the reference. Calendar dates retain their meaning; missing trusted dates stay empty. These checks verify payload construction, not a new live CRM acceptance."
+            }
+          },
+          {
+            "component": "Heading",
+            "props": {
+              "text": "4. Attach a booking; retain its cancellation"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "An owner-selected Form Lead ID produces a booking attachment plan. A Call Lead needs a unique exact-job match; missing or ambiguous matches become reconciliation work. Cancellation snapshots retain the booking's job number, lead reference and creation date. Contact-shaped fields cannot silently supply missing identity."
+            }
+          }
+        ]
+      },
+      {
+        "key": "metrics",
+        "title": "Proof and limits",
+        "blocks": [
+          {
+            "component": "Prose",
+            "props": {
+              "text": "On November 13, 2026, 51 focused server tests, two main-site quote tests and five partner-attribution tests passed with synthetic records and mocked dependencies. Both public quote journeys reached their contact step. Historical October 30 preview evidence separately records isolated test-database intake; CRM and messaging were intentionally skipped."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The inspected server still finalizes Sheet Sync before CRM posting, so a Sheet Sync failure can block that handoff. Current local revisions differ from remote HEAD for the clients, main server and admin. These checks establish bounded local behavior and public pre-submit navigation, not the current hosted backend revision or an integrated booking run. No conversion or revenue improvement is claimed."
+            }
+          }
+        ]
+      },
+      {
+        "key": "links",
+        "title": "Sources and live entries",
+        "blocks": [
+          {
+            "component": "Link",
+            "props": {
+              "url": "https://vantagehomemovers.com/",
+              "text": "Main site — public quote journey"
+            }
+          },
+          {
+            "component": "Link",
+            "props": {
+              "url": "https://vantagemoves.com/",
+              "text": "Landing page — public quote journey"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "Source audit: clients f28b496b, apps/main-site/src/app/api/quote/route.test.ts and apps/clients/src/app/api/quote/route.test.ts. Main server b926311e, src/services/leads/formLead.service.test.ts; crm/formLeadPayload.test.ts; bookings/bookedLeadFromSource.service.test.ts; cancellations/cancellationResolver.test.ts and cancellationCorrelationSnapshots.test.ts. Service documents: docs/knowledge/services/form-lead.md, bookings.md and cancelled-lead.md. Operations 5834a95b, README.md. Public captures: November 13, 2026."
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

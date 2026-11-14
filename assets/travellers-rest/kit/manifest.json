@@ -1,0 +1,6477 @@
+{
+ "about": "Travellers Rest kit. Written by scripts/pack-kit.mjs; do not edit by hand.",
+ "coordinates": "metres, Y up, south +Z (the house's own frame)",
+ "naming": "Blender and glTF use the dotted name; three.js GLTFLoader strips the dots (see `three`), and keeps the original in userData.name",
+ "holder": "each mesh sits on a child named <name>~mesh so the named node keeps its authored transform",
+ "blender": "5.2.2 LTS",
+ "tiers": {
+  "detailed": {
+   "file": "public/travellers-rest/kit.glb",
+   "url": "/travellers-rest/kit.glb",
+   "bytes": 706828,
+   "sha256": "5af30b3af50ca71312d32181ae4eb4ad1cabe52a09195934afbb01e61277662b",
+   "triangles": 36568,
+   "nodes": 119,
+   "meshes": 45,
+   "materials": 29,
+   "textures": [
+    {
+     "name": "kit.ao",
+     "bytes": 117713,
+     "size": [
+      1024,
+      1024
+     ]
+    },
+    {
+     "name": "paper.leaves",
+     "bytes": 6913,
+     "size": [
+      256,
+      256
+     ]
+    },
+    {
+     "name": "paper.laid",
+     "bytes": 12110,
+     "size": [
+      512,
+      512
+     ]
+    },
+    {
+     "name": "leather.calf",
+     "bytes": 6247,
+     "size": [
+      512,
+      512
+     ]
+    },
+    {
+     "name": "walnut.shaded",
+     "bytes": 5420,
+     "size": [
+      512,
+      512
+     ]
+    },
+    {
+     "name": "walnut",
+     "bytes": 9006,
+     "size": [
+      512,
+      512
+     ]
+    },
+    {
+     "name": "paint.door",
+     "bytes": 1080,
+     "size": [
+      256,
+      256
+     ]
+    },
+    {
+     "name": "bark",
+     "bytes": 27593,
+     "size": [
+      512,
+      512
+     ]
+    },
+    {
+     "name": "paint.joinery",
+     "bytes": 1683,
+     "size": [
+      256,
+      256
+     ]
+    },
+    {
+     "name": "leather.tooled",
+     "bytes": 18129,
+     "size": [
+      1024,
+      512
+     ]
+    },
+    {
+     "name": "leather.tooled.orm",
+     "bytes": 11238,
+     "size": [
+      1024,
+      512
+     ]
+    }
+   ],
+   "validator": {
+    "errors": 0,
+    "warnings": 0
+   }
+  },
+  "compact": {
+   "file": "public/travellers-rest/kit-low.glb",
+   "url": "/travellers-rest/kit-low.glb",
+   "bytes": 502632,
+   "sha256": "a29c37ddd7ce127fc51e915e14151ce94c26f51becbfa0f0a9224a93ae494dbc",
+   "triangles": 25558,
+   "nodes": 119,
+   "meshes": 45,
+   "materials": 29,
+   "textures": [
+    {
+     "name": "kit.ao",
+     "bytes": 35651,
+     "size": [
+      512,
+      512
+     ]
+    },
+    {
+     "name": "paper.leaves",
+     "bytes": 5974,
+     "size": [
+      256,
+      256
+     ]
+    },
+    {
+     "name": "paper.laid",
+     "bytes": 8762,
+     "size": [
+      512,
+      512
+     ]
+    },
+    {
+     "name": "leather.calf",
+     "bytes": 3315,
+     "size": [
+      512,
+      512
+     ]
+    },
+    {
+     "name": "walnut.shaded",
+     "bytes": 3143,
+     "size": [
+      512,
+      512
+     ]
+    },
+    {
+     "name": "walnut",
+     "bytes": 1192,
+     "size": [
+      256,
+      256
+     ]
+    },
+    {
+     "name": "paint.door",
+     "bytes": 668,
+     "size": [
+      256,
+      256
+     ]
+    },
+    {
+     "name": "bark",
+     "bytes": 17466,
+     "size": [
+      512,
+      512
+     ]
+    },
+    {
+     "name": "paint.joinery",
+     "bytes": 1031,
+     "size": [
+      256,
+      256
+     ]
+    },
+    {
+     "name": "leather.tooled",
+     "bytes": 4322,
+     "size": [
+      512,
+      256
+     ]
+    },
+    {
+     "name": "leather.tooled.orm",
+     "bytes": 2692,
+     "size": [
+      512,
+      256
+     ]
+    }
+   ],
+   "validator": {
+    "errors": 0,
+    "warnings": 0
+   }
+  }
+ },
+ "materials": [
+  {
+   "name": "iron",
+   "finish": "iron",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": [
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "brass",
+   "finish": "brass",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": [
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "paper.leaves",
+   "finish": "leaves",
+   "tile": 0.05,
+   "doubleSided": false,
+   "textures": [
+    "paper.leaves",
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "paper.laid",
+   "finish": "paper",
+   "tile": 0.4,
+   "doubleSided": true,
+   "textures": [
+    "paper.laid",
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "leather.calf",
+   "finish": "calf",
+   "tile": 0.5,
+   "doubleSided": false,
+   "textures": [
+    "leather.calf",
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "leather.calf",
+   "finish": "calf",
+   "tile": 0.5,
+   "doubleSided": false,
+   "textures": [
+    "leather.calf",
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "walnut.shaded",
+   "finish": "walnutDark",
+   "tile": 0.7,
+   "doubleSided": false,
+   "textures": [
+    "walnut.shaded",
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "walnut",
+   "finish": "walnut",
+   "tile": 0.7,
+   "doubleSided": false,
+   "textures": [
+    "walnut",
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "tallow",
+   "finish": "tallow",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": [
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "iron",
+   "finish": "iron",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": [
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "brass",
+   "finish": "brass",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": [
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "walnut",
+   "finish": "walnut",
+   "tile": 0.7,
+   "doubleSided": false,
+   "textures": [
+    "walnut",
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "paper.laid",
+   "finish": "paper",
+   "tile": 0.4,
+   "doubleSided": true,
+   "textures": [
+    "paper.laid",
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "folio.closed-book",
+   "finish": null,
+   "tile": 1,
+   "doubleSided": false,
+   "textures": []
+  },
+  {
+   "name": "folio.rule",
+   "finish": null,
+   "tile": 1,
+   "doubleSided": false,
+   "textures": []
+  },
+  {
+   "name": "folio.brass",
+   "finish": "brass",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": []
+  },
+  {
+   "name": "folio.paper-edge",
+   "finish": null,
+   "tile": 1,
+   "doubleSided": false,
+   "textures": []
+  },
+  {
+   "name": "folio.paper",
+   "finish": "paper",
+   "tile": 1,
+   "doubleSided": true,
+   "textures": [
+    "paper.laid"
+   ]
+  },
+  {
+   "name": "folio.walnut-dark",
+   "finish": "walnutDark",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": [
+    "walnut.shaded"
+   ]
+  },
+  {
+   "name": "folio.walnut",
+   "finish": "walnut",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": [
+    "walnut"
+   ]
+  },
+  {
+   "name": "paint.door",
+   "finish": "dado",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": [
+    "paint.door",
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "bark",
+   "finish": "log",
+   "tile": 0.5,
+   "doubleSided": false,
+   "textures": [
+    "bark",
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "quill",
+   "finish": "quill",
+   "tile": 1,
+   "doubleSided": true,
+   "textures": [
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "pewter",
+   "finish": "pewter",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": [
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "ink",
+   "finish": null,
+   "tile": 1,
+   "doubleSided": false,
+   "textures": [
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "paint.joinery",
+   "finish": "trim",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": [
+    "paint.joinery",
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "paint.joinery",
+   "finish": "trim",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": [
+    "paint.joinery",
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "walnut.shaded",
+   "finish": "walnutDark",
+   "tile": 0.7,
+   "doubleSided": false,
+   "textures": [
+    "walnut.shaded",
+    "kit.ao"
+   ]
+  },
+  {
+   "name": "room.dado",
+   "finish": "dado",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": [
+    "paint.door"
+   ]
+  },
+  {
+   "name": "room.joinery",
+   "finish": "trim",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": [
+    "paint.joinery"
+   ]
+  },
+  {
+   "name": "room.ash",
+   "finish": "floor",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": []
+  },
+  {
+   "name": "room.ceiling",
+   "finish": "ceiling",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": []
+  },
+  {
+   "name": "room.plaster",
+   "finish": "plaster",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": []
+  },
+  {
+   "name": "room.stone",
+   "finish": "stone",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": []
+  },
+  {
+   "name": "room.firebrick",
+   "finish": "brick",
+   "tile": 1,
+   "doubleSided": false,
+   "textures": []
+  },
+  {
+   "name": "leather.tooled",
+   "finish": null,
+   "tile": 1,
+   "doubleSided": false,
+   "textures": [
+    "leather.tooled",
+    "leather.tooled.orm",
+    "kit.ao"
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "name": "andiron.north",
+   "three": "andironnorth",
+   "parent": null,
+   "piece": "andiron.north",
+   "role": "placed",
+   "collection": "Hearth",
+   "type": "mesh",
+   "mesh": "andiron.north",
+   "local": {
+    "translation": [
+     -7.228,
+     0.565,
+     -0.36
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -7.228,
+     0.565,
+     -0.36
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -7.228,
+     0.565,
+     -0.36,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -7.228,
+     0.565,
+     -0.36
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.598,
+     0.55,
+     -0.4581
+    ],
+    "max": [
+     -7.193,
+     0.997,
+     -0.2619
+    ]
+   },
+   "triangles": {
+    "detailed": 1004,
+    "compact": 796
+   },
+   "materials": [
+    "iron",
+    "brass"
+   ]
+  },
+  {
+   "name": "andiron.south",
+   "three": "andironsouth",
+   "parent": null,
+   "piece": "andiron.south",
+   "role": "placed",
+   "collection": "Hearth",
+   "type": "mesh",
+   "mesh": "andiron.north",
+   "local": {
+    "translation": [
+     -7.228,
+     0.565,
+     0.36
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -7.228,
+     0.565,
+     0.36
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -7.228,
+     0.565,
+     0.36,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -7.228,
+     0.565,
+     0.36
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.598,
+     0.55,
+     0.2619
+    ],
+    "max": [
+     -7.193,
+     0.997,
+     0.4581
+    ]
+   },
+   "triangles": {
+    "detailed": 1004,
+    "compact": 796
+   },
+   "materials": [
+    "iron",
+    "brass"
+   ]
+  },
+  {
+   "name": "book",
+   "three": "book",
+   "parent": null,
+   "piece": "book",
+   "role": "stock",
+   "collection": "Moving parts (stock)",
+   "type": "empty",
+   "mesh": null,
+   "local": {
+    "translation": [
+     -4.55,
+     0.1485,
+     -5.65
+    ],
+    "rotation": [
+     0,
+     -0.976296,
+     0,
+     0.21644
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.55,
+     0.1485,
+     -5.65
+    ],
+    "rotation": [
+     0,
+     0.976296,
+     0,
+     -0.21644
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     -0.906308,
+     0,
+     0.422618,
+     0,
+     0,
+     1,
+     0,
+     0,
+     -0.422618,
+     0,
+     -0.906308,
+     0,
+     -4.55,
+     0.1485,
+     -5.65,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.55,
+     0.1485,
+     -5.65
+    ],
+    "kind": "origin"
+   },
+   "bounds": null,
+   "triangles": {
+    "detailed": 0,
+    "compact": 0
+   },
+   "materials": []
+  },
+  {
+   "name": "book.block",
+   "three": "bookblock",
+   "parent": "book",
+   "piece": "book",
+   "role": "moving",
+   "collection": "Moving parts (stock)",
+   "type": "mesh",
+   "mesh": "book.block",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.55,
+     0.1485,
+     -5.65
+    ],
+    "rotation": [
+     0,
+     0.976296,
+     0,
+     -0.21644
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     -0.906308,
+     0,
+     0.422618,
+     0,
+     0,
+     1,
+     0,
+     0,
+     -0.422618,
+     0,
+     -0.906308,
+     0,
+     -4.55,
+     0.1485,
+     -5.65,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.55,
+     0.1485,
+     -5.65
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -4.6478,
+     0.006,
+     -5.7077
+    ],
+    "max": [
+     -4.4522,
+     0.291,
+     -5.5923
+    ]
+   },
+   "triangles": {
+    "detailed": 12,
+    "compact": 12
+   },
+   "materials": [
+    "paper.leaves",
+    "paper.laid"
+   ]
+  },
+  {
+   "name": "book.board.back",
+   "three": "bookboardback",
+   "parent": "book",
+   "piece": "book",
+   "role": "moving",
+   "collection": "Moving parts (stock)",
+   "type": "mesh",
+   "mesh": "book.board.back",
+   "local": {
+    "translation": [
+     -0.1,
+     0,
+     0.0191
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.467442,
+     0.1485,
+     -5.709572
+    ],
+    "rotation": [
+     0,
+     0.976296,
+     0,
+     -0.21644
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     -0.906308,
+     0,
+     0.422618,
+     0,
+     0,
+     1,
+     0,
+     0,
+     -0.422618,
+     0,
+     -0.906308,
+     0,
+     -4.467442,
+     0.1485,
+     -5.709572,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.467442,
+     0.1485,
+     -5.709572
+    ],
+    "kind": "hinge",
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "travel": 3.141593
+   },
+   "bounds": {
+    "min": [
+     -4.6547,
+     0,
+     -5.7112
+    ],
+    "max": [
+     -4.4669,
+     0.297,
+     -5.6209
+    ]
+   },
+   "triangles": {
+    "detailed": 108,
+    "compact": 54
+   },
+   "materials": [
+    "leather.calf"
+   ]
+  },
+  {
+   "name": "book.board.front",
+   "three": "bookboardfront",
+   "parent": "book",
+   "piece": "book",
+   "role": "moving",
+   "collection": "Moving parts (stock)",
+   "type": "mesh",
+   "mesh": "book.board.front",
+   "local": {
+    "translation": [
+     -0.1,
+     0,
+     -0.0191
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.451297,
+     0.1485,
+     -5.674952
+    ],
+    "rotation": [
+     0,
+     0.976296,
+     0,
+     -0.21644
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     -0.906308,
+     0,
+     0.422618,
+     0,
+     0,
+     1,
+     0,
+     0,
+     -0.422618,
+     0,
+     -0.906308,
+     0,
+     -4.451297,
+     0.1485,
+     -5.674952,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.451297,
+     0.1485,
+     -5.674952
+    ],
+    "kind": "hinge",
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "travel": 3.141593
+   },
+   "bounds": {
+    "min": [
+     -4.6386,
+     0,
+     -5.6765
+    ],
+    "max": [
+     -4.4507,
+     0.297,
+     -5.5863
+    ]
+   },
+   "triangles": {
+    "detailed": 108,
+    "compact": 54
+   },
+   "materials": [
+    "leather.calf"
+   ]
+  },
+  {
+   "name": "book.pivot.gutter",
+   "three": "bookpivotgutter",
+   "parent": "book",
+   "piece": "book",
+   "role": "moving",
+   "collection": "Moving parts (stock)",
+   "type": "empty",
+   "mesh": null,
+   "local": {
+    "translation": [
+     -0.1,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.459369,
+     0.1485,
+     -5.692262
+    ],
+    "rotation": [
+     0,
+     0.976296,
+     0,
+     -0.21644
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     -0.906308,
+     0,
+     0.422618,
+     0,
+     0,
+     1,
+     0,
+     0,
+     -0.422618,
+     0,
+     -0.906308,
+     0,
+     -4.459369,
+     0.1485,
+     -5.692262,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.459369,
+     0.1485,
+     -5.692262
+    ],
+    "kind": "gutter",
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "travel": 0
+   },
+   "bounds": null,
+   "triangles": {
+    "detailed": 0,
+    "compact": 0
+   },
+   "materials": []
+  },
+  {
+   "name": "book.spine",
+   "three": "bookspine",
+   "parent": "book",
+   "piece": "book",
+   "role": "moving",
+   "collection": "Moving parts (stock)",
+   "type": "mesh",
+   "mesh": "book.spine",
+   "local": {
+    "translation": [
+     -0.1,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.459369,
+     0.1485,
+     -5.692262
+    ],
+    "rotation": [
+     0,
+     0.976296,
+     0,
+     -0.21644
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     -0.906308,
+     0,
+     0.422618,
+     0,
+     0,
+     1,
+     0,
+     0,
+     -0.422618,
+     0,
+     -0.906308,
+     0,
+     -4.459369,
+     0.1485,
+     -5.692262,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.459369,
+     0.1485,
+     -5.692262
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -4.4684,
+     0,
+     -5.713
+    ],
+    "max": [
+     -4.4472,
+     0.297,
+     -5.672
+    ]
+   },
+   "triangles": {
+    "detailed": 526,
+    "compact": 398
+   },
+   "materials": [
+    "leather.calf"
+   ]
+  },
+  {
+   "name": "bookcase.family",
+   "three": "bookcasefamily",
+   "parent": null,
+   "piece": "bookcase.family",
+   "role": "placed",
+   "collection": "Furniture",
+   "type": "mesh",
+   "mesh": "bookcase.family",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     0,
+     0,
+     0
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.76,
+     0.53,
+     1.29
+    ],
+    "max": [
+     -7.17,
+     2.8,
+     2.96
+    ]
+   },
+   "triangles": {
+    "detailed": 1728,
+    "compact": 864
+   },
+   "materials": [
+    "walnut.shaded",
+    "walnut"
+   ]
+  },
+  {
+   "name": "bookcase.law",
+   "three": "bookcaselaw",
+   "parent": null,
+   "piece": "bookcase.law",
+   "role": "placed",
+   "collection": "Furniture",
+   "type": "mesh",
+   "mesh": "bookcase.law",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     0,
+     0,
+     0
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.76,
+     0.53,
+     -2.96
+    ],
+    "max": [
+     -7.33,
+     2.8,
+     -1.29
+    ]
+   },
+   "triangles": {
+    "detailed": 1620,
+    "compact": 810
+   },
+   "materials": [
+    "walnut.shaded",
+    "walnut"
+   ]
+  },
+  {
+   "name": "candlestick.chest",
+   "three": "candlestickchest",
+   "parent": null,
+   "piece": "candlestick.chest",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "type": "mesh",
+   "mesh": "candlestick.mantel.north",
+   "local": {
+    "translation": [
+     -3.45,
+     1.42,
+     -2.76
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -3.45,
+     1.42,
+     -2.76
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -3.45,
+     1.42,
+     -2.76,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -3.45,
+     1.42,
+     -2.76
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -3.502,
+     1.42,
+     -2.812
+    ],
+    "max": [
+     -3.398,
+     1.638,
+     -2.708
+    ]
+   },
+   "triangles": {
+    "detailed": 1200,
+    "compact": 1200
+   },
+   "materials": [
+    "brass"
+   ]
+  },
+  {
+   "name": "candlestick.chest.flame",
+   "three": "candlestickchestflame",
+   "parent": "candlestick.chest",
+   "piece": "candlestick.chest",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "type": "empty",
+   "mesh": null,
+   "local": {
+    "translation": [
+     0,
+     0.415,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -3.45,
+     1.835,
+     -2.76
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -3.45,
+     1.835,
+     -2.76,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -3.45,
+     1.835,
+     -2.76
+    ],
+    "kind": "origin"
+   },
+   "bounds": null,
+   "triangles": {
+    "detailed": 0,
+    "compact": 0
+   },
+   "materials": []
+  },
+  {
+   "name": "candlestick.chest.taper",
+   "three": "candlestickchesttaper",
+   "parent": "candlestick.chest",
+   "piece": "candlestick.chest",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "type": "mesh",
+   "mesh": "candlestick.mantel.north.taper",
+   "local": {
+    "translation": [
+     0,
+     0.218,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     0.85,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -3.45,
+     1.638,
+     -2.76
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     0.85,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     0.85,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -3.45,
+     1.638,
+     -2.76,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -3.45,
+     1.638,
+     -2.76
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -3.4602,
+     1.6244,
+     -2.7702
+    ],
+    "max": [
+     -3.4398,
+     1.8159,
+     -2.7498
+    ]
+   },
+   "triangles": {
+    "detailed": 198,
+    "compact": 150
+   },
+   "materials": [
+    "tallow",
+    "iron"
+   ]
+  },
+  {
+   "name": "candlestick.mantel.north",
+   "three": "candlestickmantelnorth",
+   "parent": null,
+   "piece": "candlestick.mantel.north",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "type": "mesh",
+   "mesh": "candlestick.mantel.north",
+   "local": {
+    "translation": [
+     -7.64,
+     1.965,
+     -0.98
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -7.64,
+     1.965,
+     -0.98
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -7.64,
+     1.965,
+     -0.98,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -7.64,
+     1.965,
+     -0.98
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.692,
+     1.965,
+     -1.032
+    ],
+    "max": [
+     -7.588,
+     2.183,
+     -0.928
+    ]
+   },
+   "triangles": {
+    "detailed": 1200,
+    "compact": 1200
+   },
+   "materials": [
+    "brass"
+   ]
+  },
+  {
+   "name": "candlestick.mantel.north.flame",
+   "three": "candlestickmantelnorthflame",
+   "parent": "candlestick.mantel.north",
+   "piece": "candlestick.mantel.north",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "type": "empty",
+   "mesh": null,
+   "local": {
+    "translation": [
+     0,
+     0.445,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -7.64,
+     2.41,
+     -0.98
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -7.64,
+     2.41,
+     -0.98,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -7.64,
+     2.41,
+     -0.98
+    ],
+    "kind": "origin"
+   },
+   "bounds": null,
+   "triangles": {
+    "detailed": 0,
+    "compact": 0
+   },
+   "materials": []
+  },
+  {
+   "name": "candlestick.mantel.north.taper",
+   "three": "candlestickmantelnorthtaper",
+   "parent": "candlestick.mantel.north",
+   "piece": "candlestick.mantel.north",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "type": "mesh",
+   "mesh": "candlestick.mantel.north.taper",
+   "local": {
+    "translation": [
+     0,
+     0.218,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -7.64,
+     2.183,
+     -0.98
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -7.64,
+     2.183,
+     -0.98,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -7.64,
+     2.183,
+     -0.98
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.6502,
+     2.167,
+     -0.9902
+    ],
+    "max": [
+     -7.6298,
+     2.3923,
+     -0.9698
+    ]
+   },
+   "triangles": {
+    "detailed": 198,
+    "compact": 150
+   },
+   "materials": [
+    "tallow",
+    "iron"
+   ]
+  },
+  {
+   "name": "candlestick.mantel.south",
+   "three": "candlestickmantelsouth",
+   "parent": null,
+   "piece": "candlestick.mantel.south",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "type": "mesh",
+   "mesh": "candlestick.mantel.north",
+   "local": {
+    "translation": [
+     -7.64,
+     1.965,
+     0.98
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -7.64,
+     1.965,
+     0.98
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -7.64,
+     1.965,
+     0.98,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -7.64,
+     1.965,
+     0.98
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.692,
+     1.965,
+     0.928
+    ],
+    "max": [
+     -7.588,
+     2.183,
+     1.032
+    ]
+   },
+   "triangles": {
+    "detailed": 1200,
+    "compact": 1200
+   },
+   "materials": [
+    "brass"
+   ]
+  },
+  {
+   "name": "candlestick.mantel.south.flame",
+   "three": "candlestickmantelsouthflame",
+   "parent": "candlestick.mantel.south",
+   "piece": "candlestick.mantel.south",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "type": "empty",
+   "mesh": null,
+   "local": {
+    "translation": [
+     0,
+     0.445,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -7.64,
+     2.41,
+     0.98
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -7.64,
+     2.41,
+     0.98,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -7.64,
+     2.41,
+     0.98
+    ],
+    "kind": "origin"
+   },
+   "bounds": null,
+   "triangles": {
+    "detailed": 0,
+    "compact": 0
+   },
+   "materials": []
+  },
+  {
+   "name": "candlestick.mantel.south.taper",
+   "three": "candlestickmantelsouthtaper",
+   "parent": "candlestick.mantel.south",
+   "piece": "candlestick.mantel.south",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "type": "mesh",
+   "mesh": "candlestick.mantel.north.taper",
+   "local": {
+    "translation": [
+     0,
+     0.218,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -7.64,
+     2.183,
+     0.98
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -7.64,
+     2.183,
+     0.98,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -7.64,
+     2.183,
+     0.98
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.6502,
+     2.167,
+     0.9698
+    ],
+    "max": [
+     -7.6298,
+     2.3923,
+     0.9902
+    ]
+   },
+   "triangles": {
+    "detailed": 198,
+    "compact": 150
+   },
+   "materials": [
+    "tallow",
+    "iron"
+   ]
+  },
+  {
+   "name": "candlestick.table",
+   "three": "candlesticktable",
+   "parent": null,
+   "piece": "candlestick.table",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "type": "mesh",
+   "mesh": "candlestick.mantel.north",
+   "local": {
+    "translation": [
+     -5.58,
+     1.34,
+     0.47
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -5.58,
+     1.34,
+     0.47
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -5.58,
+     1.34,
+     0.47,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -5.58,
+     1.34,
+     0.47
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -5.632,
+     1.34,
+     0.418
+    ],
+    "max": [
+     -5.528,
+     1.558,
+     0.522
+    ]
+   },
+   "triangles": {
+    "detailed": 1200,
+    "compact": 1200
+   },
+   "materials": [
+    "brass"
+   ]
+  },
+  {
+   "name": "candlestick.table.flame",
+   "three": "candlesticktableflame",
+   "parent": "candlestick.table",
+   "piece": "candlestick.table",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "type": "empty",
+   "mesh": null,
+   "local": {
+    "translation": [
+     0,
+     0.395,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -5.58,
+     1.735,
+     0.47
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -5.58,
+     1.735,
+     0.47,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -5.58,
+     1.735,
+     0.47
+    ],
+    "kind": "origin"
+   },
+   "bounds": null,
+   "triangles": {
+    "detailed": 0,
+    "compact": 0
+   },
+   "materials": []
+  },
+  {
+   "name": "candlestick.table.taper",
+   "three": "candlesticktabletaper",
+   "parent": "candlestick.table",
+   "piece": "candlestick.table",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "type": "mesh",
+   "mesh": "candlestick.mantel.north.taper",
+   "local": {
+    "translation": [
+     0,
+     0.218,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     0.75,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -5.58,
+     1.558,
+     0.47
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     0.75,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     0.75,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -5.58,
+     1.558,
+     0.47,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -5.58,
+     1.558,
+     0.47
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -5.5902,
+     1.546,
+     0.4598
+    ],
+    "max": [
+     -5.5698,
+     1.715,
+     0.4802
+    ]
+   },
+   "triangles": {
+    "detailed": 198,
+    "compact": 150
+   },
+   "materials": [
+    "tallow",
+    "iron"
+   ]
+  },
+  {
+   "name": "chair.windsor",
+   "three": "chairwindsor",
+   "parent": null,
+   "piece": "chair.windsor",
+   "role": "placed",
+   "collection": "Furniture",
+   "type": "empty",
+   "mesh": null,
+   "local": {
+    "translation": [
+     -4.5,
+     0.53,
+     -0.12
+    ],
+    "rotation": [
+     0,
+     0.159318,
+     0,
+     0.987227
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.5,
+     0.53,
+     -0.12
+    ],
+    "rotation": [
+     0,
+     0.159318,
+     0,
+     0.987227
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     0.949235,
+     0,
+     -0.314567,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0.314567,
+     0,
+     0.949235,
+     0,
+     -4.5,
+     0.53,
+     -0.12,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.5,
+     0.53,
+     -0.12
+    ],
+    "kind": "origin"
+   },
+   "bounds": null,
+   "triangles": {
+    "detailed": 0,
+    "compact": 0
+   },
+   "materials": []
+  },
+  {
+   "name": "chair.windsor.back",
+   "three": "chairwindsorback",
+   "parent": "chair.windsor",
+   "piece": "chair.windsor",
+   "role": "placed",
+   "collection": "Furniture",
+   "type": "mesh",
+   "mesh": "chair.windsor.back",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.5,
+     0.53,
+     -0.12
+    ],
+    "rotation": [
+     0,
+     0.159318,
+     0,
+     0.987227
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     0.949235,
+     0,
+     -0.314567,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0.314567,
+     0,
+     0.949235,
+     0,
+     -4.5,
+     0.53,
+     -0.12,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.5,
+     0.53,
+     -0.12
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -4.7795,
+     0.9651,
+     -0.4293
+    ],
+    "max": [
+     -4.242,
+     1.5731,
+     0.029
+    ]
+   },
+   "triangles": {
+    "detailed": 2324,
+    "compact": 2092
+   },
+   "materials": [
+    "walnut"
+   ]
+  },
+  {
+   "name": "chair.windsor.seat",
+   "three": "chairwindsorseat",
+   "parent": "chair.windsor",
+   "piece": "chair.windsor",
+   "role": "placed",
+   "collection": "Furniture",
+   "type": "mesh",
+   "mesh": "chair.windsor.seat",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.5,
+     0.53,
+     -0.12
+    ],
+    "rotation": [
+     0,
+     0.159318,
+     0,
+     0.987227
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     0.949235,
+     0,
+     -0.314567,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0.314567,
+     0,
+     0.949235,
+     0,
+     -4.5,
+     0.53,
+     -0.12,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.5,
+     0.53,
+     -0.12
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -4.7412,
+     0.945,
+     -0.3463
+    ],
+    "max": [
+     -4.261,
+     0.99,
+     0.0929
+    ]
+   },
+   "triangles": {
+    "detailed": 1152,
+    "compact": 684
+   },
+   "materials": [
+    "walnut"
+   ]
+  },
+  {
+   "name": "chair.windsor.undercarriage",
+   "three": "chairwindsorundercarriage",
+   "parent": "chair.windsor",
+   "piece": "chair.windsor",
+   "role": "placed",
+   "collection": "Furniture",
+   "type": "mesh",
+   "mesh": "chair.windsor.undercarriage",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.5,
+     0.53,
+     -0.12
+    ],
+    "rotation": [
+     0,
+     0.159318,
+     0,
+     0.987227
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     0.949235,
+     0,
+     -0.314567,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0.314567,
+     0,
+     0.949235,
+     0,
+     -4.5,
+     0.53,
+     -0.12,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.5,
+     0.53,
+     -0.12
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -4.7934,
+     0.5271,
+     -0.4355
+    ],
+    "max": [
+     -4.1986,
+     0.9635,
+     0.1687
+    ]
+   },
+   "triangles": {
+    "detailed": 2064,
+    "compact": 1808
+   },
+   "materials": [
+    "walnut"
+   ]
+  },
+  {
+   "name": "chest",
+   "three": "chest",
+   "parent": null,
+   "piece": "chest",
+   "role": "placed",
+   "collection": "Furniture",
+   "type": "empty",
+   "mesh": null,
+   "local": {
+    "translation": [
+     -2.95,
+     0.53,
+     -2.7425
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -2.95,
+     0.53,
+     -2.7425
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -2.95,
+     0.53,
+     -2.7425,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -2.95,
+     0.53,
+     -2.7425
+    ],
+    "kind": "origin"
+   },
+   "bounds": null,
+   "triangles": {
+    "detailed": 0,
+    "compact": 0
+   },
+   "materials": []
+  },
+  {
+   "name": "chest.carcass",
+   "three": "chestcarcass",
+   "parent": "chest",
+   "piece": "chest",
+   "role": "placed",
+   "collection": "Furniture",
+   "type": "mesh",
+   "mesh": "chest.carcass",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -2.95,
+     0.53,
+     -2.7425
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -2.95,
+     0.53,
+     -2.7425,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -2.95,
+     0.53,
+     -2.7425
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -3.615,
+     0.53,
+     -2.985
+    ],
+    "max": [
+     -2.285,
+     1.42,
+     -2.48
+    ]
+   },
+   "triangles": {
+    "detailed": 868,
+    "compact": 476
+   },
+   "materials": [
+    "walnut",
+    "walnut.shaded"
+   ]
+  },
+  {
+   "name": "chest.drawer.campaign",
+   "three": "chestdrawercampaign",
+   "parent": "chest",
+   "piece": "chest",
+   "role": "moving",
+   "collection": "Furniture",
+   "type": "mesh",
+   "mesh": "chest.drawer.campaign",
+   "local": {
+    "translation": [
+     0,
+     0.352,
+     0.2425
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -2.95,
+     0.882,
+     -2.5
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -2.95,
+     0.882,
+     -2.5,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -2.95,
+     0.882,
+     -2.5
+    ],
+    "kind": "slide",
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "travel": 0.52
+   },
+   "bounds": {
+    "min": [
+     -3.558,
+     0.882,
+     -2.94
+    ],
+    "max": [
+     -2.342,
+     1.113,
+     -2.469
+    ]
+   },
+   "triangles": {
+    "detailed": 972,
+    "compact": 598
+   },
+   "materials": [
+    "walnut",
+    "walnut.shaded",
+    "brass",
+    "paper.laid"
+   ]
+  },
+  {
+   "name": "chest.drawer.correspondence",
+   "three": "chestdrawercorrespondence",
+   "parent": "chest",
+   "piece": "chest",
+   "role": "moving",
+   "collection": "Furniture",
+   "type": "mesh",
+   "mesh": "chest.drawer.correspondence",
+   "local": {
+    "translation": [
+     0,
+     0.607,
+     0.2425
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -2.95,
+     1.137,
+     -2.5
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -2.95,
+     1.137,
+     -2.5,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -2.95,
+     1.137,
+     -2.5
+    ],
+    "kind": "slide",
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "travel": 0.3
+   },
+   "bounds": {
+    "min": [
+     -3.558,
+     1.137,
+     -2.94
+    ],
+    "max": [
+     -2.342,
+     1.39,
+     -2.469
+    ]
+   },
+   "triangles": {
+    "detailed": 972,
+    "compact": 600
+   },
+   "materials": [
+    "walnut",
+    "walnut.shaded",
+    "brass",
+    "paper.laid"
+   ]
+  },
+  {
+   "name": "chest.drawer.lower",
+   "three": "chestdrawerlower",
+   "parent": "chest",
+   "piece": "chest",
+   "role": "placed",
+   "collection": "Furniture",
+   "type": "mesh",
+   "mesh": "chest.drawer.lower",
+   "local": {
+    "translation": [
+     0,
+     0.12,
+     0.2425
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -2.95,
+     0.65,
+     -2.5
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -2.95,
+     0.65,
+     -2.5,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -2.95,
+     0.65,
+     -2.5
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -3.558,
+     0.65,
+     -2.94
+    ],
+    "max": [
+     -2.342,
+     0.85,
+     -2.469
+    ]
+   },
+   "triangles": {
+    "detailed": 972,
+    "compact": 598
+   },
+   "materials": [
+    "walnut",
+    "walnut.shaded",
+    "brass",
+    "paper.laid"
+   ]
+  },
+  {
+   "name": "desk.study",
+   "three": "deskstudy",
+   "parent": null,
+   "piece": "desk.study",
+   "role": "placed",
+   "collection": "Joinery",
+   "type": "empty",
+   "mesh": null,
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     0,
+     0,
+     0
+    ],
+    "kind": "origin"
+   },
+   "bounds": null,
+   "triangles": {
+    "detailed": 0,
+    "compact": 0
+   },
+   "materials": []
+  },
+  {
+   "name": "desk.study.chest-books",
+   "three": "deskstudychest-books",
+   "parent": "desk.study",
+   "piece": "desk.study",
+   "role": "placed",
+   "collection": "Joinery",
+   "type": "mesh",
+   "mesh": "desk.study.chest-books",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     0,
+     0,
+     0
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -2.7,
+     1.42,
+     -2.9
+    ],
+    "max": [
+     -2.45,
+     1.512,
+     -2.72
+    ]
+   },
+   "triangles": {
+    "detailed": 24,
+    "compact": 24
+   },
+   "materials": [
+    "folio.closed-book"
+   ]
+  },
+  {
+   "name": "desk.study.fittings",
+   "three": "deskstudyfittings",
+   "parent": "desk.study",
+   "piece": "desk.study",
+   "role": "placed",
+   "collection": "Joinery",
+   "type": "mesh",
+   "mesh": "desk.study.fittings",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     0,
+     0,
+     0
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.385,
+     1.382,
+     2.2224
+    ],
+    "max": [
+     -7.364,
+     1.934,
+     2.8376
+    ]
+   },
+   "triangles": {
+    "detailed": 696,
+    "compact": 348
+   },
+   "materials": [
+    "folio.rule",
+    "folio.brass"
+   ]
+  },
+  {
+   "name": "desk.study.paper",
+   "three": "deskstudypaper",
+   "parent": "desk.study",
+   "piece": "desk.study",
+   "role": "placed",
+   "collection": "Joinery",
+   "type": "mesh",
+   "mesh": "desk.study.paper",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     0,
+     0,
+     0
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.388,
+     1.361,
+     2.209
+    ],
+    "max": [
+     -7.375,
+     1.921,
+     2.8512
+    ]
+   },
+   "triangles": {
+    "detailed": 1304,
+    "compact": 664
+   },
+   "materials": [
+    "folio.paper-edge",
+    "folio.paper"
+   ]
+  },
+  {
+   "name": "desk.study.stand",
+   "three": "deskstudystand",
+   "parent": "desk.study",
+   "piece": "desk.study",
+   "role": "placed",
+   "collection": "Joinery",
+   "type": "mesh",
+   "mesh": "desk.study.stand",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     0,
+     0,
+     0
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.678,
+     1.27,
+     2.205
+    ],
+    "max": [
+     -7.21,
+     1.943,
+     2.855
+    ]
+   },
+   "triangles": {
+    "detailed": 1116,
+    "compact": 558
+   },
+   "materials": [
+    "folio.walnut-dark",
+    "folio.walnut"
+   ]
+  },
+  {
+   "name": "door.ell",
+   "three": "doorell",
+   "parent": null,
+   "piece": "door.ell",
+   "role": "placed",
+   "collection": "Joinery",
+   "type": "mesh",
+   "mesh": "door.ell",
+   "local": {
+    "translation": [
+     -5.65,
+     0.53,
+     -3
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     0.847458,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -5.65,
+     0.53,
+     -3
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     0.847458,
+     1,
+     1
+    ],
+    "matrix": [
+     0.847458,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -5.65,
+     0.53,
+     -3,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -5.65,
+     0.53,
+     -3
+    ],
+    "kind": "hinge",
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "travel": 1.4
+   },
+   "bounds": {
+    "min": [
+     -5.65,
+     0.53,
+     -3
+    ],
+    "max": [
+     -4.65,
+     2.72,
+     -2.903
+    ]
+   },
+   "triangles": {
+    "detailed": 764,
+    "compact": 620
+   },
+   "materials": [
+    "paint.door",
+    "brass"
+   ]
+  },
+  {
+   "name": "hearth.log.a",
+   "three": "hearthloga",
+   "parent": null,
+   "piece": "hearth.log.a",
+   "role": "placed",
+   "collection": "Hearth",
+   "type": "mesh",
+   "mesh": "hearth.log.a",
+   "local": {
+    "translation": [
+     -7.56,
+     0.66,
+     -0.02
+    ],
+    "rotation": [
+     0,
+     -0.047982,
+     0,
+     0.998848
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -7.56,
+     0.66,
+     -0.02
+    ],
+    "rotation": [
+     0,
+     -0.047982,
+     0,
+     0.998848
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     0.995396,
+     0,
+     0.095853,
+     0,
+     0,
+     1,
+     0,
+     0,
+     -0.095853,
+     0,
+     0.995396,
+     0,
+     -7.56,
+     0.66,
+     -0.02,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -7.56,
+     0.66,
+     -0.02
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.6618,
+     0.5855,
+     -0.4549
+    ],
+    "max": [
+     -7.4563,
+     0.7306,
+     0.4157
+    ]
+   },
+   "triangles": {
+    "detailed": 240,
+    "compact": 192
+   },
+   "materials": [
+    "bark"
+   ]
+  },
+  {
+   "name": "hearth.log.b",
+   "three": "hearthlogb",
+   "parent": null,
+   "piece": "hearth.log.b",
+   "role": "placed",
+   "collection": "Hearth",
+   "type": "mesh",
+   "mesh": "hearth.log.b",
+   "local": {
+    "translation": [
+     -7.42,
+     0.65,
+     0.05
+    ],
+    "rotation": [
+     0,
+     0.035992,
+     0,
+     0.999352
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -7.42,
+     0.65,
+     0.05
+    ],
+    "rotation": [
+     0,
+     0.035992,
+     0,
+     0.999352
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     0.997409,
+     0,
+     -0.071938,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0.071938,
+     0,
+     0.997409,
+     0,
+     -7.42,
+     0.65,
+     0.05,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -7.42,
+     0.65,
+     0.05
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.5062,
+     0.5931,
+     -0.3833
+    ],
+    "max": [
+     -7.3339,
+     0.718,
+     0.4833
+    ]
+   },
+   "triangles": {
+    "detailed": 240,
+    "compact": 170
+   },
+   "materials": [
+    "bark"
+   ]
+  },
+  {
+   "name": "hearth.log.c",
+   "three": "hearthlogc",
+   "parent": null,
+   "piece": "hearth.log.c",
+   "role": "placed",
+   "collection": "Hearth",
+   "type": "mesh",
+   "mesh": "hearth.log.c",
+   "local": {
+    "translation": [
+     -7.5,
+     0.76,
+     0
+    ],
+    "rotation": [
+     0,
+     -0.023998,
+     0,
+     0.999712
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -7.5,
+     0.76,
+     0
+    ],
+    "rotation": [
+     0,
+     -0.023998,
+     0,
+     0.999712
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     0.998848,
+     0,
+     0.047982,
+     0,
+     0,
+     1,
+     0,
+     0,
+     -0.047982,
+     0,
+     0.998848,
+     0,
+     -7.5,
+     0.76,
+     0,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -7.5,
+     0.76,
+     0
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.582,
+     0.7034,
+     -0.4315
+    ],
+    "max": [
+     -7.4173,
+     0.8195,
+     0.4319
+    ]
+   },
+   "triangles": {
+    "detailed": 240,
+    "compact": 162
+   },
+   "materials": [
+    "bark"
+   ]
+  },
+  {
+   "name": "inkwell",
+   "three": "inkwell",
+   "parent": null,
+   "piece": "inkwell",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "type": "mesh",
+   "mesh": "inkwell",
+   "local": {
+    "translation": [
+     -4.38,
+     1.34,
+     1.02
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.38,
+     1.34,
+     1.02
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -4.38,
+     1.34,
+     1.02,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.38,
+     1.34,
+     1.02
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -4.436,
+     1.34,
+     0.964
+    ],
+    "max": [
+     -4.324,
+     1.421,
+     1.076
+    ]
+   },
+   "triangles": {
+    "detailed": 896,
+    "compact": 896
+   },
+   "materials": [
+    "pewter",
+    "ink"
+   ]
+  },
+  {
+   "name": "inkwell.quill.a",
+   "three": "inkwellquilla",
+   "parent": "inkwell",
+   "piece": "inkwell",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "type": "mesh",
+   "mesh": "inkwell.quill.a",
+   "local": {
+    "translation": [
+     0,
+     0.058,
+     0
+    ],
+    "rotation": [
+     0.201979,
+     0.241969,
+     -0.051574,
+     0.947626
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.38,
+     1.398,
+     1.02
+    ],
+    "rotation": [
+     0.201979,
+     0.241969,
+     -0.051574,
+     0.947626
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     0.877583,
+     0,
+     -0.479426,
+     0,
+     0.195491,
+     0.913089,
+     0.357843,
+     0,
+     0.437758,
+     -0.40776,
+     0.801311,
+     0,
+     -4.38,
+     1.398,
+     1.02,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.38,
+     1.398,
+     1.02
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -4.3827,
+     1.3969,
+     1.0177
+    ],
+    "max": [
+     -4.31,
+     1.6723,
+     1.1224
+    ]
+   },
+   "triangles": {
+    "detailed": 188,
+    "compact": 94
+   },
+   "materials": [
+    "quill"
+   ]
+  },
+  {
+   "name": "inkwell.quill.b",
+   "three": "inkwellquillb",
+   "parent": "inkwell",
+   "piece": "inkwell",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "type": "mesh",
+   "mesh": "inkwell.quill.b",
+   "local": {
+    "translation": [
+     0,
+     0.058,
+     0
+    ],
+    "rotation": [
+     0.146459,
+     -0.196438,
+     0.029689,
+     0.969062
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.38,
+     1.398,
+     1.02
+    ],
+    "rotation": [
+     0.146459,
+     -0.196439,
+     0.029689,
+     0.969061
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     0.921061,
+     0,
+     0.389418,
+     0,
+     -0.115081,
+     0.955337,
+     0.272192,
+     0,
+     -0.372026,
+     -0.29552,
+     0.879923,
+     0,
+     -4.38,
+     1.398,
+     1.02,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.38,
+     1.398,
+     1.02
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -4.4044,
+     1.3972,
+     1.0175
+    ],
+    "max": [
+     -4.3772,
+     1.6849,
+     1.1071
+    ]
+   },
+   "triangles": {
+    "detailed": 188,
+    "compact": 94
+   },
+   "materials": [
+    "quill"
+   ]
+  },
+  {
+   "name": "letter.sheet",
+   "three": "lettersheet",
+   "parent": null,
+   "piece": "letter.sheet",
+   "role": "stock",
+   "collection": "Moving parts (stock)",
+   "type": "mesh",
+   "mesh": "letter.sheet",
+   "local": {
+    "translation": [
+     -4.5,
+     0.002,
+     -5.2
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.5,
+     0.002,
+     -5.2
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -4.5,
+     0.002,
+     -5.2,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.5,
+     0.002,
+     -5.2
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -4.6,
+     0.0024,
+     -5.325
+    ],
+    "max": [
+     -4.4,
+     0.0137,
+     -5.075
+    ]
+   },
+   "triangles": {
+    "detailed": 432,
+    "compact": 216
+   },
+   "materials": [
+    "paper.laid"
+   ]
+  },
+  {
+   "name": "mantel",
+   "three": "mantel",
+   "parent": null,
+   "piece": "mantel",
+   "role": "placed",
+   "collection": "Hearth",
+   "type": "empty",
+   "mesh": null,
+   "local": {
+    "translation": [
+     -7.76,
+     0.53,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -7.76,
+     0.53,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -7.76,
+     0.53,
+     0,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -7.76,
+     0.53,
+     0
+    ],
+    "kind": "origin"
+   },
+   "bounds": null,
+   "triangles": {
+    "detailed": 0,
+    "compact": 0
+   },
+   "materials": []
+  },
+  {
+   "name": "mantel.frieze",
+   "three": "mantelfrieze",
+   "parent": "mantel",
+   "piece": "mantel",
+   "role": "placed",
+   "collection": "Hearth",
+   "type": "mesh",
+   "mesh": "mantel.frieze",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -7.76,
+     0.53,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -7.76,
+     0.53,
+     0,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -7.76,
+     0.53,
+     0
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.76,
+     1.6,
+     -1.16
+    ],
+    "max": [
+     -7.66,
+     1.86,
+     1.16
+    ]
+   },
+   "triangles": {
+    "detailed": 134,
+    "compact": 66
+   },
+   "materials": [
+    "paint.joinery"
+   ]
+  },
+  {
+   "name": "mantel.pilaster.north",
+   "three": "mantelpilasternorth",
+   "parent": "mantel",
+   "piece": "mantel",
+   "role": "placed",
+   "collection": "Hearth",
+   "type": "mesh",
+   "mesh": "mantel.pilaster.north",
+   "local": {
+    "translation": [
+     0,
+     0,
+     -0.93
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -7.76,
+     0.53,
+     -0.93
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -7.76,
+     0.53,
+     -0.93,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -7.76,
+     0.53,
+     -0.93
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.76,
+     0.53,
+     -1.19
+    ],
+    "max": [
+     -7.645,
+     1.6,
+     -0.67
+    ]
+   },
+   "triangles": {
+    "detailed": 346,
+    "compact": 246
+   },
+   "materials": [
+    "paint.joinery"
+   ]
+  },
+  {
+   "name": "mantel.pilaster.south",
+   "three": "mantelpilastersouth",
+   "parent": "mantel",
+   "piece": "mantel",
+   "role": "placed",
+   "collection": "Hearth",
+   "type": "mesh",
+   "mesh": "mantel.pilaster.north",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0.93
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -7.76,
+     0.53,
+     0.93
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -7.76,
+     0.53,
+     0.93,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -7.76,
+     0.53,
+     0.93
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.76,
+     0.53,
+     0.67
+    ],
+    "max": [
+     -7.645,
+     1.6,
+     1.19
+    ]
+   },
+   "triangles": {
+    "detailed": 346,
+    "compact": 246
+   },
+   "materials": [
+    "paint.joinery"
+   ]
+  },
+  {
+   "name": "mantel.shelf",
+   "three": "mantelshelf",
+   "parent": "mantel",
+   "piece": "mantel",
+   "role": "placed",
+   "collection": "Hearth",
+   "type": "mesh",
+   "mesh": "mantel.shelf",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -7.76,
+     0.53,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -7.76,
+     0.53,
+     0,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -7.76,
+     0.53,
+     0
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.76,
+     1.85,
+     -1.285
+    ],
+    "max": [
+     -7.55,
+     1.965,
+     1.285
+    ]
+   },
+   "triangles": {
+    "detailed": 110,
+    "compact": 92
+   },
+   "materials": [
+    "paint.joinery"
+   ]
+  },
+  {
+   "name": "moulding.chair-rail",
+   "three": "mouldingchair-rail",
+   "parent": null,
+   "piece": "moulding.chair-rail",
+   "role": "stock",
+   "collection": "Mouldings (stock)",
+   "type": "mesh",
+   "mesh": "moulding.chair-rail",
+   "local": {
+    "translation": [
+     -5.9,
+     0,
+     -5.3
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -5.9,
+     0,
+     -5.3
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -5.9,
+     0,
+     -5.3,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -5.9,
+     0,
+     -5.3
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -5.9,
+     0,
+     -5.3
+    ],
+    "max": [
+     -4.9,
+     0.062,
+     -5.27
+    ]
+   },
+   "triangles": {
+    "detailed": 48,
+    "compact": 40
+   },
+   "materials": [
+    "paint.joinery"
+   ]
+  },
+  {
+   "name": "moulding.cornice",
+   "three": "mouldingcornice",
+   "parent": null,
+   "piece": "moulding.cornice",
+   "role": "stock",
+   "collection": "Mouldings (stock)",
+   "type": "mesh",
+   "mesh": "moulding.cornice",
+   "local": {
+    "translation": [
+     -5.9,
+     0,
+     -5.6
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -5.9,
+     0,
+     -5.6
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -5.9,
+     0,
+     -5.6,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -5.9,
+     0,
+     -5.6
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -5.9,
+     0,
+     -5.6
+    ],
+    "max": [
+     -4.9,
+     0.135,
+     -5.515
+    ]
+   },
+   "triangles": {
+    "detailed": 68,
+    "compact": 60
+   },
+   "materials": [
+    "paint.joinery"
+   ]
+  },
+  {
+   "name": "moulding.skirting",
+   "three": "mouldingskirting",
+   "parent": null,
+   "piece": "moulding.skirting",
+   "role": "stock",
+   "collection": "Mouldings (stock)",
+   "type": "mesh",
+   "mesh": "moulding.skirting",
+   "local": {
+    "translation": [
+     -5.9,
+     0,
+     -5.9
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -5.9,
+     0,
+     -5.9
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -5.9,
+     0,
+     -5.9,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -5.9,
+     0,
+     -5.9
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -5.9,
+     0,
+     -5.9
+    ],
+    "max": [
+     -4.9,
+     0.2,
+     -5.866
+    ]
+   },
+   "triangles": {
+    "detailed": 36,
+    "compact": 36
+   },
+   "materials": [
+    "paint.joinery"
+   ]
+  },
+  {
+   "name": "pounce.pot",
+   "three": "pouncepot",
+   "parent": null,
+   "piece": "pounce.pot",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "type": "mesh",
+   "mesh": "pounce.pot",
+   "local": {
+    "translation": [
+     -4.52,
+     1.34,
+     1.07
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.52,
+     1.34,
+     1.07
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -4.52,
+     1.34,
+     1.07,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.52,
+     1.34,
+     1.07
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -4.55,
+     1.34,
+     1.04
+    ],
+    "max": [
+     -4.49,
+     1.402,
+     1.1
+    ]
+   },
+   "triangles": {
+    "detailed": 400,
+    "compact": 400
+   },
+   "materials": [
+    "walnut.shaded"
+   ]
+  },
+  {
+   "name": "room.joinery",
+   "three": "roomjoinery",
+   "parent": null,
+   "piece": "room.joinery",
+   "role": "placed",
+   "collection": "Joinery",
+   "type": "mesh",
+   "mesh": "room.joinery",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     0,
+     0,
+     0
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.76,
+     0.53,
+     -3.034
+    ],
+    "max": [
+     -1.571,
+     3.32,
+     2.99
+    ]
+   },
+   "triangles": {
+    "detailed": 748,
+    "compact": 608
+   },
+   "materials": [
+    "room.dado",
+    "room.joinery"
+   ]
+  },
+  {
+   "name": "room.shell",
+   "three": "roomshell",
+   "parent": null,
+   "piece": "room.shell",
+   "role": "placed",
+   "collection": "Joinery",
+   "type": "mesh",
+   "mesh": "room.shell",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     0,
+     0,
+     0
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -7.9,
+     0.45,
+     -3.1
+    ],
+    "max": [
+     -1.49,
+     3.8,
+     3.1
+    ]
+   },
+   "triangles": {
+    "detailed": 648,
+    "compact": 396
+   },
+   "materials": [
+    "room.ash",
+    "room.ceiling",
+    "room.plaster",
+    "room.stone",
+    "room.firebrick"
+   ]
+  },
+  {
+   "name": "table.writing",
+   "three": "tablewriting",
+   "parent": null,
+   "piece": "table.writing",
+   "role": "placed",
+   "collection": "Furniture",
+   "type": "empty",
+   "mesh": null,
+   "local": {
+    "translation": [
+     -4.95,
+     0.53,
+     0.75
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.95,
+     0.53,
+     0.75
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -4.95,
+     0.53,
+     0.75,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.95,
+     0.53,
+     0.75
+    ],
+    "kind": "origin"
+   },
+   "bounds": null,
+   "triangles": {
+    "detailed": 0,
+    "compact": 0
+   },
+   "materials": []
+  },
+  {
+   "name": "table.writing.drawer",
+   "three": "tablewritingdrawer",
+   "parent": "table.writing",
+   "piece": "table.writing",
+   "role": "placed",
+   "collection": "Furniture",
+   "type": "mesh",
+   "mesh": "table.writing.drawer",
+   "local": {
+    "translation": [
+     0,
+     0.692,
+     0.384
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.95,
+     1.222,
+     1.134
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -4.95,
+     1.222,
+     1.134,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.95,
+     1.222,
+     1.134
+    ],
+    "kind": "slide",
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "travel": 0.3
+   },
+   "bounds": {
+    "min": [
+     -5.298,
+     1.2235,
+     0.714
+    ],
+    "max": [
+     -4.602,
+     1.2955,
+     1.165
+    ]
+   },
+   "triangles": {
+    "detailed": 750,
+    "compact": 480
+   },
+   "materials": [
+    "walnut",
+    "walnut.shaded",
+    "brass"
+   ]
+  },
+  {
+   "name": "table.writing.frame",
+   "three": "tablewritingframe",
+   "parent": "table.writing",
+   "piece": "table.writing",
+   "role": "placed",
+   "collection": "Furniture",
+   "type": "mesh",
+   "mesh": "table.writing.frame",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.95,
+     0.53,
+     0.75
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -4.95,
+     0.53,
+     0.75,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.95,
+     0.53,
+     0.75
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -5.688,
+     0.53,
+     0.362
+    ],
+    "max": [
+     -4.212,
+     1.31,
+     1.138
+    ]
+   },
+   "triangles": {
+    "detailed": 1404,
+    "compact": 702
+   },
+   "materials": [
+    "walnut",
+    "walnut.shaded"
+   ]
+  },
+  {
+   "name": "table.writing.leather",
+   "three": "tablewritingleather",
+   "parent": "table.writing",
+   "piece": "table.writing",
+   "role": "placed",
+   "collection": "Furniture",
+   "type": "mesh",
+   "mesh": "table.writing.leather",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.95,
+     0.53,
+     0.75
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -4.95,
+     0.53,
+     0.75,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.95,
+     0.53,
+     0.75
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -5.58,
+     1.3398,
+     0.43
+    ],
+    "max": [
+     -4.32,
+     1.3412,
+     1.07
+    ]
+   },
+   "triangles": {
+    "detailed": 12,
+    "compact": 12
+   },
+   "materials": [
+    "leather.tooled"
+   ]
+  },
+  {
+   "name": "table.writing.top",
+   "three": "tablewritingtop",
+   "parent": "table.writing",
+   "piece": "table.writing",
+   "role": "placed",
+   "collection": "Furniture",
+   "type": "mesh",
+   "mesh": "table.writing.top",
+   "local": {
+    "translation": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -4.95,
+     0.53,
+     0.75
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -4.95,
+     0.53,
+     0.75,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -4.95,
+     0.53,
+     0.75
+    ],
+    "kind": "origin"
+   },
+   "bounds": {
+    "min": [
+     -5.75,
+     1.31,
+     0.3
+    ],
+    "max": [
+     -4.15,
+     1.34,
+     1.2
+    ]
+   },
+   "triangles": {
+    "detailed": 60,
+    "compact": 44
+   },
+   "materials": [
+    "walnut"
+   ]
+  },
+  {
+   "name": "window.sash.east",
+   "three": "windowsasheast",
+   "parent": null,
+   "piece": "window.sash.east",
+   "role": "placed",
+   "collection": "Joinery",
+   "type": "empty",
+   "mesh": null,
+   "local": {
+    "translation": [
+     -3.55,
+     1.37,
+     2.957
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -3.55,
+     1.37,
+     2.957
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -3.55,
+     1.37,
+     2.957,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -3.55,
+     1.37,
+     2.957
+    ],
+    "kind": "origin"
+   },
+   "bounds": null,
+   "triangles": {
+    "detailed": 0,
+    "compact": 0
+   },
+   "materials": []
+  },
+  {
+   "name": "window.sash.east.lower",
+   "three": "windowsasheastlower",
+   "parent": "window.sash.east",
+   "piece": "window.sash.east",
+   "role": "placed",
+   "collection": "Joinery",
+   "type": "mesh",
+   "mesh": "window.sash.east.lower",
+   "local": {
+    "translation": [
+     0,
+     0,
+     -0.0005
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -3.55,
+     1.37,
+     2.9565
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -3.55,
+     1.37,
+     2.9565,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -3.55,
+     1.37,
+     2.9565
+    ],
+    "kind": "slide",
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "travel": 0.6
+   },
+   "bounds": {
+    "min": [
+     -4.0225,
+     1.37,
+     2.9325
+    ],
+    "max": [
+     -3.0775,
+     2.1657,
+     2.9565
+    ]
+   },
+   "triangles": {
+    "detailed": 972,
+    "compact": 486
+   },
+   "materials": [
+    "paint.joinery"
+   ]
+  },
+  {
+   "name": "window.sash.east.upper",
+   "three": "windowsasheastupper",
+   "parent": "window.sash.east",
+   "piece": "window.sash.east",
+   "role": "placed",
+   "collection": "Joinery",
+   "type": "mesh",
+   "mesh": "window.sash.east.upper",
+   "local": {
+    "translation": [
+     0,
+     0.755714,
+     0.0245
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -3.55,
+     2.125714,
+     2.9815
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -3.55,
+     2.125714,
+     2.9815,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -3.55,
+     2.125714,
+     2.9815
+    ],
+    "kind": "slide",
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "travel": 0.6
+   },
+   "bounds": {
+    "min": [
+     -4.0225,
+     2.1257,
+     2.9575
+    ],
+    "max": [
+     -3.0775,
+     3.18,
+     2.9815
+    ]
+   },
+   "triangles": {
+    "detailed": 1080,
+    "compact": 540
+   },
+   "materials": [
+    "paint.joinery"
+   ]
+  },
+  {
+   "name": "window.sash.west",
+   "three": "windowsashwest",
+   "parent": null,
+   "piece": "window.sash.west",
+   "role": "placed",
+   "collection": "Joinery",
+   "type": "empty",
+   "mesh": null,
+   "local": {
+    "translation": [
+     -6.03,
+     1.37,
+     2.957
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -6.03,
+     1.37,
+     2.957
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -6.03,
+     1.37,
+     2.957,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -6.03,
+     1.37,
+     2.957
+    ],
+    "kind": "origin"
+   },
+   "bounds": null,
+   "triangles": {
+    "detailed": 0,
+    "compact": 0
+   },
+   "materials": []
+  },
+  {
+   "name": "window.sash.west.lower",
+   "three": "windowsashwestlower",
+   "parent": "window.sash.west",
+   "piece": "window.sash.west",
+   "role": "placed",
+   "collection": "Joinery",
+   "type": "mesh",
+   "mesh": "window.sash.west.lower",
+   "local": {
+    "translation": [
+     0,
+     0,
+     -0.0005
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -6.03,
+     1.37,
+     2.9565
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -6.03,
+     1.37,
+     2.9565,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -6.03,
+     1.37,
+     2.9565
+    ],
+    "kind": "slide",
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "travel": 0.6
+   },
+   "bounds": {
+    "min": [
+     -6.5025,
+     1.37,
+     2.9325
+    ],
+    "max": [
+     -5.5575,
+     2.1657,
+     2.9565
+    ]
+   },
+   "triangles": {
+    "detailed": 972,
+    "compact": 486
+   },
+   "materials": [
+    "paint.joinery"
+   ]
+  },
+  {
+   "name": "window.sash.west.upper",
+   "three": "windowsashwestupper",
+   "parent": "window.sash.west",
+   "piece": "window.sash.west",
+   "role": "placed",
+   "collection": "Joinery",
+   "type": "mesh",
+   "mesh": "window.sash.west.upper",
+   "local": {
+    "translation": [
+     0,
+     0.755714,
+     0.0245
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "world": {
+    "translation": [
+     -6.03,
+     2.125714,
+     2.9815
+    ],
+    "rotation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "matrix": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -6.03,
+     2.125714,
+     2.9815,
+     1
+    ]
+   },
+   "pivot": {
+    "point": [
+     -6.03,
+     2.125714,
+     2.9815
+    ],
+    "kind": "slide",
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "travel": 0.6
+   },
+   "bounds": {
+    "min": [
+     -6.5025,
+     2.1257,
+     2.9575
+    ],
+    "max": [
+     -5.5575,
+     3.18,
+     2.9815
+    ]
+   },
+   "triangles": {
+    "detailed": 1080,
+    "compact": 540
+   },
+   "materials": [
+    "paint.joinery"
+   ]
+  }
+ ]
+}

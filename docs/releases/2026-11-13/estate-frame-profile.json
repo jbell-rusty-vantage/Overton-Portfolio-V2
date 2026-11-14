@@ -1,0 +1,436 @@
+{
+  "browser": "157.0.8103.52",
+  "edition": 2,
+  "results": [
+    {
+      "device": "Desktop",
+      "backend": "webgl2",
+      "tier": "high",
+      "hardware": {
+        "webgl": "ANGLE (AMD, AMD Radeon (TM) Graphics (0x000015E7) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "devicePixelRatio": 1
+      },
+      "entranceBytes": 1463775,
+      "roomBytes": 3781674,
+      "bookBytes": 5126579,
+      "letterBytes": 5782219,
+      "glbs": [
+        {
+          "file": "kit-5af30b3af50ca71312d3.glb",
+          "wireBytes": 706971
+        },
+        {
+          "file": "world-v2-55dc0077e962f2e8d4a2.glb",
+          "wireBytes": 337463
+        }
+      ],
+      "entryReadyMs": 5887.5,
+      "preparation": {
+        "started": 1297.9000000003725,
+        "assetsMilliseconds": 3400.199999999255,
+        "prepareMilliseconds": 1647.0999999996275,
+        "totalMilliseconds": 5047.699999999255,
+        "textures": 101,
+        "programs": 43
+      },
+      "walkIn": {
+        "draw": {
+          "samples": 300,
+          "meanMs": 16.7,
+          "medianMs": 16.7,
+          "p95Ms": 16.8,
+          "averageFps": 60
+        },
+        "presentation": {
+          "samples": 300,
+          "meanMs": 16.7,
+          "medianMs": 16.7,
+          "p95Ms": 16.8,
+          "averageFps": 60
+        },
+        "window": {
+          "durationMs": 5003.1,
+          "draws": 301,
+          "presentations": 301,
+          "drawFps": 60.2,
+          "presentationFps": 60.2,
+          "firstDrawAfterStartMs": 0.5,
+          "lastDrawBeforeEndMs": 5.6
+        }
+      },
+      "speaking": {
+        "draw": {
+          "samples": 296,
+          "meanMs": 16.8,
+          "medianMs": 16.7,
+          "p95Ms": 16.8,
+          "averageFps": 59.4
+        },
+        "presentation": {
+          "samples": 296,
+          "meanMs": 16.8,
+          "medianMs": 16.7,
+          "p95Ms": 16.8,
+          "averageFps": 59.4
+        },
+        "window": {
+          "durationMs": 5003.5,
+          "draws": 297,
+          "presentations": 297,
+          "drawFps": 59.4,
+          "presentationFps": 59.4,
+          "firstDrawAfterStartMs": 6.8,
+          "lastDrawBeforeEndMs": 16.4
+        }
+      },
+      "pageTurn": {
+        "draw": {
+          "samples": 349,
+          "meanMs": 17,
+          "medianMs": 16.7,
+          "p95Ms": 16.8,
+          "averageFps": 58.7
+        },
+        "presentation": {
+          "samples": 349,
+          "meanMs": 17,
+          "medianMs": 16.7,
+          "p95Ms": 16.8,
+          "averageFps": 58.7
+        },
+        "turns": [
+          "Mission Control\nPages 3–4 of 18",
+          "Mission Control\nPages 5–6 of 18",
+          "Mission Control\nPages 7–8 of 18",
+          "Mission Control\nPages 5–6 of 18",
+          "Mission Control\nPages 3–4 of 18",
+          "Mission Control\nPages 5–6 of 18"
+        ],
+        "windows": [
+          {
+            "durationMs": 1007,
+            "draws": 55,
+            "presentations": 55,
+            "drawFps": 54.6,
+            "presentationFps": 54.6,
+            "firstDrawAfterStartMs": 9.3,
+            "lastDrawBeforeEndMs": 15
+          },
+          {
+            "durationMs": 1002.1,
+            "draws": 60,
+            "presentations": 60,
+            "drawFps": 59.9,
+            "presentationFps": 59.9,
+            "firstDrawAfterStartMs": 11.5,
+            "lastDrawBeforeEndMs": 8
+          },
+          {
+            "durationMs": 1009.8,
+            "draws": 58,
+            "presentations": 58,
+            "drawFps": 57.4,
+            "presentationFps": 57.4,
+            "firstDrawAfterStartMs": 5.9,
+            "lastDrawBeforeEndMs": 4.4
+          },
+          {
+            "durationMs": 1012.1,
+            "draws": 61,
+            "presentations": 61,
+            "drawFps": 60.3,
+            "presentationFps": 60.3,
+            "firstDrawAfterStartMs": 9.8,
+            "lastDrawBeforeEndMs": 2.9
+          },
+          {
+            "durationMs": 1003.7,
+            "draws": 61,
+            "presentations": 61,
+            "drawFps": 60.8,
+            "presentationFps": 60.8,
+            "firstDrawAfterStartMs": 0.3,
+            "lastDrawBeforeEndMs": 4
+          },
+          {
+            "durationMs": 1001.9,
+            "draws": 60,
+            "presentations": 60,
+            "drawFps": 59.9,
+            "presentationFps": 59.9,
+            "firstDrawAfterStartMs": 9.5,
+            "lastDrawBeforeEndMs": 9.7
+          }
+        ]
+      },
+      "document": {
+        "draw": {
+          "samples": 180,
+          "meanMs": 16.7,
+          "medianMs": 16.7,
+          "p95Ms": 16.7,
+          "averageFps": 60
+        },
+        "presentation": {
+          "samples": 180,
+          "meanMs": 16.7,
+          "medianMs": 16.7,
+          "p95Ms": 16.7,
+          "averageFps": 60
+        },
+        "window": {
+          "durationMs": 3006.8,
+          "draws": 181,
+          "presentations": 181,
+          "drawFps": 60.2,
+          "presentationFps": 60.2,
+          "firstDrawAfterStartMs": 4,
+          "lastDrawBeforeEndMs": 4.6
+        }
+      },
+      "videoTexture": {
+        "draw": {
+          "samples": 215,
+          "meanMs": 16.7,
+          "medianMs": 16.7,
+          "p95Ms": 16.8,
+          "averageFps": 60
+        },
+        "presentation": {
+          "samples": 215,
+          "meanMs": 16.7,
+          "medianMs": 16.7,
+          "p95Ms": 16.8,
+          "averageFps": 60
+        },
+        "window": {
+          "durationMs": 3600.4,
+          "draws": 216,
+          "presentations": 216,
+          "drawFps": 60,
+          "presentationFps": 60,
+          "firstDrawAfterStartMs": 4.5,
+          "lastDrawBeforeEndMs": 14.8
+        },
+        "mediaSeconds": 3.61,
+        "decoded": 109,
+        "dropped": 0
+      }
+    },
+    {
+      "device": "Emulated phone",
+      "backend": "webgl2",
+      "tier": "low",
+      "hardware": {
+        "webgl": "ANGLE (AMD, AMD Radeon (TM) Graphics (0x000015E7) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "devicePixelRatio": 2
+      },
+      "entranceBytes": 929384,
+      "roomBytes": 2996563,
+      "bookBytes": 4341468,
+      "letterBytes": 4934460,
+      "glbs": [
+        {
+          "file": "kit-low-a29c37ddd7ce127fc51e.glb",
+          "wireBytes": 502775
+        },
+        {
+          "file": "world-v2-low-02fc64cf73e652f50595.glb",
+          "wireBytes": 290939
+        }
+      ],
+      "entryReadyMs": 3105.9,
+      "preparation": {
+        "started": 1294.2000000011176,
+        "assetsMilliseconds": 1514.199999999255,
+        "prepareMilliseconds": 1023.0999999996275,
+        "totalMilliseconds": 2537.5,
+        "textures": 101,
+        "programs": 43
+      },
+      "walkIn": {
+        "draw": {
+          "samples": 299,
+          "meanMs": 16.7,
+          "medianMs": 16.7,
+          "p95Ms": 16.9,
+          "averageFps": 60
+        },
+        "presentation": {
+          "samples": 299,
+          "meanMs": 16.7,
+          "medianMs": 16.7,
+          "p95Ms": 16.9,
+          "averageFps": 60
+        },
+        "window": {
+          "durationMs": 5004.6,
+          "draws": 300,
+          "presentations": 300,
+          "drawFps": 59.9,
+          "presentationFps": 59.9,
+          "firstDrawAfterStartMs": 7,
+          "lastDrawBeforeEndMs": 17.4
+        }
+      },
+      "speaking": {
+        "draw": {
+          "samples": 300,
+          "meanMs": 16.7,
+          "medianMs": 16.7,
+          "p95Ms": 16.8,
+          "averageFps": 60
+        },
+        "presentation": {
+          "samples": 300,
+          "meanMs": 16.7,
+          "medianMs": 16.7,
+          "p95Ms": 16.8,
+          "averageFps": 60
+        },
+        "window": {
+          "durationMs": 5002.3,
+          "draws": 301,
+          "presentations": 301,
+          "drawFps": 60.2,
+          "presentationFps": 60.2,
+          "firstDrawAfterStartMs": 1.4,
+          "lastDrawBeforeEndMs": 4
+        }
+      },
+      "pageTurn": {
+        "draw": {
+          "samples": 359,
+          "meanMs": 16.7,
+          "medianMs": 16.7,
+          "p95Ms": 16.8,
+          "averageFps": 60
+        },
+        "presentation": {
+          "samples": 359,
+          "meanMs": 16.7,
+          "medianMs": 16.7,
+          "p95Ms": 16.8,
+          "averageFps": 60
+        },
+        "turns": [
+          "Mission Control\nPage 2 of 19",
+          "Mission Control\nPage 3 of 19",
+          "Mission Control\nPage 4 of 19",
+          "Mission Control\nPage 3 of 19",
+          "Mission Control\nPage 2 of 19",
+          "Mission Control\nPage 3 of 19"
+        ],
+        "windows": [
+          {
+            "durationMs": 1003.6,
+            "draws": 61,
+            "presentations": 61,
+            "drawFps": 60.8,
+            "presentationFps": 60.8,
+            "firstDrawAfterStartMs": 1.3,
+            "lastDrawBeforeEndMs": 2.9
+          },
+          {
+            "durationMs": 1008,
+            "draws": 60,
+            "presentations": 60,
+            "drawFps": 59.5,
+            "presentationFps": 59.5,
+            "firstDrawAfterStartMs": 11.2,
+            "lastDrawBeforeEndMs": 14.2
+          },
+          {
+            "durationMs": 1006.7,
+            "draws": 61,
+            "presentations": 61,
+            "drawFps": 60.6,
+            "presentationFps": 60.6,
+            "firstDrawAfterStartMs": 4.3,
+            "lastDrawBeforeEndMs": 3.1
+          },
+          {
+            "durationMs": 1003.2,
+            "draws": 61,
+            "presentations": 61,
+            "drawFps": 60.8,
+            "presentationFps": 60.8,
+            "firstDrawAfterStartMs": 0.9,
+            "lastDrawBeforeEndMs": 3
+          },
+          {
+            "durationMs": 1004,
+            "draws": 61,
+            "presentations": 61,
+            "drawFps": 60.8,
+            "presentationFps": 60.8,
+            "firstDrawAfterStartMs": 1,
+            "lastDrawBeforeEndMs": 3.6
+          },
+          {
+            "durationMs": 1002.7,
+            "draws": 61,
+            "presentations": 61,
+            "drawFps": 60.8,
+            "presentationFps": 60.8,
+            "firstDrawAfterStartMs": 0.1,
+            "lastDrawBeforeEndMs": 3.2
+          }
+        ]
+      },
+      "document": {
+        "draw": {
+          "samples": 180,
+          "meanMs": 16.7,
+          "medianMs": 16.7,
+          "p95Ms": 16.8,
+          "averageFps": 60
+        },
+        "presentation": {
+          "samples": 180,
+          "meanMs": 16.7,
+          "medianMs": 16.7,
+          "p95Ms": 16.8,
+          "averageFps": 60
+        },
+        "window": {
+          "durationMs": 3008.1,
+          "draws": 181,
+          "presentations": 181,
+          "drawFps": 60.2,
+          "presentationFps": 60.2,
+          "firstDrawAfterStartMs": 5.5,
+          "lastDrawBeforeEndMs": 4.4
+        }
+      },
+      "videoTexture": {
+        "draw": {
+          "samples": 216,
+          "meanMs": 16.7,
+          "medianMs": 16.7,
+          "p95Ms": 16.7,
+          "averageFps": 60
+        },
+        "presentation": {
+          "samples": 216,
+          "meanMs": 16.7,
+          "medianMs": 16.7,
+          "p95Ms": 16.7,
+          "averageFps": 60
+        },
+        "window": {
+          "durationMs": 3607,
+          "draws": 217,
+          "presentations": 217,
+          "drawFps": 60.2,
+          "presentationFps": 60.2,
+          "firstDrawAfterStartMs": 5.3,
+          "lastDrawBeforeEndMs": 3.9
+        },
+        "mediaSeconds": 3.61,
+        "decoded": 108,
+        "dropped": 0
+      }
+    }
+  ]
+}

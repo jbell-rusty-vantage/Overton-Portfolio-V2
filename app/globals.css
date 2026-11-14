@@ -69,3 +69,8 @@ body {
     @apply rounded-xl border border-line bg-panel p-5;
   }
 }
+
+.preview-shell { width: 100%; flex: 1; min-width: 0; padding-top: 34px; }
+.preview-label { position: fixed; inset: 0 0 auto; height: 34px; z-index: 2000; display: flex; align-items: center; justify-content: center; gap: 6px; background: #29291f; color: #f5ecd5; font: 13px system-ui; }
+.preview-label a { text-decoration: underline; }
+.preview-shell .tw { top: 34px; }

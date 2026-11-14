@@ -1,0 +1,236 @@
+{
+  "label": "after",
+  "base": "http://127.0.0.1:3078",
+  "browser": "157.0.8103.52",
+  "profile": "Workstation Chrome; no network/CPU throttling; desktop 1366x860 and emulated 390x844",
+  "routes": [
+    {
+      "width": 1366,
+      "warmth": "cold",
+      "wireBytes": 979979,
+      "lcp": 1780,
+      "cls": 0,
+      "draws": 0,
+      "imagePixels": 1139820
+    },
+    {
+      "width": 1366,
+      "warmth": "warm",
+      "wireBytes": 24028,
+      "lcp": 948,
+      "cls": 0,
+      "draws": 0,
+      "imagePixels": 1139820
+    },
+    {
+      "width": 390,
+      "warmth": "cold",
+      "wireBytes": 881658,
+      "lcp": 1084,
+      "cls": 0,
+      "draws": 0,
+      "imagePixels": 239502
+    },
+    {
+      "width": 390,
+      "warmth": "warm",
+      "wireBytes": 24027,
+      "lcp": 600,
+      "cls": 0,
+      "draws": 0,
+      "imagePixels": 239502
+    }
+  ],
+  "estate": [
+    {
+      "width": 1366,
+      "cycle": 0,
+      "entrance": {
+        "draws": 0,
+        "resources": []
+      },
+      "entryReadyMs": 9525.578599999999,
+      "heap": {
+        "usedSize": 40701888,
+        "totalSize": 93974528,
+        "embedderHeapUsedSize": 9125120,
+        "backingStorageSize": 50971665
+      },
+      "draws": 53699,
+      "p50": 13.299999999813735,
+      "p95": 17,
+      "preparation": "{\"started\":5847.0999999996275,\"assetsMilliseconds\":4814.4000000003725,\"prepareMilliseconds\":3238.2999999998137,\"totalMilliseconds\":8053.200000000186,\"textures\":116,\"programs\":43}"
+    },
+    {
+      "width": 1366,
+      "cycle": 1,
+      "entrance": {
+        "draws": 0,
+        "resources": []
+      },
+      "entryReadyMs": 7175.582300000002,
+      "heap": {
+        "usedSize": 41302176,
+        "totalSize": 92999680,
+        "embedderHeapUsedSize": 8583848,
+        "backingStorageSize": 50770423
+      },
+      "draws": 52165,
+      "p50": 12.900000000372529,
+      "p95": 16.799999999813735,
+      "preparation": "{\"started\":5313.9000000003725,\"assetsMilliseconds\":4639.5,\"prepareMilliseconds\":1973.8999999994412,\"totalMilliseconds\":6613.5999999996275,\"textures\":116,\"programs\":43}"
+    },
+    {
+      "width": 1366,
+      "cycle": 2,
+      "entrance": {
+        "draws": 0,
+        "resources": []
+      },
+      "entryReadyMs": 6867.245800000004,
+      "heap": {
+        "usedSize": 35327828,
+        "totalSize": 90447872,
+        "embedderHeapUsedSize": 9181176,
+        "backingStorageSize": 52879195
+      },
+      "draws": 50986,
+      "p50": 9,
+      "p95": 17.200000000186265,
+      "preparation": "{\"started\":5347.700000000186,\"assetsMilliseconds\":4215.799999999814,\"prepareMilliseconds\":2110.5,\"totalMilliseconds\":6326.5999999996275,\"textures\":116,\"programs\":43}"
+    },
+    {
+      "width": 1366,
+      "cycle": 3,
+      "entrance": {
+        "draws": 0,
+        "resources": []
+      },
+      "entryReadyMs": 6837.910600000003,
+      "heap": {
+        "usedSize": 44266824,
+        "totalSize": 93143040,
+        "embedderHeapUsedSize": 8658464,
+        "backingStorageSize": 51017054
+      },
+      "draws": 52607,
+      "p50": 13.299999999813735,
+      "p95": 17,
+      "preparation": "{\"started\":5457.4000000003725,\"assetsMilliseconds\":4253.299999999814,\"prepareMilliseconds\":2003.2000000001863,\"totalMilliseconds\":6256.700000000186,\"textures\":116,\"programs\":43}"
+    },
+    {
+      "width": 1366,
+      "cycle": 4,
+      "entrance": {
+        "draws": 0,
+        "resources": []
+      },
+      "entryReadyMs": 6423.436299999987,
+      "heap": {
+        "usedSize": 45909840,
+        "totalSize": 95047680,
+        "embedderHeapUsedSize": 9072016,
+        "backingStorageSize": 51462960
+      },
+      "draws": 52407,
+      "p50": 13.100000000558794,
+      "p95": 16.799999999813735,
+      "preparation": "{\"started\":5403.200000000186,\"assetsMilliseconds\":3860.2000000001863,\"prepareMilliseconds\":2058.600000000559,\"totalMilliseconds\":5919,\"textures\":116,\"programs\":43}"
+    },
+    {
+      "width": 390,
+      "cycle": 0,
+      "entrance": {
+        "draws": 0,
+        "resources": []
+      },
+      "entryReadyMs": 5437.7860999999975,
+      "heap": {
+        "usedSize": 44652924,
+        "totalSize": 93712384,
+        "embedderHeapUsedSize": 6961568,
+        "backingStorageSize": 33890158
+      },
+      "draws": 23262,
+      "p50": 16.59999999962747,
+      "p95": 17.5,
+      "preparation": "{\"started\":5562.5,\"assetsMilliseconds\":2577.2000000001863,\"prepareMilliseconds\":2141.4000000003725,\"totalMilliseconds\":4719,\"textures\":120,\"programs\":43}"
+    },
+    {
+      "width": 390,
+      "cycle": 1,
+      "entrance": {
+        "draws": 0,
+        "resources": []
+      },
+      "entryReadyMs": 3184.13410000001,
+      "heap": {
+        "usedSize": 43077656,
+        "totalSize": 93261824,
+        "embedderHeapUsedSize": 7237976,
+        "backingStorageSize": 34468303
+      },
+      "draws": 23325,
+      "p50": 16.600000000558794,
+      "p95": 17.399999999441206,
+      "preparation": "{\"started\":5561.399999999441,\"assetsMilliseconds\":1682.300000000745,\"prepareMilliseconds\":925.9000000003725,\"totalMilliseconds\":2608.4000000003725,\"textures\":120,\"programs\":43}"
+    },
+    {
+      "width": 390,
+      "cycle": 2,
+      "entrance": {
+        "draws": 0,
+        "resources": []
+      },
+      "entryReadyMs": 3569.9174000000057,
+      "heap": {
+        "usedSize": 33257976,
+        "totalSize": 62922752,
+        "embedderHeapUsedSize": 7750984,
+        "backingStorageSize": 38280377
+      },
+      "draws": 24136,
+      "p50": 16.600000000558794,
+      "p95": 17.299999999813735,
+      "preparation": "{\"started\":5270.199999999255,\"assetsMilliseconds\":1729.4000000003725,\"prepareMilliseconds\":1079.8999999994412,\"totalMilliseconds\":2809.5,\"textures\":120,\"programs\":43}"
+    },
+    {
+      "width": 390,
+      "cycle": 3,
+      "entrance": {
+        "draws": 0,
+        "resources": []
+      },
+      "entryReadyMs": 3163.5791999999783,
+      "heap": {
+        "usedSize": 45244124,
+        "totalSize": 94973952,
+        "embedderHeapUsedSize": 7178856,
+        "backingStorageSize": 34468999
+      },
+      "draws": 23261,
+      "p50": 16.600000000558794,
+      "p95": 17.299999999813735,
+      "preparation": "{\"started\":5294.0999999996275,\"assetsMilliseconds\":1685.6000000005588,\"prepareMilliseconds\":947.1999999992549,\"totalMilliseconds\":2632.7999999998137,\"textures\":120,\"programs\":43}"
+    },
+    {
+      "width": 390,
+      "cycle": 4,
+      "entrance": {
+        "draws": 0,
+        "resources": []
+      },
+      "entryReadyMs": 3528.1932999999844,
+      "heap": {
+        "usedSize": 31441704,
+        "totalSize": 62537728,
+        "embedderHeapUsedSize": 6967072,
+        "backingStorageSize": 34137016
+      },
+      "draws": 23178,
+      "p50": 16.59999999962747,
+      "p95": 17.200000000186265,
+      "preparation": "{\"started\":5219.299999999814,\"assetsMilliseconds\":1735.7999999998137,\"prepareMilliseconds\":1242,\"totalMilliseconds\":2978,\"textures\":120,\"programs\":43}"
+    }
+  ]
+}

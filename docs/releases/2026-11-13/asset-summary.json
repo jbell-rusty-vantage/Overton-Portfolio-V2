@@ -1,0 +1,19 @@
+{
+  "sha256": "23f1daf657018d1f241d840bc9868a679e2094235c6835d39469e175ced36c62",
+  "bundledBytes": 84448242,
+  "excludedMasterBytes": 283955754,
+  "bundledFiles": 336,
+  "blobObjects": 127,
+  "duplicates": [
+    [
+      {
+        "url": "/free-kick-goal.mp4",
+        "bundled": false
+      },
+      {
+        "url": "/performances/wellington-mens-vs-royal-palm/free_kick_goal.mp4",
+        "bundled": true
+      }
+    ]
+  ]
+}

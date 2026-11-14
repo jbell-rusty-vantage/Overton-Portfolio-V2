@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-11-12",
+  "timeZone": "America/New_York",
+  "method": "Tavily extract; primary pages read by implementation worker",
+  "sources": [
+    {
+      "url": "https://www.historictravellersrest.org/history/nashville-from-frontier-to-home-of-the-u-s-president",
+      "title": "Travellers Rest",
+      "sha256": "bf39b6aa846c49ebf4636f2e20a5311bda993366f9e1ee77d2d0046ad0d34849"
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/tpus-8t-8i-cloud-next",
+      "title": "Google introduces new TPUs at Cloud Next ‘26",
+      "sha256": "f5c2edc00b2e587d11cf71f9ac426d52c40cfae8da37a40af50ce9d1e7cfc21b"
+    },
+    {
+      "url": "https://www.iea.org/news/ai-is-set-to-drive-surging-electricity-demand-from-data-centres-while-offering-the-potential-to-transform-how-the-energy-sector-works",
+      "title": "AI is set to drive surging electricity demand from data centres while offering the potential to transform how the energy sector works - IEA",
+      "sha256": "12ea6b0b49d82496af2e17230ab4e355810e5073dd876cf7359c9574d964a35f"
+    },
+    {
+      "url": "https://openai.com/index/stargate-community",
+      "title": "Stargate Community | OpenAI",
+      "sha256": "cc168afc30f5b4482af3cb9f113db807f6d9abcc8bb2f43f413f25e9b5a81bd9"
+    }
+  ],
+  "failed": []
+}

@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-11-12",
+  "timeZone": "America/New_York",
+  "method": "Tavily extract; primary pages read by implementation worker",
+  "sources": [
+    {
+      "url": "https://tennesseeencyclopedia.net/entries/john-overton",
+      "title": "Overton, John | Tennessee Encyclopedia",
+      "sha256": "5d5f9435cec6121d40122843b7d5548ab6f1087ff07323fe4a089f546afedebd"
+    },
+    {
+      "url": "https://www.harvey.ai/blog/legal-ai-vs-traditional-legal-research",
+      "title": "AI in Legal Research vs. Traditional Tools: What Changed",
+      "sha256": "f92257656718708f67880ed4f87c5c8dd0dc4b70b6cca773040115b1438582c4"
+    },
+    {
+      "url": "https://openai.com/index/gpt-6-astra",
+      "title": "GPT-6 Astra: A new generation of intelligence",
+      "sha256": "359c9ac9489a58c2aea9fb96018bf662e7bc61ad42a008afb472a6c9e8e3fcfb"
+    },
+    {
+      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "title": "Introducing Claude Opus 5.5",
+      "sha256": "13e72213778d3f391dcf9346306ba4cc71084929cc0169a79454a60306652577"
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon",
+      "title": "Introducing Gemini 4 Carbon",
+      "sha256": "3cef2acc96d100231bc99813bbf002d79701e8f9267165a9bd0e5cd322fa47f9"
+    },
+    {
+      "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api",
+      "title": "Introducing Muse Spark 1.1",
+      "sha256": "d5b4737cabef8f96ada6ee70f4e15876c12e9ad009de0c788a2c0f499f228e0b"
+    }
+  ],
+  "failed": []
+}

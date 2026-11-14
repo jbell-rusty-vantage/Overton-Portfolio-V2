@@ -61,6 +61,10 @@ const contentBlock = z
         alt: z.string().max(1000).optional(),
         url: z.string().max(2048).optional(),
         poster: z.string().max(2048).optional(),
+        captions: z.string().max(2048).optional(),
+        transcript: z.string().max(2048).optional(),
+        ownPage: z.boolean().optional(),
+        detail: z.string().max(2048).optional(),
       })
       .strict(),
   })
@@ -76,6 +80,10 @@ export function blocksFrom(value: unknown) {
       label?: string;
       url?: string;
       poster?: string;
+      captions?: string;
+      transcript?: string;
+      ownPage?: boolean;
+      detail?: string;
     }[] => {
       const parsed = contentBlock.safeParse(raw);
       if (!parsed.success) return [];
@@ -84,8 +92,11 @@ export function blocksFrom(value: unknown) {
       if (typeof text !== "string" || !text.trim() || text.length > 16000)
         return [];
       if (b.component !== "Video" && b.props.poster !== undefined) return [];
+      if (b.component !== "Video" && (b.props.captions !== undefined || b.props.transcript !== undefined)) return [];
+      if (b.component !== "Image" && b.props.ownPage !== undefined) return [];
+      if (b.component !== "Image" && b.props.detail !== undefined) return [];
       if (b.component === "Heading")
-        return text.length <= 160 ? [{ kind: "heading", text }] : [];
+        return text.length <= 160 ? [{ kind: "heading", text, ...(b.props.label === "section-title" ? { label: "section-title" } : {}) }] : [];
       // A measurement with both a name and a value renders as a figure; otherwise it reads as prose.
       if (b.component === "Metric" && b.props.label && b.props.text)
         return [{ kind: "metric", text: b.props.text, label: b.props.label }];
@@ -96,8 +107,10 @@ export function blocksFrom(value: unknown) {
         // Recordings are bundled files or public Blob objects; the poster follows image rules.
         const video = publicVideo(b.props.url);
         const poster = publicImage(b.props.poster);
+        const captions = publicMedia(b.props.captions) ?? (typeof b.props.captions === "string" && /^\/library\/recordings\/[a-z0-9][a-z0-9_-]{0,95}\.vtt$/.test(b.props.captions) ? b.props.captions : undefined);
+        const transcript = httpsUrl(b.props.transcript);
         return video
-          ? [{ kind: "video", text, url: video, ...(poster ? { poster } : {}) }]
+          ? [{ kind: "video", text, url: video, ...(poster ? { poster } : {}), ...(captions ? { captions } : {}), ...(transcript ? { transcript } : {}) }]
           : [];
       }
       const url =
@@ -105,12 +118,16 @@ export function blocksFrom(value: unknown) {
           ? publicImage(b.props.url)
           : httpsUrl(b.props.url);
       if (url && b.component === "Link") return [{ kind: "link", text, url }];
-      if (url && b.component === "Image") return [{ kind: "image", text, url }];
+      if (url && b.component === "Image") return [{ kind: "image", text, url, ...(b.props.ownPage ? { ownPage: true } : {}), ...(publicImage(b.props.detail) ? { detail: publicImage(b.props.detail) } : {}) }];
       return [];
     },
   );
 }
 export const templateNames: Record<string, string> = {
+  "first-residents": "Before the house",
+  household: "The hands that built it",
+  campaign: "A judge and a campaign",
+  reports: "A reader’s working life",
   cover: "Title page",
   overview: "Overview",
   architecture: "Architecture",

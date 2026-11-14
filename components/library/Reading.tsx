@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mark } from "./Marks";
+import ProjectReport from "./ProjectReport";
+import { reportLinkNeighbors } from "@/lib/library/report";
 import {
   type Volume,
   type Leaf,
@@ -132,7 +134,7 @@ export function LeafBody({
                 controls
                 muted
                 playsInline
-                preload={b.poster ? "none" : "metadata"}
+                preload="none"
                 aria-label={b.text}
               />
               <figcaption>{b.text}</figcaption>
@@ -147,11 +149,14 @@ export function FullReader({
   v,
   source,
   admin = false,
+  volumes = [],
 }: {
   v: Volume;
   source: Collection["source"];
   admin?: ReadingScope;
+  volumes?: Volume[];
 }) {
+  if (v.kind === "Project") return <main className="project-report-page"><ProjectReport volume={v} source={source} admin={admin} neighbors={reportLinkNeighbors(v, volumes)} /></main>;
   return (
     <main className="library full-reader">
       <div className="reader-top">

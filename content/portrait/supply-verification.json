@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-11-12",
+  "timeZone": "America/New_York",
+  "method": "Tavily extract; primary pages read by implementation worker",
+  "sources": [
+    {
+      "url": "https://investors.micron.com/news/press-release/2025/Micron-Breaks-Ground-on-New-HBM-Advanced-Packaging-Facility-in-Singapore-01-08-2025/default.aspx",
+      "title": "Micron Technology, Inc. - Micron Breaks Ground on New HBM Advanced Packaging Facility in Singapore",
+      "sha256": "2247463101876419c0554b45bed5b23d5d52e14caaa0c28eabe910fa75ca6e2b"
+    },
+    {
+      "url": "https://www.anthropic.com/news/higher-limits-spacex",
+      "title": "Higher usage limits and a SpaceX compute deal \\ Anthropic",
+      "sha256": "4a418eff706c54673c7cd64acb92f892f13d6853ad7d4f948dc9c22ddb0423cc"
+    }
+  ],
+  "failed": []
+}

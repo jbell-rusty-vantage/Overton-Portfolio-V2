@@ -1,0 +1,1879 @@
+{
+ "meta": {
+  "title": "Travellers Rest (Judge John Overton House), Nashville: measured record for the 3D model",
+  "generated": "2026-11-12",
+  "read_this_first": [
+   "HABS TN-14 contains NO measured-drawing sheets: only 11 photographs, 10 data pages and a caption page. The plan (p. 8) and south elevation (p. 9) are small tracings by Patrick W. Crawford (NPS, 1970) from the restoration architects' drawings, with a graphic scale bar and no written dimensions.",
+   "Every length below is therefore scaled from a scale bar on a 200 dpi scan (plan 1 px = 28 mm, elevation 1 px = 14 mm) or derived from a photograph or an aerial image. Nothing here is a dimension string. Tolerances are stated per value.",
+   "The dimensioned originals exist but are not online: Warterfield and Bass, 'Architectural Restoration of John Overton's Home', Project 6605, June 1966, 17 sheets; Brush, Hutchison & Gwinn, 'Restoration of 1828 Addition', 29 May 1969; HABS field records FN-24 at the Library of Congress (unprocessed)."
+  ],
+  "units": "feet as scaled from the drawings and metres",
+  "frame": {
+   "description": "The model frame of docs/WORLD_ENGINE.md: metres, Y up, +Z = nominal south (the front), -X = nominal west. x = 0 on the south-door axis, z = 0 at mid-depth of the main block, y = 0 at exterior grade by the south door.",
+   "plan_pixel_to_model": "x_m = -(px - 824.5) * 0.027609 ; z_m = (706.75 - py) * 0.027609 on the native 1650 x 2181 scan of PDF page 9 (printed p. 8)",
+   "nominal_vs_true": "HABS calls the front 'south'. The front actually faces true azimuth 238 degrees (see orientation). 'South', 'west' and so on in this file are the survey's nominal directions unless marked true."
+  },
+  "scale_bars": {
+   "plan": {
+    "px_per_ft": 11.04,
+    "reading": "bar ticks at native y = 473 (20 ft), 528, 583, 639, 694 (0), 749 (-5 ft)",
+    "crop": "crops/plan-scale-bar.png"
+   },
+   "elevation": {
+    "px_per_ft": 22.1,
+    "reading": "bar ticks at native x = 238 (15 ft), 347, 457, 568 (0), 680 (-5 ft)",
+    "crop": "crops/elev-scale-bar.png"
+   },
+   "cross_check": "Plan overall 52.1 x 106.1 ft against the HABS text 'approximately 52 x 107 ft' (within 1 %). The elevation makes the front 51.3 ft, 1.5 % short of the plan: horizontal positions on the elevation carry +/- 2 %."
+  },
+  "confidence_scale": {
+   "high": "two independent sources agree, or a label/caption states it",
+   "medium": "scaled from one scale bar, or counted on a clear photograph",
+   "low": "inferred, or read on aerial imagery to a metre or worse"
+  }
+ },
+ "orientation": {
+  "front_faces_true_azimuth_deg": {
+   "value": 237.7,
+   "tolerance_deg": 1.0,
+   "source": "Metro Nashville 2023 orthophoto (6 in. GSD), viewed through maps.nashville.gov; not held (copyright Metro GIS / Pictometry); OpenStreetMap building outline (originals/osm/osm-travellers-rest-site.json) gives 238.4",
+   "method": "dominant roof-edge direction by gradient histogram on the orthophoto",
+   "confidence": "high"
+  },
+  "nominal_to_true": {
+   "nominal south (+Z)": 237.7,
+   "nominal west (-X)": 327.7,
+   "nominal north (-Z)": 57.7,
+   "nominal east (+X)": 147.7
+  },
+  "true_north_in_model_frame": {
+   "x": -0.845,
+   "z": -0.534,
+   "note": "unit vector; true south is the opposite. Solar noon is 58 degrees to the east of the front normal; the sun stands square to the front at azimuth 238, mid to late afternoon."
+  },
+  "south_door_position_wgs84": {
+   "lat": 36.07686,
+   "lon": -86.76385,
+   "tolerance_m": 1.5,
+   "source": "Metro Nashville 2023 orthophoto (6 in. GSD), viewed through maps.nashville.gov; not held (copyright Metro GIS / Pictometry)",
+   "method": "read on orthophoto",
+   "confidence": "low"
+  }
+ },
+ "footprint": {
+  "main_block_width_east_west": {
+   "as_drawn": "52'-1\" (scaled; no dimension string on the drawing)",
+   "value_ft": 52.08,
+   "value_m": 15.875,
+   "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.1,
+   "px": [
+    536,
+    1111
+   ],
+   "note": "outside of clapboard walls; the HABS text says approximately 52 ft"
+  },
+  "main_block_width_from_elevation": {
+   "as_drawn": "51'-3\" (scaled; no dimension string on the drawing)",
+   "value_ft": 51.27,
+   "value_m": 15.626,
+   "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.25,
+   "px": [
+    555.5,
+    1688.5
+   ],
+   "note": "corner board to corner board; 1.5 % short of the plan"
+  },
+  "main_block_depth_north_south": {
+   "as_drawn": "20'-6\" (scaled; no dimension string on the drawing)",
+   "value_ft": 20.47,
+   "value_m": 6.24,
+   "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.1,
+   "px": [
+    594,
+    820
+   ]
+  },
+  "ell_width_east_west": {
+   "as_drawn": "22'-9\" (scaled; no dimension string on the drawing)",
+   "value_ft": 22.74,
+   "value_m": 6.93,
+   "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.1,
+   "px": [
+    860,
+    1111
+   ],
+   "note": "brick ell of the 1820s; its west wall continues the main block's west wall"
+  },
+  "ell_length_beyond_main_block": {
+   "as_drawn": "58'-0\" (scaled; no dimension string on the drawing)",
+   "value_ft": 57.97,
+   "value_m": 17.67,
+   "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.1,
+   "px": [
+    820,
+    1460
+   ],
+   "note": "north face of main block to the north end of the kitchen"
+  },
+  "addition_1887": {
+   "width": {
+    "as_drawn": "24'-1\" (scaled; no dimension string on the drawing)",
+    "value_ft": 24.09,
+    "value_m": 7.344,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1,
+    "px": [
+     791,
+     1057
+    ]
+   },
+   "length": {
+    "as_drawn": "28'-0\" (scaled; no dimension string on the drawing)",
+    "value_ft": 27.99,
+    "value_m": 8.531,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.15,
+    "px": [
+     1455,
+     1764
+    ]
+   }
+  },
+  "overall_length_north_south": {
+   "as_drawn": "106'-1\" (scaled; no dimension string on the drawing)",
+   "value_ft": 106.07,
+   "value_m": 32.33,
+   "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.1,
+   "px": [
+    593,
+    1764
+   ],
+   "note": "HABS text: approximately 107 ft"
+  },
+  "gallery_east_of_ell_width": {
+   "as_drawn": "13'-11\" (scaled; no dimension string on the drawing)",
+   "value_ft": 13.95,
+   "value_m": 4.252,
+   "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.15,
+   "px": [
+    706,
+    860
+   ],
+   "note": "two-storey gallery; post line to ell wall"
+  },
+  "gallery_north_of_main_block_depth": {
+   "as_drawn": "13'-2\" (scaled; no dimension string on the drawing)",
+   "value_ft": 13.13,
+   "value_m": 4.003,
+   "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.15,
+   "px": [
+    820,
+    965
+   ]
+  },
+  "habs_text": {
+   "value": "approximately 52 ft x 107 ft, two storeys, L-shaped",
+   "source": "HABS TN-14 data p. 6",
+   "method": "stated in text",
+   "confidence": "high"
+  }
+ },
+ "walls": {
+  "main_block_exterior_frame_walls": {
+   "as_drawn": "0'-10\" (scaled; no dimension string on the drawing)",
+   "value_ft": 0.82,
+   "value_m": 0.248,
+   "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+   "method": "scaled from scale bar",
+   "confidence": "low",
+   "tolerance_m": 0.06,
+   "note": "as drawn (double line 8-9 px); heavy timber frame with beaded weatherboard outside and plaster inside"
+  },
+  "interior_partitions": {
+   "as_drawn": "0'-7\" (scaled; no dimension string on the drawing)",
+   "value_ft": 0.59,
+   "value_m": 0.179,
+   "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+   "method": "scaled from scale bar",
+   "confidence": "low",
+   "tolerance_m": 0.06,
+   "note": "as drawn (6-7 px)"
+  },
+  "library_north_wall_brick": {
+   "as_drawn": "1'-5\" (scaled; no dimension string on the drawing)",
+   "value_ft": 1.45,
+   "value_m": 0.442,
+   "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+   "method": "scaled from scale bar",
+   "confidence": "low",
+   "tolerance_m": 0.06,
+   "note": "the ell's south wall, drawn solid, 811-827 px"
+  },
+  "ell_brick_walls": {
+   "as_drawn": "1'-2\" (scaled; no dimension string on the drawing)",
+   "value_ft": 1.13,
+   "value_m": 0.345,
+   "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+   "method": "scaled from scale bar",
+   "confidence": "low",
+   "tolerance_m": 0.06
+  }
+ },
+ "rooms_first_floor": {
+  "which_room_is_the_library": {
+   "value": "The WEST room of the main block (the southwest room), west of the entry hall.",
+   "evidence": [
+    "It is lettered LIBRARY on the HABS plan, p. 8 (north arrow checked: the ell is on the north, the library on the west).",
+    "HABS photograph TN-14-8, 'First floor, southwest room, looking west', shows the same room: fireplace in the west wall, door to the ell in the north wall.",
+    "HABS text, p. 2: 'The mantel in the library was taken from a house in Franklin and installed in 1936.'",
+    "The 2021 photograph shows a vertical board seam between the second and third bays from the west: the two west bays are the 1812 addition. The library is therefore the room added in 1812 ('one room downstairs and one room above ... not joined by inside openings to the original four rooms', NRHP nomination 1969)."
+   ],
+   "confidence": "high",
+   "caveat": "The name is the 1970 survey's. Whether Judge Overton used this room as his library was not established from a primary source in this pass."
+  },
+  "library": {
+   "east_west": {
+    "as_drawn": "19'-10\" (scaled; no dimension string on the drawing)",
+    "value_ft": 19.84,
+    "value_m": 6.046,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1,
+    "px": [
+     883,
+     1102
+    ]
+   },
+   "north_south": {
+    "as_drawn": "19'-0\" (scaled; no dimension string on the drawing)",
+    "value_ft": 19.02,
+    "value_m": 5.798,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1,
+    "px": [
+     601,
+     811
+    ]
+   }
+  },
+  "entry_hall": {
+   "east_west": {
+    "as_drawn": "11'-2\" (scaled; no dimension string on the drawing)",
+    "value_ft": 11.14,
+    "value_m": 3.396,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1,
+    "px": [
+     753,
+     876
+    ]
+   },
+   "north_south": {
+    "as_drawn": "18'-11\" (scaled; no dimension string on the drawing)",
+    "value_ft": 18.93,
+    "value_m": 5.77,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1,
+    "px": [
+     602,
+     811
+    ]
+   }
+  },
+  "parlor": {
+   "east_west": {
+    "as_drawn": "18'-2\" (scaled; no dimension string on the drawing)",
+    "value_ft": 18.21,
+    "value_m": 5.549,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1,
+    "px": [
+     545,
+     746
+    ]
+   },
+   "north_south": {
+    "as_drawn": "18'-11\" (scaled; no dimension string on the drawing)",
+    "value_ft": 18.93,
+    "value_m": 5.77,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1,
+    "px": [
+     602,
+     811
+    ]
+   },
+   "note": "east room; panelled chimney wall with closets either side (photograph TN-14-7)"
+  },
+  "ell": {
+   "interior_width": {
+    "as_drawn": "20'-7\" (scaled; no dimension string on the drawing)",
+    "value_ft": 20.56,
+    "value_m": 6.267,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "low",
+    "tolerance_m": 0.15
+   },
+   "dining_room_north_south": {
+    "as_drawn": "18'-7\" (scaled; no dimension string on the drawing)",
+    "value_ft": 18.57,
+    "value_m": 5.66,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "low",
+    "tolerance_m": 0.2
+   },
+   "kitchen_north_south": {
+    "as_drawn": "14'-0\" (scaled; no dimension string on the drawing)",
+    "value_ft": 14.04,
+    "value_m": 4.279,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "low",
+    "tolerance_m": 0.2
+   },
+   "sequence_south_to_north": [
+    "lower hall with service stair and lavatory",
+    "dining room",
+    "pantry",
+    "kitchen",
+    "1887 addition"
+   ],
+   "note": "plan shows the ell before the 1969 restoration, which removed the kitchen and bathrooms and made the pantry a rear stair hall"
+  }
+ },
+ "ceiling_heights": {
+  "first_floor": {
+   "value_m": null,
+   "status": "NOT GIVEN by any source read. Bounded and estimated only.",
+   "lower_bound": {
+    "as_drawn": "8'-8\" (scaled; no dimension string on the drawing)",
+    "value_ft": 8.69,
+    "value_m": 2.648,
+    "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.06,
+    "note": "top of the first-floor sash above the floor; the ceiling cannot be lower"
+   },
+   "estimates": [
+    {
+     "value_m": 2.9,
+     "value_ft": 9.51,
+     "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+     "method": "inferred: second-floor sill is 13.26 ft above the first floor; if it sits as high above its own floor as the first-floor sill (2.76 ft), floor to floor is 10.5 ft (3.20 m), less about 0.3 m of joists and flooring",
+     "confidence": "low",
+     "tolerance_m": 0.15
+    },
+    {
+     "value_m": 2.95,
+     "value_ft": 9.68,
+     "source": "HABS TN-14-7 (parlor photograph)",
+     "method": "counted from photograph: the cornice is about one pane row (0.26-0.34 m) above the window head, itself 2.65 m above the floor",
+     "confidence": "low",
+     "tolerance_m": 0.12
+    },
+    {
+     "value_m": 2.82,
+     "value_ft": 9.25,
+     "source": "HABS TN-14-8 (photograph, southwest room looking west), originals/habs-tn-14/152686pu.tif",
+     "method": "counted from photograph: Earl's portrait of Overton on the west wall, if on a standard 25 in. wide canvas, makes the wall 1578 px = 2.82 m high; a 27 in. canvas gives 3.05 m",
+     "confidence": "low",
+     "tolerance_m": 0.2
+    }
+   ],
+   "working_value": {
+    "value_m": 2.92,
+    "value_ft": 9.58,
+    "source": "the three estimates above",
+    "method": "inferred",
+    "confidence": "low",
+    "tolerance_m": 0.15,
+    "note": "use until the Warterfield sections are read; the model has 3.19 m"
+   }
+  },
+  "second_floor": {
+   "value_m": null,
+   "status": "not given; the eave (top of wall) is 20.59 ft above the first floor, so about 2.8-3.0 m is available above a second floor at about 3.2 m"
+  },
+  "floor_to_floor": {
+   "value_m": 3.2,
+   "value_ft": 10.5,
+   "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+   "method": "inferred from equal sill heights on both storeys",
+   "confidence": "low",
+   "tolerance_m": 0.15
+  }
+ },
+ "levels_and_roof": {
+  "datum": "first floor = door sill on the elevation (native x = 999)",
+  "first_floor_above_grade_at_door": {
+   "as_drawn": "1'-8\" (scaled; no dimension string on the drawing)",
+   "value_ft": 1.67,
+   "value_m": 0.51,
+   "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.06,
+   "px": [
+    999,
+    1036
+   ],
+   "note": "the model has 0.53 m"
+  },
+  "first_floor_above_grade_at_corners": {
+   "as_drawn": "2'-1\" (scaled; no dimension string on the drawing)",
+   "value_ft": 2.08,
+   "value_m": 0.634,
+   "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.06,
+   "px": [
+    999,
+    1045
+   ]
+  },
+  "bottom_of_weatherboard_below_floor": {
+   "as_drawn": "0'-5\" (scaled; no dimension string on the drawing)",
+   "value_ft": 0.45,
+   "value_m": 0.138,
+   "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.06,
+   "px": [
+    999,
+    1009
+   ]
+  },
+  "foundation": {
+   "value": "ashlar rock-faced Tennessee limestone, 1.2-1.6 ft showing",
+   "source": "HABS TN-14 data p. 6 and elevation",
+   "confidence": "medium"
+  },
+  "eave_above_first_floor": {
+   "as_drawn": "20'-7\" (scaled; no dimension string on the drawing)",
+   "value_ft": 20.59,
+   "value_m": 6.275,
+   "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.06,
+   "px": [
+    544,
+    999
+   ]
+  },
+  "ridge_above_first_floor": {
+   "as_drawn": "27'-5\" (scaled; no dimension string on the drawing)",
+   "value_ft": 27.38,
+   "value_m": 8.344,
+   "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.06,
+   "px": [
+    394,
+    999
+   ]
+  },
+  "ridge_above_eave": {
+   "as_drawn": "6'-9\" (scaled; no dimension string on the drawing)",
+   "value_ft": 6.79,
+   "value_m": 2.069,
+   "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.06,
+   "px": [
+    394,
+    544
+   ]
+  },
+  "chimney_top_above_first_floor": {
+   "as_drawn": "31'-4\" (scaled; no dimension string on the drawing)",
+   "value_ft": 31.36,
+   "value_m": 9.558,
+   "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.06,
+   "px": [
+    306,
+    999
+   ]
+  },
+  "roof": {
+   "form": "gable, ridge east-west, wood shingles, simple cornice moulding (HABS text)",
+   "pitch_deg": {
+    "value": 33.0,
+    "tolerance_deg": 2.0,
+    "method": "inferred: 6.79 ft rise over half the 20.47 ft depth (plus an unknown eave overhang)",
+    "confidence": "low"
+   }
+  },
+  "weatherboard_exposure": {
+   "as_drawn": "0'-6\" (scaled; no dimension string on the drawing)",
+   "value_ft": 0.5,
+   "value_m": 0.153,
+   "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+   "method": "scaled from scale bar",
+   "confidence": "low",
+   "tolerance_m": 0.01,
+   "note": "39 courses drawn between cornice and sill; beaded weatherboard (HABS text)"
+  }
+ },
+ "south_front": {
+  "bays": "five; door in the middle bay, two windows each side on both floors, one window over the door",
+  "door": {
+   "axis": "x = 0 by definition. On the plan it is on the centre of the front (within 1 px); on the elevation it is 0.47 ft west of centre.",
+   "clear_opening_width": {
+    "as_drawn": "3'-6\" (scaled; no dimension string on the drawing)",
+    "value_ft": 3.53,
+    "value_m": 1.077,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1,
+    "px": [
+     805,
+     844
+    ],
+    "note": "elevation gives 3.57 ft"
+   },
+   "leaf_height": {
+    "as_drawn": "6'-10\" (scaled; no dimension string on the drawing)",
+    "value_ft": 6.83,
+    "value_m": 2.083,
+    "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.06,
+    "px": [
+     848,
+     999
+    ]
+   },
+   "frame_height_with_transom": {
+    "as_drawn": "8'-6\" (scaled; no dimension string on the drawing)",
+    "value_ft": 8.46,
+    "value_m": 2.579,
+    "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.06,
+    "px": [
+     812,
+     999
+    ]
+   },
+   "type": {
+    "value": "six-panel door with four-light transom",
+    "source": "HABS TN-14 data p. 6; elevation; photographs of 1970 and 2021",
+    "confidence": "high"
+   }
+  },
+  "first_floor_windows": {
+   "type": {
+    "value": "sixteen-over-twelve double-hung sash, four lights wide, louvred shutters",
+    "source": "HABS TN-14 data p. 7; elevation",
+    "confidence": "high"
+   },
+   "sash_width": {
+    "as_drawn": "3'-1\" (scaled; no dimension string on the drawing)",
+    "value_ft": 3.1,
+    "value_m": 0.945,
+    "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.06,
+    "note": "plan symbol is 33 px = 2.99 ft"
+   },
+   "sash_height": {
+    "as_drawn": "5'-10\" (scaled; no dimension string on the drawing)",
+    "value_ft": 5.84,
+    "value_m": 1.779,
+    "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.06,
+    "px": [
+     807,
+     936
+    ]
+   },
+   "sill_above_floor": {
+    "as_drawn": "2'-9\" (scaled; no dimension string on the drawing)",
+    "value_ft": 2.76,
+    "value_m": 0.841,
+    "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.06,
+    "px": [
+     938,
+     999
+    ],
+    "note": "the 2021 photograph gives the same proportion (3.19 ft above the bottom of the siding against 3.21 ft drawn)"
+   },
+   "head_above_floor": {
+    "as_drawn": "8'-8\" (scaled; no dimension string on the drawing)",
+    "value_ft": 8.69,
+    "value_m": 2.648,
+    "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.06,
+    "px": [
+     807,
+     999
+    ]
+   },
+   "shutter_leaf_width": {
+    "as_drawn": "1'-5\" (scaled; no dimension string on the drawing)",
+    "value_ft": 1.4,
+    "value_m": 0.428,
+    "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+    "method": "scaled from scale bar",
+    "confidence": "low",
+    "tolerance_m": 0.06
+   },
+   "centres_from_door_axis_m": {
+    "note": "west is negative. Plan and elevation agree to 0.08 m in the library and 0.3 m in the parlor.",
+    "W1_library_west": {
+     "plan": -6.02,
+     "elevation": -6.04,
+     "recommended": -6.03,
+     "tolerance_m": 0.1,
+     "confidence": "medium"
+    },
+    "W2_library_east": {
+     "plan": -3.58,
+     "elevation": -3.5,
+     "recommended": -3.55,
+     "tolerance_m": 0.1,
+     "confidence": "medium"
+    },
+    "W3_parlor_west": {
+     "plan": 3.56,
+     "elevation": 3.45,
+     "recommended": 3.5,
+     "tolerance_m": 0.12,
+     "confidence": "medium"
+    },
+    "W4_parlor_east": {
+     "plan": 6.1,
+     "elevation": 5.82,
+     "recommended": 5.95,
+     "tolerance_m": 0.2,
+     "confidence": "low"
+    }
+   }
+  },
+  "second_floor_windows": {
+   "type": {
+    "value": "twelve-over-twelve double-hung sash",
+    "source": "HABS TN-14 data p. 7; elevation",
+    "confidence": "high"
+   },
+   "positions": "directly over the first-floor windows, plus one over the door",
+   "sill_above_first_floor": {
+    "as_drawn": "13'-3\" (scaled; no dimension string on the drawing)",
+    "value_ft": 13.26,
+    "value_m": 4.041,
+    "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.06,
+    "px": [
+     706,
+     999
+    ]
+   },
+   "head_above_first_floor": {
+    "as_drawn": "18'-3\" (scaled; no dimension string on the drawing)",
+    "value_ft": 18.28,
+    "value_m": 5.572,
+    "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.06,
+    "px": [
+     595,
+     999
+    ]
+   },
+   "sash_height": {
+    "as_drawn": "4'-11\" (scaled; no dimension string on the drawing)",
+    "value_ft": 4.93,
+    "value_m": 1.503,
+    "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.06,
+    "px": [
+     595,
+     704
+    ]
+   }
+  },
+  "corners_from_door_axis_m": {
+   "west": {
+    "plan": -7.91,
+    "elevation": -7.96
+   },
+   "east": {
+    "plan": 7.97,
+    "elevation": 7.67
+   }
+  },
+  "portico_as_surveyed_1970": {
+   "status": "A 1954 addition (HABS TN-14 data p. 2). Standing in 1970; ABSENT in the 2021 photograph, where the door has two stone steps and no porch.",
+   "width_over_columns": {
+    "as_drawn": "11'-9\" (scaled; no dimension string on the drawing)",
+    "value_ft": 11.76,
+    "value_m": 3.586,
+    "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.06,
+    "px": [
+     981,
+     1241
+    ],
+    "note": "plan: 128 px = 11.59 ft"
+   },
+   "depth_from_wall": {
+    "as_drawn": "6'-10\" (scaled; no dimension string on the drawing)",
+    "value_ft": 6.79,
+    "value_m": 2.071,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1,
+    "px": [
+     518,
+     593
+    ]
+   },
+   "columns": {
+    "value": "paired square posts at each front corner (four posts), about 6.5 in. square; pilasters at the wall; balustrade between the pairs",
+    "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png; HABS TN-14-1 (photograph, south front), originals/habs-tn-14/152679pu.tif",
+    "confidence": "medium"
+   },
+   "cornice_underside_above_floor": {
+    "as_drawn": "9'-7\" (scaled; no dimension string on the drawing)",
+    "value_ft": 9.59,
+    "value_m": 2.924,
+    "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.06,
+    "px": [
+     787,
+     999
+    ]
+   },
+   "pediment_apex_above_floor": {
+    "as_drawn": "12'-11\" (scaled; no dimension string on the drawing)",
+    "value_ft": 12.94,
+    "value_m": 3.944,
+    "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.06,
+    "px": [
+     713,
+     999
+    ]
+   },
+   "pediment_width": {
+    "as_drawn": "14'-0\" (scaled; no dimension string on the drawing)",
+    "value_ft": 13.98,
+    "value_m": 4.262,
+    "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.06,
+    "px": [
+     953,
+     1262
+    ]
+   },
+   "steps": {
+    "value": "two or three low risers drawn between porch floor and grade (about 1.2 ft in all)",
+    "confidence": "low"
+   }
+  },
+  "entrance_as_it_stands_2021": {
+   "value": "no porch; door with four-light transom in a plain casing; two stone steps; a vertical board seam in the siding just west of the door bay",
+   "source": "Carol M. Highsmith, 2021, LoC 2021756795 (held as ../archive/originals/house-color.jpg)",
+   "method": "seen on photograph",
+   "confidence": "high"
+  }
+ },
+ "library_room": {
+  "model_frame_walls_m": {
+   "west_inner_face_x": -7.68,
+   "east_inner_face_x": -1.62,
+   "south_inner_face_z": 2.91,
+   "north_inner_face_z": -2.88,
+   "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.1
+  },
+  "south_wall_windows": "two; see south_front.first_floor_windows (W1 and W2). West window centre 5.39 ft (1.64 m) from the west wall face, east window centre 6.43 ft (1.96 m) from the east wall face, 8.02 ft (2.44 m) between centres (plan).",
+  "west_wall": {
+   "windows": "none (plan and photograph TN-14-8)",
+   "fireplace_centre_z_m": {
+    "value_m": 0.1,
+    "note": "0.08 m south of the middle of the wall",
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.08
+   },
+   "chimney": {
+    "position": "outside the west gable wall; no chimney breast projects into the room (flush wall in photograph TN-14-8)",
+    "width_north_south": {
+     "as_drawn": "6'-10\" (scaled; no dimension string on the drawing)",
+     "value_ft": 6.79,
+     "value_m": 2.071,
+     "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+     "method": "scaled from scale bar",
+     "confidence": "medium",
+     "tolerance_m": 0.1,
+     "px": [
+      666,
+      741
+     ]
+    },
+    "projection_beyond_wall": {
+     "as_drawn": "2'-6\" (scaled; no dimension string on the drawing)",
+     "value_ft": 2.54,
+     "value_m": 0.773,
+     "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+     "method": "scaled from scale bar",
+     "confidence": "medium",
+     "tolerance_m": 0.1,
+     "px": [
+      1111,
+      1139
+     ]
+    },
+    "confidence": "medium"
+   },
+   "firebox_opening_width": {
+    "plan": {
+     "as_drawn": "3'-1\" (scaled; no dimension string on the drawing)",
+     "value_ft": 3.08,
+     "value_m": 0.939,
+     "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+     "method": "scaled from scale bar",
+     "confidence": "medium",
+     "tolerance_m": 0.1,
+     "px": [
+      686,
+      720
+     ],
+     "note": "between brick jambs at the wall line"
+    },
+    "photograph": {
+     "value": "0.41 of the ceiling height (1.19 m if the ceiling is 2.92 m); segmental-arched head, 0.28 of the ceiling height at the crown (0.82 m), 0.25 at the springing",
+     "source": "HABS TN-14-8 (photograph, southwest room looking west), originals/habs-tn-14/152686pu.tif",
+     "method": "counted from photograph",
+     "confidence": "medium"
+    }
+   },
+   "hearth_slab": {
+    "width": {
+     "as_drawn": "5'-9\" (scaled; no dimension string on the drawing)",
+     "value_ft": 5.75,
+     "value_m": 1.753,
+     "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+     "method": "scaled from scale bar",
+     "confidence": "medium",
+     "tolerance_m": 0.1,
+     "px": [
+      671.5,
+      735
+     ]
+    },
+    "depth_into_room": {
+     "as_drawn": "2'-3\" (scaled; no dimension string on the drawing)",
+     "value_ft": 2.26,
+     "value_m": 0.69,
+     "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+     "method": "scaled from scale bar",
+     "confidence": "medium",
+     "tolerance_m": 0.1,
+     "px": [
+      1078,
+      1103
+     ]
+    }
+   },
+   "mantel": {
+    "value": "not original: taken from a house in Franklin and installed in 1936. Shelf 0.87 of the ceiling height long (2.54 m at 2.92 m), top of shelf at 0.52 (1.53 m)",
+    "source": "HABS TN-14 data p. 2; HABS TN-14-8 (photograph, southwest room looking west), originals/habs-tn-14/152686pu.tif",
+    "method": "counted from photograph",
+    "confidence": "medium"
+   }
+  },
+  "east_wall_door_to_hall": {
+   "clear_width": {
+    "as_drawn": "3'-0\" (scaled; no dimension string on the drawing)",
+    "value_ft": 2.99,
+    "value_m": 0.911,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1,
+    "px": [
+     664,
+     697
+    ]
+   },
+   "south_jamb_z_m": 1.18,
+   "north_jamb_z_m": 0.27,
+   "south_jamb_from_south_wall": {
+    "as_drawn": "5'-8\" (scaled; no dimension string on the drawing)",
+    "value_ft": 5.66,
+    "value_m": 1.726,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1
+   },
+   "note": "the 1966 restoration moved an interior door; the 1812 room originally had no inside opening to the hall",
+   "confidence": "medium"
+  },
+  "north_wall_door_to_ell": {
+   "clear_width": {
+    "as_drawn": "3'-3\" (scaled; no dimension string on the drawing)",
+    "value_ft": 3.26,
+    "value_m": 0.994,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1,
+    "px": [
+     993,
+     1029
+    ]
+   },
+   "east_jamb_x_m": -4.65,
+   "west_jamb_x_m": -5.65,
+   "east_jamb_from_east_wall": {
+    "as_drawn": "10'-0\" (scaled; no dimension string on the drawing)",
+    "value_ft": 9.96,
+    "value_m": 3.037,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1
+   },
+   "west_jamb_from_west_wall": {
+    "as_drawn": "6'-8\" (scaled; no dimension string on the drawing)",
+    "value_ft": 6.66,
+    "value_m": 2.029,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1
+   },
+   "note": "six-panel door, seen in photograph TN-14-8 near the north-west corner; opens to the ell's lower hall",
+   "confidence": "medium"
+  },
+  "finishes_1970": {
+   "value": "plaster walls and ceiling, no cornice; chair rail with a flat painted dado (top at 0.25 of the ceiling height, about 0.73 m); dark baseboard; white ash floor boards running east-west",
+   "source": "HABS TN-14-8 (photograph, southwest room looking west), originals/habs-tn-14/152686pu.tif; HABS TN-14 data p. 7",
+   "method": "seen on photograph",
+   "confidence": "medium"
+  }
+ },
+ "stair": {
+  "type": {
+   "value": "quarter-turn stair with winders in the entry hall",
+   "source": "HABS TN-14 data p. 7",
+   "confidence": "high"
+  },
+  "position": "against the west (library) partition of the entry hall, rising northward from just north of the library door, turning east on winders in the north-west corner of the hall; a soffit crosses above the rear door (photograph TN-14-6)",
+  "width": {
+   "as_drawn": "3'-5\" (scaled; no dimension string on the drawing)",
+   "value_ft": 3.44,
+   "value_m": 1.049,
+   "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.1,
+   "px": [
+    838,
+    876
+   ]
+  },
+  "x_range_m": [
+   -1.42,
+   -0.37
+  ],
+  "first_riser_z_m": {
+   "value_m": 0.03,
+   "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.08
+  },
+  "straight_run": {
+   "treads": 8,
+   "tread_depth": {
+    "as_drawn": "0'-9\" (scaled; no dimension string on the drawing)",
+    "value_ft": 0.76,
+    "value_m": 0.231,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.02
+   },
+   "ends_at_z_m": -1.82,
+   "note": "nine riser lines at 8.4 px; the photograph shows about ten risers before the turn"
+  },
+  "winders": {
+   "value": "three or four, between z = -1.82 and the north wall",
+   "confidence": "low"
+  },
+  "total_rise": "not given; equals floor to floor (estimated 3.2 m, 16-17 risers of about 7.5 in.)",
+  "reconstructed": "the stairway was reconstructed in the 1966 restoration (HABS TN-14 data p. 3)"
+ },
+ "other_openings_main_block": {
+  "hall_to_parlor_opening": {
+   "width": {
+    "as_drawn": "3'-4\" (scaled; no dimension string on the drawing)",
+    "value_ft": 3.35,
+    "value_m": 1.022,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1,
+    "px": [
+     690,
+     727
+    ]
+   },
+   "z_range_m": [
+    -0.56,
+    0.46
+   ]
+  },
+  "rear_hall_door": {
+   "width": {
+    "as_drawn": "3'-3\" (scaled; no dimension string on the drawing)",
+    "value_ft": 3.26,
+    "value_m": 0.994,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1,
+    "px": [
+     794,
+     830
+    ]
+   },
+   "centre_x_m": 0.35
+  },
+  "parlor_north_windows": {
+   "centres_x_m": [
+    3.56,
+    6.07
+   ],
+   "note": "two, opposite the south windows"
+  }
+ },
+ "chimneys": {
+  "count": {
+   "value": "six brick chimneys on the whole house; two on the main block, one outside each gable",
+   "source": "HABS TN-14 data p. 6; plan; elevation",
+   "confidence": "high"
+  },
+  "west_library": {
+   "centre_z_m": 0.09,
+   "width": {
+    "as_drawn": "6'-10\" (scaled; no dimension string on the drawing)",
+    "value_ft": 6.79,
+    "value_m": 2.071,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1
+   },
+   "projection": {
+    "as_drawn": "2'-6\" (scaled; no dimension string on the drawing)",
+    "value_ft": 2.54,
+    "value_m": 0.773,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1
+   }
+  },
+  "east_parlor": {
+   "centre_z_m": 0.05,
+   "width": {
+    "as_drawn": "6'-8\" (scaled; no dimension string on the drawing)",
+    "value_ft": 6.7,
+    "value_m": 2.043,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1
+   },
+   "projection": {
+    "as_drawn": "2'-6\" (scaled; no dimension string on the drawing)",
+    "value_ft": 2.54,
+    "value_m": 0.773,
+    "source": "HABS TN-14 data p. 8 (first-floor plan), sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+    "method": "scaled from scale bar",
+    "confidence": "medium",
+    "tolerance_m": 0.1
+   },
+   "note": "drawn with shoulders; larger hearth"
+  },
+  "top_above_ridge": {
+   "as_drawn": "4'-0\" (scaled; no dimension string on the drawing)",
+   "value_ft": 3.98,
+   "value_m": 1.214,
+   "source": "HABS TN-14 data p. 9 (south elevation), sheets/habs-tn-14-p09-south-elevation.png",
+   "method": "scaled from scale bar",
+   "confidence": "medium",
+   "tolerance_m": 0.06
+  }
+ },
+ "conflicts": [
+  {
+   "topic": "Portico",
+   "a": "1970 survey: pedimented portico with paired posts (built 1954)",
+   "b": "2021 photograph: no portico, stone steps only",
+   "follow": "b, unless the model is declared to be the house as surveyed in 1970",
+   "why": "HABS itself dates the porch to 1954; it is neither Overton's nor present today."
+  },
+  {
+   "topic": "Plan against elevation, horizontal",
+   "a": "plan front 52.08 ft",
+   "b": "elevation front 51.27 ft",
+   "follow": "plan for wall positions and overall size, elevation for heights and for opening sizes",
+   "why": "the plan agrees with the HABS text (52 x 107 ft) within 1 %; the elevation is drawn at twice the scale but is 1.5 % short across the front."
+  },
+  {
+   "topic": "Door axis",
+   "a": "plan: on the centre of the front",
+   "b": "elevation: 0.14 m west of centre",
+   "follow": "keep x = 0 on the door and take everything from it",
+   "why": "the difference is inside the tolerance of both drawings."
+  },
+  {
+   "topic": "State drawn",
+   "a": "plan 'reflects the building's appearance before the 1969 restoration'",
+   "b": "elevation 'drawn after the 1969 restoration'",
+   "follow": "both for the Federal block",
+   "why": "the 1969 work was to the brick ell; the Federal block had been restored in 1966. Do not use the plan for the ell's present interior."
+  },
+  {
+   "topic": "Which way the house faces",
+   "a": "HABS: 'the house faces south'",
+   "b": "orthophoto: the front faces true azimuth 238 degrees (south-west by west)",
+   "follow": "b for sun and shadow; keep the nominal names for rooms and walls",
+   "why": "measured on georeferenced imagery and matched by OpenStreetMap."
+  }
+ ],
+ "grounds": {
+  "state_recorded": "as the site stands (orthophoto of early 2023, leaf-off), with what the 1970 survey and other texts add. No measured site plan was found; HABS TN-14 has none.",
+  "frame": "offsets in metres from the south door threshold: x = nominal east (+) / west (-), z = nominal south (+, out from the front) / north (-). Add 3.12 to z to get the model's z. True north is toward (x -0.845, z -0.534).",
+  "position_source": "Metro Nashville 2023 orthophoto (6 in. GSD), viewed through maps.nashville.gov; not held (copyright Metro GIS / Pictometry). Outlines cross-checked against OpenStreetMap. Base image held for reference: originals/usgs-naip/naip-travellers-rest-300m.tif (public domain, 0.6 m).",
+  "default_tolerance_m": 3.0,
+  "crops": [
+   "crops/site-grounds-schematic.png",
+   "crops/site-grounds-annotated.jpg",
+   "crops/site-house-surroundings-annotated.jpg"
+  ],
+  "site": {
+   "area": "about nine acres, a slender triangle",
+   "bounds": "railroad (CSX yard) to the nominal west, about 66 m from the door axis and parallel to the ell; a large paved lot to the nominal north beyond z -75; houses to the nominal east and south-east",
+   "source": "The Cultural Landscape Foundation, 'Travellers Rest Historic House Museum' (https://www.tclf.org/travellers-rest-historic-house-museum); orthophoto",
+   "confidence": "medium"
+  },
+  "south_approach": {
+   "front_lawn": {
+    "value": "open grass from the front wall to the carriage drive, about 12 m deep on the door axis",
+    "confidence": "low"
+   },
+   "carriage_drive_oval": {
+    "value": "remnant of a circular carriage drive round a grassy oval: north arc crosses the door axis at z = +12, the loop is about 36 m wide (x -18 to +18) and reaches to about z +45-50; earth track about 3 m wide; the southern half is faint",
+    "confidence": "low",
+    "source": "Metro Nashville 2023 orthophoto (6 in. GSD), viewed through maps.nashville.gov; not held (copyright Metro GIS / Pictometry); described by TCLF as 'the remnants of an historic circular carriage drive set around a grassy oval and shaded by large magnolia trees'"
+   },
+   "path_to_door_2021": {
+    "value": "an earth path with a brick edging comes to the stone steps from the nominal south-east",
+    "source": "Carol M. Highsmith, 2021, LoC 2021756795 (held as ../archive/originals/house-color.jpg)",
+    "confidence": "medium"
+   },
+   "foundation_planting_1970": {
+    "value": "clipped boxwood-like shrubs massed either side of the portico and along the front; brick-paved landing with two brick steps in front of the portico",
+    "source": "HABS TN-14-1 (photograph, south front), originals/habs-tn-14/152679pu.tif and TN-14-2",
+    "confidence": "medium",
+    "note": "not present in the 2021 photograph"
+   },
+   "fence_and_gate": {
+    "value": "white rail fence across the lawn at z = +62, from x -20 to x +62, with a gate on the door axis; open meadow and the modern buildings and parking beyond",
+    "confidence": "low"
+   }
+  },
+  "trees": {
+   "note": "Positions and crown spreads of evergreen crowns visible leaf-off. Species were NOT identified tree by tree; texts name large southern magnolias round the drive and old ginkgos among the largest trees on the property. Deciduous trees are recorded only as masses.",
+   "evergreen_crowns": [
+    {
+     "id": "T1",
+     "x": -14,
+     "z": 4,
+     "crown_m": 13,
+     "note": "off the south-west corner, in front of and west of the library windows; magnolia by description"
+    },
+    {
+     "id": "T2",
+     "x": 17,
+     "z": 4,
+     "crown_m": 16,
+     "note": "off the south-east corner; one or two trees"
+    },
+    {
+     "id": "T3",
+     "x": 12.5,
+     "z": -13.5,
+     "crown_m": 12,
+     "note": "in the angle east of the gallery"
+    },
+    {
+     "id": "T4",
+     "x": 6,
+     "z": 31.5,
+     "crown_m": 9,
+     "note": "inside the oval"
+    },
+    {
+     "id": "T5",
+     "x": -5.5,
+     "z": 32.5,
+     "crown_m": 6,
+     "note": "inside the oval"
+    },
+    {
+     "id": "T6",
+     "x": 19.5,
+     "z": 41,
+     "crown_m": 10,
+     "note": "grey-blue conifer"
+    },
+    {
+     "id": "T7",
+     "x": 40,
+     "z": 25.5,
+     "crown_m": 10
+    },
+    {
+     "id": "T8",
+     "x": 6,
+     "z": 57,
+     "crown_m": 8
+    },
+    {
+     "id": "T9",
+     "x": -5,
+     "z": 73,
+     "crown_m": 9
+    }
+   ],
+   "deciduous_masses": [
+    "dense belt between the house and the railroad, x -60 to -15, the whole length of the site",
+    "large crowns inside and round the oval, x -10 to +10, z +15 to +50",
+    "scattered large trees east of the formal garden and along the service lane, x +40 to +62"
+   ],
+   "species_from_texts": [
+    {
+     "species": "southern magnolia (Magnolia grandiflora)",
+     "evidence": "TCLF: carriage drive 'shaded by large magnolia trees'; the museum's venue description: 'large magnolia trees'",
+     "position": "round the carriage oval and by the house; not tied to individual crowns"
+    },
+    {
+     "species": "ginkgo (Ginkgo biloba)",
+     "evidence": "museum blog 'Fall Colors and Ginkgos' (https://www.historictravellersrest.org/post/fall-colors-and-ginkgos): old ginkgos 'among the largest trees that we have on property'",
+     "position": "not established"
+    },
+    {
+     "species": "peach and apple orchards, a nursery (historic, gone)",
+     "evidence": "NRHP nomination 1969: the farm 'was famous for its nursery and orchards'; the peach orchard was fought over in December 1864",
+     "position": "off the present site"
+    }
+   ],
+   "confidence": "low"
+  },
+  "gardens": [
+   {
+    "name": "formal garden",
+    "x_range": [
+     25,
+     38
+    ],
+    "z_range": [
+     -23,
+     3.5
+    ],
+    "layout": "long axis parallel to the ell; an oval lawn about 6 x 19 m (x 28.5-34.5, z -19.75 to -0.5) inside a dense evergreen hedge and shrub border about 13 x 26.5 m; entered from the west at z about -10.5 by a short cross walk; it lies EAST of the house beside the gallery, not in front of the south door",
+    "source": "Metro Nashville 2023 orthophoto (6 in. GSD), viewed through maps.nashville.gov; not held (copyright Metro GIS / Pictometry); OSM way 534662357; TCLF ('a small formal garden lined by symmetrical hedgerows')",
+    "confidence": "low"
+   },
+   {
+    "name": "kitchen / herb garden",
+    "x_range": [
+     -34,
+     -15
+    ],
+    "z_range": [
+     -39.5,
+     -29.5
+    ],
+    "layout": "fenced rectangle of raised beds north-west of the 1887 addition, beside the weaving house",
+    "source": "Metro Nashville 2023 orthophoto (6 in. GSD), viewed through maps.nashville.gov; not held (copyright Metro GIS / Pictometry); OSM way 534662356; TCLF ('Weaving house ... and adjoining garden')",
+    "confidence": "low"
+   }
+  ],
+  "walks_and_drives": [
+   {
+    "name": "east walk",
+    "value": "earth walk running north-south at x +17 to +20 from z +10 to z -25, between the house trees and the formal garden; two benches at (21, -18.5) and (21, -22)",
+    "confidence": "low"
+   },
+   {
+    "name": "service lane",
+    "value": "gravel lane along the east boundary at x +62 to +66, from the parking area (z +115) to the barn (z -45)",
+    "confidence": "low"
+   },
+   {
+    "name": "entrance",
+    "value": "visitors arrive from Farrell Parkway at the nominal south-east; parking at z +100 to +115",
+    "confidence": "low"
+   }
+  ],
+  "outbuildings": [
+   {
+    "name": "weaving house (Uncle Claiborne's cabin / weaver's house)",
+    "x_range": [
+     -25,
+     -19
+    ],
+    "z_range": [
+     -47.5,
+     -40.5
+    ],
+    "size_m": [
+     6.3,
+     7.1
+    ],
+    "description": "two-storey handmade brick on stone, common bond, about 1820; off-centre front porch; chimney on one end",
+    "identified_by": "TCLF places the weaving house north of the house with the garden adjoining; OSM way 678286337",
+    "confidence": "medium"
+   },
+   {
+    "name": "smokehouse",
+    "x_range": [
+     -8,
+     -2
+    ],
+    "z_range": [
+     -52,
+     -46
+    ],
+    "size_m": [
+     5.7,
+     7.4
+    ],
+    "description": "single-storey handmade brick on stone, gable roof with deep eaves, door in the gable end (photograph TN-14-11)",
+    "identified_by": "elimination: HABS puts the smokehouse and the slave house both on the north side; OSM way 678286331",
+    "confidence": "low"
+   },
+   {
+    "name": "law office (reconstruction of the 1950s)",
+    "x_range": [
+     33,
+     40.5
+    ],
+    "z_range": [
+     56.5,
+     62.5
+    ],
+    "size_m": [
+     8.3,
+     7.2
+    ],
+    "description": "one-storey brick, shingle roof, centre door between 9/9 windows, porch three-quarters of the front on four square posts (NRHP continuation sheet)",
+    "identified_by": "HABS: 'brick law office on the south side'; NRHP: 'adjacent to the main front driveway'; the only small building there (OSM way 678286329)",
+    "confidence": "low"
+   },
+   {
+    "name": "barn / visitor building (modern)",
+    "x_range": [
+     30,
+     58
+    ],
+    "z_range": [
+     -65.5,
+     -46.5
+    ],
+    "confidence": "low"
+   },
+   {
+    "name": "education / office building (modern)",
+    "x_range": [
+     40,
+     58
+    ],
+    "z_range": [
+     72.5,
+     99.5
+    ],
+    "confidence": "low"
+   }
+  ],
+  "cemetery": {
+   "value": "No family cemetery is shown or described on the present site in any source read. The house stands on a Mississippian village and burial ground (site 40DV11); Native graves lie under the grounds.",
+   "confidence": "medium",
+   "source": "museum pages on the first residents and on cultural resources; Tennessee Council for Professional Archaeology, 12 Sept 2022"
+  },
+  "lost_features": [
+   "a semi-detached kitchen, probably a storey and a half, sought by excavation in 1988 under the 1820s and 1887 wings (museum 'Cultural Resources' page)",
+   "carriage house and more slave cabins built in the 1820s (HABS TN-14 data p. 1); positions unknown",
+   "ground-penetrating radar (New South Associates, about 2022) mapped 22 historic anomalies (drives, walks, walls, building foundations); the map itself was not obtained"
+  ],
+  "terrain": {
+   "value": "the house stands on a rise ('the site's incline', TCLF); the elevation shows grade about 0.1 m higher at the door than at the corners. Metro Nashville publishes 2 ft contours (maps.nashville.gov Topographic/Contours) that were not read in this pass.",
+   "confidence": "low"
+  }
+ },
+ "sources": [
+  {
+   "id": "habs-tn-14",
+   "title": "Traveller's Rest, Farrell Parkway, Nashville, Davidson County, TN (Judge John Overton House), HABS TN-14",
+   "repository": "Library of Congress, Prints and Photographs Division",
+   "identifier": "HABS TENN,19-NASH,11- ; control no. tn0036",
+   "url": "https://www.loc.gov/item/tn0036/",
+   "date": "recorded summer 1970; data pages 1970-1971",
+   "shows": "11 photographs by Jack E. Boucher (5 exterior, 6 interior), 10 data pages, 1 caption page. NO measured-drawing sheets. Data p. 8 is a traced first-floor plan and p. 9 a traced south elevation, each with a graphic scale and no dimensions. Text gives overall size (approx. 52 x 107 ft), materials, window lights, stair type, outbuildings and the restoration history.",
+   "rights": "No known restrictions on images made by the U.S. Government (https://www.loc.gov/rr/print/res/114_habs.html)",
+   "downloaded": true,
+   "held_as": "originals/habs-tn-14/ (data PDF, caption PDF, eleven 5000 px TIFFs)"
+  },
+  {
+   "id": "habs-fn-24",
+   "title": "HABS TN-14 field records FN-24: architects' reports of 1966 (Warterfield) and 1969 (Brush)",
+   "repository": "Library of Congress, Prints and Photographs Division",
+   "identifier": "FN-24 (unprocessed field note material)",
+   "url": "https://www.loc.gov/item/tn0036/",
+   "date": "1966, 1969-1970",
+   "shows": "the restoration architects' reports named as 'supplemental material' in the data pages",
+   "rights": "not stated; not digitised",
+   "downloaded": false,
+   "note": "must be requested from the Prints and Photographs reading room"
+  },
+  {
+   "id": "warterfield-1966",
+   "title": "Warterfield and Bass, Architects, 'Architectural Restoration of John Overton's Home, Traveller's Rest, Nashville, Tennessee', working drawings, Project No. 6605, June 1966, 17 sheets",
+   "repository": "not located online. Cited in HABS TN-14 data p. 4. Likely holders: Travellers Rest Historic House Museum / NSCDA in Tennessee; Nashville Public Library Special Collections holds 'Charles W. Warterfield, Jr. Architectural Slides, 1957-1998' (https://catalog.library.nashville.gov/Record/CARL0000466372, record seen in search results only).",
+   "identifier": "Project No. 6605",
+   "url": null,
+   "date": "1966-06",
+   "shows": "the dimensioned plans, elevations, sections and details of the Federal block as restored: the source that would settle every value in this file",
+   "rights": "private architectural records; unknown",
+   "downloaded": false
+  },
+  {
+   "id": "brush-1969",
+   "title": "Brush, Hutchison & Gwinn, Architects, 'Restoration of 1828 Addition, Travellers' Rest', working drawings, 29 May 1969; Stephens Millwork & Lumber Co. shop drawings for doors, mantels and stairway, Aug.-Oct. 1969",
+   "repository": "not located online. Cited in HABS TN-14 data p. 4; the HABS plan and elevation were traced from these.",
+   "identifier": null,
+   "url": null,
+   "date": "1969",
+   "shows": "the brick ell as restored, and the south elevation after 1969",
+   "rights": "unknown",
+   "downloaded": false
+  },
+  {
+   "id": "nrhp-1969",
+   "title": "National Register of Historic Places Inventory - Nomination Form: Traveller's Rest (prepared by May Dean Coop, 23 July 1969; listed 30 Dec 1969)",
+   "repository": "National Archives (RG 79, NRHP and NHL Program Records: Tennessee)",
+   "identifier": "NRHP ref. 69000179; NAID 135818189",
+   "url": "https://catalog.archives.gov/id/135818189",
+   "date": "1969 (with later continuation sheets)",
+   "shows": "23-page file: forms, description of the house and of the law office, weaver's house and smokehouse, 1969 photographs, two USGS quadrangle extracts. No site plan and no floor plan.",
+   "rights": "NARA: 'Restricted - Possibly' (some material may be under copyright)",
+   "downloaded": false,
+   "note": "read from a temporary copy outside the project and discarded; facts only are recorded here"
+  },
+  {
+   "id": "nrhp-2018",
+   "title": "Travellers Rest, National Register additional documentation, 2018 (MTSU Center for Historic Preservation: Susan Knowles with Kate Hatfield)",
+   "repository": "National Park Service / Tennessee Historical Commission; not found online",
+   "identifier": "NRHP ref. 69000179 (additional documentation)",
+   "url": "https://www.katehatfield.net/travellers-rest",
+   "date": "2017-2018",
+   "shows": "by the preparer's account, 'new floor plans and maps of the property' and a detailed architectural history: the best modern drawn record, to be requested from the Tennessee Historical Commission or the museum",
+   "rights": "unknown",
+   "downloaded": false
+  },
+  {
+   "id": "museum",
+   "title": "Travellers Rest Historic House Museum website",
+   "repository": "Travellers Rest Historic House Museum, Inc.",
+   "identifier": null,
+   "url": "https://www.historictravellersrest.org/",
+   "date": "read 2026-11-12",
+   "shows": "history pages and blog; no floor plan or site map is published. Used for trees (ginkgos) and archaeology.",
+   "rights": "copyright the museum; linked only",
+   "downloaded": false
+  },
+  {
+   "id": "tclf",
+   "title": "Travellers Rest Historic House Museum (What's Out There landscape entry)",
+   "repository": "The Cultural Landscape Foundation",
+   "identifier": null,
+   "url": "https://www.tclf.org/travellers-rest-historic-house-museum",
+   "date": "2019",
+   "shows": "prose description of the present nine-acre landscape: carriage oval, magnolias, formal garden, law office, weaving house and garden",
+   "rights": "copyright TCLF; linked only",
+   "downloaded": false
+  },
+  {
+   "id": "metro-ortho-2023",
+   "title": "Metro Nashville orthoimagery 2023 (6 in. GSD), also 1996-2026 series and 2 ft contours",
+   "repository": "Metropolitan Government of Nashville and Davidson County, Metro GIS",
+   "identifier": "Imagery/2023Imagery_WGS84",
+   "url": "https://maps.nashville.gov/arcgis/rest/services/Imagery/2023Imagery_WGS84/MapServer?f=pjson",
+   "date": "early 2023",
+   "shows": "house, outbuildings, gardens, drives and tree crowns at 0.15 m; used to measure the orientation and every grounds offset",
+   "rights": "copyright text 'Metro GIS; Pictometry International'; not clearly reusable",
+   "downloaded": false,
+   "note": "viewed from a temporary copy and discarded"
+  },
+  {
+   "id": "usgs-naip-2021",
+   "title": "USDA NAIP orthoimage, tile m_3608658_ne_16_060_20211203",
+   "repository": "USGS, The National Map",
+   "identifier": "m_3608658_ne_16_060_20211203",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer",
+   "date": "2021-12-03",
+   "shows": "the whole site at 0.6 m; the reusable base for the grounds sheets",
+   "rights": "public domain (U.S. Government work)",
+   "downloaded": true,
+   "held_as": "originals/usgs-naip/naip-travellers-rest-300m.tif"
+  },
+  {
+   "id": "osm",
+   "title": "OpenStreetMap: site outline, building outlines, gardens and paths at Travellers Rest",
+   "repository": "OpenStreetMap",
+   "identifier": "ways 534662354-534662359, 678286329-678286446",
+   "url": "https://www.openstreetmap.org/way/534662358",
+   "date": "2026-11-12",
+   "shows": "traced outlines used as a cross-check on sizes and orientation",
+   "rights": "ODbL 1.0, attribution required",
+   "downloaded": true,
+   "held_as": "originals/osm/osm-travellers-rest-site.json"
+  },
+  {
+   "id": "highsmith-2021",
+   "title": "Carol M. Highsmith, photograph of Travellers Rest, 2021",
+   "repository": "Library of Congress",
+   "identifier": "2021756795",
+   "url": "https://www.loc.gov/item/2021756795/",
+   "date": "2021",
+   "shows": "the south front as it stands: no portico, board seam at the 1812 addition",
+   "rights": "public domain (Highsmith Archive)",
+   "downloaded": false,
+   "note": "already held by the archive workstream as ../archive/originals/house-color.jpg"
+  },
+  {
+   "id": "seale",
+   "title": "William Seale Papers (historic interiors research, includes Travellers Rest, with floor plans)",
+   "repository": "Winterthur Library",
+   "identifier": "Col. 1006",
+   "url": "http://findingaid.winterthur.org/html/HTML_Finding_Aids/COL1006.htm",
+   "date": "1990s",
+   "shows": "research for the mid-1990s interior restoration; floor plans listed in the finding aid",
+   "rights": "unknown; not digitised",
+   "downloaded": false
+  },
+  {
+   "id": "gpr-2022",
+   "title": "Using Ground-Penetrating Radar Results at Travellers Rest to Manage and Interpret the Archaeological Site",
+   "repository": "Tennessee Council for Professional Archaeology (survey by New South Associates)",
+   "identifier": null,
+   "url": "https://tennesseearchaeologycouncil.wordpress.com/2022/09/12/using-ground-penetrating-radar-results-at-travellers-rest-to-manage-and-interpret-the-archaeological-site",
+   "date": "2022-09-12",
+   "shows": "four-acre GPR survey; 22 historic anomalies including drives, walks, walls and building foundations; map figures on the page",
+   "rights": "copyright the authors; linked only",
+   "downloaded": false
+  },
+  {
+   "id": "tsla-claybrooke",
+   "title": "Claybrooke and Overton Papers: records and accounts for the building of Travellers' Rest, including the articles of agreement of 7 November 1799 with the carpenters David Cumming and Frederick Pinkley",
+   "repository": "Tennessee State Library and Archives (Tennessee Historical Society collection)",
+   "identifier": "Ac. No. 14",
+   "url": null,
+   "date": "1798-1830s",
+   "shows": "building accounts, not drawings ('No plans or drawings of any kind have been located', HABS TN-14 data p. 2)",
+   "rights": "not digitised",
+   "downloaded": false
+  },
+  {
+   "id": "swint",
+   "title": "Henry L. Swint, 'Travellers' Rest: Home of Judge John Overton', Tennessee Historical Quarterly XXVI (1967), 119-135; reprinted in More Landmarks of Tennessee History (1969), 327-346",
+   "repository": "Tennessee Historical Society",
+   "identifier": null,
+   "url": null,
+   "date": "1967",
+   "shows": "the standard building history, with photographs of the restored front, hall and parlor; not read in this pass",
+   "rights": "in copyright",
+   "downloaded": false
+  }
+ ],
+ "model_comparison": {
+  "model_values_from": [
+   "docs/WORLD_ENGINE.md (Conventions)",
+   "components/estate/world/engine/room.ts (ROOM)",
+   "assets/travellers-rest/anchors-v2.json",
+   "assets/travellers-rest/estate.py",
+   "assets/travellers-rest/build.py",
+   "components/estate/world/engine/engine.ts (sun)"
+  ],
+  "verdict": {
+   "library_is_the_right_room": true,
+   "right_side_of_hall": true,
+   "right_shape": "yes: 6.05 x 5.80 m surveyed against 6.155 x 5.86 m modelled, inside the reading tolerance",
+   "hearth_on_the_right_wall": "yes, the west wall, centred within 0.1 m; but the chimney is outside the wall and there is no chimney breast in the room"
+  },
+  "rows": [
+   {
+    "rank": 1,
+    "item": "Library north door (to the ell)",
+    "model": "x -3.23 to -2.05 (room.ts architecture(): d0, d1)",
+    "survey": "x -5.65 to -4.65",
+    "difference_m": -2.51,
+    "change": "d0 = -5.65, d1 = -4.65. ROOM.chest (x -5.15 to -3.85) then stands in the doorway: move it to about x -3.60 to -2.30 and move anchors drawer.correspondence, drawer.campaign and camera.drawers by +1.55 in x.",
+    "confidence": "medium"
+   },
+   {
+    "rank": 2,
+    "item": "Library door from the hall",
+    "model": "ROOM.door z0 1.13, z1 2.41 (1.28 m wide)",
+    "survey": "z 0.27 to 1.18 (0.91 m wide)",
+    "difference_m": -1.05,
+    "change": "ROOM.door = { z0: 0.27, z1: 1.18 }; estate.py partition segments, lintel, surround and architrave to match; anchors door.library and camera.library z 1.76 -> 0.72.",
+    "confidence": "medium"
+   },
+   {
+    "rank": 3,
+    "item": "Stair",
+    "model": "16 straight risers along x -1.42 to -0.40 from z +0.97 to -2.63 (estate.py)",
+    "survey": "same strip (x -1.42 to -0.37); first riser at z +0.03; 8 treads of 0.226 m to z -1.82; then winders turning east in the north-west corner",
+    "difference_m": -0.94,
+    "change": "start the flight 0.94 m further north, 9 risers straight, 3-4 winders, continue east over the rear door.",
+    "confidence": "medium"
+   },
+   {
+    "rank": 4,
+    "item": "Library windows: sash pattern",
+    "model": "six-over-six (room.ts), three lights wide",
+    "survey": "sixteen-over-twelve, four lights wide, seven rows",
+    "change": "upper sash 4 x 4, lower sash 4 x 3, meeting rail four-sevenths down.",
+    "confidence": "high"
+   },
+   {
+    "rank": 5,
+    "item": "Library windows: centres",
+    "model": "ROOM.windows [-6.26, -3.82]",
+    "survey": "[-6.03, -3.55]",
+    "difference_m": 0.25,
+    "change": "ROOM.windows = [-6.03, -3.55]; build.py front_window x -6.3/-3.77/3.77/6.3 -> -6.03/-3.55/3.50/5.95.",
+    "confidence": "medium"
+   },
+   {
+    "rank": 6,
+    "item": "Library windows: size",
+    "model": "width 1.06 (windowHalf 0.53), sill 1.36, head 3.02; exterior build.py 1.03 wide, 1.25 to 2.89",
+    "survey": "sash 0.945 wide; sill 0.84 and head 2.65 above the floor = y 1.37 and 3.18",
+    "difference_m": 0.16,
+    "change": "windowHalf 0.47; sill 1.37; head 3.18. Exterior first-floor windows: centre z 2.275, h 1.81, w 0.945.",
+    "confidence": "medium"
+   },
+   {
+    "rank": 7,
+    "item": "Chimney breast and firebox",
+    "model": "breast projects 0.29 m (x -7.47), 2.54 m wide; firebox 1.24 wide, 1.13 high, flat head",
+    "survey": "no breast: west wall flush, chimney outside (2.07 m wide, 0.77 m out); firebox about 1.19 wide, 0.82 high at the crown of a segmental arch",
+    "change": "set breast to ROOM.west; arch the opening and lower its top from y 1.66 to about 1.35.",
+    "confidence": "medium"
+   },
+   {
+    "rank": 8,
+    "item": "Library ceiling",
+    "model": "3.19 m above the floor (ROOM.ceil 3.72)",
+    "survey": "not given; 2.92 +/- 0.15 by three estimates; lower bound 2.65",
+    "difference_m": -0.27,
+    "change": "ROOM.ceil 3.45 (provisional, low confidence); hall ceiling and upper landing follow.",
+    "confidence": "low"
+   },
+   {
+    "rank": 9,
+    "item": "Portico",
+    "model": "pedimented porch and three steps, z 3.1 to 5.3",
+    "survey": "1970: 3.59 m wide, 2.07 m deep, cornice 2.92 and apex 3.94 above the floor, paired posts. A 1954 addition, absent in 2021 (two stone steps).",
+    "change": "owner's decision: remove it for the house as Overton knew it or as it stands; if kept as the 1970 survey, widen the pediment to 4.26 m and pair the front posts.",
+    "confidence": "high"
+   },
+   {
+    "rank": 10,
+    "item": "Entry hall width",
+    "model": "3.14 m between faces (-1.475 to +1.665)",
+    "survey": "3.40 m (-1.42 to +1.97)",
+    "difference_m": 0.26,
+    "change": "estate.py: Hall east wall x 1.73 -> 2.04 (the east face moves 0.31 m); floor and ceiling 3.27 -> 3.58 wide, centre x 0.07 -> 0.22; table.map and the Jackson panel move east with the wall.",
+    "confidence": "medium"
+   },
+   {
+    "rank": 11,
+    "item": "Eave, roof and chimneys (exterior)",
+    "model": "wall top 6.98; ridge 8.84; pitch 29 deg; chimneys to 9.33, 1.42 m wide",
+    "survey": "eave 6.81; ridge 8.87; pitch about 33 deg; chimney tops 10.09; chimney 2.07 m wide at the base, 0.77 m proud of the gable",
+    "difference_m": -0.17,
+    "change": "Federal block height 6.52 -> 6.35; roof rise 1.85 -> 2.07; chimneys +0.76 m and wider.",
+    "confidence": "medium"
+   },
+   {
+    "rank": 12,
+    "item": "Ell and 1887 addition (exterior massing)",
+    "model": "ell 20.4 m long, addition 5.7 m, gallery 3.28 m wide on the east only",
+    "survey": "ell 17.67 m, addition 8.53 x 7.35 m set 1.9 m east of the ell, gallery 4.25 m wide and returning along the north of the main block",
+    "change": "move the joint 2.7 m south; add the gallery return.",
+    "confidence": "low"
+   },
+   {
+    "rank": 13,
+    "item": "Library finishes",
+    "model": "panelled dado, crown moulding",
+    "survey": "flat painted dado under a chair rail at about 0.73 m, no cornice (1970 photograph)",
+    "change": "drop the raised fields and the crown() calls for the library.",
+    "confidence": "medium"
+   },
+   {
+    "rank": 14,
+    "item": "South door leaf",
+    "model": "1.16 wide, 2.34 high",
+    "survey": "1.09 wide, 2.08 high; frame with transom 2.58",
+    "difference_m": -0.26,
+    "change": "leaf 2.08 high, transom glass 0.36.",
+    "confidence": "medium"
+   }
+  ],
+  "confirmed_no_change": [
+   {
+    "item": "House width",
+    "model": 15.85,
+    "survey": 15.87
+   },
+   {
+    "item": "House depth",
+    "model": 6.2,
+    "survey": 6.24
+   },
+   {
+    "item": "Library east-west",
+    "model": 6.155,
+    "survey": 6.05,
+    "note": "inside tolerance"
+   },
+   {
+    "item": "Library north-south",
+    "model": 5.86,
+    "survey": 5.8
+   },
+   {
+    "item": "First floor above grade",
+    "model": 0.53,
+    "survey": 0.51
+   },
+   {
+    "item": "Window sill above floor",
+    "model": 0.83,
+    "survey": 0.84
+   },
+   {
+    "item": "Hearth wall and centre",
+    "model": "west wall, z 0",
+    "survey": "west wall, z +0.10"
+   },
+   {
+    "item": "Mantel shelf length",
+    "model": 2.54,
+    "survey": "0.87 of ceiling height (2.54 at 2.92 m)"
+   },
+   {
+    "item": "Stair strip",
+    "model": "x -1.42 to -0.40",
+    "survey": "x -1.42 to -0.37"
+   },
+   {
+    "item": "Sun",
+    "model": "direction (0.36, -0.56, -0.75): 25.6 deg west of the front normal, 34 deg high",
+    "survey": "with the front at true azimuth 238 this is the real sun at azimuth 263 deg, about 16:20 solar time in late April or mid August",
+    "note": "physically right as it is; do not re-derive it assuming the front faces due south"
+   }
+  ]
+ }
+}

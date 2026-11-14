@@ -1,0 +1,342 @@
+{
+  "/travellers-rest/plates/library.webp": {
+    "width": 1440,
+    "height": 810,
+    "originalBytes": 173604,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/media/a40a99438876f8c42960f33de619868b3ffbbe1f2c7ac6527e4a06546b2001d2/480.webp",
+        "bytes": 29672,
+        "sha256": "a40a99438876f8c42960f33de619868b3ffbbe1f2c7ac6527e4a06546b2001d2"
+      },
+      {
+        "width": 900,
+        "url": "/media/9fddaac078c7d71fe4ef047ad0a448b1a3db4fc5451827be4028134372b9c553/900.webp",
+        "bytes": 86112,
+        "sha256": "9fddaac078c7d71fe4ef047ad0a448b1a3db4fc5451827be4028134372b9c553"
+      },
+      {
+        "width": 1440,
+        "url": "/media/411e282b94ca48e6a33967e6aadc3a9002a3b03cb373f403e625fe0156de5811/1440.webp",
+        "bytes": 172896,
+        "sha256": "411e282b94ca48e6a33967e6aadc3a9002a3b03cb373f403e625fe0156de5811"
+      }
+    ]
+  },
+  "/travellers-rest/archive/judge-overton.webp": {
+    "width": 1277,
+    "height": 1600,
+    "originalBytes": 349244,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/media/d170ec87c313b52e01abbbab2df677447fbd17d0321ca6759d0b7fc6fadf922e/480.webp",
+        "bytes": 56812,
+        "sha256": "d170ec87c313b52e01abbbab2df677447fbd17d0321ca6759d0b7fc6fadf922e"
+      },
+      {
+        "width": 900,
+        "url": "/media/38fe75665ad649f926874bc43fcee8839d5f1bea542aa8723b8f412fb8fa3ec8/900.webp",
+        "bytes": 160402,
+        "sha256": "38fe75665ad649f926874bc43fcee8839d5f1bea542aa8723b8f412fb8fa3ec8"
+      },
+      {
+        "width": 1277,
+        "url": "/media/6960bf02bcbba2d90bb31d331a87b432739b3b3ef66fda316d84d5efc8430637/1277.webp",
+        "bytes": 330096,
+        "sha256": "6960bf02bcbba2d90bb31d331a87b432739b3b3ef66fda316d84d5efc8430637"
+      }
+    ]
+  },
+  "/library/artwork/vantage-movers-architecture-v3.webp": {
+    "width": 900,
+    "height": 1060,
+    "originalBytes": 25206,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/media/fa4d0629f0bb216637b1e647ed65ed4be7823a5ee0ce098ed4a8809561951e9b/480.webp",
+        "bytes": 11752,
+        "sha256": "fa4d0629f0bb216637b1e647ed65ed4be7823a5ee0ce098ed4a8809561951e9b"
+      },
+      {
+        "width": 900,
+        "url": "/media/8f8f892e8cacff329f8e00db3dbeb20f3abd27053c91684a886c39541ed9e9ed/900.webp",
+        "bytes": 24978,
+        "sha256": "8f8f892e8cacff329f8e00db3dbeb20f3abd27053c91684a886c39541ed9e9ed"
+      }
+    ]
+  },
+  "/library/artwork/vantage-main-02-v3.webp": {
+    "width": 517,
+    "height": 744,
+    "originalBytes": 26032,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/media/15ac47279f9da9bf1def5ba502b61029899646783b00c821ef2feac66244ea12/480.webp",
+        "bytes": 20858,
+        "sha256": "15ac47279f9da9bf1def5ba502b61029899646783b00c821ef2feac66244ea12"
+      },
+      {
+        "width": 517,
+        "url": "/media/1808ed712a7b8bca488547792f14174ed743aa3c7ad6391131238c5655652f5c/517.webp",
+        "bytes": 24224,
+        "sha256": "1808ed712a7b8bca488547792f14174ed743aa3c7ad6391131238c5655652f5c"
+      }
+    ]
+  },
+  "/library/artwork/vantage-main-03-v3.webp": {
+    "width": 517,
+    "height": 670,
+    "originalBytes": 29322,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/media/b217fa42b8722e77354d9c7beac6935ab3cc0ee95fa51f66c8d63d5f6b0ac8fe/480.webp",
+        "bytes": 23110,
+        "sha256": "b217fa42b8722e77354d9c7beac6935ab3cc0ee95fa51f66c8d63d5f6b0ac8fe"
+      },
+      {
+        "width": 517,
+        "url": "/media/aa0eb0dbccef56e7191c2b722b2b611ac04561af140d63fa0fe35f80a498e988/517.webp",
+        "bytes": 27388,
+        "sha256": "aa0eb0dbccef56e7191c2b722b2b611ac04561af140d63fa0fe35f80a498e988"
+      }
+    ]
+  },
+  "/library/artwork/vantage-landing-02-v3.webp": {
+    "width": 471,
+    "height": 915,
+    "originalBytes": 37174,
+    "variants": [
+      {
+        "width": 471,
+        "url": "/media/61808fa08e3fe6ab4aa33c5c2925b01b001ca520e10e6bd0f93e3464bc9e09d0/471.webp",
+        "bytes": 33982,
+        "sha256": "61808fa08e3fe6ab4aa33c5c2925b01b001ca520e10e6bd0f93e3464bc9e09d0"
+      }
+    ]
+  },
+  "/library/artwork/gowipe-collection-v2.webp": {
+    "width": 1600,
+    "height": 685,
+    "originalBytes": 52298,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/media/d09a8d08d44b2be4f15b65fb54c9a46858d47b4dd134dfd743630ca441417d71/480.webp",
+        "bytes": 10610,
+        "sha256": "d09a8d08d44b2be4f15b65fb54c9a46858d47b4dd134dfd743630ca441417d71"
+      },
+      {
+        "width": 900,
+        "url": "/media/8666df9c3e0fdf52f262521f77cf4f49c7d40a86e13c78fa8f361c2fcbaf2170/900.webp",
+        "bytes": 24574,
+        "sha256": "8666df9c3e0fdf52f262521f77cf4f49c7d40a86e13c78fa8f361c2fcbaf2170"
+      },
+      {
+        "width": 1440,
+        "url": "/media/f033d582b23d10d405fdee3b183f4796fb5d2864982bc43631460fc9592336ac/1440.webp",
+        "bytes": 43840,
+        "sha256": "f033d582b23d10d405fdee3b183f4796fb5d2864982bc43631460fc9592336ac"
+      }
+    ]
+  },
+  "/library/artwork/gowipe-architecture-v3.webp": {
+    "width": 900,
+    "height": 888,
+    "originalBytes": 20714,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/media/da7e786641c97887fe10a0c7f1c9b1f3e149d24b3e8c95cf59b94570719e550e/480.webp",
+        "bytes": 9376,
+        "sha256": "da7e786641c97887fe10a0c7f1c9b1f3e149d24b3e8c95cf59b94570719e550e"
+      },
+      {
+        "width": 900,
+        "url": "/media/cf9f8ba34e277b436135177f748f6cf6e2b38c3decdf556553b2d5f9e8a7b749/900.webp",
+        "bytes": 20552,
+        "sha256": "cf9f8ba34e277b436135177f748f6cf6e2b38c3decdf556553b2d5f9e8a7b749"
+      }
+    ]
+  },
+  "/library/artwork/gowipe-selected-v3.webp": {
+    "width": 1440,
+    "height": 1876,
+    "originalBytes": 122668,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/media/57876e2847480345bbea24e347373efdfd50343ec686f9408864255d05a47a4d/480.webp",
+        "bytes": 23974,
+        "sha256": "57876e2847480345bbea24e347373efdfd50343ec686f9408864255d05a47a4d"
+      },
+      {
+        "width": 900,
+        "url": "/media/bb17a9a1212dbbea6c83ae8052f05c3382cc2ff63f22333b535752f8b8b1a673/900.webp",
+        "bytes": 60398,
+        "sha256": "bb17a9a1212dbbea6c83ae8052f05c3382cc2ff63f22333b535752f8b8b1a673"
+      },
+      {
+        "width": 1440,
+        "url": "/media/9fd86b3f638b50c7a5ed46eb284dec3c0c3285c72db96cc60e2bd86f8799c595/1440.webp",
+        "bytes": 120200,
+        "sha256": "9fd86b3f638b50c7a5ed46eb284dec3c0c3285c72db96cc60e2bd86f8799c595"
+      }
+    ]
+  },
+  "/library/artwork/gowipe-cart-v3.webp": {
+    "width": 1440,
+    "height": 798,
+    "originalBytes": 22092,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/media/8005870765d3ed22545c4e707fe4b2a3d088f57e729f8083886b8ef26b7dc820/480.webp",
+        "bytes": 5150,
+        "sha256": "8005870765d3ed22545c4e707fe4b2a3d088f57e729f8083886b8ef26b7dc820"
+      },
+      {
+        "width": 900,
+        "url": "/media/2cb30b1ce8c0e366bfb1163c7a5795ee0cbc7018b6acfabe697f3c9b94181d45/900.webp",
+        "bytes": 11760,
+        "sha256": "2cb30b1ce8c0e366bfb1163c7a5795ee0cbc7018b6acfabe697f3c9b94181d45"
+      },
+      {
+        "width": 1440,
+        "url": "/media/6ce707eae6f486f3d6cf6f50d04096977a456ce9921886fc4af21be2e072892a/1440.webp",
+        "bytes": 21864,
+        "sha256": "6ce707eae6f486f3d6cf6f50d04096977a456ce9921886fc4af21be2e072892a"
+      }
+    ]
+  },
+  "/library/artwork/overtech-digital-services-architecture-v3.webp": {
+    "width": 900,
+    "height": 888,
+    "originalBytes": 21546,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/media/0d780b963ea701287e0312e8e2255950f9e89bcc9de0d2b6f9860dd6da65ceea/480.webp",
+        "bytes": 9766,
+        "sha256": "0d780b963ea701287e0312e8e2255950f9e89bcc9de0d2b6f9860dd6da65ceea"
+      },
+      {
+        "width": 900,
+        "url": "/media/d06f2fc71eddc52336a1545ecc6dbdbd78a5575af9d2d393ef65941df03bbd93/900.webp",
+        "bytes": 21276,
+        "sha256": "d06f2fc71eddc52336a1545ecc6dbdbd78a5575af9d2d393ef65941df03bbd93"
+      }
+    ]
+  },
+  "/library/artwork/agentic-mission-control-report-v2.webp": {
+    "width": 1036,
+    "height": 1061,
+    "originalBytes": 140334,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/media/3260104f20588adfd61f131c1fc9d2d57ee3ebb41d468cca935198fad9aabe14/480.webp",
+        "bytes": 34118,
+        "sha256": "3260104f20588adfd61f131c1fc9d2d57ee3ebb41d468cca935198fad9aabe14"
+      },
+      {
+        "width": 900,
+        "url": "/media/8faab06254fc2afe0bf4231efb62ab259279bf9851591bb1828729794f665906/900.webp",
+        "bytes": 94554,
+        "sha256": "8faab06254fc2afe0bf4231efb62ab259279bf9851591bb1828729794f665906"
+      },
+      {
+        "width": 1036,
+        "url": "/media/712f4ad5b126877beaefbdac3e400753db6f83c3a879ef1b4f38f6f06bf85de0/1036.webp",
+        "bytes": 121252,
+        "sha256": "712f4ad5b126877beaefbdac3e400753db6f83c3a879ef1b4f38f6f06bf85de0"
+      }
+    ]
+  },
+  "/library/artwork/agentic-mission-control-timeline-v2.webp": {
+    "width": 1036,
+    "height": 1114,
+    "originalBytes": 66554,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/media/a496f8ede02f22071ae4678c5db93838a947dc182de3fafeb0a6cf9ab16a92c5/480.webp",
+        "bytes": 16692,
+        "sha256": "a496f8ede02f22071ae4678c5db93838a947dc182de3fafeb0a6cf9ab16a92c5"
+      },
+      {
+        "width": 900,
+        "url": "/media/f0d0e2ab875d60ec07491c9db78d0ff4da92ffda44e8ee228f0fd02249249f19/900.webp",
+        "bytes": 43492,
+        "sha256": "f0d0e2ab875d60ec07491c9db78d0ff4da92ffda44e8ee228f0fd02249249f19"
+      },
+      {
+        "width": 1036,
+        "url": "/media/f2c9c303998a0bb8bf1e3dbe3898018d516c404efcfd669aa046174fdaadb3d2/1036.webp",
+        "bytes": 57854,
+        "sha256": "f2c9c303998a0bb8bf1e3dbe3898018d516c404efcfd669aa046174fdaadb3d2"
+      }
+    ]
+  },
+  "/library/artwork/agentic-mission-control-architecture-v3.webp": {
+    "width": 900,
+    "height": 1060,
+    "originalBytes": 27656,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/media/1934a8686e8573c72ba9601ddd532ddacf9aa9ced0271fd81f2f765a23dea3b2/480.webp",
+        "bytes": 12900,
+        "sha256": "1934a8686e8573c72ba9601ddd532ddacf9aa9ced0271fd81f2f765a23dea3b2"
+      },
+      {
+        "width": 900,
+        "url": "/media/1f32e2ce7a09be93e8cc194da9b4cdd4f2d5ab5a2daedb3434adb73f71049e86/900.webp",
+        "bytes": 27440,
+        "sha256": "1f32e2ce7a09be93e8cc194da9b4cdd4f2d5ab5a2daedb3434adb73f71049e86"
+      }
+    ]
+  },
+  "/library/artwork/agent-knowledge-services-architecture-v3.webp": {
+    "width": 900,
+    "height": 1060,
+    "originalBytes": 28446,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/media/e7e70b08ea05e34890b2bbe6e7e370ef955dfac16cdb11f05a6efd18f8634116/480.webp",
+        "bytes": 13330,
+        "sha256": "e7e70b08ea05e34890b2bbe6e7e370ef955dfac16cdb11f05a6efd18f8634116"
+      },
+      {
+        "width": 900,
+        "url": "/media/73df85ea8be629e8472ef2c7a922fa82d78bad11e382ff0c54db03ae0ece67ab/900.webp",
+        "bytes": 28214,
+        "sha256": "73df85ea8be629e8472ef2c7a922fa82d78bad11e382ff0c54db03ae0ece67ab"
+      }
+    ]
+  },
+  "/library/artwork/ai-engineer-platform-architecture-v3.webp": {
+    "width": 900,
+    "height": 888,
+    "originalBytes": 25638,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/media/4383a4a69ce2b8e1590549b5b622d0f5043edfca9b7b6e64660224cca6a10a8e/480.webp",
+        "bytes": 11750,
+        "sha256": "4383a4a69ce2b8e1590549b5b622d0f5043edfca9b7b6e64660224cca6a10a8e"
+      },
+      {
+        "width": 900,
+        "url": "/media/47aeb08db6420d857e50c10095b9ff90023ee592f7bfc770d877a540383c153c/900.webp",
+        "bytes": 25360,
+        "sha256": "47aeb08db6420d857e50c10095b9ff90023ee592f7bfc770d877a540383c153c"
+      }
+    ]
+  }
+}

@@ -1,0 +1,369 @@
+[
+  {
+    "slug": "gowipe",
+    "summary": "A Shopify storefront that helps shoppers choose a wipe, a pack size and a purchase plan, with event mappings for analytics and advertising. My work covered the storefront and conversion instrumentation from 2021 to early 2025.",
+    "status": "Live storefront · observed November 2026",
+    "role": "Web developer · 2021–early 2025",
+    "pages": [
+      {
+        "key": "overview",
+        "title": "A clear choice",
+        "blocks": [
+          {
+            "component": "Prose",
+            "props": {
+              "text": "GoWipe sells wipes for distinct situations: facial cleansing, travel, babies, pets and more. The design problem is practical. A shopper arriving from an advertisement needs to recognize the right product, understand the package options and make a purchase choice on a small screen. A catalogue that treats every wipe as interchangeable makes that decision harder."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "I worked as GoWipe’s web developer from 2021 to early 2025. My contribution was the Shopify storefront, theme customization and conversion-event connections to Google Tag Manager, Analytics and Ads. The screenshots here show the live store observed in November 2026. They establish what a visitor can see today; they do not attribute every later product, price or design change to my engagement."
+            }
+          },
+          {
+            "component": "Image",
+            "props": {
+              "url": "/library/artwork/gowipe-collection-v2.webp",
+              "text": "The range is organized by use. This existing storefront capture provides orientation; current product options were separately inspected on November 13, 2026.",
+              "ownPage": true
+            }
+          }
+        ]
+      },
+      {
+        "key": "architecture",
+        "title": "Shopping and measurement",
+        "blocks": [
+          {
+            "component": "Image",
+            "props": {
+              "url": "/library/artwork/gowipe-architecture-v3.webp",
+              "text": "The storefront presents product choices; Shopify owns the cart and order, while configured shopping events feed measurement destinations.",
+              "ownPage": true
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The storefront and measurement system answer different questions. Shopify owns the chosen variant, purchase plan, cart and eventual order. Analytics describes the shopping actions around them. Keeping that distinction explicit matters: an add-to-cart event is evidence of intent, not a sale, and a purchase event is not by itself an accounting record."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The interface groups products by use, then moves the pack-size and one-time-versus-subscription decisions onto the product page. The visual system carries the product identity from collection to detail. This makes the next action concrete without asking the visitor to understand the underlying catalogue or tracking configuration."
+            }
+          }
+        ]
+      },
+      {
+        "key": "gallery",
+        "title": "Walkthrough: choose a pack",
+        "blocks": [
+          {
+            "component": "Heading",
+            "props": {
+              "text": "1 · Find the relevant product"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "Start with Shop → All and find Facial Cleansing Wipes. The collection presents the product name and package image together. Open its product page to inspect the options rather than assuming that the first advertised price describes every pack."
+            }
+          },
+          {
+            "component": "Heading",
+            "props": {
+              "text": "2 · Compare the purchase choices"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The product page offers several pack sizes and separates a one-time purchase from Subscribe & Save. In the November 13 guest-browser run, I selected the 10-count pack and one-time purchase. The displayed price changed with the pack; subscription choices separately displayed delivery intervals. This makes the purchase commitment explicit before the item reaches the cart."
+            }
+          },
+          {
+            "component": "Image",
+            "props": {
+              "url": "/library/artwork/gowipe-selected-v3.webp",
+              "text": "November 13, 2026: the real product page after selecting the 10-count pack and one-time purchase in a fresh anonymous browser. The capture shows the complete product section.",
+              "ownPage": true
+            }
+          },
+          {
+            "component": "Heading",
+            "props": {
+              "text": "3 · Check what the action means"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "Add to cart produced a shopping bag with Facial Cleansing Wipes, 10-Count Pack and quantity one. The browser observed outgoing view_item, add_to_cart and view_cart analytics requests during the journey. This proves the guest interaction and outgoing event names, not receipt in an analytics report. A complete conversion check would require an authorized test order and transaction reconciliation. No checkout or paid purchase was placed."
+            }
+          },
+          {
+            "component": "Image",
+            "props": {
+              "url": "/library/artwork/gowipe-cart-v3.webp",
+              "text": "The matching anonymous cart after the live task. No customer information, checkout submission or order is involved. Prices are the dated capture, not a current offer.",
+              "ownPage": true
+            }
+          }
+        ]
+      },
+      {
+        "key": "notes",
+        "title": "Contribution and scope",
+        "blocks": [
+          {
+            "component": "Prose",
+            "props": {
+              "text": "A commercial storefront contains supplied product photography, brand copy, subscription behavior and third-party integrations. My engineering role is presented separately from those materials. Product claims shown in the screenshots belong to the store; this case study does not independently validate their health or environmental claims."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The older orientation film was a scroll through the home page. It is not used as proof that checkout, attribution or a purchase succeeded. The task above focuses on the actual choice a shopper makes, with dated source observations and an explicit boundary before checkout."
+            }
+          }
+        ]
+      },
+      {
+        "key": "metrics",
+        "title": "What was verified",
+        "blocks": [
+          {
+            "component": "Prose",
+            "props": {
+              "text": "On November 13, 2026, the delivered public product-page HTML contained eleven configured shopping-event types: search, begin_checkout, remove_from_cart, view_item, purchase, add_shipping_info, page_view, view_item_list, add_payment_info, add_to_cart and view_cart. The local evidence record retains the observation time and an HTML digest."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "This verifies configuration in the delivered page. It does not prove that every event reached its destination, that consent handling admitted it, or that advertising caused a sale. No revenue increase, conversion lift or attribution percentage is claimed. A local theme checkout and an authorized analytics-debug session were not available in the inspected sources."
+            }
+          }
+        ]
+      },
+      {
+        "key": "links",
+        "title": "Inspect the storefront",
+        "blocks": [
+          {
+            "component": "Link",
+            "props": {
+              "url": "https://gowipe.co/collections/gowipes",
+              "text": "Browse the live collection"
+            }
+          },
+          {
+            "component": "Link",
+            "props": {
+              "url": "https://gowipe.co/products/facialcleansingwipes",
+              "text": "Inspect the facial-wipe options"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "overtech-digital-services",
+    "summary": "My studio combines an intake and booking system with evidence-backed research tools. The public site is still a launch page; the showcase follows a real, archived research finding through its sources, independent verification and human review.",
+    "status": "Private studio · public launch page",
+    "role": "Owner and engineer",
+    "pages": [
+      {
+        "key": "overview",
+        "title": "Make the work inspectable",
+        "blocks": [
+          {
+            "component": "Prose",
+            "props": {
+              "text": "A services website asks a prospect to trust a promise. I wanted Overtech to show the work behind that promise: a finished interface, a concrete research result and enough evidence for a reader to question it. I designed and built the studio, its intake and booking path, and the research surfaces as owner and engineer."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "There are two different research systems in this account. The recorded reader presents an exported Mission Control run using Deep Agents. The newer private research workspace uses Eve for discussions and bounded investigations. They share an emphasis on evidence, but the recorded Deep Agents episode is not a demonstration of the hosted Eve endpoint."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The public studio still displayed Coming soon on November 13, 2026. The separately deployed research endpoint displayed Ready. These observations establish reachability and the launch gate only. The substantive walkthrough below uses the dated research archive and reviewed local captures, so a visitor can inspect the result without being sent into a private account."
+            }
+          }
+        ]
+      },
+      {
+        "key": "architecture",
+        "title": "Preserve the source",
+        "blocks": [
+          {
+            "component": "Image",
+            "props": {
+              "url": "/library/artwork/overtech-digital-services-architecture-v3.webp",
+              "text": "A recorded mission is validated, projected into reviewed material and released to a reader. Private source archives remain separate from public presentation.",
+              "ownPage": true
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The recorded-reader importer checks the archive inventory, file digests, run identity, source citations, accepted output bytes and human decision. A projector turns that archive into a small reading surface. It does not publish raw provider response arrays, hidden reasoning or tool arguments. A source image must also have its own media release."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "This separation makes withdrawal practical. The operator can withdraw a selected projection without deleting the immutable evidence archive. The studio’s intake path follows a similar boundary: an inquiry is not a confirmed appointment until a signed scheduling notification is received. Earlier hosted receipts document booking and cancellation; neither was repeated during this portfolio inspection."
+            }
+          }
+        ]
+      },
+      {
+        "key": "gallery",
+        "title": "Walkthrough: inspect a finding",
+        "blocks": [
+          {
+            "component": "Heading",
+            "props": {
+              "text": "1 · Start with the accepted result"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The November 9, 2026 TruDiagnostic episode produced a research brief and ten source-linked assertions. Finding 8 describes the design of a twin study and points to two sources: the company’s study summary, S4, and the primary-paper abstract, S5. The task is to inspect those references and the review that accepted the deliverable."
+            }
+          },
+          {
+            "component": "Image",
+            "props": {
+              "url": "/library/artwork/agentic-mission-control-report-v2.webp",
+              "text": "Local reader capture of the accepted report from the November 9 recorded mission. The recorded result is evidence of that run, not a fresh medical assessment.",
+              "ownPage": true
+            }
+          },
+          {
+            "component": "Heading",
+            "props": {
+              "text": "2 · Compare the claim with the captured sources"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The finding identifies a small paired-twin study over eight weeks and a blood DNA-methylation endpoint. Its neighboring interpretation explicitly limits what follows: the short study and surrogate biomarkers do not establish long-term health or lifespan effects. Keeping that qualification beside the finding prevents the research summary from turning a narrow result into a broader promise."
+            }
+          },
+          {
+            "component": "Link",
+            "props": {
+              "url": "https://www.trudiagnostic.com/interventional-trials/a-vegan-diet-slows-aging-faster-than-an-omnivore-diet",
+              "text": "S4 · Company study summary"
+            }
+          },
+          {
+            "component": "Link",
+            "props": {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/39069614/",
+              "text": "S5 · Primary-paper abstract"
+            }
+          },
+          {
+            "component": "Heading",
+            "props": {
+              "text": "3 · Inspect verification and acceptance"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The archive records the executor submitting both outputs, a separate verifier checking them, and human approval. Eight selected steps follow recorder order. The reader makes the accepted files inspectable while marking a truncated message as truncated. A completion claim from an agent is one step in the record; it is not a substitute for the verifier and human decision."
+            }
+          },
+          {
+            "component": "Image",
+            "props": {
+              "url": "/library/artwork/agentic-mission-control-timeline-v2.webp",
+              "text": "The same archived run, shown as a local timeline capture. Executor activity, independent verification and human review remain distinguishable.",
+              "ownPage": true
+            }
+          }
+        ]
+      },
+      {
+        "key": "notes",
+        "title": "The private workspace",
+        "blocks": [
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The private Eve workspace supports discussion, explicitly launched bounded missions and versioned reports. Source assertions and semantic review are separate records, and human notes are protected from research writes. The owning project’s November 12 handoff records hosted investigation and follow-up evidence, including a held report followed by a reviewed revision."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "Those business cases, private media and raw native transcripts are excluded from this portfolio. They require a separate publication decision and sanitization. Ordinary chat does not imply permission to start paid research or send outreach. The public endpoint’s Ready page cannot demonstrate these controls."
+            }
+          }
+        ]
+      },
+      {
+        "key": "metrics",
+        "title": "Proof and limits",
+        "blocks": [
+          {
+            "component": "Prose",
+            "props": {
+              "text": "On November 13, the archive verification script passed locally: repeat projection, changed source bytes, mixed run identity, altered guidance, reviewed-text selection, partial history and redaction checks. Eight additional local tests passed for signed identities, password/session boundaries, bounded media and document handling, and model reservation accounting. These are local checks against the inspected working copy, not a new hosted investigation."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The archived run was captured on November 9 at 20:01 UTC. Its complete archive digest begins c49fa4620f4a208d. The current checkout is based on revision e765ad1 with substantial uncommitted work; that revision alone does not identify the complete inspected state. Public launch, a refreshed anonymous reader journey and approved release media remain separate release work."
+            }
+          }
+        ]
+      },
+      {
+        "key": "links",
+        "title": "Project destinations",
+        "blocks": [
+          {
+            "component": "Link",
+            "props": {
+              "url": "https://overtech-digital-services.vercel.app/",
+              "text": "Studio launch page"
+            }
+          },
+          {
+            "component": "Link",
+            "props": {
+              "url": "https://overtech-research-agent.vercel.app/",
+              "text": "Research endpoint status"
+            }
+          },
+          {
+            "component": "Link",
+            "props": {
+              "url": "https://github.com/jbell-rusty-vantage/agentic-mission-control",
+              "text": "Mission Control source repository"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,263 @@
+{
+  "id": "jackson-overton-1829-06-08",
+  "title": "Andrew Jackson to John Overton",
+  "date": "June 8, 1829",
+  "item": "https://teva.contentdm.oclc.org/digital/collection/p15138coll33/id/144",
+  "manifest": "https://teva.contentdm.oclc.org/iiif/2/p15138coll33:144/manifest.json",
+  "credit": "Letter from Andrew Jackson to John Overton, June 8, 1829. Jacob McGavock Dickinson Papers, 1812–1946, ID# 43090. Courtesy Tennessee State Library & Archives.",
+  "rights": "No copyright — United States (NoC-US 1.0), as stated by the Tennessee State Library & Archives. Credit line required.",
+  "rightsSource": "https://rightsstatements.org/vocab/NoC-US/1.0/",
+  "transcriptSource": "https://tsla.tnsosfiles.com/digital/teva/transcripts/43090.pdf",
+  "transcriptNote": "Reading transcription checked by the coordinating agent against all eight downloaded TSLA manuscript images and compared with TSLA transcript 43090.pdf. Not a critical edition or independent scholarly verification. Paragraphing and punctuation lightly normalized; common superscript abbreviations expanded. Brackets mark uncertain readings or editorial descriptions. Cancelled writing is identified rather than silently reconstructed. Archival stamps are not part of the letter text. Jackson advocates the removal of Cherokee and Creek peoples. His claim that removal would protect them is his argument in this letter, not the portfolio's endorsement or a neutral historical conclusion. The final image is a later wrapper, not another page of Jackson's letter. Owner review is required before publication.",
+  "pages": [
+    {
+      "n": 1,
+      "originalUrl": "https://teva.contentdm.oclc.org/iiif/2/p15138coll33:136/full/full/0/default.jpg",
+      "sha256": "9e7974f1ea295d67bcef89aba74608a8178ae3fd89b7710fa33e4c78f259629b",
+      "bytes": 453269,
+      "width": 1184,
+      "height": 1965,
+      "src": "/travellers-rest/archive/letters/jackson-overton-1829-06-08/p01.webp",
+      "small": "/travellers-rest/archive/letters/jackson-overton-1829-06-08/p01-small.webp",
+      "label": "Letter · page 1",
+      "alt": "Page 1 of Andrew Jackson’s handwritten letter to John Overton, June 8, 1829.",
+      "transcript": [
+        {
+          "y0": 0.055,
+          "y1": 0.11,
+          "text": "Washington June 8th 1829. My Dear Sir,"
+        },
+        {
+          "y0": 0.11,
+          "y1": 0.19,
+          "text": "I have received your letters of the 22nd & 26th ult., and after noting their contents have disposed of them as usual."
+        },
+        {
+          "y0": 0.19,
+          "y1": 0.88,
+          "text": "I have duly noted the contents of the letter of Mr [Dunn?]. I have long since been aware of the importance of Texas to the United States, and of the real necessity of extending our boundary west of the Sabine as far west as the sandy desert, which is a good natural boundary. It is fortunate that our boundary has not been run and marked, and from the deranged state of the finance of Mexico, I hope we may be able to obtain an extension of our southwestern limits as defined by the late treaty with Spain, so important to the safety of New Orleans. How infatuated must have been our councils who gave up the rich country of Texas for the Floridas, when the latter could have been obtained for the sum we paid for it in money. It surely must have been with the view to keep the political ascendancy in the north and east, and cripple the rising greatness of the west. I shall keep my eye on this object, & the first propitious moment make the attempt to regain the territory as far south & west as the great desert."
+        },
+        {
+          "y0": 0.88,
+          "y1": 0.97,
+          "text": "I intend in due time to notice Governor Carroll. The only thing at present I had to offer him, the chargé d'affaires at Brazil, I find—"
+        }
+      ],
+      "confidence": "Agent reading checked against all eight images; bracketed doubts remain. Not an independent scholarly edition."
+    },
+    {
+      "n": 2,
+      "originalUrl": "https://teva.contentdm.oclc.org/iiif/2/p15138coll33:137/full/full/0/default.jpg",
+      "sha256": "cb28208b0f0dca86e6c01685d789e49b17bc6c0fcffddfeefcf5aa78b0df9bc8",
+      "bytes": 442202,
+      "width": 1200,
+      "height": 1950,
+      "src": "/travellers-rest/archive/letters/jackson-overton-1829-06-08/p02.webp",
+      "small": "/travellers-rest/archive/letters/jackson-overton-1829-06-08/p02-small.webp",
+      "label": "Letter · page 2",
+      "alt": "Page 2 of Andrew Jackson’s handwritten letter to John Overton, June 8, 1829.",
+      "transcript": [
+        {
+          "y0": 0.03,
+          "y1": 0.64,
+          "text": "he will not accept, and as I know he is needy, I have directed the Secretary of War to give him the appointment of agent to visit the Cherokee & Creek Indians and give them my talk on the subject of their removal to the west of the Mississippi, and to use his influence in conjunction with the agent to enforce upon their minds the necessity of their adopting this course, as the only means we have in preserving them as nations, and of protecting them. The State of Georgia having extended their civil jurisdiction over them, makes it desirable that the Indians should remove to a territory over which no State has any right to the soil, and to which the U. States can give the Indians a perfect right. The course pursued by Georgia is well calculated to involve her & the United States in great difficulty, unless the Indians can be got to remove west of the M.—"
+        },
+        {
+          "y0": 0.63,
+          "y1": 0.68,
+          "text": "[Two heavily struck-through lines; cancelled writing not transcribed.]"
+        },
+        {
+          "y0": 0.66,
+          "y1": 0.75,
+          "text": "You see we are employing the Governor beneficially, as I believe few men will have more influence with the Indians than he."
+        },
+        {
+          "y0": 0.75,
+          "y1": 0.96,
+          "text": "I am sorry you are to have a contest between Judge Anderson & Grundy for the Senate. They are both my friends, & I doubt whether you can spare Judge Anderson from the Bench, and if you do, where & by whom can you fill his place with so much talent & safety to the State. Anderson is poor—"
+        }
+      ],
+      "confidence": "Agent reading checked against all eight images; bracketed doubts remain. Not an independent scholarly edition."
+    },
+    {
+      "n": 3,
+      "originalUrl": "https://teva.contentdm.oclc.org/iiif/2/p15138coll33:138/full/full/0/default.jpg",
+      "sha256": "3a0b038c3ab58d0e59f4d1682b5205399f9fdfe1eb3ba17b45146fcca98c6da5",
+      "bytes": 451155,
+      "width": 1200,
+      "height": 1950,
+      "src": "/travellers-rest/archive/letters/jackson-overton-1829-06-08/p03.webp",
+      "small": "/travellers-rest/archive/letters/jackson-overton-1829-06-08/p03-small.webp",
+      "label": "Letter · page 3",
+      "alt": "Page 3 of Andrew Jackson’s handwritten letter to John Overton, June 8, 1829.",
+      "transcript": [
+        {
+          "y0": 0.025,
+          "y1": 0.26,
+          "text": "and I am apprehensive if he leaves the bench, & comes to the Senate, it will injure him in his pecuniary concerns, as it must take one third of his pay to meet his expense here, which will leave but one thousand or eight hundred dollars to support his family & himself at home."
+        },
+        {
+          "y0": 0.26,
+          "y1": 0.84,
+          "text": "They are both enlightened men, but Grundy's knowledge of men would make him better adapted to the atmosphere of Washington than Judge Anderson for a while, & he would be better calculated to aid Judge White & myself in the change of the present incorporated Bank to that of a National Bank. This being the only way that a recharter to the present U.S. Bank can be prevented, & which I believe is the only thing that can prevent our liberties to be crushed by the Bank & its influence; for I find from the various applications for removals, many are requested on the ground of the injurious effect the interference of the directors of the Bank had on our late election, which if not curbed must destroy the purity of the right of suffrage."
+        },
+        {
+          "y0": 0.84,
+          "y1": 0.96,
+          "text": "I intend to write Judge White shortly and draw to his view the importance, if possible, to keep Judge Anderson on the Bench. He is of more importance—"
+        }
+      ],
+      "confidence": "Agent reading checked against all eight images; bracketed doubts remain. Not an independent scholarly edition."
+    },
+    {
+      "n": 4,
+      "originalUrl": "https://teva.contentdm.oclc.org/iiif/2/p15138coll33:139/full/full/0/default.jpg",
+      "sha256": "dffc24e0db5288ce10166d85c4cd6f9955c37d8aa3c65a0339e1a4e8a015eac9",
+      "bytes": 455346,
+      "width": 1162,
+      "height": 1914,
+      "src": "/travellers-rest/archive/letters/jackson-overton-1829-06-08/p04.webp",
+      "small": "/travellers-rest/archive/letters/jackson-overton-1829-06-08/p04-small.webp",
+      "label": "Letter · page 4",
+      "alt": "Page 4 of Andrew Jackson’s handwritten letter to John Overton, June 8, 1829.",
+      "transcript": [
+        {
+          "y0": 0.015,
+          "y1": 0.39,
+          "text": "to the State where he is than he can be in the Senate, and take him from the Bench & by whom will you replace his integrity & talents, except Judge Brown would accept it. I am at a loss to point to the character that would fill it with equal talents & integrity & in whom the people have confidence. But as I never interfere in elections, I leave it to the wisdom of the legislature, and would regret to see Judge Anderson taken from the Bench."
+        },
+        {
+          "y0": 0.395,
+          "y1": 0.71,
+          "text": "We are getting on pretty well here. Every few days discovers more delinquencies, and of course a removal, and the Journal & Intelligencer of course tell the world what virtues the delinquent possessed & the cruelty exercised in turning him out. But I have but little doubt, when all these are exposed to the people, they [will?] call out, 'well done good and faithful servants'."
+        },
+        {
+          "y0": 0.71,
+          "y1": 0.97,
+          "text": "Major Barry's family have reached the city, and are living with Major Eaton, Colonel Morgan & his family also. The clouds are passing away, and I can say with truth there never was a man more cruelly treated than Major Eaton, & by some of my friends. My situation has been an unpleasant one. How much pleasure it—"
+        }
+      ],
+      "confidence": "Agent reading checked against all eight images; bracketed doubts remain. Not an independent scholarly edition."
+    },
+    {
+      "n": 5,
+      "originalUrl": "https://teva.contentdm.oclc.org/iiif/2/p15138coll33:140/full/full/0/default.jpg",
+      "sha256": "1c6258dc8d4925d05569332b100d45dbfa60d497c4eb9e793e3c92d52f3c0c45",
+      "bytes": 427582,
+      "width": 1200,
+      "height": 1950,
+      "src": "/travellers-rest/archive/letters/jackson-overton-1829-06-08/p05.webp",
+      "small": "/travellers-rest/archive/letters/jackson-overton-1829-06-08/p05-small.webp",
+      "label": "Letter · page 5",
+      "alt": "Page 5 of Andrew Jackson’s handwritten letter to John Overton, June 8, 1829.",
+      "transcript": [
+        {
+          "y0": 0.045,
+          "y1": 0.155,
+          "text": "would give me to see you here where, & when, I could speak freely to you, & when I could have your advice upon many weighty matters."
+        },
+        {
+          "y0": 0.155,
+          "y1": 0.965,
+          "text": "When I take a view of my situation, behold myself left here alone without any hope of any happiness here below, toiling night & day, a constitution already worn out in my countries service, and daily assailed by the wicked & ambitious, I cannot but exclaim to myself why this toil & labour, & why sacrifice myself thus when I have no hope of pleasure here. The only consoling reply: my country has required it, and it is a duty I owe to that country to yield to its wishes. But how hard my situation, when my mind is torn to pieces by the severe bereavement I have met with, and when I have done all I can do by making use of my best [exertions?] to have the constitution amended, a National Bank established, our western boundary enlarged, and our affairs with England & France arranged, even then I am forbid to withdraw until the tedious four years run out, which in my state of health gives me serious forebodings—"
+        }
+      ],
+      "confidence": "Agent reading checked against all eight images; bracketed doubts remain. Not an independent scholarly edition."
+    },
+    {
+      "n": 6,
+      "originalUrl": "https://teva.contentdm.oclc.org/iiif/2/p15138coll33:141/full/full/0/default.jpg",
+      "sha256": "e1a21ad03273d3b00752da5a8bf4a8311b1248eaf7b772270ddf7ba64130c9b3",
+      "bytes": 309237,
+      "width": 1200,
+      "height": 1950,
+      "src": "/travellers-rest/archive/letters/jackson-overton-1829-06-08/p06.webp",
+      "small": "/travellers-rest/archive/letters/jackson-overton-1829-06-08/p06-small.webp",
+      "label": "Letter · page 6",
+      "alt": "Page 6 of Andrew Jackson’s handwritten letter to John Overton, June 8, 1829.",
+      "transcript": [
+        {
+          "y0": 0.05,
+          "y1": 0.14,
+          "text": "that I shall not spend much of my time in this world on the silent walks of the Hermitage."
+        },
+        {
+          "y0": 0.14,
+          "y1": 0.25,
+          "text": "My dear friend, I am interrupted & have to close this hasty [scrawl?]. With our best wishes to you & your family, believe me your friend,"
+        },
+        {
+          "y0": 0.25,
+          "y1": 0.3,
+          "text": "Andrew Jackson"
+        },
+        {
+          "y0": 0.345,
+          "y1": 0.405,
+          "text": "The Honorable John Overton"
+        }
+      ],
+      "confidence": "Agent reading checked against all eight images; bracketed doubts remain. Not an independent scholarly edition."
+    },
+    {
+      "n": 7,
+      "originalUrl": "https://teva.contentdm.oclc.org/iiif/2/p15138coll33:142/full/full/0/default.jpg",
+      "sha256": "ec61d2390fb0d1ecc49f5f4d544a29989b40f8d7f3ced798287b5b0675d7d70c",
+      "bytes": 281841,
+      "width": 1950,
+      "height": 1200,
+      "src": "/travellers-rest/archive/letters/jackson-overton-1829-06-08/p07.webp",
+      "small": "/travellers-rest/archive/letters/jackson-overton-1829-06-08/p07-small.webp",
+      "label": "Address panel, frank and postmark",
+      "alt": "Address to the Honorable John Overton near Nashville, with Jackson’s free frank.",
+      "transcript": [
+        {
+          "y0": 0.22,
+          "y1": 0.31,
+          "text": "Free. Andrew Jackson. [Frank; a red FREE stamp appears below.]"
+        },
+        {
+          "y0": 0.34,
+          "y1": 0.57,
+          "text": "The Honorable John Overton, near Nashville, Tennessee. [Address panel; red Washington postmark.]"
+        }
+      ],
+      "confidence": "Agent reading checked against all eight images; bracketed doubts remain. Not an independent scholarly edition."
+    },
+    {
+      "n": 8,
+      "originalUrl": "https://teva.contentdm.oclc.org/iiif/2/p15138coll33:143/full/full/0/default.jpg",
+      "sha256": "bea0ca6c2efe2c7c432bcb6676ff67d80ec8f7fe3fecac2edc62e605f8c088f4",
+      "bytes": 71433,
+      "width": 1020,
+      "height": 600,
+      "src": "/travellers-rest/archive/letters/jackson-overton-1829-06-08/p08.webp",
+      "small": "/travellers-rest/archive/letters/jackson-overton-1829-06-08/p08-small.webp",
+      "label": "Later storage envelope (not part of the 1829 letter)",
+      "alt": "Later envelope identifying the original Jackson letter.",
+      "transcript": [
+        {
+          "y0": 0.4,
+          "y1": 0.91,
+          "text": "[Later wrapper, not Jackson's letter text.] Original of letter of President Andrew Jackson to John Overton Esq., Nashville, June 8, 1829."
+        }
+      ],
+      "confidence": "Agent reading checked against all eight images; bracketed doubts remain. Not an independent scholarly edition."
+    }
+  ],
+  "transcriptionReview": {
+    "checkedAt": "2026-11-12",
+    "method": "Reading transcription checked by the coordinating agent against all eight downloaded TSLA manuscript images and compared with TSLA transcript 43090.pdf. Not a critical edition or independent scholarly verification. Paragraphing and punctuation lightly normalized; common superscript abbreviations expanded. Brackets mark uncertain readings or editorial descriptions. Cancelled writing is identified rather than silently reconstructed. Archival stamps are not part of the letter text.",
+    "source": "https://tsla.tnsosfiles.com/digital/teva/transcripts/43090.pdf",
+    "editorialContext": "Jackson advocates the removal of Cherokee and Creek peoples. His claim that removal would protect them is his argument in this letter, not the portfolio's endorsement or a neutral historical conclusion. The final image is a later wrapper, not another page of Jackson's letter.",
+    "reviewNotes": [
+      "Page 1: the manuscript reads finance, not the typed transcript's penance; infatuated, not unfortunate. The correspondent's surname remains [Dunn?].",
+      "Page 2: U. States and course are the manuscript readings, rather than these states and cause. Two heavily cancelled lines remain untranscribed and explicitly marked.",
+      "Page 4: at a loss is legible in the manuscript where the typed transcript marks an illegible passage. The damaged word before call out remains [will?]. Bench replaces the typed transcript's Branch.",
+      "Page 5: how hard replaces the typed transcript's have hard. The damaged word is tentatively read [exertions?].",
+      "Page 6: the final word describing the hurried writing is tentatively [scrawl?].",
+      "Publication still requires owner review. The published Papers of Andrew Jackson VII, pp. 270–272, has not been independently collated during this check."
+    ]
+  }
+}

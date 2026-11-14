@@ -39,7 +39,8 @@ async function Read({
       (!kind || v.kind === kind),
   );
   if (!volume) notFound();
-  return <FullReader v={volume} source={data.source} />;
+  const collection = volume.kind === "Project" ? await getCollection() : data;
+  return <FullReader v={volume} source={data.source} volumes={collection.volumes} />;
 }
 export function DetailRoute({
   params,

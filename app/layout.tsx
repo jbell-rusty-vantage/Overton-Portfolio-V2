@@ -1,15 +1,17 @@
+import { publicOrigin } from "@/lib/library/origin";
 import Link from "next/link";
 import type { Metadata } from "next";
 import "./globals.css";
 import "./library.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(publicOrigin),
   title: {
-    default: "John Overton — The Library",
+    default: "John Overton Bell — The Library",
     template: "%s · The Library",
   },
   description:
-    "John Overton's portfolio, reimagined as a 3D library: project volumes, field notes and a guided collection.",
+    "John Overton Bell's portfolio, kept in the library of his ancestor Judge John Overton: project volumes, letters and a guided visit.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

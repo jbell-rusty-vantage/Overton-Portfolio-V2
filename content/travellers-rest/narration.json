@@ -1,0 +1,181 @@
+{
+  "note": "Interpretive guide. These lines were newly written for this visit and are spoken by a synthetic voice. They are not historical quotations, except where a cue names the manuscript it quotes.",
+  "voice": {
+    "model": "gpt-4o-mini-tts",
+    "voice": "onyx",
+    "instructions": "You are voicing a framed portrait that speaks: Judge John Overton of Tennessee, born in Virginia in 1766, an elderly lawyer and judge receiving a guest in his library around 1830. Warm, dry, courteous baritone with a soft upper-South cadence. Unhurried and precise, never theatrical, never a caricature. Speak as a gracious host showing a visitor his room."
+  },
+  "cues": [
+    {
+      "id": "greeting",
+      "text": "Good afternoon, and welcome to Travellers Rest. I am John Overton, or the likeness Ralph Earl painted of me in 1817. This is my library. The books beside my quills are the Tennessee Reports. A descendant of mine, another John, keeps his own work in the cabinet by the window. Where shall we begin?",
+      "gaze": [["The books beside", "shelf.reports"], ["A descendant of mine", "visitor"], ["in the cabinet", "shelf.projects"], ["Where shall", "visitor"]]
+    },
+    {
+      "id": "projects",
+      "text": "Then come to the cabinet by the south window. It belongs to John, my descendant. Each volume on its shelves is one of his projects. Choose a spine, and it will come to your hands.",
+      "gaze": [["Then come", "shelf.projects"], ["Choose a spine", "visitor"]]
+    },
+    {
+      "id": "letters",
+      "text": "On the writing table lies a letter I wrote to General Jackson on the fifth of November, 1832. Lift it, and read my hand for yourself. Three more of my papers addressed to him are in the chest by the north wall.",
+      "gaze": [["On the writing table", "desk.letter"], ["Three more", "drawer.correspondence"]]
+    },
+    {
+      "id": "room",
+      "text": "You are standing in the southwest room of the house I began in 1799. The federal survey of 1970 marks it Library. By 1808 I kept about one hundred and sixty law books here. Others lived and laboured on this land, and the house book on the table tells their part of the story.",
+      "gaze": [["By 1808", "shelf.reports"], ["Others lived", "visitor"], ["the house book", "book.companion"]]
+    },
+    {
+      "id": "explore",
+      "text": "Then the room is yours. Touch whatever interests you. I shall be here above the mantel if you want me.",
+      "gaze": []
+    },
+    {
+      "id": "bookmark",
+      "text": "Welcome back. Your place is marked. Shall I have the book brought to you?",
+      "gaze": []
+    },
+    {
+      "id": "cabinet",
+      "text": "I will leave you with John's present-day work. The screen in his cabinet shows it running.",
+      "gaze": [["The screen", "screen.cabinet"]]
+    },
+    {
+      "id": "project-generic",
+      "text": "A good choice. I shall leave you to read it.",
+      "gaze": []
+    },
+    {
+      "id": "book-companion",
+      "text": "The house book is a visitor's companion. Its four leaves tell of the land before the house, of the household, of a campaign, and of the law reports.",
+      "gaze": [["The house book", "book.companion"]]
+    },
+    {
+      "id": "object-overton-letter",
+      "text": "This is the letter itself. I sent Jackson a speech of Mr. Poinsett's, and I wrote: No man living but yourself can bring to a calm the perturbed spirits of the Southerners, respecting this unfortunate Tariff. Every page of the scan is here, with a transcription beside it.",
+      "quote": "The quoted sentence is transcribed from page 1 of the manuscript, Library of Congress item maj012882, and agrees with The Papers of Andrew Jackson, vol. X, p. 553.",
+      "gaze": [["This is the letter", "desk.letter"], ["Every page", "visitor"]]
+    },
+    {
+      "id": "object-maj012284",
+      "text": "A statement I signed for General Jackson in June of 1831, concerning the Seminole campaign of 1818.",
+      "gaze": []
+    },
+    {
+      "id": "object-maj011135",
+      "text": "A letter I sent from Sparta in August of 1827, during the contest for the presidency.",
+      "gaze": []
+    },
+    {
+      "id": "object-maj001399",
+      "text": "A short letter about money, from January of 1812. I asked Jackson for a bank credit of four hundred and twenty-nine dollars and forty cents.",
+      "gaze": []
+    },
+    {
+      "id": "object-tennessee-map",
+      "text": "A map of the Tennessee Government, printed in 1795, the year before statehood. It shows the country as a mapmaker of that day chose to draw it.",
+      "gaze": []
+    },
+    {
+      "id": "object-election-invitation",
+      "text": "An invitation printed on satin in December of 1828. It asks guests to a ball at Mr. Edmondson's hotel, to mark General Jackson's election.",
+      "gaze": []
+    },
+    {
+      "id": "object-murfree-leeper",
+      "text": "Murfree against Leeper, the first case in the first volume of the Tennessee Reports. It was decided in 1791, before I sat as a judge. My name is on it because I was the reporter.",
+      "gaze": [["Murfree against", "desk.casebook"], ["My name", "visitor"]]
+    },
+    {
+      "id": "object-andrew-jackson",
+      "text": "General Jackson, as Mr. Earl painted him. The same painter made my portrait. This canvas belongs to the National Portrait Gallery.",
+      "gaze": []
+    },
+    {
+      "id": "object-william-franklin",
+      "text": "The museum's records name two brothers: William, who was twelve, and Franklin, who was seven. I purchased them on the third of October, 1832. This card will take you to the record kept for each boy.",
+      "gaze": []
+    },
+    {
+      "id": "object-first-residents",
+      "text": "Long before my house, a Mississippian community lived on this ground. The museum holds a ceramic bowl with a notched rim that was found here.",
+      "gaze": []
+    },
+    {
+      "id": "object-mary-overton",
+      "text": "Mary McConnell White May Overton, whom I married in 1820. The museum keeps her portrait.",
+      "gaze": []
+    },
+    {
+      "id": "project-agentic-mission-control",
+      "text": "Mission Control. John describes it as a macro-scheduler built on Temporal. One agent launches long-running workflows that carry out coding and knowledge work. It is still in development.",
+      "gaze": []
+    },
+    {
+      "id": "project-agent-knowledge-services",
+      "text": "Knowledge Services. Research agents call it to capture their sources, to check each claim against what was actually captured, and to store only what is supported.",
+      "gaze": []
+    },
+    {
+      "id": "project-the-library",
+      "text": "The Library is this portfolio itself: rooms and shelves, where a project comes off the shelf and is read as a book.",
+      "gaze": []
+    },
+    {
+      "id": "project-vantage-movers",
+      "text": "Vantage Movers. John was lead developer of this platform for a long-distance moving company. Quote forms and telephone calls become leads, and each one is followed through to a booking.",
+      "gaze": []
+    },
+    {
+      "id": "project-ai-engineer-platform",
+      "text": "The AI Engineer Platform is an educational project, still under development. It uses deep research to support courses taken on the web and inside coding agents.",
+      "gaze": []
+    },
+    {
+      "id": "project-ai-engineer-worldsfair-showcase",
+      "text": "The AI Engineer Research Library holds research briefs for one thousand and seven conference talks, produced by a pipeline John built.",
+      "gaze": []
+    },
+    {
+      "id": "project-gowipe",
+      "text": "GoWipe. John has been this company's web developer since January of 2021. He builds and maintains its storefront and the event tracking behind it.",
+      "gaze": []
+    },
+    {
+      "id": "project-overtech-digital-services",
+      "text": "Overtech Digital Services is John's studio site. A prospect can read a finished case, send an inquiry and book a call.",
+      "gaze": []
+    },
+    {
+      "id": "project-biotech-knowledge-platform",
+      "text": "The Biotech Knowledge Platform is the earliest of John's current projects. What exists today is its knowledge graph foundation.",
+      "gaze": []
+    },
+    {
+      "id": "project-daryl-davis",
+      "text": "A public site for the musician, author and lecturer Daryl Davis. It presents his talks and press, and routes inquiries through booking forms.",
+      "gaze": []
+    },
+    {
+      "id": "project-polymarket-mcp-server",
+      "text": "The Polymarket server gives an agent tools to search prediction markets, read order books and preview orders. John built it in May of 2026, and has paused it.",
+      "gaze": []
+    },
+    {
+      "id": "project-biotech-research-ingestion",
+      "text": "Biotech Research Ingestion was the first generation of John's biotech research work. An agent drafts a research plan, and waits for a person's approval before it runs.",
+      "gaze": []
+    },
+    {
+      "id": "project-vantage-lead-analytics",
+      "text": "Lead Analytics is the reporting side of the Vantage Movers platform. It attributes every lead to a paid source, and follows it to a booking or a cancellation.",
+      "gaze": []
+    },
+    {
+      "id": "project-human-upgrade-ingestion-pipeline",
+      "text": "The Podcast Ingestion Pipeline discovers every episode of a long-running health podcast, and files each one as structured documents and transcripts. It was the first data source for John's biotech work.",
+      "gaze": []
+    }
+  ]
+}

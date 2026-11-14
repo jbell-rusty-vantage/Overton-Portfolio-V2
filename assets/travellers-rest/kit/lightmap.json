@@ -1,0 +1,9 @@
+{
+  "file": "public/travellers-rest/interior-light.glb",
+  "bytes": 3173932,
+  "sha256": "7481dba65218cc02b7f7ebb50e8b6dc431504f8d3536c5f42cc778eabefd7a4b",
+  "errors": 0,
+  "texture": 4096,
+  "samples": 48,
+  "cleanup": "CPU compositor denoise; raw atlas preserved in editable blend"
+}

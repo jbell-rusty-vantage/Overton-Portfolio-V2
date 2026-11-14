@@ -1,0 +1,38 @@
+{
+  "at": "2026-11-14",
+  "unitContracts": {
+    "passed": 81
+  },
+  "safetyRegressions": {
+    "passed": 4
+  },
+  "broadBrowser": {
+    "initialPassed": 52,
+    "initialFailed": 3,
+    "correctedRerunPassed": 3,
+    "totalDistinctPassed": 55
+  },
+  "office": "passed with isolated PGlite",
+  "authenticatedOfficeAndEstate": "passed with isolated PGlite",
+  "bookAudit": {
+    "views": 146,
+    "pages": 191,
+    "blank": 0,
+    "sparse": 0,
+    "overflow": 0,
+    "overflowX": 0,
+    "folioHit": 0,
+    "letterboxed": 0,
+    "cropped": 0,
+    "smallKnownRasterText": 0,
+    "unknownRasterText": 44,
+    "unloaded": 0,
+    "video": 2,
+    "clippedText": 0,
+    "toolbarCovered": 0
+  },
+  "build": "npm run build with DB_DEPLOY_SKIP=1 passed",
+  "lint": "zero warnings",
+  "typecheck": "passed",
+  "physicalPhone": "not available; phone emulation on workstation GPU"
+}

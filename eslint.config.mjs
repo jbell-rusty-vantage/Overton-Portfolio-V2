@@ -10,6 +10,7 @@ const eslintConfig = defineConfig([
     // Default ignores of eslint-config-next:
     ".next/**",
     ".next-office/**",
+    ".next-browser/**",
     ".local-library/**",
     "out/**",
     "build/**",

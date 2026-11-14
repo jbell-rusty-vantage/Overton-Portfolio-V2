@@ -1,0 +1,500 @@
+{
+  "version": 2,
+  "state": "staged-not-applied",
+  "posters": [
+    {
+      "slug": "agent-knowledge-services",
+      "title": "Knowledge Services",
+      "url": "/library/artwork/agent-knowledge-services-poster-v2.webp",
+      "chosen": "a",
+      "alternate": "b",
+      "alt": "Captured sources become checked, connected evidence.",
+      "bytes": 138214,
+      "source": "imagegen concept illustration",
+      "nativeSourceSize": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "slug": "agentic-mission-control",
+      "title": "Mission Control",
+      "url": "/library/artwork/agentic-mission-control-poster-v2.webp",
+      "chosen": "a",
+      "alternate": "b",
+      "alt": "One clock coordinates durable work across many agent stations.",
+      "bytes": 146964,
+      "source": "imagegen concept illustration",
+      "nativeSourceSize": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "slug": "the-library",
+      "title": "The Library",
+      "url": "/library/artwork/the-library-poster-v2.webp",
+      "chosen": "a",
+      "alternate": "b",
+      "alt": "A book opens into a place for exploring the work.",
+      "bytes": 137622,
+      "source": "imagegen concept illustration",
+      "nativeSourceSize": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "slug": "vantage-movers",
+      "title": "Vantage Movers",
+      "url": "/library/artwork/vantage-movers-poster-v2.webp",
+      "chosen": "b",
+      "alternate": "a",
+      "alt": "Software connects a quote to the moving journey.",
+      "bytes": 124256,
+      "source": "imagegen concept illustration",
+      "nativeSourceSize": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "slug": "ai-engineer-platform",
+      "title": "AI Engineer Platform",
+      "url": "/library/artwork/ai-engineer-platform-poster-v2.webp",
+      "chosen": "a",
+      "alternate": "b",
+      "alt": "Learning connects books, research and coding environments.",
+      "bytes": 141504,
+      "source": "imagegen concept illustration",
+      "nativeSourceSize": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "slug": "ai-engineer-worldsfair-showcase",
+      "title": "AI Engineer Research Library",
+      "url": "/library/artwork/ai-engineer-worldsfair-showcase-poster-v2.webp",
+      "chosen": "a",
+      "alternate": "b",
+      "alt": "Many recorded talks become one browsable research library.",
+      "bytes": 147662,
+      "source": "imagegen concept illustration",
+      "nativeSourceSize": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "slug": "gowipe",
+      "title": "GoWipe",
+      "url": "/library/artwork/gowipe-poster-v2.webp",
+      "chosen": "b",
+      "alternate": "a",
+      "alt": "A bright bamboo-wipe storefront connects products to their uses.",
+      "bytes": 103458,
+      "source": "imagegen concept illustration",
+      "nativeSourceSize": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "slug": "overtech-digital-services",
+      "title": "Overtech Digital Services",
+      "url": "/library/artwork/overtech-digital-services-poster-v2.webp",
+      "chosen": "a",
+      "alternate": "b",
+      "alt": "The studio connects a portfolio visit to a conversation.",
+      "bytes": 129706,
+      "source": "imagegen concept illustration",
+      "nativeSourceSize": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "slug": "biotech-knowledge-platform",
+      "title": "Biotech Knowledge Platform",
+      "url": "/library/artwork/biotech-knowledge-platform-poster-v2.webp",
+      "chosen": "a",
+      "alternate": "b",
+      "alt": "Biological knowledge grows from connected evidence.",
+      "bytes": 133704,
+      "source": "imagegen concept illustration",
+      "nativeSourceSize": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "slug": "daryl-davis",
+      "title": "Daryl Davis",
+      "url": "/library/artwork/daryl-davis-poster-v2.webp",
+      "chosen": "a",
+      "alternate": "b",
+      "alt": "The supplied public website connects the speaker, musician and book.",
+      "bytes": 24888,
+      "source": "owner-supplied original homepage film at 6.43 seconds",
+      "nativeSourceSize": [
+        1280,
+        720
+      ]
+    },
+    {
+      "slug": "polymarket-mcp-server",
+      "title": "Polymarket MCP Server",
+      "url": "/library/artwork/polymarket-mcp-server-poster-v2.webp",
+      "chosen": "a",
+      "alternate": "b",
+      "alt": "Agent access joins market data to gated actions.",
+      "bytes": 127520,
+      "source": "imagegen concept illustration",
+      "nativeSourceSize": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "slug": "biotech-research-ingestion",
+      "title": "Biotech Research Ingestion",
+      "url": "/library/artwork/biotech-research-ingestion-poster-v2.webp",
+      "chosen": "a",
+      "alternate": "b",
+      "alt": "A human checkpoint controls a staged research pipeline.",
+      "bytes": 137770,
+      "source": "imagegen concept illustration",
+      "nativeSourceSize": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "slug": "vantage-lead-analytics",
+      "title": "Lead Analytics",
+      "url": "/library/artwork/vantage-lead-analytics-poster-v2.webp",
+      "chosen": "a",
+      "alternate": "b",
+      "alt": "Attributed leads connect spending to recorded outcomes.",
+      "bytes": 125726,
+      "source": "imagegen concept illustration",
+      "nativeSourceSize": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "slug": "human-upgrade-ingestion-pipeline",
+      "title": "Podcast Ingestion Pipeline",
+      "url": "/library/artwork/human-upgrade-ingestion-pipeline-poster-v2.webp",
+      "chosen": "a",
+      "alternate": "b",
+      "alt": "Podcast audio becomes structured transcript archives.",
+      "bytes": 142868,
+      "source": "imagegen concept illustration",
+      "nativeSourceSize": [
+        1122,
+        1402
+      ]
+    }
+  ],
+  "replacements": [
+    {
+      "from": "/library/artwork/agent-knowledge-services-architecture.webp",
+      "to": "/library/artwork/agent-knowledge-services-architecture-v2.webp",
+      "ownPage": true,
+      "reason": "Four large authored component labels; original detailed diagram retained unchanged."
+    },
+    {
+      "from": "/library/artwork/agentic-mission-control-architecture.webp",
+      "to": "/library/artwork/agentic-mission-control-architecture-v2.webp",
+      "ownPage": true,
+      "reason": "Four large authored component labels; original detailed diagram retained unchanged."
+    },
+    {
+      "from": "/library/artwork/the-library-architecture.webp",
+      "to": "/library/artwork/the-library-architecture-v2.webp",
+      "ownPage": true,
+      "reason": "Four large authored component labels; original detailed diagram retained unchanged."
+    },
+    {
+      "from": "/library/artwork/vantage-movers-architecture.webp",
+      "to": "/library/artwork/vantage-movers-architecture-v2.webp",
+      "ownPage": true,
+      "reason": "Four large authored component labels; original detailed diagram retained unchanged."
+    },
+    {
+      "from": "/library/artwork/ai-engineer-platform-architecture.webp",
+      "to": "/library/artwork/ai-engineer-platform-architecture-v2.webp",
+      "ownPage": true,
+      "reason": "Four large authored component labels; original detailed diagram retained unchanged."
+    },
+    {
+      "from": "/library/artwork/ai-engineer-worldsfair-showcase-architecture.webp",
+      "to": "/library/artwork/ai-engineer-worldsfair-showcase-architecture-v2.webp",
+      "ownPage": true,
+      "reason": "Four large authored component labels; original detailed diagram retained unchanged."
+    },
+    {
+      "from": "/library/artwork/gowipe-architecture.webp",
+      "to": "/library/artwork/gowipe-architecture-v2.webp",
+      "ownPage": true,
+      "reason": "Four large authored component labels; original detailed diagram retained unchanged."
+    },
+    {
+      "from": "/library/artwork/overtech-digital-services-architecture.webp",
+      "to": "/library/artwork/overtech-digital-services-architecture-v2.webp",
+      "ownPage": true,
+      "reason": "Four large authored component labels; original detailed diagram retained unchanged."
+    },
+    {
+      "from": "/library/artwork/biotech-knowledge-platform-architecture.webp",
+      "to": "/library/artwork/biotech-knowledge-platform-architecture-v2.webp",
+      "ownPage": true,
+      "reason": "Four large authored component labels; original detailed diagram retained unchanged."
+    },
+    {
+      "from": "/library/artwork/daryl-davis-architecture.webp",
+      "to": "/library/artwork/daryl-davis-architecture-v2.webp",
+      "ownPage": true,
+      "reason": "Four large authored component labels; original detailed diagram retained unchanged."
+    },
+    {
+      "from": "/library/artwork/polymarket-mcp-server-architecture.webp",
+      "to": "/library/artwork/polymarket-mcp-server-architecture-v2.webp",
+      "ownPage": true,
+      "reason": "Four large authored component labels; original detailed diagram retained unchanged."
+    },
+    {
+      "from": "/library/artwork/biotech-research-ingestion-architecture.webp",
+      "to": "/library/artwork/biotech-research-ingestion-architecture-v2.webp",
+      "ownPage": true,
+      "reason": "Four large authored component labels; original detailed diagram retained unchanged."
+    },
+    {
+      "from": "/library/artwork/vantage-lead-analytics-architecture.webp",
+      "to": "/library/artwork/vantage-lead-analytics-architecture-v2.webp",
+      "ownPage": true,
+      "reason": "Four large authored component labels; original detailed diagram retained unchanged."
+    },
+    {
+      "from": "/library/artwork/human-upgrade-ingestion-pipeline-architecture.webp",
+      "to": "/library/artwork/human-upgrade-ingestion-pipeline-architecture-v2.webp",
+      "ownPage": true,
+      "reason": "Four large authored component labels; original detailed diagram retained unchanged."
+    },
+    {
+      "from": "/library/artwork/gowipe-home.webp",
+      "to": "/library/artwork/gowipe-home-v2.webp",
+      "reason": "Deliberate complete section detail cropped at a natural boundary; no fabricated pixels."
+    },
+    {
+      "from": "/library/artwork/gowipe-collection.webp",
+      "to": "/library/artwork/gowipe-collection-v2.webp",
+      "reason": "Deliberate complete section detail cropped at a natural boundary; no fabricated pixels."
+    },
+    {
+      "from": "/library/artwork/daryl-davis-home.webp",
+      "to": "/library/artwork/daryl-davis-home-v2.webp",
+      "reason": "Deliberate complete section detail cropped at a natural boundary; no fabricated pixels."
+    },
+    {
+      "from": "/library/artwork/daryl-davis-book.webp",
+      "to": "/library/artwork/daryl-davis-book-v2.webp",
+      "reason": "Deliberate complete section detail cropped at a natural boundary; no fabricated pixels."
+    },
+    {
+      "from": "/library/artwork/daryl-davis-bio.webp",
+      "to": "/library/artwork/daryl-davis-bio-v2.webp",
+      "reason": "Deliberate complete section detail cropped at a natural boundary; no fabricated pixels."
+    },
+    {
+      "from": "/library/artwork/ai-engineer-worldsfair-showcase-brief.webp",
+      "to": "/library/artwork/ai-engineer-worldsfair-showcase-brief-v2.webp",
+      "reason": "Deliberate complete section detail cropped at a natural boundary; no fabricated pixels."
+    },
+    {
+      "from": "/library/artwork/ai-engineer-worldsfair-showcase-talks.webp",
+      "to": "/library/artwork/ai-engineer-worldsfair-showcase-talks-v2.webp",
+      "reason": "Deliberate complete section detail cropped at a natural boundary; no fabricated pixels."
+    },
+    {
+      "from": "/library/artwork/overtech-digital-services-services.webp",
+      "to": "/library/artwork/overtech-digital-services-services-v2.webp",
+      "reason": "Deliberate complete section detail cropped at a natural boundary; no fabricated pixels."
+    },
+    {
+      "from": "/library/artwork/overtech-digital-services-start.webp",
+      "to": "/library/artwork/overtech-digital-services-start-v2.webp",
+      "reason": "Deliberate complete section detail cropped at a natural boundary; no fabricated pixels."
+    },
+    {
+      "from": "/library/artwork/overtech-digital-services-work.webp",
+      "to": "/library/artwork/overtech-digital-services-work-v2.webp",
+      "reason": "Deliberate complete section detail cropped at a natural boundary; no fabricated pixels."
+    },
+    {
+      "from": "/library/artwork/agentic-mission-control-case-study.webp",
+      "to": "/library/artwork/agentic-mission-control-case-study-v2.webp",
+      "reason": "Complete section recovered from the owner-supplied full-page capture.",
+      "source": "agentic-mission-control/case-study-full.png"
+    },
+    {
+      "from": "/library/artwork/agentic-mission-control-episode.webp",
+      "to": "/library/artwork/agentic-mission-control-episode-v2.webp",
+      "reason": "Complete section recovered from the owner-supplied full-page capture.",
+      "source": "agentic-mission-control/episode-live-full.png"
+    },
+    {
+      "from": "/library/artwork/overtech-digital-services-home.webp",
+      "to": "/library/artwork/overtech-digital-services-home-v2.webp",
+      "reason": "Complete section recovered from the owner-supplied full-page capture.",
+      "source": "overtech-digital-services/home-full.png"
+    },
+    {
+      "from": "/library/artwork/overtech-digital-services-tools.webp",
+      "to": "/library/artwork/overtech-digital-services-tools-v2.webp",
+      "reason": "Complete section recovered from the owner-supplied full-page capture.",
+      "source": "overtech-digital-services/tools-full.png"
+    },
+    {
+      "from": "/library/artwork/ai-engineer-worldsfair-showcase-home.webp",
+      "to": "/library/artwork/ai-engineer-worldsfair-showcase-home-v2.webp",
+      "reason": "Complete section recovered from the owner-supplied full-page capture.",
+      "source": "ai-engineer-worldsfair-showcase/home-full.png"
+    },
+    {
+      "from": "/library/artwork/agentic-mission-control-harness.webp",
+      "to": "/library/artwork/agentic-mission-control-harness-v2.webp",
+      "reason": "Recaptured complete source section or complete purchasing component; source/bounds recorded in section-captures/sources.json."
+    },
+    {
+      "from": "/library/artwork/agentic-mission-control-report.webp",
+      "to": "/library/artwork/agentic-mission-control-report-v2.webp",
+      "reason": "Recaptured complete source section or complete purchasing component; source/bounds recorded in section-captures/sources.json."
+    },
+    {
+      "from": "/library/artwork/agentic-mission-control-timeline.webp",
+      "to": "/library/artwork/agentic-mission-control-timeline-v2.webp",
+      "reason": "Recaptured complete source section or complete purchasing component; source/bounds recorded in section-captures/sources.json."
+    },
+    {
+      "from": "/library/artwork/gowipe-product.webp",
+      "to": "/library/artwork/gowipe-product-v2.webp",
+      "reason": "Recaptured complete source section or complete purchasing component; source/bounds recorded in section-captures/sources.json."
+    },
+    {
+      "from": "/library/artwork/gowipe-science.webp",
+      "to": "/library/artwork/gowipe-science-v2.webp",
+      "reason": "Recaptured complete source section or complete purchasing component; source/bounds recorded in section-captures/sources.json."
+    },
+    {
+      "from": "/library/artwork/gowipe-story.webp",
+      "to": "/library/artwork/gowipe-story-v2.webp",
+      "reason": "Recaptured complete source section or complete purchasing component; source/bounds recorded in section-captures/sources.json."
+    },
+    {
+      "from": "/library/artwork/agentic-mission-control-reel-poster.webp",
+      "to": "/library/artwork/agentic-mission-control-reel-poster-v2.webp",
+      "reason": "Real product-use frame 2 from supplied recording; selection contact sheet retained."
+    },
+    {
+      "from": "/library/artwork/ai-engineer-worldsfair-showcase-walkthrough-poster.webp",
+      "to": "/library/artwork/ai-engineer-worldsfair-showcase-walkthrough-poster-v2.webp",
+      "reason": "Real product-use frame 1 from supplied recording; selection contact sheet retained."
+    },
+    {
+      "from": "/library/artwork/daryl-davis-homepage-original-poster.webp",
+      "to": "/library/artwork/daryl-davis-homepage-original-poster-v2.webp",
+      "reason": "Real product-use frame 2 from supplied recording; selection contact sheet retained."
+    },
+    {
+      "from": "/library/artwork/gowipe-walkthrough-poster.webp",
+      "to": "/library/artwork/gowipe-walkthrough-poster-v2.webp",
+      "reason": "Real product-use frame 3 from supplied recording; selection contact sheet retained."
+    },
+    {
+      "from": "/library/artwork/overtech-digital-services-walkthrough-poster.webp",
+      "to": "/library/artwork/overtech-digital-services-walkthrough-poster-v2.webp",
+      "reason": "Real product-use frame 1 from supplied recording; selection contact sheet retained."
+    },
+    {
+      "from": "/library/artwork/vantage-movers-walkthrough-poster.webp",
+      "to": "/library/artwork/vantage-movers-walkthrough-poster-v2.webp",
+      "reason": "Real product-use frame 1 from supplied recording; selection contact sheet retained."
+    }
+  ],
+  "rasterText": {
+    "/library/artwork/agent-knowledge-services-architecture-v2.webp": {
+      "sourceWidth": 1200,
+      "smallestFontPx": 52,
+      "minimumRenderedAt306Px": 13.26
+    },
+    "/library/artwork/agentic-mission-control-architecture-v2.webp": {
+      "sourceWidth": 1200,
+      "smallestFontPx": 52,
+      "minimumRenderedAt306Px": 13.26
+    },
+    "/library/artwork/the-library-architecture-v2.webp": {
+      "sourceWidth": 1200,
+      "smallestFontPx": 52,
+      "minimumRenderedAt306Px": 13.26
+    },
+    "/library/artwork/vantage-movers-architecture-v2.webp": {
+      "sourceWidth": 1200,
+      "smallestFontPx": 52,
+      "minimumRenderedAt306Px": 13.26
+    },
+    "/library/artwork/ai-engineer-platform-architecture-v2.webp": {
+      "sourceWidth": 1200,
+      "smallestFontPx": 52,
+      "minimumRenderedAt306Px": 13.26
+    },
+    "/library/artwork/ai-engineer-worldsfair-showcase-architecture-v2.webp": {
+      "sourceWidth": 1200,
+      "smallestFontPx": 52,
+      "minimumRenderedAt306Px": 13.26
+    },
+    "/library/artwork/gowipe-architecture-v2.webp": {
+      "sourceWidth": 1200,
+      "smallestFontPx": 52,
+      "minimumRenderedAt306Px": 13.26
+    },
+    "/library/artwork/overtech-digital-services-architecture-v2.webp": {
+      "sourceWidth": 1200,
+      "smallestFontPx": 52,
+      "minimumRenderedAt306Px": 13.26
+    },
+    "/library/artwork/biotech-knowledge-platform-architecture-v2.webp": {
+      "sourceWidth": 1200,
+      "smallestFontPx": 52,
+      "minimumRenderedAt306Px": 13.26
+    },
+    "/library/artwork/daryl-davis-architecture-v2.webp": {
+      "sourceWidth": 1200,
+      "smallestFontPx": 52,
+      "minimumRenderedAt306Px": 13.26
+    },
+    "/library/artwork/polymarket-mcp-server-architecture-v2.webp": {
+      "sourceWidth": 1200,
+      "smallestFontPx": 52,
+      "minimumRenderedAt306Px": 13.26
+    },
+    "/library/artwork/biotech-research-ingestion-architecture-v2.webp": {
+      "sourceWidth": 1200,
+      "smallestFontPx": 52,
+      "minimumRenderedAt306Px": 13.26
+    },
+    "/library/artwork/vantage-lead-analytics-architecture-v2.webp": {
+      "sourceWidth": 1200,
+      "smallestFontPx": 52,
+      "minimumRenderedAt306Px": 13.26
+    },
+    "/library/artwork/human-upgrade-ingestion-pipeline-architecture-v2.webp": {
+      "sourceWidth": 1200,
+      "smallestFontPx": 52,
+      "minimumRenderedAt306Px": 13.26
+    }
+  }
+}

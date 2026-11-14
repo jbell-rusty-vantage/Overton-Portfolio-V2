@@ -1,0 +1,167 @@
+{
+  "judge-overton": {
+    "original": {
+      "file": "judge-overton.jpg",
+      "bytes": 742213,
+      "sha256": "363f7b5de69dc7606fec2401b305dacbe9bb0445f6b36c66de8fd5186d3283ba",
+      "pixels": [
+        2250,
+        2820
+      ]
+    },
+    "delivery": {
+      "url": "/travellers-rest/archive/judge-overton.webp",
+      "pixels": [
+        1277,
+        1600
+      ],
+      "bytes": 349244,
+      "sha256": "d9a24814bc054038d8ed4d13cda0d0afabf59826813e444238d4c00be66383e6"
+    }
+  },
+  "andrew-jackson": {
+    "original": {
+      "file": "andrew-jackson.jpg",
+      "bytes": 370711,
+      "sha256": "37e344901024b0ed652263381f116df682c9435594f4c7111d6d4fbc2939fde8",
+      "pixels": [
+        1867,
+        2200
+      ]
+    },
+    "delivery": {
+      "url": "/travellers-rest/archive/andrew-jackson.webp",
+      "pixels": [
+        1358,
+        1600
+      ],
+      "bytes": 253030,
+      "sha256": "5f28cffebfc5801125ac03c5ebbc8cff3016429ebae623a88c4a0381b4e4b584"
+    }
+  },
+  "overton-letter": {
+    "original": {
+      "file": "overton-letter.jpg",
+      "bytes": 416148,
+      "sha256": "a16ba9b67a20cf58f0159f1615f7d391c78e303195c47aef5ffa9f7755349f09",
+      "pixels": [
+        2270,
+        2768
+      ]
+    },
+    "delivery": {
+      "url": "/travellers-rest/archive/overton-letter.webp",
+      "pixels": [
+        1312,
+        1600
+      ],
+      "bytes": 235680,
+      "sha256": "509ced0c9d1cefe8161ee6d836d1a6f61fa0d7948b9a80a81b97c288caf8a23d"
+    }
+  },
+  "election-invitation": {
+    "original": {
+      "file": "election-invitation.jpg",
+      "bytes": 533425,
+      "sha256": "7e68620e56800c4a0d540f8a3d8bd6b6045d93d46ae2071befe17adf194e5a4a",
+      "pixels": [
+        1600,
+        1909
+      ]
+    },
+    "delivery": {
+      "url": "/travellers-rest/archive/election-invitation.webp",
+      "pixels": [
+        1341,
+        1600
+      ],
+      "bytes": 579118,
+      "sha256": "22f5738a2e65ea21354478821374502e0a2ed83d75d055db7c4d937499127d6a"
+    }
+  },
+  "murfree-leeper": {
+    "original": {
+      "file": "murfree-leeper.pdf",
+      "bytes": 103956,
+      "sha256": "2dd0b1b68870d101c42cfa62787dc07a80637eb2becb51d2b6943c2bd11cfdc0",
+      "pages": 2
+    },
+    "delivery": {
+      "url": "/travellers-rest/archive/murfree-leeper.webp",
+      "pixels": [
+        737,
+        1188
+      ],
+      "bytes": 146238,
+      "sha256": "541f09afa4efc0f6b94972f3e462f1f1a09a14bbb03435100de10f441e3e31cf"
+    }
+  },
+  "tennessee-map": {
+    "original": {
+      "file": "tennessee-map.jpg",
+      "bytes": 913892,
+      "sha256": "9f683857ab688b312557ba52e8a738e22e55a3f0a3ad90bc243ef2cd9c989ab8",
+      "pixels": [
+        3346,
+        2016
+      ]
+    },
+    "delivery": {
+      "url": "/travellers-rest/archive/tennessee-map.webp",
+      "pixels": [
+        1600,
+        964
+      ],
+      "bytes": 291124,
+      "sha256": "2e1e34ec738f8563a1c2c89f7f937532bae016a50f7ff0829661bbf8a97eefac"
+    }
+  },
+  "center-hall": {
+    "original": {
+      "file": "center-hall.jpg",
+      "bytes": 87526,
+      "sha256": "7286b53b000dc51d8c3665f8579b2813fd30071b6dbb536dc205c2bd5c800351",
+      "pixels": [
+        1024,
+        740
+      ]
+    },
+    "delivery": {
+      "url": "/travellers-rest/archive/center-hall.webp",
+      "pixels": [
+        1024,
+        740
+      ],
+      "bytes": 68100,
+      "sha256": "32b45da22c9f76a74edd203e7cbc536fe6d59e1c13cb7efcb3b2a992a90b80a8"
+    }
+  },
+  "house-color": {
+    "original": {
+      "file": "house-color.jpg",
+      "bytes": 552167,
+      "sha256": "30011fa18b5c5da8cd0c8bc89e046d119a3a1c7c2b2b51cc0750c832de9889ca",
+      "pixels": [
+        1024,
+        683
+      ]
+    },
+    "delivery": {
+      "url": "/travellers-rest/archive/house-color.webp",
+      "pixels": [
+        1024,
+        683
+      ],
+      "bytes": 213532,
+      "sha256": "cf2c146265c46d012273769f175c23beb20297a934e27470165572a4d9694b37"
+    }
+  },
+  "south-elevation": {
+    "original": {
+      "file": "tn-14-survey.pdf",
+      "bytes": 181784,
+      "sha256": "32b2af32e7e0bc162c1c9a5c05dd540824feddedcfb90b43430d21c8118bb07e",
+      "pages": 10
+    }
+  }
+}

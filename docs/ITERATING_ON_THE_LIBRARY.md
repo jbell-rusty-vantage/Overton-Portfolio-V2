@@ -2,6 +2,10 @@
 
 Start from the change you want to make. PostgreSQL owns the collection and its display names. Blender owns the furniture and the location of each anchor. A shelf title, a book page, or a project cover can change without rebuilding the hall.
 
+For the current **Travellers Rest** entrance, open the [full private visit](http://127.0.0.1:3078/admin/library/preview). The [delivery notes](TRAVELLERS_REST_DELIVERY.md) cover the four authored house-book leaves, archived objects, model tiers, renderer measurements and scoped cabinet program. The library editor has a Travellers Rest section for the guided release and its optional UTC window. Project and book visibility still control which volumes appear in the cabinet.
+
+The owner’s November 12 direction is the [continuous 3D library](TRAVELLERS_REST_IMMERSIVE.md). Follow that brief for the persistent room, speaking portrait, physical project books and manuscript inspection.
+
 | Change | Edit here | Check the result here |
 | --- | --- | --- |
 | Add content or change its visibility | [Local dashboard](http://127.0.0.1:3078/admin) → Projects, Blog posts, Favorites, or Events & signals → Moments | [Draft preview](http://127.0.0.1:3078/admin/library/preview), then the [visitor catalog](http://127.0.0.1:3078/catalog) after publication |
@@ -48,6 +52,32 @@ Room and shelf slugs appear in deep links and seeds. Scene node names are GLB an
 | `favorites-wing` | `favorites-books`, `favorites-tools`, `favorites-longevity` |
 | `reading-room` | `reading-room-courses`, `reading-room-articles` |
 | `entrance`, `computer-station` | No bookshelves; the station uses `main` and `side` screens. |
+
+## Change the continuous Travellers Rest library
+
+Start with [the engine reference](WORLD_ENGINE.md) for the file map and conventions, [the survey comparison](TRAVELLERS_REST_SURVEY.md) before moving a wall, door or window, and [the next-session instructions](TRAVELLERS_REST_NEXT.md) for the ordered work.
+
+The house program is now edition 2: **Enter the library** opens one 3D world that stays mounted through travel, reading, close inspection and playback. [Owner review and measurements](TRAVELLERS_REST_CONTINUOUS.md) · [Private preview](http://127.0.0.1:3078/admin/library/preview)
+
+| To change | Edit | Then |
+| --- | --- | --- |
+| What a project book says | The project and its book in the office, as before | Reload. The physical volume, its spine, its pages and the directory all read the same projected `Volume`. A new project appears in the family cabinet on the shelf it has in the collection. |
+| Where a volume stands in this house only | `placements` in the house program (`ui_layouts`, slug `travellers-rest-visit`) | An entry `{ book, shelf, position }` overrides the collection's shelf for the cabinet without moving the book in the older hall. There is no office form for this yet. |
+| The custodian's words | [narration.json](../content/travellers-rest/narration.json) | `python scripts/voice-estate.py` voices only the cues whose text changed, checks that each was spoken to its last word, and rewrites the timeline. Then run the importer. |
+| A stop, a resting place or a camera position | [anchors-v2.json](../assets/travellers-rest/anchors-v2.json), and `places` in [world.ts](../lib/estate/world.ts) for the line of sight | `node scripts/pack-estate.mjs --edition 2`, `npm test`, then the importer. The packer writes the anchors into both shell tiers and the release action checks them. |
+| The room itself | [room.ts](../components/estate/world/engine/room.ts) for joinery, finishes and furniture; [engine.ts](../components/estate/world/engine/engine.ts) for light, fire, drawers and the screen | Reload the preview. Nothing is packed: the interior is built in the browser, so every binding, leaf and sheet keeps its own transform. |
+| A letter or other document | Add its scans and checked transcription to [letters.json](../assets/travellers-rest/archive/letters.json), or a plate to [catalog.json](../assets/travellers-rest/archive/catalog.json) with a placement in [objects.ts](../lib/estate/objects.ts) | `python assets/travellers-rest/archive/prepare-world.py` for plate derivatives, then the importer. Add the same file keys to `scripts/estate-inventory.mjs`; `npm test` fails if the two lists differ. |
+| A piece of furniture or joinery made in Blender | [build_kit.py](../assets/travellers-rest/kit/build_kit.py), following [the kit notes](../assets/travellers-rest/kit/README.md) | `npm run kit:pack`, `npm test` (the kit contract), reload with and without `?kit=off`, then the importer so the kit files are delivered. |
+| How a visitor walks, looks or is routed | [controller.ts](../components/estate/world/engine/controller.ts) and [navmesh.ts](../components/estate/world/engine/navmesh.ts) | `npm run test:navigation`. Furniture that moves needs its obstacle moved too. |
+| Trees, garden, paths or the people outside | [plan.ts](../components/estate/world/engine/grounds/plan.ts) for positions; the other files beside it for how each thing is made | Reload; `npm run estate:look` for screenshots. Present-day visitors and staff only. |
+| How a book page is laid out or handled | [paginate.ts](../components/estate/world/paginate.ts), [sheets.ts](../components/estate/world/sheets.ts), [book.css](../components/estate/world/book.css), [Reader.tsx](../components/estate/world/Reader.tsx) | `npm run test:books`, and look at every volume: the page audit lives in `.local-library/books/` until it is moved into `scripts/`. |
+| The owner's introduction on the entrance | [Entrance.tsx](../components/estate/Entrance.tsx) (`.ea-intro`) | Reload. The custodian's matching words are in the narration file. |
+
+**Import and release.** `node --env-file=.env --env-file=.env.local scripts/seed-estate.mjs` prints a read-only plan. `--apply` uploads new delivery files under `travellers-rest/v2/<key>-<hash>`, verifies every object by SHA-256, links them in one transaction and upgrades the house program in place with an audit record and a revision. It refuses to change the edition of a published visit. Release and withdrawal stay in the office under **Travellers Rest**; the action validates both edition 2 scene tiers against the anchor contract before activating them.
+
+**Renderer fixture.** `/dev/world-lab` on the loopback review server mounts the engine alone with stand-in volumes and no database. It exists for visual iteration and frame-time checks of the room itself and returns 404 in production.
+
+**Fallbacks that must keep working.** A missing model or lost WebGL context switches to the plain pages (the earlier rooms, house book and cabinet). Reduced motion keeps the still portrait, shows each cue's full text and places books and documents without flights. Sound is off until the visitor chooses it. `npm run test:browser` covers each of these.
 
 ## Close a session
 

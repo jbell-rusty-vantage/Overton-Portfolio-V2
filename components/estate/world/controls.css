@@ -1,0 +1,244 @@
+/* Moving through the house: the plan, mouse-look and the thumb-stick. Uses the
+   continuous library's own colours (world.css) and sits clear of its panels. */
+.tn-tools {
+  position: absolute;
+  top: 64px;
+  left: clamp(12px, 2.4vw, 28px);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+.tn-tools .tn-tool {
+  min-height: 34px;
+  padding: 0 11px;
+  font-size: 12.5px;
+  background: rgba(20, 26, 21, 0.78);
+}
+.tn-tools .tn-tool[aria-expanded="true"],
+.tn-tools .tn-tool[aria-pressed="true"] {
+  border-color: var(--tw-gold);
+  color: var(--tw-gold);
+}
+/* Mouse-look needs a mouse. */
+.tn-tools .tn-mouse {
+  display: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .tn-tools .tn-mouse {
+    display: inline-flex;
+  }
+}
+.tn-plan {
+  position: absolute;
+  top: 106px;
+  left: clamp(12px, 2.4vw, 28px);
+  width: min(236px, calc(100vw - 24px));
+  padding: 7px 7px 5px;
+  background: rgba(18, 24, 20, 0.84);
+  border: 1px solid var(--tw-line);
+  z-index: 2;
+}
+.tn-sheet {
+  position: relative;
+  aspect-ratio: 10.3 / 9.2;
+}
+.tn-sheet svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: crosshair;
+}
+.tn-room {
+  fill: rgba(244, 238, 221, 0.1);
+  stroke: rgba(244, 238, 221, 0.78);
+  stroke-width: 0.11;
+}
+.tn-porch {
+  fill: rgba(244, 238, 221, 0.05);
+  stroke: rgba(244, 238, 221, 0.4);
+  stroke-width: 0.06;
+}
+.tn-step {
+  stroke: rgba(244, 238, 221, 0.3);
+  stroke-width: 0.05;
+}
+/* A doorway is a gap in the wall. */
+.tn-door {
+  fill: #2b332c;
+  stroke: none;
+}
+.tn-solid {
+  fill: rgba(223, 188, 122, 0.3);
+  stroke: rgba(223, 188, 122, 0.5);
+  stroke-width: 0.04;
+}
+.tn-you circle {
+  fill: #fff6df;
+  stroke: #1c2019;
+  stroke-width: 0.07;
+}
+.tn-you .tn-nose {
+  fill: #fff6df;
+  stroke: #1c2019;
+  stroke-width: 0.05;
+  stroke-linejoin: round;
+}
+.tn-you .tn-cone {
+  fill: rgba(255, 246, 223, 0.2);
+}
+.tn-you[data-beyond] circle,
+.tn-you[data-beyond] .tn-nose {
+  fill: var(--tw-gold);
+}
+.tn-stop {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+}
+.tn-stop::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  border: 1.5px solid var(--tw-gold);
+  background: rgba(20, 26, 21, 0.9);
+  transition: inset 0.12s ease;
+}
+.tn-stop:hover::after,
+.tn-stop:focus-visible::after {
+  inset: 3px;
+  background: var(--tw-gold);
+}
+.tn-stop[aria-current]::after {
+  inset: 4px;
+  background: var(--tw-gold);
+}
+.tn-note {
+  margin: 4px 2px 0 !important;
+  font: 400 13px/1.3 var(--tw-serif);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* Thumb-stick: shown where there is no keyboard to walk with. */
+.tn-stick {
+  position: absolute;
+  left: clamp(14px, 4vw, 30px);
+  bottom: 92px;
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  border: 1px solid var(--tw-line);
+  background: radial-gradient(circle, rgba(20, 26, 21, 0.5) 0 34%, rgba(20, 26, 21, 0.72) 100%);
+  display: none;
+  place-items: center;
+  touch-action: none;
+  -webkit-touch-callout: none;
+  z-index: 2;
+}
+@media (pointer: coarse) {
+  .tn-stick {
+    display: grid;
+  }
+  .tn-stop {
+    width: 26px;
+    height: 26px;
+    margin: -13px 0 0 -13px;
+  }
+  .tn-stop::after {
+    inset: 8px;
+  }
+  .tn-plan {
+    width: min(300px, calc(100vw - 24px));
+  }
+}
+.tn-knob {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(223, 188, 122, 0.82);
+  border: 1px solid rgba(28, 32, 25, 0.6);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+  transition: transform 0.14s ease-out;
+}
+.tn-stick[data-active] .tn-knob {
+  transition: none;
+  background: var(--tw-gold);
+}
+/* Mouse-look: the middle of the view is the pointer. */
+.tn-cross {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 246, 223, 0.92);
+  box-shadow: 0 0 0 1px rgba(28, 32, 25, 0.6);
+  pointer-events: none;
+  z-index: 3;
+}
+.tn-locked {
+  position: absolute;
+  left: 50%;
+  top: 64px;
+  transform: translateX(-50%);
+  max-width: min(92vw, 560px);
+  padding: 7px 12px;
+  background: var(--tw-panel);
+  border: 1px solid var(--tw-line);
+  font-size: 12.5px;
+  pointer-events: none;
+  z-index: 3;
+}
+.tn-speed {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  font-size: 12.5px;
+}
+.tn-speed input {
+  flex: 1;
+  min-width: 0;
+  accent-color: var(--tw-gold);
+}
+.tn-speed output {
+  width: 3.2em;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.tw-help {
+  overflow: auto;
+}
+@media (max-width: 700px) {
+  .tn-tools {
+    top: 58px;
+  }
+  .tn-plan {
+    top: 98px;
+  }
+  .tn-stick {
+    bottom: 78px;
+  }
+  /* The custodian's sheet takes the lower half of a small screen. */
+  .tw:has(.tw-custodian) .tn-stick,
+  .tw:has(.tw-custodian) .tn-plan {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tn-knob,
+  .tn-stop::after {
+    transition: none;
+  }
+}

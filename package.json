@@ -18,12 +18,26 @@
     "preview:library": "node scripts/preview-library.mjs",
     "admin:local": "node scripts/preview-library.mjs --office",
     "test:browser": "playwright test",
+    "test:books": "playwright test tests/browser/books.spec.ts",
+    "portrait:live-server": "node scripts/portrait-live-server.mjs",
+    "eval:portrait": "node scripts/eval-portrait.mjs",
+    "qualify:portrait": "node scripts/qualify-portrait-live.mjs && npx tsx scripts/qualify-portrait-failure.mts && node scripts/qualify-portrait-browser.mjs",
+    "qualify:portrait-voice": "node scripts/qualify-portrait-voice.mjs",
+    "portrait:ledger": "node scripts/reconcile-portrait-ledger.mjs --list",
+    "test:navigation": "playwright test tests/browser/navigation.spec.ts",
     "assets:pack": "node scripts/pack-library.mjs",
     "test:admin": "node scripts/test-library-admin.mjs",
     "test:office": "node scripts/test-library-admin.mjs --office",
     "draft:review": "node scripts/review-library-draft.mjs",
-    "test": "tsx --test tests/library.test.ts",
-    "profile:library": "node scripts/profile-library.mjs"
+    "test": "tsx --test tests/library.test.ts tests/estate.test.ts tests/kit.test.ts tests/portrait.test.ts tests/reports.test.ts tests/journey.test.ts tests/world-environment.test.ts tests/readiness.test.ts tests/leaf-surfaces.test.ts tests/portfolio.test.ts tests/release-paths.test.ts",
+    "kit:pack": "node scripts/pack-kit.mjs",
+    "kit:room": "node scripts/export-room.mjs",
+    "estate:look": "node scripts/look-estate.mjs",
+    "profile:library": "node scripts/profile-library.mjs",
+    "test:portfolio": "tsx --test tests/portfolio.test.ts && playwright test --config tests/portfolio.config.ts",
+    "test:safety": "node --test tests/release-safety.test.mjs",
+    "release:check": "npm run typecheck && npm run lint && npm test && npm run test:safety && npm run assets:inventory && npm run build:local",
+    "assets:inventory": "node scripts/release-asset-inventory.mjs"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.10.0",
@@ -59,8 +73,12 @@
     "gltf-validator": "2.0.0-dev.3.10",
     "meshoptimizer": "1.3.0",
     "prisma": "^7.10.0",
+    "sharp": "0.35.5",
     "tailwindcss": "^4.3.3",
     "tsx": "4.23.15",
     "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": "24.x"
   }
 }

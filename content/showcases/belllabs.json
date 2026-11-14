@@ -1,0 +1,497 @@
+[
+  {
+    "slug": "agentic-mission-control",
+    "summary": "A durable control plane for agent workflows. Follow a recorded Deep Agents research task from its bounded manifest through independent verification, human review and an inspectable report.",
+    "status": "Active development · recorded local workflow",
+    "pages": [
+      {
+        "key": "overview",
+        "title": "An inspectable result",
+        "blocks": [
+          {
+            "component": "Heading",
+            "props": {
+              "text": "The problem: a finished agent turn is not an accepted result"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "An agent can produce a convincing answer while leaving its sources, permissions and unfinished work unclear. I built Mission Control to make that work durable and inspectable: what was requested, what the agent could use, what it produced, and who accepted it. My role spans the Python runtime, workflow contracts, provider integration and the supporting PostgreSQL component."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The walkthrough follows a real, bounded research mission captured on November 9, 2026. It produced a short TruDiagnostic evidence brief and a separate list of source-linked assertions. The example demonstrates a completed research-and-review path; it is not a claim that the whole platform or every provider is ready for production."
+            }
+          }
+        ]
+      },
+      {
+        "key": "architecture",
+        "title": "Scheduling and execution",
+        "blocks": [
+          {
+            "component": "Prose",
+            "props": {
+              "text": "Temporal schedules and recovers work; PostgreSQL preserves application state. Deep Agents executes bounded tasks behind a provider-neutral contract. The runtime can inspect, stop or recover a mission without letting the model decide when it is complete. Provider-specific adapters bind the admitted model, tools and sandbox."
+            }
+          },
+          {
+            "component": "Image",
+            "props": {
+              "url": "/library/artwork/agentic-mission-control-architecture-v3.webp",
+              "text": "Mission manifest, workflow, provider lane and output contract: the major responsibilities in the inspected implementation.",
+              "ownPage": true
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The manifest makes the promise concrete. This mission required both final_report and assertions, selected the Deep Agents lane, assigned an independent verifier and required human acceptance. Its caps were $1, 120,000 tokens, twelve minutes and twelve tool calls. Caps describe permitted work, not actual consumption."
+            }
+          }
+        ]
+      },
+      {
+        "key": "notes",
+        "title": "Walkthrough: mission to review",
+        "blocks": [
+          {
+            "component": "Heading",
+            "props": {
+              "text": "1. Inspect the admitted task"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "Start with the recorded run configuration for trudiagnostic-evidence-review. Its GoalDirected workflow received five frozen source excerpts acquired before launch. The retained configuration identifies the manifest and effective configuration by digest, so the visitor can distinguish the requested setup from the configuration that actually ran."
+            }
+          },
+          {
+            "component": "Heading",
+            "props": {
+              "text": "2. Follow a finding to its sources"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "Open the report, then inspect the assertion distinguishing measured DNA methylation from inferred biomarker values. The assertion points to S1 and S5; the source list supplies the original URLs and capture hashes. This is the useful action in the reader: move from a sentence to its evidence instead of trusting polished prose. The research example is not medical advice or independent validation of the company's products."
+            }
+          },
+          {
+            "component": "Link",
+            "props": {
+              "text": "S1 — original company source used by the recorded finding",
+              "url": "https://www.trudiagnostic.com/about-truage"
+            }
+          },
+          {
+            "component": "Link",
+            "props": {
+              "text": "S5 — original study abstract used by the recorded finding",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/39069614/"
+            }
+          },
+          {
+            "component": "Heading",
+            "props": {
+              "text": "3. Separate verification, fulfillment and acceptance"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The timeline records executor activity, an independent verifier, and two output.fulfilled events. A human review task then opens and resolves before the run terminalizes. Those are separate events because producing a file, satisfying an output contract and accepting a result answer different questions. The public capture ends with completed, terminal and resolved states."
+            }
+          }
+        ]
+      },
+      {
+        "key": "gallery",
+        "title": "The recorded task",
+        "blocks": [
+          {
+            "component": "Video",
+            "props": {
+              "url": "/library/recordings/agentic-mission-control-reel.mp4",
+              "poster": "/library/artwork/agentic-mission-control-reel-poster-v2.webp",
+              "text": "November 9, 2026 recorded research reader: inspect the timeline and follow the report’s cited evidence. A dated capture, not a live run."
+            }
+          },
+          {
+            "component": "Image",
+            "props": {
+              "url": "/library/artwork/agentic-mission-control-timeline-v2.webp",
+              "text": "The captured timeline keeps execution, verification, output fulfillment and human review visible as distinct steps.",
+              "ownPage": true
+            }
+          },
+          {
+            "component": "Image",
+            "props": {
+              "url": "/library/artwork/agentic-mission-control-report-v2.webp",
+              "text": "The report connects findings to named sources. The surrounding walkthrough describes the action shown in the recording.",
+              "ownPage": true
+            }
+          }
+        ]
+      },
+      {
+        "key": "metrics",
+        "title": "What the evidence proves",
+        "blocks": [
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The November 9 public projection records run 46a07025-9d37-5d3b-9d8d-96fec5627975, 28,405 tokens and five tool calls. Its $0.02699 model cost is an upper estimate, not a billing receipt. Source custody remains in the private evidence bundle; the showcase exposes selected metadata, source links and content hashes."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "On November 13, 77 local manifest compilation and schema tests passed. That fresh check supports authoring behavior; it does not rerun the captured provider workflow. The broader Sprint OC W1 gate remains unreleased. Hosted operations, other provider lanes and the wider AI Engineer/Biotech integration need their own qualification."
+            }
+          }
+        ]
+      },
+      {
+        "key": "links",
+        "title": "Sources and version",
+        "blocks": [
+          {
+            "component": "Prose",
+            "props": {
+              "text": "Inspected local runtime: 809a0184bb7b. Recorded showcase source: mission-control-web at 307208d081ed; public/research/trudiagnostic/capture.json and run-configuration.json. The public GitHub revision observed November 13 was 882b77da06c5, so the repository link and local walkthrough do not represent identical snapshots."
+            }
+          },
+          {
+            "component": "Link",
+            "props": {
+              "url": "https://github.com/jbell-rusty-vantage/agentic-mission-control/commit/882b77da06c5b844145ace0f4fec032097dfe80c",
+              "text": "Inspect the observed public source revision"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "agent-knowledge-services",
+    "summary": "Shared services that capture sources, verify claims and return inspectable evidence. A reproducible fixture shows why an approval for one fact cannot authorize a different write.",
+    "status": "Active development · deterministic boundaries tested",
+    "pages": [
+      {
+        "key": "overview",
+        "title": "Evidence before authority",
+        "blocks": [
+          {
+            "component": "Prose",
+            "props": {
+              "text": "A research agent can find a relevant paragraph without proving that it supports the change the agent wants to make. I built shared capture, claim-verification and retrieval services to keep those responsibilities explicit. Clients submit intents through supported interfaces; they do not become database administrators or turn their own confidence into publication authority."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The engineering problem is preserving a chain from captured bytes to the exact downstream use. A quotation needs a resolvable location. A claim needs independent support. A write needs a current decision bound to that effect. Retrieval then needs to explain which admitted evidence supports its answer. These are separate checks because failure at one boundary should not disappear behind a successful model response."
+            }
+          }
+        ]
+      },
+      {
+        "key": "architecture",
+        "title": "Service boundaries",
+        "blocks": [
+          {
+            "component": "Image",
+            "props": {
+              "url": "/library/artwork/agent-knowledge-services-architecture-v3.webp",
+              "text": "Five stages from a retained source to a write bound to its approval. Retrieval is a separate service.",
+              "ownPage": true
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "HTTP, MCP and workers compose application use cases. Cross-repository clients use published contracts rather than importing internal algorithms. Deterministic checks establish identity, selector resolution, values, units and time before semantic assessment and policy. Later stages may add restrictions; they cannot erase an earlier deterministic failure."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "Verification and admission stay separate. An exact-use decision binds the intended effect, scope and normalized values. Native ingestion checks that binding inside its transaction. A model may suggest a correction, but changing the proposed effect requires corresponding authority. Shared capabilities retain their current AI Engineer database binding; this is not a claim of complete backend independence."
+            }
+          }
+        ]
+      },
+      {
+        "key": "notes",
+        "title": "Walkthrough: check the claim",
+        "blocks": [
+          {
+            "component": "Heading",
+            "props": {
+              "text": "1. Establish the exact fixture"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The checked-in use-decision fixture represents an engineering claim of 1200 tokens per second. It supplies a decision, supporting references, an effect digest, a tenant, an audience and a current authority epoch. This is synthetic test data, not a measured model benchmark. With matching inputs, the production admission function returns admitted."
+            }
+          },
+          {
+            "component": "Heading",
+            "props": {
+              "text": "2. Change what the approval would mean"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "Change the normalized throughput to 1300 while keeping the old decision. Admission rejects it with normalized_values_mismatch. Change the effect itself and the result is effect_digest_mismatch. Move the authoritative epoch ahead of the processed epoch and the result is held with stale_epoch. The important result is the refusal: an apparently small edit cannot quietly inherit an earlier approval."
+            }
+          },
+          {
+            "component": "Code",
+            "props": {
+              "text": "Matching fixture → admitted\n1200 changed to 1300 → rejected: normalized_values_mismatch\nChanged effect → rejected: effect_digest_mismatch\nAuthority ahead of processed state → held: stale_epoch"
+            }
+          },
+          {
+            "component": "Heading",
+            "props": {
+              "text": "3. Require independent support and review"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The aggregation fixture refuses to count producer-only support as independent coverage. A decision that requires review remains held until an approving adjudication names the exact effect and its grant is live. This keeps authoring, checking and accepting distinguishable even when agents perform parts of the work."
+            }
+          },
+          {
+            "component": "Heading",
+            "props": {
+              "text": "4. Ask only for retrieval the service supports"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The retrieval fixture declares a policy, bounded candidates, required subqueries and world, knowledge-sequence and entity scopes. These supported scopes pass preflight. Request required graph expansion and the executor returns RETRIEVAL_CAPABILITY_UNSUPPORTED. Mark an unavailable capability optional and its omission is recorded. A returned evidence packet is designed to carry support paths and replayable citation identities; these boundary tests do not demonstrate a live corpus search."
+            }
+          }
+        ]
+      },
+      {
+        "key": "metrics",
+        "title": "Proof and integration",
+        "blocks": [
+          {
+            "component": "Prose",
+            "props": {
+              "text": "On November 13, 19 exact-use and aggregation tests passed, followed by nine retrieval-boundary tests. The examples above execute the real pure rules and canonical preflight with fixtures. No acquisition provider, semantic judge, live database or hosted retrieval endpoint was invoked for this check."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The source contains the capture-to-verification-to-admission path, but this showcase does not claim a freshly demonstrated end-to-end ingestion and retrieval run. Retrieval remains partial: required graph expansion and several richer query capabilities are explicitly refused. Live evidence quality, dependency integration and promotion of a complete research loop remain separate work."
+            }
+          }
+        ]
+      },
+      {
+        "key": "links",
+        "title": "Reproduce and inspect",
+        "blocks": [
+          {
+            "component": "Code",
+            "props": {
+              "text": "# From packages/research-core\nnode node_modules/vitest/vitest.mjs run src/verification/use-decision.test.ts src/verification/aggregate.test.ts\n\n# From packages/application\nnode node_modules/vitest/vitest.mjs run src/knowledge/retrieval/canonical-retrieval-executor.test.ts"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "Local source inspected: b548468d741a. Implementation references: knowledge/verification-and-admission.md, knowledge/retrieval-and-evidence.md and the test files above. The remotely observed public revision was 0abcecf4da4d; the local test snapshot differs from that public source snapshot."
+            }
+          },
+          {
+            "component": "Link",
+            "props": {
+              "url": "https://github.com/jbell-rusty-vantage/agent-knowledge-services/commit/0abcecf4da4d5ea55762d669842c6aa3bc4a1775",
+              "text": "Inspect the observed public source revision"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ai-engineer-platform",
+    "summary": "A product API, MCP server and CLI for educational content and research reporting. Follow a dated lab journey across those interfaces, with permissions, revisions and evidence kept in one contract.",
+    "status": "Prototype · disposable integration evidence",
+    "pages": [
+      {
+        "key": "overview",
+        "title": "One task across tools",
+        "blocks": [
+          {
+            "component": "Prose",
+            "props": {
+              "text": "A person may write in a web app, ask an agent to research, and use a CLI to publish a project. Their permissions, revisions and evidence should not change with the tool. I built the AI Engineer product service and its HTTP, MCP and CLI surfaces around one operation catalog. My work also includes the shared capture, verification and retrieval services described in the companion Knowledge Services case study."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "This edition presents the implemented service prototype and a dated disposable integration journey. The student web application remains a disconnected foundation. Investor-facing tools are planned. Keeping those boundaries visible lets a visitor evaluate working infrastructure without mistaking a product direction or architectural illustration for a shipped learning experience."
+            }
+          }
+        ]
+      },
+      {
+        "key": "architecture",
+        "title": "Shared operations",
+        "blocks": [
+          {
+            "component": "Image",
+            "props": {
+              "url": "/library/artwork/ai-engineer-platform-architecture-v3.webp",
+              "text": "HTTP and remote MCP call the application layer; CLI and local MCP use the typed HTTP client. The database contract owns permissions and durable product rules. Student web integration remains open.",
+              "ownPage": true
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The service validates requests at the edge and calls the database under the user's own session. Schema, row security and product functions belong to the separate database-contract repository. Server-side artifact custody registers bytes, stores them, reads them back and verifies their digest before completing the asset. Storage credentials never need to become client credentials."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "Task-shaped MCP tools compose the same operations rather than inventing another business layer. Local MCP may read a local folder for publishing; the remote server refuses that request and accepts supplied file bytes. Human acceptance and delivery decisions remain human-controlled, including when an agent proposes the research or prepares its output."
+            }
+          }
+        ]
+      },
+      {
+        "key": "notes",
+        "title": "Walkthrough: author to learner",
+        "blocks": [
+          {
+            "component": "Heading",
+            "props": {
+              "text": "1. Author a small lesson through local MCP"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The November 5 Build 06 lab starts with an author and learner on disposable Supabase services. A separate local MCP process publishes a three-file example site, then drafts and revises a lesson with that embedded site. The content is explicitly fixture data; it is not an enrolled customer's course."
+            }
+          },
+          {
+            "component": "Heading",
+            "props": {
+              "text": "2. Freeze the release through the API"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The typed HTTP client asks the API to freeze the release. The service stores and verifies its manifest before returning. A learner then receives the offered version instead of silently following the author's latest draft. This makes the released learning material and a later submission inspectable as fixed records."
+            }
+          },
+          {
+            "component": "Heading",
+            "props": {
+              "text": "3. Read, annotate and submit through remote MCP"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The learner reads the lesson, saves a private note anchored to a block, searches, checks progress, and starts and submits a practice attempt. The same proof exercises the CLI as a real process. Supabase Auth, PostgREST and Storage are real dependencies in this dated run; the lab script plays the worker, so the demonstration does not prove a deployed grading service."
+            }
+          }
+        ]
+      },
+      {
+        "key": "gallery",
+        "title": "Research and evidence",
+        "blocks": [
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The current lab driver extends that pattern to research: draft a pricing brief, propose it, accept it as a person, create a dataset, stage a reviewed correction, attach an exact quote, deliver the dataset and inspect the obligation. Its example values of 10 and 12 are synthetic data, not model-price claims. Repeating the same correction tests duplicate handling."
+            }
+          },
+          {
+            "component": "Code",
+            "props": {
+              "text": "cite_evidence\n  source_revision_id: a fixed source revision\n  quotes: exact source text\n       ↓\nadd_support\n  target.kind: source_revision\n  selector.type: aieng.text-quotes.v1\n       ↓\ninspect_research { what: statement }\n       ↓\ntrace_assertion"
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "This mapping is visible in apps/mcp/src/tools/research-tools.ts. It gives a reviewer a concrete path from a statement to the source revision and selected quotation. It does not establish that the product service already invokes Knowledge Services to verify those claims; that cross-service client remains an integration gap."
+            }
+          }
+        ]
+      },
+      {
+        "key": "metrics",
+        "title": "Integration and unit proof",
+        "blocks": [
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The Build 06 record reports 16 passing surface checks on November 5, including real HTTP, stdio MCP and CLI processes. On November 13, the current service's 36 unit tests passed across seven files. Those fresh tests cover routing, input validation, authentication requirements, typed errors, source selectors, artifact digest mismatch and remote-folder refusal; they use in-memory ports and do not repeat the earlier integration run."
+            }
+          },
+          {
+            "component": "Prose",
+            "props": {
+              "text": "The remaining product work is substantial: login/device flow, remote OAuth, a real worker, static hosting, student web integration, Knowledge Services and Mission Control clients, async jobs and deployment. The current student home says its workspace is not connected. This case study demonstrates the service foundation and its tested boundaries, not a complete hosted student platform."
+            }
+          }
+        ]
+      },
+      {
+        "key": "links",
+        "title": "Source and lab journey",
+        "blocks": [
+          {
+            "component": "Prose",
+            "props": {
+              "text": "Local and remotely observed service revision match: ad84c4f81784. Run pnpm test for the unit suite. The disposable integration driver is scripts/lab/prove-surfaces.ts; it requires the documented lab API and Supabase target. Do not point the fixture at a production database."
+            }
+          },
+          {
+            "component": "Link",
+            "props": {
+              "url": "https://github.com/jbell-rusty-vantage/ai-engineer-services/blob/ad84c4f817844b7c3d3625e8990815cf0599837b/scripts/lab/prove-surfaces.ts",
+              "text": "Inspect the reproducible lab journey"
+            }
+          },
+          {
+            "component": "Link",
+            "props": {
+              "url": "https://github.com/jbell-rusty-vantage/ai-engineer-services/blob/ad84c4f817844b7c3d3625e8990815cf0599837b/docs/ARCHITECTURE.md",
+              "text": "Read the service architecture and open integrations"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

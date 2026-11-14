@@ -70,7 +70,8 @@ for (const b of books) {
     }
     if (blocks.length) pages.push({ template, position: pages.length + 1, blocks });
   }
-  const { pages: _, ...project } = b;
+  const project = { ...b };
+  delete project.pages;
   result.push({ ...project, cover, media, pages });
 }
 // Public repository facts from GitHub (id, description, language, dates) for the repos table.

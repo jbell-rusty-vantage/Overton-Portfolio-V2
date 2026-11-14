@@ -1,0 +1,109 @@
+.rs-page {
+  flex: 1;
+  padding: clamp(1rem, 4vw, 3rem);
+  background: #ede9de;
+  color: #24352e;
+  line-height: 1.6;
+}
+
+.rs-nav, .rs-sheet {
+  max-width: 49rem;
+  margin-inline: auto;
+}
+
+.rs-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.rs-page a {
+  color: #275149;
+  text-decoration: underline;
+  text-underline-offset: .18em;
+  overflow-wrap: anywhere;
+}
+
+.rs-nav .rs-download {
+  padding: .6rem 1rem;
+  background: #275149;
+  color: #fff;
+  border-radius: .2rem;
+  text-decoration: none;
+  font-weight: 650;
+}
+
+.rs-sheet {
+  padding: clamp(1.3rem, 5vw, 3.25rem);
+  border: 1px solid #d4cdbc;
+  background: #fffdf7;
+}
+
+.rs-kicker {
+  color: #4b5750;
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+
+.rs-header h1 {
+  margin: .3rem 0;
+  color: #24352e;
+  font: 500 clamp(2.2rem, 6vw, 3.5rem)/1.07 Georgia, serif;
+}
+
+.rs-title {
+  color: #275149;
+  font-size: clamp(1rem, 2.7vw, 1.2rem);
+  font-weight: 650;
+}
+
+.rs-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem 1rem;
+  margin-top: .8rem;
+  font-size: .875rem;
+}
+
+.rs-section {
+  margin-top: 1.8rem;
+  padding-top: .95rem;
+  border-top: 1px solid #d4cdbc;
+}
+
+.rs-section h2 {
+  margin-bottom: .55rem;
+  font: 600 1.4rem/1.24 Georgia, serif;
+}
+
+.rs-section h3 {
+  font-weight: 700;
+}
+
+.rs-entries, .rs-skills {
+  display: grid;
+  gap: .75rem;
+}
+
+.rs-project-heading, .rs-project-links {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 .75rem;
+}
+
+.rs-entries a, .rs-note {
+  font-size: .9rem;
+}
+
+.rs-note {
+  color: #4b5750;
+}
+
+.rs-entries + .rs-note {
+  margin-top: .85rem;
+}

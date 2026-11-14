@@ -1,0 +1,48 @@
+[
+  {
+    "edition": 1,
+    "file": "public/travellers-rest/world.glb",
+    "bytes": 1342780,
+    "triangles": 39302,
+    "animations": [
+      "Custodian recognition"
+    ],
+    "anchors": 12,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "edition": 1,
+    "file": "public/travellers-rest/world-low.glb",
+    "bytes": 770544,
+    "triangles": 35991,
+    "animations": [
+      "Custodian recognition"
+    ],
+    "anchors": 12,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/travellers-rest/world-v2.glb",
+    "edition": 2,
+    "bytes": 337320,
+    "triangles": 15672,
+    "animations": [],
+    "anchors": 24,
+    "removedInteriorObjects": 72,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/travellers-rest/world-v2-low.glb",
+    "edition": 2,
+    "bytes": 290796,
+    "triangles": 15672,
+    "animations": [],
+    "anchors": 24,
+    "removedInteriorObjects": 72,
+    "errors": 0,
+    "warnings": 0
+  }
+]

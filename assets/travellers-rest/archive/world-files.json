@@ -1,0 +1,120 @@
+{
+  "andrew-jackson": [
+    {
+      "page": 1,
+      "original": "andrew-jackson.jpg",
+      "full": {
+        "url": "/travellers-rest/archive/world/andrew-jackson-p01.webp",
+        "pixels": [
+          1867,
+          2200
+        ],
+        "bytes": 350212,
+        "sha256": "5a65d56ebda177c2114ae25cd3758e0810caf1928821a6884f73101ed3b67286"
+      },
+      "small": {
+        "url": "/travellers-rest/archive/world/andrew-jackson-p01-small.webp",
+        "pixels": [
+          543,
+          640
+        ],
+        "bytes": 9936,
+        "sha256": "91aebef5e5474df21d9e61878d2ee454bffc6934ed93dff96ce2f8f263be86fc"
+      }
+    }
+  ],
+  "election-invitation": [
+    {
+      "page": 1,
+      "original": "election-invitation.jpg",
+      "full": {
+        "url": "/travellers-rest/archive/world/election-invitation-p01.webp",
+        "pixels": [
+          1600,
+          1909
+        ],
+        "bytes": 581450,
+        "sha256": "ad6c109a95bb3a29c88f3a3e6df50569de12943bdef5cbc5232752dadf667f38"
+      },
+      "small": {
+        "url": "/travellers-rest/archive/world/election-invitation-p01-small.webp",
+        "pixels": [
+          536,
+          640
+        ],
+        "bytes": 30706,
+        "sha256": "ee191ff93cbb12fedc16a7fa2a8e4e8f9acb534a889b8939e727fe34c2af53e6"
+      }
+    }
+  ],
+  "murfree-leeper": [
+    {
+      "page": 1,
+      "original": "murfree-leeper.pdf",
+      "full": {
+        "url": "/travellers-rest/archive/world/murfree-leeper-p01.webp",
+        "pixels": [
+          1473,
+          2376
+        ],
+        "bytes": 342752,
+        "sha256": "a4a0daeb4419b00db2ed5f2b39d3ecc3f811ac7c88325dadf64f72f5e3af54a9"
+      },
+      "small": {
+        "url": "/travellers-rest/archive/world/murfree-leeper-p01-small.webp",
+        "pixels": [
+          397,
+          640
+        ],
+        "bytes": 44134,
+        "sha256": "ccfa0d3e0f4b082b550e39c531c1e1158a7160529ae7a1eadcf334aeb3f80c66"
+      }
+    },
+    {
+      "page": 2,
+      "original": "murfree-leeper.pdf",
+      "full": {
+        "url": "/travellers-rest/archive/world/murfree-leeper-p02.webp",
+        "pixels": [
+          1472,
+          2376
+        ],
+        "bytes": 310494,
+        "sha256": "8d1fc2720ec3a1997ca213910cb5f62d83362ba6ee86f0cd03be6a003ab64f41"
+      },
+      "small": {
+        "url": "/travellers-rest/archive/world/murfree-leeper-p02-small.webp",
+        "pixels": [
+          396,
+          640
+        ],
+        "bytes": 39170,
+        "sha256": "99fe0ec0b3c214b2473728703f837a0e10e89341e65356c1bf53a6d5c0250913"
+      }
+    }
+  ],
+  "tennessee-map": [
+    {
+      "page": 1,
+      "original": "tennessee-map.jpg",
+      "full": {
+        "url": "/travellers-rest/archive/world/tennessee-map-p01.webp",
+        "pixels": [
+          2400,
+          1446
+        ],
+        "bytes": 420252,
+        "sha256": "e55bc735b0240e8ccbf8134ed7e9592a5af321a298e09b655715abd59eabb21a"
+      },
+      "small": {
+        "url": "/travellers-rest/archive/world/tennessee-map-p01-small.webp",
+        "pixels": [
+          640,
+          386
+        ],
+        "bytes": 27252,
+        "sha256": "5ecbe7b8edb6382ca4cabac9162ca0a032b63377f5c1f234eecaf69372841d90"
+      }
+    }
+  ]
+}

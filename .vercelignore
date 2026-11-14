@@ -20,7 +20,28 @@
 
 # Raw game film and local analysis work files; the site serves public/performances/
 /public/*.mp4
+/public/*.mov
+/public/*.MOV
+/public/library/artwork/proof-*.webp
 /game_720p.mp4
 /analysis.html
 /clips
 /thumbs
+
+# Authoring masters and local-only evidence; runtime JSON/manifests stay included.
+/.next-browser
+/.firecrawl
+/.git
+/docs/travellers-rest-review
+/docs/library-world-concepts
+/assets/**/*.blend
+/assets/**/*.blend1
+/assets/**/*.tif
+/assets/**/*.tiff
+/assets/**/*.png
+/assets/**/*.jpg
+/assets/**/*.jpeg
+/assets/**/*.mp4
+/assets/**/*.pdf
+/assets/**/*.wav
+/assets/**/*.glb

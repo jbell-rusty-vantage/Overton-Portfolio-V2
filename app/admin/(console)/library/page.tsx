@@ -10,44 +10,81 @@ import {
 import { db } from "@/lib/db";
 import { requireAdmin } from "@/lib/auth/session";
 import { publicImage, templateNames } from "@/lib/library/policy";
+import { layoutSchema, roomAnchors } from "@/lib/estate/program";
 import { EditorForm, BlockFields } from "./EditorForm";
 
 export const metadata = { title: "Library editor" };
 async function LibraryEditor() {
   await requireAdmin();
-  const [books, projects, shelves, zones, screens, media, sites, assets] =
-    await Promise.all([
-      db.book.findMany({
-        orderBy: { title: "asc" },
-        include: { pages: { orderBy: { position: "asc" } } },
-      }),
-      db.project.findMany({
-        where: { deletedAt: null },
-        select: { id: true, title: true, slug: true, display: true },
-        orderBy: { title: "asc" },
-      }),
-      db.shelf.findMany({
-        orderBy: [{ zoneId: "asc" }, { sortOrder: "asc" }],
-        include: {
-          slots: { orderBy: { position: "asc" } },
-          zone: { select: { title: true } },
-        },
-      }),
-      db.libraryZone.findMany({ orderBy: { sortOrder: "asc" } }),
-      db.computerScreen.findMany({ orderBy: { slot: "asc" } }),
-      db.mediaAsset.findMany({
-        where: { deletedAt: null, kind: { in: ["video", "image", "model3d"] } },
-        select: { id: true, title: true, kind: true, url: true },
-      }),
-      db.deployment.findMany({
-        where: { deletedAt: null, iframeAllowed: true },
-        select: { id: true, title: true },
-      }),
-      db.sceneAsset.findMany({
-        where: { slug: "library-hall" },
-        orderBy: { version: "desc" },
-      }),
-    ]);
+  const [
+    books,
+    projects,
+    shelves,
+    zones,
+    screens,
+    media,
+    sites,
+    assets,
+    estateLayout,
+    estateScenes,
+  ] = await Promise.all([
+    db.book.findMany({
+      orderBy: { title: "asc" },
+      include: { pages: { orderBy: { position: "asc" } } },
+    }),
+    db.project.findMany({
+      where: { deletedAt: null },
+      select: { id: true, title: true, slug: true, display: true },
+      orderBy: { title: "asc" },
+    }),
+    db.shelf.findMany({
+      orderBy: [{ zoneId: "asc" }, { sortOrder: "asc" }],
+      include: {
+        slots: { orderBy: { position: "asc" } },
+        zone: { select: { title: true } },
+      },
+    }),
+    db.libraryZone.findMany({ orderBy: { sortOrder: "asc" } }),
+    db.computerScreen.findMany({ orderBy: { slot: "asc" } }),
+    db.mediaAsset.findMany({
+      where: { deletedAt: null, kind: { in: ["video", "image", "model3d"] } },
+      select: { id: true, title: true, kind: true, url: true },
+    }),
+    db.deployment.findMany({
+      where: { deletedAt: null, iframeAllowed: true },
+      select: { id: true, title: true },
+    }),
+    db.sceneAsset.findMany({
+      where: { slug: "library-hall" },
+      orderBy: { version: "desc" },
+    }),
+    db.uiLayout.findUnique({ where: { slug: "travellers-rest-visit" } }),
+    db.sceneAsset.findMany({
+      where: {
+        slug: { in: ["travellers-rest-house", "travellers-rest-house-low"] },
+      },
+      select: { isActive: true, version: true },
+    }),
+  ]);
+  const parsedEstate = layoutSchema.safeParse(estateLayout?.blocks);
+  const estate = parsedEstate.success ? parsedEstate.data[0].props : null;
+  const editionScenes = estateScenes.filter(
+    (s) => s.version === estate?.edition,
+  );
+  const estateReleased =
+    editionScenes.length === 2 &&
+    editionScenes.every((s) => s.isActive) &&
+    books.some(
+      (b) =>
+        b.slug === estate?.companion &&
+        ["published", "featured"].includes(b.display),
+    ) &&
+    roomAnchors.every((r) =>
+      zones.some(
+        (z) =>
+          r.slug === z.slug && ["published", "featured"].includes(z.display),
+      ),
+    );
   const slots = shelves.flatMap((s) =>
     s.slots.map((p) => ({ ...p, shelf: s })),
   );
@@ -81,18 +118,79 @@ async function LibraryEditor() {
         title="Library editor"
         description="Edit a volume, place it on a shelf, then preview the room."
         actions={
-          <Link className="btn-ghost" href="/admin/library/preview">
+          <Link className="btn-ghost" href="/admin/preview/library">
             Visitor preview
           </Link>
         }
       />
       <nav className="mb-5 flex flex-wrap gap-3 text-sm">
-        {["Books", "Shelves", "Zones", "Screens", "Scenes"].map((t) => (
-          <a key={t} href={"#" + t.toLowerCase()}>
+        {[
+          ...(estate ? ["Travellers Rest"] : []),
+          "Books",
+          "Shelves",
+          "Zones",
+          "Screens",
+          "Scenes",
+        ].map((t) => (
+          <a key={t} href={"#" + t.toLowerCase().replaceAll(" ", "-")}>
             {t}
           </a>
         ))}
       </nav>
+      {estate && estateLayout && (
+        <section id="travellers-rest" className="card my-5">
+          <h2 className="font-serif text-2xl">Travellers Rest</h2>
+          <p className="my-2 text-sm">
+            Release or withdraw the four rooms, house book and both scene tiers
+            together. Each cabinet project has its own visibility setting.
+            House program edition {estate.edition}
+            {estate.edition === 2
+              ? " · continuous 3D library with the speaking portrait, physical volumes and inspectable documents."
+              : " · guided visit."}
+          </p>
+          <Link className="underline" href="/admin/preview/library#cabinet">
+            Preview the complete project cabinet
+          </Link>
+          <EditorForm
+            command="estate"
+            version={estateLayout.updatedAt.toISOString()}
+            label="Save house program"
+          >
+            <Field label="House visit">
+              <Select
+                name="release"
+                defaultValue={estateReleased ? "publish" : "draft"}
+                options={[
+                  { value: "draft", label: "Hidden draft" },
+                  { value: "publish", label: "Published guided visit" },
+                ]}
+              />
+            </Field>
+            <Field
+              label="Featured visit starts (UTC)"
+              hint="Leave blank for an immediate start."
+            >
+              <input
+                className="input"
+                type="datetime-local"
+                name="start"
+                defaultValue={estate.featuredFrom?.slice(0, 16) ?? ""}
+              />
+            </Field>
+            <Field
+              label="Featured visit ends (UTC)"
+              hint="Leave blank for an open-ended visit."
+            >
+              <input
+                className="input"
+                type="datetime-local"
+                name="end"
+                defaultValue={estate.featuredUntil?.slice(0, 16) ?? ""}
+              />
+            </Field>
+          </EditorForm>
+        </section>
+      )}
       <section id="books">
         <h2 className="font-serif text-2xl">Books & pages</h2>
         <details className="card my-3">
@@ -121,7 +219,9 @@ async function LibraryEditor() {
                 options={["hybrid", "generated", "authored"]}
               />
             </Field>
-            <Field label="Cover artwork"><Select name="coverMediaId" options={coverOptions} /></Field>
+            <Field label="Cover artwork">
+              <Select name="coverMediaId" options={coverOptions} />
+            </Field>
           </EditorForm>
         </details>
         {books.map((b) => {
@@ -194,7 +294,13 @@ async function LibraryEditor() {
                     defaultValue={b.pageMode}
                   />
                 </Field>
-                <Field label="Cover artwork"><Select name="coverMediaId" defaultValue={b.coverMediaId ?? ""} options={coverOptions} /></Field>
+                <Field label="Cover artwork">
+                  <Select
+                    name="coverMediaId"
+                    defaultValue={b.coverMediaId ?? ""}
+                    options={coverOptions}
+                  />
+                </Field>
               </EditorForm>
               <h3 className="font-serif text-xl">Shelf placement</h3>
               <EditorForm
@@ -380,8 +486,17 @@ async function LibraryEditor() {
             </p>
             <EditorForm command="shelf" version={s.title} label="Rename shelf">
               <input type="hidden" name="slug" value={s.slug} />
-              <Field label="Shelf title" hint="Changes the cabinet sign and catalog label. Existing links and books stay in place.">
-                <input className="input" name="title" maxLength={64} required defaultValue={s.title} />
+              <Field
+                label="Shelf title"
+                hint="Changes the cabinet sign and catalog label. Existing links and books stay in place."
+              >
+                <input
+                  className="input"
+                  name="title"
+                  maxLength={64}
+                  required
+                  defaultValue={s.title}
+                />
               </Field>
             </EditorForm>
             {s.slots.map((p) => (
@@ -397,40 +512,42 @@ async function LibraryEditor() {
       </section>
       <section id="zones">
         <h2 className="font-serif text-2xl">Rooms</h2>
-        {zones.map((z) => (
-          <details className="card my-2" key={z.id}>
-            <summary>
-              {z.title} <Badge value={z.display} />
-            </summary>
-            <EditorForm
-              command="zone"
-              version={JSON.stringify([z.display, z.cameraPreset])}
-            >
-              <input type="hidden" name="slug" value={z.slug} />
-              <Field label="Visibility">
-                <Select
-                  name="display"
-                  options={DISPLAY_STATES}
-                  defaultValue={z.display}
-                />
-              </Field>
-              <Field
-                label="Camera override"
-                hint="Optional {eye:[x,y,z],target:[x,y,z]} in scene meters. Clear to restore the designed view."
+        {zones
+          .filter((z) => !roomAnchors.some((r) => r.slug === z.slug))
+          .map((z) => (
+            <details className="card my-2" key={z.id}>
+              <summary>
+                {z.title} <Badge value={z.display} />
+              </summary>
+              <EditorForm
+                command="zone"
+                version={JSON.stringify([z.display, z.cameraPreset])}
               >
-                <textarea
-                  className="input"
-                  name="camera"
-                  defaultValue={
-                    Object.keys(z.cameraPreset ?? {}).length
-                      ? JSON.stringify(z.cameraPreset)
-                      : ""
-                  }
-                />
-              </Field>
-            </EditorForm>
-          </details>
-        ))}
+                <input type="hidden" name="slug" value={z.slug} />
+                <Field label="Visibility">
+                  <Select
+                    name="display"
+                    options={DISPLAY_STATES}
+                    defaultValue={z.display}
+                  />
+                </Field>
+                <Field
+                  label="Camera override"
+                  hint="Optional {eye:[x,y,z],target:[x,y,z]} in scene meters. Clear to restore the designed view."
+                >
+                  <textarea
+                    className="input"
+                    name="camera"
+                    defaultValue={
+                      Object.keys(z.cameraPreset ?? {}).length
+                        ? JSON.stringify(z.cameraPreset)
+                        : ""
+                    }
+                  />
+                </Field>
+              </EditorForm>
+            </details>
+          ))}
       </section>
       <section id="screens" className="my-8">
         <h2 className="font-serif text-2xl">Computer screens</h2>

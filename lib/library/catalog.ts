@@ -1,4 +1,6 @@
 import "server-only";
+import { applyShowcaseDraft } from "./showcase-draft";
+import { applyShowcaseWritingDraft } from "./showcase-writing";
 import { cache } from "react";
 import { headers } from "next/headers";
 import { directLoopback } from "@/lib/auth/local-office";
@@ -26,7 +28,7 @@ import {
   type Visibility,
 } from "./policy";
 
-type Options = { direct?: string; admin?: boolean };
+type Options = { direct?: string; admin?: boolean; database?: boolean };
 type Target = Visibility & {
   id: string;
   slug: string;
@@ -38,6 +40,9 @@ type Target = Visibility & {
   blocks: Block[];
   links: Block[];
   cover?: string;
+  status?: string;
+  startedOn?: Date | null;
+  endedOn?: Date | null;
 };
 const baseSelect = {
   id: true,
@@ -61,7 +66,7 @@ function safeLink(value: unknown, label: string): Block[] {
   const url = httpsUrl(value);
   return url ? [{ kind: "link", text: label, url }] : [];
 }
-async function isLocalReview() {
+export async function isLocalReview() {
   if (
     process.env.NODE_ENV !== "development" ||
     process.env.LIBRARY_LOCAL_REVIEW !== "loopback"
@@ -73,18 +78,19 @@ export async function getCollection(
   options: Options = {},
 ): Promise<Collection> {
   await connection();
-  const mode =
+  const mode = options.database ? "database" :
     process.env.LIBRARY_CONTENT_SOURCE ??
     (process.env.NODE_ENV === "development" ? "fixtures" : "database");
   if (mode === "fixtures") return sampleCollection();
   if (mode !== "database") throw Error("Unknown Library content source");
   const local = await isLocalReview();
   try {
-    return await requestCollection(
+    const collection = await requestCollection(
       options.direct ?? "",
       !!options.admin,
       local,
     );
+    return options.admin || local ? { ...collection, volumes: applyShowcaseDraft(options.admin ? applyShowcaseWritingDraft(collection.volumes) : collection.volumes) } : collection;
   } catch {
     console.error("Library database collection unavailable");
     return {
@@ -100,32 +106,25 @@ const requestCollection = cache(
   (direct: string, admin: boolean, local: boolean) =>
     databaseCollection({ direct: direct || undefined, admin }, local),
 );
-async function databaseCollection(
-  options: Options,
-  local: boolean,
-): Promise<Collection> {
+// Raw rows are shared only within this request. Public and direct projections
+// still apply their own visibility policy; no authorized data crosses requests.
+const collectionRows = cache(async (admin: boolean, local: boolean) => {
   const { db } = await import("@/lib/db");
-  if (options.admin) {
+  if (admin) {
     const { requireAdmin } = await import("@/lib/auth/session");
     await requireAdmin();
   }
-  const allowed = (id: string, type: "project" | "book") =>
-    options.admin ||
-    (local &&
-      starters.some((s) => (type === "book" ? s.bookId : s.projectId) === id));
   const date = new Date();
-  const publicStates: ("featured" | "published" | "unlisted")[] = options.direct
-    ? ["featured", "published", "unlisted"]
-    : ["featured", "published"];
+  const publicStates: ("featured" | "published" | "unlisted")[] = ["featured", "published", "unlisted"];
   const publication = {
     deletedAt: null,
     OR: [{ publishedAt: null }, { publishedAt: { lte: date } }],
   };
   const ordinary = {
     ...publication,
-    ...(options.admin ? {} : { display: { in: publicStates } }),
+    ...(admin ? {} : { display: { in: publicStates } }),
   };
-  const projectWhere = options.admin
+  const projectWhere = admin
     ? publication
     : {
         ...publication,
@@ -140,17 +139,7 @@ async function databaseCollection(
           },
         ],
       };
-  const [
-    projects,
-    posts,
-    favorites,
-    moments,
-    books,
-    room,
-    monitors,
-    asset,
-    events,
-  ] = await Promise.all([
+  return Promise.all([
     db.project.findMany({
       where: projectWhere,
       orderBy: [{ sortOrder: "asc" }, { title: "asc" }],
@@ -159,6 +148,9 @@ async function databaseCollection(
         summary: true,
         bodyBlocks: true,
         tags: true,
+        status: true,
+        startedOn: true,
+        endedOn: true,
         clientId: true,
         client: { select: { name: true, publicAlias: true, showName: true } },
         cover: coverSelect,
@@ -300,6 +292,24 @@ async function databaseCollection(
       },
     }),
   ]);
+});
+
+async function databaseCollection(options: Options, local: boolean): Promise<Collection> {
+  const allowed = (id: string, type: "project" | "book") =>
+    options.admin ||
+    (local &&
+      starters.some((s) => (type === "book" ? s.bookId : s.projectId) === id));
+  const [
+    projects,
+    posts,
+    favorites,
+    moments,
+    books,
+    room,
+    monitors,
+    asset,
+    events,
+  ] = await collectionRows(!!options.admin, local);
   const now = Date.now();
   const direct = !!options.direct;
   const targets: Target[] = [
@@ -500,6 +510,12 @@ async function databaseCollection(
           ],
       featured:
         target?.display === "featured" || wrapper?.display === "featured",
+      ...(target?.kind === "Project" ? {
+        role: pages.flatMap((page) => page.blocks).find((block) => block.kind === "metric" && /^(my )?role$/i.test(block.label ?? ""))?.text,
+        status: pages.flatMap((page) => page.blocks).find((block) => block.kind === "metric" && block.label === "Status")?.text ?? target.tags.find((tag) => /^(live|in development|early stage|earlier work|launching)$/i.test(tag)) ?? target.status,
+        startedOn: target.startedOn?.toISOString().slice(0, 10),
+        endedOn: target.endedOn?.toISOString().slice(0, 10),
+      } : {}),
     });
   }
   for (const target of targets) {

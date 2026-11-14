@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-11-12",
+  "timeZone": "America/New_York",
+  "method": "Tavily extract; primary pages read by implementation worker",
+  "sources": [
+    {
+      "url": "https://sos-tn-gov-files.tnsosfiles.com/forms/MURDOCK_COLLECTION_OF_JOHN_OVERTON_PAPERS_1780-1797-1820-1908.pdf",
+      "title": "Murdock Collection of John Overton Papers, 1780-1908",
+      "sha256": "dc8f4d648a3ada64c6a2377e655c12e3ebfadce643edde2824c2d33d3548a854"
+    }
+  ],
+  "failed": []
+}

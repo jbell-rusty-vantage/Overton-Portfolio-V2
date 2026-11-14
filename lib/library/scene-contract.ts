@@ -1,5 +1,8 @@
 import manifest from "@/assets/library/manifest.json";
-export function validateHall(bytes: Uint8Array) {
+import house from "@/assets/travellers-rest/anchors.json";
+import world from "@/assets/travellers-rest/anchors-v2.json";
+type Anchor = { node: string; target: number[]; yaw?: number };
+function validateScene(bytes: Uint8Array, anchors: Anchor[]) {
   if (bytes.length < 20 || bytes.length > 8 * 1024 * 1024)
     throw Error("The GLB must fit the eight MiB scene budget.");
   const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
@@ -20,11 +23,7 @@ export function validateHall(bytes: Uint8Array) {
     json.images?.some((i: { uri?: string }) => i.uri)
   )
     throw Error("Use a self-contained GLB with embedded resources.");
-  for (const a of [
-    ...manifest.zones,
-    ...manifest.shelves,
-    ...manifest.screens,
-  ]) {
+  for (const a of anchors) {
     const hits = json.nodes
       .map((n: { name?: string }, index: number) =>
         n.name === a.node ? index : -1,
@@ -36,8 +35,7 @@ export function validateHall(bytes: Uint8Array) {
     )
       throw Error("Missing, duplicated or non-root scene anchor: " + a.node);
     const node = json.nodes[hits[0]];
-    const position =
-      "x" in a ? [a.x, 0, a.z] : "target" in a ? a.target : a.pos;
+    const position = a.target;
     const translation = node.translation ?? [0, 0, 0];
     if (
       node.matrix ||
@@ -45,11 +43,38 @@ export function validateHall(bytes: Uint8Array) {
       (node.scale ?? [1, 1, 1]).some((n: number) => Math.abs(n - 1) > 0.001)
     )
       throw Error("Unexpected scene anchor transform: " + a.node);
-    const angle = "yaw" in a ? (a.yaw * Math.PI) / 360 : 0;
+    const angle = ((a.yaw ?? 0) * Math.PI) / 360;
     const rotation = node.rotation ?? [0, 0, 0, 1];
     const alignment =
       rotation[1] * Math.sin(angle) + rotation[3] * Math.cos(angle);
     if (Math.abs(Math.abs(alignment) - 1) > 0.001)
       throw Error("Unexpected anchor orientation: " + a.node);
   }
+  return json;
+}
+export function validateHall(bytes: Uint8Array) {
+  validateScene(bytes, [
+    ...manifest.zones,
+    ...manifest.shelves.map((a) => ({ ...a, target: [a.x, 0, a.z] })),
+    ...manifest.screens.map((a) => ({ ...a, target: a.pos })),
+  ]);
+}
+/** Edition 1 carries the custodian clip in the model. Edition 2 is the architectural
+    shell of the continuous world: the portrait, bindings and documents are live objects,
+    so the contract is the extended set of standing, shelf and resting anchors. */
+export function validateEstate(bytes: Uint8Array, edition: 1 | 2 = 1) {
+  const glb = validateScene(
+    bytes,
+    Object.entries(edition === 2 ? world : house).map(([node, target]) => ({
+      node,
+      target,
+    })),
+  );
+  if (
+    edition === 1 &&
+    !glb.animations?.some(
+      (a: { name?: string }) => a.name === "Custodian recognition",
+    )
+  )
+    throw Error("The custodian performance clip is missing.");
 }

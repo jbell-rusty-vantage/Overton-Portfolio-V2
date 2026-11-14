@@ -22,8 +22,8 @@ export function resolvePages(
       {
         key,
         template,
-        title: templateNames[template] ?? "Page " + p.position,
-        blocks,
+        title: blocks.find((block) => block.kind === "heading" && block.label === "section-title")?.text ?? templateNames[template] ?? "Page " + p.position,
+        blocks: blocks.filter((block) => block.label !== "section-title"),
       },
     ];
   });

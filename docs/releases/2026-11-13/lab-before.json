@@ -1,0 +1,336 @@
+{
+  "label": "before",
+  "base": "http://127.0.0.1:3078",
+  "browser": "157.0.8103.52",
+  "profile": "Workstation Chrome; no network/CPU throttling; desktop 1366x860 and emulated 390x844",
+  "routes": [
+    {
+      "width": 1366,
+      "warmth": "cold",
+      "wireBytes": 1211762,
+      "lcp": 13920,
+      "cls": 0.2364680101382784,
+      "draws": 0,
+      "imagePixels": 2579844
+    },
+    {
+      "width": 1366,
+      "warmth": "warm",
+      "wireBytes": 24871,
+      "lcp": 848,
+      "cls": 0.23645680819912152,
+      "draws": 0,
+      "imagePixels": 2579844
+    },
+    {
+      "width": 390,
+      "warmth": "cold",
+      "wireBytes": 1041618,
+      "lcp": 856,
+      "cls": 0.2864685579090017,
+      "draws": 0,
+      "imagePixels": 1480648
+    },
+    {
+      "width": 390,
+      "warmth": "warm",
+      "wireBytes": 24627,
+      "lcp": 772,
+      "cls": 0.2864685579090017,
+      "draws": 0,
+      "imagePixels": 1480648
+    }
+  ],
+  "estate": [
+    {
+      "width": 1366,
+      "cycle": 0,
+      "entrance": {
+        "draws": 136,
+        "resources": [
+          {
+            "bytes": 280859
+          },
+          {
+            "bytes": 82579
+          },
+          {
+            "bytes": 129025
+          }
+        ]
+      },
+      "entryReadyMs": 7240.754400000002,
+      "heap": {
+        "usedSize": 56134800,
+        "totalSize": 97382400,
+        "embedderHeapUsedSize": 13921080,
+        "backingStorageSize": 57355576
+      },
+      "draws": 56798,
+      "p50": 13.299999999813735,
+      "p95": 17,
+      "preparation": "{\"started\":6334.5,\"assetsMilliseconds\":3914.2000000001863,\"prepareMilliseconds\":1512.6000000005588,\"totalMilliseconds\":5426.9000000003725,\"textures\":112,\"programs\":46}"
+    },
+    {
+      "width": 1366,
+      "cycle": 1,
+      "entrance": {
+        "draws": 11817,
+        "resources": [
+          {
+            "bytes": 280859
+          },
+          {
+            "bytes": 82579
+          },
+          {
+            "bytes": 129025
+          }
+        ]
+      },
+      "entryReadyMs": 7055.204900000004,
+      "heap": {
+        "usedSize": 49755144,
+        "totalSize": 98766848,
+        "embedderHeapUsedSize": 10002832,
+        "backingStorageSize": 54152953
+      },
+      "draws": 67268,
+      "p50": 13.300000000745058,
+      "p95": 16.90000000037253,
+      "preparation": "{\"started\":5572.200000000186,\"assetsMilliseconds\":4460.9000000003725,\"prepareMilliseconds\":1849.1000000005588,\"totalMilliseconds\":6310.100000000559,\"textures\":112,\"programs\":46}"
+    },
+    {
+      "width": 1366,
+      "cycle": 2,
+      "entrance": {
+        "draws": 136,
+        "resources": [
+          {
+            "bytes": 280859
+          },
+          {
+            "bytes": 82579
+          },
+          {
+            "bytes": 129025
+          }
+        ]
+      },
+      "entryReadyMs": 7531.852400000003,
+      "heap": {
+        "usedSize": 43453008,
+        "totalSize": 100147200,
+        "embedderHeapUsedSize": 14262648,
+        "backingStorageSize": 56101274
+      },
+      "draws": 54973,
+      "p50": 13.400000000372529,
+      "p95": 16.90000000037253,
+      "preparation": "{\"started\":5599.5,\"assetsMilliseconds\":4023.0999999996275,\"prepareMilliseconds\":2507.9000000003725,\"totalMilliseconds\":6531.199999999255,\"textures\":112,\"programs\":46}"
+    },
+    {
+      "width": 1366,
+      "cycle": 3,
+      "entrance": {
+        "draws": 136,
+        "resources": [
+          {
+            "bytes": 280859
+          },
+          {
+            "bytes": 82579
+          },
+          {
+            "bytes": 129025
+          }
+        ]
+      },
+      "entryReadyMs": 6516.73550000001,
+      "heap": {
+        "usedSize": 49802844,
+        "totalSize": 98123776,
+        "embedderHeapUsedSize": 12889512,
+        "backingStorageSize": 55349811
+      },
+      "draws": 54691,
+      "p50": 12.799999999813735,
+      "p95": 16.800000000745058,
+      "preparation": "{\"started\":5522,\"assetsMilliseconds\":4051.199999999255,\"prepareMilliseconds\":1720.5999999996275,\"totalMilliseconds\":5771.899999999441,\"textures\":112,\"programs\":46}"
+    },
+    {
+      "width": 1366,
+      "cycle": 4,
+      "entrance": {
+        "draws": 433,
+        "resources": [
+          {
+            "bytes": 280859
+          },
+          {
+            "bytes": 82579
+          },
+          {
+            "bytes": 129025
+          }
+        ]
+      },
+      "entryReadyMs": 6527.3036999999895,
+      "heap": {
+        "usedSize": 47818892,
+        "totalSize": 99504128,
+        "embedderHeapUsedSize": 9300472,
+        "backingStorageSize": 53119471
+      },
+      "draws": 55001,
+      "p50": 12.799999999813735,
+      "p95": 16.799999999813735,
+      "preparation": "{\"started\":6452.700000000186,\"assetsMilliseconds\":4433.799999999814,\"prepareMilliseconds\":1574.2999999998137,\"totalMilliseconds\":6008.399999999441,\"textures\":112,\"programs\":46}"
+    },
+    {
+      "width": 390,
+      "cycle": 0,
+      "entrance": {
+        "draws": 857,
+        "resources": [
+          {
+            "bytes": 280859
+          },
+          {
+            "bytes": 82579
+          },
+          {
+            "bytes": 82579
+          }
+        ]
+      },
+      "entryReadyMs": 3894.909799999994,
+      "heap": {
+        "usedSize": 39847444,
+        "totalSize": 98168832,
+        "embedderHeapUsedSize": 8036312,
+        "backingStorageSize": 38826393
+      },
+      "draws": 25257,
+      "p50": 16.600000000558794,
+      "p95": 17.200000000186265,
+      "preparation": "{\"started\":5254.5,\"assetsMilliseconds\":1994.2000000001863,\"prepareMilliseconds\":1379.0999999996275,\"totalMilliseconds\":3373.5,\"textures\":112,\"programs\":46}"
+    },
+    {
+      "width": 390,
+      "cycle": 1,
+      "entrance": {
+        "draws": 857,
+        "resources": [
+          {
+            "bytes": 280859
+          },
+          {
+            "bytes": 82579
+          },
+          {
+            "bytes": 82579
+          }
+        ]
+      },
+      "entryReadyMs": 4171.6352999999945,
+      "heap": {
+        "usedSize": 47309936,
+        "totalSize": 99553280,
+        "embedderHeapUsedSize": 7737760,
+        "backingStorageSize": 36277324
+      },
+      "draws": 27196,
+      "p50": 16.699999999254942,
+      "p95": 17.200000000186265,
+      "preparation": "{\"started\":5209.100000000559,\"assetsMilliseconds\":1734,\"prepareMilliseconds\":1513.5999999996275,\"totalMilliseconds\":3247.7999999998137,\"textures\":112,\"programs\":46}"
+    },
+    {
+      "width": 390,
+      "cycle": 2,
+      "entrance": {
+        "draws": 857,
+        "resources": [
+          {
+            "bytes": 280859
+          },
+          {
+            "bytes": 82579
+          },
+          {
+            "bytes": 82579
+          }
+        ]
+      },
+      "entryReadyMs": 3757.412799999991,
+      "heap": {
+        "usedSize": 36236968,
+        "totalSize": 97263616,
+        "embedderHeapUsedSize": 7694840,
+        "backingStorageSize": 36277745
+      },
+      "draws": 26283,
+      "p50": 16.600000000558794,
+      "p95": 17.200000000186265,
+      "preparation": "{\"started\":5272.200000000186,\"assetsMilliseconds\":1978.8999999994412,\"prepareMilliseconds\":1049.2000000001863,\"totalMilliseconds\":3028.399999999441,\"textures\":112,\"programs\":46}"
+    },
+    {
+      "width": 390,
+      "cycle": 3,
+      "entrance": {
+        "draws": 857,
+        "resources": [
+          {
+            "bytes": 280859
+          },
+          {
+            "bytes": 82579
+          },
+          {
+            "bytes": 82579
+          }
+        ]
+      },
+      "entryReadyMs": 3521.0930000000226,
+      "heap": {
+        "usedSize": 49711588,
+        "totalSize": 114372608,
+        "embedderHeapUsedSize": 13127712,
+        "backingStorageSize": 42211833
+      },
+      "draws": 25540,
+      "p50": 16.600000000558794,
+      "p95": 17.299999999813735,
+      "preparation": "{\"started\":5172,\"assetsMilliseconds\":1613.8999999994412,\"prepareMilliseconds\":1376.7000000001863,\"totalMilliseconds\":2990.7999999998137,\"textures\":112,\"programs\":46}"
+    },
+    {
+      "width": 390,
+      "cycle": 4,
+      "entrance": {
+        "draws": 857,
+        "resources": [
+          {
+            "bytes": 280859
+          },
+          {
+            "bytes": 82579
+          },
+          {
+            "bytes": 82579
+          }
+        ]
+      },
+      "entryReadyMs": 3534.3108000000066,
+      "heap": {
+        "usedSize": 64761240,
+        "totalSize": 122834944,
+        "embedderHeapUsedSize": 14010968,
+        "backingStorageSize": 67199828
+      },
+      "draws": 26577,
+      "p50": 16.699999999254942,
+      "p95": 17.200000000186265,
+      "preparation": "{\"started\":5498.9000000003725,\"assetsMilliseconds\":1676.4000000003725,\"prepareMilliseconds\":1072.0999999996275,\"totalMilliseconds\":2748.5999999996275,\"textures\":112,\"programs\":46}"
+    }
+  ]
+}

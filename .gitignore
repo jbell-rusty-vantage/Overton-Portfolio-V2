@@ -16,6 +16,7 @@
 # next.js
 /.next/
 /.next-office/
+/.next-browser/
 /out/
 
 # production
@@ -44,6 +45,7 @@ next-env.d.ts
 !.env.example
 
 /.local-library/
+/.firecrawl/
 /test-results/
 /playwright-report/
 
@@ -69,3 +71,13 @@ next-env.d.ts
 /clips/
 /thumbs/
 /analysis.html
+
+# Survey photograph masters (about 190 MB): re-download from the Library of Congress using
+# assets/travellers-rest/survey/files.json. Working sheets and crops are kept.
+/assets/travellers-rest/survey/originals/habs-tn-14/*.tif
+
+# Private notes in the repository root: never commit.
+/Instagram Pass.txt
+
+# Disposable integration-test artwork; created and removed by its owning harness.
+/public/library/artwork/proof-*.webp

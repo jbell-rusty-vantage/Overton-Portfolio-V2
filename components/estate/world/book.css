@@ -1,0 +1,661 @@
+/* The open book: two DOM pages registered to the paper, and the typography of what is
+   printed on them. Pagination measures this same stylesheet (paginate.ts), and the
+   paper texture is read back from it (bookPrint.ts), so a rule changed here changes
+   the measured page, the readable page and the printed leaf together. */
+.wb-reader {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.wb-pages {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+  outline: none;
+}
+.wb-reader[data-visible] .wb-pages {
+  visibility: visible;
+}
+.wb-page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--wb-w);
+  height: var(--wb-h);
+  transform-origin: 0 0;
+  overflow: hidden;
+  color: #2f271a;
+  font: 400 var(--wb-body) / var(--wb-line) "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  letter-spacing: 0;
+  text-align: left;
+  user-select: text;
+  -webkit-user-select: text;
+  pointer-events: auto;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: default;
+}
+/* The readable sheet owns its paper as well as its ink. It stays opaque and sharp
+   while the room fades in or the GPU changes resolution behind it. */
+.wb-pages > .wb-page {
+  background: #f1e7cc;
+  background-image: linear-gradient(to right, #e7d9b8, #f7eed8 12%, #f7eed8 88%, #e7d9b8);
+  isolation: isolate;
+}
+.wb-reader[data-single] .wb-page.left {
+  display: none;
+}
+/* Laid out off screen exactly as a page, never seen. */
+.wb-page.wb-measure {
+  pointer-events: none;
+  transform: none;
+  left: -9999px;
+  top: 0;
+  contain: layout style;
+}
+.wb-sheet {
+  position: absolute;
+  inset: 0;
+}
+.wb-sheet * {
+  box-sizing: border-box;
+}
+.wb-running {
+  position: absolute;
+  top: calc(var(--wb-top) - 30px);
+  left: var(--wb-side);
+  right: var(--wb-side);
+  font: 600 9.5px/12px "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #7c6c4c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wb-running.right {
+  text-align: right;
+}
+.wb-folio {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(var(--wb-bottom) - 30px);
+  text-align: center;
+  font-size: 11px;
+  line-height: 12px;
+  color: #7c6c4c;
+}
+.wb-flow {
+  position: absolute;
+  top: var(--wb-top);
+  left: var(--wb-side);
+  right: var(--wb-side);
+}
+.wb-page :is(h1, h2, h3, p, figure, dl, dd, dt, ol, li, pre) {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0;
+  text-transform: none;
+  text-wrap: wrap;
+  text-indent: 0;
+  max-width: none;
+  opacity: 1;
+}
+.wb-page .wb-chapter {
+  font: 400 25px/29px "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  color: #2a2318;
+  margin: 0 0 9px;
+}
+.wb-page .wb-flow > .wb-chapter:not(:first-child) {
+  margin-top: 24px;
+}
+.wb-rule {
+  display: block;
+  width: 42px;
+  height: 1.2px;
+  background: #b09458;
+  margin: 0 0 13px;
+}
+.wb-page .wb-h {
+  font: 600 11.5px/16px "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #6b5a3a;
+  margin: 15px 0 6px;
+}
+.wb-page .wb-flow > .wb-h:first-child {
+  margin-top: 0;
+}
+.wb-page .wb-p {
+  margin: 0 0 calc(var(--wb-body) * 0.62);
+  color: #2f271a;
+}
+/* A list line: the term runs in, later lines hang. */
+.wb-page .wb-item {
+  margin: 0 0 5px;
+  padding-left: 14px;
+  text-indent: -14px;
+  color: #2f271a;
+}
+.wb-page .wb-item.wb-cont {
+  text-indent: 0;
+}
+.wb-page .wb-item + :not(.wb-item) {
+  margin-top: 12px;
+}
+.wb-lead {
+  font-style: italic;
+  color: #2a2318;
+}
+/* Measurements as a tidy group between two hairlines. */
+.wb-page .wb-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px 18px;
+  margin: 6px 0 14px;
+  padding: 11px 0 12px;
+  border-top: 0.7px solid rgba(70, 52, 24, 0.38);
+  border-bottom: 0.7px solid rgba(70, 52, 24, 0.38);
+}
+.wb-page .wb-metric dd {
+  font: 400 24px/26px "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  color: #2a2318;
+  font-variant-numeric: lining-nums;
+}
+.wb-page :is(.wb-metric, .wb-fact) dt {
+  font: 600 11px/15px "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  color: #7c6c4c;
+}
+.wb-page .wb-metric dt {
+  margin-top: 3px;
+}
+.wb-page .wb-fact {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  column-gap: 12px;
+  align-items: baseline;
+}
+.wb-page .wb-fact dd {
+  font-style: italic;
+  color: #2a2318;
+}
+.wb-page .wb-code {
+  margin: 4px 0 12px;
+  padding: 8px 9px;
+  background: rgba(70, 52, 24, 0.1);
+  color: #3a2f1d;
+  font: 10.5px/14.5px ui-monospace, "Cascadia Mono", Consolas, monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  tab-size: 2;
+  border-radius: 0;
+}
+.wb-page .wb-link {
+  margin: 0 0 7px;
+}
+.wb-page .wb-link a {
+  color: #5a4320;
+  text-decoration: underline;
+  text-decoration-thickness: 0.7px;
+  text-underline-offset: 2.5px;
+  cursor: pointer;
+}
+.wb-page .wb-link a:hover,
+.wb-page .wb-toc a:hover {
+  color: #2a1c06;
+}
+.wb-page a:focus-visible,
+.wb-page [data-zoom]:focus-visible {
+  outline: 1.5px solid #8a6a2a;
+  outline-offset: 2px;
+}
+.wb-arrow {
+  white-space: nowrap;
+}
+.wb-page .wb-figure {
+  margin-top: 4px;
+  margin-bottom: 14px;
+}
+.wb-page .wb-flow > .wb-figure:first-child {
+  margin-top: 0;
+}
+.wb-media {
+  display: block;
+  max-width: none;
+  background: rgba(70, 52, 24, 0.12);
+  outline: 0.6px solid rgba(70, 52, 24, 0.4);
+  outline-offset: -0.3px;
+  border-radius: 0;
+  object-fit: cover;
+}
+.wb-page img.wb-media {
+  cursor: zoom-in;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.wb-page video.wb-media {
+  object-fit: contain;
+  background: #1c160d;
+}
+/* A film waits as a clean preview with one play mark; controls come when it starts. */
+.wb-page .wb-video {
+  position: relative;
+}
+.wb-page .wb-video video {
+  cursor: pointer;
+}
+.wb-page .wb-video:not([data-playing])::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(20, 14, 6, 0.62) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 38'%3E%3Cpath d='M15 11.5v15l12-7.5z' fill='%23f1e7cc'/%3E%3C/svg%3E") center / contain no-repeat;
+  box-shadow: 0 0 0 1px rgba(241, 231, 204, 0.55);
+  pointer-events: none;
+  z-index: 1;
+}
+.wb-page figcaption {
+  font: italic 11.5px/15px "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  color: #6b5c40;
+  margin-top: 7px;
+}
+/* Front matter */
+.wb-plate {
+  position: absolute;
+  top: var(--wb-top);
+  bottom: var(--wb-bottom);
+  left: var(--wb-side);
+  right: var(--wb-side);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wb-plate .wb-media {
+  box-shadow: 0 0 0 5px rgba(241, 231, 204, 0.55), 0 0 0 5.7px rgba(70, 52, 24, 0.3);
+}
+.wb-page .wb-plate figcaption {
+  margin-top: 16px;
+  font: 600 9.5px/13px "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #7c6c4c;
+}
+.wb-halftitle,
+.wb-end {
+  position: absolute;
+  top: var(--wb-top);
+  bottom: var(--wb-bottom);
+  left: var(--wb-side);
+  right: var(--wb-side);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+/* A rule broken by a lozenge. */
+.wb-orn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 12px;
+}
+.wb-orn i {
+  width: 26px;
+  height: 1.2px;
+  background: #b09458;
+}
+.wb-orn b {
+  width: 5px;
+  height: 5px;
+  background: #b09458;
+  transform: rotate(45deg);
+}
+.wb-page .wb-halftitle p,
+.wb-page .wb-end-title {
+  font: 400 24px/29px "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  color: #2a2318;
+}
+.wb-halftitle span:last-child,
+.wb-page .wb-end-note {
+  font: 600 9.5px/14px "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #7c6c4c;
+}
+.wb-page .wb-end .wb-link {
+  margin-top: 8px;
+}
+.wb-titlepage {
+  position: absolute;
+  top: calc(var(--wb-top) + 22px);
+  bottom: var(--wb-bottom);
+  left: var(--wb-side);
+  right: var(--wb-side);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+.wb-titlehead {
+  min-height: 0;
+  overflow: hidden;
+}
+.wb-tags {
+  display: block;
+  font: 600 10px/13px "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  color: #7c6c4c;
+}
+.wb-page .wb-title {
+  font: 400 34px/38px "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: min(34px, calc(var(--wb-w) * 0.088));
+  line-height: 1.12;
+  color: #2a2318;
+  margin: 16px 0 15px;
+}
+.wb-page .wb-titlepage[data-tight="1"] .wb-title {
+  font-size: min(28px, calc(var(--wb-w) * 0.076));
+  margin: 12px 0 12px;
+}
+.wb-page .wb-titlepage[data-tight="1"] .wb-summary {
+  font-size: calc(var(--wb-body) - 1px);
+  line-height: 1.44;
+}
+.wb-page .wb-titlepage[data-tight="2"] .wb-title {
+  font-size: min(24px, calc(var(--wb-w) * 0.066));
+  margin: 9px 0 10px;
+}
+.wb-page .wb-titlepage[data-tight="2"] .wb-summary {
+  font-size: calc(var(--wb-body) - 2px);
+  line-height: 1.4;
+}
+.wb-page .wb-titlepage[data-tight="2"] .wb-rule {
+  margin-bottom: 10px;
+}
+.wb-titlepage .wb-rule {
+  width: 56px;
+  margin-bottom: 15px;
+}
+.wb-page .wb-client {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6b5c40;
+}
+.wb-imprint {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding-top: 11px;
+  border-top: 0.7px solid rgba(70, 52, 24, 0.38);
+}
+.wb-author {
+  font: 600 10.5px/14px "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #2a2318;
+}
+.wb-series {
+  font: italic 11.5px/15px "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  color: #6b5c40;
+}
+.wb-page .wb-toc {
+  list-style: none;
+}
+.wb-page .wb-toc a {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 5px 0;
+  color: #2f271a;
+  text-decoration: none;
+  cursor: pointer;
+}
+.wb-toc-dots {
+  flex: 1;
+  min-width: 14px;
+  height: 0;
+  border-bottom: 1px dotted rgba(70, 52, 24, 0.5);
+  position: relative;
+  top: -3px;
+}
+.wb-toc-n {
+  color: #6b5a3a;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+/* Where the paper can be taken hold of. The outer margin lifts the leaf; the head and
+   foot margins move the whole book. */
+.wb-edge,
+.wb-grip {
+  position: absolute;
+  z-index: 2;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.wb-edge {
+  top: 0;
+  bottom: 0;
+  width: calc(var(--wb-side) - 8px);
+  z-index: 3;
+}
+.wb-page.right .wb-edge {
+  right: 0;
+}
+.wb-page.left .wb-edge {
+  left: 0;
+}
+/* One page at a time: the inner margin lifts the leaf before. */
+.wb-edge.back {
+  display: none;
+}
+.wb-reader[data-single] .wb-page.right .wb-edge.back {
+  display: block;
+  left: 0;
+  right: auto;
+}
+.wb-edge::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 15px;
+  height: 15px;
+  transition: width 0.18s, height 0.18s;
+}
+.wb-page.right .wb-edge:not(.back)::after {
+  right: 0;
+  background: linear-gradient(315deg, rgba(60, 40, 10, 0.03) 0 46%, rgba(60, 40, 10, 0.28) 50%, rgba(255, 250, 235, 0.5) 54%, rgba(241, 231, 204, 0) 100%);
+}
+.wb-page.left .wb-edge::after,
+.wb-edge.back::after {
+  left: 0;
+  background: linear-gradient(45deg, rgba(60, 40, 10, 0.03) 0 46%, rgba(60, 40, 10, 0.28) 50%, rgba(255, 250, 235, 0.5) 54%, rgba(241, 231, 204, 0) 100%);
+}
+.wb-edge:hover::after {
+  width: 26px;
+  height: 26px;
+}
+.wb-edge[data-end]::after {
+  display: none;
+}
+.wb-grip {
+  left: 0;
+  right: 0;
+}
+.wb-grip.top {
+  top: 0;
+  height: calc(var(--wb-top) - 8px);
+}
+.wb-grip.bottom {
+  bottom: 0;
+  height: calc(var(--wb-bottom) - 8px);
+}
+.wb-reader[data-hold] .wb-page,
+.wb-reader[data-hold] .wb-edge,
+.wb-reader[data-hold] .wb-grip {
+  cursor: grabbing;
+}
+/* A picture taken off the page to be looked at. */
+.wb-zoom {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  gap: 12px;
+  padding: clamp(14px, 3vw, 34px);
+  background: rgba(14, 10, 6, 0.9);
+  pointer-events: auto;
+  cursor: zoom-out;
+  animation: wb-zoom-in 0.18s ease-out;
+}
+.wb-zoom img {
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  box-shadow: 0 0 0 1px rgba(223, 188, 122, 0.35), 0 18px 60px rgba(0, 0, 0, 0.6);
+  background: #f1e7cc;
+}
+.wb-zoom figure {
+  display: contents;
+}
+.wb-zoom figcaption {
+  font: italic 15px/1.4 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  color: #eadfc4;
+  text-align: center;
+  max-width: 70ch;
+}
+.wb-zoom button {
+  position: absolute;
+  top: clamp(10px, 2vw, 22px);
+  right: clamp(10px, 2vw, 22px);
+}
+@keyframes wb-zoom-in {
+  from {
+    opacity: 0;
+  }
+}
+/* The reading bar */
+.wb-where {
+  position: relative;
+  min-width: 0;
+  flex: 0 1 auto;
+}
+.wb-contents {
+  display: block;
+  background: none;
+  border: 0;
+  text-align: center;
+  padding: 2px 10px;
+  max-width: 44vw;
+  min-width: 0;
+}
+.wb-contents strong {
+  display: block;
+  font: 400 16px/1.2 var(--tw-serif);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wb-contents span {
+  display: block;
+  font-size: 11.5px;
+  opacity: 0.8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wb-report-link{font:inherit;font-size:12px;color:inherit;border:0;border-bottom:1px solid currentColor;background:none;padding:7px 0;margin-top:12px;cursor:pointer}
+.wb-reader[inert]{visibility:hidden;pointer-events:none}
+.wb-menu {
+  position: absolute;
+  bottom: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  max-height: 50vh;
+  overflow: auto;
+  display: grid;
+  background: var(--tw-panel);
+  border: 1px solid var(--tw-line);
+  padding: 6px;
+}
+.wb-menu button,
+.wb-menu a {
+  text-align: left;
+  background: none;
+  border: 0;
+  padding: 8px 9px;
+  font: 400 15px/1.2 var(--tw-serif);
+  text-decoration: none;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.wb-menu [aria-current],
+.wb-menu button:hover,
+.wb-menu a:hover {
+  background: rgba(223, 188, 122, 0.16);
+}
+.wb-bar .tw-pill[data-armed] {
+  background: var(--tw-gold, #dfbc7a);
+  color: #1a130a;
+}
+.wb-hint {
+  position: absolute;
+  left: 50%;
+  bottom: calc(clamp(10px, 2vw, 22px) + 64px);
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  background: var(--tw-panel);
+  border: 1px solid var(--tw-line);
+  font-size: 12.5px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 4;
+}
+@media (max-width: 700px), (max-aspect-ratio: 4/5) {
+  .wb-where {
+    flex: 1 1 0;
+  }
+  .wb-contents {
+    max-width: 100%;
+    width: 100%;
+  }
+  /* The bar keeps its four controls in reach; the pill is named for assistive
+     technology and shown as its mark. */
+  .wb-bar .tw-pill span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .wb-hint {
+    bottom: 72px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wb-zoom {
+    animation: none;
+  }
+  .wb-edge::after {
+    transition: none;
+  }
+}

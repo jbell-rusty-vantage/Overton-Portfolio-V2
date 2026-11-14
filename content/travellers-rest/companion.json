@@ -1,0 +1,70 @@
+{
+  "slug": "travellers-rest-house-book",
+  "title": "The house book",
+  "subtitle": "A visitor’s companion to the land, household, politics and law of Travellers Rest.",
+  "leaves": [
+    {
+      "key": "first-residents",
+      "title": "Before the house",
+      "period": "The Cumberland Valley",
+      "object": "first-residents",
+      "objectLabel": "Examine the ceramic bowl record",
+      "paragraphs": [
+        "Long before this land had a deed or an English name, a Mississippian community made a home here. The museum dates evidence of occupation to as early as 1270–1316. A later observer described earthworks above the creek.",
+        "A clay hearth and a notched bowl containing freshwater snail shells survive in the archaeological record. They bring the scale of the story down to a fire, a vessel and food gathered from the water. Tennessee’s statehood in 1796 came centuries later."
+      ],
+      "sources": [
+        ["The first residents and their material culture", "https://www.historictravellersrest.org/history/the-first-residents-of-historic-travellers-rest"],
+        ["The land in early Nashville", "https://www.historictravellersrest.org/history/nashville-from-frontier-to-home-of-the-u-s-president"]
+      ]
+    },
+    {
+      "key": "household",
+      "title": "The hands that built it",
+      "period": "The household",
+      "object": "william-franklin",
+      "objectLabel": "Read about William and Franklin",
+      "paragraphs": [
+        "Enslaved people helped build the house begun here in 1799. They worked in its kitchens and fields and practiced trades including brickmaking, weaving and blacksmithing. After Overton’s death, an inventory listed fifty-three people by name and age.",
+        "Two of the children can be followed into an earlier document. A sale dated October 3, 1832 records Overton’s purchase of William, twelve, and his brother Franklin, seven. The museum maintains a separate record for each boy."
+      ],
+      "sources": [
+        ["A Past Uncovered", "https://www.historictravellersrest.org/history/a-past-uncovered"],
+        ["William’s record", "https://travellersrestenslavedpersonsdocumentationproject.omeka.net/items/show/100"],
+        ["Franklin’s record", "https://travellersrestenslavedpersonsdocumentationproject.omeka.net/items/show/101"]
+      ]
+    },
+    {
+      "key": "campaign",
+      "title": "A judge and a campaign",
+      "period": "Nashville and Washington",
+      "object": "election-invitation",
+      "objectLabel": "Examine the invitation on satin",
+      "paragraphs": [
+        "Nashville brought two young lawyers together. John Overton and Andrew Jackson shared clients and, later, speculated in land together. In 1804 Overton succeeded Jackson on Tennessee’s Superior Court. A partnership formed in the courthouse reached well beyond it.",
+        "Overton helped organize Jackson’s presidential campaign through the Nashville Junto. During the bitter election of 1828 he drew on his acquaintance with Rachel Jackson to defend her marriage in print. A Nashville invitation to a December victory ball preserves a different trace of that campaign."
+      ],
+      "sources": [
+        ["Theodore Brown, Jr., on John Overton", "https://tennesseeencyclopedia.net/entries/john-overton/"],
+        ["The 1828 invitation", "https://www.loc.gov/item/2020772132/"],
+        ["John Overton papers, archival finding aid", "https://tsla.tnsosfiles.com/history/manuscripts/findingaids/MURDOCK_COLLECTION_OF_JOHN_OVERTON_PAPERS_1780-1797-1820-1908.pdf"]
+      ]
+    },
+    {
+      "key": "reports",
+      "title": "A reader’s working life",
+      "period": "The Tennessee Reports",
+      "object": "murfree-leeper",
+      "objectLabel": "Examine the first reported case",
+      "paragraphs": [
+        "A lawyer trying to learn what another court had decided needed a reliable text. Overton kept records of decisions and, working with Judge Thomas Emerson, brought the first two volumes of the Tennessee Reports into print between 1813 and 1817. His own library held about 160 law books by 1808.",
+        "Open the first volume at Murfree v. Leeper, 1 Tenn. 1. The decision dates to 1791, thirteen years before Overton took his seat on the Superior Court. His name in the parallel citation, 1 Overt. 1, identifies him as the reporter. The museum preserves the two volumes pictured beside his quills."
+      ],
+      "sources": [
+        ["Murfree v. Leeper, printed facsimile", "https://static.case.law/tenn/1/case-pdfs/0001-01.pdf"],
+        ["The books and inkwell at Travellers Rest", "https://www.historictravellersrest.org/history/nashville-from-frontier-to-home-of-the-u-s-president"],
+        ["The judge’s library and judicial career", "https://tennesseeencyclopedia.net/entries/john-overton/"]
+      ]
+    }
+  ]
+}

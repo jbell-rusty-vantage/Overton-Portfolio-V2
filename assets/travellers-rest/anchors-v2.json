@@ -1,0 +1,122 @@
+{
+  "door.south": [
+    0,
+    1.65,
+    3.18
+  ],
+  "door.library": [
+    -1.54,
+    1.68,
+    0.725
+  ],
+  "shelf.reports": [
+    -7.58,
+    1.8,
+    -2.13
+  ],
+  "desk.writing": [
+    -4.95,
+    1.34,
+    0.75
+  ],
+  "book.reports": [
+    -5.42,
+    1.34,
+    0.98
+  ],
+  "book.companion": [
+    -4.55,
+    1.34,
+    0.9
+  ],
+  "portrait.judge": [
+    -7.69,
+    2.8,
+    0
+  ],
+  "screen.cabinet": [
+    -7.69,
+    1.63,
+    2.548
+  ],
+  "camera.approach": [
+    2.4,
+    1.75,
+    13
+  ],
+  "camera.entry": [
+    0.38,
+    2.05,
+    2.66
+  ],
+  "camera.library": [
+    -2.54,
+    2.18,
+    0.725
+  ],
+  "camera.desk": [
+    -4.95,
+    2.2,
+    2.05
+  ],
+  "camera.portrait": [
+    -5.55,
+    2.16,
+    -0.62
+  ],
+  "camera.cabinet": [
+    -5.8,
+    2.1,
+    2.13
+  ],
+  "camera.reports": [
+    -5.85,
+    2.1,
+    -2.0
+  ],
+  "camera.drawers": [
+    -2.95,
+    2.24,
+    -1.62
+  ],
+  "camera.map": [
+    0.61,
+    2.1,
+    -0.38
+  ],
+  "shelf.projects": [
+    -7.58,
+    1.92,
+    1.85
+  ],
+  "desk.letter": [
+    -5.02,
+    1.345,
+    0.62
+  ],
+  "desk.casebook": [
+    -5.3,
+    1.34,
+    0.52
+  ],
+  "drawer.correspondence": [
+    -2.95,
+    1.2,
+    -2.6
+  ],
+  "drawer.campaign": [
+    -2.95,
+    0.96,
+    -2.6
+  ],
+  "table.map": [
+    1.49,
+    1.41,
+    -0.38
+  ],
+  "read.stand": [
+    -4.95,
+    1.9,
+    1.0
+  ]
+}

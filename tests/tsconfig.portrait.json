@@ -1,0 +1,6 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": { "incremental": false },
+  "include": ["../next-env.d.ts", "../lib/portrait/**/*.ts", "../components/portrait/**/*.tsx", "../app/api/portrait/**/*.ts", "portrait.test.ts"],
+  "exclude": ["../node_modules"]
+}

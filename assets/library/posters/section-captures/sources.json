@@ -1,0 +1,79 @@
+[
+  {
+    "name": "agentic-mission-control-harness",
+    "source": "owner-supplied local research-episode-preview.html",
+    "section": "#harness",
+    "bounds": {
+      "x": 202,
+      "y": 501.796875,
+      "width": 1036,
+      "height": 417
+    }
+  },
+  {
+    "name": "agentic-mission-control-report",
+    "source": "owner-supplied local research-episode-preview.html",
+    "section": "#report",
+    "bounds": {
+      "x": 202,
+      "y": -0.203125,
+      "width": 1036,
+      "height": 1059.296875
+    }
+  },
+  {
+    "name": "agentic-mission-control-timeline",
+    "source": "owner-supplied local research-episode-preview.html",
+    "section": "#timeline",
+    "bounds": {
+      "x": 202,
+      "y": -0.203125,
+      "width": 1036,
+      "height": 1113.0625
+    }
+  },
+  {
+    "name": "gowipe-product",
+    "source": "https://gowipe.co/products/facialcleansingwipes",
+    "section": "MainContent",
+    "bounds": {
+      "x": 0,
+      "y": 0.1875,
+      "width": 1440,
+      "height": 10096.625
+    }
+  },
+  {
+    "name": "gowipe-science",
+    "source": "https://gowipe.co/pages/science",
+    "section": "MainContent",
+    "bounds": {
+      "x": 0,
+      "y": 0.1875,
+      "width": 1440,
+      "height": 6365.234375
+    }
+  },
+  {
+    "name": "gowipe-story",
+    "source": "https://gowipe.co/pages/ourstory",
+    "section": "MainContent",
+    "bounds": {
+      "x": 0,
+      "y": 0.1875,
+      "width": 1440,
+      "height": 1169.90625
+    }
+  },
+  {
+    "name": "daryl-davis-booking",
+    "source": "https://daryldavis.myshopify.com/pages/book-me",
+    "section": null,
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 1000
+    }
+  }
+]

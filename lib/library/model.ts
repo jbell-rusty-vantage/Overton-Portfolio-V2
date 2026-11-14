@@ -13,6 +13,13 @@ export type Block = {
   url?: string;
   /** Still frame shown before a video plays. */
   poster?: string;
+  /** Optional authored WebVTT captions and transcript, validated before projection. */
+  captions?: string;
+  transcript?: string;
+  /** Keep a detailed image on a page of its own in the physical book. */
+  ownPage?: boolean;
+  /** Optional full-detail image opened from a simplified reading figure. */
+  detail?: string;
 };
 export type Leaf = { key: string; title: string; blocks: Block[] };
 export type Volume = {
@@ -30,6 +37,11 @@ export type Volume = {
   pages: Leaf[];
   cover?: string;
   featured?: boolean;
+  /** Authored project metadata only; absent values are never invented by the report. */
+  status?: string;
+  role?: string;
+  startedOn?: string;
+  endedOn?: string;
 };
 export type Screen = {
   slot: string;
@@ -72,7 +84,7 @@ export function sceneHref(
   if (shelf) q.set("shelf", shelf);
   if (book) q.set("book", book);
   if (kind) q.set("kind", kind);
-  return "/?" + q;
+  return "/library?" + q;
 }
 export function detailHref(v: Volume) {
   return (
@@ -92,13 +104,14 @@ export function detailHref(v: Volume) {
 export type ReadingScope = boolean | "samples";
 export function withinPreview(path: string, admin: ReadingScope = false) {
   if (!admin) return path;
-  const base = admin === "samples" ? "/samples" : "/admin/library/preview";
-  if (path === "/projects") return base + "?catalog=1";
-  if (/^\/(projects|books|blog|favorites|evolution)\//.test(path))
-    return (
-      base +
-      "?read=" +
-      encodeURIComponent(decodeURIComponent(path.split("/").at(-1)!))
-    );
-  return base + path.slice(1);
+  if (admin === "samples") {
+    if (path === "/projects" || path === "/") return "/samples?catalog=1";
+    if (/^\/(projects|books|blog|favorites|evolution)\//.test(path)) return "/samples?read=" + encodeURIComponent(decodeURIComponent(path.split("/").at(-1)!));
+    return "/samples" + path.replace(/^\/library/, "");
+  }
+  if (path === "/projects" || path === "/") return "/admin/preview/portfolio";
+  if (/^\/(projects|books|blog|favorites|evolution)\//.test(path)) return "/admin/preview" + path;
+  if (/^\/library(?:[?#]|$)/.test(path)) return "/admin/preview/library" + path.slice(8);
+  if (path.startsWith("/?")) return "/admin/preview/library" + path.slice(1);
+  return path;
 }

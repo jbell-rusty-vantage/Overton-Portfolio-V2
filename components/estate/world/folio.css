@@ -1,0 +1,29 @@
+.viewing-folio{position:absolute;z-index:8;inset:76px max(16px,calc((100vw - 1280px)/2)) 22px;background:#f4ead1;color:#2d291f;border:1px solid #bfa875;box-shadow:0 22px 80px #120e09b3;overflow:auto;overscroll-behavior:contain;user-select:text;padding:clamp(18px,3vw,36px);font:16px/1.5 Georgia,serif}
+.viewing-folio header{display:flex;gap:24px;justify-content:space-between;align-items:start;margin-bottom:22px}
+.viewing-folio h1{font:normal clamp(28px,3vw,42px)/1.1 Georgia,serif;margin:7px 0 0}
+.viewing-folio button,.folio-highlights button{font:13px/1.4 "Segoe UI",Arial,sans-serif;color:inherit;background:transparent;border:1px solid #ad976d;padding:10px 14px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.viewing-folio button:hover,.folio-highlights button:hover{background:#e5d7b4}.viewing-folio button:disabled,.folio-highlights button:disabled{opacity:.4;cursor:default}
+.viewing-folio :focus-visible,.folio-highlights :focus-visible{outline:3px solid #85602c;outline-offset:3px}
+.folio-over{font:11px/1.5 "Segoe UI",Arial,sans-serif;text-transform:uppercase;letter-spacing:.13em;color:#6d5935}
+.folio-tabs{display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid #c5b28b;padding-bottom:18px;margin-bottom:24px}
+.folio-tabs button[aria-current]{background:#354535;color:#fff8e3;border-color:#354535}
+.folio-highlights{display:grid;grid-template-columns:minmax(0,1fr) 265px;gap:30px;color:#2d291f}
+.folio-feature{min-width:0}.viewing-folio h2,.folio-highlights h2{font:normal 27px/1.25 Georgia,serif;margin:6px 0 18px}.folio-recording video{display:block;width:100%;max-height:57vh;aspect-ratio:16/9;background:#171c17;object-fit:contain}
+.folio-playback{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0}.folio-playback a{font:12px/1.5 "Segoe UI",Arial,sans-serif;color:inherit;text-underline-offset:3px}.folio-note{font:16px/1.6 Georgia,serif;margin:14px 0!important}.folio-sequence{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px}.folio-sequence span{font:13px "Segoe UI",Arial,sans-serif}
+.folio-clips h3{font:normal 20px/1.3 Georgia,serif;margin:0 0 6px}.folio-clips section>p{font:12px/1.5 "Segoe UI",Arial,sans-serif;color:#6c614a;margin:0 0 12px!important}.folio-clips section+section{margin-top:28px}.folio-clips section>div{display:grid;gap:7px}.folio-clips button{padding:6px;text-align:left;justify-content:flex-start;gap:10px;width:100%}.folio-clips img{width:88px;aspect-ratio:16/9;object-fit:cover}.folio-clips span{font-size:13px}.folio-clips small{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#75664d;margin-top:4px}.folio-clips button[aria-pressed=true]{background:#e1d2ab;box-shadow:inset 3px 0 #73572c;border-color:#73572c}
+.folio-work{max-width:1040px;margin:auto}.folio-work img{display:block;max-width:100%;height:auto;margin-bottom:16px}.folio-work a{color:inherit}.folio-empty{padding:32px 0}
+@media(max-width:760px){.viewing-folio{inset:62px 8px 10px;padding:18px 14px}.viewing-folio header{gap:10px}.viewing-folio header>button{font-size:11px;max-width:110px;padding:8px}.folio-tabs{gap:6px;margin-bottom:18px}.folio-tabs button{font-size:12px;padding:8px}.folio-highlights{grid-template-columns:1fr;gap:28px}.folio-clips section>div{grid-template-columns:1fr 1fr}.folio-clips button{display:flex;flex-direction:column;align-items:stretch}.folio-clips img{width:100%}.folio-clips span{padding:3px}.folio-recording video{max-height:50vh}.folio-playback button{font-size:12px;padding:8px}.folio-playback a{width:100%}.folio-sequence{gap:8px}.folio-sequence button{font-size:12px;padding:9px}}
+
+/* Keep the title, collection switches and return control in view while the film
+   and clip list scroll independently. Scope typography above the room's labels. */
+.tw .viewing-folio{display:flex;flex-direction:column;overflow:hidden}
+.tw .viewing-folio>header,.tw .viewing-folio>.folio-tabs{flex:none}
+.tw .viewing-folio>.folio-highlights{min-height:0;flex:1;overflow:hidden}
+.tw .viewing-folio .folio-feature,.tw .viewing-folio .folio-clips,.tw .viewing-folio .folio-work{min-height:0;overflow:auto}
+.tw .viewing-folio h1{color:#2d291f;text-transform:none;letter-spacing:0;font:normal clamp(28px,3vw,42px)/1.1 Georgia,serif}
+.tw .viewing-folio h2{color:#2d291f;text-transform:none;letter-spacing:0;font:normal 27px/1.25 Georgia,serif;margin:6px 0 18px}
+.folio-highlights .folio-clips h3{color:#514326;text-transform:none;letter-spacing:0;font:normal 20px/1.3 Georgia,serif;margin:0 0 6px}
+.tw .viewing-folio button{font:13px/1.4 "Segoe UI",Arial,sans-serif}
+.tw .viewing-folio .folio-recording video{max-height:min(43dvh,calc(100dvh - 400px))}
+.tw .viewing-folio .folio-clips{padding:0 8px 2px 0}
+@media(max-width:760px){.tw .viewing-folio>.folio-highlights{overflow:auto;display:block}.tw .viewing-folio .folio-feature,.tw .viewing-folio .folio-clips{overflow:visible}.tw .viewing-folio .folio-clips{margin-top:28px;padding:0}.tw .viewing-folio .folio-recording video{max-height:45dvh}.tw .viewing-folio button{font-size:12px}}

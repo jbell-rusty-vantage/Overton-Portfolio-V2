@@ -55,15 +55,12 @@ test("a physical project binding opens its reader, follows history and survives 
 test("live local review shows only its scoped seed, with HTML and GLB parity", async ({
   page,
 }) => {
-  await page.goto("/");
+  await page.goto("/library");
   await expect(
-    page.getByRole("button", { name: "Enter the library" }),
+    page.getByRole("link", { name: "Enter the library" }).first(),
   ).toBeVisible();
   await shot(page, "entrance");
-  test.skip(
-    !(await page.getByText("Local draft preview").count()),
-    "This preview uses fixtures.",
-  );
+  expect((await page.goto("/projects/agentic-mission-control"))?.ok(), "The disposable fixture admits the exact starter project").toBe(true);
   await page.goto("/projects/agentic-mission-control");
   await expect(
     page.getByRole("heading", { level: 1, name: "Mission Control" }),
@@ -71,40 +68,26 @@ test("live local review shows only its scoped seed, with HTML and GLB parity", a
   await expect(
     page.getByRole("heading", { name: "Architecture" }),
   ).toBeVisible();
-  await page.getByRole("link", { name: "Open in library" }).click();
-  await expect(
-    page.getByRole("dialog", { name: "Mission Control" }),
-  ).toBeVisible();
-  await page.getByRole("button", { name: "Next page" }).click();
-  await expect(
-    page.getByText("Temporal coordinates scheduling", { exact: false }),
-  ).toBeVisible();
+  const architecture = await page.locator("article section")
+    .filter({ has: page.getByRole("heading", { name: "Architecture", exact: true }) })
+    .locator(".report-prose > p").first().innerText();
+  expect(architecture.length).toBeGreaterThan(0);
+  await page.getByRole("link", { name: /Open book/ }).click();
+  await expect(page).toHaveURL(/\/library#book\/agentic-mission-control$/);
+  await expect(page.locator('.wb-reader[data-volume="agentic-mission-control"][data-visible]')).toBeVisible({ timeout: 60000 });
+  await page.getByRole("button", { name: "Open full report", exact: true }).click();
+  await expect(page.getByRole("dialog", { name: "Mission Control full report" }).getByText(architecture, { exact: true })).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(page.locator('.wb-reader[data-visible]')).toBeVisible();
   await shot(page, "project-reader");
-  const shelfLabel = async () => (await page.locator(".reader-copy > .eyebrow").textContent())!.split("·")[1].trim();
-  const systems = await shelfLabel();
-  await page.keyboard.press("Escape");
+  // The old room/shelf URL continues to enter the independent legacy hall.
+  await page.goto("/?view=world&zone=stacks&book=agent-knowledge-services");
+  await expect(page).toHaveURL(/\/library\?view=world/);
   await worldReady(page);
-  await expect(
-    page.getByRole("heading", { name: systems, exact: true }),
-  ).toBeVisible();
-  await page.goto("/projects/agent-knowledge-services");
-  await expect(
-    page.getByRole("heading", { level: 1, name: "Knowledge Services" }),
-  ).toBeVisible();
-  await page.getByRole("link", { name: "Open in library" }).click();
-  await expect(
-    page.getByRole("dialog", { name: "Knowledge Services" }),
-  ).toBeVisible();
+  const knowledge = page.getByRole("dialog", { name: "Knowledge Services", exact: true });
+  await expect(knowledge).toBeVisible();
   await page.reload();
-  await expect(
-    page.getByRole("dialog", { name: "Knowledge Services" }),
-  ).toBeVisible();
-  const knowledge = await shelfLabel();
-  await page.keyboard.press("Escape");
-  await worldReady(page);
-  await expect(
-    page.getByRole("heading", { name: knowledge, exact: true }),
-  ).toBeVisible();
+  await expect(knowledge).toBeVisible();
 });
 test("every room and every shelf has an accessible destination", async ({
   page,
@@ -159,7 +142,7 @@ test("phone catalog, keyboard reader and reduced-motion world remain usable", as
   await expect(
     page.getByRole("heading", { level: 1, name: "Knowledge Atlas" }),
   ).toBeVisible();
-  await page.getByRole("link", { name: "Open in library" }).focus();
+  await page.getByRole("link", { name: /Open book/ }).focus();
   await page.keyboard.press("Enter");
   await expect(page.getByRole("dialog")).toBeVisible();
   await shot(page, "phone-reader");
@@ -232,8 +215,8 @@ test("HTML catalog and reader pass automatic accessibility checks", async ({
   await expect(
     page.getByRole("heading", { name: "Agent Workbench" }),
   ).toBeVisible();
-  const reader = await new AxeBuilder({ page }).include(".library").analyze();
-  expect(reader.violations.map((v) => v.id)).toEqual([]);
+  const reader = await new AxeBuilder({ page }).include("[data-report]").analyze();
+  expect(reader.violations.map((v) => ({ id: v.id, nodes: v.nodes.map((node) => ({ target: node.target, summary: node.failureSummary })) }))).toEqual([]);
 });
 test("sample edits move a volume, persist on reload, and never change the database catalog", async ({
   page,

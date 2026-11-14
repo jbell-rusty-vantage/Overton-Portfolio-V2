@@ -1,0 +1,14 @@
+{
+  "door.south": [0, 1.65, 3.18],
+  "door.library": [-1.54, 1.68, 1.76],
+  "shelf.reports": [-7.15, 1.8, -1.94],
+  "desk.writing": [-4.95, 1.34, 0.75],
+  "book.reports": [-5.45, 1.53, 1],
+  "book.companion": [-4.86, 1.46, 0.72],
+  "portrait.judge": [-7.37, 2.78, 0],
+  "screen.cabinet": [-7.10, 1.8, 2.35],
+  "camera.approach": [4.6, 2.4, 18],
+  "camera.entry": [0.38, 2.05, 2.66],
+  "camera.library": [-2.54, 2.18, 1.76],
+  "camera.desk": [-4.47, 2.16, 1.56]
+}

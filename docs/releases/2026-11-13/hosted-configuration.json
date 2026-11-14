@@ -1,0 +1,90 @@
+{
+  "projectId": "prj_VIqs9sg7nSQAVliEFhSuzpt3L4qv",
+  "budgets": {
+    "projectMonthly": {
+      "quotaEntityId": "prj_VIqs9sg7nSQAVliEFhSuzpt3L4qv",
+      "scopeType": "project",
+      "scopeId": "prj_VIqs9sg7nSQAVliEFhSuzpt3L4qv",
+      "limitAmount": 5,
+      "currentSpend": 0,
+      "currentByokSpend": 0,
+      "includeByokInQuota": true,
+      "refreshPeriod": "monthly",
+      "active": true,
+      "archived": false,
+      "createdAt": 1794619211906,
+      "updatedAt": 1794619392973
+    },
+    "keyDaily": {
+      "limitAmount": 1,
+      "refreshPeriod": "daily"
+    }
+  },
+  "environments": [
+    {
+      "environment": "preview",
+      "fingerprint": "76580fb682a2e53c2877c3d5",
+      "keys": [
+        "LIBRARY_CONTENT_SOURCE",
+        "LIBRARY_PUBLIC_ORIGIN",
+        "AI_GATEWAY_API_KEY",
+        "PORTRAIT_PAID_ENABLED",
+        "PORTRAIT_KILL_SWITCH",
+        "PORTRAIT_MODEL",
+        "PORTRAIT_PRICE_VERSION",
+        "PORTRAIT_INPUT_USD_PER_MILLION",
+        "PORTRAIT_OUTPUT_USD_PER_MILLION",
+        "PORTRAIT_WEB_SEARCH_USD_PER_CALL",
+        "PORTRAIT_USD_PER_TURN",
+        "PORTRAIT_USD_PER_DAY",
+        "PORTRAIT_USD_PER_MONTH",
+        "PORTRAIT_NETWORK_DAY",
+        "PORTRAIT_VOICE_ENABLED",
+        "PORTRAIT_VOICE_MODEL",
+        "PORTRAIT_VOICE_PRICE_VERSION",
+        "PORTRAIT_VOICE_USD_PER_MINUTE",
+        "PORTRAIT_VOICE_MAX_SECONDS",
+        "PORTRAIT_VOICE_NAME",
+        "DATABASE_URL",
+        "DATABASE_URL_UNPOOLED",
+        "RELEASE_DATABASE_FINGERPRINT",
+        "PORTRAIT_SESSION_SECRET"
+      ]
+    },
+    {
+      "environment": "production",
+      "fingerprint": "5aac9ac8d136475635c9bb75",
+      "keys": [
+        "LIBRARY_CONTENT_SOURCE",
+        "LIBRARY_PUBLIC_ORIGIN",
+        "AI_GATEWAY_API_KEY",
+        "PORTRAIT_PAID_ENABLED",
+        "PORTRAIT_KILL_SWITCH",
+        "PORTRAIT_MODEL",
+        "PORTRAIT_PRICE_VERSION",
+        "PORTRAIT_INPUT_USD_PER_MILLION",
+        "PORTRAIT_OUTPUT_USD_PER_MILLION",
+        "PORTRAIT_WEB_SEARCH_USD_PER_CALL",
+        "PORTRAIT_USD_PER_TURN",
+        "PORTRAIT_USD_PER_DAY",
+        "PORTRAIT_USD_PER_MONTH",
+        "PORTRAIT_NETWORK_DAY",
+        "PORTRAIT_VOICE_ENABLED",
+        "PORTRAIT_VOICE_MODEL",
+        "PORTRAIT_VOICE_PRICE_VERSION",
+        "PORTRAIT_VOICE_USD_PER_MINUTE",
+        "PORTRAIT_VOICE_MAX_SECONDS",
+        "PORTRAIT_VOICE_NAME",
+        "DATABASE_URL",
+        "DATABASE_URL_UNPOOLED",
+        "RELEASE_DATABASE_FINGERPRINT",
+        "PORTRAIT_SESSION_SECRET"
+      ]
+    }
+  ],
+  "liveVoice": {
+    "enabled": false,
+    "reason": "Vercel documents budgets as request-admission soft caps. No verified hard bound exists for the browser-owned socket.",
+    "source": "https://vercel.com/docs/ai-gateway/observability-and-spend/budgets"
+  }
+}

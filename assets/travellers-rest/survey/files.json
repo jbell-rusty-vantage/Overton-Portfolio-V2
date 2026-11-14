@@ -1,0 +1,566 @@
+{
+ "generated": "2026-11-12",
+ "folder": "assets/travellers-rest/survey",
+ "originals_total_bytes": 201034108,
+ "originals_count": 15,
+ "derived_total_bytes": 30841315,
+ "derived_count": 30,
+ "note": "Originals are byte-exact as served. The eleven photograph TIFFs are about 18 MB each (189 MB in all): keep them out of ordinary git history (use LFS or ignore) unless the owner decides otherwise.",
+ "originals": [
+  {
+   "path": "originals/habs-tn-14/tn0036data.pdf",
+   "bytes": 181784,
+   "sha256": "32b2af32e7e0bc162c1c9a5c05dd540824feddedcfb90b43430d21c8118bb07e",
+   "pages": 10,
+   "title": "HABS TN-14, Travellers' Rest (Judge John Overton House): historical and descriptive data, 10 pages; first-floor plan on printed p. 8 and south elevation on printed p. 9",
+   "repository": "Library of Congress, Prints and Photographs Division",
+   "identifier": "HABS TENN,19-NASH,11- (survey HABS TN-14; LoC control no. tn0036)",
+   "record_url": "https://www.loc.gov/item/tn0036/",
+   "download_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/tn/tn0000/tn0036/data/tn0036data.pdf",
+   "date": "1970-1971",
+   "rights": "No known restrictions on images made by the U.S. Government (Library of Congress rights advisory for HABS/HAER/HALS, https://www.loc.gov/rr/print/res/114_habs.html). Work of the National Park Service; public domain.",
+   "note": "Byte-identical to assets/travellers-rest/archive/originals/tn-14-survey.pdf"
+  },
+  {
+   "path": "originals/habs-tn-14/tn0036cap.pdf",
+   "bytes": 21569,
+   "sha256": "5fc9bee6f512225b086314d68070a08e376be7d0f362aba7bca065c73d68203e",
+   "pages": 1,
+   "title": "HABS TN-14, index to photographs (caption page)",
+   "repository": "Library of Congress, Prints and Photographs Division",
+   "identifier": "HABS TENN,19-NASH,11-",
+   "record_url": "https://www.loc.gov/item/tn0036/",
+   "download_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/tn/tn0000/tn0036/data/tn0036cap.pdf",
+   "date": "1970",
+   "rights": "No known restrictions on images made by the U.S. Government (Library of Congress rights advisory for HABS/HAER/HALS, https://www.loc.gov/rr/print/res/114_habs.html). Work of the National Park Service; public domain."
+  },
+  {
+   "path": "originals/habs-tn-14/152679pu.tif",
+   "bytes": 17892504,
+   "sha256": "385c9a6cf4ee7a49e5471898e3417bde3d589387ecef238643a5c10f65402bfd",
+   "pixels": [
+    5000,
+    3578
+   ],
+   "title": "HABS TN-14-1. SOUTH FRONT",
+   "caption": "South front",
+   "photographer": "Jack E. Boucher",
+   "date": "1970-08",
+   "repository": "Library of Congress, Prints and Photographs Division",
+   "identifier": "HABS TENN,19-NASH,11--1 (digital id hhh.tn0036.photos.152679p)",
+   "record_url": "https://www.loc.gov/pictures/item/tn0036.photos.152679p/",
+   "download_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/tn/tn0000/tn0036/photos/152679pu.tif",
+   "rights": "No known restrictions on images made by the U.S. Government (Library of Congress rights advisory for HABS/HAER/HALS, https://www.loc.gov/rr/print/res/114_habs.html). Work of the National Park Service; public domain."
+  },
+  {
+   "path": "originals/habs-tn-14/152680pu.tif",
+   "bytes": 17892504,
+   "sha256": "2022b68e6eb0c201d11f02fc36734beb57cf4b8a95fb944beae3c2092d5aa888",
+   "pixels": [
+    5000,
+    3578
+   ],
+   "title": "HABS TN-14-2. SOUTH FRONT FROM SOUTHEAST",
+   "caption": "South front from southeast",
+   "photographer": "Jack E. Boucher",
+   "date": "1970-08",
+   "repository": "Library of Congress, Prints and Photographs Division",
+   "identifier": "HABS TENN,19-NASH,11--2 (digital id hhh.tn0036.photos.152680p)",
+   "record_url": "https://www.loc.gov/pictures/item/tn0036.photos.152680p/",
+   "download_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/tn/tn0000/tn0036/photos/152680pu.tif",
+   "rights": "No known restrictions on images made by the U.S. Government (Library of Congress rights advisory for HABS/HAER/HALS, https://www.loc.gov/rr/print/res/114_habs.html). Work of the National Park Service; public domain."
+  },
+  {
+   "path": "originals/habs-tn-14/152681pu.tif",
+   "bytes": 18107528,
+   "sha256": "b0cd390e649a0cdfad03b4b93f1668988a017d341124619bc4ace1eb234247f7",
+   "pixels": [
+    5000,
+    3621
+   ],
+   "title": "HABS TN-14-3. EAST SIDE OF MAIN BLOCK AND ELL, FROM SOUTHEAST",
+   "caption": "East side of main block and ell, from southeast",
+   "photographer": "Jack E. Boucher",
+   "date": "1970-08",
+   "repository": "Library of Congress, Prints and Photographs Division",
+   "identifier": "HABS TENN,19-NASH,11--3 (digital id hhh.tn0036.photos.152681p)",
+   "record_url": "https://www.loc.gov/pictures/item/tn0036.photos.152681p/",
+   "download_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/tn/tn0000/tn0036/photos/152681pu.tif",
+   "rights": "No known restrictions on images made by the U.S. Government (Library of Congress rights advisory for HABS/HAER/HALS, https://www.loc.gov/rr/print/res/114_habs.html). Work of the National Park Service; public domain."
+  },
+  {
+   "path": "originals/habs-tn-14/152682pu.tif",
+   "bytes": 17847496,
+   "sha256": "eee5eebe2c1aaf748ff6b31ce7afc15b9893b985fcca3a96c3a3486f058f87c2",
+   "pixels": [
+    5000,
+    3569
+   ],
+   "title": "HABS TN-14-4. EAST SIDE OF REAR ELL, FROM NORTHEAST",
+   "caption": "East side of rear ell, from northeast",
+   "photographer": "Jack E. Boucher",
+   "date": "1970-08",
+   "repository": "Library of Congress, Prints and Photographs Division",
+   "identifier": "HABS TENN,19-NASH,11--4 (digital id hhh.tn0036.photos.152682p)",
+   "record_url": "https://www.loc.gov/pictures/item/tn0036.photos.152682p/",
+   "download_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/tn/tn0000/tn0036/photos/152682pu.tif",
+   "rights": "No known restrictions on images made by the U.S. Government (Library of Congress rights advisory for HABS/HAER/HALS, https://www.loc.gov/rr/print/res/114_habs.html). Work of the National Park Service; public domain."
+  },
+  {
+   "path": "originals/habs-tn-14/152683pu.tif",
+   "bytes": 18142536,
+   "sha256": "72c66ee3844589d08b18ddfc749016acf6b83856709106a95efd33228b0704eb",
+   "pixels": [
+    5000,
+    3628
+   ],
+   "title": "HABS TN-14-5. WEST SIDE",
+   "caption": "West side",
+   "photographer": "Jack E. Boucher",
+   "date": "1970-08",
+   "repository": "Library of Congress, Prints and Photographs Division",
+   "identifier": "HABS TENN,19-NASH,11--5 (digital id hhh.tn0036.photos.152683p)",
+   "record_url": "https://www.loc.gov/pictures/item/tn0036.photos.152683p/",
+   "download_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/tn/tn0000/tn0036/photos/152683pu.tif",
+   "rights": "No known restrictions on images made by the U.S. Government (Library of Congress rights advisory for HABS/HAER/HALS, https://www.loc.gov/rr/print/res/114_habs.html). Work of the National Park Service; public domain."
+  },
+  {
+   "path": "originals/habs-tn-14/152684pu.tif",
+   "bytes": 18072520,
+   "sha256": "1b9a3b7f56f895e0fa1cddd05531df7a5dad8f91e4df940c6688fe2ceee4c0f2",
+   "pixels": [
+    5000,
+    3614
+   ],
+   "title": "HABS TN-14-6. CENTER HALL, LOOKING NORTH",
+   "caption": "Center hall, looking north",
+   "photographer": "Jack E. Boucher",
+   "date": "1970-08",
+   "repository": "Library of Congress, Prints and Photographs Division",
+   "identifier": "HABS TENN,19-NASH,11--6 (digital id hhh.tn0036.photos.152684p)",
+   "record_url": "https://www.loc.gov/pictures/item/tn0036.photos.152684p/",
+   "download_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/tn/tn0000/tn0036/photos/152684pu.tif",
+   "rights": "No known restrictions on images made by the U.S. Government (Library of Congress rights advisory for HABS/HAER/HALS, https://www.loc.gov/rr/print/res/114_habs.html). Work of the National Park Service; public domain."
+  },
+  {
+   "path": "originals/habs-tn-14/152685pu.tif",
+   "bytes": 17987512,
+   "sha256": "17f7eb5cdb8b55a06a5d6b85b268e860f8731b5ebf0287565cfaba820cbbef55",
+   "pixels": [
+    5000,
+    3597
+   ],
+   "title": "HABS TN-14-7. FIRST FLOOR, SOUTHEAST ROOM, LOOKING EAST",
+   "caption": "First floor, southeast room, looking east",
+   "photographer": "Jack E. Boucher",
+   "date": "1970-08",
+   "repository": "Library of Congress, Prints and Photographs Division",
+   "identifier": "HABS TENN,19-NASH,11--7 (digital id hhh.tn0036.photos.152685p)",
+   "record_url": "https://www.loc.gov/pictures/item/tn0036.photos.152685p/",
+   "download_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/tn/tn0000/tn0036/photos/152685pu.tif",
+   "rights": "No known restrictions on images made by the U.S. Government (Library of Congress rights advisory for HABS/HAER/HALS, https://www.loc.gov/rr/print/res/114_habs.html). Work of the National Park Service; public domain."
+  },
+  {
+   "path": "originals/habs-tn-14/152686pu.tif",
+   "bytes": 17922504,
+   "sha256": "9b546e924320572da9cf425b7b43b07cefeb59e651e93bcf60f28c1b3ed0eac7",
+   "pixels": [
+    5000,
+    3584
+   ],
+   "title": "HABS TN-14-8. FIRST FLOOR, SOUTHWEST ROOM, LOOKING WEST",
+   "caption": "First floor, southwest room, looking west",
+   "photographer": "Jack E. Boucher",
+   "date": "1970-08",
+   "repository": "Library of Congress, Prints and Photographs Division",
+   "identifier": "HABS TENN,19-NASH,11--8 (digital id hhh.tn0036.photos.152686p)",
+   "record_url": "https://www.loc.gov/pictures/item/tn0036.photos.152686p/",
+   "download_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/tn/tn0000/tn0036/photos/152686pu.tif",
+   "rights": "No known restrictions on images made by the U.S. Government (Library of Congress rights advisory for HABS/HAER/HALS, https://www.loc.gov/rr/print/res/114_habs.html). Work of the National Park Service; public domain."
+  },
+  {
+   "path": "originals/habs-tn-14/152687pu.tif",
+   "bytes": 17862496,
+   "sha256": "c6f047a565b8ae419cb05583a09a54a629f3d0d3972a8e5c168cfb99f120175e",
+   "pixels": [
+    5000,
+    3572
+   ],
+   "title": "HABS TN-14-9. SECOND FLOOR, SOUTHWEST ROOM, LOOKING WEST",
+   "caption": "Second floor, southwest room, looking west",
+   "photographer": "Jack E. Boucher",
+   "date": "1970-08",
+   "repository": "Library of Congress, Prints and Photographs Division",
+   "identifier": "HABS TENN,19-NASH,11--9 (digital id hhh.tn0036.photos.152687p)",
+   "record_url": "https://www.loc.gov/pictures/item/tn0036.photos.152687p/",
+   "download_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/tn/tn0000/tn0036/photos/152687pu.tif",
+   "rights": "No known restrictions on images made by the U.S. Government (Library of Congress rights advisory for HABS/HAER/HALS, https://www.loc.gov/rr/print/res/114_habs.html). Work of the National Park Service; public domain."
+  },
+  {
+   "path": "originals/habs-tn-14/152688pu.tif",
+   "bytes": 17967512,
+   "sha256": "efa74c5d260ba5119dadceddf4f8ffb25cd25fe5ea9a01c898537a2223bc1e8f",
+   "pixels": [
+    5000,
+    3593
+   ],
+   "title": "HABS TN-14-10. FIRST FLOOR, DINING ROOM, LOOKING NORTH",
+   "caption": "First floor, dining room, looking north",
+   "photographer": "Jack E. Boucher",
+   "date": "1970-08",
+   "repository": "Library of Congress, Prints and Photographs Division",
+   "identifier": "HABS TENN,19-NASH,11--10 (digital id hhh.tn0036.photos.152688p)",
+   "record_url": "https://www.loc.gov/pictures/item/tn0036.photos.152688p/",
+   "download_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/tn/tn0000/tn0036/photos/152688pu.tif",
+   "rights": "No known restrictions on images made by the U.S. Government (Library of Congress rights advisory for HABS/HAER/HALS, https://www.loc.gov/rr/print/res/114_habs.html). Work of the National Park Service; public domain."
+  },
+  {
+   "path": "originals/habs-tn-14/152689pu.tif",
+   "bytes": 17967512,
+   "sha256": "101ba96e614245eff4425f5f8ab39d16bed68a892520a9555fc86b37fe310cb7",
+   "pixels": [
+    5000,
+    3593
+   ],
+   "title": "HABS TN-14-11. OUTBUILDINGS",
+   "caption": "Outbuildings",
+   "photographer": "Jack E. Boucher",
+   "date": "1970-08",
+   "repository": "Library of Congress, Prints and Photographs Division",
+   "identifier": "HABS TENN,19-NASH,11--11 (digital id hhh.tn0036.photos.152689p)",
+   "record_url": "https://www.loc.gov/pictures/item/tn0036.photos.152689p/",
+   "download_url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/tn/tn0000/tn0036/photos/152689pu.tif",
+   "rights": "No known restrictions on images made by the U.S. Government (Library of Congress rights advisory for HABS/HAER/HALS, https://www.loc.gov/rr/print/res/114_habs.html). Work of the National Park Service; public domain."
+  },
+  {
+   "path": "originals/usgs-naip/naip-travellers-rest-300m.tif",
+   "bytes": 3147594,
+   "sha256": "bcb03d5f8c5fd9b5274057e36d81908857e604efccb5f428fa1b470d07bc400b",
+   "pixels": [
+    1000,
+    1000
+   ],
+   "title": "NAIP natural-colour orthoimage, 300 m square centred 36.0766 N, 86.7640 W (source tile m_3608658_ne_16_060_20211203, 0.6 m, resampled to 0.3 m by the service)",
+   "repository": "U.S. Geological Survey, The National Map (USDA-FSA-APFO National Agriculture Imagery Program)",
+   "identifier": "m_3608658_ne_16_060_20211203",
+   "record_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer",
+   "download_url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-9658709.89,4310980.95,-9658338.71,4311352.13&bboxSR=3857&imageSR=3857&size=1000,1000&format=tiff&bandIds=0,1,2&f=image",
+   "date": "2021-12-03",
+   "rights": "U.S. Government work (USDA/USGS); public domain. Credit: USGS, USDA, The National Map: Orthoimagery."
+  },
+  {
+   "path": "originals/osm/osm-travellers-rest-site.json",
+   "bytes": 20537,
+   "sha256": "5eaefd0b06b6e95f0789b1d82b97755b5c9fc6395203fbb91e9179d265d54d84",
+   "title": "OpenStreetMap ways on the museum site (site outline, building outlines, gardens, paths)",
+   "repository": "OpenStreetMap",
+   "identifier": "ways 534662354-534662359, 678286329-678286446",
+   "record_url": "https://www.openstreetmap.org/way/534662358",
+   "download_url": "https://overpass-api.de/api/interpreter",
+   "date": "2026-11-12 (database timestamp in file)",
+   "rights": "Open Database License 1.0; attribution: (c) OpenStreetMap contributors"
+  }
+ ],
+ "derived": [
+  {
+   "path": "sheets/habs-tn-14-p08-first-floor-plan-as-drawn.png",
+   "bytes": 329199,
+   "sha256": "b207df07a5e3dbe2c7b724fdb2de04b0787dbfb5c60d9f1a25352c0497d41791",
+   "pixels": [
+    4000,
+    3026
+   ],
+   "derived_from": "originals/habs-tn-14/tn0036data.pdf (PDF page 9, printed p. 8)"
+  },
+  {
+   "path": "sheets/habs-tn-14-p08-first-floor-plan-north-up.png",
+   "bytes": 335960,
+   "sha256": "263bfc814bc8d2806403289518508e9d902cd100605d1ccddd5efe7f168f3b1d",
+   "pixels": [
+    3026,
+    4000
+   ],
+   "derived_from": "originals/habs-tn-14/tn0036data.pdf (PDF page 9, printed p. 8)"
+  },
+  {
+   "path": "sheets/habs-tn-14-p09-south-elevation.png",
+   "bytes": 767001,
+   "sha256": "2391726791c7b716c0b17c9abbc856a1aadb3fe6956548d14d1c0d24ceb219a4",
+   "pixels": [
+    4000,
+    3035
+   ],
+   "derived_from": "originals/habs-tn-14/tn0036data.pdf (PDF page 10, printed p. 9)"
+  },
+  {
+   "path": "sheets/habs-tn-14-photo-01-south-front.webp",
+   "bytes": 1533618,
+   "sha256": "b86c74e7614b72852e73739fe666db901ac6a06b731ce38684ff95ef9da4ce1a",
+   "pixels": [
+    4000,
+    2862
+   ],
+   "derived_from": "originals/habs-tn-14/152679pu.tif"
+  },
+  {
+   "path": "sheets/habs-tn-14-photo-02-south-front-from-southeast.webp",
+   "bytes": 1673938,
+   "sha256": "0cabb855b94fc06d04e62eef86732f15b407e6a36772733101deb62817bca24d",
+   "pixels": [
+    4000,
+    2862
+   ],
+   "derived_from": "originals/habs-tn-14/152680pu.tif"
+  },
+  {
+   "path": "sheets/habs-tn-14-photo-03-east-side-main-block-and-ell.webp",
+   "bytes": 1473090,
+   "sha256": "acd7d616e02bf3d5583bbed6b239d61a2fa18ba8e2bb3f6fe451ce772962b180",
+   "pixels": [
+    4000,
+    2897
+   ],
+   "derived_from": "originals/habs-tn-14/152681pu.tif"
+  },
+  {
+   "path": "sheets/habs-tn-14-photo-04-east-side-rear-ell.webp",
+   "bytes": 1365262,
+   "sha256": "54905f75aeebca0f7a450dd01e668c6e76863e479791a08e0f694443871d7f08",
+   "pixels": [
+    4000,
+    2855
+   ],
+   "derived_from": "originals/habs-tn-14/152682pu.tif"
+  },
+  {
+   "path": "sheets/habs-tn-14-photo-05-west-side.webp",
+   "bytes": 2053664,
+   "sha256": "cc308fa0b9a487b23a25c6091163d9ecf364ee19635cdae82aef156058155c87",
+   "pixels": [
+    4000,
+    2902
+   ],
+   "derived_from": "originals/habs-tn-14/152683pu.tif"
+  },
+  {
+   "path": "sheets/habs-tn-14-photo-06-center-hall-looking-north.webp",
+   "bytes": 556776,
+   "sha256": "90933232a0bf44a5154c7a49e3a536e28ed7cace59bf93fb8fd606505118fe68",
+   "pixels": [
+    4000,
+    2891
+   ],
+   "derived_from": "originals/habs-tn-14/152684pu.tif"
+  },
+  {
+   "path": "sheets/habs-tn-14-photo-07-first-floor-southeast-room-looking-east.webp",
+   "bytes": 874966,
+   "sha256": "00c6dc75b9d2414034eaf1231881631d4e492349170e00e5c96c117c7b0b3615",
+   "pixels": [
+    4000,
+    2878
+   ],
+   "derived_from": "originals/habs-tn-14/152685pu.tif"
+  },
+  {
+   "path": "sheets/habs-tn-14-photo-08-first-floor-southwest-room-looking-west.webp",
+   "bytes": 851620,
+   "sha256": "30356395ce58c1fef2309d9add1060dc8c2b0e2321dad8e6830e98afb23a673c",
+   "pixels": [
+    4000,
+    2867
+   ],
+   "derived_from": "originals/habs-tn-14/152686pu.tif"
+  },
+  {
+   "path": "sheets/habs-tn-14-photo-09-second-floor-southwest-room-looking-west.webp",
+   "bytes": 605352,
+   "sha256": "2e632e43ce6e4767db934b38ceddf361d7793d99025370e4f003bee8ef1796f1",
+   "pixels": [
+    4000,
+    2858
+   ],
+   "derived_from": "originals/habs-tn-14/152687pu.tif"
+  },
+  {
+   "path": "sheets/habs-tn-14-photo-10-dining-room-looking-north.webp",
+   "bytes": 665446,
+   "sha256": "e19ca8838d50292bd4c8989b902233abc0c1bb4de92375270dc2dfd42703e10c",
+   "pixels": [
+    4000,
+    2874
+   ],
+   "derived_from": "originals/habs-tn-14/152688pu.tif"
+  },
+  {
+   "path": "sheets/habs-tn-14-photo-11-outbuildings.webp",
+   "bytes": 2066658,
+   "sha256": "28ea7d3018d9d1d5664c2b8d40599dfce82de3ce9996df1620b36b0bca50e403",
+   "pixels": [
+    4000,
+    2874
+   ],
+   "derived_from": "originals/habs-tn-14/152689pu.tif"
+  },
+  {
+   "path": "sheets/usgs-naip-2021-site-house-frame.png",
+   "bytes": 9438839,
+   "sha256": "6434e56a9eb165fb9785d7c669a7267f45ef6fcf5370160e5e60263ce06f550c",
+   "pixels": [
+    3518,
+    3523
+   ],
+   "derived_from": "originals/usgs-naip/naip-travellers-rest-300m.tif, rotated 57.7 degrees into the house frame"
+  },
+  {
+   "path": "crops/elev-door-portico.png",
+   "bytes": 515363,
+   "sha256": "083115cfd7b5d77011aa102d729e76ecea466eac10e1193347dbb5a6fb694158",
+   "pixels": [
+    1400,
+    1520
+   ],
+   "derived_from": "originals/habs-tn-14/tn0036data.pdf (PDF page 10, printed p. 9)"
+  },
+  {
+   "path": "crops/elev-facade-openings.png",
+   "bytes": 1016107,
+   "sha256": "4b452e187bcbd8e3f3cacad38aef66d8f02340a50c032f60dbc5ebb7298d9b7a",
+   "pixels": [
+    2580,
+    1080
+   ],
+   "derived_from": "originals/habs-tn-14/tn0036data.pdf (PDF page 10, printed p. 9)"
+  },
+  {
+   "path": "crops/elev-heights-west-bays.png",
+   "bytes": 760909,
+   "sha256": "afdc4445fbbd4a0b7bdd464165bde692f1834ae3d16e84ae8f2a7bd94ed629ec",
+   "pixels": [
+    1500,
+    2340
+   ],
+   "derived_from": "originals/habs-tn-14/tn0036data.pdf (PDF page 10, printed p. 9)"
+  },
+  {
+   "path": "crops/elev-scale-bar.png",
+   "bytes": 49322,
+   "sha256": "1f5abdbc28c34a8be5a7e7e58ac785acbf369c1361d1d3f92cc23b62c3228f29",
+   "pixels": [
+    1920,
+    320
+   ],
+   "derived_from": "originals/habs-tn-14/tn0036data.pdf (PDF page 10, printed p. 9)"
+  },
+  {
+   "path": "crops/photo-front-1970-and-2021.jpg",
+   "bytes": 856396,
+   "sha256": "66692d399375b6640c11b58b6fd77dbc5858f810a36e0452e454bc62279f7f97",
+   "pixels": [
+    2914,
+    1072
+   ],
+   "derived_from": "originals/habs-tn-14/152679pu.tif and ../archive/originals/house-color.jpg (Carol M. Highsmith, 2021, LoC 2021756795, public domain)"
+  },
+  {
+   "path": "crops/photo-hall-stair.jpg",
+   "bytes": 367894,
+   "sha256": "57b187811229f62dfa161ba562ccc16cc4070d65b86385e366b3ac2f913ab714",
+   "pixels": [
+    1880,
+    1320
+   ],
+   "derived_from": "originals/habs-tn-14/152684pu.tif"
+  },
+  {
+   "path": "crops/photo-library-west-wall.jpg",
+   "bytes": 491963,
+   "sha256": "cebef96785f7bcdea1740df1f9bb12e441ae3e98fe86b570c95be407d6229892",
+   "pixels": [
+    1920,
+    1320
+   ],
+   "derived_from": "originals/habs-tn-14/152686pu.tif"
+  },
+  {
+   "path": "crops/plan-ell-overall.png",
+   "bytes": 336801,
+   "sha256": "b71cde6796e2308c5d1e6874fc1b75cbdd7a8b89696612d54f47c33f284e1504",
+   "pixels": [
+    1400,
+    2460
+   ],
+   "derived_from": "originals/habs-tn-14/tn0036data.pdf (PDF page 9, printed p. 8)"
+  },
+  {
+   "path": "crops/plan-entry-stair.png",
+   "bytes": 244736,
+   "sha256": "c54836314b6514846eb531912a5f6464ede861b18783f4724ef41e251a544bfa",
+   "pixels": [
+    990,
+    2010
+   ],
+   "derived_from": "originals/habs-tn-14/tn0036data.pdf (PDF page 9, printed p. 8)"
+  },
+  {
+   "path": "crops/plan-library.png",
+   "bytes": 218456,
+   "sha256": "1035dc6e1d57bd9aeaa72298fc16a2f7e706e16487163ecafc3f082fba37e605",
+   "pixels": [
+    1800,
+    1590
+   ],
+   "derived_from": "originals/habs-tn-14/tn0036data.pdf (PDF page 9, printed p. 8)"
+  },
+  {
+   "path": "crops/plan-main-block.png",
+   "bytes": 210764,
+   "sha256": "e8e81f5ff6270526960f53b7243abe76e1890ecb3adc2f848bd4ad1ea4f8e593",
+   "pixels": [
+    2070,
+    1080
+   ],
+   "derived_from": "originals/habs-tn-14/tn0036data.pdf (PDF page 9, printed p. 8)"
+  },
+  {
+   "path": "crops/plan-scale-bar.png",
+   "bytes": 60577,
+   "sha256": "7a18b608faa90ea0e012753b3250f127031e18fc0528e1f6ae16b0a270c835ca",
+   "pixels": [
+    1600,
+    500
+   ],
+   "derived_from": "originals/habs-tn-14/tn0036data.pdf (PDF page 9, printed p. 8)"
+  },
+  {
+   "path": "crops/site-grounds-annotated.jpg",
+   "bytes": 650442,
+   "sha256": "1e8242494ebe343dc5d3b8d7b5ef1ea596c322094d06885e8fdeaad1233614ff",
+   "pixels": [
+    1495,
+    1497
+   ],
+   "derived_from": "originals/usgs-naip/naip-travellers-rest-300m.tif, rotated 57.7 degrees into the house frame"
+  },
+  {
+   "path": "crops/site-grounds-schematic.png",
+   "bytes": 66771,
+   "sha256": "44fb723f2f2741edcaef5688e0f234a6ce280b737bbbbcc5571bba649645a9ff",
+   "pixels": [
+    1440,
+    1665
+   ],
+   "derived_from": "drawn from survey.json grounds values (no imagery)"
+  },
+  {
+   "path": "crops/site-house-surroundings-annotated.jpg",
+   "bytes": 403425,
+   "sha256": "b42e812e91ee4ae186c555c36206b3ad279b0ad5246d72e9d15fccf884bb624a",
+   "pixels": [
+    1260,
+    1344
+   ],
+   "derived_from": "originals/usgs-naip/naip-travellers-rest-300m.tif, rotated 57.7 degrees into the house frame"
+  }
+ ]
+}

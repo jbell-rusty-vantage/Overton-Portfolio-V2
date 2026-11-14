@@ -1,0 +1,10 @@
+/// Atomic shared portrait rate and spend ledger; no conversation content.
+model PortraitLedger {
+  /// Singleton ID locked for all reserve and settle transactions.
+  id Int @id
+  /// Versioned integer micro-dollar reservations and hashed rate buckets.
+  state Json
+  /// Most recent ledger mutation timestamp.
+  updatedAt DateTime @default(now()) @map("updated_at") @db.Timestamptz(6)
+  @@map("portrait_ledger")
+}

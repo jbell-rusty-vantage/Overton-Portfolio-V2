@@ -1,0 +1,135 @@
+{
+  "testedAt": "2026-11-13T03:33:38.118Z",
+  "qualification": "existing loopback office; deterministic mock only; no paid calls",
+  "turns": [
+    {
+      "question": "Could you have used Harvey when writing the Overton Papers?",
+      "status": 200,
+      "firstTextMs": 1106.4372999999998,
+      "fullAnswerMs": 1107.1110999999999,
+      "answer": {
+        "turnId": "d5559a54-1e24-4b75-b0e5-b8fdb10fb678",
+        "text": "Here is what the materials placed in this library support.\n\nThe Tennessee Reports: Overton and Thomas Emerson published the first two Tennessee Reports volumes in 1813–1817. The reports collected decisions of Tennessee's highest courts.\n\nThe archival Overton Papers: The Tennessee State Library and Archives finding aid describes the Murdock Collection of John Overton Papers as correspondence and other records, including legal and land business. Overton's papers are not the title of a single law book.\n\nHarvey: research and human verification: Harvey describes legal research that retrieves authoritative legal sources and presents citations lawyers can open. Its account keeps the lawyer responsible for checking authorities and conclusions. This is Harvey's description of its workflow, not an independent test or a claim of infallibility.\n\nImagined reflection: I would have welcomed help finding authorities, and still asked to inspect them. This is a modern counterfactual, not a historical quotation.",
+        "citations": [
+          {
+            "id": "overton-reports",
+            "title": "The Tennessee Reports",
+            "text": "Overton and Thomas Emerson published the first two Tennessee Reports volumes in 1813–1817. The reports collected decisions of Tennessee's highest courts.",
+            "sourceUrlOrInternalRef": "https://tennesseeencyclopedia.net/entries/john-overton",
+            "sourceLocator": "Tennessee Reports paragraph",
+            "checkedAt": "2026-11-12",
+            "sourceRevision": "portrait-2026-11-12-r1",
+            "claimKind": "historical-fact"
+          },
+          {
+            "id": "overton-papers",
+            "title": "The archival Overton Papers",
+            "text": "The Tennessee State Library and Archives finding aid describes the Murdock Collection of John Overton Papers as correspondence and other records, including legal and land business. Overton's papers are not the title of a single law book.",
+            "sourceUrlOrInternalRef": "https://sos-tn-gov-files.tnsosfiles.com/forms/MURDOCK_COLLECTION_OF_JOHN_OVERTON_PAPERS_1780-1797-1820-1908.pdf",
+            "sourceLocator": "Scope and Content Note",
+            "checkedAt": "2026-11-12",
+            "sourceRevision": "portrait-2026-11-12-r1",
+            "claimKind": "historical-fact"
+          },
+          {
+            "id": "harvey",
+            "title": "Harvey: research and human verification",
+            "text": "Harvey describes legal research that retrieves authoritative legal sources and presents citations lawyers can open. Its account keeps the lawyer responsible for checking authorities and conclusions. This is Harvey's description of its workflow, not an independent test or a claim of infallibility.",
+            "sourceUrlOrInternalRef": "https://www.harvey.ai/blog/legal-ai-vs-traditional-legal-research",
+            "sourceLocator": "Grounding, Citations, and the Hallucination Question; How Harvey Approaches Legal Research",
+            "checkedAt": "2026-11-12",
+            "expiresAt": "2026-11-20T00:00:00Z",
+            "sourceRevision": "portrait-2026-11-12-r1",
+            "claimKind": "vendor-claim"
+          }
+        ],
+        "navigationRequested": false,
+        "mode": "mock",
+        "model": "portrait-extractive-mock-v1",
+        "costUsd": 0,
+        "firstTextMs": 32,
+        "fullAnswerMs": 32,
+        "notice": "Deterministic rehearsal · no language model call · $0 provider cost"
+      }
+    },
+    {
+      "question": "Show me Knowledge Services architecture",
+      "status": 200,
+      "firstTextMs": 686.5226,
+      "fullAnswerMs": 686.6600000000001,
+      "answer": {
+        "turnId": "5b99a526-74bc-4702-84d6-6f7af7c09fa2",
+        "text": "Here is what the materials placed in this library support.\n\nKnowledge Services · Architecture: One application layer sits behind four ways of calling it: an HTTP API, MCP, a command-line tool and agent-to-agent tasks. A catalog lists every operation and which callers may use it, and a test fails if a transport exposes something the catalog does not admit.\nMain parts\nCapture. Stores immutable bytes with their lineage.\nVerification. An ordered, sealed run: integrity, mechanical checks, semantic support, then policy.\nIngestion. Plans without writing, applies once, and records a receipt.\nVerification ledger.\n\nThese are the project's curated claims. The source cards show their wording and limits; they establish no unrecorded deployment or commercial result.",
+        "citations": [
+          {
+            "id": "project:agent-knowledge-services:architecture",
+            "title": "Knowledge Services · Architecture",
+            "text": "One application layer sits behind four ways of calling it: an HTTP API, MCP, a command-line tool and agent-to-agent tasks. A catalog lists every operation and which callers may use it, and a test fails if a transport exposes something the catalog does not admit.\nMain parts\nCapture. Stores immutable bytes with their lineage.\nVerification. An ordered, sealed run: integrity, mechanical checks, semantic support, then policy.\nIngestion. Plans without writing, applies once, and records a receipt.\nVerification ledger. A versioned PostgreSQL component with its own roles and row-level security.\nRetrieval. Search over published versions, returning evidence that can be checked again.",
+            "sourceUrlOrInternalRef": "volume:agent-knowledge-services",
+            "sourceLocator": "architecture",
+            "checkedAt": "2026-11-12",
+            "sourceRevision": "9443cdc782112a10",
+            "claimKind": "owner-approved"
+          }
+        ],
+        "navigationRequested": true,
+        "mode": "mock",
+        "model": "portrait-extractive-mock-v1",
+        "costUsd": 0,
+        "firstTextMs": 23,
+        "fullAnswerMs": 23,
+        "navigation": {
+          "intentId": "42152284-ce25-40ec-bad9-1782806da75d",
+          "turnId": "5b99a526-74bc-4702-84d6-6f7af7c09fa2",
+          "targetId": "agent-knowledge-services",
+          "mode": "report",
+          "sectionId": "architecture",
+          "label": "Knowledge Services · Architecture"
+        },
+        "notice": "Deterministic rehearsal · no language model call · $0 provider cost",
+        "navigationProof": "1794540932600.XWWsmb3-bmInVujI7WzD05G50hc07BULYBkZn0VFkso"
+      }
+    },
+    {
+      "question": "What did John do for go-wipe?",
+      "status": 200,
+      "firstTextMs": 753.9584,
+      "fullAnswerMs": 754.1132000000002,
+      "answer": {
+        "turnId": "71cd23c8-523e-40e0-a533-cb17788d1d15",
+        "text": "Here is what the materials placed in this library support.\n\nGoWipe · Overview: Delivered and live\nWeb developer since 2021\nGoWipe sells bamboo wipes for specific uses: face, baby, pet, travel, food-safe and more. I have been the company's web developer since January 2021.\nThe problem\nGoWipe sells one idea in several variants, and each variant answers a different need. A shopper has to tell a facial wipe from a pet wipe within seconds, usually on a phone.\n\nThese are the project's curated claims. The source cards show their wording and limits; they establish no unrecorded deployment or commercial result.",
+        "citations": [
+          {
+            "id": "project:gowipe:overview",
+            "title": "GoWipe · Overview",
+            "text": "Delivered and live\nWeb developer since 2021\nGoWipe sells bamboo wipes for specific uses: face, baby, pet, travel, food-safe and more. I have been the company's web developer since January 2021.\nThe problem\nGoWipe sells one idea in several variants, and each variant answers a different need. A shopper has to tell a facial wipe from a pet wipe within seconds, usually on a phone. The business also advertises, so every step from viewing a product to buying it has to be reported consistently, or the spend cannot be judged.\nWhat I built\nI run the storefront on Shopify, starting from a commercial theme and customizing it with section code. The home page introduces the range by use, with social video, a comparison and reviews. Product pages offer one-time and subscription purchases, a sticky add-to-cart, and the ingredient story.\nFor measurement, the storefront reports the full shopping funnel to Google Analytics and Google Ads, from viewing a product through to purchase, with each event mapped to a conversion.",
+            "sourceUrlOrInternalRef": "volume:gowipe",
+            "sourceLocator": "overview",
+            "checkedAt": "2026-11-12",
+            "sourceRevision": "987b5a8e1dcf71d6",
+            "claimKind": "owner-approved"
+          }
+        ],
+        "navigationRequested": false,
+        "mode": "mock",
+        "model": "portrait-extractive-mock-v1",
+        "costUsd": 0,
+        "firstTextMs": 25,
+        "fullAnswerMs": 25,
+        "navigation": {
+          "intentId": "34b7db2b-242f-47de-ab17-5b14756ac54e",
+          "turnId": "71cd23c8-523e-40e0-a533-cb17788d1d15",
+          "targetId": "gowipe",
+          "mode": "book",
+          "label": "GoWipe"
+        },
+        "notice": "Deterministic rehearsal · no language model call · $0 provider cost",
+        "navigationProof": "1794540934539.3Vu2gUvHkKNf37PUY60Nl_gcfOmUACcMyziTOBiXPGg"
+      }
+    }
+  ],
+  "quota": "fourth request denied",
+  "navigation": "validated then replay rejected",
+  "forgery": "preview flag and unknown citation denied",
+  "remote": "local-office privilege denied for forwarded remote address"
+}

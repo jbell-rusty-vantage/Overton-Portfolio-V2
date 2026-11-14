@@ -1,0 +1,1754 @@
+{
+ "blender": "5.2.2 LTS",
+ "nodes": [
+  {
+   "name": "andiron.north",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "andiron.north",
+   "piece": "andiron.north",
+   "role": "placed",
+   "collection": "Hearth",
+   "pivot": [
+    -7.228,
+    0.565,
+    -0.36
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "andiron.south",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "andiron.north",
+   "piece": "andiron.south",
+   "role": "placed",
+   "collection": "Hearth",
+   "pivot": [
+    -7.228,
+    0.565,
+    0.36
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "book",
+   "parent": null,
+   "type": "empty",
+   "mesh": null,
+   "piece": "book",
+   "role": "stock",
+   "collection": "Moving parts (stock)",
+   "pivot": [
+    -4.55,
+    0.1485,
+    -5.65
+   ],
+   "rotation": [
+    -0.0,
+    -0.976296,
+    0.0,
+    0.21644
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "book.block",
+   "parent": "book",
+   "type": "mesh",
+   "mesh": "book.block",
+   "piece": "book",
+   "role": "moving",
+   "collection": "Moving parts (stock)",
+   "pivot": [
+    -4.55,
+    0.1485,
+    -5.65
+   ],
+   "rotation": [
+    -0.0,
+    -0.976296,
+    0.0,
+    0.21644
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "book.board.back",
+   "parent": "book",
+   "type": "mesh",
+   "mesh": "book.board.back",
+   "piece": "book",
+   "role": "moving",
+   "collection": "Moving parts (stock)",
+   "pivot": [
+    -4.467442,
+    0.1485,
+    -5.709572
+   ],
+   "rotation": [
+    -0.0,
+    -0.976296,
+    0.0,
+    0.21644
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "motion": {
+    "kind": "hinge",
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "travel": 3.141593
+   }
+  },
+  {
+   "name": "book.board.front",
+   "parent": "book",
+   "type": "mesh",
+   "mesh": "book.board.front",
+   "piece": "book",
+   "role": "moving",
+   "collection": "Moving parts (stock)",
+   "pivot": [
+    -4.451297,
+    0.1485,
+    -5.674952
+   ],
+   "rotation": [
+    -0.0,
+    -0.976296,
+    0.0,
+    0.21644
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "motion": {
+    "kind": "hinge",
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "travel": 3.141593
+   }
+  },
+  {
+   "name": "book.pivot.gutter",
+   "parent": "book",
+   "type": "empty",
+   "mesh": null,
+   "piece": "book",
+   "role": "moving",
+   "collection": "Moving parts (stock)",
+   "pivot": [
+    -4.459369,
+    0.1485,
+    -5.692262
+   ],
+   "rotation": [
+    -0.0,
+    -0.976296,
+    0.0,
+    0.21644
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "motion": {
+    "kind": "gutter",
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "travel": 0
+   }
+  },
+  {
+   "name": "book.spine",
+   "parent": "book",
+   "type": "mesh",
+   "mesh": "book.spine",
+   "piece": "book",
+   "role": "moving",
+   "collection": "Moving parts (stock)",
+   "pivot": [
+    -4.459369,
+    0.1485,
+    -5.692262
+   ],
+   "rotation": [
+    -0.0,
+    -0.976296,
+    0.0,
+    0.21644
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "bookcase.family",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "bookcase.family",
+   "piece": "bookcase.family",
+   "role": "placed",
+   "collection": "Furniture",
+   "pivot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "bookcase.law",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "bookcase.law",
+   "piece": "bookcase.law",
+   "role": "placed",
+   "collection": "Furniture",
+   "pivot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "candlestick.chest",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "candlestick.mantel.north",
+   "piece": "candlestick.chest",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "pivot": [
+    -3.45,
+    1.42,
+    -2.76
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "candlestick.chest.flame",
+   "parent": "candlestick.chest",
+   "type": "empty",
+   "mesh": null,
+   "piece": "candlestick.chest",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "pivot": [
+    -3.45,
+    1.835,
+    -2.76
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "candlestick.chest.taper",
+   "parent": "candlestick.chest",
+   "type": "mesh",
+   "mesh": "candlestick.mantel.north.taper",
+   "piece": "candlestick.chest",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "pivot": [
+    -3.45,
+    1.638,
+    -2.76
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    0.85,
+    1.0
+   ]
+  },
+  {
+   "name": "candlestick.mantel.north",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "candlestick.mantel.north",
+   "piece": "candlestick.mantel.north",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "pivot": [
+    -7.64,
+    1.965,
+    -0.98
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "candlestick.mantel.north.flame",
+   "parent": "candlestick.mantel.north",
+   "type": "empty",
+   "mesh": null,
+   "piece": "candlestick.mantel.north",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "pivot": [
+    -7.64,
+    2.41,
+    -0.98
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "candlestick.mantel.north.taper",
+   "parent": "candlestick.mantel.north",
+   "type": "mesh",
+   "mesh": "candlestick.mantel.north.taper",
+   "piece": "candlestick.mantel.north",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "pivot": [
+    -7.64,
+    2.183,
+    -0.98
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "candlestick.mantel.south",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "candlestick.mantel.north",
+   "piece": "candlestick.mantel.south",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "pivot": [
+    -7.64,
+    1.965,
+    0.98
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "candlestick.mantel.south.flame",
+   "parent": "candlestick.mantel.south",
+   "type": "empty",
+   "mesh": null,
+   "piece": "candlestick.mantel.south",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "pivot": [
+    -7.64,
+    2.41,
+    0.98
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "candlestick.mantel.south.taper",
+   "parent": "candlestick.mantel.south",
+   "type": "mesh",
+   "mesh": "candlestick.mantel.north.taper",
+   "piece": "candlestick.mantel.south",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "pivot": [
+    -7.64,
+    2.183,
+    0.98
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "candlestick.table",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "candlestick.mantel.north",
+   "piece": "candlestick.table",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "pivot": [
+    -5.58,
+    1.34,
+    0.47
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "candlestick.table.flame",
+   "parent": "candlestick.table",
+   "type": "empty",
+   "mesh": null,
+   "piece": "candlestick.table",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "pivot": [
+    -5.58,
+    1.735,
+    0.47
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "candlestick.table.taper",
+   "parent": "candlestick.table",
+   "type": "mesh",
+   "mesh": "candlestick.mantel.north.taper",
+   "piece": "candlestick.table",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "pivot": [
+    -5.58,
+    1.558,
+    0.47
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    0.75,
+    1.0
+   ]
+  },
+  {
+   "name": "chair.windsor",
+   "parent": null,
+   "type": "empty",
+   "mesh": null,
+   "piece": "chair.windsor",
+   "role": "placed",
+   "collection": "Furniture",
+   "pivot": [
+    -4.5,
+    0.53,
+    -0.12
+   ],
+   "rotation": [
+    0.0,
+    0.159318,
+    -0.0,
+    0.987227
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "chair.windsor.back",
+   "parent": "chair.windsor",
+   "type": "mesh",
+   "mesh": "chair.windsor.back",
+   "piece": "chair.windsor",
+   "role": "placed",
+   "collection": "Furniture",
+   "pivot": [
+    -4.5,
+    0.53,
+    -0.12
+   ],
+   "rotation": [
+    0.0,
+    0.159318,
+    -0.0,
+    0.987227
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "chair.windsor.seat",
+   "parent": "chair.windsor",
+   "type": "mesh",
+   "mesh": "chair.windsor.seat",
+   "piece": "chair.windsor",
+   "role": "placed",
+   "collection": "Furniture",
+   "pivot": [
+    -4.5,
+    0.53,
+    -0.12
+   ],
+   "rotation": [
+    0.0,
+    0.159318,
+    -0.0,
+    0.987227
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "chair.windsor.undercarriage",
+   "parent": "chair.windsor",
+   "type": "mesh",
+   "mesh": "chair.windsor.undercarriage",
+   "piece": "chair.windsor",
+   "role": "placed",
+   "collection": "Furniture",
+   "pivot": [
+    -4.5,
+    0.53,
+    -0.12
+   ],
+   "rotation": [
+    0.0,
+    0.159318,
+    -0.0,
+    0.987227
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "chest",
+   "parent": null,
+   "type": "empty",
+   "mesh": null,
+   "piece": "chest",
+   "role": "placed",
+   "collection": "Furniture",
+   "pivot": [
+    -2.95,
+    0.53,
+    -2.7425
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "chest.carcass",
+   "parent": "chest",
+   "type": "mesh",
+   "mesh": "chest.carcass",
+   "piece": "chest",
+   "role": "placed",
+   "collection": "Furniture",
+   "pivot": [
+    -2.95,
+    0.53,
+    -2.7425
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "chest.drawer.campaign",
+   "parent": "chest",
+   "type": "mesh",
+   "mesh": "chest.drawer.campaign",
+   "piece": "chest",
+   "role": "moving",
+   "collection": "Furniture",
+   "pivot": [
+    -2.95,
+    0.882,
+    -2.5
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "motion": {
+    "kind": "slide",
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "travel": 0.52
+   }
+  },
+  {
+   "name": "chest.drawer.correspondence",
+   "parent": "chest",
+   "type": "mesh",
+   "mesh": "chest.drawer.correspondence",
+   "piece": "chest",
+   "role": "moving",
+   "collection": "Furniture",
+   "pivot": [
+    -2.95,
+    1.137,
+    -2.5
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "motion": {
+    "kind": "slide",
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "travel": 0.3
+   }
+  },
+  {
+   "name": "chest.drawer.lower",
+   "parent": "chest",
+   "type": "mesh",
+   "mesh": "chest.drawer.lower",
+   "piece": "chest",
+   "role": "placed",
+   "collection": "Furniture",
+   "pivot": [
+    -2.95,
+    0.65,
+    -2.5
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "desk.study",
+   "parent": null,
+   "type": "empty",
+   "mesh": null,
+   "piece": "desk.study",
+   "role": "placed",
+   "collection": "Joinery",
+   "pivot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "desk.study.chest-books",
+   "parent": "desk.study",
+   "type": "mesh",
+   "mesh": "desk.study.chest-books",
+   "piece": "desk.study",
+   "role": "placed",
+   "collection": "Joinery",
+   "pivot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "desk.study.fittings",
+   "parent": "desk.study",
+   "type": "mesh",
+   "mesh": "desk.study.fittings",
+   "piece": "desk.study",
+   "role": "placed",
+   "collection": "Joinery",
+   "pivot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "desk.study.paper",
+   "parent": "desk.study",
+   "type": "mesh",
+   "mesh": "desk.study.paper",
+   "piece": "desk.study",
+   "role": "placed",
+   "collection": "Joinery",
+   "pivot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "desk.study.stand",
+   "parent": "desk.study",
+   "type": "mesh",
+   "mesh": "desk.study.stand",
+   "piece": "desk.study",
+   "role": "placed",
+   "collection": "Joinery",
+   "pivot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "door.ell",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "door.ell",
+   "piece": "door.ell",
+   "role": "placed",
+   "collection": "Joinery",
+   "pivot": [
+    -5.65,
+    0.53,
+    -3.0
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    0.847458,
+    1.0,
+    1.0
+   ],
+   "motion": {
+    "kind": "hinge",
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "travel": 1.4
+   }
+  },
+  {
+   "name": "hearth.log.a",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "hearth.log.a",
+   "piece": "hearth.log.a",
+   "role": "placed",
+   "collection": "Hearth",
+   "pivot": [
+    -7.56,
+    0.66,
+    -0.02
+   ],
+   "rotation": [
+    0.0,
+    -0.047982,
+    -0.0,
+    0.998848
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "hearth.log.b",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "hearth.log.b",
+   "piece": "hearth.log.b",
+   "role": "placed",
+   "collection": "Hearth",
+   "pivot": [
+    -7.42,
+    0.65,
+    0.05
+   ],
+   "rotation": [
+    0.0,
+    0.035992,
+    -0.0,
+    0.999352
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "hearth.log.c",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "hearth.log.c",
+   "piece": "hearth.log.c",
+   "role": "placed",
+   "collection": "Hearth",
+   "pivot": [
+    -7.5,
+    0.76,
+    -0.0
+   ],
+   "rotation": [
+    0.0,
+    -0.023998,
+    -0.0,
+    0.999712
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "inkwell",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "inkwell",
+   "piece": "inkwell",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "pivot": [
+    -4.38,
+    1.34,
+    1.02
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "inkwell.quill.a",
+   "parent": "inkwell",
+   "type": "mesh",
+   "mesh": "inkwell.quill.a",
+   "piece": "inkwell",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "pivot": [
+    -4.38,
+    1.398,
+    1.02
+   ],
+   "rotation": [
+    0.201979,
+    0.241969,
+    -0.051574,
+    0.947626
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "inkwell.quill.b",
+   "parent": "inkwell",
+   "type": "mesh",
+   "mesh": "inkwell.quill.b",
+   "piece": "inkwell",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "pivot": [
+    -4.38,
+    1.398,
+    1.02
+   ],
+   "rotation": [
+    0.146459,
+    -0.196438,
+    0.029689,
+    0.969062
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "letter.sheet",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "letter.sheet",
+   "piece": "letter.sheet",
+   "role": "stock",
+   "collection": "Moving parts (stock)",
+   "pivot": [
+    -4.5,
+    0.002,
+    -5.2
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "mantel",
+   "parent": null,
+   "type": "empty",
+   "mesh": null,
+   "piece": "mantel",
+   "role": "placed",
+   "collection": "Hearth",
+   "pivot": [
+    -7.76,
+    0.53,
+    -0.0
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "mantel.frieze",
+   "parent": "mantel",
+   "type": "mesh",
+   "mesh": "mantel.frieze",
+   "piece": "mantel",
+   "role": "placed",
+   "collection": "Hearth",
+   "pivot": [
+    -7.76,
+    0.53,
+    -0.0
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "mantel.pilaster.north",
+   "parent": "mantel",
+   "type": "mesh",
+   "mesh": "mantel.pilaster.north",
+   "piece": "mantel",
+   "role": "placed",
+   "collection": "Hearth",
+   "pivot": [
+    -7.76,
+    0.53,
+    -0.93
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "mantel.pilaster.south",
+   "parent": "mantel",
+   "type": "mesh",
+   "mesh": "mantel.pilaster.north",
+   "piece": "mantel",
+   "role": "placed",
+   "collection": "Hearth",
+   "pivot": [
+    -7.76,
+    0.53,
+    0.93
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "mantel.shelf",
+   "parent": "mantel",
+   "type": "mesh",
+   "mesh": "mantel.shelf",
+   "piece": "mantel",
+   "role": "placed",
+   "collection": "Hearth",
+   "pivot": [
+    -7.76,
+    0.53,
+    -0.0
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "moulding.chair-rail",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "moulding.chair-rail",
+   "piece": "moulding.chair-rail",
+   "role": "stock",
+   "collection": "Mouldings (stock)",
+   "pivot": [
+    -5.9,
+    0.0,
+    -5.3
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "moulding.cornice",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "moulding.cornice",
+   "piece": "moulding.cornice",
+   "role": "stock",
+   "collection": "Mouldings (stock)",
+   "pivot": [
+    -5.9,
+    0.0,
+    -5.6
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "moulding.skirting",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "moulding.skirting",
+   "piece": "moulding.skirting",
+   "role": "stock",
+   "collection": "Mouldings (stock)",
+   "pivot": [
+    -5.9,
+    0.0,
+    -5.9
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "pounce.pot",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "pounce.pot",
+   "piece": "pounce.pot",
+   "role": "placed",
+   "collection": "Desk furniture",
+   "pivot": [
+    -4.52,
+    1.34,
+    1.07
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "room.joinery",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "room.joinery",
+   "piece": "room.joinery",
+   "role": "placed",
+   "collection": "Joinery",
+   "pivot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "room.shell",
+   "parent": null,
+   "type": "mesh",
+   "mesh": "room.shell",
+   "piece": "room.shell",
+   "role": "placed",
+   "collection": "Joinery",
+   "pivot": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "table.writing",
+   "parent": null,
+   "type": "empty",
+   "mesh": null,
+   "piece": "table.writing",
+   "role": "placed",
+   "collection": "Furniture",
+   "pivot": [
+    -4.95,
+    0.53,
+    0.75
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "table.writing.drawer",
+   "parent": "table.writing",
+   "type": "mesh",
+   "mesh": "table.writing.drawer",
+   "piece": "table.writing",
+   "role": "placed",
+   "collection": "Furniture",
+   "pivot": [
+    -4.95,
+    1.222,
+    1.134
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "motion": {
+    "kind": "slide",
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "travel": 0.3
+   }
+  },
+  {
+   "name": "table.writing.frame",
+   "parent": "table.writing",
+   "type": "mesh",
+   "mesh": "table.writing.frame",
+   "piece": "table.writing",
+   "role": "placed",
+   "collection": "Furniture",
+   "pivot": [
+    -4.95,
+    0.53,
+    0.75
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "table.writing.leather",
+   "parent": "table.writing",
+   "type": "mesh",
+   "mesh": "table.writing.leather",
+   "piece": "table.writing",
+   "role": "placed",
+   "collection": "Furniture",
+   "pivot": [
+    -4.95,
+    0.53,
+    0.75
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "table.writing.top",
+   "parent": "table.writing",
+   "type": "mesh",
+   "mesh": "table.writing.top",
+   "piece": "table.writing",
+   "role": "placed",
+   "collection": "Furniture",
+   "pivot": [
+    -4.95,
+    0.53,
+    0.75
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "window.sash.east",
+   "parent": null,
+   "type": "empty",
+   "mesh": null,
+   "piece": "window.sash.east",
+   "role": "placed",
+   "collection": "Joinery",
+   "pivot": [
+    -3.55,
+    1.37,
+    2.957
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "window.sash.east.lower",
+   "parent": "window.sash.east",
+   "type": "mesh",
+   "mesh": "window.sash.east.lower",
+   "piece": "window.sash.east",
+   "role": "placed",
+   "collection": "Joinery",
+   "pivot": [
+    -3.55,
+    1.37,
+    2.9565
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "motion": {
+    "kind": "slide",
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "travel": 0.6
+   }
+  },
+  {
+   "name": "window.sash.east.upper",
+   "parent": "window.sash.east",
+   "type": "mesh",
+   "mesh": "window.sash.east.upper",
+   "piece": "window.sash.east",
+   "role": "placed",
+   "collection": "Joinery",
+   "pivot": [
+    -3.55,
+    2.125714,
+    2.9815
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "motion": {
+    "kind": "slide",
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "travel": 0.6
+   }
+  },
+  {
+   "name": "window.sash.west",
+   "parent": null,
+   "type": "empty",
+   "mesh": null,
+   "piece": "window.sash.west",
+   "role": "placed",
+   "collection": "Joinery",
+   "pivot": [
+    -6.03,
+    1.37,
+    2.957
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "window.sash.west.lower",
+   "parent": "window.sash.west",
+   "type": "mesh",
+   "mesh": "window.sash.west.lower",
+   "piece": "window.sash.west",
+   "role": "placed",
+   "collection": "Joinery",
+   "pivot": [
+    -6.03,
+    1.37,
+    2.9565
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "motion": {
+    "kind": "slide",
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "travel": 0.6
+   }
+  },
+  {
+   "name": "window.sash.west.upper",
+   "parent": "window.sash.west",
+   "type": "mesh",
+   "mesh": "window.sash.west.upper",
+   "piece": "window.sash.west",
+   "role": "placed",
+   "collection": "Joinery",
+   "pivot": [
+    -6.03,
+    2.125714,
+    2.9815
+   ],
+   "rotation": [
+    0.0,
+    0.0,
+    -0.0,
+    1.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "motion": {
+    "kind": "slide",
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "travel": 0.6
+   }
+  }
+ ]
+}

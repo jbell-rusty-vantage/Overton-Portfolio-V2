@@ -117,7 +117,7 @@ export async function GET(request: Request) {
   const html =
     '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>' +
     escape(volume?.title ?? "Catalog") +
-    ' · The Library</title><style>html{color:#27392d;background:#f5f1e7;font:18px/1.65 Georgia,serif}body{max-width:45rem;margin:auto;padding:2rem 1.2rem}nav{display:flex;gap:1.4rem;border-bottom:1px solid #bcb79d;padding-bottom:1rem}a{color:#294e38}h1{font-size:2.6rem;line-height:1.1}h2{font-size:1.55rem}p,pre{white-space:pre-wrap;overflow-wrap:anywhere}img{max-width:100%}.card{border-top:1px solid #c2bba6;margin:1rem 0}input,button{font:inherit;max-width:100%}small{color:#555e4e}</style><nav><a href="/">The Library</a><a href="/catalog">Text catalog</a></nav><main>' +
+    ' · The Library</title><style>html{color:#27392d;background:#f5f1e7;font:18px/1.65 Georgia,serif}body{max-width:45rem;margin:auto;padding:2rem 1.2rem}nav{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;border-bottom:1px solid #bcb79d;padding-bottom:1rem}a{color:#294e38}h1{font-size:2.6rem;line-height:1.1}h2{font-size:1.55rem}p,pre{white-space:pre-wrap;overflow-wrap:anywhere}img{max-width:100%}.card{border-top:1px solid #c2bba6;margin:1rem 0}input,button{font:inherit;max-width:100%}small{color:#555e4e}</style><nav><a href="/">The Library</a><a href="/catalog">Text catalog</a><a href="/resume">Résumé</a></nav><main>' +
     body +
     "</main><small>" +
     escape(label) +

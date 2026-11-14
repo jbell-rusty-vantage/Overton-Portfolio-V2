@@ -6,7 +6,7 @@ For everyday editing of the configured database, use [the local office](ITERATIN
 
 | Thing | Where |
 | --- | --- |
-| Hosting | Vercel project `overton-portfolio` (team "Overton's projects"), Git-connected to `Overton77/overton-portfolio`; `main` → production (`overton-portfolio.vercel.app`) |
+| Hosting | Current local binding (November 13): Vercel `overton-portfolio-v2`, Git origin `jbell-rusty-vantage/Overton-Portfolio-V2`; accepted public destination `overton-portfolio-v2.vercel.app`. Recheck remote Git integration before release. Older `Overton77/overton-portfolio` target is historical. |
 | Database | Neon Postgres, reached via the `DATABASE_URL` env var on the Vercel project (all environments) |
 | Media | Vercel Blob store `overton-portfolio-store` (`BLOB_STORE_ID`, public access, OIDC auth on Vercel) |
 

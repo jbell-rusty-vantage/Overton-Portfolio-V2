@@ -1,0 +1,64 @@
+{
+  "edition": 2,
+  "companion": "travellers-rest-house-book",
+  "featuredFrom": null,
+  "featuredUntil": null,
+  "scenes": {
+    "high": "travellers-rest-house",
+    "low": "travellers-rest-house-low"
+  },
+  "cues": [
+    {
+      "kind": "spread",
+      "page": 1,
+      "object": "first-residents",
+      "label": "Examine the ceramic bowl record"
+    },
+    {
+      "kind": "spread",
+      "page": 2,
+      "object": "william-franklin",
+      "label": "Read about William and Franklin"
+    },
+    {
+      "kind": "spread",
+      "page": 3,
+      "object": "election-invitation",
+      "label": "Examine the invitation on satin"
+    },
+    {
+      "kind": "spread",
+      "page": 4,
+      "object": "murfree-leeper",
+      "label": "Examine the first reported case"
+    },
+    {
+      "kind": "screen",
+      "project": "agentic-mission-control",
+      "slot": "main",
+      "media": "mission-reel",
+      "poster": "mission-poster",
+      "track": "mission-captions"
+    },
+    {
+      "kind": "screen",
+      "project": "agentic-mission-control",
+      "slot": "side",
+      "media": "mission-study"
+    },
+    {
+      "kind": "clip",
+      "id": "free-kick-winner",
+      "media": "royal-palm-reel",
+      "poster": "royal-palm-poster",
+      "track": "royal-palm-captions"
+    }
+  ],
+  "portrait": "judge-overton",
+  "voice": {
+    "timeline": "voice-timeline",
+    "cues": []
+  },
+  "objects": [],
+  "placements": []
+}

@@ -18,7 +18,7 @@ async function OfficeAccess() {
 // Each page wraps its account checks and queries in its own officePage boundary.
 export default function ConsoleLayout({ children }: LayoutProps<"/admin">) {
   return (
-    <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-6 px-4 py-6 md:flex-row md:px-8">
+    <div className="office-shell mx-auto flex w-full max-w-7xl flex-1 flex-col gap-6 px-4 py-6 md:flex-row md:px-8">
       <aside className="md:w-56 md:shrink-0">
         <Link href="/" className="mb-4 block">
           <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-muted">The Library</span>

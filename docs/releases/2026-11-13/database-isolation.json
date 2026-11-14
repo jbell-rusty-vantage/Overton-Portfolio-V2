@@ -1,0 +1,12 @@
+{
+  "production": "5aac9ac8d136475635c9bb75",
+  "preview": "76580fb682a2e53c2877c3d5",
+  "database": "portfolio_preview_20261113",
+  "migrations": [
+    "20261008000000_init",
+    "20261008000050_comments_views_functions",
+    "20261008000100_seed_reference_data",
+    "20261113010000_portrait_ledger"
+  ],
+  "isolation": "Separate PostgreSQL databases on the existing Neon endpoint; independent content, sessions and portrait ledger."
+}
