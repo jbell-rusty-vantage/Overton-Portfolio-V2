@@ -1,0 +1,3 @@
+{"views":146,"pages":191,"blank":0,"sparse":0,"overflow":0,"overflowX":0,"folioHit":0,"letterboxed":0,"cropped":0,"smallKnownRasterText":0,"unknownRasterText":44,"unloaded":0,"video":2,"clippedText":0,"toolbarCovered":0}
+desktop:agentic-mission-control agentic-mission-control-05.png right f10: video 388x218
+phone:agentic-mission-control agentic-mission-control-12.png right f12: video 306x172

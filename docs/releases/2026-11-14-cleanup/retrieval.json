@@ -1,0 +1,624 @@
+{
+  "initial": {
+    "labels": "agent-authored; no independent human adjudication",
+    "rows": [
+      {
+        "id": "old-hall",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 20.541999999999973,
+        "bytes": 2664,
+        "results": [
+          "route-compatibility",
+          "system-overview",
+          "testing-and-performance"
+        ]
+      },
+      {
+        "id": "room-mapping",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": false,
+        "ms": 17.590300000000013,
+        "bytes": 2060,
+        "results": [
+          "route-compatibility",
+          "system-overview",
+          "asset-pipeline"
+        ]
+      },
+      {
+        "id": "marked-page",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 17.22909999999996,
+        "bytes": 2449,
+        "results": [
+          "book-rendering",
+          "report-authoring",
+          "navigation-and-bookmarks"
+        ]
+      },
+      {
+        "id": "renderer-owner",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 17.10559999999998,
+        "bytes": 2158,
+        "results": [
+          "world-runtime",
+          "authoring-tools",
+          "testing-and-performance"
+        ]
+      },
+      {
+        "id": "hidden-content",
+        "partition": "development",
+        "hit": false,
+        "safetyCritical": true,
+        "ms": 17.727800000000002,
+        "bytes": 1815,
+        "results": [
+          "content-promotion",
+          "portrait-text",
+          "historical-evidence"
+        ]
+      },
+      {
+        "id": "database-target",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 19.35820000000001,
+        "bytes": 2518,
+        "results": [
+          "integrations-and-environments",
+          "release-and-recovery",
+          "database-contract"
+        ]
+      },
+      {
+        "id": "owner-drift",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 19.107699999999966,
+        "bytes": 2027,
+        "results": [
+          "collection-publication",
+          "content-promotion",
+          "estate-program"
+        ]
+      },
+      {
+        "id": "immutable-image",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 20.95999999999998,
+        "bytes": 2193,
+        "results": [
+          "asset-pipeline",
+          "route-compatibility",
+          "release-and-recovery"
+        ]
+      },
+      {
+        "id": "portrait-budget",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 18.128199999999993,
+        "bytes": 1590,
+        "results": [
+          "portrait-text",
+          "historical-evidence",
+          "book-rendering"
+        ]
+      },
+      {
+        "id": "voice-disabled",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 20.176600000000008,
+        "bytes": 2045,
+        "results": [
+          "portrait-voice",
+          "local-development",
+          "estate-program"
+        ]
+      },
+      {
+        "id": "code-rollback",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 18.4067,
+        "bytes": 1869,
+        "results": [
+          "release-and-recovery",
+          "content-promotion",
+          "integrations-and-environments"
+        ]
+      },
+      {
+        "id": "gpu-ci",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 16.651900000000012,
+        "bytes": 2068,
+        "results": [
+          "testing-and-performance",
+          "database-contract",
+          "integrations-and-environments"
+        ]
+      },
+      {
+        "id": "source-freshness",
+        "partition": "development",
+        "hit": false,
+        "safetyCritical": false,
+        "ms": 15.179100000000005,
+        "bytes": 2636,
+        "results": [
+          "portrait-text",
+          "asset-pipeline",
+          "historical-evidence"
+        ]
+      },
+      {
+        "id": "local-office",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 14.784100000000024,
+        "bytes": 2092,
+        "results": [
+          "local-development",
+          "collection-publication",
+          "documentation-system"
+        ]
+      },
+      {
+        "id": "asset-rebuild",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": false,
+        "ms": 15.462000000000046,
+        "bytes": 1835,
+        "results": [
+          "authoring-tools",
+          "system-overview",
+          "asset-pipeline"
+        ]
+      },
+      {
+        "id": "unknown-a",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": false,
+        "ms": 17.07439999999997,
+        "bytes": 99,
+        "results": []
+      },
+      {
+        "id": "portfolio-hash",
+        "partition": "held-out",
+        "hit": false,
+        "safetyCritical": true,
+        "ms": 17.227199999999925,
+        "bytes": 2559,
+        "results": [
+          "navigation-and-bookmarks",
+          "future-worlds",
+          "security-and-privacy"
+        ]
+      },
+      {
+        "id": "asset-withdrawal",
+        "partition": "held-out",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 14.996899999999982,
+        "bytes": 2115,
+        "results": [
+          "integrations-and-environments",
+          "asset-pipeline",
+          "security-and-privacy"
+        ]
+      },
+      {
+        "id": "legacy-db",
+        "partition": "held-out",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 17.386300000000006,
+        "bytes": 2799,
+        "results": [
+          "database-contract",
+          "release-and-recovery",
+          "local-development"
+        ]
+      },
+      {
+        "id": "book-geometry",
+        "partition": "held-out",
+        "hit": true,
+        "safetyCritical": false,
+        "ms": 18.990499999999997,
+        "bytes": 2223,
+        "results": [
+          "book-rendering",
+          "collection-publication",
+          "system-overview"
+        ]
+      },
+      {
+        "id": "history-attribution",
+        "partition": "held-out",
+        "hit": true,
+        "safetyCritical": false,
+        "ms": 19.70220000000006,
+        "bytes": 1803,
+        "results": [
+          "historical-evidence",
+          "folio-and-media",
+          "documentation-system"
+        ]
+      },
+      {
+        "id": "vr-state",
+        "partition": "held-out",
+        "hit": true,
+        "safetyCritical": false,
+        "ms": 14.018599999999992,
+        "bytes": 2652,
+        "results": [
+          "future-worlds",
+          "testing-and-performance",
+          "local-development"
+        ]
+      },
+      {
+        "id": "new-concept",
+        "partition": "held-out",
+        "hit": true,
+        "safetyCritical": false,
+        "ms": 15.697300000000041,
+        "bytes": 1748,
+        "results": [
+          "documentation-system",
+          "database-contract",
+          "future-worlds"
+        ]
+      },
+      {
+        "id": "unknown-b",
+        "partition": "held-out",
+        "hit": false,
+        "safetyCritical": false,
+        "ms": 19.544199999999933,
+        "bytes": 1163,
+        "results": [
+          "local-development",
+          "portrait-text"
+        ]
+      }
+    ],
+    "summary": {
+      "hits": 20,
+      "cases": 24,
+      "medianMs": 17.48830000000001,
+      "p95Ms": 20.541999999999973,
+      "maxReturnedBytes": 2799
+    }
+  },
+  "final": {
+    "labels": "agent-authored; no independent human adjudication",
+    "rows": [
+      {
+        "id": "old-hall",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 85.10380000000004,
+        "bytes": 2898,
+        "results": [
+          "route-compatibility",
+          "system-overview",
+          "testing-and-performance"
+        ]
+      },
+      {
+        "id": "room-mapping",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": false,
+        "ms": 88.13239999999996,
+        "bytes": 2077,
+        "results": [
+          "route-compatibility",
+          "system-overview",
+          "asset-pipeline"
+        ]
+      },
+      {
+        "id": "marked-page",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 72.8392,
+        "bytes": 2493,
+        "results": [
+          "navigation-and-bookmarks",
+          "book-rendering",
+          "report-authoring"
+        ]
+      },
+      {
+        "id": "renderer-owner",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 71.44799999999998,
+        "bytes": 2175,
+        "results": [
+          "world-runtime",
+          "authoring-tools",
+          "testing-and-performance"
+        ]
+      },
+      {
+        "id": "hidden-content",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 71.37040000000002,
+        "bytes": 1547,
+        "results": [
+          "collection-publication",
+          "security-and-privacy",
+          "content-promotion"
+        ]
+      },
+      {
+        "id": "database-target",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 95.4769,
+        "bytes": 2535,
+        "results": [
+          "integrations-and-environments",
+          "release-and-recovery",
+          "database-contract"
+        ]
+      },
+      {
+        "id": "owner-drift",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 106.80599999999993,
+        "bytes": 2044,
+        "results": [
+          "collection-publication",
+          "content-promotion",
+          "estate-program"
+        ]
+      },
+      {
+        "id": "immutable-image",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 108.16710000000012,
+        "bytes": 2214,
+        "results": [
+          "asset-pipeline",
+          "route-compatibility",
+          "database-contract"
+        ]
+      },
+      {
+        "id": "portrait-budget",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 92.39480000000003,
+        "bytes": 1078,
+        "results": [
+          "portrait-text",
+          "historical-evidence"
+        ]
+      },
+      {
+        "id": "voice-disabled",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 95.97330000000011,
+        "bytes": 1004,
+        "results": [
+          "portrait-voice"
+        ]
+      },
+      {
+        "id": "code-rollback",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 75.5021999999999,
+        "bytes": 1568,
+        "results": [
+          "release-and-recovery",
+          "content-promotion"
+        ]
+      },
+      {
+        "id": "gpu-ci",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 86.21019999999999,
+        "bytes": 999,
+        "results": [
+          "testing-and-performance"
+        ]
+      },
+      {
+        "id": "source-freshness",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": false,
+        "ms": 86.21510000000012,
+        "bytes": 2725,
+        "results": [
+          "documentation-system",
+          "portrait-text",
+          "asset-pipeline"
+        ]
+      },
+      {
+        "id": "local-office",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 69.8397,
+        "bytes": 2411,
+        "results": [
+          "local-development",
+          "collection-publication",
+          "documentation-system"
+        ]
+      },
+      {
+        "id": "asset-rebuild",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": false,
+        "ms": 72.52350000000001,
+        "bytes": 1564,
+        "results": [
+          "authoring-tools",
+          "system-overview"
+        ]
+      },
+      {
+        "id": "unknown-a",
+        "partition": "development",
+        "hit": true,
+        "safetyCritical": false,
+        "ms": 64.0974000000001,
+        "bytes": 115,
+        "results": []
+      },
+      {
+        "id": "portfolio-hash",
+        "partition": "held-out",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 63.75109999999995,
+        "bytes": 1903,
+        "results": [
+          "route-compatibility",
+          "navigation-and-bookmarks"
+        ]
+      },
+      {
+        "id": "asset-withdrawal",
+        "partition": "held-out",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 64.91219999999998,
+        "bytes": 1533,
+        "results": [
+          "integrations-and-environments",
+          "asset-pipeline"
+        ]
+      },
+      {
+        "id": "legacy-db",
+        "partition": "held-out",
+        "hit": true,
+        "safetyCritical": true,
+        "ms": 73.94539999999984,
+        "bytes": 2816,
+        "results": [
+          "database-contract",
+          "release-and-recovery",
+          "local-development"
+        ]
+      },
+      {
+        "id": "book-geometry",
+        "partition": "held-out",
+        "hit": true,
+        "safetyCritical": false,
+        "ms": 69.22719999999981,
+        "bytes": 2240,
+        "results": [
+          "book-rendering",
+          "collection-publication",
+          "system-overview"
+        ]
+      },
+      {
+        "id": "history-attribution",
+        "partition": "held-out",
+        "hit": true,
+        "safetyCritical": false,
+        "ms": 66.70110000000022,
+        "bytes": 1059,
+        "results": [
+          "historical-evidence"
+        ]
+      },
+      {
+        "id": "vr-state",
+        "partition": "held-out",
+        "hit": true,
+        "safetyCritical": false,
+        "ms": 67.83239999999978,
+        "bytes": 1836,
+        "results": [
+          "future-worlds",
+          "testing-and-performance"
+        ]
+      },
+      {
+        "id": "new-concept",
+        "partition": "held-out",
+        "hit": true,
+        "safetyCritical": false,
+        "ms": 69.69690000000037,
+        "bytes": 1017,
+        "results": [
+          "documentation-system"
+        ]
+      },
+      {
+        "id": "unknown-b",
+        "partition": "held-out",
+        "hit": true,
+        "safetyCritical": false,
+        "ms": 69.78570000000036,
+        "bytes": 116,
+        "results": []
+      }
+    ],
+    "summary": {
+      "hits": 24,
+      "cases": 24,
+      "medianMs": 72.68135000000001,
+      "p95Ms": 106.80599999999993,
+      "maxReturnedBytes": 2898
+    }
+  },
+  "evaluationNote": "Frozen agent-authored labels. One held-out miss informed an alias fix; final result is tuned regression evidence, not blind holdout performance. Initial results used the initial registered bundle. Timing includes the public-path guard in final profile."
+}

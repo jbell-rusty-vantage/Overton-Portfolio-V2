@@ -1,0 +1,668 @@
+{
+  "baseline": {
+    "label": "cleanup-baseline",
+    "base": "https://overton-portfolio-v2.vercel.app",
+    "browser": "157.0.8103.52",
+    "profile": "Workstation Chrome; no network/CPU throttling; desktop 1366x860 and emulated 390x844",
+    "routes": [
+      {
+        "width": 1366,
+        "warmth": "cold",
+        "wireBytes": 316099,
+        "lcp": 1540,
+        "cls": 0,
+        "draws": 0,
+        "scriptEncodedBytes": 141630,
+        "imageEncodedBytes": 143352
+      },
+      {
+        "width": 1366,
+        "warmth": "warm",
+        "wireBytes": 9922,
+        "lcp": 400,
+        "cls": 0,
+        "draws": 0,
+        "scriptEncodedBytes": 141630,
+        "imageEncodedBytes": 143352
+      },
+      {
+        "width": 390,
+        "warmth": "cold",
+        "wireBytes": 203991,
+        "lcp": 564,
+        "cls": 0,
+        "draws": 0,
+        "scriptEncodedBytes": 141630,
+        "imageEncodedBytes": 31468
+      },
+      {
+        "width": 390,
+        "warmth": "warm",
+        "wireBytes": 9860,
+        "lcp": 460,
+        "cls": 0,
+        "draws": 0,
+        "scriptEncodedBytes": 141630,
+        "imageEncodedBytes": 31468
+      }
+    ],
+    "estate": [
+      {
+        "width": 1366,
+        "cycle": 0,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 7993.620200000001,
+        "heap": {
+          "usedSize": 42542248,
+          "totalSize": 75448320,
+          "embedderHeapUsedSize": 7229768,
+          "backingStorageSize": 43848927
+        },
+        "draws": 54220,
+        "p50": 16.400000002235174,
+        "p95": 17.199999999254942,
+        "longTasks": [
+          532,
+          3562,
+          692,
+          649,
+          64,
+          61,
+          203
+        ],
+        "preparation": "{\"started\":4895.599999997765,\"assetsMilliseconds\":4546.900000002235,\"prepareMilliseconds\":2590.39999999851,\"totalMilliseconds\":7137.70000000298,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 1366,
+        "cycle": 1,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 6347.545500000004,
+        "heap": {
+          "usedSize": 39656092,
+          "totalSize": 97800192,
+          "embedderHeapUsedSize": 8459984,
+          "backingStorageSize": 47829949
+        },
+        "draws": 52039,
+        "p50": 13.399999998509884,
+        "p95": 17.100000001490116,
+        "longTasks": [
+          92,
+          3442,
+          163,
+          521,
+          580,
+          135,
+          65,
+          178
+        ],
+        "preparation": "{\"started\":4810.89999999851,\"assetsMilliseconds\":3841.900000002235,\"prepareMilliseconds\":1894.199999999255,\"totalMilliseconds\":5736.300000000745,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 1366,
+        "cycle": 2,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 4756.151700000002,
+        "heap": {
+          "usedSize": 31472608,
+          "totalSize": 75849728,
+          "embedderHeapUsedSize": 7515648,
+          "backingStorageSize": 45696101
+        },
+        "draws": 51862,
+        "p50": 13.899999998509884,
+        "p95": 17.199999999254942,
+        "longTasks": [
+          66,
+          2834,
+          151,
+          312,
+          294,
+          59,
+          62,
+          105
+        ],
+        "preparation": "{\"started\":4853.599999997765,\"assetsMilliseconds\":3244.900000002235,\"prepareMilliseconds\":1094.800000000745,\"totalMilliseconds\":4339.800000000745,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 1366,
+        "cycle": 3,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 4954.9375999999975,
+        "heap": {
+          "usedSize": 30911292,
+          "totalSize": 89812992,
+          "embedderHeapUsedSize": 7334392,
+          "backingStorageSize": 43887200
+        },
+        "draws": 55439,
+        "p50": 13.199999999254942,
+        "p95": 17,
+        "longTasks": [
+          62,
+          2698,
+          132,
+          287,
+          291,
+          60,
+          71,
+          113
+        ],
+        "preparation": "{\"started\":4825.300000000745,\"assetsMilliseconds\":3002.599999997765,\"prepareMilliseconds\":1111.7999999970198,\"totalMilliseconds\":4114.599999997765,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 1366,
+        "cycle": 4,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 4446.1456000000035,
+        "heap": {
+          "usedSize": 32200112,
+          "totalSize": 77824000,
+          "embedderHeapUsedSize": 7530528,
+          "backingStorageSize": 45585466
+        },
+        "draws": 51658,
+        "p50": 13.5,
+        "p95": 17.099999997764826,
+        "longTasks": [
+          89,
+          2700,
+          109,
+          241,
+          276,
+          62,
+          116
+        ],
+        "preparation": "{\"started\":4799.10000000149,\"assetsMilliseconds\":3011.89999999851,\"prepareMilliseconds\":1034,\"totalMilliseconds\":4046.199999999255,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 390,
+        "cycle": 0,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 4125.547300000006,
+        "heap": {
+          "usedSize": 18371968,
+          "totalSize": 53952512,
+          "embedderHeapUsedSize": 5805584,
+          "backingStorageSize": 29198256
+        },
+        "draws": 25174,
+        "p50": 13.799999997019768,
+        "p95": 17.300000000745058,
+        "longTasks": [
+          102,
+          1694,
+          425,
+          374,
+          69,
+          111
+        ],
+        "preparation": "{\"started\":4844.10000000149,\"assetsMilliseconds\":2262.099999997765,\"prepareMilliseconds\":1260.800000000745,\"totalMilliseconds\":3523.2999999970198,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 390,
+        "cycle": 1,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 3895.6062999999995,
+        "heap": {
+          "usedSize": 33095420,
+          "totalSize": 95965184,
+          "embedderHeapUsedSize": 8809808,
+          "backingStorageSize": 53618597
+        },
+        "draws": 25143,
+        "p50": 16.600000001490116,
+        "p95": 17.100000001490116,
+        "longTasks": [
+          77,
+          1750,
+          386,
+          385,
+          73,
+          100
+        ],
+        "preparation": "{\"started\":4850.699999999255,\"assetsMilliseconds\":2059,\"prepareMilliseconds\":1284.5,\"totalMilliseconds\":3343.5,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 390,
+        "cycle": 2,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 4297.622299999988,
+        "heap": {
+          "usedSize": 26304936,
+          "totalSize": 88432640,
+          "embedderHeapUsedSize": 5365440,
+          "backingStorageSize": 27402418
+        },
+        "draws": 26110,
+        "p50": 16.600000001490116,
+        "p95": 17.300000000745058,
+        "longTasks": [
+          66,
+          1439,
+          122,
+          377,
+          50,
+          582,
+          74,
+          182
+        ],
+        "preparation": "{\"started\":4796.699999999255,\"assetsMilliseconds\":1750.9000000022352,\"prepareMilliseconds\":1692,\"totalMilliseconds\":3443,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 390,
+        "cycle": 3,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 5304.149800000014,
+        "heap": {
+          "usedSize": 30919372,
+          "totalSize": 54685696,
+          "embedderHeapUsedSize": 5769920,
+          "backingStorageSize": 29236955
+        },
+        "draws": 26476,
+        "p50": 16.600000001490116,
+        "p95": 17.200000002980232,
+        "longTasks": [
+          86,
+          2117,
+          181,
+          553,
+          57,
+          621,
+          83,
+          137
+        ],
+        "preparation": "{\"started\":4842.400000002235,\"assetsMilliseconds\":2547.099999997765,\"prepareMilliseconds\":1898.0999999977648,\"totalMilliseconds\":4445.39999999851,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 390,
+        "cycle": 4,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 5465.646199999988,
+        "heap": {
+          "usedSize": 40786420,
+          "totalSize": 88309760,
+          "embedderHeapUsedSize": 5371304,
+          "backingStorageSize": 27428033
+        },
+        "draws": 26564,
+        "p50": 16.699999999254942,
+        "p95": 17.199999999254942,
+        "longTasks": [
+          77,
+          2337,
+          164,
+          589,
+          58,
+          630,
+          73,
+          113
+        ],
+        "preparation": "{\"started\":4820.800000000745,\"assetsMilliseconds\":2736.599999997765,\"prepareMilliseconds\":1882.6000000014901,\"totalMilliseconds\":4619.39999999851,\"textures\":109,\"programs\":43}"
+      }
+    ]
+  },
+  "candidate": {
+    "label": "cleanup-candidate",
+    "base": "https://overton-portfolio-v2-jw8pvojj2-overtons-projects.vercel.app",
+    "browser": "157.0.8103.52",
+    "profile": "Workstation Chrome; no network/CPU throttling; desktop 1366x860 and emulated 390x844",
+    "routes": [
+      {
+        "width": 1366,
+        "warmth": "cold",
+        "wireBytes": 315193,
+        "lcp": 560,
+        "cls": 0,
+        "draws": 0,
+        "scriptEncodedBytes": 142425,
+        "imageEncodedBytes": 143352
+      },
+      {
+        "width": 1366,
+        "warmth": "warm",
+        "wireBytes": 9930,
+        "lcp": 416,
+        "cls": 0,
+        "draws": 0,
+        "scriptEncodedBytes": 142425,
+        "imageEncodedBytes": 143352
+      },
+      {
+        "width": 390,
+        "warmth": "cold",
+        "wireBytes": 203132,
+        "lcp": 560,
+        "cls": 0,
+        "draws": 0,
+        "scriptEncodedBytes": 142425,
+        "imageEncodedBytes": 31468
+      },
+      {
+        "width": 390,
+        "warmth": "warm",
+        "wireBytes": 9843,
+        "lcp": 408,
+        "cls": 0,
+        "draws": 0,
+        "scriptEncodedBytes": 142425,
+        "imageEncodedBytes": 31468
+      }
+    ],
+    "estate": [
+      {
+        "width": 1366,
+        "cycle": 0,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 6849.722600000001,
+        "heap": {
+          "usedSize": 35165764,
+          "totalSize": 73613312,
+          "embedderHeapUsedSize": 6854864,
+          "backingStorageSize": 43823918
+        },
+        "draws": 51115,
+        "p50": 13.600000001490116,
+        "p95": 17.199999999254942,
+        "longTasks": [
+          464,
+          3057,
+          774,
+          356,
+          68,
+          175
+        ],
+        "preparation": "{\"started\":4869.699999999255,\"assetsMilliseconds\":3929.599999997765,\"prepareMilliseconds\":2476.800000000745,\"totalMilliseconds\":6406.800000000745,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 1366,
+        "cycle": 1,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 5486.3986,
+        "heap": {
+          "usedSize": 28752756,
+          "totalSize": 87576576,
+          "embedderHeapUsedSize": 7167224,
+          "backingStorageSize": 43844255
+        },
+        "draws": 55069,
+        "p50": 13.899999998509884,
+        "p95": 17.100000001490116,
+        "longTasks": [
+          62,
+          2830,
+          425,
+          486,
+          94,
+          57,
+          129
+        ],
+        "preparation": "{\"started\":4802,\"assetsMilliseconds\":3135.800000000745,\"prepareMilliseconds\":1508.4000000022352,\"totalMilliseconds\":4644.300000000745,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 1366,
+        "cycle": 2,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 5620.261300000006,
+        "heap": {
+          "usedSize": 35750972,
+          "totalSize": 75063296,
+          "embedderHeapUsedSize": 7722024,
+          "backingStorageSize": 45678747
+        },
+        "draws": 54512,
+        "p50": 16.399999998509884,
+        "p95": 17.300000000745058,
+        "longTasks": [
+          69,
+          2870,
+          140,
+          396,
+          537,
+          93,
+          53,
+          169
+        ],
+        "preparation": "{\"started\":4764.39999999851,\"assetsMilliseconds\":3204.5,\"prepareMilliseconds\":1566.199999999255,\"totalMilliseconds\":4770.800000000745,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 1366,
+        "cycle": 3,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 5730.989200000004,
+        "heap": {
+          "usedSize": 24714196,
+          "totalSize": 88764416,
+          "embedderHeapUsedSize": 7038880,
+          "backingStorageSize": 43869859
+        },
+        "draws": 51275,
+        "p50": 8.900000002235174,
+        "p95": 17,
+        "longTasks": [
+          60,
+          2869,
+          176,
+          522,
+          549,
+          107,
+          86,
+          177
+        ],
+        "preparation": "{\"started\":4897.20000000298,\"assetsMilliseconds\":3240.89999999851,\"prepareMilliseconds\":1901.6000000014901,\"totalMilliseconds\":5142.599999997765,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 1366,
+        "cycle": 4,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 5568.494000000006,
+        "heap": {
+          "usedSize": 25286168,
+          "totalSize": 76513280,
+          "embedderHeapUsedSize": 4864408,
+          "backingStorageSize": 45914754
+        },
+        "draws": 51215,
+        "p50": 13.599999997764826,
+        "p95": 17.100000001490116,
+        "longTasks": [
+          96,
+          3380,
+          396,
+          490,
+          51,
+          128
+        ],
+        "preparation": "{\"started\":4851.800000000745,\"assetsMilliseconds\":3770.699999999255,\"prepareMilliseconds\":1380.1000000014901,\"totalMilliseconds\":5150.800000000745,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 390,
+        "cycle": 0,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 4327.400200000004,
+        "heap": {
+          "usedSize": 19632416,
+          "totalSize": 53952512,
+          "embedderHeapUsedSize": 5843048,
+          "backingStorageSize": 29181208
+        },
+        "draws": 25626,
+        "p50": 16.600000001490116,
+        "p95": 17.299999997019768,
+        "longTasks": [
+          84,
+          112,
+          2004,
+          403,
+          293,
+          61,
+          97
+        ],
+        "preparation": "{\"started\":4891.89999999851,\"assetsMilliseconds\":2542.2000000029802,\"prepareMilliseconds\":1120.9000000022352,\"totalMilliseconds\":3663.5,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 390,
+        "cycle": 1,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 3174.065399999992,
+        "heap": {
+          "usedSize": 36304460,
+          "totalSize": 87576576,
+          "embedderHeapUsedSize": 5887504,
+          "backingStorageSize": 29563337
+        },
+        "draws": 25213,
+        "p50": 16.699999999254942,
+        "p95": 17.300000000745058,
+        "longTasks": [
+          67,
+          1435,
+          112,
+          273,
+          224,
+          53,
+          83
+        ],
+        "preparation": "{\"started\":4869.800000000745,\"assetsMilliseconds\":1719,\"prepareMilliseconds\":889.6000000014901,\"totalMilliseconds\":2608.89999999851,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 390,
+        "cycle": 2,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 2899.0754000000015,
+        "heap": {
+          "usedSize": 26077612,
+          "totalSize": 92889088,
+          "embedderHeapUsedSize": 5805608,
+          "backingStorageSize": 28294248
+        },
+        "draws": 25212,
+        "p50": 16.600000001490116,
+        "p95": 17.300000000745058,
+        "longTasks": [
+          61,
+          1191,
+          106,
+          263,
+          55,
+          215,
+          56,
+          85
+        ],
+        "preparation": "{\"started\":4840.89999999851,\"assetsMilliseconds\":1465.5,\"prepareMilliseconds\":894.3000000007451,\"totalMilliseconds\":2359.800000000745,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 390,
+        "cycle": 3,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 5078.4029000000155,
+        "heap": {
+          "usedSize": 26873984,
+          "totalSize": 54947840,
+          "embedderHeapUsedSize": 5316264,
+          "backingStorageSize": 27398066
+        },
+        "draws": 26652,
+        "p50": 16.600000001490116,
+        "p95": 17.199999999254942,
+        "longTasks": [
+          115,
+          2025,
+          165,
+          432,
+          62,
+          640,
+          73,
+          113
+        ],
+        "preparation": "{\"started\":4965.099999997765,\"assetsMilliseconds\":2481.300000000745,\"prepareMilliseconds\":1716.6000000014901,\"totalMilliseconds\":4197.900000002235,\"textures\":109,\"programs\":43}"
+      },
+      {
+        "width": 390,
+        "cycle": 4,
+        "entrance": {
+          "draws": 0,
+          "resources": []
+        },
+        "entryReadyMs": 4217.64479999998,
+        "heap": {
+          "usedSize": 27405732,
+          "totalSize": 88571904,
+          "embedderHeapUsedSize": 5311752,
+          "backingStorageSize": 27410735
+        },
+        "draws": 26457,
+        "p50": 16.699999999254942,
+        "p95": 17.199999999254942,
+        "longTasks": [
+          67,
+          1527,
+          144,
+          313,
+          551,
+          69,
+          122
+        ],
+        "preparation": "{\"started\":4810.199999999255,\"assetsMilliseconds\":1866.6000000014901,\"prepareMilliseconds\":1521.5,\"totalMilliseconds\":3388.199999999255,\"textures\":109,\"programs\":43}"
+      }
+    ]
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "base": "https://overton-portfolio-v2-jw8pvojj2-overtons-projects.vercel.app",
+  "profile": "Chrome workstation, reduced motion; same-document visits; hidden-state event simulated",
+  "cycles": [
+    {
+      "cycle": 0,
+      "active": {
+        "draws": 3399,
+        "canvas": 1,
+        "contexts": [
+          {
+            "textures": 126,
+            "buffers": 669,
+            "programs": 43
+          }
+        ]
+      },
+      "exited": {
+        "draws": 4898,
+        "canvas": 0,
+        "contexts": []
+      },
+      "heap": {
+        "usedSize": 10683836,
+        "totalSize": 12128256,
+        "embedderHeapUsedSize": 3094960,
+        "backingStorageSize": 1773990
+      },
+      "reportDraws": 0,
+      "hiddenDraws": 0
+    },
+    {
+      "cycle": 1,
+      "active": {
+        "draws": 6574,
+        "canvas": 1,
+        "contexts": [
+          {
+            "textures": 126,
+            "buffers": 669,
+            "programs": 43
+          }
+        ]
+      },
+      "exited": {
+        "draws": 8184,
+        "canvas": 0,
+        "contexts": []
+      },
+      "heap": {
+        "usedSize": 11206676,
+        "totalSize": 13176832,
+        "embedderHeapUsedSize": 3133792,
+        "backingStorageSize": 1777587
+      },
+      "reportDraws": 0,
+      "hiddenDraws": 0
+    },
+    {
+      "cycle": 2,
+      "active": {
+        "draws": 10640,
+        "canvas": 1,
+        "contexts": [
+          {
+            "textures": 126,
+            "buffers": 669,
+            "programs": 43
+          }
+        ]
+      },
+      "exited": {
+        "draws": 12347,
+        "canvas": 0,
+        "contexts": []
+      },
+      "heap": {
+        "usedSize": 11605744,
+        "totalSize": 13963264,
+        "embedderHeapUsedSize": 3136328,
+        "backingStorageSize": 1780054
+      },
+      "reportDraws": 0,
+      "hiddenDraws": 0
+    },
+    {
+      "cycle": 3,
+      "active": {
+        "draws": 13815,
+        "canvas": 1,
+        "contexts": [
+          {
+            "textures": 126,
+            "buffers": 669,
+            "programs": 43
+          }
+        ]
+      },
+      "exited": {
+        "draws": 15522,
+        "canvas": 0,
+        "contexts": []
+      },
+      "heap": {
+        "usedSize": 11759732,
+        "totalSize": 13701120,
+        "embedderHeapUsedSize": 3284928,
+        "backingStorageSize": 1780054
+      },
+      "reportDraws": 0,
+      "hiddenDraws": 0
+    },
+    {
+      "cycle": 4,
+      "active": {
+        "draws": 17445,
+        "canvas": 1,
+        "contexts": [
+          {
+            "textures": 126,
+            "buffers": 669,
+            "programs": 43
+          }
+        ]
+      },
+      "exited": {
+        "draws": 19055,
+        "canvas": 0,
+        "contexts": []
+      },
+      "heap": {
+        "usedSize": 11972824,
+        "totalSize": 13701120,
+        "embedderHeapUsedSize": 3364992,
+        "backingStorageSize": 1780054
+      },
+      "reportDraws": 0,
+      "hiddenDraws": 0
+    },
+    {
+      "cycle": 5,
+      "active": {
+        "draws": 20770,
+        "canvas": 1,
+        "contexts": [
+          {
+            "textures": 126,
+            "buffers": 669,
+            "programs": 43
+          }
+        ]
+      },
+      "exited": {
+        "draws": 22481,
+        "canvas": 0,
+        "contexts": []
+      },
+      "heap": {
+        "usedSize": 12131240,
+        "totalSize": 14225408,
+        "embedderHeapUsedSize": 3386632,
+        "backingStorageSize": 1780054
+      },
+      "reportDraws": 0,
+      "hiddenDraws": 0
+    },
+    {
+      "cycle": 6,
+      "active": {
+        "draws": 24157,
+        "canvas": 1,
+        "contexts": [
+          {
+            "textures": 126,
+            "buffers": 669,
+            "programs": 43
+          }
+        ]
+      },
+      "exited": {
+        "draws": 25549,
+        "canvas": 0,
+        "contexts": []
+      },
+      "heap": {
+        "usedSize": 12157420,
+        "totalSize": 13701120,
+        "embedderHeapUsedSize": 3358824,
+        "backingStorageSize": 1780054
+      },
+      "reportDraws": 0,
+      "hiddenDraws": 0
+    },
+    {
+      "cycle": 7,
+      "active": {
+        "draws": 27719,
+        "canvas": 1,
+        "contexts": [
+          {
+            "textures": 126,
+            "buffers": 669,
+            "programs": 43
+          }
+        ]
+      },
+      "exited": {
+        "draws": 29111,
+        "canvas": 0,
+        "contexts": []
+      },
+      "heap": {
+        "usedSize": 12273668,
+        "totalSize": 14225408,
+        "embedderHeapUsedSize": 3407336,
+        "backingStorageSize": 1780054
+      },
+      "reportDraws": 0,
+      "hiddenDraws": 0
+    },
+    {
+      "cycle": 8,
+      "active": {
+        "draws": 31775,
+        "canvas": 1,
+        "contexts": [
+          {
+            "textures": 126,
+            "buffers": 669,
+            "programs": 43
+          }
+        ]
+      },
+      "exited": {
+        "draws": 33385,
+        "canvas": 0,
+        "contexts": []
+      },
+      "heap": {
+        "usedSize": 12633784,
+        "totalSize": 15011840,
+        "embedderHeapUsedSize": 3420496,
+        "backingStorageSize": 1780054
+      },
+      "reportDraws": 0,
+      "hiddenDraws": 0
+    },
+    {
+      "cycle": 9,
+      "active": {
+        "draws": 36257,
+        "canvas": 1,
+        "contexts": [
+          {
+            "textures": 126,
+            "buffers": 669,
+            "programs": 43
+          }
+        ]
+      },
+      "exited": {
+        "draws": 37441,
+        "canvas": 0,
+        "contexts": []
+      },
+      "heap": {
+        "usedSize": 12713448,
+        "totalSize": 14487552,
+        "embedderHeapUsedSize": 3440856,
+        "backingStorageSize": 1780054
+      },
+      "reportDraws": 0,
+      "hiddenDraws": 0
+    }
+  ],
+  "cancelledEntry": {
+    "draws": 68,
+    "canvas": 0,
+    "contexts": []
+  },
+  "contextLossFallback": true,
+  "errors": []
+}

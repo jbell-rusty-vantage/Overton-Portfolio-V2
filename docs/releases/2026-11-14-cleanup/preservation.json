@@ -1,0 +1,12 @@
+{
+  "baselineCommit": "a2f1daa5782b0bf147a9b4f69e55ea5055d5a0c3",
+  "preexistingFilesVerified": 281,
+  "changedOrMissing": [],
+  "originalMarkdownAccountedFor": 49,
+  "archiveByteMismatches": [],
+  "travellersRestAssetAndContentDiff": [],
+  "ownerDataWrites": false,
+  "schemaChanges": false,
+  "hallBundledBytesRemoved": 3487440,
+  "privateHashManifest": "retained locally; not published"
+}

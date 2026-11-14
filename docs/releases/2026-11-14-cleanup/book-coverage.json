@@ -1,0 +1,42 @@
+{
+  "desktop": {
+    "expected": [
+      "vantage-movers",
+      "gowipe",
+      "overtech-digital-services",
+      "agentic-mission-control",
+      "ai-engineer-platform",
+      "agent-knowledge-services"
+    ],
+    "completed": [
+      "vantage-movers",
+      "gowipe",
+      "overtech-digital-services",
+      "agentic-mission-control",
+      "ai-engineer-platform",
+      "agent-knowledge-services"
+    ],
+    "failed": [],
+    "browserErrors": []
+  },
+  "phone": {
+    "expected": [
+      "vantage-movers",
+      "gowipe",
+      "overtech-digital-services",
+      "agentic-mission-control",
+      "ai-engineer-platform",
+      "agent-knowledge-services"
+    ],
+    "completed": [
+      "vantage-movers",
+      "gowipe",
+      "overtech-digital-services",
+      "agentic-mission-control",
+      "ai-engineer-platform",
+      "agent-knowledge-services"
+    ],
+    "failed": [],
+    "browserErrors": []
+  }
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "pair": 0,
+    "label": "baseline",
+    "entryReadyMs": 8340.277900000001,
+    "preparation": {
+      "started": 5072.099999997765,
+      "assetsMilliseconds": 4712.900000002235,
+      "prepareMilliseconds": 2812.400000002235,
+      "totalMilliseconds": 7525.800000000745,
+      "textures": 109,
+      "programs": 43
+    },
+    "graphics": {
+      "renderer": "ANGLE (AMD, AMD Radeon (TM) Graphics (0x000015E7) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    }
+  },
+  {
+    "pair": 0,
+    "label": "candidate",
+    "entryReadyMs": 6623.3109,
+    "preparation": {
+      "started": 5050.800000000745,
+      "assetsMilliseconds": 4238.099999997765,
+      "prepareMilliseconds": 1759.800000000745,
+      "totalMilliseconds": 5998.39999999851,
+      "textures": 109,
+      "programs": 43
+    },
+    "graphics": {
+      "renderer": "ANGLE (AMD, AMD Radeon (TM) Graphics (0x000015E7) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    }
+  },
+  {
+    "pair": 1,
+    "label": "baseline",
+    "entryReadyMs": 7267.603599999999,
+    "preparation": {
+      "started": 4968,
+      "assetsMilliseconds": 4010,
+      "prepareMilliseconds": 2406,
+      "totalMilliseconds": 6416.5,
+      "textures": 109,
+      "programs": 43
+    },
+    "graphics": {
+      "renderer": "ANGLE (AMD, AMD Radeon (TM) Graphics (0x000015E7) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    }
+  },
+  {
+    "pair": 1,
+    "label": "candidate",
+    "entryReadyMs": 7263.096600000004,
+    "preparation": {
+      "started": 5071.89999999851,
+      "assetsMilliseconds": 4692.699999999255,
+      "prepareMilliseconds": 2057,
+      "totalMilliseconds": 6749.89999999851,
+      "textures": 109,
+      "programs": 43
+    },
+    "graphics": {
+      "renderer": "ANGLE (AMD, AMD Radeon (TM) Graphics (0x000015E7) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    }
+  },
+  {
+    "pair": 2,
+    "label": "baseline",
+    "entryReadyMs": 7438.956299999998,
+    "preparation": {
+      "started": 5060.800000000745,
+      "assetsMilliseconds": 4850.60000000149,
+      "prepareMilliseconds": 1994.9000000022352,
+      "totalMilliseconds": 6845.800000000745,
+      "textures": 109,
+      "programs": 43
+    },
+    "graphics": {
+      "renderer": "ANGLE (AMD, AMD Radeon (TM) Graphics (0x000015E7) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    }
+  },
+  {
+    "pair": 2,
+    "label": "candidate",
+    "entryReadyMs": 6797.8128,
+    "preparation": {
+      "started": 4958,
+      "assetsMilliseconds": 4217,
+      "prepareMilliseconds": 1939.0999999977648,
+      "totalMilliseconds": 6156.300000000745,
+      "textures": 109,
+      "programs": 43
+    },
+    "graphics": {
+      "renderer": "ANGLE (AMD, AMD Radeon (TM) Graphics (0x000015E7) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    }
+  }
+]
