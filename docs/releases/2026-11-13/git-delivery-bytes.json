@@ -1,0 +1,6 @@
+{
+  "indexedBundledAssetsChecked": 336,
+  "sha256Mismatches": [],
+  "correction": "Disable Git newline conversion for public delivery assets; generated narration JSON retains its reviewed CRLF bytes.",
+  "deployedApplicationChanged": false
+}
