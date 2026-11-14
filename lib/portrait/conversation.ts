@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import type { Volume } from "../library/model";
+import { type Volume } from "../library/types";
 import { FALLBACK, ALLOWANCE, type Citation, type EvidenceRecord, type PortraitAnswer, type NavigationIntent } from "./contracts";
 import { citations, hash, projectMatches, retrieve } from "./evidence";
 import { buildPrompt, type PortraitProvider } from "./provider";

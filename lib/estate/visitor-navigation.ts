@@ -1,4 +1,4 @@
-import type { Volume } from "../library/model";
+import { type Volume } from "../library/types";
 import { resolveReportSection } from "../library/report";
 import type { NavigationIntent } from "../portrait/contracts";
 import { companionSlug, type Route } from "./world";

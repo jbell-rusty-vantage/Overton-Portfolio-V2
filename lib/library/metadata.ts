@@ -2,7 +2,8 @@ import "server-only";
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { getCollection } from "./catalog";
-import { detailHref, type Volume, type VolumeKind } from "./model";
+import { detailHref } from "./paths";
+import { type Volume, type VolumeKind } from "./types";
 
 async function canonical(path: string) {
   if (process.env.LIBRARY_PUBLIC_ORIGIN) {

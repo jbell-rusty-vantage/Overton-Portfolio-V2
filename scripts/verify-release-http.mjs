@@ -36,7 +36,8 @@ try {
   await page.goto("/#book/gowipe/architecture/3");
   await expect(page).toHaveURL(/\/library#book\/gowipe\/architecture\/3$/);
   await page.goto("/?view=world&zone=stacks&shelf=stacks-ai-agents");
-  await expect(page).toHaveURL(/\/library\?view=world&zone=stacks&shelf=stacks-ai-agents$/);
+  await expect(page).toHaveURL(/\/library#cabinet$/);
+  for (const asset of ["/library/hall.glb", "/library/hall-low.glb"]) expect((await context.request.get(asset)).status()).toBe(404);
   await page.goto("/");
   await expect(page.locator(".pf-project")).toHaveCount(6);
   await page.screenshot({ path: `.local-library/release/${label}-portfolio.png`, fullPage: true });

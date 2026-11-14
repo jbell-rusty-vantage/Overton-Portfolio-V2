@@ -1,7 +1,7 @@
 import { officePage } from "@/components/admin/office-page";
 import { requireAdmin } from "@/lib/auth/session";
 import { getCollection } from "@/lib/library/catalog";
-import { detailHref } from "@/lib/library/model";
+import { detailHref } from "@/lib/library/paths";
 import CompatibilityRedirect from "@/components/library/CompatibilityRedirect";
 import { notFound } from "next/navigation";
 async function Preview({ searchParams }: PageProps<"/admin/library/preview">) {

@@ -1,4 +1,4 @@
-import type { Volume } from "@/lib/library/model";
+import { type Volume } from "@/lib/library/types";
 import type { RoomObject } from "./world";
 
 export type Spread = { key: string; object: string; label: string };

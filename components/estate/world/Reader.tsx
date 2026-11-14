@@ -17,7 +17,8 @@
      screen an up-or-down drag does the same. */
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { houseShelves } from "@/lib/estate/world";
-import { detailHref, withinPreview, type Volume } from "@/lib/library/model";
+import { detailHref, withinPreview } from "@/lib/library/paths";
+import { type Volume } from "@/lib/library/types";
 import { Icon } from "../Marks";
 import type { Engine } from "./engine/engine";
 import { drawSound, homeSound, leafDown, leafSound } from "./bookSound";

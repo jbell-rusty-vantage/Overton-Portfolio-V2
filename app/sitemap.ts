@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getCollection } from "@/lib/library/catalog";
-import { detailHref } from "@/lib/library/model";
+import { detailHref } from "@/lib/library/paths";
 import { publicOrigin } from "@/lib/library/origin";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Request-time publication projection; withdrawal takes effect immediately.

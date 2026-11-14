@@ -3,16 +3,8 @@ import Image from "next/image";
 import { Mark } from "./Marks";
 import ProjectReport from "./ProjectReport";
 import { reportLinkNeighbors } from "@/lib/library/report";
-import {
-  type Volume,
-  type Leaf,
-  type ReadingScope,
-  type Collection,
-  detailHref,
-  sceneHref,
-  zoneFor,
-  withinPreview,
-} from "@/lib/library/model";
+import { type Volume, type Leaf, type ReadingScope, type Collection } from "@/lib/library/types";
+import { detailHref, withinPreview } from "@/lib/library/paths";
 
 export function Cover({ volume }: { volume: Volume }) {
   return (
@@ -150,13 +142,15 @@ export function FullReader({
   source,
   admin = false,
   volumes = [],
+  libraryHref,
 }: {
   v: Volume;
   source: Collection["source"];
   admin?: ReadingScope;
   volumes?: Volume[];
+  libraryHref?: string;
 }) {
-  if (v.kind === "Project") return <main className="project-report-page"><ProjectReport volume={v} source={source} admin={admin} neighbors={reportLinkNeighbors(v, volumes)} /></main>;
+  if (v.kind === "Project") return <main className="project-report-page"><ProjectReport volume={v} source={source} admin={admin} libraryHref={libraryHref} neighbors={reportLinkNeighbors(v, volumes)} /></main>;
   return (
     <main className="library full-reader">
       <div className="reader-top">
@@ -168,16 +162,7 @@ export function FullReader({
       <article>
         <aside>
           <Cover volume={v} />
-          <a
-            href={withinPreview(
-              sceneHref(zoneFor(v), v.shelf, v.slug, v.kind),
-              admin,
-            )}
-            className="folio-button"
-          >
-            <Mark name="compass" />
-            Open in library
-          </a>
+
         </aside>
         <div>
           <span className="eyebrow">{v.kind} · Library collection</span>

@@ -3,7 +3,8 @@ import { officePage } from "@/components/admin/office-page";
 import { requireAdmin } from "@/lib/auth/session";
 import { getCollection } from "@/lib/library/catalog";
 import { FullReader } from "@/components/library/Reading";
-import { detailHref } from "@/lib/library/model";
+import { detailHref } from "@/lib/library/paths";
+import { estateBookLink } from "@/lib/estate/book-link";
 async function Preview({ params }: PageProps<"/admin/preview/[kind]/[slug]">) {
   await requireAdmin();
   const { kind, slug } = await params;
@@ -11,6 +12,6 @@ async function Preview({ params }: PageProps<"/admin/preview/[kind]/[slug]">) {
   const data = await getCollection({ admin: true });
   const volume = data.volumes.find(v => detailHref(v) === `/${kind}/${encodeURIComponent(slug)}`);
   if (!volume) notFound();
-  return <FullReader v={volume} volumes={data.volumes} source={data.source} admin />;
+  return <FullReader v={volume} volumes={data.volumes} source={data.source} libraryHref={await estateBookLink(volume, true)} admin />;
 }
 export default officePage(Preview);

@@ -2,8 +2,7 @@
    visit. React owns the route and the DOM surfaces; this class owns everything that is
    drawn and reports selections back so both sides use the same navigation. */
 import * as THREE from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-import { MeshoptDecoder } from "three/examples/jsm/libs/meshopt_decoder.module.js";
+import { OwnedSceneLoader } from "./scene-loader";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import {
   anchor,
@@ -265,7 +264,7 @@ export class Engine {
   private async load() {
     const { o } = this;
     try {
-      const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
+      const loader = new OwnedSceneLoader(this.resources);
       // The Blender kit loads beside the shell and never rejects: without it the
       // code-built furniture stands in.
       const kitLoading = loadKit(kitSource(o.kit)).then(kit => {
@@ -276,7 +275,6 @@ export class Engine {
       const gltf = await loader.loadAsync(o.scene, (e) => {
         if (e.lengthComputable && e.total) o.events.progress(Math.round((92 * e.loaded) / e.total));
       });
-      this.resources.tree(gltf.scene);
       if (this.disposed) return;
       for (const name of Object.keys(anchor))
         if (!gltf.scene.getObjectByName(THREE.PropertyBinding.sanitizeNodeName(name)))
@@ -293,7 +291,6 @@ export class Engine {
       let bakedLoading: Promise<unknown> = Promise.resolve();
       if (new URLSearchParams(location.search).get("lighting") === "baked") {
         bakedLoading = loader.loadAsync("/travellers-rest/interior-light.glb").then((baked) => {
-          this.resources.tree(baked.scene);
           if (this.disposed) return;
           library.root.visible = false;
           for (const child of [...library.root.children]) if (child.name === "Daylit sash") this.scene.add(child);

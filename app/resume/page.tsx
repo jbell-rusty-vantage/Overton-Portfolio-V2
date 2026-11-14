@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 import resume from "@/content/resume.json";
 import { getCollection } from "@/lib/library/catalog";
-import { detailHref } from "@/lib/library/model";
+import { detailHref } from "@/lib/library/paths";
 import "./resume.css";
 
 export const metadata: Metadata = {

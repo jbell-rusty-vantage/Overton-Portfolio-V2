@@ -27,7 +27,7 @@ function instrument() {
   }
 }
 try {
-  const context = await browser.newContext({ reducedMotion: "reduce", viewport: { width: 1366, height: 860 } });
+  const context = await browser.newContext({ reducedMotion: "reduce", viewport: { width: 1366, height: 860 }, ...(process.env.RELEASE_STORAGE_STATE ? { storageState: process.env.RELEASE_STORAGE_STATE } : {}) });
   await context.addInitScript(instrument);
   const page = await context.newPage();
   const cdp = await context.newCDPSession(page), errors = [];
@@ -83,6 +83,8 @@ try {
   expect(errors).toEqual([]);
   console.log(JSON.stringify(result));
 } finally {
-  await writeFile(".local-library/release/lifecycle.json", JSON.stringify(result, null, 2));
+  const label = process.env.RELEASE_LABEL || new Date().toISOString().replace(/[:.]/g, '-');
+  if (!/^[a-zA-Z0-9_-]+$/.test(label)) throw Error('Use a simple unique release label');
+  await writeFile(`.local-library/release/lifecycle-${label}.json`, JSON.stringify(result, null, 2), { flag: 'wx' });
   await browser.close();
 }

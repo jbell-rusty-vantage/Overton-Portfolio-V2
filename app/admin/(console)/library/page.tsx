@@ -21,10 +21,7 @@ async function LibraryEditor() {
     projects,
     shelves,
     zones,
-    screens,
     media,
-    sites,
-    assets,
     estateLayout,
     estateScenes,
   ] = await Promise.all([
@@ -44,19 +41,10 @@ async function LibraryEditor() {
         zone: { select: { title: true } },
       },
     }),
-    db.libraryZone.findMany({ orderBy: { sortOrder: "asc" } }),
-    db.computerScreen.findMany({ orderBy: { slot: "asc" } }),
+    db.libraryZone.findMany({ where: { slug: { in: roomAnchors.map(r => r.slug) } } }),
     db.mediaAsset.findMany({
       where: { deletedAt: null, kind: { in: ["video", "image", "model3d"] } },
       select: { id: true, title: true, kind: true, url: true },
-    }),
-    db.deployment.findMany({
-      where: { deletedAt: null, iframeAllowed: true },
-      select: { id: true, title: true },
-    }),
-    db.sceneAsset.findMany({
-      where: { slug: "library-hall" },
-      orderBy: { version: "desc" },
     }),
     db.uiLayout.findUnique({ where: { slug: "travellers-rest-visit" } }),
     db.sceneAsset.findMany({
@@ -107,11 +95,6 @@ async function LibraryEditor() {
       )
       .map((p) => ({ value: p.id, label: p.title })),
   ];
-  const activeVersions = assets
-    .filter((a) => a.isActive)
-    .map((a) => a.id)
-    .sort()
-    .join(",");
   return (
     <>
       <PageHeader
@@ -128,9 +111,6 @@ async function LibraryEditor() {
           ...(estate ? ["Travellers Rest"] : []),
           "Books",
           "Shelves",
-          "Zones",
-          "Screens",
-          "Scenes",
         ].map((t) => (
           <a key={t} href={"#" + t.toLowerCase().replaceAll(" ", "-")}>
             {t}
@@ -509,151 +489,6 @@ async function LibraryEditor() {
             ))}
           </details>
         ))}
-      </section>
-      <section id="zones">
-        <h2 className="font-serif text-2xl">Rooms</h2>
-        {zones
-          .filter((z) => !roomAnchors.some((r) => r.slug === z.slug))
-          .map((z) => (
-            <details className="card my-2" key={z.id}>
-              <summary>
-                {z.title} <Badge value={z.display} />
-              </summary>
-              <EditorForm
-                command="zone"
-                version={JSON.stringify([z.display, z.cameraPreset])}
-              >
-                <input type="hidden" name="slug" value={z.slug} />
-                <Field label="Visibility">
-                  <Select
-                    name="display"
-                    options={DISPLAY_STATES}
-                    defaultValue={z.display}
-                  />
-                </Field>
-                <Field
-                  label="Camera override"
-                  hint="Optional {eye:[x,y,z],target:[x,y,z]} in scene meters. Clear to restore the designed view."
-                >
-                  <textarea
-                    className="input"
-                    name="camera"
-                    defaultValue={
-                      Object.keys(z.cameraPreset ?? {}).length
-                        ? JSON.stringify(z.cameraPreset)
-                        : ""
-                    }
-                  />
-                </Field>
-              </EditorForm>
-            </details>
-          ))}
-      </section>
-      <section id="screens" className="my-8">
-        <h2 className="font-serif text-2xl">Computer screens</h2>
-        {screens.map((s) => {
-          const config =
-            s.config && typeof s.config === "object" && !Array.isArray(s.config)
-              ? s.config
-              : {};
-          return (
-            <details key={s.id} className="card my-2">
-              <summary>
-                {s.slot} · {s.mode}
-              </summary>
-              <EditorForm command="screen" version={s.updatedAt.toISOString()}>
-                <input type="hidden" name="slot" value={s.slot} />
-                <Field label="Display title">
-                  <input
-                    className="input"
-                    name="title"
-                    defaultValue={String(config.title ?? s.slot + " display")}
-                    required
-                  />
-                </Field>
-                <Field label="Mode">
-                  <Select
-                    name="mode"
-                    options={["feed", "terminal", "image", "video", "iframe"]}
-                    defaultValue={s.mode}
-                  />
-                </Field>
-                <Field label="Media">
-                  <Select
-                    name="mediaId"
-                    defaultValue={s.mediaId}
-                    options={[
-                      emptyOption,
-                      ...media
-                        .filter((m) => m.kind !== "model3d")
-                        .map((m) => ({
-                          value: m.id,
-                          label: m.kind + " · " + (m.title ?? m.id),
-                        })),
-                    ]}
-                  />
-                </Field>
-                <Field label="Embeddable site">
-                  <Select
-                    name="deploymentId"
-                    defaultValue={s.deploymentId}
-                    options={[
-                      emptyOption,
-                      ...sites.map((d) => ({ value: d.id, label: d.title })),
-                    ]}
-                  />
-                </Field>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="enabled"
-                    defaultChecked={config.enabled !== false}
-                  />{" "}
-                  Enable this display
-                </label>
-              </EditorForm>
-            </details>
-          );
-        })}
-      </section>
-      <section id="scenes">
-        <h2 className="font-serif text-2xl">Scene versions</h2>
-        <p className="text-sm">
-          The built-in Blender hall is available as a rollback. Uploaded
-          versions must include every room, shelf and screen anchor.
-        </p>
-        <EditorForm
-          command="scene"
-          version={activeVersions}
-          label="Activate scene"
-        >
-          <Field label="Version">
-            <Select
-              name="assetId"
-              options={[
-                { value: "builtin", label: "Built-in hall" },
-                { value: "", label: "New version from uploaded GLB" },
-                ...assets.map((a) => ({
-                  value: a.id,
-                  label:
-                    "Version " + a.version + (a.isActive ? " · active" : ""),
-                })),
-              ]}
-              defaultValue={assets.find((a) => a.isActive)?.id ?? "builtin"}
-            />
-          </Field>
-          <Field label="Media for new version">
-            <Select
-              name="mediaId"
-              options={[
-                emptyOption,
-                ...media
-                  .filter((m) => m.kind === "model3d")
-                  .map((m) => ({ value: m.id, label: m.title ?? m.id })),
-              ]}
-            />
-          </Field>
-        </EditorForm>
       </section>
     </>
   );

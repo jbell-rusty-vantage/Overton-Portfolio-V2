@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { parseRoute, formatRoute, type Place } from "../lib/estate/world";
 import { portraitRoute } from "../lib/estate/visitor-navigation";
-import type { Volume } from "../lib/library/model";
+import { type Volume } from "../lib/library/types";
 const home = (): Place => "cabinet";
 test("the upper landing has a reloadable history destination", () => {
   const route = { place: "entry" as const, focus: null, landing: true as const };

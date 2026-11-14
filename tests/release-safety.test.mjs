@@ -3,6 +3,14 @@ import assert from "node:assert/strict";
 import { PGlite } from "@electric-sql/pglite";
 import { assertMigrationHistory, databaseTarget, validatedTarget } from "../scripts/database-target.mjs";
 import { blobIdentity, publishImmutable } from "../scripts/immutable-blob.mjs";
+import { readFile } from "node:fs/promises";
+
+test("routine asset inventory cannot overwrite a dated release receipt", async () => {
+  const source = await readFile('scripts/release-asset-inventory.mjs', 'utf8');
+  assert.ok(!source.includes('docs/releases/2026-11-13/assets.json'));
+  assert.ok(source.includes('".local-library/release/asset-inventory.json"'));
+  assert.ok(source.includes('flag: args.includes("--output") ? "wx" : "w"'));
+});
 
 test("legacy schema refusal preserves rows on disposable PostgreSQL", async () => {
   const db = await PGlite.create();

@@ -10,7 +10,7 @@ import { directLoopback } from "@/lib/auth/local-office";
 import { getCollection, isLocalReview } from "@/lib/library/catalog";
 import { publicMedia, readable } from "@/lib/library/policy";
 import { resolvePages } from "@/lib/library/pages";
-import type { Volume } from "@/lib/library/model";
+import { type Volume } from "@/lib/library/types";
 import type {
   EstateData,
   EstateProgram,

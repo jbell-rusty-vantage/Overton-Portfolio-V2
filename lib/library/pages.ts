@@ -1,5 +1,5 @@
 import { blocksFrom, templateNames } from "./policy";
-import type { Leaf } from "./model";
+import { type Leaf } from "./types";
 type PageRow = {
   templateCode: string | null;
   position: number;

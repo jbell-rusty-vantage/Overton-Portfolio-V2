@@ -1,6 +1,5 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
 import {
   readable,
   blocksFrom,
@@ -9,11 +8,10 @@ import {
   publicImage,
 } from "../lib/library/policy";
 import { resolvePages } from "../lib/library/pages";
-import { validateHall } from "../lib/library/scene-contract";
 import { sampleCollection } from "../lib/library/fixtures";
 import { validateEdits } from "../lib/library/sample-edits";
 import { reviewBundle } from "../scripts/review-library-draft.mjs";
-import { type Leaf } from "../lib/library/model";
+import { type Leaf } from "../lib/library/types";
 
 test("publication, ingestion and time are independent", () => {
   const time = Date.UTC(2026, 10, 8);
@@ -134,11 +132,7 @@ test("hybrid replacement, duplicate authored templates and generated order", () 
   );
   assert.equal(hybrid[0].blocks[0].text, "page 2");
 });
-test("both exported GLBs retain the whole navigation contract", async () => {
-  for (const name of ["hall", "hall-low"])
-    validateHall(await readFile("public/library/" + name + ".glb"));
-  assert.throws(() => validateHall(new Uint8Array([1, 2, 3])));
-});
+
 test("shelf positions, sandbox imports and draft bundles reject collisions", () => {
   const base = sampleCollection();
   assert.equal(base.volumes.filter((v) => v.kind === "Project").length, 8);

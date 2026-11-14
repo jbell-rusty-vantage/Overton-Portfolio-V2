@@ -1,5 +1,5 @@
 import staged from "@/assets/library/posters/staged-media.json";
-import type { Volume } from "./model";
+import { type Volume } from "./types";
 
 /** Presentation-only draft edition, applied AFTER authorization by its caller.
  * Never fetches a record, changes words/links, adds a volume, or writes to the DB.

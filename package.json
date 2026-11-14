@@ -25,7 +25,6 @@
     "qualify:portrait-voice": "node scripts/qualify-portrait-voice.mjs",
     "portrait:ledger": "node scripts/reconcile-portrait-ledger.mjs --list",
     "test:navigation": "playwright test tests/browser/navigation.spec.ts",
-    "assets:pack": "node scripts/pack-library.mjs",
     "test:admin": "node scripts/test-library-admin.mjs",
     "test:office": "node scripts/test-library-admin.mjs --office",
     "draft:review": "node scripts/review-library-draft.mjs",
@@ -37,12 +36,17 @@
     "test:portfolio": "tsx --test tests/portfolio.test.ts && playwright test --config tests/portfolio.config.ts",
     "test:safety": "node --test tests/release-safety.test.mjs",
     "release:check": "npm run typecheck && npm run lint && npm test && npm run test:safety && npm run assets:inventory && npm run build:local",
-    "assets:inventory": "node scripts/release-asset-inventory.mjs"
+    "assets:inventory": "node scripts/release-asset-inventory.mjs",
+    "docs:build": "node scripts/schema-reference.mjs && node scripts/docs.mjs build",
+    "docs:check": "node scripts/docs.mjs check",
+    "docs:search": "node scripts/docs.mjs search",
+    "docs:context": "node scripts/docs.mjs context",
+    "docs:test": "node --test tests/docs/*.test.mjs .agent-docs/retrieval.test.mjs"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.10.0",
     "@prisma/client": "^7.10.0",
-    "@react-three/fiber": "9.8.2",
+    "@react-three/fiber": "^9.8.2",
     "@vercel/blob": "^2.8.1",
     "gray-matter": "^4.0.3",
     "next": "~16.4.5",

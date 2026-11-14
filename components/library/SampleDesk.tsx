@@ -1,9 +1,10 @@
 "use client";
 import { useState, useSyncExternalStore } from "react";
 import Link from "next/link";
-import Experience from "./Experience";
+import CatalogView from "./Catalog";
 import { FullReader } from "./Reading";
-import { shelves, type Collection } from "@/lib/library/model";
+import { shelves } from "@/lib/library/taxonomy";
+import { type Collection } from "@/lib/library/types";
 import {
   type SampleDraft,
   validateEdits,
@@ -66,10 +67,8 @@ export default function SampleDesk({
         </main>
       );
     return (
-      <Experience
+      <CatalogView
         data={data}
-        initialQuery={initialQuery}
-        catalog={params.get("catalog") === "1"}
         admin="samples"
       />
     );

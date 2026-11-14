@@ -1,5 +1,6 @@
 import { z } from "zod";
-import { shelves, type Collection } from "./model";
+import { shelves } from "./taxonomy";
+import { type Collection } from "./types";
 export const draftSchema = z
   .object({
     slug: z

@@ -31,125 +31,6 @@
   outline: 3px solid #ad812e;
   outline-offset: 4px;
 }
-.lib-masthead {
-  height: 73px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 clamp(20px, 5.3vw, 95px);
-  border-bottom: 1px solid var(--hair);
-  gap: 16px;
-}
-.wordmark {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-}
-.wordmark svg {
-  color: #65552e;
-}
-.wordmark span {
-  font: 600 26px/1 var(--serif);
-  letter-spacing: -1.15px;
-}
-.lib-masthead nav {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  height: 100%;
-}
-.lib-masthead nav a,
-.lib-masthead nav button,
-.owner-link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #555b50;
-  height: 100%;
-  position: relative;
-}
-.lib-masthead nav .active {
-  color: #263e2e;
-}
-.lib-masthead nav .active:after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  background: #937940;
-  bottom: 15px;
-  left: 0;
-  right: 0;
-}
-.lib-masthead nav a:hover,
-.lib-masthead nav button:hover,
-.owner-link:hover {
-  color: #80622c;
-}
-.owner-link {
-  font-size: 13px;
-  letter-spacing: 0.02em;
-}
-.entrance-scene,
-.scene-wrap,
-.initial-hall {
-  position: relative;
-  background: #302c24 url("/library/entrance.webp") center 53% / cover no-repeat;
-  color: #fff8e7;
-}
-.entrance-scene {
-  min-height: 480px;
-  height: clamp(490px, 66vh, 660px);
-  display: flex;
-  align-items: center;
-  isolation: isolate;
-}
-.entrance-scene:before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(13, 23, 18, 0.95) 0%,
-      rgba(15, 25, 20, 0.84) 25%,
-      rgba(20, 28, 20, 0.32) 56%,
-      rgba(15, 20, 15, 0.06) 84%
-    ),
-    linear-gradient(0deg, rgba(16, 21, 16, 0.5), transparent 24%);
-  z-index: -1;
-}
-.poster-frame {
-  pointer-events: none;
-  position: absolute;
-  inset: 16px;
-  border: 1px solid #e5d2a631;
-}
-.poster-frame:before,
-.poster-frame:after {
-  content: "";
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  border: 1px solid #c4ab77;
-}
-.poster-frame:before {
-  left: -1px;
-  top: -1px;
-  border-right: 0;
-  border-bottom: 0;
-}
-.poster-frame:after {
-  right: -1px;
-  bottom: -1px;
-  border-left: 0;
-  border-top: 0;
-}
-.hero-copy {
-  padding: 15px clamp(35px, 6.3vw, 105px) 29px;
-}
-.hero-kicker,
 .eyebrow {
   display: flex;
   align-items: center;
@@ -158,41 +39,13 @@
   text-transform: uppercase;
   letter-spacing: 0.16em;
 }
-.hero-kicker {
-  color: #dfc99d;
-  font-size: 11px;
-}
-.hero-kicker i,
 .section-heading .eyebrow i {
   width: 31px;
   height: 1px;
   background: #b99b60;
 }
-.hero-copy h1 {
-  font: 400 clamp(74px, 8.5vw, 142px)/1.08 var(--serif);
-  letter-spacing: -0.065em;
-  margin: 17px 0 14px;
-  text-shadow: 0 1px 12px #19201726;
-}
-.hero-copy h1 em {
-  font-weight: 400;
-  letter-spacing: -0.075em;
-}
-.hero-copy p {
-  max-width: 425px;
-  font-size: clamp(16px, 1.25vw, 20px);
-  line-height: 1.6;
-  color: #f1eadc;
-}
-.hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-top: 30px;
-}
 .gold-button,
 .folio-button,
-.hero-actions > a,
 .text-link,
 .card-action {
   display: inline-flex;
@@ -219,45 +72,6 @@
 .gold-button svg:last-child {
   margin-left: 6px;
 }
-.hero-actions > a {
-  font-size: 13px;
-  color: #f3e9d6;
-  border-bottom: 1px solid #d4c29c75;
-  padding: 3px 0;
-}
-.entrance-foot {
-  position: absolute;
-  bottom: 29px;
-  left: clamp(35px, 6.3vw, 105px);
-  right: clamp(35px, 6.3vw, 105px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font: 11px var(--mono);
-  letter-spacing: 0.04em;
-  color: #f0e6d0;
-}
-.entrance-foot span,
-.entrance-foot button,
-.location-plaque {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-}
-.entrance-foot button {
-  padding: 7px 12px;
-  border: 1px solid #e2cfaa59;
-  border-radius: 3px;
-  background: #1b221bd9;
-}
-.locator-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #d2b37a;
-  box-shadow: 0 0 0 4px #cfb48224;
-  display: inline-block;
-}
 .collection-section,
 .catalog-page {
   width: 100%;
@@ -281,11 +95,8 @@
 }
 .section-heading h2,
 .catalog-page h1,
-.room-info h1,
 .full-reader h1,
-.library-modal h2,
-.fallback-view h2,
-.initial-hall h1 {
+.library-modal h2 {
   font: 400 clamp(32px, 3vw, 48px)/1.13 var(--serif);
   letter-spacing: -0.05em;
   margin: 6px 0;
@@ -304,8 +115,7 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
-.volume-card,
-.directory-card {
+.volume-card {
   min-height: 168px;
   display: flex;
   align-items: stretch;
@@ -319,8 +129,7 @@
     box-shadow 0.18s,
     border-color 0.18s;
 }
-.volume-card:hover,
-.directory-card:hover {
+.volume-card:hover {
   border-color: #958668;
   box-shadow: 0 4px 16px #38312412;
 }
@@ -387,14 +196,12 @@
   font-size: 9px;
   letter-spacing: 0.13em;
 }
-.card-text :is(h2, h3),
-.directory-card strong {
+.card-text :is(h2, h3) {
   font: 400 clamp(22px, 2vw, 31px)/1.14 var(--serif);
   letter-spacing: -0.035em;
   margin: 6px 0;
 }
-.card-text p,
-.directory-card small {
+.card-text p {
   font-size: 13px;
   color: var(--quiet);
   line-height: 1.5;
@@ -409,19 +216,6 @@
   margin-top: 12px;
   font-size: 12px;
   gap: 7px;
-}
-.directory-card {
-  align-items: center;
-  justify-content: space-around;
-  gap: 18px;
-  background: #edeadb;
-  padding: 18px 24px;
-  color: #414c3a;
-}
-.directory-card span,
-.directory-card strong,
-.directory-card small {
-  display: block;
 }
 .source-note {
   display: inline-flex;
@@ -480,8 +274,7 @@
   outline: 2px solid #91773b;
 }
 .filters,
-.tags,
-.room-links {
+.tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -511,108 +304,6 @@
   padding: 20px 0;
   color: var(--quiet);
 }
-.scene-wrap {
-  position: relative;
-  height: clamp(420px, 66svh, 850px);
-  overflow: hidden;
-  background-position: center;
-}
-.world-viewport,
-.world-pins,
-.fallback-view {
-  position: absolute;
-  inset: 0;
-}
-.world-viewport canvas {
-  touch-action: pan-y;
-}
-.world-pins {
-  pointer-events: none;
-}
-.world-pins button,
-.world-top button,
-.location-plaque {
-  font-size: 12px;
-  color: #fff5de;
-  background: #222d25ed;
-  border: 1px solid #b2a186b3;
-  border-radius: 3px;
-  box-shadow: 0 3px 9px #10180e30;
-}
-.world-pins button {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  pointer-events: auto;
-  padding: 7px 10px;
-  white-space: nowrap;
-}
-.world-pins button i {
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #e2be7c;
-  vertical-align: middle;
-}
-.world-pins button:hover,
-.world-top button:hover {
-  background: #415140;
-}
-.world-top {
-  position: absolute;
-  inset: 15px 18px auto;
-  display: flex;
-  justify-content: space-between;
-  pointer-events: none;
-}
-.world-top > div,
-.world-top button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.world-top button {
-  pointer-events: auto;
-  padding: 8px 11px;
-}
-.location-plaque {
-  position: absolute;
-  bottom: 18px;
-  left: 18px;
-  padding: 8px 13px;
-  font-family: var(--mono);
-  pointer-events: none;
-}
-.world-loading {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  background: #19221dd6;
-  color: var(--paper);
-  font-family: var(--serif);
-  font-size: 25px;
-}
-.room-info {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 25px clamp(22px, 5.3vw, 95px) 35px;
-}
-.room-info h1 {
-  font-size: 32px;
-}
-.room-info p {
-  font-size: 14px;
-  color: var(--quiet);
-  margin: 4px 0;
-}
-.room-links {
-  align-content: center;
-  justify-content: flex-end;
-  max-width: 58%;
-}
-.room-links button,
 .folio-button,
 .pagination button {
   background: #faf7ed;
@@ -620,32 +311,8 @@
   color: #2c432f;
   border-radius: 3px;
 }
-.room-links button {
-  align-self: center;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  padding: 9px 12px;
-}
-.room-links button:hover,
 .folio-button:hover {
   background: #e6e8dc;
-}
-.fallback-view {
-  background: #18241bbd;
-  display: grid;
-  place-items: center;
-}
-.fallback-view > div {
-  max-width: 490px;
-  padding: 25px;
-}
-.fallback-view .eyebrow {
-  color: #e0c798;
-}
-.fallback-view p {
-  margin: 12px 0 20px;
 }
 .library-modal {
   margin: auto;
@@ -920,12 +587,6 @@
   border-top: 1px solid var(--hair);
   padding: 12px 0;
 }
-.initial-hall {
-  min-height: 100svh;
-  justify-content: center;
-  padding: 6vw;
-  background-blend-mode: multiply;
-}
 @media (min-width: 1600px) {
   .card-grid {
     gap: 24px;
@@ -938,9 +599,6 @@
   }
 }
 @media (max-width: 850px) {
-  .lib-masthead nav {
-    gap: 19px;
-  }
   .card-art {
     min-width: 94px;
   }
@@ -950,104 +608,15 @@
   .card-text {
     padding: 15px;
   }
-  .directory-card {
-    padding: 14px;
-    gap: 10px;
-  }
   .card-grid {
     gap: 12px;
   }
-  .room-info {
-    flex-wrap: wrap;
-  }
-  .room-links {
-    max-width: 100%;
-    justify-content: flex-start;
-  }
-  .hero-copy p {
-    max-width: 370px;
-  }
 }
 @media (max-width: 650px) {
-  .lib-masthead {
-    height: 60px;
-    padding: 0 17px;
-    gap: 9px;
-  }
-  .wordmark {
-    gap: 7px;
-  }
-  .wordmark span {
-    font-size: 22px;
-  }
-  .wordmark svg {
-    width: 25px;
-  }
-  .lib-masthead nav {
-    gap: 14px;
-  }
-  .lib-masthead nav a,
-  .lib-masthead nav button {
-    font-size: 12px;
-    gap: 5px;
-  }
-  .lib-masthead nav svg,
-  .owner-link {
-    display: none;
-  }
-  .lib-masthead nav .active:after {
-    bottom: 10px;
-  }
-  .entrance-scene {
-    height: 580px;
-    min-height: 0;
-    max-height: 78svh;
-    background-position: 63% 50%;
-    align-items: flex-end;
-  }
-  .entrance-scene:before {
-    background: linear-gradient(
-      0deg,
-      #101d16f0 0%,
-      #17271fdf 31%,
-      #14231885 58%,
-      #12211420 92%
-    );
-  }
-  .poster-frame {
-    inset: 9px;
-  }
-  .hero-copy {
-    padding: 0 26px 82px;
-  }
-  .hero-copy h1 {
-    font-size: clamp(67px, 15.5vw, 92px);
-    margin: 11px 0;
-  }
-  .hero-copy p {
-    font-size: 16px;
-    line-height: 1.52;
-  }
-  .hero-kicker {
-    font-size: 9px;
-  }
-  .hero-actions {
-    gap: 16px;
-    margin-top: 22px;
-  }
   .gold-button {
     padding: 12px;
     font-size: 13px;
     gap: 7px;
-  }
-  .hero-actions > a {
-    font-size: 12px;
-  }
-  .entrance-foot {
-    bottom: 21px;
-    left: 26px;
-    right: 24px;
-    font-size: 10px;
   }
   .collection-section,
   .catalog-page {
@@ -1082,48 +651,9 @@
   .card-text :is(h2, h3) {
     font-size: 24px;
   }
-  .directory-card {
-    justify-content: flex-start;
-    min-height: 100px;
-    padding: 18px;
-    gap: 18px;
-  }
-  .directory-card > svg:last-child {
-    margin-left: auto;
-  }
   .library-footer {
     padding: 15px 18px;
     font-size: 11px;
-  }
-  .scene-wrap {
-    height: 55svh;
-    min-height: 350px;
-  }
-  .world-top {
-    inset: 10px 10px auto;
-  }
-  .world-top button {
-    font-size: 11px;
-    padding: 7px;
-  }
-  .location-plaque {
-    left: 10px;
-    bottom: 10px;
-  }
-  .world-pins button {
-    font-size: 10px;
-    padding: 5px;
-  }
-  .room-info {
-    padding: 20px 18px;
-    gap: 14px;
-  }
-  .room-info h1 {
-    font-size: 29px;
-  }
-  .room-links button {
-    padding: 9px;
-    font-size: 12px;
   }
   .library-modal {
     padding: 28px 20px;
@@ -1158,24 +688,6 @@
   }
   .catalog-status {
     font-size: 11px;
-  }
-  .hero-actions .gold-button > svg:last-child {
-    margin-left: 0;
-  }
-}
-@media (max-width: 370px) {
-  .lib-masthead nav {
-    gap: 10px;
-  }
-  .hero-copy {
-    padding-left: 22px;
-    padding-right: 18px;
-  }
-  .hero-actions {
-    gap: 13px;
-  }
-  .hero-actions .gold-button > svg:first-child {
-    display: none;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1245,26 +757,12 @@
   padding-top: 12px;
 }
 @media (max-width: 650px) {
-  .entrance-scene,
-  .scene-wrap {
-    background-image: url("/library/entrance-portrait.webp");
-  }
   .mobile-source {
     display: block;
   }
   .tour-controls {
     justify-content: flex-start;
   }
-}
-
-.world-pins button > span {
-  margin-left: 4px;
-}
-.world-pins .book-pin {
-  width: 26px;
-  height: 26px;
-  padding: 0;
-  border-radius: 50%;
 }
 .book-pin > span {
   position: absolute;

@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 import { useState, useSyncExternalStore } from "react";
 import { base, type EstateProgram, type Room } from "@/lib/estate/model";
-import type { Leaf } from "@/lib/library/model";
+import type { Leaf } from "@/lib/library/types";
 import { Icon } from "./Marks";
 import { Plate } from "./Plate";
 import { useReducedMotion } from "./Portrait";

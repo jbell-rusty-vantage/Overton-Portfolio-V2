@@ -15,6 +15,17 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    ".agent-docs/**",
+    "docs/archive/**",
+    ".firecrawl/**",
+    ".vercel/**",
+    "public/**",
+    "assets/**",
+    "content/projects/**",
+    "content/media-src/**",
+    "content/media-out/**",
+    "test-results/**",
+    "lib/generated/**",
   ]),
 ]);
 

@@ -1,12 +1,13 @@
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
-import Experience from "./Experience";
+import CatalogView from "./Catalog";
 import { FullReader } from "./Reading";
-import type { VolumeKind } from "@/lib/library/model";
+import { type VolumeKind } from "@/lib/library/types";
 import { getCollection } from "@/lib/library/catalog";
+import { estateBookLink } from "@/lib/estate/book-link";
 
 async function Catalog({ kind }: { kind: string }) {
-  return <Experience data={await getCollection()} catalog startKind={kind} />;
+  return <CatalogView data={await getCollection()} startKind={kind} />;
 }
 export function CatalogRoute({ kind = "All" }: { kind?: string }) {
   return (
@@ -40,7 +41,7 @@ async function Read({
   );
   if (!volume) notFound();
   const collection = volume.kind === "Project" ? await getCollection() : data;
-  return <FullReader v={volume} source={data.source} volumes={collection.volumes} />;
+  return <FullReader v={volume} source={data.source} volumes={collection.volumes} libraryHref={await estateBookLink(volume)} />;
 }
 export function DetailRoute({
   params,

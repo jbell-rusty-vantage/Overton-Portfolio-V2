@@ -12,7 +12,7 @@
      one that does not fit moves to the head of the next page and the text runs on;
    - measurements are grouped; the volume opens with a plate, a title page and a
      table of contents, and never closes on a blank page. */
-import type { Block, Volume } from "@/lib/library/model";
+import { type Block, type Volume } from "@/lib/library/types";
 import { printOps } from "./bookPrint";
 import {
   flowHtml,

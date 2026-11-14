@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { reportNeighbors, reportSectionId, reportSections, resolveReportSection } from "../lib/library/report";
 import { blocksFrom } from "../lib/library/policy";
-import type { Volume } from "../lib/library/model";
+import { type Volume } from "../lib/library/types";
 import { applyShowcaseDraft } from "../lib/library/showcase-draft";
 const volume: Volume = { slug: "test", title: "Test", summary: "", kind: "Project", shelf: null, position: 1, plate: 0, tags: [], pages: [{ key: "notes-7", title: "Page 7", blocks: [{ kind: "heading", text: "A durable title" }] }, { key: "overview", title: "Overview", blocks: [] }] };
 test("report citations remain attached to leaf keys when headings change", () => {

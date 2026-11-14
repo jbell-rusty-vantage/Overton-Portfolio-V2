@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import type { Volume } from "../library/model";
+import { type Volume } from "../library/types";
 import type { EvidenceRecord, Citation } from "./contracts";
 import cards from "../../content/portrait/cards.json";
 

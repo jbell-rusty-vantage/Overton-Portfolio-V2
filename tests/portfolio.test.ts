@@ -6,7 +6,7 @@ import { applyShowcaseWritingDraft, showcaseWriting } from "../lib/library/showc
 import { blocksFrom, templateNames } from "../lib/library/policy";
 import { resolvePages } from "../lib/library/pages";
 import { portfolioSelection } from "../lib/library/portfolio";
-import type { Volume } from "../lib/library/model";
+import { type Volume } from "../lib/library/types";
 
 const originalVolumes: Volume[] = baseline.map((entry) => ({ slug: entry.slug, title: entry.title, summary: entry.summary ?? "", kind: "Project", tags: entry.tags, status: entry.tags.find((tag) => /^(live|in development|early stage|earlier work|launching)$/i.test(tag)) ?? entry.status, shelf: null, position: 1, plate: 0, pages: (entry.pages ?? []).map((page) => ({ key: page.template, title: templateNames[page.template], blocks: blocksFrom(page.blocks) })) }));
 for (const volume of originalVolumes) {

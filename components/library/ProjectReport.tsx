@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { detailHref, sceneHref, zoneFor, withinPreview, type Block, type Collection, type ReadingScope, type Volume } from "@/lib/library/model";
+import { detailHref, withinPreview } from "@/lib/library/paths";
+import { type Block, type Collection, type ReadingScope, type Volume } from "@/lib/library/types";
 import { reportSectionId, reportSections, resolveReportSection } from "@/lib/library/report";
 import { imageDelivery } from "@/lib/library/image-delivery";
 import { portfolioHref } from "@/lib/library/portfolio";
@@ -17,6 +18,8 @@ export type ProjectReportProps = {
   onClose?: () => void;
   neighbors?: { previous?: Volume; next?: Volume };
   onProject?: (volume: Volume) => void;
+  /** Supplied only after the server validates this book against the estate projection. */
+  libraryHref?: string;
 };
 
 export function FigureViewer({ url, text, close }: { url: string; text: string; close: () => void }) {
@@ -73,7 +76,7 @@ function ReportBlocks({ blocks, title, admin, enlarge }: { blocks: Block[]; titl
   return <div className="report-prose">{output}</div>;
 }
 
-export default function ProjectReport({ volume, admin = false, source, section, onSectionChange, onClose, neighbors, onProject }: ProjectReportProps) {
+export default function ProjectReport({ volume, admin = false, source, section, onSectionChange, onClose, neighbors, onProject, libraryHref }: ProjectReportProps) {
   const root = useRef<HTMLDivElement>(null);
   const dialog = useRef<HTMLDialogElement>(null);
   const sections = useMemo(() => reportSections(volume), [volume]);
@@ -129,9 +132,7 @@ export default function ProjectReport({ volume, admin = false, source, section, 
     <div className="report-top">
       {onClose ? <button autoFocus onClick={onClose} aria-label="Close report and return to book">← Return to book</button> : <a href={portfolioHref(admin, volume.slug)}>← Selected Work</a>}
       <span>{source === "fixtures" ? "Sample collection" : admin || source === "review" ? "Private draft" : "John Overton Bell"}</span>
-      {!modal && <a href={admin === true
-        ? "/admin/preview/library#book/" + encodeURIComponent(volume.slug)
-        : withinPreview(admin === "samples" ? sceneHref(zoneFor(volume), volume.shelf, volume.slug, volume.kind) : "/library#book/" + encodeURIComponent(volume.slug), admin)}>Open book ↗</a>}
+      {!modal && libraryHref && <a href={libraryHref}>Open book ↗</a>}
     </div>
     <header className="report-header">
       <div className="report-heading"><p className="report-eyebrow">Project report{status ? " · " + status : ""}</p><h1>{volume.title}</h1><p className="report-deck">{volume.summary}</p>

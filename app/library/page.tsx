@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Suspense } from "react";
-import Experience from "@/components/library/Experience";
+import LegacyArrival from "@/components/library/LegacyArrival";
 import { getCollection } from "@/lib/library/catalog";
 import Estate from "@/components/estate/Estate";
 import { getEstate } from "@/lib/estate/catalog";
@@ -25,13 +25,11 @@ export async function generateMetadata({ searchParams }: PageProps<"/library">) 
 
 async function Entrance({ searchParams }: PageProps<"/library">) {
   const params = await searchParams;
-  if (!params.view && !params.book && !params.zone && !params.shelf)
-    return <Estate data={await getEstate()} />;
-  const data = await getCollection();
-  const q = new URLSearchParams();
-  for (const key of ["view", "zone", "shelf", "book", "kind", "page", "tour"])
-    if (typeof params[key] === "string") q.set(key, params[key]);
-  return <Experience data={data} initialQuery={q.size ? "?" + q : ""} />;
+  const data = await getEstate();
+  if (!["view", "book", "zone", "shelf"].some(key => typeof params[key] === "string")) return <Estate data={data} />;
+  const collection = await getCollection();
+  return <><LegacyArrival volumes={collection.volumes} placed={data.program?.world ? data.projects.map(v => v.slug) : []} /><Estate data={data} /></>;
+
 }
 export default function Home(props: PageProps<"/library">) {
   return (

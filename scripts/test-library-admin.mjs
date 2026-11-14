@@ -157,6 +157,12 @@ try {
   await create.getByLabel("Title", { exact: true }).fill("Fixture volume");
   await create.getByLabel("Slug", { exact: true }).fill("fixture-volume");
   await create.getByLabel("Cover artwork").selectOption({ label: "Workshop cover" });
+  for (const retired of ['zone', 'screen', 'scene']) {
+    await create.locator('input[name="command"]').evaluate((input, command) => { input.value = command; }, retired);
+    await create.getByRole("button").click();
+    await expect(create.getByRole("status")).toHaveText("Choose a supported value.");
+  }
+  await create.locator('input[name="command"]').evaluate(input => { input.value = 'book'; });
   await create.getByRole("button").click();
   await expect(create.getByRole("status")).toHaveText("Saved to the Library.");
   const book = (
@@ -247,10 +253,9 @@ try {
   await visitor.goto("/catalog?q=Systems+workshop");
   await expect(visitor.getByRole("heading", { name: "Fixture volume" })).toBeVisible();
   await visitor.goto("/?view=world&zone=stacks");
-  await expect(visitor.locator('[data-pin="stacks-ai-agents"]')).toHaveAccessibleName("Systems workshop", { timeout: 40000 });
-  await visitor.getByRole("button", { name: "Systems workshop", exact: true }).last().click();
-  await expect(visitor.getByRole("heading", { name: "Systems workshop" })).toBeVisible();
-  await expect(visitor.getByRole("button", { name: "Fixture volume", exact: true }).last()).toBeVisible();
+  await expect(visitor).toHaveURL(/\/library#cabinet$/);
+  await visitor.goto("/catalog");
+  await expect(visitor.getByRole("heading", { name: "Fixture volume" })).toBeVisible();
   // Two forms carry the same version. The second writer must retain its input and report the conflict.
   const stale = await page.context().newPage();
   await stale.goto(base + "/admin/library");

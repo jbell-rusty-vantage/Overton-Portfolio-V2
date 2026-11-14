@@ -16,7 +16,7 @@ import {AGENT_LIMITS} from "../lib/portrait/limits";
 import {voiceConfig,voiceReservationMicros,voiceSettlement,voiceInstructions,mintLiveToken,GATEWAY_LIVE_SECRETS_URL} from "../lib/portrait/voice";
 import {sessionCookie,navigationProof,consumeNavigation} from "../lib/portrait/security";
 import {readRequest,requestSchema,sameOriginRequest,voiceSchema} from "../lib/portrait/request";
-import type {Volume} from "../lib/library/model";
+import { type Volume } from "../lib/library/types";
 const now=Date.parse("2026-11-13T01:00:00Z");
 const state=():LedgerState=>({version:1,killed:false,turns:[]});
 class MemoryTestStore implements AtomicStore {state=state();async update<T>(f:(s:LedgerState)=>T){return f(this.state);}}

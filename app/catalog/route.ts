@@ -1,5 +1,6 @@
 import { getCollection } from "@/lib/library/catalog";
-import { collectionShelves, matchesCatalog, type Block } from "@/lib/library/model";
+import { collectionShelves, matchesCatalog } from "@/lib/library/taxonomy";
+import { type Block } from "@/lib/library/types";
 import { publicImage, publicVideo } from "@/lib/library/policy";
 
 const escape = (s: string) =>

@@ -1,4 +1,5 @@
-import { type ReadingScope, type Volume, withinPreview } from "./model";
+import { type ReadingScope, type Volume } from "./types";
+import { withinPreview } from "./paths";
 
 /** An editorial order, never a source of records or authorization. */
 export const firstEdition = ["vantage-movers", "gowipe", "overtech-digital-services", "agentic-mission-control", "ai-engineer-platform", "agent-knowledge-services"];

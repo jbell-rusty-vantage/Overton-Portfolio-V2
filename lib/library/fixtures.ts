@@ -1,10 +1,5 @@
-import {
-  shelves,
-  zones,
-  type Collection,
-  type VolumeKind,
-  type Leaf,
-} from "./model";
+import { shelves, zones } from "./taxonomy";
+import { type Collection, type VolumeKind, type Leaf } from "./types";
 
 const entries: [string, string, string, string, VolumeKind][] = [
   [
@@ -131,25 +126,7 @@ export function sampleCollection(): Collection {
   const counts = new Map<string, number>();
   return {
     source: "fixtures",
-    sceneUrl: "/library/hall.glb",
     zones: zones.map((z) => z.slug),
-    screens: [
-      {
-        slot: "main",
-        mode: "terminal",
-        title: "Catalog terminal",
-        lines: ["index mounted", "shelves ready", "sample collection online"],
-      },
-      {
-        slot: "side",
-        mode: "feed",
-        title: "Desk bulletin",
-        lines: [
-          "Sample collection opened",
-          "Project volumes available in the stacks",
-        ],
-      },
-    ],
     volumes: entries.map(([id, title, shelf, summary, kind]) => {
       const position = (counts.get(shelf) ?? 0) + 1;
       counts.set(shelf, position);

@@ -13,7 +13,7 @@ import { MeshoptDecoder } from "three/examples/jsm/libs/meshopt_decoder.module.j
 import * as THREE from "three";
 import positions from "@/assets/travellers-rest/anchors.json";
 import type { Room } from "@/lib/estate/model";
-import type { Leaf } from "@/lib/library/model";
+import type { Leaf } from "@/lib/library/types";
 
 const stops = ["approach", "entry", "library", "desk"] as const;
 const vector = (xyz: number[]) => new THREE.Vector3(xyz[0], xyz[1], xyz[2]);

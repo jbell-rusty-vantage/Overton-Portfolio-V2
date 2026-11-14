@@ -1,7 +1,8 @@
 import { imageDelivery } from "@/lib/library/image-delivery";
 import Link from "next/link";
 import resume from "@/content/resume.json";
-import { type Collection, type ReadingScope, type Volume, detailHref, withinPreview } from "@/lib/library/model";
+import { type Collection, type ReadingScope, type Volume } from "@/lib/library/types";
+import { detailHref, withinPreview } from "@/lib/library/paths";
 import { portfolioHref, portfolioSelection, projectPicture } from "@/lib/library/portfolio";
 import PortfolioArrival from "./PortfolioArrival";
 import "./portfolio.css";

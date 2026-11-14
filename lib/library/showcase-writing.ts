@@ -3,7 +3,7 @@ import belllabs from "@/content/showcases/belllabs.json";
 import commerce from "@/content/showcases/commerce-studio.json";
 import vantage from "@/content/showcases/vantage.json";
 import { blocksFrom, templateNames } from "./policy";
-import type { Volume } from "./model";
+import { type Volume } from "./types";
 
 export const showcaseWriting = [...vantage, ...commerce, ...belllabs];
 

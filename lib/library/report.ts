@@ -1,4 +1,4 @@
-import type { Leaf, Volume } from "./model";
+import { type Leaf, type Volume } from "./types";
 
 /** A report section is the existing authored leaf, never a heading-derived slug. */
 export type ReportSection = { id: string; title: string; page: Leaf };

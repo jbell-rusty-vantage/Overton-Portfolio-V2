@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Modal from "@/components/library/Modal";
 import ProjectReport from "@/components/library/ProjectReport";
 import { reportNeighbors } from "@/lib/library/report";
-import type { Volume } from "@/lib/library/model";
+import { type Volume } from "@/lib/library/types";
 import type { EstateData, ExhibitMedia } from "@/lib/estate/model";
 import { Icon } from "./Marks";
 import { Plate } from "./Plate";

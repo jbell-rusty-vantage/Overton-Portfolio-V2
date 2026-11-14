@@ -1,4 +1,5 @@
 import "server-only";
+import { collectionRows } from "./collection-query";
 import { applyShowcaseDraft } from "./showcase-draft";
 import { applyShowcaseWritingDraft } from "./showcase-writing";
 import { cache } from "react";
@@ -8,20 +9,11 @@ import { connection } from "next/server";
 import starters from "@/assets/library/starters.json";
 import { resolvePages } from "./pages";
 import { sampleCollection } from "./fixtures";
-import {
-  type Block,
-  type Collection,
-  type Leaf,
-  type Screen,
-  type Volume,
-  type VolumeKind,
-  shelves,
-  zones,
-} from "./model";
+import { type Block, type Collection, type Leaf, type Volume, type VolumeKind } from "./types";
+import { shelves, zones } from "./taxonomy";
 import {
   blocksFrom,
   httpsUrl,
-  publicMedia,
   publicImage,
   readable,
   safeManuscript,
@@ -44,18 +36,6 @@ type Target = Visibility & {
   startedOn?: Date | null;
   endedOn?: Date | null;
 };
-const baseSelect = {
-  id: true,
-  slug: true,
-  title: true,
-  display: true,
-  publishedAt: true,
-  deletedAt: true,
-} as const;
-const coverSelect = {
-  select: { url: true, deletedAt: true, kind: true },
-} as const;
-const baseScene = "/library/hall.glb";
 const getCover = (
   m: { url: string; kind: string; deletedAt: Date | null } | null,
 ) => (m && !m.deletedAt && m.kind === "image" ? publicImage(m.url) : undefined);
@@ -95,10 +75,8 @@ export async function getCollection(
     console.error("Library database collection unavailable");
     return {
       source: "unavailable",
-      sceneUrl: baseScene,
       volumes: [],
       zones: [],
-      screens: [],
     };
   }
 }
@@ -108,191 +86,6 @@ const requestCollection = cache(
 );
 // Raw rows are shared only within this request. Public and direct projections
 // still apply their own visibility policy; no authorized data crosses requests.
-const collectionRows = cache(async (admin: boolean, local: boolean) => {
-  const { db } = await import("@/lib/db");
-  if (admin) {
-    const { requireAdmin } = await import("@/lib/auth/session");
-    await requireAdmin();
-  }
-  const date = new Date();
-  const publicStates: ("featured" | "published" | "unlisted")[] = ["featured", "published", "unlisted"];
-  const publication = {
-    deletedAt: null,
-    OR: [{ publishedAt: null }, { publishedAt: { lte: date } }],
-  };
-  const ordinary = {
-    ...publication,
-    ...(admin ? {} : { display: { in: publicStates } }),
-  };
-  const projectWhere = admin
-    ? publication
-    : {
-        ...publication,
-        AND: [
-          {
-            OR: [
-              { display: { in: publicStates } },
-              ...(local
-                ? [{ id: { in: starters.map((s) => s.projectId) } }]
-                : []),
-            ],
-          },
-        ],
-      };
-  return Promise.all([
-    db.project.findMany({
-      where: projectWhere,
-      orderBy: [{ sortOrder: "asc" }, { title: "asc" }],
-      select: {
-        ...baseSelect,
-        summary: true,
-        bodyBlocks: true,
-        tags: true,
-        status: true,
-        startedOn: true,
-        endedOn: true,
-        clientId: true,
-        client: { select: { name: true, publicAlias: true, showName: true } },
-        cover: coverSelect,
-        links: {
-          select: { url: true, label: true },
-          orderBy: { sortOrder: "asc" },
-        },
-        repos: {
-          select: {
-            repo: {
-              select: {
-                id: true,
-                githubId: true,
-                isPrivate: true,
-                redactionPolicy: true,
-                display: true,
-                deletedAt: true,
-                htmlUrl: true,
-              },
-            },
-          },
-        },
-      },
-    }),
-    db.post.findMany({
-      where: ordinary,
-      select: {
-        ...baseSelect,
-        excerpt: true,
-        mdxSource: true,
-        tags: true,
-        cover: coverSelect,
-      },
-    }),
-    db.favorite.findMany({
-      where: ordinary,
-      select: {
-        ...baseSelect,
-        summary: true,
-        tags: true,
-        url: true,
-        whyBlocks: true,
-        cover: coverSelect,
-      },
-    }),
-    db.timelineNode.findMany({
-      where: ordinary,
-      orderBy: { occurredAt: "asc" },
-      select: {
-        ...baseSelect,
-        summary: true,
-        stageCode: true,
-        bodyBlocks: true,
-        projectId: true,
-      },
-    }),
-    db.book.findMany({
-      select: {
-        id: true,
-        slug: true,
-        title: true,
-        subtitle: true,
-        entityId: true,
-        entityType: true,
-        pageMode: true,
-        display: true,
-        cover: coverSelect,
-        pages: {
-          orderBy: { position: "asc" },
-          select: { templateCode: true, position: true, blocks: true },
-        },
-      },
-    }),
-    db.libraryZone.findMany({
-      select: {
-        slug: true,
-        display: true,
-        cameraPreset: true,
-        sceneNodeName: true,
-        shelves: {
-          select: {
-            slug: true,
-            title: true,
-            sceneNodeName: true,
-            capacity: true,
-            slots: {
-              orderBy: { position: "asc" },
-              select: { position: true, entityId: true, entityType: true },
-            },
-          },
-        },
-      },
-    }),
-    db.computerScreen.findMany({
-      select: {
-        slot: true,
-        mode: true,
-        config: true,
-        media: coverSelect,
-        deployment: {
-          select: {
-            url: true,
-            title: true,
-            iframeAllowed: true,
-            display: true,
-            deletedAt: true,
-          },
-        },
-      },
-    }),
-    db.sceneAsset.findMany({
-      where: { slug: "library-hall", isActive: true },
-      take: 2,
-      select: { media: coverSelect },
-    }),
-    db.activityEvent.findMany({
-      where: {
-        visibility: "public",
-        occurredAt: { lte: new Date() },
-        OR: [{ expiresAt: null }, { expiresAt: { gt: new Date() } }],
-      },
-      orderBy: { occurredAt: "desc" },
-      take: 40,
-      select: {
-        source: true,
-        typeCode: true,
-        title: true,
-        projectId: true,
-        postId: true,
-        repo: {
-          select: {
-            display: true,
-            deletedAt: true,
-            isPrivate: true,
-            redactionPolicy: true,
-          },
-        },
-        deployment: { select: { display: true, deletedAt: true } },
-      },
-    }),
-  ]);
-});
 
 async function databaseCollection(options: Options, local: boolean): Promise<Collection> {
   const allowed = (id: string, type: "project" | "book") =>
@@ -306,9 +99,6 @@ async function databaseCollection(options: Options, local: boolean): Promise<Col
     moments,
     books,
     room,
-    monitors,
-    asset,
-    events,
   ] = await collectionRows(!!options.admin, local);
   const now = Date.now();
   const direct = !!options.direct;
@@ -393,24 +183,11 @@ async function databaseCollection(options: Options, local: boolean): Promise<Col
   const enabled = room.filter(
     (z) =>
       readable(z, false, options.admin, now) &&
-      zones.some((a) => a.slug === z.slug && a.node === z.sceneNodeName),
+      zones.some((a) => a.slug === z.slug),
   );
-  const cameras: NonNullable<Collection["cameras"]> = {};
-  for (const z of enabled) {
-    const p = z.cameraPreset;
-    if (!p || typeof p !== "object" || Array.isArray(p)) continue;
-    const xyz = (v: unknown): v is number[] =>
-      Array.isArray(v) &&
-      v.length === 3 &&
-      v.every(
-        (n) => typeof n === "number" && Number.isFinite(n) && Math.abs(n) <= 22,
-      );
-    if (xyz(p.eye) && xyz(p.target))
-      cameras[z.slug] = { eye: p.eye, target: p.target };
-  }
   const anchoredShelves = enabled.flatMap((z) =>
     z.shelves.filter((s) =>
-      shelves.some((a) => a.zone === z.slug && a.slug === s.slug && a.node === s.sceneNodeName)),
+      shelves.some((a) => a.zone === z.slug && a.slug === s.slug)),
   );
   const shelfTitles = Object.fromEntries(anchoredShelves.map((s) => [s.slug, s.title]));
   const slots = anchoredShelves.flatMap((s) =>
@@ -531,95 +308,5 @@ async function databaseCollection(options: Options, local: boolean): Promise<Col
   }
   for (const b of books.filter((b) => !b.entityId && !b.entityType))
     resolve(null, b);
-  // Raw payloads, actors, commit messages, URLs and source counts never enter the DTO.
-  const activity = events
-    .flatMap((e) => {
-      if (
-        e.repo &&
-        (!readable(e.repo, false) ||
-          e.repo.isPrivate ||
-          e.repo.redactionPolicy !== "none")
-      )
-        return [];
-      if (e.deployment && !readable(e.deployment, false)) return [];
-      const refs = [
-        { id: e.projectId, type: "project" },
-        { id: e.postId, type: "post" },
-      ].filter((r) => r.id);
-      const titles: string[] = [];
-      for (const ref of refs) {
-        const target = targets.find(
-          (t) => t.id === ref.id && typeMap[t.kind] === ref.type,
-        );
-        const wrappers = books.filter(
-          (b) => b.entityId === ref.id && b.entityType === ref.type,
-        );
-        if (
-          !target ||
-          !readable(target, false) ||
-          wrappers.length > 1 ||
-          wrappers.some((b) => !readable(b, false))
-        )
-          return [];
-        titles.push(wrappers[0]?.title ?? target.title);
-      }
-      if (titles.length) return ["Collection update · " + titles.join(" / ")];
-      // Only explicitly authored, unlinked public notices can display their own titles.
-      return !e.repo &&
-        !e.deployment &&
-        e.source === "admin" &&
-        e.typeCode === "admin.custom"
-        ? [e.title]
-        : [];
-    })
-    .slice(0, 12);
-  const screens: Screen[] = enabled.some((z) => z.slug === "computer-station")
-    ? monitors.flatMap((m) => {
-        const config =
-          m.config && typeof m.config === "object" && !Array.isArray(m.config)
-            ? m.config
-            : {};
-        if (config.enabled === false || !["main", "side"].includes(m.slot))
-          return [];
-        const site =
-          m.deployment &&
-          readable(m.deployment, false) &&
-          m.deployment.iframeAllowed
-            ? httpsUrl(m.deployment.url)
-            : undefined;
-        const media =
-          m.media && !m.media.deletedAt && m.media.kind === m.mode
-            ? (m.mode === "image" ? publicImage : publicMedia)(m.media.url)
-            : undefined;
-        return [
-          {
-            slot: m.slot,
-            mode: m.mode,
-            title:
-              typeof config.title === "string"
-                ? config.title
-                : m.slot === "main"
-                  ? "Catalog terminal"
-                  : "Reference display",
-            lines: m.mode === "feed" || m.mode === "terminal" ? activity : [],
-            url: m.mode === "iframe" ? site : media,
-          },
-        ];
-      })
-    : [];
-  const active =
-    asset.length === 1 &&
-    !asset[0].media.deletedAt &&
-    asset[0].media.kind === "model3d"
-      ? publicMedia(asset[0].media.url)
-      : undefined;
-  return {
-    cameras,
-    shelfTitles,
-    source: local || options.admin ? "review" : "database",
-    volumes,
-    zones: enabled.map((z) => z.slug),
-    screens,
-    sceneUrl: active ?? baseScene,
-  };
+  return { shelfTitles, source: local || options.admin ? "review" : "database", volumes, zones: enabled.map((z) => z.slug) };
 }

@@ -1,5 +1,5 @@
 import { PORTRAIT_LIVE_BEHAVIOR } from "../../content/portrait/live-behavior";
-import type { Volume } from "../library/model";
+import { type Volume } from "../library/types";
 import type { EvidenceRecord } from "./contracts";
 import { clipBytes, MAX_CITATIONS, retrieve, safeSourceUrl, tokenUpperBound } from "./evidence";
 import type { CallUsage } from "./ledger";

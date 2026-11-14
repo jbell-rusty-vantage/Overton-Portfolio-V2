@@ -1,4 +1,3 @@
-import manifest from "@/assets/library/manifest.json";
 import house from "@/assets/travellers-rest/anchors.json";
 import world from "@/assets/travellers-rest/anchors-v2.json";
 type Anchor = { node: string; target: number[]; yaw?: number };
@@ -51,13 +50,6 @@ function validateScene(bytes: Uint8Array, anchors: Anchor[]) {
       throw Error("Unexpected anchor orientation: " + a.node);
   }
   return json;
-}
-export function validateHall(bytes: Uint8Array) {
-  validateScene(bytes, [
-    ...manifest.zones,
-    ...manifest.shelves.map((a) => ({ ...a, target: [a.x, 0, a.z] })),
-    ...manifest.screens.map((a) => ({ ...a, target: a.pos })),
-  ]);
 }
 /** Edition 1 carries the custodian clip in the model. Edition 2 is the architectural
     shell of the continuous world: the portrait, bindings and documents are live objects,
