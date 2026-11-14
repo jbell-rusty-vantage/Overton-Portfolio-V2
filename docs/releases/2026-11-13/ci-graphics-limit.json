@@ -1,0 +1,34 @@
+{
+  "runId": 43545785442,
+  "conclusion": "cancelled after repeated native-scene interaction timeouts",
+  "artifactId": 14094344669,
+  "artifactSha256": "700b1c471ba429c9992a2611c07ec5fd889bbb421bf802a491da175ff887600e",
+  "cases": [
+    {
+      "test": "books-a-click-on-the-right-f2cb2--leaf-in-the-air-comes-back",
+      "timeout": true
+    },
+    {
+      "test": "books-desktop-taking-a-boo-4263e-irectory-starts-at-page-one",
+      "timeout": true
+    },
+    {
+      "test": "books-no-page-of-either-re-ac65f-paper-or-distorts-a-picture",
+      "timeout": true
+    },
+    {
+      "test": "books-selecting-words-foll-3316e--leave-the-leaf-where-it-is",
+      "timeout": true
+    },
+    {
+      "test": "books-the-open-book-is-car-18692-early-it-settles-open-again",
+      "timeout": true
+    },
+    {
+      "test": "books-the-outer-margin-is--503f0-s-back-a-long-one-goes-over",
+      "timeout": true
+    }
+  ],
+  "retainedQualification": "55 distinct local browser scenarios and final 12 hosted scenarios passed on the recorded AMD workstation GPU. This does not qualify software rendering.",
+  "ciScope": "Build, types, lint, contracts, safe imports, isolated admin and five portable interface/privacy/no-WebGL checks."
+}
