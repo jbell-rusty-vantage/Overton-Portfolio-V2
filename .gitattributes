@@ -9,3 +9,6 @@
 # Published assets are verified by byte hash, including generated JSON and VTT.
 public/** -text
 public/travellers-rest/voice/timeline.json binary
+
+# Historical originals remain byte-exact Git source snapshots across checkouts.
+docs/archive/** -text
