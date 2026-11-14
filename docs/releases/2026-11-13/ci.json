@@ -1,0 +1,58 @@
+{
+  "runId": 43547878816,
+  "jobId": 132303310676,
+  "url": "https://github.com/jbell-rusty-vantage/Overton-Portfolio-V2/actions/runs/43547878816",
+  "commit": "ff01fb5bdcd5983ad0f0e66f3b7b22e70e288ffe",
+  "deployedApplicationCommit": "bbe9ebaedbd68d804d8f969b739ccc30b710a973",
+  "status": "completed",
+  "conclusion": "success",
+  "startedAt": "2026-11-14T02:43:40Z",
+  "completedAt": "2026-11-14T02:46:40Z",
+  "environment": {
+    "os": "Ubuntu 26.04.1",
+    "node": "24.18.0",
+    "chrome": "157.0.8103.78",
+    "webgl2": true,
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "ownerDatabaseCredentials": false,
+    "paidPortraitEnabled": false
+  },
+  "checks": {
+    "freshInstall": "passed",
+    "typeGeneration": "passed",
+    "typecheck": "passed",
+    "lint": "passed",
+    "unitContracts": { "passed": 81, "failed": 0 },
+    "safetyRegressions": { "passed": 4, "failed": 0 },
+    "assetInventory": "passed",
+    "productionBuild": "passed",
+    "isolatedAdminWorkflows": "passed",
+    "portableBrowser": {
+      "passed": 5,
+      "failed": 0,
+      "durationSeconds": 14.1,
+      "cases": [
+        "HTML catalog and reader pass automatic accessibility checks",
+        "sample edits move a volume, persist on reload, and never change the database catalog",
+        "server detail and catalog can be read with JavaScript disabled",
+        "WebGL unavailable on first entry still permits keyboard reading",
+        "host and arbitrary preview flags cannot reveal the hidden collection"
+      ]
+    }
+  },
+  "artifact": {
+    "id": 14095460492,
+    "name": "release-evidence",
+    "bytes": 312680,
+    "sha256": "95719aa0269d890409a08b21d81ab2bc04ba8c2ea5e2b86e339ac4275a213e4d"
+  },
+  "qualificationBoundary": {
+    "fullLocalBrowserScenarios": 55,
+    "finalHostedBrowserScenarios": 12,
+    "hostedFixtureOnlySkipped": 1,
+    "hardware": "AMD workstation GPU; phone sizes are emulated",
+    "softwareRenderer3DQualified": false,
+    "earlierSoftwareRendererTimeouts": "ci-graphics-limit.json",
+    "note": "Full native 3D behavior, frame and book audits remain required workstation-GPU qualification. This portable CI run does not replace those results."
+  }
+}

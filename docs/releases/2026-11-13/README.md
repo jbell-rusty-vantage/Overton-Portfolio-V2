@@ -1,21 +1,21 @@
 # First-edition release execution
 
-The release separates the 2D portfolio at `/`, Travellers Rest at `/library`, case studies at `/projects/[slug]`, and private management at `/admin`. Draft routes live under `/admin/preview`. The first edition is live and its public visitor journeys passed on November 13, 2026 (02:06–02:11 UTC November 14).
+The release separates the 2D portfolio at `/`, Travellers Rest at `/library`, case studies at `/projects/[slug]`, and private management at `/admin`. Draft routes live under `/admin/preview`. The first edition is live and its public visitor journeys passed on November 13, 2026 (UTC receipts are dated November 14).
 
 ## Live release
 
 - Portfolio: https://overton-portfolio-v2.vercel.app/
 - Travellers Rest: https://overton-portfolio-v2.vercel.app/library
 - Private dashboard: https://overton-portfolio-v2.vercel.app/admin
-- Deployed source: `34af904f6242a2e9ad388651dcb38e1160a84f9e` on `codex/portfolio-production-release`.
-- Production deployment: `dpl_3VDUeWwEv9eQkQgrPdhGM7x3jwRp`, built with production bindings, checked before alias promotion. [Deployment receipt](deployment.json).
+- Deployed source: `bbe9ebaedbd68d804d8f969b739ccc30b710a973` on `codex/portfolio-production-release`.
+- Production deployment: `dpl_6eahcmn1PVsoRVKdmCBrxzUDbCaR`, built with production bindings and verified on the final live alias. The earlier equivalent application build was also verified at its deployment-specific URL before promotion. [Deployment receipt](deployment.json).
 - Exactly six published studies and the edition-two estate are verified against production. [Content/revisions](production-content.json), [asset import](production-assets.json), [asset hashes and sizes](assets.json), [database/migrations](production-database-state.json).
 
 The old `/?view=world&zone=entrance` bookmark intentionally preserves the previous hall through `/library?view=world&zone=entrance`. Open plain `/library` for Travellers Rest. Legacy world fragments and `/projects#work-...` remain compatible.
 
 Final hosted preview and production each passed 12 focused browser checks; the one fixture-only hidden-record test is skipped on hosted data and is covered by the isolated mutation suite. Production also passed all nine soccer clips at both widths, letter/transcription/scan return, anonymous portrait citations and replay handling, hidden direct-report and HTML/RSC checks, admin/media authorization, sitemap/robots, PDF, immutable WebP and video range/CORS checks. Authenticated preview office and draft labels passed at both widths. The owner's password change remains complete. Temporary platform bypass is revoked; the old bypass now receives the protection redirect while production stays public.
 
-[Hosted HTTP](http-production.json) · [Estate journeys](production-estate-journeys.json) · [Portrait](portrait-production.json) · [Privacy scope](public-privacy.json) · [Access cleanup](verification-access-revoked.json).
+[Final hosted HTTP](http-final-production.json) · [Final browser checks](final-production-browser.json) · [Estate journeys](production-estate-journeys.json) · [Portrait](portrait-production.json) · [Privacy scope](public-privacy.json) · [Access cleanup](verification-access-revoked.json).
 
 ## Scope and recovery baseline
 
@@ -82,4 +82,8 @@ Run `npm run release:check`, `npm run test:browser`, `npm run test:admin -- --pr
 
 ## Repository automation
 
-The deployed commit passed local and hosted qualification. The first GitHub runner passed type checks, lint, 81 contracts and four safety tests, then lacked `ffprobe` for media inventory. The follow-up explicitly installs FFmpeg before inventory. The next Linux run caught Git newline normalization of the generated narration timeline; public delivery files now preserve exact bytes, and all 336 indexed bundled assets match the reviewed SHA-256 inventory. Both corrections preserve the bytes and behavior already deployed by the CLI. CI status is recorded separately when its rerun finishes.
+The final [GitHub run](https://github.com/jbell-rusty-vantage/Overton-Portfolio-V2/actions/runs/43547878816) passed at tooling commit `ff01fb5bdcd5983ad0f0e66f3b7b22e70e288ffe`: fresh install, type generation, type checks, lint, 81 contracts, four safety regressions, asset inventory, production build, isolated admin workflows and all five portable browser checks. The runner uses Node 24.18.0, Chrome 157.0.8103.78 and the SwiftShader software renderer. [CI receipt](ci.json).
+
+Fresh Linux checkouts explicitly install FFmpeg, preserve exact public asset bytes and create their inventory output directories. All 336 indexed bundled assets match the reviewed SHA-256 inventory. The deployed application remains `bbe9eba`; the later inventory-tool and CI changes do not alter its runtime or production data. Final evidence is committed separately on the release branch.
+
+The generic Linux runner timed out in six native 3D mouse/page-turn scenarios; that attempt was cancelled and its traces retained (`ci-graphics-limit.json`). CI now records the graphics renderer and runs five portable accessibility, authoring-isolation, no-JavaScript, no-WebGL fallback and preview-privacy browser checks alongside the isolated office suite. The full 55-scenario suite and frame/book audits remain a separate required GPU qualification, with the recorded local and hosted results above. Software-renderer 3D performance is not qualified.

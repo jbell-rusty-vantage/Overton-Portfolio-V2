@@ -1,10 +1,10 @@
 {
-  "at": "2026-11-14T02:07:09.965Z",
-  "id": "dpl_3VDUeWwEv9eQkQgrPdhGM7x3jwRp",
-  "url": "overton-portfolio-v2-4nkv0kl3h-overtons-projects.vercel.app",
+  "at": "2026-11-14T02:19:11.820Z",
+  "id": "dpl_6eahcmn1PVsoRVKdmCBrxzUDbCaR",
+  "url": "overton-portfolio-v2-q58a2z9ba-overtons-projects.vercel.app",
   "target": "production",
   "state": "READY",
-  "commit": "34af904f6242a2e9ad388651dcb38e1160a84f9e",
+  "commit": "bbe9ebaedbd68d804d8f969b739ccc30b710a973",
   "branch": "codex/portfolio-production-release",
   "aliases": [],
   "nodeVersion": "24.x",
@@ -15,5 +15,7 @@
   },
   "rollback": "dpl_B5TBxkcUFsr4v4RUNrypPyBkUZCa",
   "verifiedProductionAlias": "overton-portfolio-v2.vercel.app",
-  "aliasVerifiedBy": "GET /v4/aliases/overton-portfolio-v2.vercel.app deployment.id matched"
+  "aliasVerifiedBy": "GET /v4/aliases/overton-portfolio-v2.vercel.app deployment.id matched",
+  "initialQualifiedDeployment": "dpl_3VDUeWwEv9eQkQgrPdhGM7x3jwRp",
+  "deliveryFollowup": "Git retains the exact reviewed narration JSON bytes; application source and production content are unchanged."
 }

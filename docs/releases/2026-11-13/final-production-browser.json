@@ -1,0 +1,67 @@
+{
+  "deployment": "dpl_6eahcmn1PVsoRVKdmCBrxzUDbCaR",
+  "base": "https://overton-portfolio-v2.vercel.app",
+  "stats": {
+    "startTime": "2026-11-14T02:18:45.611Z",
+    "duration": 74442.235,
+    "expected": 12,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "cases": [
+    {
+      "title": "selected work \u2192 report \u2192 walkthrough \u2192 Back at 1440px without a scene",
+      "status": "passed"
+    },
+    {
+      "title": "selected work \u2192 report \u2192 walkthrough \u2192 Back at 390px without a scene",
+      "status": "passed"
+    },
+    {
+      "title": "entrance offers the 2D choice and browser Back preserves the selected card",
+      "status": "passed"
+    },
+    {
+      "title": "keyboard navigation, r\u00e9sum\u00e9 and the two-page PDF remain direct",
+      "status": "passed"
+    },
+    {
+      "title": "public entry and guessed URLs do not disclose hidden drafts",
+      "status": "skipped"
+    },
+    {
+      "title": "walkthrough film is controlled and its recorded scope is visible",
+      "status": "passed"
+    },
+    {
+      "title": "all six revised books return from their report to the marked page at 1366px",
+      "status": "passed"
+    },
+    {
+      "title": "all six revised books return from their report to the marked page at 390px",
+      "status": "passed"
+    },
+    {
+      "title": "the selected report collection keeps its sections and whole figures at desktop and phone width",
+      "status": "passed"
+    },
+    {
+      "title": "report sections are linkable, figures trap focus and Escape returns to the report",
+      "status": "passed"
+    },
+    {
+      "title": "report prose and links are server-rendered in the authorized response",
+      "status": "passed"
+    },
+    {
+      "title": "cabinet warm-up finishes its current measurement when a visitor selects a book",
+      "status": "passed"
+    },
+    {
+      "title": "world report closes to the same page through Escape, history and reload",
+      "status": "passed"
+    }
+  ],
+  "skippedScope": "Hidden-record fixture verified in disposable suite; hosted hidden direct URLs separately checked."
+}

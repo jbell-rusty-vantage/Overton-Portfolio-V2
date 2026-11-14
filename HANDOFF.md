@@ -2,11 +2,11 @@
 
 The first edition is deployed and its hosted visitor checks pass. [Portfolio](https://overton-portfolio-v2.vercel.app/) · [Travellers Rest](https://overton-portfolio-v2.vercel.app/library) · [Private dashboard](https://overton-portfolio-v2.vercel.app/admin).
 
-Deployed source `34af904f6242a2e9ad388651dcb38e1160a84f9e`, deployment `dpl_3VDUeWwEv9eQkQgrPdhGM7x3jwRp`. Exactly six studies and the reviewed edition-two estate are published through audited, drift-checked operations. [Release report, measurements, receipts and tested rollback/withdrawal](docs/releases/2026-11-13/README.md). Production and Preview use isolated databases. The owner's password change is complete; temporary verification access is revoked.
+Deployed source `bbe9ebaedbd68d804d8f969b739ccc30b710a973`, deployment `dpl_6eahcmn1PVsoRVKdmCBrxzUDbCaR`. Exactly six studies and the reviewed edition-two estate are published through audited, drift-checked operations. [Release report, measurements, receipts and tested rollback/withdrawal](docs/releases/2026-11-13/README.md). Production and Preview use isolated databases. The owner's password change is complete; temporary verification access is revoked.
 
 Plain `/library` opens Travellers Rest. Old `?view=world` links deliberately preserve the old hall. Live text stays within $0.05/turn, $1/day and $5/month; authored narration works. Live voice is disabled until a provider/server hard termination bound is verified. Phone measurements are emulation; the ten-cycle JavaScript heap trend has not fully plateaued, although GPU counts are stable and exit cleanup passes.
 
-Preserve `.local-library/release` private baselines, promotion plan and preexisting-work archive for rollback. No broad seed, content reset or push to `main`. The historical records below are superseded by this release report. The evidence/CI follow-up installs the runner's missing FFmpeg dependency; it changes no deployed application code.
+Preserve `.local-library/release` private baselines, promotion plan and preexisting-work archive for rollback. No broad seed, content reset or push to `main`. The historical records below are superseded by this release report. [Final CI](https://github.com/jbell-rusty-vantage/Overton-Portfolio-V2/actions/runs/43547878816) passes build/type/lint, 81 contracts, four safety tests, asset inventory, isolated admin workflows and five portable browser checks. Full 3D qualification remains the recorded workstation-GPU and hosted checks; the software renderer is not qualified. Later inventory-tool, CI and receipt commits change no deployed application behavior.
 
 ---
 

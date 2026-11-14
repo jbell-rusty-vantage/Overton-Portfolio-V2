@@ -3,5 +3,7 @@
   "revoked": true,
   "oldBypassStatus": 302,
   "previewProtected": true,
-  "productionStatus": 200
+  "productionStatus": 200,
+  "oldBypassCookieStatus": 302,
+  "oldBypassCookieDenied": true
 }
